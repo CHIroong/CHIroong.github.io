@@ -16,7 +16,7 @@ window.onload = function() {
     }
 }
 
-iframe.addEventListener("keydown", function(e) {
+document.addEventListener("keydown", function(e) {
     console.log("pressed");
     let obj = window.event? event : e;
     if (obj.keyCode == 49) // TODO: select appropriate key binding
