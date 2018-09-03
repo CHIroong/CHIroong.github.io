@@ -6,20 +6,21 @@ function nextPage() {
 let curr = getCookie("current");
 let iframe = document.querySelector("iframe");
 let sound = new Audio('audio/' + curr + '.mp3');
+iframe.setAttribute("src", localStorage.getItem("url" + curr))
 
 window.onload = function() {
-    iframe.setAttribute("src", localStorage.getItem("url" + curr))
     iframe.onload = function() {
         setTimeout(function() {
             window.location = "https://soundglance.github.io/score"
         }, 15000);
     }
-    iframe.addEventListener("keydown", function(e) {
-        let obj = window.event? event : e;
-        if (obj.keyCode == 49) // TODO: select appropriate key binding
-            sound.play();
-    })
 }
+
+iframe.addEventListener("keydown", function(e) {
+    let obj = window.event? event : e;
+    if (obj.keyCode == 49) // TODO: select appropriate key binding
+        sound.play();
+})
 
 function getCookie(cookieName) {
   // Parse the cookie string to get the information I need

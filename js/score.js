@@ -1,11 +1,12 @@
 let curr = parseInt(getCookie("current"));
 
 window.onload = function() {
+    console.log(curr);
+
     document.querySelector("input[type='hidden']").setAttribute("value", curr);
     if (curr == 59)
         window.location = "https://soundglance.github.io/end";
-    else
-        updateCookie(curr++);
+    updateCookie(curr + 1);
 }
 
 function getCookie(cookieName) {
