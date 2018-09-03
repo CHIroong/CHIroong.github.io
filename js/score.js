@@ -5,7 +5,7 @@ window.onload = function() {
     if (curr == 59)
         window.location = "https://soundglance.github.io/end";
     else
-        updateCookie(curr+1);
+        updateCookie(curr++);
 }
 
 function getCookie(cookieName) {
