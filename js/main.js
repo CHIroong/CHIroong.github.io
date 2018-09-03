@@ -75,5 +75,5 @@ window.onload = function() {
 }
 
 function updateCookie(i) {
-    document.cookie = "current=" + i + ";expires=" + expiredDate.toUTCString(); + "domain=jisu.jaeyoon.io;path=/";
+    document.cookie = "current=" + i + ";expires=" + expiredDate.toUTCString(); + "domain=soundglance.github.io;path=/";
 }
