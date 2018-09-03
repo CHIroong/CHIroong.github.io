@@ -1,4 +1,4 @@
-let curr = getCookie("current");
+let curr = parseInt(getCookie("current"));
 
 window.onload = function() {
     document.querySelector("input[type='hidden']").setAttribute("value", curr);
