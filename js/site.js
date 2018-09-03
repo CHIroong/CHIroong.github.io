@@ -15,7 +15,7 @@ iframe.onload = function() {
     }, 15000);
 }
 
-document.addEventListener("keydown", function(e) {
+iframe.addEventListener("keydown", function(e) {
     let obj = window.event? event : e;
     if (obj.keyCode == 49) // TODO: select appropriate key binding
         sound.play();
