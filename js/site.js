@@ -4,10 +4,10 @@ function nextPage() {
 }
 
 let curr = getCookie("current");
+let iframe = document.querySelector("iframe");
+iframe.setAttribute("src", localStorage.getItem("url" + curr))
 
-window.onload = function() {
-    document.querySelector("iframe").setAttribute("src", localStorage.getItem("url" + curr))
-
+iframe.onload = function() {
     setTimeout(function() {
         window.location = "https://soundglance.github.io/score"
     }, 15000);
