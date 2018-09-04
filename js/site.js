@@ -9,17 +9,23 @@ let sound = new Audio('audio/' + curr + '.mp3');
 iframe.setAttribute("src", localStorage.getItem("url" + curr))
 
 iframe.addEventListener("load", function() {
-    console.log("loaded");
+    setTimeout(function() {
+        window.location = "https://soundglance.github.io/score"
+    }, 15000);
+});
+
+iframe.addEventListener("load", function() {
     setTimeout(function() {
         window.location = "https://soundglance.github.io/score"
     }, 15000);
 });
 
 document.addEventListener("keydown", function(e) {
-    console.log("pressed");
     let obj = window.event? event : e;
     if (obj.keyCode == 49) // TODO: select appropriate key binding
         sound.play();
+    else if (obj.keyCode == 50)
+        window.location = "https://soundglance.github.io/score"
 })
 
 function getCookie(cookieName) {
