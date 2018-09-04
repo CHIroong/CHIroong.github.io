@@ -16,7 +16,7 @@ iframe.addEventListener("load", function() {
     
         let obj = window.event? event : e;
         console.log(obj.keyCode + " pressed");
-        if (obj.keyCode == 49) // TODO: select appropriate key binding
+        if (obj.keyCode == 81) // TODO: select appropriate key binding
             sound.play();
         else if (obj.keyCode == 50)
             window.location = "https://soundglance.github.io/score";
