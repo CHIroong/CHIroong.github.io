@@ -14,7 +14,9 @@ iframe.addEventListener("load", function() {
     }, 15000);
 });
 
-window.addEventListener("keydown", function(e) {
+document.addEventListener("keydown", function(e) {
+    e.stopPropagation();
+    
     let obj = window.event? event : e;
     console.log(obj.keyCode + " pressed");
     if (obj.keyCode == 49) // TODO: select appropriate key binding
@@ -24,6 +26,8 @@ window.addEventListener("keydown", function(e) {
 });
 
 iframe.contentDocument.addEventListener("keydown", function(e) {
+    e.stopPropagation();
+
     let obj = window.event? event : e;
     console.log(obj.keyCode + " pressed");
     if (obj.keyCode == 49) // TODO: select appropriate key binding
