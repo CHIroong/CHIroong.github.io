@@ -22,10 +22,11 @@ iframe.addEventListener("load", function() {
 
 document.addEventListener("keydown", function(e) {
     let obj = window.event? event : e;
+    console.log(obj.keyCode + " pressed");
     if (obj.keyCode == 49) // TODO: select appropriate key binding
         sound.play();
     else if (obj.keyCode == 50)
-        window.location = "https://soundglance.github.io/score"
+        window.location = "https://soundglance.github.io/score";
 })
 
 function getCookie(cookieName) {
