@@ -9,9 +9,33 @@ let sound = new Audio('audio/' + curr + '.mp3');
 iframe.setAttribute("src", localStorage.getItem("url" + curr))
 
 iframe.addEventListener("load", function() {
+    let iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+
+    iframeDoc.addEventListener("keydown", function(e) {
+        e.stopPropagation();
+    
+        let obj = window.event? event : e;
+        console.log(obj.keyCode + " pressed");
+        if (obj.keyCode == 49) // TODO: select appropriate key binding
+            sound.play();
+        else if (obj.keyCode == 50)
+            window.location = "https://soundglance.github.io/score";
+    });
+
     setTimeout(function() {
         window.location = "https://soundglance.github.io/score"
     }, 15000);
+});
+
+window.addEventListener("keydown", function(e) {
+    e.stopPropagation();
+    
+    let obj = window.event? event : e;
+    console.log(obj.keyCode + " pressed");
+    if (obj.keyCode == 49) // TODO: select appropriate key binding
+        sound.play();
+    else if (obj.keyCode == 50)
+        window.location = "https://soundglance.github.io/score";
 });
 
 document.addEventListener("keydown", function(e) {
@@ -25,7 +49,7 @@ document.addEventListener("keydown", function(e) {
         window.location = "https://soundglance.github.io/score";
 });
 
-iframe.contentDocument.addEventListener("keydown", function(e) {
+iframe.contentWindow.addEventListener("keydown", function(e) {
     e.stopPropagation();
 
     let obj = window.event? event : e;
@@ -35,6 +59,8 @@ iframe.contentDocument.addEventListener("keydown", function(e) {
     else if (obj.keyCode == 50)
         window.location = "https://soundglance.github.io/score";
 });
+
+
 
 function getCookie(cookieName) {
   // Parse the cookie string to get the information I need
