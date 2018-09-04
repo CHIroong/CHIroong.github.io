@@ -10,6 +10,7 @@ iframe.setAttribute("src", localStorage.getItem("url" + curr))
 
 window.onload = function() {
     iframe.addEventListener("load", function() {
+        console.log("loaded");
         setTimeout(function() {
             window.location = "https://soundglance.github.io/score"
         }, 15000);
