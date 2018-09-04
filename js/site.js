@@ -9,11 +9,11 @@ let sound = new Audio('audio/' + curr + '.mp3');
 iframe.setAttribute("src", localStorage.getItem("url" + curr))
 
 window.onload = function() {
-    iframe.onload = function() {
+    iframe.addEventListener("load", function() {
         setTimeout(function() {
             window.location = "https://soundglance.github.io/score"
         }, 15000);
-    }
+    });
 }
 
 document.addEventListener("keydown", function(e) {
