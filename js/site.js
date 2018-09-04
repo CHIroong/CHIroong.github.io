@@ -14,13 +14,7 @@ iframe.addEventListener("load", function() {
     }, 15000);
 });
 
-iframe.addEventListener("load", function() {
-    setTimeout(function() {
-        window.location = "https://soundglance.github.io/score"
-    }, 15000);
-});
-
-document.addEventListener("keydown", function(e) {
+iframe.addEventListener("keydown", function(e) {
     let obj = window.event? event : e;
     console.log(obj.keyCode + " pressed");
     if (obj.keyCode == 49) // TODO: select appropriate key binding
