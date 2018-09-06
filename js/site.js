@@ -1,68 +1,34 @@
-// change effect
-function nextPage() {
-  console.log("hi")
-}
-
 let curr = getCookie("current");
-let iframe = document.querySelector("iframe");
 let sound = new Audio('audio/' + curr + '.mp3');
+let iframe = document.querySelector("iframe");
 iframe.setAttribute("src", localStorage.getItem("url" + curr))
 
-iframe.addEventListener("load", function() {
-    let iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+function scorePage(){
+    window.location = "https://soundglance.github.io/score";
+}
 
-    iframeDoc.addEventListener("keydown", function(e) {
-        e.stopPropagation();
-    
-        let obj = window.event? event : e;
-        console.log(obj.keyCode + " pressed");
-        if (obj.keyCode == 81) // TODO: select appropriate key binding
-            sound.play();
-        else if (obj.keyCode == 50)
-            window.location = "https://soundglance.github.io/score";
-    });
+function bindEvent(element, eventName, eventHandler) {
+    if (element.addEventListener) {
+        element.addEventListener(eventName, eventHandler, false);
+    } else if (element.attachEvent) {
+        element.attachEvent('on' + eventName, eventHandler);
+    }
+};
 
-    console.log("HI")
-
-    setTimeout(function() {
-        window.location = "https://soundglance.github.io/score"
-    }, 15000);
-});
-
-window.addEventListener("keydown", function(e) {
+bindEvent(iframe.contentWindow.document, 'keydown', function(e){
     e.stopPropagation();
-    
     let obj = window.event? event : e;
     console.log(obj.keyCode + " pressed");
-    if (obj.keyCode == 49) // TODO: select appropriate key binding
+
+    if (obj.keyCode == 81) // TODO: select appropriate key binding
         sound.play();
     else if (obj.keyCode == 50)
-        window.location = "https://soundglance.github.io/score";
-});
+        scorePage();
+})
 
-document.addEventListener("keydown", function(e) {
-    e.stopPropagation();
-    
-    let obj = window.event? event : e;
-    console.log(obj.keyCode + " pressed");
-    if (obj.keyCode == 49) // TODO: select appropriate key binding
-        sound.play();
-    else if (obj.keyCode == 50)
-        window.location = "https://soundglance.github.io/score";
-});
-
-iframe.contentWindow.addEventListener("keydown", function(e) {
-    e.stopPropagation();
-
-    let obj = window.event? event : e;
-    console.log(obj.keyCode + " pressed");
-    if (obj.keyCode == 49) // TODO: select appropriate key binding
-        sound.play();
-    else if (obj.keyCode == 50)
-        window.location = "https://soundglance.github.io/score";
-});
-
-
+setTimeout(function() {
+    window.location = "https://soundglance.github.io/score"
+}, 30000);
 
 function getCookie(cookieName) {
   // Parse the cookie string to get the information I need
@@ -78,3 +44,36 @@ function getCookie(cookieName) {
   }
   return cookieValue;
 }
+
+/*
+
+bindEvent(window, 'message', function(e){
+    kiroong.innerHTML = e.data;
+});
+
+bindEvent(iframe.contentWindow, 'message', function(e){
+
+    function bindEvent(element, eventName, eventHandler) {
+        if (element.addEventListener) {
+            element.addEventListener(eventName, eventHandler, false);
+        } else if (element.attachEvent) {
+            element.attachEvent('on' + eventName, eventHandler);
+        }
+    };
+
+    var sendMessage = function (msg) {
+        // Make sure you are sending a string, and to stringify JSON
+        iframe.contentWindow.parent.postMessage(msg, '*');
+    }
+
+    iframe.contentWindow.document.getElementById("jaeyoon").innerHTML = "I RECEIVED"
+
+    bindEvent(iframe.contentWindow.document.getElementById("jaeyoon"), 'click', function(){
+        document.getElementById("kiroong").innerHTML = "UUHAHA"
+    })
+
+});
+
+sendMessage("Hi")
+
+*/
