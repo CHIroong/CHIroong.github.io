@@ -22,8 +22,6 @@ iframe.addEventListener("load", function() {
             window.location = "https://soundglance.github.io/score";
     });
 
-    console.log("HI")
-
     setTimeout(function() {
         window.location = "https://soundglance.github.io/score"
     }, 15000);
