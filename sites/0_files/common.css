@@ -1,0 +1,292 @@
+@charset "euc-kr";
+/* CSS Document */
+
+/* reset css */
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select{margin:0; padding:0;}
+body,input,textarea,select,table{font:12px/1.4 '돋움',dotum,sans-serif; color:#2f2f2f;}
+img,fieldset {border:0; vertical-align:top;}
+hr {display:none;}
+button {border:0; cursor:pointer; overflow:visible; background:none;}
+table {border-collapse:collapse; border-spacing:0;}
+ul,li,dl {list-style:none;}
+/*h1,h2,h3,h4,h5,h6 {line-height:1;}*/
+legend,caption {visibility:hidden;overflow:hidden;width:1px;height:1px;font-size:0;line-height:0;}
+a {text-decoration:none;}
+a:hover {text-decoration:underline; color:#fe830a;}
+a:link {color:#2f2f2f;}
+a:visited {color:#2f2f2f;}
+a:active {color:#2f2f2f;}
+
+/* skip */
+#skip{height:0}
+#skip a{position:absolute;left:0;top:-10000px;z-index:500;display:block;width:100%;text-align:center;font-size:1.3em}
+#skip a:hover, #skip a:focus, #skip a:active{position:absolute;top:0;padding:15px 0;font-weight:bold;color:#fff;background:#1d60a7;z-index:500}
+
+/* common */
+#wrap a:hover {color:#fe830a !important;}
+.mask {display:block; border:1px solid #000; filter:alpha(opacity=20); opacity:0.2; background:url('http://img.sbs.co.kr/sw11/tv/common/blank.gif') repeat scroll left top transparent; position:absolute; top:0px; left:0px; z-index:240;}
+/*.play {position:absolute; top:50%; left:50%; display:block; text-indent:-2000em; z-index:250;}*/
+.play {position:absolute; top:50%; display:block; text-indent:-2000em; z-index:250;}
+.blind {display:block; overflow:hidden; position:absolute; left:0; top:-1000em;}
+.m_b5 {margin-bottom:5px;}
+
+/* layout */
+#wrap {}
+/* id=header 에서 gnb가 삭제될 시에 삭제 될 css 
+#header {margin-bottom:10px;}/* header.css에서도 사용중.*
+#header .gnb {width:990px; margin:0 auto; position:relative;}
+#header .gnb .gnb_lft {float:left;}
+#header .gnb .gnb_lft dl {padding-left:2px; background:url(images/common/bu_gnb.png) no-repeat 100% 0;}
+#header .gnb .gnb_lft dl:first-child {padding-left:0; background:none;}
+#header .gnb .gnb_rig {float:right; padding-right:7px;}
+#header .gnb dl {float:left;}
+#header .gnb dl dd {float:left;}
+#wrap #container {width:990px; overflow:hidden; margin:0 auto 20px auto;}
+/* id=header 에서 gnb가 삭제될 시에 삭제 될 css */
+
+#header {position:relative; z-index:1;}/* header.css에서도 사용중.*/
+#wrap #container {width:990px; overflow:hidden; margin:0 auto 20px auto;}
+.gnb {width:990px; margin:0 auto 8px auto; position:relative;}
+.gnb .gnb_lft {float:left;}
+.gnb .gnb_lft dl {padding-left:2px; background:url(images/common/bu_gnb.png) no-repeat 100% 0;}
+.gnb .gnb_lft dl:first-child {padding-left:0; background:none;}
+.gnb .gnb_rig {float:right; padding-right:7px;}
+.gnb .gnb_rig dd.bnr {margin-right:10px;}
+.gnb .gnb_rig dd.link {padding:8px 0 0 3px; float:left;}
+.gnb .gnb_rig dd.link img {vertical-align:top;}
+.gnb dl {float:left;}
+.gnb dl dd {float:left;}
+.gnb dl dd 
+a[class^="ntag_"] {display:block; position:relative;}
+	[class^="nt_pos_"] {display:block; position:absolute;}
+
+.ntag_moneyroket {width:82px; height:38px;}
+	.nt_pos_community {width:44px; height:25px; background:url('http://img.sbs.co.kr/sw11/news/news2013/images/cnbc/new_gnb/n_tag_community.gif') no-repeat left top; top:-7px; right:-31px;}
+
+
+/* cnbc 기타메뉴 */
+.gnb_rig dd.bnr_free {position:absolute;top:9px;;right:106px;z-index:255;}
+
+
+#content {width:725px; float:left;}
+#aside {width:248px; float:right; padding:0 1px;} /*************** border-bottom:1px solid #dadada;****************/
+#aside a {color:#2f2f2f;}
+#footer {width:990px; margin:0 auto;}
+#container .ad_rig {width:120px; height:240px; position:absolute; top:168px; left:50%; margin-left:505px; border:1px solid #e1e1e1;}
+#container .ad_rig3 {width:120px; height:240px; position:absolute; top:418px; left:50%; margin-left:505px; border:1px solid #e1e1e1;}
+#container .ad_rig2 {position:absolute; top:106px; left:50%; margin-left:505px;}
+#container .ad_rig4 {position:absolute; top:668px; left:50%; margin-left:505px;}
+#container .ad_rig5 {position:absolute; top:810px; left:50%; margin-left:505px;}
+
+/* 왼쪽 배너 */
+#container .bnr_left {width:122px;height:196px;position:absolute;top:168px;left:50%;margin-left:-627px;}
+/* //왼쪽 배너 */
+
+/* 뉴스-리스트페이지 */
+#content.listpage {}
+#content.listpage div.path {height:25px; font:bold 18px/1.2 dotum; color:#41495e; border-bottom:2px solid #008dd0; padding-top:10px;}
+#content.listpage div.path span {padding:0 10px; background:url(http://img.sbs.co.kr/sw11/news/news2013/images/common/bu_vertical2.gif) no-repeat 0px 2px;}
+#content.listpage div.path span:first-child {background:none;}
+#content.listpage div.path span strong {color:#8480ef;}
+#content.listpage .list_news {margin:24px 0 40px 0;}
+#content.listpage .list_news li {padding:24px 10px 0 10px; position:relative;}
+#content.listpage .list_news li>span strong {font-weight:normal;}
+#content.listpage .list_news li a>img {position:absolute; top:24px; left:10px;}
+#content.listpage .list_news li a:hover {text-decoration:none;}
+#content.listpage .list_news li a strong {display:block; font-size:14px; color:#000063;}
+#content.listpage .list_news li a strong img {margin-left:5px; vertical-align:-3px;}
+#content.listpage .list_news li a:hover strong {text-decoration:underline; color:#fe830a;}
+#content.listpage .list_news li a span {display:block; height:32px; overflow:hidden; margin:5px 0;}
+#content.listpage .list_news li a:hover span {color:#202020;}
+#content.listpage .list_news li>span {font-size:11px; color:#969ca7;}
+#content.listpage .list_news li.thum_type1 {padding-left:145px; height:72px;}
+#content.listpage .list_news li.thum_type1 a .mask {display:block; width:127px; height:70px; top:24px; left:10px;}
+#content.listpage .list_news li.thum_type1 a .play {display:block; width:25px; height:19px; background:url(http://img.sbs.co.kr/sw11/news/news2013/images/ssports/ico_play2.gif) no-repeat 0px 0px; text-indent:-2000em; position:absolute; top:73px; left:113px;}
+#content.listpage .list_news li.thum_type2 {padding-left:90px; height:106px;}
+#content.listpage .list_news li.thum_type2 a .mask {display:block; width:70px; height:104px; top:24px; left:10px;}
+#content.listpage .list_news li.headline {border:1px solid #d8d8d8; background:#f9f9f9; padding-top:20px; padding-bottom:20px;}
+#content.listpage .list_news li.headline a>img {position:absolute; top:20px; left:10px;}
+#content.listpage .list_news li.headline.thum_type1 a .mask,
+#content.listpage .list_news li.headline.thum_type2 a .mask {top:20px;}
+
+#content.listpage .paging {text-align:center;}
+#content.listpage .paging a {vertical-align:top; height:12px; padding:3px 6px 1px; font-size:11px; font-family:"arial"; border:1px solid #e3e3e3; display:inline-block; line-height:1;}
+#content.listpage .paging a.thispage, div.pager a:hover {color:#ff7e00; border:1px solid #ffb063; text-decoration:none;}
+#content.listpage .paging a.thispage {font-weight:bold;}
+#content.listpage .paging a img {margin: 2px 0 2px;}
+/* 페이징 20130508 */
+.paginate{overflow:hidden;clear:both;margin:10px auto 20px;padding:10px 0;text-align:center}
+.paginate a,.paginate strong{overflow:hidden;display:inline-block;width:20px;height:17px;padding-top:2px;vertical-align:top;font-family:verdana !important;font-size:11px;line-height:1.35em;text-decoration:none;color:#000;border:1px solid #e3e3e3}
+.paginate strong{margin-top:-1px;border-width:2px}
+.paginate a:hover,.paginate a:focus,.paginate strong{color:#6c6c6c !important;border-color:#6c6c6c}
+.paginate a.dir{height:19px;padding-top:0}
+.paginate a.dir img{margin-top:6px;vertical-align:top;line-height:0}
+.paginate a.edge{width:30px;font-family:dotum,'돋움' !important;line-height:1.72em}
+.paginate a.edge:hover{color:#000 !important}
+
+/* 뉴스-리스트페이지(이슈) */
+#content.listpage h2.path {height:39px; border:1px solid #cdced3 !important; overflow:hidden; font-size:14px; font-weight:bold; background:#f9f9f9; margin-bottom:-25px;}
+#content.listpage h2.path>strong {height:39px; padding:0 18px 0 12px; margin-right:5px; float:left; font-size:14px; line-height:2.8; color:#ff492b; background:url(http://img.sbs.co.kr/sw11/news/news2013/images/common/bu_arrow4.gif) no-repeat 100% 0px #fff;}
+#content.listpage h2.path>span {height:39px; padding:0 5px; float:left; font-size:14px; line-height:2.8; color:#444;}
+
+/* 뉴스 엔드페이지 */
+#content.endpage {margin-top:8px;}
+#content.endpage .path {text-align:right; font-size:11px; color:#d7d7d7;}
+#content.endpage .path span {color:#6c6c6c; padding:0 3px;}
+#content.endpage .path strong {color:#6c6c6c; padding:0 3px;}
+#content.endpage .path a {color:#6c6c6c;}
+#content.endpage .wrap_tit {height:100%;max-height:90px;min-height:71px; padding:0 0 3px 3px; margin-top:5px; border-bottom:2px solid #008dd0; position:relative;}
+#content.endpage .wrap_tit h2 {font-size:25px; line-height:1.2; color:#404345; margin-bottom:10px; letter-spacing:-2px;}
+#content.endpage .wrap_tit .tit_sub {color:#676767;}
+#content.endpage .wrap_tit .date {font-size:11px; color:#767676; text-align:right; position:absolute; right:0px; bottom:3px;}
+#content.endpage .wrap_tit .date span {font-family:Verdana, Geneva, sans-serif; padding-left:5px; margin-left:5px; letter-spacing:-1px;}
+#content.endpage .bar_social {overflow:hidden; border:1px solid #dadada; border-top:0; margin-bottom:20px;}
+#content.endpage .btns_social {float:left; margin:7px 0 0 5px;}
+#content.endpage .btns_social li {float:left; padding:0 7px; background:url(http://img.sbs.co.kr/sw11/news/news2013/images/common/bu_vertical1.gif) no-repeat 0px 2px;}
+#content.endpage .btns_social li:first-child {background:none;}
+#content.endpage .btns_social a {display:block; height:14px;}
+#content.endpage .btns_social a span {display:block; text-indent:-2000em; width:1px; height:1px; position:absolute; top:-2000em; left:-2000em;}
+#content.endpage .btns_social a.btn_twit {width:40px; background:url(http://img.sbs.co.kr/sw11/news/news2013/images/common/bg_social.gif) no-repeat 0 0;}
+#content.endpage .btns_social a.btn_face {width:52px; background:url(http://img.sbs.co.kr/sw11/news/news2013/images/common/bg_social.gif) no-repeat -40px 0;}
+#content.endpage .btns_social a.btn_meto {width:53px; background:url(http://img.sbs.co.kr/sw11/news/news2013/images/common/bg_social.gif) no-repeat -92px 0;}
+#content.endpage .btns_social a.btn_yozum {width:34px; background:url(http://img.sbs.co.kr/sw11/news/news2013/images/common/bg_social.gif) no-repeat -145px 0;}
+#content.endpage .btns_social a.btn_cyworld {width:52px; background:url(http://img.sbs.co.kr/sw11/news/news2013/images/common/bg_social.gif) no-repeat -179px 0;}
+
+#content.endpage .btns_view {float:right;}
+#content.endpage .btns_view button {float:left; padding:0; margin:0; border:0;}
+#content.endpage .btns_view button span {display:block; text-indent:-2000em;}
+#content.endpage .btns_view .btn_zoom span {width:31px; height:29px; background:url(http://img.sbs.co.kr/sw11/news/news2013/images/common/bg_view.gif) no-repeat 0px 0px;}
+#content.endpage .btns_view .btn_out span {width:31px; height:29px; background:url(http://img.sbs.co.kr/sw11/news/news2013/images/common/bg_view.gif) no-repeat -31px 0px;}
+#content.endpage .btns_view .btn_print span {width:31px; height:29px; background:url(http://img.sbs.co.kr/sw11/news/news2013/images/common/bg_view.gif) no-repeat -62px 0px;}
+
+#content.endpage .cnt_news{font:16px/1.5 '굴림',gulim; overflow:hidden;}
+#content.endpage .cnt_news .vod_wrap {text-align:center;}
+
+/* 엔드페이지-기자정보,최종편집 */
+#content.endpage .txt_copyright {overflow:hidden; margin:15px 0 30px 0;}
+#content.endpage .txt_copyright p {display:inline-block; font-size:11px; line-height:1.7; color:#767676; float:right; padding:0 30px 0 10px; border-left:1px solid #ddd;}
+#content.endpage .txt_copyright p span {font-size:11px; color:#595858;}
+#content.endpage .txt_copyright p span a {margin-right:20px;}
+#content.endpage .txt_copyright p span em {font-style:normal; font-weight:bold; color:#008dd0;}
+#content.endpage .txt_copyright p span img {vertical-align:0;}
+
+#content.endpage .avi_box {width:660px; margin:0 auto;}
+
+/* 엔드페이지-관련기사 -스마트에디트로 바뀌면서 삭제예정 */
+#content.endpage .atc_related {margin-bottom:25px;}
+#content.endpage .atc_related h3 {font-size:14px; color:#426a91; padding-bottom:5px; border-bottom:1px solid #cfd9e3;}
+#content.endpage .atc_related ul {font-size:16px; color:#404345; margin-top:20px; overflow:hidden;}
+#content.endpage .atc_related ul li {padding-left:15px; background:url(http://img.sbs.co.kr/sw11/news/news2013/images/common/bu_re.gif) no-repeat 5px 5px; margin-bottom:8px;}
+#content.endpage .atc_related ul li a {white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+#content.endpage .atc_related ul li span {margin-left:15px; font-family:Verdana, Geneva, sans-serif; font-size:11px; color:#949494;}
+
+/* 엔드페이지-관련기사 타입1 */
+#content.endpage .atc_related1 {padding:10px 10px 6px 10px; border:1px solid #e4eaf0; background:#fcfdfe; overflow:hidden;}
+#content.endpage .atc_related1 h3 {font-size:12px; line-height:1.4; color:#426a91; float:left; margin-right:10px;}
+#content.endpage .atc_related1 ul {font-size:12px; color:#000; float:left;}
+#content.endpage .atc_related1 ul li {width:630px; padding-left:10px; background:url(http://img.sbs.co.kr/sw11/news/news2013/images/common/bu_dot.gif) no-repeat 0 6px; margin-top:8px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+#content.endpage .atc_related1 ul li:first-child {margin-top:0;}
+
+/* 엔드페이지-관련기사 타입2 */
+#content.endpage .atc_related2 {width:284px; padding:10px 10px 6px 10px; border:1px solid #e4eaf0; background:#fcfdfe;}
+#content.endpage .atc_related2 h3 {font-size:12px; color:#426a91; margin-bottom:10px;}
+#content.endpage .atc_related2 ul {font-size:12px; color:#000;}
+#content.endpage .atc_related2 ul li {width:265px; padding-left:10px; background:url(http://img.sbs.co.kr/sw11/news/news2013/images/common/bu_dot.gif) no-repeat 0 6px; margin-top:12px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+#content.endpage .atc_related2 ul li:first-child {margin-top:0;}
+
+/* 엔드페이지-관련기사 타입3 */
+#content.endpage .atc_related3 {padding:10px 10px 0 10px; border:1px solid #e4eaf0; background:#fcfdfe; overflow:hidden;}
+#content.endpage .atc_related3 h3 {font-size:12px; color:#426a91; float:left; margin:2px 10px 0 0;}
+#content.endpage .atc_related3 ul {width:640px; font-size:12px; color:#000; float:left;}
+#content.endpage .atc_related3 ul li {width:290px; float:left; padding-left:10px; background:url(http://img.sbs.co.kr/sw11/news/news2013/images/common/bu_dot.gif) no-repeat 0 6px; margin:0 20px 7px 0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+
+/* 엔드페이지-인기기사 */
+#content.endpage .atc_popular {margin-bottom:60px; margin-top:40px;}
+#content.endpage .atc_popular h3 {font-size:14px; color:#426a91; padding-bottom:5px; border-bottom:1px solid #cfd9e3;}
+#content.endpage .atc_popular>div {overflow:hidden; margin-top:10px;}
+#content.endpage .atc_popular>div .list_popular1 {width:339px; float:left;}
+#content.endpage .atc_popular>div .list_popular1 li {position:relative; zoom:1;}
+#content.endpage .atc_popular>div .list_popular1 li a {display:block; cursor:pointer; color:#949494;}
+#content.endpage .atc_popular>div .list_popular1 li a:hover {text-decoration:none;}
+#content.endpage .atc_popular>div .list_popular1 li a .img_crop {width:339px; height:191px; text-align:center; display:block; overflow:hidden; margin-bottom:8px; background:#fcfdfe;}
+#content.endpage .atc_popular>div .list_popular1 li a .img_crop img {max-width:339px;}
+#content.endpage .atc_popular>div .list_popular1 li a strong {display:block; font-size:16px; color:#2f2f2f; margin:9px 0 5px; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;}
+#content.endpage .atc_popular>div .list_popular1 li a:hover strong {text-decoration:underline; color:#fe830a;}
+#content.endpage .atc_popular>div .list_popular1 li a span {height:30px; display:block; overflow:hidden; line-height:1.3em;}
+#content.endpage .atc_popular>div .list_popular1 li a:hover span {color:#595b62;}
+#content.endpage .atc_popular>div .list_popular1 li a .mask {width:337px; height:189px;}
+#content.endpage .atc_popular>div .reply {text-align:right; display:block; margin-top:7px;}
+#content.endpage .atc_popular>div .reply .cmt {display:inline-block; height:11px;}
+#content.endpage .atc_popular>div .reply .cmt img{vertical-align:middle;line-height:11px}
+#content.endpage .atc_popular>div .reply .cmt em {font-style:normal; padding-left:2px; line-height:1.27em}
+
+#content.endpage .atc_popular>div .reply a {font-size:11px; color:#595b62;}
+#content.endpage .atc_popular>div .reply a:hover {text-decoration:none;}
+
+#content.endpage .atc_popular>div .list_popular2 {width:370px; float:right;}
+#content.endpage .atc_popular>div .list_popular2 li {height:62px; position:relative; margin-bottom:9px; position:relative;}
+#content.endpage .atc_popular>div .list_popular2 li a{display:block;height:62px;cursor:pointer}
+#content.endpage .atc_popular>div .list_popular2 li a .img_crop {width:112px; height:62px; text-align:center; display:block; overflow:hidden; margin-bottom:8px; background:#fcfdfe;}
+#content.endpage .atc_popular>div .list_popular2 li a .img_crop img {max-width:112px;}
+#content.endpage .atc_popular>div .list_popular2 li a strong {width:240px; height:37px; display:block; font-size:14px; color:#1e1e1e; overflow:hidden; position:absolute; top:0px; left:122px;}
+#content.endpage .atc_popular>div .list_popular2 li a:hover strong {cursor:pointer; text-decoration:underline; color:#fe830a;}
+#content.endpage .atc_popular>div .list_popular2 li a .mask {width:110px; height:60px;}
+#content.endpage .atc_popular>div .list_popular2 li .reply {text-align:left; display:block; margin-top:10px; position:absolute; bottom:3px; left:122px;}
+#content.endpage .atc_popular>div .list_popular2 li .reply .cmt {display:inline-block; height:11px;}
+#content.endpage .atc_popular>div .list_popular2 li .reply .cmt em {font-style:normal; padding-left:2px; line-height:1.3em; position:relative; *top:-1px;}
+
+/* 우측-광고 */
+#aside .ad {width:248px; padding:0 !important; overflow:hidden; border-bottom:1px solid #e6e5e8;}
+
+/* 우측 - 생생포토==============뉴스홈과 스타스포츠 서브우측영역 동일함. 아래 새로생긴css 적용 후 삭제가능 130510============== */
+#aside .list_photo {padding-top:25px; padding-bottom:12px; position:relative;}
+#aside .list_photo h2 {padding:0 0 8px 13px; font-size:12px; color:#555d71;}
+#aside .list_photo ul {border-top:1px solid #e8e9eb;}
+#aside .list_photo ul li {position:relative; display:none;}
+#aside .list_photo ul li.on {display:block;}
+#aside .list_photo ul li .label_photo {position:absolute; top:13px;}
+#aside .list_photo ul li p {height:13px; padding:9px 0; margin:0 27px; *padding:9px 3px; background:#f8f8f9; text-align:center; border-top:1px solid #e8e9eb; border-bottom:1px solid #e8e9eb; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+#aside .list_photo button {width:27px; height:33px; background:none; padding:0; margin:0;}
+#aside .list_photo button span {display:block; width:27px; height:33px; text-indent:-2000em;}
+#aside .list_photo .btn_prev {position:absolute; top:180px; left:0px; background:url(http://img.sbs.co.kr/sw11/news/news2013/images/common/btn_prev.gif) no-repeat 0px 0px;}
+#aside .list_photo .btn_next {position:absolute; top:180px; right:0px; background:url(http://img.sbs.co.kr/sw11/news/news2013/images/common/btn_next.gif) no-repeat 0px 0px;}
+#aside .list_photo .btn_first {position:absolute; top:180px; left:0px; background:url(http://img.sbs.co.kr/sw11/news/news2013/images/common/btn_first.gif) no-repeat 0px 0px;}
+#aside .list_photo .btn_last {position:absolute; top:180px; right:0px; background:url(http://img.sbs.co.kr/sw11/news/news2013/images/common/btn_last.gif) no-repeat 0px 0px;}
+#aside .list_photo .paging {height:17px; padding-top:6px; overflow:hidden; text-align:center;}
+#aside .list_photo .paging a {display:inline-block; *zoom:1; *display:inline; width:7px; height:7px; vertical-align:middle; font-size:0; background:url(http://img.sbs.co.kr/sw11/news/news2013/images/common/bg_paging.gif) no-repeat 0px 0px; margin:0 2px;}
+#aside .list_photo .paging a.on {width:15px; background:url(http://img.sbs.co.kr/sw11/news/news2013/images/common/bg_paging.gif) no-repeat -7px 0px; margin:0 2px;}
+
+/* 우측 - 생생포토==============뉴스홈과 스타스포츠 서브우측영역 동일함. 웹접근성 이슈로 새로 만들어진 css============== */
+#aside .list_photo2 {padding-top:25px; padding-bottom:12px; position:relative;}
+#aside .list_photo2 h2 {padding:0 0 8px 13px; font-size:12px; color:#555d71;}
+#aside .list_photo2 ul {border-top:1px solid #e8e9eb; text-align:center; position:relative;}
+#aside .list_photo2 ul li {margin-top:177px; display:inline-block; *display:inline; *zoom:1;}
+#aside .list_photo2 ul li a.photo {position:absolute; top:0px; left:0px; z-index:4; display:none; border-bottom:1px solid #e8e9eb;}
+#aside .list_photo2 ul li.on a.photo {display:block;}
+#aside .list_photo2 ul li a.photo .label_photo {position:absolute; top:13px; left:0px; z-index:5;}
+#aside .list_photo2 ul li a.photo span {display:block; height:14px; width:176px; padding:9px 0; margin:0 auto; background:#f8f8f9; text-align:center; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+#aside .list_photo2 ul li a.paging {height:17px; padding-top:6px; overflow:hidden; display:inline-block; *zoom:1; *display:inline; width:7px; height:7px; vertical-align:middle; font-size:0; background:url(http://img.sbs.co.kr/sw11/news/news2013/images/common/bg_paging.gif) no-repeat 0px 0px; margin:0 2px;}
+#aside .list_photo2 ul li.on a.paging {width:15px; background:url(http://img.sbs.co.kr/sw11/news/news2013/images/common/bg_paging.gif) no-repeat -7px 0px; margin:0 2px;}
+
+#aside .list_photo2 button {width:27px; height:33px; background:none; padding:0; margin:0; z-index:7;}
+#aside .list_photo2 button span {display:block; width:27px; height:33px; text-indent:-2000em;}
+#aside .list_photo2 .btn_prev {position:absolute; top:180px; left:0px; background:url(http://img.sbs.co.kr/sw11/news/news2013/images/common/btn_prev.gif) no-repeat 0px 0px;}
+#aside .list_photo2 .btn_next {position:absolute; top:180px; right:0px; background:url(http://img.sbs.co.kr/sw11/news/news2013/images/common/btn_next.gif) no-repeat 0px 0px;}
+#aside .list_photo2 .btn_first {position:absolute; top:180px; left:0px; background:url(http://img.sbs.co.kr/sw11/news/news2013/images/common/btn_first.gif) no-repeat 0px 0px;}
+#aside .list_photo2 .btn_last {position:absolute; top:180px; right:0px; background:url(http://img.sbs.co.kr/sw11/news/news2013/images/common/btn_last.gif) no-repeat 0px 0px;}
+
+/* 스팟 광고영역 */
+#spot {min-height:14px; margin-bottom:8px;}
+#spot .cnt_spot {position:relative;}
+/* 뉴스 스텐드 이벤트 종료 후 삭제가능 css */
+#spot .cnt_spot .txt_spot1 {position:absolute; top:30px; left:414px;}
+#spot .cnt_spot .btn_social {position:absolute; top:128px; left:730px;}
+#spot .cnt_spot .btn_social a {margin-right:2px}
+#spot .cnt_spot .btn_take {position:absolute; top:164px; left:420px;}
+#spot .cnt_spot .btn_close {position:absolute; top:15px; right:10px;}
+#spot .cnt_spot .btn_more {position:absolute; top:0px; right:10px;}
+#spot .cnt_spot img.prize_img {position:absolute; top:161px; left:824px;}
+/* 20130704 휴가지프로젝트 종료 후 삭제가능 css */
+#spot .cnt_spot .txt_vct {position:absolute; top:125px; left:155px;}
+#spot .cnt_spot .btn_vct {position:absolute; top:204px; left:400px;}
+#spot .cnt_spot .btn_vct2 {position:absolute; bottom:0px; right:15px;}
