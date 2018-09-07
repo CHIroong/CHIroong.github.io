@@ -1,7 +1,7 @@
 let curr = getCookie("current");
 let sound = new Audio('audio/' + curr + '.mp3');
 let iframe = document.querySelector("iframe");
-iframe.setAttribute("src", "/" + curr + ".html")
+iframe.setAttribute("src", "/" + curr + ".htm")
 
 function scorePage(){
     window.location = "https://soundglance.github.io/score";
