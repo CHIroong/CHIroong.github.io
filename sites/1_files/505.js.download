@@ -1,0 +1,301 @@
+// 반응형 width 값 관리
+var filter = "win16|win32|win64|mac|macintel"; 
+	
+$(window).load(function(){
+  if ( navigator.platform ) { 
+		if ( filter.indexOf( navigator.platform.toLowerCase() ) < 0 ) { 
+			$('#lnbArea > ul > li > a').click(function () {return false;}); 
+			$('.mobile_click_none').click(function () {return false;});
+		}else { 
+			$('#lnbArea > ul > li > a').unbind('click');
+		} 
+	}
+});
+
+
+var reaction_type_width = 1023;
+var pc_menu_height_check = 'yes';
+
+if(($(window).width()) < reaction_type_width){
+	pc_menu_height_check = 'no';
+}
+
+$(document).ready(function(){
+	// pc menu
+	if(($(window).width()) > reaction_type_width){
+		gnbH = Math.max($('.gnbDp-1').outerHeight());
+		$('.gnbDp-2').height(gnbH - 70);
+	}
+
+	//lnb
+	var gnb_1depth_link = $('.gnbDp-1 > li'),
+		gnb_2depth_ul = $('.gnbDp-1 > li > ul');
+
+	
+	var navOpen = function(){
+		//반응형관련 추가
+		if(($(window).width()) > reaction_type_width){
+			var gnbH = Math.max($('.gnbDp-1').outerHeight());
+		
+			$('nav').stop().animate({
+				height: gnbH
+			},400,"easeOutQuad");
+
+			$("#lnbArea > ul > li > ul").css({'display' : 'block'});
+		}
+	};
+	var navClose = function(){
+		//반응형관련 추가
+		if(($(window).width()) > reaction_type_width){
+			$('nav').stop().animate({
+				height:70
+			},600,"easeInQuad");
+			gnb_1depth_link.removeClass('active');
+			gnb_2depth_ul.removeClass('active');//임시추가
+			//$('.mask-layer').removeClass('active');//임시추가			
+		}
+	};
+
+	var temp = 0;
+	var over = 0;
+	var menu_open_status = 'over';
+	gnb_1depth_link.on('mouseenter keyup',function(){
+		//반응형관련 추가
+		if(($(window).width()) > reaction_type_width){
+			if(menu_open_status == 'over'){
+				menu_open_status = 'open';
+				$('.mobile_click_none').unbind('click');
+
+				var self = this;
+				var depth_01_index = $(self).index();
+				
+				over = setTimeout(function(){
+					gnb_1depth_link.removeClass('active');
+					gnb_2depth_ul.removeClass('active');
+					$(self).addClass('active');
+					//$('.mask-layer').addClass('active');
+					$(self).children('ul').addClass('active');
+					navOpen();
+				}, 80);
+				temp = depth_01_index;
+			}
+		}else{
+			$('.mobile_click_none').click(function () {return false;});
+		}
+	});
+
+	$('nav').on('mouseleave',function( event ){
+		menu_open_status = 'over';
+		clearTimeout( over );
+		navClose();
+	});
+
+	$('#container, #sunMenu').on('focusin',function(){
+		$('nav').stop().animate({
+			height:70
+		},600,"easeInQuad");
+		gnb_1depth_link.removeClass('active');
+		gnb_2depth_ul.removeClass('active');
+		//$('.mask-layer').removeClass('active');
+	});
+
+	gnb_1depth_link.first().find(' > a').on({
+		'focusout' : function(){
+			menu_open_status = 'over';
+			navClose();
+		}
+	});
+
+	
+});
+
+$(window).load(function(){	
+	mobileMenu.openEvent(); // 모바일 메뉴	
+})
+
+
+var touchPrevent = function(e) {	
+	//e.preventDefault();
+};
+// mobileMenu
+var mobileMenu = {	
+	data : {openmenu:null,stat:false},
+	openEvent : function(){
+		jQuery('.mobile-menu-btn, .gnb-mobile-close a, .mask-layer').on('click',function(){			
+			mobileMenu.data.openmenu = (mobileMenu.data.stat == true) ? {'left':'-100%'} : {'left':'0%'}
+			jQuery('#lnbArea').css(mobileMenu.data.openmenu);
+			jQuery('#lnbArea').css({'display' : 'block'}); 
+			$("#lnbArea > ul > li > ul").css({'display' : 'none'});
+			if(mobileMenu.data.stat == false){
+				mobileMenu.data.stat = true;
+				jQuery('html, body').css({'overflow-y' : 'hidden'});
+				jQuery('.mobile-menu-btn').addClass('is-open');				
+				jQuery('.mask-layer').fadeIn();
+				//document.addEventListener('touchmove', touchPrevent, false);
+			} else {
+				mobileMenu.data.stat = false;
+				jQuery('html, body').css({'overflow-y' : 'visible'});
+				jQuery('.mask-layer').fadeOut();
+				jQuery('.mobile-menu-btn').removeClass('is-open');
+				//document.removeEventListener('touchmove', touchPrevent, false);
+			}
+
+			$.fn.vmenuModule = function(option) {
+				var obj,
+					item;
+				var options = $.extend({
+						Speed: 220,
+						autostart: true,
+						autohide: 1
+					},
+					option);
+				obj = $(this);
+
+				item = obj.find("ul").parent("li").children("a");
+				item.attr("data-option", "off");
+
+				item.unbind('click').on("click", function() {
+					var a = $(this);
+					if (options.autohide) {
+						a.parent().parent().find("a[data-option='on']").parent("li").children("ul").slideUp(options.Speed / 1.2,
+							function() {
+								$(this).parent("li").children("a").attr("data-option", "off");
+							})
+					}
+					if (a.attr("data-option") == "off") {
+						a.parent("li").children("ul").slideDown(options.Speed,
+							function() {
+								a.attr("data-option", "on");
+							});
+					}
+					if (a.attr("data-option") == "on") {
+						a.attr("data-option", "off");
+						a.parent("li").children("ul").slideUp(options.Speed)
+					}
+				});
+				if (options.autostart) {
+					obj.find("a").each(function() {
+
+						$(this).parent("li").parent("ul").slideDown(options.Speed,
+							function() {
+								$(this).parent("li").children("a").attr("data-option", "on");
+							})
+					})
+				}
+
+			}
+			/* 전체메뉴 아코디언 */
+			$(document).ready(function() {
+				$(".gnbDp-1").vmenuModule({
+					Speed: 200,
+					autostart: false,
+					autohide: true
+				});				
+			});
+
+			$('#lnbArea > ul > li > a').click(function () {return false;});
+
+			return false;
+		})
+	}	
+}
+
+//$("#lnbArea").css({'left' : 0});		
+$(window).resize(function() {
+	if(($(window).width()) < reaction_type_width){
+		mobileMenu.data.openmenu = (mobileMenu.data.stat == true) ? {'left':'-100%'} : {'left':'0%'}
+		jQuery('#lnbArea').css(mobileMenu.data.openmenu);
+		jQuery('#lnbArea').css({'display' : 'block'}); 
+		$("#lnbArea > ul > li > ul").css({'display' : 'none'});
+		mobileMenu.data.stat = false;
+		jQuery('html, body').css({'overflow-y' : 'visible'});
+		jQuery('.mask-layer').fadeOut();
+		jQuery('.mobile-menu-btn').removeClass('is-open');
+		jQuery('#lnbArea').css({'display' : 'none'});
+		//document.removeEventListener('touchmove', touchPrevent, false);
+	}else {
+		jQuery('#lnbArea').css({'display' : 'block'});
+		jQuery('#lnbArea').css({'left' : '0%'});
+		jQuery('.gnbDp-2').css({'display' : 'block'});
+		if ( navigator.platform ) { 
+			if ( filter.indexOf( navigator.platform.toLowerCase() ) < 0 ) { 
+				$('#lnbArea > ul > li > a').click(function () {return false;}); 
+			}else{
+				$('#lnbArea > ul > li > a').unbind('click');
+			}
+		}
+		
+		if(pc_menu_height_check == 'no'){
+			pc_menu_height_check = 'yes'
+			gnbH = Math.max($('.gnbDp-1').outerHeight());
+			$('.gnbDp-2').height(gnbH - 70);
+		}
+	}
+});
+
+$(document).ready(function() {
+	//배너 슬라이드
+	$('.mn_bannerZoneImg > li > a').focusin(function(){
+		$('#mn_bannerZoneImg').trigger("pause");
+	});
+	$('.mn_bannerZoneImg > li > a').focusout(function(){
+		$('#mn_bannerZoneImg').trigger("play");
+	});
+
+	$("#mn_bannerZoneImg").carouFredSel({ 
+			height : 41,
+			auto : {
+				delay : 2000,
+				duration : 0
+			},
+			direction : "left",
+			prev : {
+				button : "#banner_prebtn"
+			},
+			next : {
+				button : "#banner_nextbtn"
+			},
+			items : {
+				visible : 7
+			},
+			scroll : {
+				items : 1,
+				duration : 000,
+				delay : 1000
+			}
+		});
+		
+		//배너 컨트롤버튼
+		$("#banner_control").on('click', function(e) {
+			e.preventDefault();
+			but = $(this).attr('class');
+			result = but.indexOf('02');
+			if (result != -1) {
+				but = but.replace('02', '03');
+				$(this).attr('class', but);
+				if ($('#mn_bannerZoneImg').queue().length == 1) {
+					setTimeout(function() {
+						$('#mn_bannerZoneImg li>a').trigger("pause");
+					}, 500);
+				} else {
+					$('#mn_bannerZoneImg li>a').trigger("pause");
+				}
+			} else {
+				but = but.replace('03', '02');
+				$(this).attr('class', but);
+				$('#mn_bannerZoneImg li>a').trigger("play");
+			}
+		});
+});
+
+/* 하단 관련사이트 */
+jQuery(function($){	
+	$(".site_link div.layer").fadeOut("fast");
+	$(".site_link h3 button.open").click(function(){
+		$(".site_link div.layer").fadeOut("fast");
+		$(this).parent().next("div.layer").fadeIn("fast");return false;
+	});
+	$(".site_link .close").click(function(){
+		$(this).parent().fadeOut("fast");return false;
+	});
+});                  

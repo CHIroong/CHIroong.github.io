@@ -1,0 +1,349 @@
+@charset "utf-8";
+
+#wrapper {position:relative; }
+
+header {position:relative; width:100%; height:220px; /*z-index:100;*/ }
+
+
+/* 상단 link 메뉴 */
+#topUtil {position:relative; width:100%; height:49px; background: #f7f7f7; border-bottom: 1px solid #e3e3e3;}
+
+.util-area {position:relative; width:1200px; margin:0 auto;}
+.util-area .link-util {float:left; }
+.util-area .top-search {float: right;}
+.util-area .login_admin {z-index: 999;position:absolute;top:35px;right:0px;background-color:#fff;border-radius:20px;border:2px solid #004ea2;padding:5px 10px;line-height:20px;font-size:0.9em;}
+
+.link-util {}
+.link-util li {float:left;}
+.link-util li a {display:block; padding:0 15px 0 40px; line-height:49px;  font-size:15px; color:#000;letter-spacing: -1px;}
+.link-util li a:hover, .link-util li a:active {font-weight:bold; color:#004ea2;}
+.link-util li.on {background-color:#fff; border-width:3px 1px 0px 1px ; border-style:solid;border-top-color: #004ea1; border-left-color:#e3e3e3; border-right-color:#e3e3e3;}
+.link-util .pic1 a {background:url('/images/micro/greencamp/common/t_pic1_on.png') no-repeat 15px center;}
+.link-util .pic2 a {background:url('/images/micro/greencamp/common/t_pic2_on.png') no-repeat 15px center;}
+.link-util .pic3 a {background:url('/images/micro/greencamp/common/t_pic3_on.png') no-repeat 15px center;}
+.link-util .pic4 a {background:url('/images/micro/greencamp/common/t_pic4_on.png') no-repeat 15px center;}
+.link-util .pic5 a {background:url('/images/micro/greencamp/common/t_pic5_on.png') no-repeat 15px center;}
+.link-util .pic6 a {background:url('/images/micro/greencamp/common/t_pic6_off.png') no-repeat 15px center;}
+.link-util .pic7 a {background:url('/images/micro/knhe/common/t_pic7.png') no-repeat 15px center;}
+.link-util .pic8 a {background: url('/01_potal/images/common/tab-i-7.png') no-repeat 15px center; padding-left: 55px;}
+.link-util .pic1 a:hover, .link-util .pic1 a:active {background:#fff url('/images/micro/greencamp/common/t_pic1_on.png') no-repeat 15px center;}
+.link-util .pic2 a:hover, .link-util .pic2 a:active {background:#fff url('/images/micro/greencamp/common/t_pic2_on.png') no-repeat 15px center;}
+.link-util .pic3 a:hover, .link-util .pic3 a:active {background:#fff url('/images/micro/greencamp/common/t_pic3_on.png') no-repeat 15px center;}
+.link-util .pic4 a:hover, .link-util .pic4 a:active {background:#fff url('/images/micro/greencamp/common/t_pic4_on.png') no-repeat 15px center;}
+.link-util .pic5 a:hover, .link-util .pic5 a:active {background:#fff url('/images/micro/greencamp/common/t_pic5_on.png') no-repeat 15px center;}
+.link-util .pic6 a:hover, .link-util .pic6 a:active {background:#fff url('/images/micro/greencamp/common/t_pic6_off.png') no-repeat 15px center;}
+.link-util .pic7 a:hover, .link-util .pic7 a:active {background:#fff url('/images/micro/knhe/common/t_pic7.png') no-repeat 15px center;}
+.link-util .pic8 a:hover, .link-util .pic8 a:active {background:#fff url('/01_potal/images/common/tab-i-7.png') no-repeat 15px center; padding-left: 55px;}
+
+.top-search .search_btn {display:inline-block; padding:0 15px 0 40px; line-height:49px; font-weight:bold; font-size:16px; color:#fff; background:url('/images/micro/greencamp/common/t_pic7_off.png') no-repeat 15px center;}
+.top-search .allmenu_btn {display:inline-block; padding:0 15px 0 40px; line-height:49px; font-weight:bold; font-size:16px; color:#fff; background:#003c7b url('/images/micro/greencamp/common/t_pic8_off.png') no-repeat 15px center;}
+.top-search a {color:#000; padding: 0 10px;margin-top:13px; display:inline-block; }
+
+.logo-area {position:relative; width:1200px; margin:0 auto; padding:30px 0;}
+.logo-area .logo a{display:block; overflow:hidden; margin:0px auto; width:179px; height:41px; text-indent:-99999px; background:url('/images/micro/greencamp/common/t_logo.png') no-repeat left top;}
+.logo-area .weather {position:absolute; right:0px; top:30px;}
+.logo-area .weather .weather_pic {float:left; margin-right:10px; margin-top:-15px;}
+.logo-area .weather .weather_pic .weather_ico {display:block; width:48px; height:39px;}
+.logo-area .weather .weather_pic .icon_1 {background:url('/images/micro/weather/weather_pic1.png') no-repeat left top;}
+.logo-area .weather dl {float:left;/* margin-top:-5px; */}
+.logo-area .weather dl dt {/* overflow:hidden; *//* height:27px; */}
+.logo-area .weather dl dt .date {font-size: 13px;color:#000;display: inline-block;margin-left: 10px;}
+.logo-area .weather dl dt .temp {font-size: 31px;font-weight:bold;color:#dd3127;/* display: inline-block; */}
+.logo-area .weather dl dd {overflow:hidden; height:18px;}
+.logo-area .weather dl dd ul li {float:left;}
+.logo-area .weather dl dd .tit {display:inline-block; font-size:12px; color:#848484; }
+.logo-area .weather dl dd .data {display:inline-block; font-size:12px; font-weight:bold; color:#022f73; }
+.logo-area .weather dl dd .line {padding-right:40px;  background:url('/images/micro/greencamp/common/line_bg.png') no-repeat right center;}
+
+
+/* 주메뉴 */
+#lnbArea {overflow:hidden;position:absolute;top:150px;left:0;z-index:100;width:100%;height:70px;border-top:1px solid #d8d8d8;border-bottom:1px solid #d8d8d8;background:#fff url('/images/micro/greencamp/common/topmenu_bg.png') repeat-x left top;}
+#lnbArea > ul {overflow:hidden; width:980px; margin:0 auto;}
+#lnbArea > ul > li {float:left; width:14.25%; line-height:70px;}
+#lnbArea > ul > li > a {display:block;height:70px;font-size:19px;font-weight:700;color:#000;line-height:70px;text-align:center;}
+#lnbArea > ul > li > a:hover,
+#lnbArea > ul > li > a:active,
+#lnbArea > ul > li > a:focus,
+#lnbArea > ul > .active > a {border-bottom:5px solid #004ea1; background:#fff;  transition: all 0.2s;-webkit-transition: all 0.2s;-moz-transition: all 0.2s;}
+#lnbArea > ul > li > ul {padding:16px 0 10px 0; border-left:1px solid #d8d8d8;}
+#lnbArea > ul > li:last-child > ul {border-right:1px solid #d8d8d8;}
+#lnbArea > ul > li > .active {background:#f5f5f5;}
+#lnbArea > ul > li > ul > li { }
+#lnbArea > ul > li > ul > li > a {display:block;padding-left:24px; font-size:14px;line-height:30px; font-weight:700;background:url('/images/micro/greencamp/common/dot_gray.png') no-repeat 14px center;}
+#lnbArea > ul > li > ul > li > a:hover,
+#lnbArea > ul > li > ul > li > a:focus,
+#lnbArea > ul > li > ul > .topMenuOn > a {color:#004ea1;background:url('/images/micro/greencamp/common/dot_blue.png') no-repeat 14px center;}
+#lnbArea > ul > li > ul > li > ul {display:none;}
+
+#lnbArea .ico_blank {margin-left:5px;vertical-align:middle;}
+
+.mask-layer.active {display:block;top:220px; filter:alpha(opacity=20);opacity: 0.2;-moz-opacity:0.2;z-index:99;}
+
+/* 모바일 메뉴 */
+.mobile-menu-btn {display:none;}
+.gnb-mobile-close {display:none;}
+.gnb-mobile-tit {display:none;}
+.gnb-mobile-link-util {display:none;}
+
+
+#container {position:relative; width:100%;}
+#container:after { content:''; display:block; clear:both;}
+
+/* footer*/
+.footerNav {height:55px;background:#525252;}
+.footerNav ul {position:relative;width:1230px;margin:0 auto;}
+.footerNav ul li {float:left;width:33.3%;line-height:55px;height:55px;border-right:1px solid #757576;background:url('/01_potal/images/common/fnav-i.png') no-repeat 95% 50%;}
+.footerNav ul li:first-child {border-left:1px solid #757576;}
+.footerNav ul li.on {background-image:url('/01_potal/images/common/fnav-i-minus.png');}
+.footerNav ul li > a {color:#cfcfcf;font-weight:bold;display:block;padding: 20px;}
+
+.footerNav .ftList {position:absolute;left:0;bottom:0;width:100%;background-color:#fff;line-height:1.6;padding:15px;z-index:100;border:solid #ddd;border-width:1px 1px 0;overflow:hidden;}
+.footerNav .ftList dt {font-size:1.1em;color:#002e60;font-weight:bold;margin-bottom:10px;}
+.footerNav .ftList dd {width:33.33%;float:left;background:url('/01_potal/images/common/dot_submenu.gif') no-repeat 0 50%;padding:6px 0 6px 10px;font-size:0.9em;}
+.footerNav .ftList dd a {color:#666;font-weight:normal;}
+.footerNav .ftList > a {position:absolute;right:15px;top:15px;}
+.footerNav .ftList > a img {height:22px;}
+
+.footerNav .ftList#ft-1 dl {width:50%;float:left;} /* 실국바로가기 */
+.footerNav .ftList#ft-2 dl {width:50%;float:left;} /* 경남SNS */
+.footerNav .ftList#ft-2 dd a {display:inline-block;}
+.footerNav .ftList#ft-3 dl {width:50%;float:left;} /* 관련사이트 */
+.footerNav .ftList#ft-3 dl:nth-child(3) dt, .footerNav .ftList#ft-3 dl:nth-child(4) dt {margin-top:30px;}
+
+/* footer */
+footer {clear:both;position:relative; background:#252525;}
+
+.site_link {position:relative; width:100%; height:55px; background:#525252;}
+.site_link .site_con{position:relative; width:1200px; margin:0 auto; }
+.site_link .sitelink_cont {float:left;width:33.333%;}
+.site_link .sitelink_cont h3 button {display:block; width:100%; padding:20px 25px; text-align:left; color:#fff; background:#525252 url('/images/micro/greencamp/common/pic_plus.png') no-repeat right center; border-left:1px solid #6e6e6e;}
+.site_link .sitelink_cont:last-child h3 button{border-right:1px solid #6e6e6e;}
+
+.site_link .layer{display:none;position:absolute;left:0;bottom:0px;width:1200px;z-index:100;padding:10px 20px;background:#fff; border:1px solid #ddd; }
+.site_link .layer .close{position:absolute;right:0;top:0;width:40px;height:40px;background:#11316f url('/images/micro/greencamp/common/close_btn.png') no-repeat left top;font-size:0;line-height:0;text-indent:-9999px;z-index:10; border:none; cursor:pointer;}
+
+.site_link .link_part {overflow:hidden; clear:both; padding:30px 20px;}
+.site_link .link_part .inner_wrap1, .site_link .link_part .inner_wrap2 {float:left; width:50%;}
+.site_link .link_part .inner_wrap1 h4, .site_link .link_part .inner_wrap2 h4 {margin-bottom:20px; font-size:18px; font-weight:bold; color:#004ea1;}
+.site_link .link_part .inner_wrap1 ul li {float:left; width:33.33%; margin-bottom:7px;}
+.site_link .link_part .inner_wrap1 ul li a{display:block; padding-left:10px; background:url('/images/micro/greencamp/common/dot_blue.png') no-repeat left 9px;}
+
+.site_link .link_part .inner_wrap2 img {vertical-align:middle;}
+.site_link .link_part .inner_wrap2 a {display:inline-block;}
+.site_link .link_part .inner_wrap2 .li_50 li{float:left; width:50% !important; margin-bottom:7px; padding-left:10px; background:url('/images/micro/greencamp/common/dot_blue.png') no-repeat left 9px;}
+.site_link .link_part .inner_wrap2 ul li {float:left; width:33.33%; margin-bottom:7px; padding-left:10px; background:url('/images/micro/greencamp/common/dot_blue.png') no-repeat left 9px;}
+
+.site_link .link_part .inner_wrap3 {float:left; width:50%; min-height:220px; padding-bottom:50px; }
+.site_link .link_part .inner_wrap3 h4 {margin-bottom:20px; font-size:18px; font-weight:bold; color:#004ea1;}
+.site_link .link_part .inner_wrap3 ul li{float:left; width:33.33%; margin-bottom:7px;}
+.site_link .link_part .inner_wrap3 ul li a{display:block; padding-left:10px; font-size:14px; letter-spacing:-0.05em; background:url('/images/micro/greencamp/common/dot_blue.png') no-repeat left 9px;}
+
+.footer-con {clear:both; position:relative; width:1200px; margin:0 auto; padding:50px 0;}
+.footer-con .footer_logo { display:none; position:absolute; left:0px; top:50px; width:152px; height:80px; background:url('/images/micro/greencamp/common/qr_logo.png') no-repeat left 9px; text-indent:-9999px;}
+.footer-con .footer_Menu {overflow:hidden; position:relative; /*padding-left:180px;*/ margin-bottom:20px;}
+.footer-con .footer_Menu li{float:left; padding:0 20px; background:url('/images/micro/greencamp/common/line_bg.png') no-repeat right 4px;}
+.footer-con .footer_Menu li:last-child {background:none;}
+.footer-con .footer_Menu li a {display:inline-block; color:#d3d3d3; letter-spacing:-0.05em;}
+.footer-con .footer_Menu li a:hover{text-decoration:underline;}
+.footer-con .footer_Menu li.color a {color:#ffff00;}
+.footer-con address {clear:both; position:relative; /*padding-left:200px;*/ line-height:1.5em; color:#666;}
+.footer-con cite {clear:both; position:relative; /*padding-left:200px; */ color:#666;}
+.footer-con .wa_mark {position:absolute; right:0px; top:75px;}
+
+/* 배너존 */
+#banner-area {display:block; clear:both; position:relative; height:80px; padding:20px 0;  border-top:1px solid #d6d6d6; border-bottom:1px solid #d6d6d6;}
+
+.mn_bannerZone {overflow:hidden; position:relative; width:1200px; height:45px; margin:0 auto;}
+.mn_bannerZone h2 {padding-left:20px; padding-top:10px; font-size:18px; font-weight:bold; color:#000;}
+.mn_bannerZone .mn_bannerZoneBtn {position:absolute; top:10px; height:23px;}
+.mn_bannerZone .mn_bannerZoneBtn01 {left:90px; width:22px; background:url('/images/micro/greencamp/common/pic_banner_01.png') no-repeat left center;}
+.mn_bannerZone .mn_bannerZoneBtn02 {left:112px; width:22px; background:url('/images/micro/greencamp/common/pic_banner_02.png') no-repeat left center;}
+.mn_bannerZone .mn_bannerZoneBtn03 {left:112px; width:22px; background:url('/images/micro/greencamp/common/pic_banner_05.png') no-repeat left center;}
+.mn_bannerZone .mn_bannerZoneBtn04 {border-right:1px solid #ddd;left:134px; width:22px; background:url('/images/micro/greencamp/common/pic_banner_03.png') no-repeat left center;}
+.mn_bannerZone .mn_bannerZoneBtn05 {display:none;left:157px; width:23px; background:url('/images/micro/greencamp/common/pic_banner_04.png') no-repeat left center;}
+
+.mn_bannerZone .caroufredsel_wrapper{position:absolute !important; top:0px !important; left: 205px !important; width:980px !important; }
+
+.mn_bannerZone .mn_bannerZoneImg {overflow:hidden; height:41px !important;}
+.mn_bannerZone .mn_bannerZoneImg  li {float:left; margin:0 10px;}
+.mn_bannerZone .mn_bannerZoneImg  li a {display:block;}
+
+
+
+/* ======================================== Responsive ======================================== */
+/* pc */
+@media (max-width: 1200px) {
+    .util-area{width:auto;}
+    .logo-area{width:auto;}
+    
+    #lnbArea > ul {width:auto;}
+    
+    .mn_bannerZone{width:auto;}
+    .mn_bannerZone .caroufredsel_wrapper{width:100% !important;}
+    
+    
+    .site_link .site_con{width:auto;}
+    .site_link .layer{width:100%;}
+    .footerNav ul {width:100%;}
+    .footer-con {width:auto; text-align:center;}
+    
+    .footer-con .footer_logo {position:relative; top:0px; display:none;}
+    .footer-con .wa_mark {position:relative; top:0px; display:inline-block;}
+    
+    .footer-con .footer_Menu {display:inline-block; padding-left:0px; padding-top:30px; margin-bottom:30px;}
+    .footer-con .footer_Menu li {}
+    .footer-con .footer_Menu li a { font-size:14px; }
+    
+    .footer-con address {padding-left:0px;}
+    .footer-con cite {display:block; padding-left:0px;}
+    
+}
+
+/*notebook & Tablet*/
+@media (max-width: 1023px) {
+    
+    header {height:50px; border-bottom:1px solid #ddd; /*z-index:150;*/}
+    
+    #topUtil {height:auto; background:none; z-index:10;}
+    
+    .util-area .link-util {display:none;}
+    .util-area .top-search {/*z-index:10; top:10px;*/display:none; }
+    
+    .top-search .search_btn {overflow:hidden; width:50px; height:50px; background:url('/images/micro/greencamp/common/mobile_search.png') no-repeat center center; background-size:50% auto; text-indent:-9999px; }
+    .top-search .allmenu_btn {overflow:hidden;  width:50px; height:50px; background:url('/images/micro/greencamp/common/mobile_menu.png') no-repeat center center; background-size:50% auto; text-indent:-9999px; }
+    
+    .logo-area {padding:10px; }
+    .logo-area .logo {padding-top:3px;}
+    .logo-area .logo a {width:120px; height:27px; background-size:100% auto;}
+    .logo-area .weather {display:none;}
+    
+    .mobile-menu-btn {display:block;position:absolute; top:0px; left:0px; width:49px; height:49px; padding:15px;  z-index:10; background:#fff;}
+    .mobile-menu-btn span {display:block;}
+    .mobile-menu-btn .icon-bar+.icon-bar {margin-top:4px;}
+    .mobile-menu-btn .icon-bar {width:25px; height:3px;  transition: all 0.25s ease-in-out;}
+    .mobile-menu-btn .icon-bar {
+        background: #000;
+        -webkit-transition: all 0.25s ease-in-out;
+        transition: all 0.25s ease-in-out;
+    }
+    .mobile-menu-btn.is-open .icon-bar:nth-child(2) {
+        -webkit-transform: rotate(45deg) translate(5px, 6px);
+        -ms-transform: rotate(45deg) translate(5px, 6px);
+        transform: rotate(45deg) translate(5px, 6px);
+    }
+    .mobile-menu-btn.is-open .icon-bar:nth-child(3) {	opacity: 0;}
+    .mobile-menu-btn.is-open .icon-bar:nth-child(4) {
+        -webkit-transform:rotate(-225deg) translate(-3px, 5px);
+        -ms-transform:rotate(-225deg) translate(-3px, 5px);
+        transform: rotate(-225deg) translate(-3px, 5px);
+    }
+    
+    #lnbArea {display:none;position:fixed;left:-100%;right:0px;top:0px;bottom:0px;width:65%;height:100% !important;background:#004ea1;overflow-x:hidden;overflow-y:auto;-webkit-transition: all 0.2s ease-in-out;-moz-transition: all 0.2s ease-in-out;transition: all 0.2s ease-in-out;z-index:200;}
+    
+    .gnb-mobile-close {display:block; position:absolute;right:0;top:0;}
+    .gnb-mobile-close a {display:block; width:47px;height:47px;/*#11316f*/background:#666 url('/images/micro/greencamp/common/close_btn.png') no-repeat center center;font-size:0;line-height:0;text-indent:-9999px;z-index:10; border:none; cursor:pointer;}
+    .gnb-mobile-tit {display:block;padding:10px; background:#fff;}
+    .gnb-mobile-tit a {display:block; overflow:hidden; margin:0px auto; width:120px; height:27px;  text-indent:-99999px; background:url('/images/micro/greencamp/common/t_logo.png') no-repeat left top;background-size:100% auto;}
+    
+    /*.gnb-mobile-link-util {display:block; background:#004ea1 !important;}
+    .gnb-mobile-link-util li {float:left !important; width:50% !important; padding:0px !important; border-bottom:1px solid #003c7b;}
+    .gnb-mobile-link-util li a {display:block; padding:0 15px 0 40px; line-height:49px;  font-size:15px; color:#fff !important; border-bottom:none !important;}
+    .gnb-mobile-link-util li a:hover, .link-util li a:active {font-weight:bold; color:#004ea2 !important;}
+    .gnb-mobile-link-util .pic1 a {background:url('/images/micro/greencamp/common/t_pic1_off.png') no-repeat 15px center;}
+    .gnb-mobile-link-util .pic2 a {background:url('/images/micro/greencamp/common/t_pic2_off.png') no-repeat 15px center;}
+    .gnb-mobile-link-util .pic3 a {background:url('/images/micro/greencamp/common/t_pic3_off.png') no-repeat 15px center;}
+    .gnb-mobile-link-util .pic4 a {background:url('/images/micro/greencamp/common/t_pic4_off.png') no-repeat 15px center;}
+    .gnb-mobile-link-util .pic5 a {background:url('/images/micro/greencamp/common/t_pic5_off.png') no-repeat 15px center;}
+    .gnb-mobile-link-util .pic6 a {background:url('/images/micro/greencamp/common/t_pic6_off.png') no-repeat 15px center;}
+    .gnb-mobile-link-util .pic1 a:hover, .link-util .pic1 a:active {background:#fff url('/images/micro/greencamp/common/t_pic1_on.png') no-repeat 15px center !important;}
+    .gnb-mobile-link-util .pic2 a:hover, .link-util .pic2 a:active {background:#fff url('/images/micro/greencamp/common/t_pic2_on.png') no-repeat 15px center !important;}
+    .gnb-mobile-link-util .pic3 a:hover, .gnb-mobile-link-util .pic3 a:active {background:#fff url('/images/micro/greencamp/common/t_pic3_on.png') no-repeat 15px center !important;}
+    .gnb-mobile-link-util .pic4 a:hover, .gnb-mobile-link-util .pic4 a:active {background:#fff url('/images/micro/greencamp/common/t_pic4_on.png') no-repeat 15px center !important;}
+    .gnb-mobile-link-util .pic5 a:hover, .gnb-mobile-link-util .pic5 a:active {background:#fff url('/images/micro/greencamp/common/t_pic5_on.png') no-repeat 15px center !important;}
+    .gnb-mobile-link-util .pic6 a:hover, .gnb-mobile-link-util .pic6 a:active {background:#fff url('/images/micro/greencamp/common/t_pic6_off.png') no-repeat 15px center !important;}
+    */
+    /* old_디자인
+    #lnbArea > ul {height:auto;width:auto; background:#f2f2f2;}
+    #lnbArea > ul > li {float:none; width:100%; line-height:60px; padding:0 20px; }
+    #lnbArea > ul > li > a {height:60px; line-height:60px; text-align:left; border-bottom: 1px solid #e4e4e4;  }
+    #lnbArea > ul > li > a[data-option='off'] {background: url('/images/micro/greencamp/common/gnb_sub_close.png') right center no-repeat; background-size: 22px 22px;}
+    #lnbArea > ul > li > a[data-option='on'] {border-bottom:1px solid #ccc; color:#004ea1; transition: all 0.2s;-webkit-transition: all 0.2s;-moz-transition: all 0.2s; background: url('/images/micro/greencamp/common/gnb_sub_open.png') right center no-repeat; background-size: 22px 22px;}
+    #lnbArea > ul > li > a:hover,
+    #lnbArea > ul > li > a:active,
+    #lnbArea > ul > li > a:focus,
+    #lnbArea > ul > .active > a {border-bottom:1px solid #ccc; transition: all 0.2s;-webkit-transition: all 0.2s;-moz-transition: all 0.2s; background: url('/images/micro/greencamp/common/gnb_sub_open.png') right center no-repeat; background-size: 22px 22px;}
+    #lnbArea > ul > li > ul {display:none; padding:0px; height:auto !important; border-left:none;border-bottom: 1px solid #e4e4e4;}
+    #lnbArea > ul > li > ul > li > a {padding:5px 0 5px 24px;}
+    
+    */
+    
+    /* 본청 스타일  */
+	#lnbArea > ul {height:auto;width:auto; background:#fff;}
+	#lnbArea > ul > li {float:none; width:100%; line-height:60px; padding:0px; border-bottom:1px solid #185ca4; border-top:1px solid #002d5d; }
+	#lnbArea > ul > li > a {padding-left:20px; height:60px; line-height:60px; text-align:left; color:#fff; font-size:1.0em; background:#004ea1;}
+	#lnbArea > ul > li > a[data-option='off'] {background:#004ea1 url('/images/micro/bangjae/common/gnb_sub_close.png') 95% center no-repeat; background-size: 22px 22px;}
+	#lnbArea > ul > li > a[data-option='on'] {color:#004ea1; transition: all 0.2s;-webkit-transition: all 0.2s;-moz-transition: all 0.2s; background:#fff url('/images/micro/bangjae/common/gnb_sub_open.png') 95% center no-repeat; background-size: 22px 22px;}
+	#lnbArea > ul > li > a:hover,
+	#lnbArea > ul > li > a:active,
+	#lnbArea > ul > li > a:focus,
+	#lnbArea > ul > .active > a {border-bottom:none; color:#004ea1; transition: all 0.2s;-webkit-transition: all 0.2s;-moz-transition: all 0.2s; background:#fff url('/images/micro/bangjae/common/gnb_sub_open.png') 95% center no-repeat; background-size: 22px 22px;}
+	#lnbArea > ul > li > ul {display:none; padding:2px 0px; height:auto !important; border-left:none;border-bottom: 1px solid #e4e4e4; border-top: 3px solid #004ea1;}
+	#lnbArea > ul > li > ul > li {padding:2px 4px;}
+	#lnbArea > ul > li > ul > li > a {padding:5px 0 5px 24px; border: 1px solid #ddd;}
+	#lnbArea > ul > li > ul > li > ul {background:#f1f1f1; border: 1px solid #ddd; border-top:none;}
+	#lnbArea > ul > li > ul > li > ul > li {line-height:31px; }
+	#lnbArea > ul > li > ul > li > ul > li > a {display:block;padding:7px 7px 7px 30px; font-size:13px; background:url('/images/micro/bangjae/common/li_dot.png') no-repeat 20px 15px;}
+	#lnbArea > ul > li > ul > li > ul > li > a:hover {color:#004ea1;}
+    
+    #banner-area {display:none;}
+    
+    .mask-layer {display:none;position:fixed;top:0px;right:0;left:0;bottom:0px;width:100%;height:100%;background:#000;filter:alpha(opacity=70);opacity: 0.7;-moz-opacity:0.7; z-index:150;}
+}
+
+
+
+/*notebook & Tablet*/
+@media (min-width: 768px) and (max-width: 1023px) {
+    
+}
+
+/*Mobile & Phone*/
+@media (max-width: 767px) {
+    
+    #lnbArea {overflow-y:scroll;}
+    
+    .site_link{height:auto;}
+    .site_link .sitelink_cont{float:none; width:100%; border-bottom:1px solid #6e6e6e;}
+    
+    .site_link .layer {bottom:168px; height:300px; overflow-y:scroll; overflow-x:hidden;}
+    .site_link .link_part {padding:0px;}
+    .site_link .link_part .inner_wrap1, .site_link .link_part .inner_wrap2 {float:left; width:100%; margin-bottom:20px;}
+    
+    .site_link .link_part .inner_wrap1 ul li {width:50%;}
+    .site_link .link_part .inner_wrap2 .li_50 li{float:none; width:100% !important;}
+    .site_link .link_part .inner_wrap2 ul li {float:none; width:100%;}
+    .site_link .link_part .inner_wrap3 ul li {width:50%;}
+    .site_link .link_part .inner_wrap3 ul.li_w100 li{float:none; width:100% !important;}
+    
+    .site_link .link_part .inner_wrap3 {overflow:hidden;float:none; width:100%; padding-bottom:20px; min-height:auto;}
+    
+    .footer-con .footer_Menu li a{font-size:13px;}
+    /*20180207추가*/
+	.footerNav {height:auto;overflow:hidden;}
+	.footerNav ul li {width:100%;line-height:40px;height:auto;border-bottom:1px solid #252525;border-right:0;background-position:95% 22px;}
+	.footerNav ul li:first-child {border-left:0;}
+
+	.footerNav .ftList {position:relative;border:1px solid #252525;}
+	.footerNav .ftList dl {width:100% !important;}
+	.footerNav .ftList dl:first-child dt {margin-top:0;}
+	.footerNav .ftList dt {margin-top:30px;}
+	.footerNav .ftList dd {width:50%;font-size:0.9em;}
+	.footerNav .ftList > a {top:25px; }
+	.footerNav .ftList > a img {height:18px;}
+}
+
+@media (max-width:480px){
+    
+    .gnb-mobile-link-util li {float:none !important; width:100% !important; padding:0px !important; }
+    
+}                                                                                                                                                             
