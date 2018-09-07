@@ -1,0 +1,445 @@
+function FileUpload() {
+	
+	var _this = this;
+
+	// 파일업로드 초기화
+	_this.initFileUpload = function($input, mode, check) {
+		var imageUploadYn = false;
+		var fileUploadYn = false;
+		var type = '';
+		var fileType = ""; // FileType
+		var maxImageCount = 0;
+		var commentSn = 0;
+
+		// mode -> 어느곳에서 업로드 하느냐에 따라 설정값이 변경된다.
+		if(mode == 'board') { // 게시글 업로드
+			imageUploadYn = app.env.confWriteImageUploadYn;
+			fileUploadYn = app.env.confWriteFileUploadYn;
+			type = $input.data('type');
+			fileType = "F01";
+			maxImageCount = app.env.maxImageCount;
+
+		} else if(mode == 'comment') { // 댓글 이미지 업로드
+			imageUploadYn = true;
+			fileUploadYn = false;
+			type = 'image';
+			fileType = "F03";
+			maxImageCount = 1;
+			commentSn = $('#comment_commentSn').val();
+
+		} else if(mode == 'somoim') { // 소모임 UpperImage 업로드
+			
+		} else if(mode == 'hongbo') { // 직접홍보 추가 정보
+			imageUploadYn = true;
+			type = 'image';
+		}
+
+		// 이미지 업로드
+		if (imageUploadYn && type == 'image') {
+			var imageUploadOptions = {
+				url: API_HOST + '/file/upload?fileType=' + fileType,
+				dataType: 'json',
+				autoUpload: false,
+				disableImageResize: /Android(?!.*Chrome)|Opera/.test(window.navigator.userAgent),
+				previewMaxWidth: 100,
+				previewMaxHeight: 100,
+				previewCrop: true,
+				error: function(e, data){
+					var errorMessage = e.responseText;
+					if(errorMessage == undefined || errorMessage == null || errorMessage == '') {
+						errorMessage = '이미지 업로드에 실패 하였습니다.';
+					}
+					alert(errorMessage);
+
+					document.getElementById("loading").style.display = "none";
+					$('.fr-overlay').removeClass('active');
+
+					if(mode == 'board') {
+						$input.closest('form').remove();
+						$('*[data-role=fileupload-image-preview]').empty();
+					} else if (mode == 'comment') {
+						$('#img_prev_div').empty();
+					}
+				},
+				add: function(e, data) {
+					// 업로드 갯수 제한
+					var imageCountCheck = 0;
+
+					$.each(app.env.images, function() {
+						imageCountCheck += 1;
+					});
+
+					if (imageCountCheck >= maxImageCount) {
+						alert('이미지 추가는 '+maxImageCount+'개 까지만 할 수 있습니다.');
+						return false;
+					}
+
+					var acceptFileTypes = app.env.confImageExt;
+						acceptFileTypes = acceptFileTypes.split(',');
+					var ext = data.originalFiles[0].name.replace( /%/,"%25").substr(data.originalFiles[0].name.replace( /%/,"%25").lastIndexOf(".")+1).toUpperCase();
+					var matchCnt = 0;
+					var isValidSize = data.originalFiles[0]['size'] <= 1024 * 1000 * app.env.confImageSize;
+					var isValidType = true;
+
+					$.each(acceptFileTypes, function(i, v) {
+						if (v.toUpperCase() == ext) {
+							matchCnt ++;
+						}
+					});
+
+					isValidType = (matchCnt > 0) ? true : false;
+
+					// 타입 체크
+					if (!isValidType) {
+						$.each(data.files, function (index, file) {
+							alert("업로드 가능 확장자를 확인해 주세요.\n"+file.name+"은(는) 업로드 할 수 없습니다.");
+						});
+						// 프리뷰 이미지 리사이즈
+						$(window).trigger('resize');
+						if(mode == 'board') {
+							$input.closest('form').remove();
+						}
+						return false;
+					}
+
+					// 용량 체크
+					if (!isValidSize) {
+						$.each(data.files, function (index, file) {
+							alert("파일 용량이 초과 되었습니다.\n"+file.name+"은(는) 업로드 할 수 없습니다.");
+						});
+
+						// 프리뷰 이미지 리사이즈
+						$(window).trigger('resize');
+
+						if(mode == 'board') {
+							$input.closest('form').remove();
+						}
+						return false;
+					}
+
+					// 유효성 통과 후 이미지 노출
+					if (isValidType && isValidSize) {
+
+						var eleItem;
+						$.each(data.files, function (index, file) {
+
+							// 게시글 업로드
+							if(mode == 'board') {
+								var item = _this.preViewImg('article', URL.createObjectURL(data.files[0]), file.name, null);
+								eleItem = $(item);
+								$('*[data-role=fileupload-image-preview]').append(eleItem);
+
+							} else if(mode == 'comment') { // 댓글 이미지 업로드
+								var item = _this.preViewImg('comment', URL.createObjectURL(data.files[0]), file.name, commentSn);
+								eleItem = $(item);
+								$('#img_prev_div').append(eleItem);
+
+							} else if(mode == 'somoim') { // 소모임 UpperImage 업로드
+								
+							} else if(mode == 'hongbo') { // 직접홍보 추가 정보
+								
+							}
+
+						});
+
+						// done 이벤트시 처리하기 위해 itemNode에 dom을 캐싱함
+						this.itemNode = eleItem;
+						data.submit();
+
+						// 이미지 업로드시 로딩
+						document.getElementById("loading").style.display = "block";
+						$('.fr-overlay').addClass('active');
+
+						// 프리뷰 이미지 리사이즈
+						$(window).trigger('resize');
+					}
+				},
+				done: function (e, data) {
+					
+					// Return Size Check
+					if(data._response.result.length > 1) {
+						
+						for(var i=0; i<data._response.result.length; i++) {
+							data._response.result[i].isVaild = false;
+
+							if(data._response.result[i].fileExt == "mp4"){
+								for(var j=0; j<data._response.result.length; j++) {
+									if(data._response.result[i].fileKey == data._response.result[j].fileKey){
+										data._response.result[i].isVaild = true;
+										data._response.result[i].thumbUrl = data._response.result[j].url;
+										data._response.result[i].thumbFileSn = data._response.result[j].fileSn;
+									}
+								}
+							}
+						}
+					} else {
+						data._response.result[0].isVaild = true;
+					}
+
+					for(var i=0; i<data._response.result.length; i++) {
+						var result = data._response.result[i];
+						var fileSn = result.fileSn;
+						var fileKey = result.fileKey;
+						var fileExt = (result.fileExt).toLowerCase();
+						var imgOriWidth = result.width;
+						var imgOriHeight = result.height;
+						var url = CDN_URL +'/file' + result.url;
+						var thumbUrl = result.thumbUrl
+						var thumbFileSn = result.thumbFileSn;
+						var oriName = result.originName;
+
+						app.env.images['file_' + fileSn] = {
+							fileSn: fileSn,
+							fileKey: fileKey,
+							fileExt: fileExt
+						};
+
+						if(result.isVaild) {
+							
+							this.itemNode.find('*[data-role=fileupload-remove-btn]').attr({
+								'data-file-sn': fileSn,
+								'data-file-key': fileKey
+							});
+
+							if(mode == 'board') { // 게시글 업로드
+								// 게시글 등록후 이미지 미리보기 영역 Start ->
+								if(fileExt == "mp4") {
+									this.itemNode.remove(); // 기존 Img preview 삭제 후 새로 생성.
+									var item = _this.preViewVideo(fileSn, thumbFileSn, result.thumbUrl, url, fileKey, oriName);
+									eleItem = $(item);
+									$('*[data-role=fileupload-image-preview]').append(eleItem);
+
+								} else {
+									this.itemNode.find('*[data-role=fileImgSrc]').attr({
+										'src': url,
+										'data-file-sn': fileSn,
+										'data-ext' : fileExt,
+										'data-width': imgOriWidth,
+										'data-height': imgOriHeight
+									});
+
+									this.itemNode.find('*[data-role=imageView]').attr({
+										'data-image-view': fileSn
+									});
+
+									this.itemNode.find('*[data-role="imageViewRadio"]').attr({
+										'value' : result.url
+									});
+								}
+								app.imgEventBindSetting();
+								// 게시글 이미지 미리보기 영역 END <-/
+
+								// 본문 안에 삽입할 경우.
+								if (app.env.selImageLocation.val() == 'IN') {
+									var html = "";
+
+									if(fileExt == "mp4") {
+										html = _this.addContentVideo(thumbUrl, url, fileKey, fileSn);
+									} else {
+										html = _this.addContentImg(fileExt, url + IMG_PARAMETER, fileSn, imgOriWidth, imgOriHeight);
+									}
+	
+									app.env.iptContent.froalaEditor('html.insert', html, true);
+									$('*[data-role=attach-image]').filter('*[data-file-sn=' + fileSn +  ']').removeAttr('style');
+								}
+							}
+						
+						}
+					}
+					
+					// 이미지 업로드완료시 로딩
+					document.getElementById("loading").style.display = "none";
+					$('.fr-overlay').removeClass('active');
+					if(mode == 'board') {
+						$input.closest('form').remove();
+					}
+				}
+			};
+
+			$input
+				.fileupload(imageUploadOptions)
+				.prop('disabled', !$.support.fileInput)
+				.parent().addClass($.support.fileInput ? undefined : 'disabled');
+
+			if(check != 'viewInit') {
+				$input.trigger('click');
+			}
+		}
+
+		// 파일 첨부
+		if (fileUploadYn && type == 'attach') {
+
+			var fileUploadOptions = {
+				url: API_HOST + '/file/upload?fileType=F02',
+				dataType: 'json',
+				autoUpload: false,
+				disableImageResize: /Android(?!.*Chrome)|Opera/.test(window.navigator.userAgent),
+				previewMaxWidth: 100,
+				previewMaxHeight: 100,
+				previewCrop: true,
+				error: function(e, data){
+					alert(e.responseText);
+				},
+				add: function(e, data) {
+					// 업로드 갯수 제한
+					var filesCnt = 0;
+
+					$.each(app.env.files, function() {
+						filesCnt += 1;
+					});
+
+					if (filesCnt >= app.env.maxFileCount) {
+						alert('파일 추가는 '+app.env.maxFileCount+'개 까지만 할 수 있습니다.');
+						return false;
+					}
+
+					var acceptFileTypes = app.env.confFileExt;
+					acceptFileTypes = acceptFileTypes.split(',');
+					var ext = data.originalFiles[0].name.replace( /%/,"%25").substr(data.originalFiles[0].name.replace( /%/,"%25").lastIndexOf(".")+1).toUpperCase();
+					var matchCnt = 0;
+					var isValidSize = data.originalFiles[0]['size'] <= 1024 * 1000 * app.env.confFileSize;
+					var isValidType = true;
+
+					$.each(acceptFileTypes, function(i, v) {
+						if (v.toUpperCase() == ext) {
+							matchCnt ++;
+						}
+					});
+
+					isValidType = (matchCnt > 0) ? true : false;
+
+					// 타입 체크
+					if (!isValidType) {
+						$.each(data.files, function (index, file) {
+							alert("업로드 가능 확장자를 확인해 주세요.\n"+file.name+"은(는) 업로드 할 수 없습니다.");
+						});
+						$input.closest('form').remove();
+						return false;
+					}
+
+					if (!isValidSize) {
+						$.each(data.files, function (index, file) {
+							alert("파일 용량이 초과 되었습니다.\n"+file.name+"은(는) 업로드 할 수 없습니다.");
+						});
+						$input.closest('form').remove();
+						return false;
+					}
+
+					if (isValidType && isValidSize) {
+						var eleItem;
+
+						$.each(data.files, function (index, file) {
+							var item = '';
+							item += '<div class="file_success">';
+							item += '	<span class="file_name" data-role="fileView" data-file-view=""><button type="button" class="fa fa-times-circle fa fa-times-circle button_delet" data-role="fileupload-remove-btn" data-file-sn="" data-file-key="" data-file-type="F02"></button> ' + file.name + '</span>';
+							item += '</div>';
+
+							eleItem = $(item);
+							$('*[data-role=fileupload-attach-preview]').append(eleItem);
+						});
+
+						// done, progressAll 이벤트시 처리하기 위해 itemNode에 dom을 캐싱함
+						this.itemNode = eleItem;
+						data.submit();
+					}
+				},
+				done: function (e, data) {
+					var result = data._response.result[0];
+					var fileSn = result.fileSn;
+					var fileKey = result.fileKey;
+					app.env.files['file_' + fileSn] = {
+						fileSn: fileSn,
+						fileKey: fileKey
+					};
+					this.itemNode.find('*[data-role=fileupload-remove-btn]').attr({
+						'data-file-sn': fileSn,
+						'data-file-key': fileKey
+					});
+					this.itemNode.find('*[data-role=fileView]').attr({
+						'data-file-view': fileSn
+					});
+					$input.closest('form').remove();
+				}
+			};
+
+			$input
+				.fileupload(fileUploadOptions)
+				.prop('disabled', !$.support.fileInput)
+				.parent().addClass($.support.fileInput ? undefined : 'disabled');
+
+			$input
+				.trigger('click');
+		}
+	};
+
+	// 이미지 미리보기 HTML (regist.vm 과 같아야 한다.)
+	_this.preViewImg = function(type, url, fileName, commentSn) {
+		var html = '';
+
+		if(type == "article") {
+			html += '<div class="image_thumbnail">';
+			html += '	<div class="imgbox" data-role="imageView" data-image-view="">';
+			html += '		<label class="imgbox_cover"><input type="radio" data-role="imageViewRadio" name="thumbImg" value="'+ url +'"/><span>대표이미지</span></label>';
+			html += '		<img class="re-upload" data-role="fileImgSrc" data-file-sn="" src="'+ url +'" data-ext="" data-width="" data-height=""/>';
+			html += '	</div>';
+			html += '	<span class="file_name">';
+			html += '		<button type="button" class="fa fa-times-circle button_delet" data-role="fileupload-remove-btn" data-file-sn="" data-file-key="" data-file-type="F01"></button>';
+			html += '		<span class="name_msg">'+ fileName +'</span>';
+			html += '	</span>';
+			html += '</div>';
+		} else if(type == "comment") {
+			html += '<ul class="upload_preview" data-role="fileupload-image-preview" data-comment-sn="'+ commentSn +'">';
+			html += '	<li class="image_thumbnail"><span class="imgbox"><img src="' + url + '" /></span></li>';
+			html += '	<li class="file_name">'+ fileName;
+			html += '		<button type="button" class="fa fa-times-circle button_delet" data-role="fileupload-remove-btn" data-file-sn="" data-file-key="" data-file-type="F03"></button>';
+			html += '	</li>';
+			html += '</ul>';
+		}
+		return html;
+	};
+
+	// 비디오 미리보기 HTML (regist.vm 과 같아야 한다.)
+	_this.preViewVideo = function(fileSn, thumbFileSn, thumbUrl, url, fileKey, oriName) {
+		var html = '';
+		html += '<div class="image_thumbnail">';
+		html += '	<div class="imgbox" data-role="videoView" data-image-view="'+fileSn+'" loop="loop" preload="none">';
+		html += '		<label class="imgbox_cover"><input type="radio" data-role="imageViewRadio" name="thumbImg" value="'+ thumbUrl +'" /><span>대표이미지</span></label>';
+		html += '		<video poster="'+ CDN_URL + '/file' + thumbUrl +'" data-role="fileVideoSrc" data-src="'+url+'" data-file-sn="'+fileSn+'" data-file-key="'+fileKey+'"></video>';
+		html += '	</div>';
+		html += '	<span class="file_name">';
+		html += '		<button type="button" class="fa fa-times-circle button_delet" data-role="fileupload-remove-btn" data-file-sn="'+fileSn+'" data-thumb-sn="'+thumbFileSn+'" data-file-key="'+fileKey+'" data-file-type="F01"></button>';
+		html += '		<span class="name_msg">' + oriName + '</span>';
+		html += '	</span>';
+		html += '</div>';
+		return html;
+	};
+
+	// 본문 안에 이미지 테크 삽입시, HTML 생성
+	_this.addContentImg = function(fileExt, url, fileSn, imgOriWidth, imgOriHeight) {
+		var html = '';
+
+		if(fileExt == "GIF" || fileExt == "gif") {
+			html += '<span class="img_gif">';
+			html += '	<img class="fr-dib fr-fil fr-draggable" src="' + url + '" data-role="image-gif" data-gif="true" data-file-sn="' + fileSn + '" data-img-width="' + imgOriWidth + '" data-img-height=" '+ imgOriHeight +' "/>';
+			html += '</span>';
+		} else {
+			html += '<img class="fr-dib fr-fil fr-draggable" src="' + url + '" data-role="attach-image" data-gif="false" data-file-sn="' + fileSn + '" data-img-width="' + imgOriWidth + '" data-img-height=" '+ imgOriHeight +' "/>';
+		}
+		html += '<p><br></p>';
+		return html;
+	};
+
+	// 본문 안에 삽입시, HTML생성
+	_this.addContentVideo = function(thumbUrl, url, fileKey, fileSn) {
+		var html = '<span class="fr-video fr-fvc fr-dvi fr-draggable" data-role="image-mp4" data-file-sn="' + fileSn + '">';
+			html += '<video poster="'+ CDN_URL + '/file' + thumbUrl +'" autoplay="autoplay" loop="loop" preload="auto" data-file-key="'+fileKey+'" data-file-sn="' + fileSn + '">';
+			html += '	<source src="' + url + '" type="video/mp4" />';
+			html += '</video>';
+			html += '</span>';
+			html += '<p><br></p>';
+		return html;
+	};
+
+};
+
+var fileUpload = new FileUpload();

@@ -1,0 +1,105 @@
+// javascript for chosun.com simple gnb package 2018.07.16
+
+document.write('<style>.csmgsgnb_wrap, .csmgsgnb_wrap > * { margin: 0; padding: 0; border: 0 } .csmgsgnb_wrap ul, .csmgsgnb_wrap li { list-style: none } .csmgsgnb_hide { display:none } .csmgsgnb_wrap a { text-decoration: none } .csmgsgnb_wrap { position: relative; width: 100%; height: 35px; background: #f3f3f3; border-bottom: solid 1px #eaeaea; font-family: "맑은 고딕", "Malgun Gothic", "나눔고딕", "돋움", Dotum, "굴림", Gulim, "Apple SD Gothic Neo", sans-serif; font-size: 12px; line-height: 1.3; z-index: 100 } .csmgsgnb_in { position: relative; width: 1196px; margin: 0 auto; line-height: 35px } .csmgsgnb_le { position: absolute; top: 0; left: 0 } .csmgsgnb_ri { text-align: right; font-size: 0 } a.csmgsgnb_logo { display: block; width: 100px; height: 35px; background-position: 0 11px } ul.csmgsgnb_links { display: inline; padding-right: 15px; font-size: 0 } ul.csmgsgnb_links > li { position: relative; display: inline-block; margin-right: 15px; font-size: 12px; vertical-align: top; letter-spacing: -0.025em } ul.csmgsgnb_links > li a { display: block; color: #777; font-family: "맑은 고딕", "Malgun Gothic", "나눔고딕", "돋움", Dotum, "굴림", Gulim, "Apple SD Gothic Neo", sans-serif; } ul.csmgsgnb_links > li a:hover { color: #000 } ul.csmgsgnb_sublinks { position: absolute; top: 34px; left: 0; display: block; width: 90px; padding: 6px 0; box-sizing: border-box; background: #fff; border: solid 1px #d7d7d7; text-align: left; z-index: 100; display: none } ul.csmgsgnb_sublinks:hover { display: block } ul.csmgsgnb_sublinks li { display: block; padding-left: 15px; line-height: 26px; letter-spacing: -0.025em } ul.csmgsgnb_sublinks li a { font-family: "맑은 고딕", "Malgun Gothic", "나눔고딕", "돋움", Dotum, "굴림", Gulim, "Apple SD Gothic Neo", sans-serif; font-size: 12px } ul.csmgsgnb_sublinks li a:hover { color: #000 } .csmgsgnb_newspress_box span.csmgsgnb_img { display: inline-block; width: 8px; height: 4px; margin-left: 3px; background-position: -100px 0; vertical-align: middle; transition: ease all 0.2s; -webkit-transition: ease all 0.2s; -moz-transition: ease all 0.2s; -ms-transition: ease all 0.2s; -o-transition: ease all 0.2s; } .csmgsgnb_newspress_box:hover span.csmgsgnb_img { transform: rotate(180deg); -webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); -ms-transform: rotate(180deg); -o-transform: rotate(180deg); } a.csmgsgnb_newspress {} a.csmgsgnb_newspress:hover + ul.csmgsgnb_sublinks { display: block } a.csmgsgnb_login { display: none; margin-right:5px; font-size: 12px; color: #222; letter-spacing: -0.025em; font-family: "맑은 고딕", "Malgun Gothic", "나눔고딕", "돋움", Dotum, "굴림", Gulim, "Apple SD Gothic Neo", sans-serif; } a.csmgsgnb_search { display: none; width: 30px; height: 30px; margin-top: 3px; font-size: 12px; background-position: -118px 7px; vertical-align: top } .csmgsgnb_img { background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAI0AAAAQCAYAAAArpvw4AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QzFCN0JEMUY4MEI0MTFFODgxNUY5QjUxMUNGNTEzN0IiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QzFCN0JEMjA4MEI0MTFFODgxNUY5QjUxMUNGNTEzN0IiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpDMUI3QkQxRDgwQjQxMUU4ODE1RjlCNTExQ0Y1MTM3QiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpDMUI3QkQxRTgwQjQxMUU4ODE1RjlCNTExQ0Y1MTM3QiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsH2q+IAAAYBSURBVHja7FkLbFRV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"); background-repeat: no-repeat }</style>');
+
+document.write('<div class="csmgsgnb_wrap"> <div class="csmgsgnb_in" id="csmgsgnb_in_id"> <div class="csmgsgnb_le"> <a href="http://chosun.com/" class="csmgsgnb_img csmgsgnb_logo" target="_blank" title="chosun.com"><strong class="csmgsgnb_hide">chosun.com</strong></a> </div> <div class="csmgsgnb_ri"> <ul class="csmgsgnb_links"> <li><a href="http://sports.chosun.com/" target="_blank">스포츠조선</a></li> <li><a href="http://biz.chosun.com/" target="_blank">조선비즈</a></li> <li><a href="http://www.tvchosun.com/" target="_blank">TV조선</a></li> <li><a href="http://pet.chosun.com/" target="_blank">펫진</a></li> <li><a href="http://edu.chosun.com/" target="_blank">조선에듀</a></li> <li><a href="http://it.chosun.com/" target="_blank">IT조선</a></li> <li class="csmgsgnb_newspress_box"><a href="http://chosunnewspress.chosun.com/" target="_blank" class="csmgsgnb_newspress">조선뉴스프레스<span class="csmgsgnb_img"></span></a> <ul class="csmgsgnb_sublinks"> <li><a href="http://monthly.chosun.com/" target="_blank">월간조선</a></li> <li><a href="http://weekly.chosun.com/" target="_blank">주간조선</a></li> <li><a href="http://woman.chosun.com/" target="_blank">여성조선</a></li> <li><a href="http://san.chosun.com/" target="_blank">월간산</a></li> <li><a href="http://topclass.chosun.com/" target="_blank">TOPCLASS</a></li> <li><a href="http://pub.chosun.com/" target="_blank">조선pub</a></li> </ul> </li> </ul> <a href="https://membership.chosun.com/login/index_n.jsp" class="csmgsgnb_login" id="csmgsgnb_login_id">로그인</a> <a href="http://search.chosun.com/search/total.search?query=&pageconf=total" target="_blank" class="csmgsgnb_search csmgsgnb_img" id="csmgsgnb_search_id" title="검색"><span class="csmgsgnb_hide">조선닷컴 검색</span></a> </div> </div> </div>');
+
+//========== 쿠키값 처리 함수 S
+function getCookieVal (offset) {
+    var endstr = document.cookie.indexOf (";", offset);
+    if (endstr == -1)
+        endstr = document.cookie.length;
+    return unescape(document.cookie.substring(offset, endstr));
+}
+
+function GetCookie (name) {
+    var arg = name + "=";
+    var alen = arg.length;
+    var clen = document.cookie.length;
+    var i = 0;
+    while (i < clen) {	//while open
+        var j = i + alen;
+        if (document.cookie.substring(i, j) == arg)
+            return getCookieVal (j);
+        i = document.cookie.indexOf(" ", i) + 1;
+        if (i == 0)
+            break;
+    }	//while close
+    return null;
+}
+function GetAuthCookie(name) {
+    var cookies = document.cookie;
+    var value  = "";
+    if(cookies.indexOf(name) != -1) {
+        var start = cookies.indexOf(name) + name.length + 1;
+        var end   = cookies.indexOf(";",start);
+
+        if(end == -1) end = cookies.length;
+
+        value = cookies.substring(start,end);
+        value = unescape(value);
+    }
+
+    return value;
+}
+//========== 쿠키값 처리 함수 E
+
+//로그인
+function loginFrame () {
+     //페이지 URL
+     var returl = document.location;
+     if (returl == null || returl == ""){
+         returl = M_SITE;
+     }
+     returl = escape(returl);
+ 
+     var login_url = "https://membership.chosun.com/login/protect_sso/sso_user_info.jsp?returl="+returl;
+     var logout_url = "https://membership.chosun.com/login/logout.jsp?returl="+returl;
+     var regist_url = "https://membership.chosun.com/join/registUser.jsp?site=chosun";
+     var join_url = "https://membership.chosun.com/join/registUser.jsp?act=myindex&site=chosun";
+     var idpw_url = "https://membership.chosun.com/join/registUser.jsp?act=idpw&site=chosun";
+     var logStr;
+ 
+     var logLink = document.getElementById("csmgsgnb_login_id");
+     //var memberLink = document.getElementById("memberLink");
+ 
+     //로그인여부 - 쿠키값 확인
+     if (GetAuthCookie('SMSESSION')=="" || GetAuthCookie('SMSESSION') == "LOGGEDOFF" || GetAuthCookie('SM_USER') =="") {
+         logLink.href = login_url;
+         logLink.innerHTML = "로그인";
+         //memberLink.href = regist_url;
+         //memberLink.innerHTML = "회원가입";
+     }
+     else if (GetAuthCookie('dz_nm')=="" || GetAuthCookie('dz_info')=="") {
+     var relogin_url = "https://membership.chosun.com/login/protect_sso/sso_user_info.jsp?returl="+returl;
+         parent.location.href = relogin_url;
+     } else {
+         logLink.href = logout_url;
+         logLink.innerHTML = "로그아웃";
+         //memberLink.href = join_url;
+         //memberLink.innerHTML = "정보수정";
+     }
+     return logStr;
+}
+
+//csmgsGNB setting
+function csmgsgnbSet() {
+    csmgsgnbEleIn = document.getElementById("csmgsgnb_in_id"),
+    csmgsgnbEleLogin = document.getElementById("csmgsgnb_login_id"),
+    csmgsgnbEleSearch =document.getElementById("csmgsgnb_search_id");
+    if ( typeof csmgsgnbWidth !== 'undefined' ) {
+        csmgsgnbEleIn.style.width = csmgsgnbWidth + "px";
+    }
+    if ( typeof csmgsgnbLogin !== 'undefined' && csmgsgnbLogin == 'Y' ) {
+        csmgsgnbEleLogin.style.display = "inline-block";
+        loginFrame();
+
+    }
+    if ( typeof csmgsgnbSearch !== 'undefined' && csmgsgnbLogin == 'Y' ) {
+        csmgsgnbEleSearch.style.display = "inline-block";
+    }
+    
+};
+csmgsgnbSet()
+
+//end

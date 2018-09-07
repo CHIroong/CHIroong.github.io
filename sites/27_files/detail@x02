@@ -1,0 +1,5 @@
+document.write ('<div style="background-color:#F2F2F2; "><a href="http://adv.etnews.com/RealMedia/ads/click_lx.ads/etnews.co.kr/detail/1013776567/x02/OasDefault/mydata_seminar_180904/mydata_seminar_180904_text.html/39333265663163373562386661363930" target="_blank" style=');
+document.write ("'");
+document.write ('font-family: "Malgun Gothic","맑은 고딕",돋움,Dotum,"Apple SD Gothic Neo",sans-serif; text-align: left; text-decoration: none; font-size: 16px; font-style: normal; font-weight:bold; color: #222');
+document.write ("'");
+document.write ('> 금융분야 마이데이터 활용 사례 및 비즈니스 적용방안(9월 17일 개최, 사전등록중)</a></div>');

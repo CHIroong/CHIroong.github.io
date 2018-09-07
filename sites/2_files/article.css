@@ -1,0 +1,235 @@
+@CHARSET "UTF-8";
+.news_list_source {
+	margin:0px;
+	margin-bottom: 8px;
+}
+.share_bar{
+	margin: 5px 0px 5px 0px;
+}
+.node_source{
+	margin-bottom: 20px;
+}
+.node_body img{
+	margin: 1px 9px;
+}
+.visible-phone .node_body img{
+	margin:auto !important;
+}
+.node_body,#stage_slide{
+	text-align: justify;	
+	line-height: 2em;
+}
+#stage_slide{
+	font-family: 'nanum gothic','굴림','돋움','바탕','맑음고딕',arial,helvetica,clean,sans-serif;
+}
+#stage_slide a{
+	color: #FF4000;
+}
+.node_body{
+	font-family: '굴림','돋움','바탕','맑음고딕',arial,helvetica,clean,sans-serif;
+}
+.node_body a{
+	color: #FF4000;
+}
+/* headline */
+#headline{
+	width:650px;
+	margin-left:15px;
+}
+#headline .list_carousel_copy{
+	height:80px;
+	overflow:hidden;
+	line-height:20px;
+}
+#headline .carousel-inner{
+	height:130px;
+}
+/* slide show */
+#stage_slide,#mobile_stage_slide{
+	text-align:center;
+	border:1px solid #dfdfdf;
+	position: relative;
+	background-color:#d8d8d8;
+	border:1px solid #bcbcbc;
+	text-align:center;
+	margin-bottom:20px;
+	margin-top: 20px;
+}
+#stage_slide iframe,#mobile_stage_slide iframe{
+	width:100% !important;
+}
+#slide_image{
+	position: relative;
+}
+#stage_slide p,#mobile_stage_slide p{
+	text-align:left;
+	padding:25px 20px;
+}
+#eng_script_button{
+	padding:20px;
+}
+.btn_slide{
+	position: absolute;
+	top: 45%;
+	opacity: 0.7;
+	background-color: #df5534;
+	padding: 15px 0px;
+	z-index: 1000;	
+	display:none;
+}
+.visible-phone .btn_slide{
+	display:block;
+}
+.btn_slide_prev{
+	left:0px;
+}
+.btn_slide_next{
+	right:0px;
+}
+
+/* tech video */
+.movie_disable_dummy{
+	width:100%;
+	height:100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;	
+	background-color: #ffffff;
+	opacity: 0;
+	cursor:pointer;
+}
+.contents_body{
+	padding:0px 25px 0px 0px;
+}
+.contents_body h3{
+	margin:15px 0px;
+	line-height:normal;	
+}
+/* print */
+.print{
+	width:800px;
+}
+.print iframe{
+	width:100%;
+}
+.print .print_btn{
+	text-align:center;
+	padding:20px;
+}
+
+/* node body - this style work with ckeditor css (/_css/core/_editor.css) */
+.node_body{
+	font-size: 16px;
+	letter-spacing: -0.5px;
+	line-height: 25px;
+	margin-top: 20px;
+}
+.node_body h1,.node_body h2,.node_body h3,.node_body h4,.node_body h5,.node_body h6{
+	margin:5px 0px;
+}
+#relation_contents .label{
+	width:40px;
+	padding: 2px 7px;
+	margin-right:5px;
+}
+#relation_contents li{
+	padding-left:20px;
+	background-image:url('/_images/common/bullet/arrow_middle_of_circle_gray_9x9.gif');
+	background-position:left center;
+	background-repeat: no-repeat;
+}
+.releated_contents_div{
+	margin-top: 20px;
+	overflow: hidden;	
+}
+/* tech video */
+.sub_gnb_carousel #headline_main{
+	margin-bottom:10px;
+}
+
+/* sub search */
+.pagination{
+ 	margin: 0px 0px 30px 0px;	
+}
+#frm_sub_search #search_keyword {
+	width: 120px;
+}
+
+/* topic techlibrary */
+.thumb{
+	width:140px;
+	height:auto;
+	text-align:center;
+	margin-top:15px;
+	margin-bottom:0px;
+	margin-right:10px;
+}
+.thumb_image{
+	margin:0px auto;
+	width:140px;
+	height:170px;
+	background-image:url(/_images/techlibrary/thumb_bg.png);
+	display:block;
+	overflow:hidden;
+}
+.thumb_cover{
+	width:115px;
+	height:164px;
+	overflow:hidden;
+	margin:5px auto;
+	display:block;	
+}
+.techlibrary_list{
+	margin-top:15px;
+}
+
+
+#recommand_techlibrary .news_list_has_thumb_size{
+	width:480px;	
+}
+#recommand_techlibrary .news_list_title{
+	color:#333333;
+}
+
+
+.contents_body #recommand_techlibrary ul{
+	list-style: none;
+}
+.contents_body #recommand_techlibrary .thumb{
+	width: 213px;
+    height: auto;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 0;
+    margin-right: 0px;
+}
+.contents_body #recommand_techlibrary .tl_sm{
+	width: 215px;
+    text-align: center;
+}
+.contents_body #recommand_techlibrary .news_list_source{
+	    height: 17px;
+    overflow: hidden;
+        float: left;
+    margin: 0;
+    margin-bottom: 7px;
+    padding: 0;
+}
+.contents_body #recommand_techlibrary .thumb_image{
+	margin: 0 auto;
+    width: auto;
+    height: auto;
+    background-image: none;
+    display: block;
+    overflow: inherit;
+    clear: both;
+}
+.contents_body #recommand_techlibrary .thumb_cover {
+	    width: 160px;
+    height: 210px;
+    border: 1px solid #e1e1e1;
+    box-shadow: 5px 5px 2px #ddd;
+    overflow: hidden;
+    margin: 5px auto;
+    display: block;
+}

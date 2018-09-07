@@ -1,0 +1,9 @@
+document.write ('<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>\n');
+document.write ('<!-- hw_sub_Top_728x90_3 -->\n');
+document.write ('<ins class="adsbygoogle"\n');
+document.write ('     style="display:inline-block;width:728px;height:90px"\n');
+document.write ('     data-ad-client="ca-pub-0061834038389973"\n');
+document.write ('     data-ad-slot="8087665098"></ins>\n');
+document.write ('<script>\n');
+document.write ('(adsbygoogle = window.adsbygoogle || []).push({});\n');
+document.write ('</script>');

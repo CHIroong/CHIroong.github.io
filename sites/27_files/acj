@@ -1,0 +1,27 @@
+OX_8683713357({
+  "ads":{
+    "medium":"w",
+    "record_tmpl":"http://delivery-asia-northeast-1.openx.net/{medium}/1.0/{rtype}?ph=65db3787-5425-4e25-850a-3db95cc64b4d&ts={txn_state}",
+    "pixels":"http://jp-u.openx.net/w/1.0/pd?plm=6&ph=65db3787-5425-4e25-850a-3db95cc64b4d&gdpr=0",
+    "oxt": 125.224,
+    "adunits" : [
+      {
+        "auid":"540141334",
+        "idx":"0",
+        "chain":[
+          {
+            "is_fallback":1,
+            "ad_id":"0",
+            "width":"300",
+            "height":"250",
+            "html":"<script type=\"text/javascript\" src=\"//ad.idnad.co.kr/ad/ui/iwmediaReturn.js\"></script>",
+            "target":"_blank",
+            "ts":"2DAABBgABAAECAAIBAAsAAgAAAGMcGAowRmpGWmJPdXdJHBbWk8r_gMTAvEUW26rgntaLmKLRAQAcFu3dhY6ohMvsexa_9IiV4cORib4BABbGtZC5CxUCACwcFQIAABwmrJyPgwQVBBUEJo6Xh4MEFtafwoIEAAAA",
+            "type":"html",
+            "ad_url":"<script type=\"text/javascript\" src=\"//ad.idnad.co.kr/ad/ui/iwmediaReturn.js\"></script>"
+          }
+        ]
+      }
+    ]
+  }
+});

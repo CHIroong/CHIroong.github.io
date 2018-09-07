@@ -1,0 +1,106 @@
+@charset "UTF-8";
+/*********************************************
+note : reset
+*********************************************/
+#header-wrapper {font-family:-apple-system,BlinkMacSystemFont,'Noto Sans KR','Malgun Gothic','돋움','dotum',"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;background-color:rgb(255,255,255);text-align:center}
+#header-wrapper::after {content:'';display:table;clear:both}
+#header-wrapper ul, #header-wrapper ol {list-style:none;padding:0;margin:0}
+
+/* 업데이트 */
+#user-gnb .user-intro {float:left;font-size:.8rem;letter-spacing:-0.03em;color:#555}
+
+
+/*********************************************
+note : 로고영역
+*********************************************/
+#nav-header {}
+#nav-header::after {content:'';display:table;clear:both}
+#nav-header .top-header {position:relative;width:100%;height:128px;padding:1.5rem 0}
+
+/* 번역 */
+#nav-header .user-country {position:absolute;left:20px;top:25px}
+#nav-header .user-country ul li {float:left;margin-left:4px}
+#nav-header .user-country ul li:first-child {margin-left:0}
+#nav-header .user-country ul li a {display:block;overflow:hidden;width:26px;height:18px;background:transparent url('/image/country_list.png') no-repeat;text-indent:-5000px}
+#nav-header .user-country ul li a.icon-korea {background-position:0 0}
+#nav-header .user-country ul li a.icon-america {background-position:-30px 0}
+#nav-header .user-country ul li a.icon-japan {background-position:-60px 0}
+#nav-header .user-country ul li a.icon-china {background-position:-90px 0}
+#nav-header .user-country ul li a.icon-france {background-position:-120px 0}
+#nav-header .user-country ul li a.icon-spain {background-position:-150px 0}
+#nav-header .user-country ul li a.icon-russia {background-position:-180px 0}
+#nav-header .user-country ul li a.icon-germany {background-position:-210px 0}
+#nav-header .user-country ul li a.icon-vietnam {background-position:-240px 0}
+#nav-header .user-country ul li a.has-tip {border-bottom:0}
+.tooltip-custom {position:absolute;top:-10px;z-index:1200;max-width:10rem;padding:.375rem .625rem;border-radius:0;background-color:#999;font-size:.688rem;color:#fefefe;letter-spacing:-0.05rem}
+.tooltip-custom::before {content:'';display:block;position:absolute;bottom:100%;left:50%;width:0;height:0;border:inset 0.75rem;border-width:.25rem;border-top-width:0;border-bottom-style:solid;border-color:transparent transparent #999;-ms-transform: translateX(-50%);transform: translateX(-50%)}
+
+/* 배너 */
+#nav-header .top-banner {position:absolute;left:20px;top:55px}
+#nav-header .top-banner::after {content:'';display:table;clear:both}
+#nav-header .top-banner ul::after {content:'';display:table;clear:both}
+#nav-header .top-banner ul li {float:left;margin-left:10px}
+#nav-header .top-banner ul li:first-child {margin-left:0}
+
+/* 로고 */
+#nav-header .user-logo {width:100%;padding-top:10px;text-align:center}
+
+/* sns */
+#nav-header ul.user-sns {position:absolute;right:20px;top:50px}
+#nav-header ul.user-sns li {float:left;padding:0 .312rem}
+#nav-header ul.user-sns li:first-child {padding-left:0}
+#nav-header ul.user-sns li:last-child {padding-right:0}
+#nav-header ul.user-sns li a {display:block;width:26px;height:26px;font-size:.8rem;color:#fff;line-height:26px;background-color:#999;border-radius:50%;text-align:center}
+#nav-header ul.user-sns li:nth-child(1) a:hover {background-color:#3a5896}
+#nav-header ul.user-sns li:nth-child(2) a:hover {background-color:#39a0ce}
+#nav-header ul.user-sns li:nth-child(3) a:hover {background-color:#da2625}
+#nav-header ul.user-sns li:nth-child(4) a:hover {background-color:#ea4335}
+#nav-header ul.user-sns li:nth-child(5) a:hover {background-color:#ff6600}
+
+/* 로그인 */
+#nav-header ul.user-logbox {position:absolute;right:20px;bottom:30px}
+#nav-header ul.user-logbox li {float:left;padding:0 .625rem;font-size:.8rem;line-height:1;letter-spacing:-0.05em}
+#nav-header ul.user-logbox li:first-child {padding-left:0}
+#nav-header ul.user-logbox li:last-child {padding-right:0}
+#nav-header ul.user-logbox li a {font-size:.875rem;font-weight:300;color:rgba(0,0,0,.65)}
+#nav-header ul.user-logbox li a:hover {color:rgba(0,0,0,.9)}
+
+/*********************************************
+note : 메뉴영역
+*********************************************/
+/* 기본 */
+#user-nav::after,#user-nav-wrapper::after {content:'';display:table;clear:both}
+#user-nav-wrapper {overflow:hidden;position:relative;height:75px}
+#user-nav-wrapper::before {content:'';position:absolute;z-index:1;width:100%;height:38px;background-color:#ed1c24;left:0;top:0}
+
+/* 전체 */
+#user-nav .all-section {float:left;position:relative;z-index:2;height:38px;padding-left:1.25rem;padding-right:1.25rem;font-family:-apple-system,BlinkMacSystemFont,'Noto Sans KR','Malgun Gothic','돋움','dotum',"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;font-size:1.063rem;font-weight:500;letter-spacing:-0.05em;color:#fff;cursor:pointer}
+
+/* 섹션 */
+#user-nav .mega-menu {float:left;position:relative;z-index:2}
+#user-nav .mega-menu li.megaline {float:left;height:38px;line-height:1}
+#user-nav .mega-menu li.megaline > a {display:inline-block;overflow:hidden;height:38px;position:relative;padding:.625rem 1.5rem;font-size:1.063rem;font-weight:500;color:#fff;background-color:transparent;text-decoration:none;-moz-transition:all .25s;transition:all .25s}
+#user-nav .mega-menu li.megaline > a.a-hover {color:#fefefe;background-color:rgba(0,0,0,.4)}
+#user-nav .mega-menu li.megaline ul {display:none;position:absolute;z-index:998;left:0;top:100%}
+#user-nav .mega-menu li.megaline ul li.sub {float:left;font-size:.9rem;line-height:1;letter-spacing:-0.05em}
+#user-nav .mega-menu li.megaline ul li.sub a {display:inline-block;padding:.625rem;font-weight:400;color:rgba(0,0,0,.5)}
+#user-nav .mega-menu li.megaline ul li.sub a:hover {color:rgba(0,0,0,.9)}
+
+/* 검색 */
+#user-nav .user-search {float:right;position:relative;z-index:2}
+/*#user-nav .user-search .user-search-btn {height:55px;padding-left:1rem;padding-right:1rem;font-size:2rem;color:#fff;cursor:pointer}*/
+#user-nav .user-search .user-search-form {position:absolute;right:5px;top:0;z-index:999;width:290px;height:30px;margin:.25rem .25rem 0 0;background:#fff}
+#user-nav .user-search .user-search-form::after {content:'';display:table;clear:both}
+#user-nav .user-search .user-search-form input {float:left;width:calc(100% - 35px);height:30px;margin:0;padding:0 0 0 .625rem;font-size:.813rem;color:#777;letter-spacing:-0.05em;background:transparent;border:none;box-shadow:none}
+#user-nav .user-search .user-search-form button {float:right;margin-right:50px;margin-top:-30px;width:35px;height:30px;font-size:1.5rem;font-weight:400;color:#333;cursor:pointer;z-index:999;}
+#user-nav .user-search .btn {display:inline-block;position:absolute;right:0px;width:50px;height:30px; font-size:.7rem;font-weight:700;line-height:2.5em;letter-spacing:-0.1em;color:#fefefe;background-color:#2f3032}
+#user-nav .user-search .btn a {color:#fff}
+
+/* 기타버튼 */
+#user-nav .user-etc-btn {position:absolute;right:15px;bottom:10px;z-index:9999}
+#user-nav .user-etc-btn ul li {float:left;margin-left:.625rem}
+#user-nav .user-etc-btn ul li:first-child {margin-left:0}
+#user-nav .user-etc-btn ul li a {display:block;font-size:.813rem;letter-spacing:-0.025em;color:rgba(0,0,0,.6)}
+#user-nav .user-etc-btn ul li a:hover {text-decoration:none}
+#user-nav .user-etc-btn ul li:first-child a:hover {color:#ff7e7e}
+#user-nav .user-etc-btn ul li:last-child a:hover {color:#1976d2}

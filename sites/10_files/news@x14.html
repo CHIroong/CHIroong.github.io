@@ -1,0 +1,65 @@
+
+<!-- saved from url=(0073)http://ar.donga.com/RealMedia/ads/adstream_sx.ads/2018.donga.com/news@x14 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <!-- BEGIN CRITEO CDB -->
+    <script async="async" type="text/javascript" src="./publishertag.js.download"></script>
+    <script>
+        var CriteoAdUnits = {
+            "placements": [
+                /* Criteo Placements List */
+                {
+                    "slotid": "criteo_1168255",
+                    "zoneid": 1168255   
+                }
+            ]
+        };
+        window.Criteo = window.Criteo || {};
+        window.Criteo.events = window.Criteo.events || [];
+        var CriteoBids = CriteoBids || {},
+            CriteoBidsReceived = function() {
+                for (var t in CriteoAdUnits.placements) {
+                    var e = CriteoAdUnits.placements[t],
+                        i = Criteo.GetBidsForAdUnit(e.slotid);
+                    CriteoBids[e.slotid] = i.length > 0 ? i[0] : null
+                }
+            },
+            CriteoDisplayAd = function(t, e, i) {
+                if (void 0 === i && (i = 0), null !== CriteoBids[t])
+                    if (void 0 === CriteoBids[t] && null !== CriteoBids[t]) 100 > i && setTimeout(function() {
+                        CriteoDisplayAd(t, e, i + 1)
+                    }, 200);
+                    else {
+                        var r = document.getElementById(t);
+                        if (r) {
+                            var s = document.createElement("iframe");
+                            s.setAttribute("id", t + "_iframe"), s.setAttribute("frameborder", "0"), s.setAttribute("allowtransparency", "true"), s.setAttribute("hspace", "0"), s.setAttribute("marginwidth", "0"), s.setAttribute("marginheight", "0"), s.setAttribute("scrolling", "no"), s.setAttribute("vspace", "0"), s.setAttribute("width", CriteoBids[t].width), s.setAttribute("height", CriteoBids[t].height), r.appendChild(s);
+                            var o = '<script src="' + CriteoBids[t].displayUrl + '"></scr' + 'ipt>',
+                                d = s.contentWindow.document;
+                            d.open(), d.write(o), d.close()
+                        }
+                    }
+                else "function" == typeof e && e()
+            };
+        Criteo.events.push(function() {
+            Criteo.RequestBids(CriteoAdUnits, CriteoBidsReceived, 2000);
+        });
+    </script>
+    <!-- END CRITEO CDB -->
+</head>
+
+<body marginwidth="0" marginheight="0">
+    <!-- START CRITEO CDB DISPLAY -->
+    <div id="criteo_1168255">
+        <script>
+            CriteoDisplayAd("criteo_1168255", function() {
+var slotid = "criteo_1168255"; var div = document.getElementById(slotid);
+if (div) { var ifr = document.createElement('iframe'); ifr.setAttribute("id", slotid+"_iframe"), ifr.setAttribute("frameborder","0"), ifr.setAttribute("allowtransparency","true"), ifr.setAttribute("hspace","0"), ifr.setAttribute("marginwidth","0"), ifr.setAttribute("marginheight","0"), ifr.setAttribute("scrolling","no"), ifr.setAttribute("vspace","0"), ifr.setAttribute("width", "250"), ifr.setAttribute("height", "250");
+div.appendChild(ifr);
+var htmlcode = "<html><head></head><body><iframe src=\"http://adf.acrosspf.com/adifr/22500.html?passback=\" framespacing=\"0\" frameborder=\"no\" scrolling=\"no\" width=\"250\" height=\"250\"></iframe></body></html>";
+var ifrd = ifr.contentWindow.document; ifrd.open(); ifrd.write(htmlcode); ifrd.close(); }});
+        </script>
+    <iframe id="criteo_1168255_iframe" frameborder="0" allowtransparency="true" hspace="0" marginwidth="0" marginheight="0" scrolling="no" vspace="0" width="250" height="250" src="./saved_resource(20).html"></iframe></div>
+    <!-- END CRITEO CDB DISPLAY -->
+
+
+</body></html>

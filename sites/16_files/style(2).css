@@ -1,0 +1,127 @@
+@charset "utf-8";
+@import url("common.css");
+
+.arl_view_box{padding:0 0 60px;border-bottom:1px solid #dfe0e4}
+
+.arl_view_category{margin:0 0 20px;overflow:hidden;height:24px;}
+.ac_cates{float:left;width:400px;height:24px;overflow:hidden;background-color:#fff;}
+.ac_cates:hover{position:absolute;width:700px;overflow:visible;height:auto;z-index:9;border-bottom:2px solid #2a2a2c}
+.ac_down_arrow{display:inline-block;margin:0 0 3px 5px;width:9px;height:4px;background:url(../../../../../arrow-bullet.png) no-repeat -10px -10px}
+.ac_cates:hover .ac_down_arrow{margin-bottom:2px;background-position:-300px -45px;}
+.ac_cates_a{display:block;padding:0 0 4px 90px;width:100%;height:20px;overflow:hidden;text-overflow:ellipsis;font-weight:bold;color:#565960!important;text-decoration:none!important;}
+.ac_cates_a.aca_0{margin-top:-18px}
+.ac_cate_arrow{margin:0 5px;}
+.ac_btns{float:right}
+
+/*
+.arl_view_title{margin:-7px 0 0;font-family:'NanumGothic','나눔고딕','dotum'!important;font-size:26px;color:#272829;letter-spacing:-.1em;font-weight:600;letter-spacing:-2px;line-height:1.3em}
+.windows.chrome .arl_view_title{font-weight:bold}
+.arl_view_sub_title{margin:4px 0 0;font-family:dotum;font-size:14px;color:#78787f;letter-spacing:-.1em}
+*/
+.arl_view_title{margin:-7px 0 0;font-family:Nanum Gothic,nanumgothic,'나눔고딕','Malgun Gothic','dotum'!important;font-size:30px;font-weight:normal;color:#272829;letter-spacing:-.1em;letter-spacing:-3px;line-height:1.3em}
+.arl_view_sub_title{margin:10px 0 0;font-family:Nanum Gothic,nanumgothic,dotum;font-size:16px;color:#78787f;letter-spacing:-.1em}
+
+/*.arl_view_writer_box{margin:12px 0 0 0;text-align:left;font-family:dotum;font-size:11px;color:#95969e;}
+.arl_view_email{font-family:tahoma!important;font-size:11px!important;color:#95969e!important;}
+.arl_view_hosu{margin-left:10px}
+.arl_view_date{margin-left:10px;font-family:tahoma}*/
+.arl_view_writer_box{margin:12px 0 0 0;text-align:left;font-family:'Malgun Gothic',dotum;font-size:12px;color:#95969e;}
+.arl_view_email{font-family:'Malgun Gothic',tahoma!important;font-size:12px!important;color:#95969e!important;}
+.arl_view_hosu{margin-left:10px}
+.arl_view_date{margin-left:10px;font-family:'Malgun Gothic',tahoma}
+
+
+.arl_view_paoin{margin-right:10px;font-family:dotum;font-size:11px;color:#CC0000!important;}
+
+.arl_view_icons{margin:30px 0 0;overflow:hidden;height:auto;border-bottom:1px solid #dfe0e4}
+.avi_font_face_button{padding:0 3px;font-family:dotum;font-size:11px;color:#95969e}
+.avi_font_box{display:inline-block;}
+.avs_btns{display:block;background:url(../../../../../bar-bg.png) no-repeat -3px -910px;border-left:1px solid #dfe0e4; overflow:hidden}
+.avs_btns .avs_box{float:left;display:inline-block;padding:7px 9px 3px;border-right:1px solid #dfe0e4}
+.avs_btns .avs_box .copy_shorturl{color:#95969E;font:normal 11px dotum}
+.avs_reply{font-family:dotum;font-size:11px;}
+.avs_reply_count{font-weight:bold;font-family:tahoma;font-size:11px;color:#397deb}
+
+.avs_btns .avs_box .naverblog{
+	display:inline-block;width:16px;height:16px;vertical-align:middle;
+	background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjg2MUMxNTAwODkxOTExRTU5Qzg3QkUyQjEyQjM4NzMxIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjg2MUMxNTAxODkxOTExRTU5Qzg3QkUyQjEyQjM4NzMxIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6ODYxQzE0RkU4OTE5MTFFNTlDODdCRTJCMTJCMzg3MzEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6ODYxQzE0RkY4OTE5MTFFNTlDODdCRTJCMTJCMzg3MzEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7rteaTAAABRFBMVEX///8psAlE4RgrtAtE4RgArQAAtwADuAAKuQAKugATvAAatQAbwgAcwAAjwAAluQEmuAEmvwAotAYouAQptAcpvwIquAcrtAkrtAssvwYtuAouuA0wvgow3QExxggz4AQ0pglcwkZoyVRrzlV14Vx34l254bO74bPB4rzE4cPE5MDF8b7G4sPG5MLG8b/J68TJ7MTJ8cLM68jM7cfM8cbO6MrO6MvO8MjP7szv7vDw7vDzSAX0IQD1TgD2XwD2Zwf2awD2fyX3TQD3XQD3bwD3cRX3dCT3lEn4VAD4awz4dhr4eTj4fAv4fBf4fzT4gyb4jkb4kk/4rnj4uof4vJ34xLH5SgD7ZAr7pGv7x6b8xKH96eP969398+r99e/9///++vf++/n+////tav/t6z/xbH/yLv/y7n/z8n/6/b//f////9Ilm01AAAABXRSTlMAr6+xsUT/CVwAAADGSURBVBgZRcHBSsNAFEDR+2beECNpEkINSBHd+xVu/GiXfoUgXRRRQ6OFWG0qyeRZFOk5grvg6GkSPT+p4gH+YLN/lUV6K/yzu94xF9j1/JI5jmH/SLdk2/PVMaBELVezsmmL2Uu8jigW3yR8+Gxo0zwaig9pyHyyPU2a58KjeHcFOSXkn6oomz7lT13378iiqxMzf8P9t9PdulCqdpzMCnkQkVBFZcrGMY4NQb3qhGIizsKaIE7EEH8GFifAeYFWkEuOVvYD4hJOFGBxytkAAAAASUVORK5CYII=) no-repeat 0 0; 
+	background-size:contain;
+}
+
+
+
+/*본문폰트*/
+.arl_view_content{margin:20px auto 5px;padding:0;width:600px;line-height:1.6em;text-align:justify;word-wrap:break-word;/*word-break:break-all;*/}
+.arl_view_content,
+.arl_view_content p,
+.arl_view_content div,
+.arl_view_content span,
+.arl_view_content td,
+.arl_view_content li{font-size:16px;font-family:Nanum Gothic,nanumgothic,'Malgun Gothic',dotum;word-spacing:0.20em;letter-spacing:-0.04em;line-height:1.6em;color:#272829;}
+.arl_view_content img{max-width:100%;vertical-align:middle;}/*, .arl_view_content iframe, .arl_view_content object, .arl_view_content embed*/
+
+/*카피라이터*/
+.arl_view_copywriter{margin:5px 0 0;font-size:16px;font-family:Nanum Gothic,nanumgothic,'Malgun Gothic',dotum;color:#95969e!important}
+.arl_view_other_writers{margin:20px auto 0;padding:0 0;width:600px}
+.arl_view_other_writers .avw_a{font-size:16px;font-family:Nanum Gothic,nanumgothic,'Malgun Gothic',dotum;color:#565960!important}
+
+
+/*태그*/
+.arl_view_tags_box{margin:30px 0 0;padding:0 45px}
+
+/*관련기사*/
+.avr_box{display:inline-block;margin:40px auto 30px;padding:20px 10px 10px;background-color:#e8e8e8;}
+.arl_view_relation_box{margin:auto;padding:5px 10px}
+.avr_title{font-family:Nanum Gothic,nanumgothic,'Malgun Gothic',dotum;font-size:14px;color:#3b8ef9;font-weight:bold}
+.avr_list{margin:0 0 0 10px;}
+.avr_li{margin-bottom:0px}
+.avr_li .avr_a{font-family:Nanum Gothic,nanumgothic,'Malgun Gothic',dotum!important;font-size:14px!important;color:#565960!important;font-weight:bold}
+
+/*글자형태*/
+.avi_font_face{display:inline-block;}
+.avi_font_list{display:none;position:absolute;padding:1px 6px;border:1px solid #dfe0e4;background-color:#fff;z-index:1}
+.avi_font_face:hover > .avi_font_list{display:block;text-align:left}
+.avi_font_list_li{padding:5px 5px 2px 0;border-bottom:1px solid #dfe0e4}
+.avif_a{padding-left:15px}
+.avif_a.on,
+.avif_a:hover{background:url(../../../../../icon-bullet.png) no-repeat -300px -537px}
+
+.avi_top, .avi_list{margin-left:-3px}
+
+/*사진,영상*/
+.news_photo_table_caption,
+.news_video_table_caption{font-size:12px!important;color:#306f7f!important;text-align:center;}
+
+
+.news_video_table embed,
+.news_video_table object,
+.news_video_table iframe{max-width:100%;}
+.news_video_table td{text-align:center}
+
+/*table 중앙정렬이고,width가 없을때 width=100%*/
+table[align='center']:not([width]){width:100%;}
+
+
+
+/* 크게 보기 이미지 */
+.news_photo_table .big_size_img{position:relative;display:inline-block;}
+.news_photo_table .big_size_img::after{content:"";display:inline-block;position:absolute;right:0;bottom:0;display:inline-block;width:24px;height:22px;overflow:hidden;background:url(../../../../../custom/theme/www/t60/icon_plus.gif) no-repeat 0 0;cursor:pointer;border:none;text-indent:-10000px;opacity:.8}
+
+
+
+/* 후원버튼 */
+.al_btn_support{display:inline-block;padding:.7em 3em .8em;font:bold 15px/1.1 nanum gothic,nanumgothic;color:#fff!important;letter-spacing:-.05em;text-decoration:none!important;border-radius:3px;background-color:#3276b1;}
+
+
+
+/*
+http://www.sisain.co.kr/?mod=news&act=articleView&idxno=27088
+광고용 css
+*/
+.ar_tmpad_box{margin:1em auto;height:auto;overflow:hidden;}
+.ar_tmpad_box .atb_a{float:left;display:block;margin:auto auto 1em;width:25%;box-sizing:border-box;text-align:center;}
+.ar_tmpad_box .atb_a .atb_img{max-width:100%;vertical-align:middle;}
+
+@media only screen and	(max-width:640px) {
+	.ar_tmpad_box .atb_a{width:50%}	
+}

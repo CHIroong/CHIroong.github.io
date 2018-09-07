@@ -1,0 +1,3 @@
+function staff_send(gUrl) {
+	window.open(gUrl,'','Width=750 Height= 496 scrollbars=auto, top=0, left=' +(screen.width-755) );
+}

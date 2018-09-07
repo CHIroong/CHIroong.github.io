@@ -1,0 +1,6 @@
+/*
+ Copyright 2016-2018 Impactify. All Rights Reserved.
+*/
+(function(a){a._impactify_req_||(a._impactify_req_=function(a,d){function n(b,d,a){var c=b.createElement("script");c.type="text/javascript";"undefined"!==typeof a&&(c.readyState?c.onreadystatechange=function(){if("loaded"===c.readyState||"complete"===c.readyState)c.onreadystatechange=null,a()}:c.onload=function(){a()});c.src=d;b.getElementsByTagName("body")[0].appendChild(c)}var h="3b04",m="3b04",k=Math.floor(Date.now()/1E3),f=!1,g=!1,l="https://ad.impactify.io",b=d,p=function(){0===(a.getElementById("impactify-sdk").getAttribute("src")||
+"").indexOf("https://ad.impactify.it")&&(f=!0,l="https://ad.impactify.it");if(d.impactifyTag&&d.impactifyTag.length){var e=d.impactifyTag[0].appId||null;top._impactify_=null;e&&(g=/impactify/i.test(e),h+=f||g?"."+k:"",m+=f||g?"."+k:"",top._impactify_={appId:e,inDev:f,isDemo:g,baseUrl:l,release:"3",version:h,iVersion:m,TIME:k},d.impactifyTag.forEach(function(a){"screen"===a.format&&(b="undefined"!==typeof a.findContext&&!a.findContext||d===top?b:top,b._impactify_tags=b._impactify_tags||{},b._impactify_tags.screen||
+(b._impactify_tags.screen=a,n(b.document,l+"/static/ad/v3/screen.js?v="+h)))}))}};try{setTimeout(function(){p()},10)}catch(e){}}(document,a))})(window);

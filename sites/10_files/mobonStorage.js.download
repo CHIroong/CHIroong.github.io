@@ -1,0 +1,174 @@
+var mobStorage = {
+	load : function(key) {
+		return window.localStorage.getItem(key);
+	},
+	save : function(key, value) {
+		window.localStorage.setItem(key, value);
+	},
+	clear : function() {
+		window.localStorage.clear();
+	}
+}
+
+var mobCookie = {
+	load : function(cName) {
+		cName = cName + '=';
+		var cookieData = document.cookie;
+		var start = cookieData.indexOf(cName);
+		var cValue = '';
+		if (start != -1) {
+			start += cName.length;
+			var end = cookieData.indexOf(';', start);
+			if (end == -1)
+				end = cookieData.length;
+			cValue = cookieData.substring(start, end);
+		}
+		return unescape(cValue);
+	},
+	save : function(c_name, c_value, exdays) {
+		var exdate = new Date();
+		exdate.setDate(exdate.getDate() + exdays);
+		var c_value = escape(c_value)
+				+ ((exdays == null) ? "" : "; expires=" + exdate.toUTCString());
+		document.cookie = c_name + "=" + c_value
+				+ '; domain=.dreamsearch.or.kr; path=/ ;';
+	},
+	remove : function(cName) {
+		mobCookie.save(cName, "", -1);
+	}
+}
+
+function isActive(typeArr, value) {
+	for (var i = 0; typeArr.length > i; i++) {
+		if (value.indexOf(typeArr[i]) != -1)
+			return true;
+	}
+	return false;
+}
+
+function isNotEmpty(value) {
+	if (value == null || value == "" || value == "null"
+			|| typeof value == "undefined" || value == "undefined"
+			|| value == undefined)
+		return false;
+	else
+		return true;
+}
+
+function restoringCount(item, auid) {
+	var xhttp;
+	if (window.XMLHttpRequest) {
+		// code for modern browsers
+		xhttp = new XMLHttpRequest();
+	} else {
+		// code for IE6, IE5
+		xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	xhttp.open("GET",
+			"http://www.dreamsearch.or.kr/servlet/restoringCount?item=" + item
+					+ "&auid=" + auid, true);
+	xhttp.send();
+}
+
+function dateFormat(date){
+	var dd = date.getDate();
+	var mm = date.getMonth()+1; //January is 0!
+
+	var yyyy = date.getFullYear();
+	if(dd<10){
+	    dd='0'+dd;
+	} 
+	if(mm<10){
+	    mm='0'+mm;
+	} 
+	return yyyy+'-'+mm+'-'+dd;
+}
+
+var addMobEvent = (function(window) {
+	if (window.addEventListener) {
+		return function(element, eventName, cb, isCapture) {
+			element.addEventListener(eventName, cb, isCapture);
+		};
+	} else if (window.attachEvent) {
+		return function(element, eventName, cb) {
+			element.attachEvent("on" + eventName, cb);
+		};
+	} else {
+		return function(element, eventName, cb) {
+			element["on" + eventName] = cb;
+		};
+	}
+}(window));
+
+(function(window) {
+	'use strict';
+	var debug = false, baseName = 'MobonStorage', makeMethod = 'run',
+
+	MobonStorage = function() {
+		this.__construct();
+	};
+	MobonStorage.prototype = {
+		__construct : function() {
+			var mobStorageUseYN = 'Y' == mobCookie.load('useLS') ? true : false;
+			if (mobStorageUseYN) {
+				this.localStorageAuid = mobStorage.load("au_id");
+				this.cookieAuid = mobCookie.load("au_id");
+				this.cookieSdkYn = mobCookie.load("sdk_yn");
+				this.register(this.localStorageAuid, this.cookieAuid,
+						this.cookieSdkYn);
+			} else {
+				// this.clear();
+			}
+		},
+		register : function(localStorageAuid, cookieAuid, cookieSdkYn) {
+			// sdk 예외처리
+			if (isNotEmpty(cookieSdkYn)) {
+				mobStorage.save('au_id', cookieAuid);
+				mobCookie.remove('sdk_yn');
+			} else {
+				// 타입에 따라 Storage 적용
+				var userTypeArr = [ 'A03', 'A04', 'A09', 'A10', 'A12', 'A13',
+						'A17', 'A18', 'A19', 'A22', 'A23', 'A24' ];
+				if (isActive(userTypeArr, mobCookie.load("abTestType"))) {
+					if (isNotEmpty(cookieAuid)) {
+						if (isNotEmpty(localStorageAuid)) {
+							if (localStorageAuid != cookieAuid) {
+								mobCookie.save("au_id", localStorageAuid,
+										60 * 20);
+								mobCookie.save("_atVm", "Y", 60 * 20);
+								var today = dateFormat(new Date());
+								if (!isNotEmpty(mobStorage.load("restoredDate"))) {
+									restoringCount("diff", localStorageAuid);
+									mobStorage.save("restoredDate",today);
+								} else if (today != mobStorage
+										.load("restoredDate")) {
+									restoringCount("diff", localStorageAuid);
+									mobStorage.save("restoredDate", today); 
+								}
+							}
+						} else {
+							mobStorage.save('au_id', cookieAuid);
+						}
+					} else {
+						if (isNotEmpty(localStorageAuid)) {
+							mobCookie.save("au_id", localStorageAuid, 60 * 20);
+							mobCookie.save("_atVm", "Y", 60 * 20);
+							restoringCount("empty", localStorageAuid);
+						}
+					}
+				}
+			}
+		},
+		clear : function() {
+			mobStorage.clear();
+		}
+	};
+	MobonStorage[makeMethod] = function() {
+		return new this;
+	};
+	window[baseName] = MobonStorage;
+})(this);
+
+addMobEvent(document,"load", MobonStorage.run(),'');
+
+

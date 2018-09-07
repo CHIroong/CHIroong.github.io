@@ -1,0 +1,146 @@
+var HousingService=function() {
+HousingService.initializeBase(this);
+this._timeout = 0;
+this._userContext = null;
+this._succeeded = null;
+this._failed = null;
+}
+HousingService.prototype={
+_get_path:function() {
+ var p = this.get_path();
+ if (p) return p;
+ else return HousingService._staticInstance.get_path();},
+PlaceMRSVConfirmCancel:function(goodsCode,aspordid,ordid,price,repay,sale_price,penalty,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'PlaceMRSVConfirmCancel',false,{goodsCode:goodsCode,aspordid:aspordid,ordid:ordid,price:price,repay:repay,sale_price:sale_price,penalty:penalty},succeededCallback,failedCallback,userContext); },
+PlaceMRSVCancel:function(goodsCode,aspordid,ordid,price,repay,sale_price,penalty,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'PlaceMRSVCancel',false,{goodsCode:goodsCode,aspordid:aspordid,ordid:ordid,price:price,repay:repay,sale_price:sale_price,penalty:penalty},succeededCallback,failedCallback,userContext); },
+KumhoCancel:function(bDate,bDateSeq,goodsCode,seatGrade,checkInDT,checkOutDT,aspordid,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'KumhoCancel',false,{bDate:bDate,bDateSeq:bDateSeq,goodsCode:goodsCode,seatGrade:seatGrade,checkInDT:checkInDT,checkOutDT:checkOutDT,aspordid:aspordid},succeededCallback,failedCallback,userContext); },
+PlaceMRSVConfirm:function(goodsCode,cartID,cartIDSeq,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'PlaceMRSVConfirm',false,{goodsCode:goodsCode,cartID:cartID,cartIDSeq:cartIDSeq},succeededCallback,failedCallback,userContext); },
+PlaceMRSVReservation:function(goodsCode,aspordid,ordid,prodid,evid,status,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'PlaceMRSVReservation',false,{goodsCode:goodsCode,aspordid:aspordid,ordid:ordid,prodid:prodid,evid:evid,status:status},succeededCallback,failedCallback,userContext); },
+CMSReservationCancel:function(goodsCode,orderNo,cMSOrderNo,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'CMSReservationCancel',false,{goodsCode:goodsCode,orderNo:orderNo,cMSOrderNo:cMSOrderNo},succeededCallback,failedCallback,userContext); },
+CMSReservationReady:function(goodsCode,cartID,cartIDSeq,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'CMSReservationReady',false,{goodsCode:goodsCode,cartID:cartID,cartIDSeq:cartIDSeq},succeededCallback,failedCallback,userContext); },
+CMSReservationFinal:function(goodsCode,aspOrderNo,orderNo,ticketNo,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'CMSReservationFinal',false,{goodsCode:goodsCode,aspOrderNo:aspOrderNo,orderNo:orderNo,ticketNo:ticketNo},succeededCallback,failedCallback,userContext); },
+GetScheduleSeatGrade:function(strGoodsCode,strPlayDate,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetScheduleSeatGrade',false,{strGoodsCode:strGoodsCode,strPlayDate:strPlayDate},succeededCallback,failedCallback,userContext); },
+GetScheduleUsedDay:function(strBizCode,strGoodsCode,strSeatGrade,strPlayDate,mappingBizCode,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetScheduleUsedDay',false,{strBizCode:strBizCode,strGoodsCode:strGoodsCode,strSeatGrade:strSeatGrade,strPlayDate:strPlayDate,mappingBizCode:mappingBizCode},succeededCallback,failedCallback,userContext); },
+GetScheduleRoomCnt:function(strBizCode,strGoodsCode,strSeatGrade,strPlayDate,strTerm,mappingBizCode,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetScheduleRoomCnt',false,{strBizCode:strBizCode,strGoodsCode:strGoodsCode,strSeatGrade:strSeatGrade,strPlayDate:strPlayDate,strTerm:strTerm,mappingBizCode:mappingBizCode},succeededCallback,failedCallback,userContext); },
+GetScheduleRoomCntOld:function(strBizCode,strGoodsCode,strSeatGrade,strPlayDate,strTerm,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetScheduleRoomCntOld',false,{strBizCode:strBizCode,strGoodsCode:strGoodsCode,strSeatGrade:strSeatGrade,strPlayDate:strPlayDate,strTerm:strTerm},succeededCallback,failedCallback,userContext); },
+OPStroyCancel:function(goodsCode,aspordid,ordid,price,repay,sale_price,penalty,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'OPStroyCancel',false,{goodsCode:goodsCode,aspordid:aspordid,ordid:ordid,price:price,repay:repay,sale_price:sale_price,penalty:penalty},succeededCallback,failedCallback,userContext); },
+getShortURL:function(URL,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'getShortURL',false,{URL:URL},succeededCallback,failedCallback,userContext); },
+getShortURL_Durlme:function(URL,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'getShortURL_Durlme',false,{URL:URL},succeededCallback,failedCallback,userContext); },
+setBookingNumberSend:function(SelBizCode,BDate,BDateSeq,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'setBookingNumberSend',false,{SelBizCode:SelBizCode,BDate:BDate,BDateSeq:BDateSeq},succeededCallback,failedCallback,userContext); },
+setBookingNumberSend_Custom:function(BDate,BDateSeq,AcqNo,UserID,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'setBookingNumberSend_Custom',false,{BDate:BDate,BDateSeq:BDateSeq,AcqNo:AcqNo,UserID:UserID},succeededCallback,failedCallback,userContext); },
+setBookingNumberSend_OnBook:function(BDate,BDateSeq,AcqNo,UserID,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'setBookingNumberSend_OnBook',false,{BDate:BDate,BDateSeq:BDateSeq,AcqNo:AcqNo,UserID:UserID},succeededCallback,failedCallback,userContext); },
+getWaitingBookCheck:function(GoodsCode,CheckInDate,UseDay,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'getWaitingBookCheck',false,{GoodsCode:GoodsCode,CheckInDate:CheckInDate,UseDay:UseDay},succeededCallback,failedCallback,userContext); },
+GetHousingImage:function(GoodsCode,Category,ImageType,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetHousingImage',false,{GoodsCode:GoodsCode,Category:Category,ImageType:ImageType},succeededCallback,failedCallback,userContext); },
+Res_ReservationsComplete:function(bookBizCode,goodsCode,placeCode,optionInfo_Wanted,optionPrice,bedTypeInfo_Wanted,checkInDate,checkOutDate,useDay,seatGrade,roomCnt,addNum,addPrice,reserveType,bookingName,bookingEmail,bookingTel1,bookingTel2,bookingTel3,bookingHP1,bookingHP2,bookingHP3,guestName,guestTel1,guestTel2,guestTel3,guestHP1,guestHP2,guestHP3,adultCnt,childCnt,memNo,requestInfo,kindOfSettle,card_HalbuMonth,card_VaildYear,card_VaildMonth,sttlAmt,subCategory,cardNo,card_SSN,card_PW,goodsName,hMem_No,cardCode,kindOfSource,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'Res_ReservationsComplete',false,{bookBizCode:bookBizCode,goodsCode:goodsCode,placeCode:placeCode,optionInfo_Wanted:optionInfo_Wanted,optionPrice:optionPrice,bedTypeInfo_Wanted:bedTypeInfo_Wanted,checkInDate:checkInDate,checkOutDate:checkOutDate,useDay:useDay,seatGrade:seatGrade,roomCnt:roomCnt,addNum:addNum,addPrice:addPrice,reserveType:reserveType,bookingName:bookingName,bookingEmail:bookingEmail,bookingTel1:bookingTel1,bookingTel2:bookingTel2,bookingTel3:bookingTel3,bookingHP1:bookingHP1,bookingHP2:bookingHP2,bookingHP3:bookingHP3,guestName:guestName,guestTel1:guestTel1,guestTel2:guestTel2,guestTel3:guestTel3,guestHP1:guestHP1,guestHP2:guestHP2,guestHP3:guestHP3,adultCnt:adultCnt,childCnt:childCnt,memNo:memNo,requestInfo:requestInfo,kindOfSettle:kindOfSettle,card_HalbuMonth:card_HalbuMonth,card_VaildYear:card_VaildYear,card_VaildMonth:card_VaildMonth,sttlAmt:sttlAmt,subCategory:subCategory,cardNo:cardNo,card_SSN:card_SSN,card_PW:card_PW,goodsName:goodsName,hMem_No:hMem_No,cardCode:cardCode,kindOfSource:kindOfSource},succeededCallback,failedCallback,userContext); },
+Res_CancelReservationsComplete:function(bookingBizCode,memNo,bDate,bDateSeq,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'Res_CancelReservationsComplete',false,{bookingBizCode:bookingBizCode,memNo:memNo,bDate:bDate,bDateSeq:bDateSeq},succeededCallback,failedCallback,userContext); },
+GetAreaGoodsList:function(RegionCode,DistrictCode,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetAreaGoodsList',false,{RegionCode:RegionCode,DistrictCode:DistrictCode},succeededCallback,failedCallback,userContext); },
+SetMyReservationCancel:function(strMemberCode,strOrderNo,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'SetMyReservationCancel',false,{strMemberCode:strMemberCode,strOrderNo:strOrderNo},succeededCallback,failedCallback,userContext); },
+GetTouristData:function(touristNum,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetTouristData',false,{touristNum:touristNum},succeededCallback,failedCallback,userContext); },
+SetFailedImageLoad:function(ImageURL,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'SetFailedImageLoad',false,{ImageURL:ImageURL},succeededCallback,failedCallback,userContext); },
+BenepiaBookingCancel:function(transactionNo,userIP,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'BenepiaBookingCancel',false,{transactionNo:transactionNo,userIP:userIP},succeededCallback,failedCallback,userContext); },
+ETBSBookingCancel:function(bizCode,interParkOrderNo,etbsCustomerID,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'ETBSBookingCancel',false,{bizCode:bizCode,interParkOrderNo:interParkOrderNo,etbsCustomerID:etbsCustomerID},succeededCallback,failedCallback,userContext); },
+GetUsableGoodsCoupon:function(goodsCode,seatGrade,limitAmt,playDate,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetUsableGoodsCoupon',false,{goodsCode:goodsCode,seatGrade:seatGrade,limitAmt:limitAmt,playDate:playDate},succeededCallback,failedCallback,userContext); },
+MemberCouponRegist:function(couponCode,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'MemberCouponRegist',false,{couponCode:couponCode},succeededCallback,failedCallback,userContext); },
+GetCodeList:function(flag,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetCodeList',false,{flag:flag},succeededCallback,failedCallback,userContext); },
+HousingEvalBoomUp:function(No,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'HousingEvalBoomUp',false,{No:No},succeededCallback,failedCallback,userContext); },
+Get_GoodsSubInfo_Additional:function(nBBSNO,nNo,strMemo,strIcon,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'Get_GoodsSubInfo_Additional',false,{nBBSNO:nBBSNO,nNo:nNo,strMemo:strMemo,strIcon:strIcon},succeededCallback,failedCallback,userContext); },
+Get_GoodsSubInfo_Delitional:function(nBBSNO,nNo,nMemoNo,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'Get_GoodsSubInfo_Delitional',false,{nBBSNO:nBBSNO,nNo:nNo,nMemoNo:nMemoNo},succeededCallback,failedCallback,userContext); },
+GetRecommend:function(nBBSNO,nNo,nGroupNo,nSeq,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetRecommend',false,{nBBSNO:nBBSNO,nNo:nNo,nGroupNo:nGroupNo,nSeq:nSeq},succeededCallback,failedCallback,userContext); },
+GetScriptCountPlus:function(nBBSNO,nNo,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetScriptCountPlus',false,{nBBSNO:nBBSNO,nNo:nNo},succeededCallback,failedCallback,userContext); },
+GetDayPriceByRoom_New:function(strFrDate,strToDate,strGoodsCode,strSeatGrade,strSalesChannel,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetDayPriceByRoom_New',false,{strFrDate:strFrDate,strToDate:strToDate,strGoodsCode:strGoodsCode,strSeatGrade:strSeatGrade,strSalesChannel:strSalesChannel},succeededCallback,failedCallback,userContext); },
+BedType_Get:function(GoodsCode,PlaceCode,SeatGrade,OnOff,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'BedType_Get',false,{GoodsCode:GoodsCode,PlaceCode:PlaceCode,SeatGrade:SeatGrade,OnOff:OnOff},succeededCallback,failedCallback,userContext); },
+SelectRoomDetailInfo_Penalty:function(goodsCode,seatGrade,checkInDT,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'SelectRoomDetailInfo_Penalty',false,{goodsCode:goodsCode,seatGrade:seatGrade,checkInDT:checkInDT},succeededCallback,failedCallback,userContext); }}
+HousingService.registerClass('HousingService',Sys.Net.WebServiceProxy);
+HousingService._staticInstance = new HousingService();
+HousingService.set_path = function(value) { HousingService._staticInstance.set_path(value); }
+HousingService.get_path = function() { return HousingService._staticInstance.get_path(); }
+HousingService.set_timeout = function(value) { HousingService._staticInstance.set_timeout(value); }
+HousingService.get_timeout = function() { return HousingService._staticInstance.get_timeout(); }
+HousingService.set_defaultUserContext = function(value) { HousingService._staticInstance.set_defaultUserContext(value); }
+HousingService.get_defaultUserContext = function() { return HousingService._staticInstance.get_defaultUserContext(); }
+HousingService.set_defaultSucceededCallback = function(value) { HousingService._staticInstance.set_defaultSucceededCallback(value); }
+HousingService.get_defaultSucceededCallback = function() { return HousingService._staticInstance.get_defaultSucceededCallback(); }
+HousingService.set_defaultFailedCallback = function(value) { HousingService._staticInstance.set_defaultFailedCallback(value); }
+HousingService.get_defaultFailedCallback = function() { return HousingService._staticInstance.get_defaultFailedCallback(); }
+HousingService.set_enableJsonp = function(value) { HousingService._staticInstance.set_enableJsonp(value); }
+HousingService.get_enableJsonp = function() { return HousingService._staticInstance.get_enableJsonp(); }
+HousingService.set_jsonpCallbackParameter = function(value) { HousingService._staticInstance.set_jsonpCallbackParameter(value); }
+HousingService.get_jsonpCallbackParameter = function() { return HousingService._staticInstance.get_jsonpCallbackParameter(); }
+HousingService.set_path("/Exporter/ws/HousingService.asmx");
+HousingService.PlaceMRSVConfirmCancel= function(goodsCode,aspordid,ordid,price,repay,sale_price,penalty,onSuccess,onFailed,userContext) {HousingService._staticInstance.PlaceMRSVConfirmCancel(goodsCode,aspordid,ordid,price,repay,sale_price,penalty,onSuccess,onFailed,userContext); }
+HousingService.PlaceMRSVCancel= function(goodsCode,aspordid,ordid,price,repay,sale_price,penalty,onSuccess,onFailed,userContext) {HousingService._staticInstance.PlaceMRSVCancel(goodsCode,aspordid,ordid,price,repay,sale_price,penalty,onSuccess,onFailed,userContext); }
+HousingService.KumhoCancel= function(bDate,bDateSeq,goodsCode,seatGrade,checkInDT,checkOutDT,aspordid,onSuccess,onFailed,userContext) {HousingService._staticInstance.KumhoCancel(bDate,bDateSeq,goodsCode,seatGrade,checkInDT,checkOutDT,aspordid,onSuccess,onFailed,userContext); }
+HousingService.PlaceMRSVConfirm= function(goodsCode,cartID,cartIDSeq,onSuccess,onFailed,userContext) {HousingService._staticInstance.PlaceMRSVConfirm(goodsCode,cartID,cartIDSeq,onSuccess,onFailed,userContext); }
+HousingService.PlaceMRSVReservation= function(goodsCode,aspordid,ordid,prodid,evid,status,onSuccess,onFailed,userContext) {HousingService._staticInstance.PlaceMRSVReservation(goodsCode,aspordid,ordid,prodid,evid,status,onSuccess,onFailed,userContext); }
+HousingService.CMSReservationCancel= function(goodsCode,orderNo,cMSOrderNo,onSuccess,onFailed,userContext) {HousingService._staticInstance.CMSReservationCancel(goodsCode,orderNo,cMSOrderNo,onSuccess,onFailed,userContext); }
+HousingService.CMSReservationReady= function(goodsCode,cartID,cartIDSeq,onSuccess,onFailed,userContext) {HousingService._staticInstance.CMSReservationReady(goodsCode,cartID,cartIDSeq,onSuccess,onFailed,userContext); }
+HousingService.CMSReservationFinal= function(goodsCode,aspOrderNo,orderNo,ticketNo,onSuccess,onFailed,userContext) {HousingService._staticInstance.CMSReservationFinal(goodsCode,aspOrderNo,orderNo,ticketNo,onSuccess,onFailed,userContext); }
+HousingService.GetScheduleSeatGrade= function(strGoodsCode,strPlayDate,onSuccess,onFailed,userContext) {HousingService._staticInstance.GetScheduleSeatGrade(strGoodsCode,strPlayDate,onSuccess,onFailed,userContext); }
+HousingService.GetScheduleUsedDay= function(strBizCode,strGoodsCode,strSeatGrade,strPlayDate,mappingBizCode,onSuccess,onFailed,userContext) {HousingService._staticInstance.GetScheduleUsedDay(strBizCode,strGoodsCode,strSeatGrade,strPlayDate,mappingBizCode,onSuccess,onFailed,userContext); }
+HousingService.GetScheduleRoomCnt= function(strBizCode,strGoodsCode,strSeatGrade,strPlayDate,strTerm,mappingBizCode,onSuccess,onFailed,userContext) {HousingService._staticInstance.GetScheduleRoomCnt(strBizCode,strGoodsCode,strSeatGrade,strPlayDate,strTerm,mappingBizCode,onSuccess,onFailed,userContext); }
+HousingService.GetScheduleRoomCntOld= function(strBizCode,strGoodsCode,strSeatGrade,strPlayDate,strTerm,onSuccess,onFailed,userContext) {HousingService._staticInstance.GetScheduleRoomCntOld(strBizCode,strGoodsCode,strSeatGrade,strPlayDate,strTerm,onSuccess,onFailed,userContext); }
+HousingService.OPStroyCancel= function(goodsCode,aspordid,ordid,price,repay,sale_price,penalty,onSuccess,onFailed,userContext) {HousingService._staticInstance.OPStroyCancel(goodsCode,aspordid,ordid,price,repay,sale_price,penalty,onSuccess,onFailed,userContext); }
+HousingService.getShortURL= function(URL,onSuccess,onFailed,userContext) {HousingService._staticInstance.getShortURL(URL,onSuccess,onFailed,userContext); }
+HousingService.getShortURL_Durlme= function(URL,onSuccess,onFailed,userContext) {HousingService._staticInstance.getShortURL_Durlme(URL,onSuccess,onFailed,userContext); }
+HousingService.setBookingNumberSend= function(SelBizCode,BDate,BDateSeq,onSuccess,onFailed,userContext) {HousingService._staticInstance.setBookingNumberSend(SelBizCode,BDate,BDateSeq,onSuccess,onFailed,userContext); }
+HousingService.setBookingNumberSend_Custom= function(BDate,BDateSeq,AcqNo,UserID,onSuccess,onFailed,userContext) {HousingService._staticInstance.setBookingNumberSend_Custom(BDate,BDateSeq,AcqNo,UserID,onSuccess,onFailed,userContext); }
+HousingService.setBookingNumberSend_OnBook= function(BDate,BDateSeq,AcqNo,UserID,onSuccess,onFailed,userContext) {HousingService._staticInstance.setBookingNumberSend_OnBook(BDate,BDateSeq,AcqNo,UserID,onSuccess,onFailed,userContext); }
+HousingService.getWaitingBookCheck= function(GoodsCode,CheckInDate,UseDay,onSuccess,onFailed,userContext) {HousingService._staticInstance.getWaitingBookCheck(GoodsCode,CheckInDate,UseDay,onSuccess,onFailed,userContext); }
+HousingService.GetHousingImage= function(GoodsCode,Category,ImageType,onSuccess,onFailed,userContext) {HousingService._staticInstance.GetHousingImage(GoodsCode,Category,ImageType,onSuccess,onFailed,userContext); }
+HousingService.Res_ReservationsComplete= function(bookBizCode,goodsCode,placeCode,optionInfo_Wanted,optionPrice,bedTypeInfo_Wanted,checkInDate,checkOutDate,useDay,seatGrade,roomCnt,addNum,addPrice,reserveType,bookingName,bookingEmail,bookingTel1,bookingTel2,bookingTel3,bookingHP1,bookingHP2,bookingHP3,guestName,guestTel1,guestTel2,guestTel3,guestHP1,guestHP2,guestHP3,adultCnt,childCnt,memNo,requestInfo,kindOfSettle,card_HalbuMonth,card_VaildYear,card_VaildMonth,sttlAmt,subCategory,cardNo,card_SSN,card_PW,goodsName,hMem_No,cardCode,kindOfSource,onSuccess,onFailed,userContext) {HousingService._staticInstance.Res_ReservationsComplete(bookBizCode,goodsCode,placeCode,optionInfo_Wanted,optionPrice,bedTypeInfo_Wanted,checkInDate,checkOutDate,useDay,seatGrade,roomCnt,addNum,addPrice,reserveType,bookingName,bookingEmail,bookingTel1,bookingTel2,bookingTel3,bookingHP1,bookingHP2,bookingHP3,guestName,guestTel1,guestTel2,guestTel3,guestHP1,guestHP2,guestHP3,adultCnt,childCnt,memNo,requestInfo,kindOfSettle,card_HalbuMonth,card_VaildYear,card_VaildMonth,sttlAmt,subCategory,cardNo,card_SSN,card_PW,goodsName,hMem_No,cardCode,kindOfSource,onSuccess,onFailed,userContext); }
+HousingService.Res_CancelReservationsComplete= function(bookingBizCode,memNo,bDate,bDateSeq,onSuccess,onFailed,userContext) {HousingService._staticInstance.Res_CancelReservationsComplete(bookingBizCode,memNo,bDate,bDateSeq,onSuccess,onFailed,userContext); }
+HousingService.GetAreaGoodsList= function(RegionCode,DistrictCode,onSuccess,onFailed,userContext) {HousingService._staticInstance.GetAreaGoodsList(RegionCode,DistrictCode,onSuccess,onFailed,userContext); }
+HousingService.SetMyReservationCancel= function(strMemberCode,strOrderNo,onSuccess,onFailed,userContext) {HousingService._staticInstance.SetMyReservationCancel(strMemberCode,strOrderNo,onSuccess,onFailed,userContext); }
+HousingService.GetTouristData= function(touristNum,onSuccess,onFailed,userContext) {HousingService._staticInstance.GetTouristData(touristNum,onSuccess,onFailed,userContext); }
+HousingService.SetFailedImageLoad= function(ImageURL,onSuccess,onFailed,userContext) {HousingService._staticInstance.SetFailedImageLoad(ImageURL,onSuccess,onFailed,userContext); }
+HousingService.BenepiaBookingCancel= function(transactionNo,userIP,onSuccess,onFailed,userContext) {HousingService._staticInstance.BenepiaBookingCancel(transactionNo,userIP,onSuccess,onFailed,userContext); }
+HousingService.ETBSBookingCancel= function(bizCode,interParkOrderNo,etbsCustomerID,onSuccess,onFailed,userContext) {HousingService._staticInstance.ETBSBookingCancel(bizCode,interParkOrderNo,etbsCustomerID,onSuccess,onFailed,userContext); }
+HousingService.GetUsableGoodsCoupon= function(goodsCode,seatGrade,limitAmt,playDate,onSuccess,onFailed,userContext) {HousingService._staticInstance.GetUsableGoodsCoupon(goodsCode,seatGrade,limitAmt,playDate,onSuccess,onFailed,userContext); }
+HousingService.MemberCouponRegist= function(couponCode,onSuccess,onFailed,userContext) {HousingService._staticInstance.MemberCouponRegist(couponCode,onSuccess,onFailed,userContext); }
+HousingService.GetCodeList= function(flag,onSuccess,onFailed,userContext) {HousingService._staticInstance.GetCodeList(flag,onSuccess,onFailed,userContext); }
+HousingService.HousingEvalBoomUp= function(No,onSuccess,onFailed,userContext) {HousingService._staticInstance.HousingEvalBoomUp(No,onSuccess,onFailed,userContext); }
+HousingService.Get_GoodsSubInfo_Additional= function(nBBSNO,nNo,strMemo,strIcon,onSuccess,onFailed,userContext) {HousingService._staticInstance.Get_GoodsSubInfo_Additional(nBBSNO,nNo,strMemo,strIcon,onSuccess,onFailed,userContext); }
+HousingService.Get_GoodsSubInfo_Delitional= function(nBBSNO,nNo,nMemoNo,onSuccess,onFailed,userContext) {HousingService._staticInstance.Get_GoodsSubInfo_Delitional(nBBSNO,nNo,nMemoNo,onSuccess,onFailed,userContext); }
+HousingService.GetRecommend= function(nBBSNO,nNo,nGroupNo,nSeq,onSuccess,onFailed,userContext) {HousingService._staticInstance.GetRecommend(nBBSNO,nNo,nGroupNo,nSeq,onSuccess,onFailed,userContext); }
+HousingService.GetScriptCountPlus= function(nBBSNO,nNo,onSuccess,onFailed,userContext) {HousingService._staticInstance.GetScriptCountPlus(nBBSNO,nNo,onSuccess,onFailed,userContext); }
+HousingService.GetDayPriceByRoom_New= function(strFrDate,strToDate,strGoodsCode,strSeatGrade,strSalesChannel,onSuccess,onFailed,userContext) {HousingService._staticInstance.GetDayPriceByRoom_New(strFrDate,strToDate,strGoodsCode,strSeatGrade,strSalesChannel,onSuccess,onFailed,userContext); }
+HousingService.BedType_Get= function(GoodsCode,PlaceCode,SeatGrade,OnOff,onSuccess,onFailed,userContext) {HousingService._staticInstance.BedType_Get(GoodsCode,PlaceCode,SeatGrade,OnOff,onSuccess,onFailed,userContext); }
+HousingService.SelectRoomDetailInfo_Penalty= function(goodsCode,seatGrade,checkInDT,onSuccess,onFailed,userContext) {HousingService._staticInstance.SelectRoomDetailInfo_Penalty(goodsCode,seatGrade,checkInDT,onSuccess,onFailed,userContext); }

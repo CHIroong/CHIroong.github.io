@@ -1,0 +1,184 @@
+$(document).ready(function() {
+    event_autoRolling(Math.floor(Math.random()*1+1));
+});
+
+function change_rolledit(bnum){
+	for(e=1; e<4; e++){
+		document.getElementById('rolledit'+e).style.display = 'none';
+	}
+		document.getElementById('rolledit'+bnum).style.display = 'block';
+}
+
+function rolledit(val){
+	if(val == 'n'){
+		event_random = event_random + 1;
+		if(event_random >3){
+			event_random = 1;
+		}
+	}else{
+		event_random = event_random - 1;
+		if(event_random < 1){
+			event_random =3;
+		}
+	}
+	delay = 1; // 오토 롤링 stop
+	clearInterval(temp);	
+	change_rolledit(event_random);
+}
+
+
+function auto_rolledit(val){
+	if(val == 'n'){
+		event_random = event_random + 1;
+		if(event_random >3){
+			event_random = 1;
+		}
+	}else{
+		event_random = event_random - 1;
+		if(event_random < 1){
+			event_random =3;
+		}
+	}
+
+	change_rolledit(event_random);
+}
+
+ var delay = 6500; // 레이어 전환 지연시간
+
+ var temp;
+
+
+function event_autoRolling(event_random)
+ {
+	
+  clearInterval(temp);
+
+  temp = setInterval("auto_rolledit(event_random)", delay);
+ }
+
+
+document.write("			<!--이벤트-->							");
+document.write("				<div class=\"event_newsq\">						");
+document.write("					<h5>이벤트ㆍ알립니다 <span id=\"newsq_toggle\"><img src=\"http://health.chosun.com/images/2010/btn_rev.gif\" onclick=\"rolledit('p');\" style=\"cursor:pointer;\" alt=\"이전으로\"/><img src=\"http://health.chosun.com/images/2010/btn_prev.gif\" onclick=\"rolledit('n');\" style=\"cursor:pointer;\" alt=\"다음으로\"/></span></h5>					");
+document.write("					<div id=\"sec_headline_newsq_id\">	");
+document.write("						<ul class=\"container\">				");
+
+/*좋은병원*/
+document.write("							<div id=\"rolledit1\">		");
+document.write("							<li>			");
+document.write("								<dl class=\"event_newsq_item\" >		");
+document.write("								<ul>		");
+document.write("									<li><a href=\"http://health.chosun.com/good_hospital/good_all.html\" target=_top><img src=\"http://health.chosun.com/images/event/1805_good_event.jpg\" alt=\"좋은병원 신청하기\"></a></li>	");
+document.write("								</ul>		");
+document.write("								</dl>			");
+document.write("							<dl class=\"event_newsq_item_foot\">			");
+document.write("									<dt ><img src=\"http://health.chosun.com/images/2015/icon_dot.png\" alt=''/><a href=\"http://clinic.ikoob.com\" target=_blank>아이쿱 클리닉 무료 베타 서비스 오픈!</a></dt>	");
+document.write("									<dt ><img src=\"http://health.chosun.com/images/2015/icon_dot.png\" alt=''/><a href=\"http://health.chosun.com/notice/noticeView.jsp?row=1&bbsid=723&search_gubun=&keyword=\" target=_blank>[펫진] 퀴즈 이벤트 당첨자 발표 </a></dt>	");
+document.write("							</dl>			");
+document.write("							</li>				");
+document.write("							</div>					");
+
+/*좋은요양병원
+document.write("							<div id=\"rolledit2\">		");
+document.write("							<li>			");
+document.write("								<dl class=\"event_newsq_item\" >		");
+document.write("								<ul>		");
+document.write("									<li><a href=\"http://health.chosun.com/good_hospital/good_care.html\" target=_top><img src=\"http://health.chosun.com/images/event/event_goodopen.jpg\" alt=\"좋은병원 신청하기\"></a></li>	");
+document.write("								</ul>		");
+document.write("								</dl>			");
+document.write("							<dl class=\"event_newsq_item_foot\">			");
+document.write("									<dt ><img src=\"http://health.chosun.com/images/2015/icon_dot.png\" alt=''/><a href=\"http://pet.chosun.com/\" target=_blank>[펫조선] 반려동물 건강가이드</a></dt>	");
+document.write("									<dt ><img src=\"http://health.chosun.com/images/2015/icon_dot.png\" alt=''/><a href=\"http://health.chosun.com/event/eventView.jsp?row=1&eventid=13830\" target=_top>[월간 헬스조선] 발행을 중단합니다</a></dt>	");
+document.write("							</dl>			");
+document.write("							</li>				");
+document.write("							</div>					");
+*/
+/*헬스케어n
+document.write("							<div id=\"rolledit3\">		");
+document.write("							<li>			");
+document.write("								<dl class=\"event_newsq_item\" >		");
+document.write("								<ul>		");
+document.write("									<li><a href=\"http://health.chosun.com/event/eventView.jsp?row=1&eventid=13689\" target=_top><img src=\"http://health.chosun.com/images/2015/mainbn_20160308.jpg\" alt=\"헬스케어N 앱 오픈\"></a></li>	");
+document.write("								</ul>		");
+document.write("								</dl>			");
+document.write("							<dl class=\"event_newsq_item_foot\">			");
+document.write("									<dt ><img src=\"http://health.chosun.com/images/2015/icon_dot.png\" alt=''/><a href=\"http://health.chosun.com/event/eventView.jsp?row=1&eventid=13830\" target=_top>[월간 헬스조선] 발행을 중단합니다</a></dt>	");
+document.write("									<dt ><img src=\"http://health.chosun.com/images/2015/icon_dot.png\" alt=''/><a href=\"http://pet.chosun.com/\" target=_blank>[펫조선] 반려동물 건강가이드</a></dt>	");
+document.write("							</dl>			");
+document.write("							</li>				");
+document.write("							</div>					");
+*/
+/*월간폐간안내
+document.write("							<div id=\"rolledit2\">		");
+document.write("							<li>			");
+document.write("								<dl class=\"event_newsq_item\" >		");
+document.write("								<ul>		");
+document.write("									<li><a href=\"http://health.chosun.com/event/eventView.jsp?row=1&eventid=13830\" target=_top><img src=\"http://health.chosun.com/images/magazine/event_end.jpg\" alt=\"이벤트발표\"></a></li>	");
+document.write("								</ul>		");
+document.write("								</dl>			");
+document.write("							<dl class=\"event_newsq_item_foot\">			");
+document.write("									<dt ><img src=\"http://health.chosun.com/images/2015/icon_dot.png\" alt=''/><a href=\"http://health.chosun.com/good_hospital/good_care.html\" target=_top>헬스조선 좋은요양병원을 소개 합니다</a></dt>	");
+document.write("									<dt ><img src=\"http://health.chosun.com/images/2015/icon_dot.png\" alt=''/><a href=\"http://pet.chosun.com/\" target=_blank>[펫조선] 반려동물 건강가이드</a></dt>	");
+document.write("							</dl>			");
+document.write("							</li>				");
+document.write("							</div>					");
+*/
+/*건선*/
+document.write("							<div id=\"rolledit2\">		");
+document.write("							<li>			");
+document.write("								<dl class=\"event_newsq_item\" >		");
+document.write("								<ul>		");
+document.write("									<li><a href=\"http://gunsun.healthchosun.com\" target=_top><img src=\"http://health.chosun.com/images/event/event_gunsun.jpg\" alt=\"건선\"></a></li>	");
+document.write("								</ul>		");
+document.write("								</dl>			");
+document.write("							<dl class=\"event_newsq_item_foot\">			");
+document.write("									<dt ><img src=\"http://health.chosun.com/images/2015/icon_dot.png\" alt=''/><a href=\"http://health.chosun.com/notice/noticeView.jsp?row=1&bbsid=723&search_gubun=&keyword=\" target=_blank>[펫진] 퀴즈 이벤트 당첨자 발표 </a></dt>	");
+document.write("									<dt ><img src=\"http://health.chosun.com/images/2015/icon_dot.png\" alt=''/><a href=\"http://health.chosun.com/good_hospital/good_care.html\" target=_top>헬스조선 좋은요양병원을 소개 합니다</a></dt>	");
+document.write("							</dl>			");
+document.write("							</li>				");
+document.write("							</div>					");
+
+/*펫진 이벤트*/
+/*
+document.write("							<div id=\"rolledit3\">		");
+document.write("							<li>			");
+document.write("								<dl class=\"event_newsq_item\" >		");
+document.write("								<ul>		");
+document.write("									<li><a href=\"http://health.chosun.com/event/poll_event_input.jsp?poll_idx=162\" target=_blank><img src=\"http://health.chosun.com/images/event/select_mainbn_1805.jpg\" alt=\"펫진 이벤트\"></a></li>	");
+document.write("								</ul>		");
+document.write("								</dl>			");
+document.write("							<dl class=\"event_newsq_item_foot\">			");
+document.write("									<dt ><img src=\"http://health.chosun.com/images/2015/icon_dot.png\" alt=''/><a href=\"http://health.chosun.com/good_hospital/good_care.html\" target=_top>헬스조선 좋은요양병원을 소개 합니다</a></dt>	");
+document.write("									<dt ><img src=\"http://health.chosun.com/images/2015/icon_dot.png\" alt=''/><a href=\"http://clinic.ikoob.com\" target=_blank>아이쿱 클리닉 무료 베타 서비스 오픈!</a></dt>	");
+document.write("							</dl>			");
+document.write("							</li>				");
+document.write("							</div>					");
+*/
+
+
+/*아이쿱 클리닉*/
+document.write("							<div id=\"rolledit3\">		");
+document.write("							<li>			");
+document.write("								<dl class=\"event_newsq_item\" >		");
+document.write("								<ul>		");
+document.write("									<li><a href=\"http://clinic.ikoob.com/\" target=_blank><img src=\"http://health.chosun.com/images/event/ikoobclinic_web.jpg\" alt=\"아이쿱\"></a></li>	");
+document.write("								</ul>		");
+document.write("								</dl>			");
+document.write("							<dl class=\"event_newsq_item_foot\">			");
+document.write("									<dt ><img src=\"http://health.chosun.com/images/2015/icon_dot.png\" alt=''/><a href=\"http://health.chosun.com/good_hospital/good_care.html\" target=_top>헬스조선 좋은요양병원을 소개 합니다</a></dt>	");
+document.write("									<dt ><img src=\"http://health.chosun.com/images/2015/icon_dot.png\" alt=''/><a href=\"http://health.chosun.com/notice/noticeView.jsp?row=1&bbsid=723&search_gubun=&keyword=\" target=_blank>[펫진] 퀴즈 이벤트 당첨자 발표 </a></dt>	");
+
+
+document.write("							</dl>			");
+document.write("							</li>				");
+document.write("							</div>					");
+
+
+
+document.write("						</ul>				");
+document.write("					</div>					");
+document.write("				</div>						");
+
+
+event_random = Math.floor(Math.random()*1+1);
+change_rolledit(event_random);

@@ -1,0 +1,405 @@
+var BX_OVERLAY = BX_OVERLAY || {
+};
+
+var ADJ_REQ = {
+    scrollTimer : null,
+    serverUrl : location.protocol + "//afs.adjust-net.jp/adfrontserver/adsm?",
+    sendRequestToAdServer : function() {
+        var ifrFlag;
+        (window.self === window.top ) ? ifrFlag = 0 : ifrFlag = 1;
+        var uniqId = this.getUniqId();
+
+        var sh = this.getHeight();
+        var sw = this.getWidth();
+        var amp_serveUrl = this.serverUrl;
+        var amp_media = this.getMediaPattern();
+        var amp_user = "&js=" + 1 + "&domain=" + document.domain + "&protocol=" + this.getProtocolId();
+        var amp_url = location.href;
+
+        var amp_userUrl = "&url=" + this.encode(amp_url) + "&rurl=" + this.encode(amp_rurl);
+        var amp_uniqId = "&rid=" + uniqId + "&psid=" + amp_psid + "&simReqNum=" + simReqNum;
+        if ( typeof (amp_em) == "undefined") {
+            amp_em = "0";
+        }
+
+        amp_serveUrl += amp_media + amp_user + amp_userUrl + amp_uniqId;
+        amp_serveUrl += "&sh=" + sh + "&sw=" + sw;
+        amp_serveUrl += "&overlay=" + amp_overlay + "&em=" + amp_em;
+        amp_serveUrl += "&afsifr=" + ifrFlag + "&viewable=" + this.getViewable();
+        amp_serveUrl += "&sf=" + this.isSafeFrame();
+        amp_serveUrl += "&iob=" + this.isIntersectionObserverAPI();
+
+        document.write('<script type=\"text/javascript\" charset=\"UTF-8\" src=\"' + amp_serveUrl + '\"></script>');
+
+    },
+    getMediaPattern : function() {
+        var amp_media;
+        amp_media = "med=" + amp_med + "&site=" + amp_site + "&frame=" + amp_frame;
+
+        return amp_media;
+    },
+    getUniqId : function() {
+        var amp_rand_1 = (new Date().getTime()) % 100000000;
+        var amp_rand_2 = Math.round(Math.random() * 100000000.0);
+
+        return amp_rand_id = "" + amp_rand_1 + "" + amp_rand_2;
+    },
+    getProtocolId : function() {
+        var amp_protocol = "";
+
+        if (location.protocol == "https:") {
+            amp_protocol = 2;
+        } else {
+            amp_protocol = 1;
+        }
+        return amp_protocol;
+    },
+    encode : function(str) {
+        var amp_i, amp_encoded_str, amp_char_code, amp_padded_str;
+        amp_encoded_str = "";
+
+        for ( amp_i = 0; amp_i < str.length; amp_i++) {
+            amp_char_code = str.charCodeAt(amp_i);
+            if (amp_char_code == 0x20) {
+                amp_encoded_str += "+";
+            } else {
+                if (((0x30 <= amp_char_code) && (amp_char_code <= 0x39)) || ((0x41 <= amp_char_code) && (amp_char_code <= 0x5a)) || ((0x61 <= amp_char_code) && (amp_char_code <= 0x7a))) {
+                    amp_encoded_str += str.charAt(amp_i);
+                } else if ((amp_char_code == 0x2a) || (amp_char_code == 0x2e) || (amp_char_code == 0x2d) || (amp_char_code == 0x5f)) {
+                    amp_encoded_str += str.charAt(amp_i);
+                } else {
+                    if (amp_char_code > 0xffff) {
+                        amp_encoded_str += "%" + ((amp_char_code >> 18) | 0xf0).toString(16).toUpperCase();
+                        amp_encoded_str += "%" + (((amp_char_code >> 12) & 0x3f) | 0x80).toString(16).toUpperCase();
+                        amp_encoded_str += "%" + (((amp_char_code >> 6) & 0x3f) | 0x80).toString(16).toUpperCase();
+                        amp_encoded_str += "%" + ((amp_char_code & 0x3f) | 0x80).toString(16).toUpperCase();
+                    } else if (amp_char_code > 0x7ff) {
+                        amp_encoded_str += "%" + ((amp_char_code >> 12) | 0xe0).toString(16).toUpperCase();
+                        amp_encoded_str += "%" + (((amp_char_code >> 6) & 0x3f) | 0x80).toString(16).toUpperCase();
+                        amp_encoded_str += "%" + ((amp_char_code & 0x3f) | 0x80).toString(16).toUpperCase();
+                    } else if (amp_char_code > 0x7f) {
+                        amp_encoded_str += "%" + (((amp_char_code >> 6) & 0x1f) | 0xc0).toString(16).toUpperCase();
+                        amp_encoded_str += "%" + ((amp_char_code & 0x3f) | 0x80).toString(16).toUpperCase();
+                    } else {
+                        amp_padded_str = "0" + amp_char_code.toString(16).toUpperCase();
+                        amp_encoded_str += "%" + amp_padded_str.substr(amp_padded_str.length - 2, 2);
+                    }
+                }
+            }
+        }
+        return amp_encoded_str;
+    },
+    initScroll : function(ampid) {
+        if (!BX_OVERLAY.overlayIds) {
+            BX_OVERLAY.overlayIds = new Array();
+        }
+        BX_OVERLAY.overlayIds.push(ampid);
+        if (!ADJ_REQ.scrollTimer) {
+            ADJ_REQ.scrollTime = window.setInterval("ADJ_REQ.handleScroll()", 1000);
+        }
+
+    },
+    getHeight : function() {
+        var myHeight = 0;
+        if ( typeof (window.innerHeight) == 'number') {
+            //Non-IE
+            myHeight = window.innerHeight;
+            if (myHeight > 0) {
+                return myHeight;
+            }
+        }
+        if (document.documentElement && document.documentElement.clientHeight) {
+            //IE 6+ in 'standards compliant mode'
+            myHeight = document.documentElement.clientHeight;
+            if (myHeight > 0) {
+                return myHeight;
+            }
+        }
+        if (document.body && document.body.clientHeight) {
+            //IE 4 compatible
+            myHeight = document.body.clientHeight;
+            if (myHeight > 0) {
+                return myHeight;
+            }
+        }
+        return myHeight;
+    },
+    getWidth : function() {
+        var myWidth = 0;
+        if ( typeof (window.innerWidth) == 'number') {
+            //Non-IE
+            myWidth = window.innerWidth;
+            if (myWidth > 0) {
+                return myWidth;
+            }
+        }
+        if (document.documentElement && document.documentElement.clientWidth) {
+            //IE 6+ in 'standards compliant mode'
+            myWidth = document.documentElement.clientWidth;
+            if (myWidth > 0) {
+                return myWidth;
+            }
+        }
+        if (document.body && document.body.clientWidth) {
+            //IE 4 compatible
+            myWidth = document.body.clientWidth;
+            if (myWidth > 0) {
+                return myWidth;
+            }
+        }
+        return myWidth;
+    },
+    scrollY : function() {
+        var scrOfY = 0;
+        if ( typeof (window.pageYOffset) == 'number') {
+            //Netscape compliant
+            scrOfY = window.pageYOffset;
+        } else if (document.body && document.body.scrollTop) {
+            //DOM compliant
+            scrOfY = document.body.scrollTop;
+        } else if (document.documentElement && document.documentElement.scrollTop) {
+            //IE6 standards compliant mode
+            scrOfY = document.documentElement.scrollTop;
+        }
+        return scrOfY;
+    },
+    handleScroll : function() {
+        var sh = ADJ_REQ.getHeight();
+        var scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
+        var curScrollPos = ADJ_REQ.scrollY();
+
+        for ( ctr = 0; ctr < BX_OVERLAY.overlayIds.length; ctr++) {
+            var el = ADJ_REQ.getEl("AMP_" + BX_OVERLAY.overlayIds[ctr]);
+            var elHeight = el.height;
+            if (!elHeight) {
+                elHeight = parseInt(el.style.height, 10);
+            }
+
+            if ((scrollHeight - sh) < elHeight) {
+                el = ADJ_REQ.getEl("AMP_DIV_" + BX_OVERLAY.overlayIds[ctr]);
+                el.style.bottom = 0;
+                el.style.top = null;
+            } else {
+                if ((scrollHeight - (curScrollPos + sh)) < elHeight) {
+                    el = ADJ_REQ.getEl("AMP_DIV_" + BX_OVERLAY.overlayIds[ctr]);
+                    el.style.top = 0;
+                    el.style.bottom = null;
+                } else {
+                    el = ADJ_REQ.getEl("AMP_DIV_" + BX_OVERLAY.overlayIds[ctr]);
+                    el.style.bottom = 0;
+                    el.style.top = null;
+                }
+            }
+        }
+
+    },
+    handleResponse : function(ampid, creative, beacon, overlay, h, w, iIcon) {
+
+        if ( typeof (iIcon) != 'undefined' && iIcon.length > 0) {
+            var wrapDivTag = '<div id="ADJ_wrap_' + ampid + '" style="overflow:hidden;width: ' + w + 'px;height:' + h + 'px; position: relative; top: 0px; left: 0px; margin: 0px; padding: 0px; display:inline-block;" >';
+            var wrapEndDivTag = '</div>';
+            creative = wrapDivTag + creative + iIcon + wrapEndDivTag;
+        }
+        if (overlay == '1') {
+            document.write('<div style=" text-align: center;z-index:999999999;width:100%;position:fixed;bottom:0;left:0;padding:0px;margin:0px;" id="AMP_DIV_' + ampid + '"><div style="display: inline-block;text-align: left;vertical-align: middle;">' + creative + "</div></div>");
+            document.write('<div style="display:none;padding:0px;margin:0px;">' + beacon + '</div>');
+            ADJ_REQ.initScroll(ampid);
+        } else {
+            document.write(creative);
+            document.write('<div style="display:none;padding:0px;margin:0px;">' + beacon + '</div>');
+        }
+        this.handleEvent(window, "resize", function() {
+            var amp_el = ADJ_REQ.getEl('AMP_' + ampid);
+            var handleId = 'AMP_' + ampid;
+            var iconHandleId = 'ADJ_ii_' + ampid;
+
+            if (overlay == '1') {
+                handleId = 'AMP_DIV_' + ampid;
+            }
+            if (amp_el == null || amp_el == undefined) {
+                return;
+            }
+            if (document.documentElement.clientWidth < amp_el.width) {
+                ADJ_REQ.hideEl(handleId);
+                ADJ_REQ.hideEl('ADJ_ii_' + ampid);
+                ADJ_REQ.hideEl('ADJ_wrap_' + ampid);
+
+            } else {
+                ADJ_REQ.showEl(handleId);
+                ADJ_REQ.showEl('ADJ_ii_' + ampid);
+                ADJ_REQ.showEl('ADJ_wrap_' + ampid, 'inline-block');
+            }
+
+        });
+
+    },
+    handleScriptResponse : function(ampid, creative, beacon, overlay, h, w, iIcon) {
+        var wrapDivTag = '';
+        var wrapEndDivTag = '';
+        if ( typeof (iIcon) != 'undefined' && iIcon.length > 0) {
+            wrapDivTag = '<div id="ADJ_wrap_' + ampid + '" style="overflow:hidden;width: ' + w + 'px;height:' + h + 'px; position: relative; top: 0px; left: 0px; margin: 0px; padding: 0px; display:inline-block;" >';
+            wrapEndDivTag = iIcon + '</div>';
+        }
+        if (overlay == '1') {
+
+            document.write('<div style=" text-align: center;z-index:999999999;width:100%;position:fixed;bottom:0;left:0;padding:0px;margin:0px;" id="AMP_DIV_' + ampid + '"><div style="display: inline-block;text-align: left;vertical-align: middle;height:' + h + 'px;width:' + w + 'px;" id="AMP_' + ampid + '">');
+            document.write(wrapDivTag);
+            eval(creative);
+            document.write(wrapEndDivTag);
+            document.write('</div></div>');
+
+            document.write('<div style="display:none;visibility:hidden;padding:0px;margin:0px;">' + beacon + '</div>');
+            ADJ_REQ.initScroll(ampid);
+        } else {
+            document.write('<div id="AMP_' + ampid + '" >');
+            document.write(wrapDivTag);
+            eval(creative);
+            document.write(wrapEndDivTag);
+            document.write('</div>');
+            document.write('<div style="display:none;visibility:hidden;padding:0px;margin:0px;">' + beacon + '</div>');
+        }
+        this.handleEvent(window, "resize", function() {
+            var amp_el = ADJ_REQ.getEl('AMP_' + ampid);
+            var handleId = 'AMP_' + ampid;
+            if (overlay == '1') {
+                handleId = 'AMP_DIV_' + ampid;
+            }
+            if (amp_el == null || amp_el == undefined) {
+                return;
+            }
+            if (document.documentElement.clientWidth < w) {
+                ADJ_REQ.hideEl(handleId);
+                ADJ_REQ.hideEl('ADJ_ii_' + ampid);
+                ADJ_REQ.hideEl('ADJ_wrap_' + ampid);
+            } else {
+                ADJ_REQ.showEl(handleId);
+                ADJ_REQ.showEl('ADJ_ii_' + ampid);
+                ADJ_REQ.showEl('ADJ_wrap_' + ampid, 'inline-block');
+            }
+
+        });
+
+    },
+    handleEvent : function(el, eventType, handlerFn) {
+
+        if (el == null || el == undefined) {
+            return;
+        }
+        if (el.addEventListener) {
+            el.addEventListener(eventType, handlerFn, true);
+        } else if (el.attachEvent) {
+            el.attachEvent("on" + eventType, handlerFn);
+        } else {
+            el["on" + eventType] = handlerFn;
+        }
+    },
+    getEl : function(elId) {
+        return document.getElementById(elId);
+    },
+    hideEl : function(elId) {
+        var el = ADJ_REQ.getEl(elId);
+        if (el == null || el == undefined) {
+            return;
+        }
+        el.style.display = "none";
+    },
+    showEl : function(elId, dispStyle) {
+        var el = ADJ_REQ.getEl(elId);
+        if (el == null || el == undefined) {
+            return;
+        }
+        if ( typeof (dispStyle) == "undefined") {
+            dispStyle = "";
+        }
+        el.style.display = dispStyle;
+    },
+    vendors : ['-moz-', '-webkit-', '-o-', '-ms-', '-khtml-', ''],
+    toCamelCase : function(str) {
+        return str.toLowerCase().replace(/(\-[a-z])/g, function($1) {
+            return $1.toUpperCase().replace('-', '');
+        });
+    },
+    setCss3Style : function(el, prop, val) {
+        for (var i = 0, l = ADJ_REQ.vendors.length; i < l; i++) {
+            var p = ADJ_REQ.toCamelCase(ADJ_REQ.vendors[i] + prop);
+            if ( p in el.style) {
+                el.style[p] = val;
+            }
+        }
+    },
+    doIconMouseOver : function(adid, show, pos) {
+        var dTag = ADJ_REQ.getEl("ADJ_ii_" + adid);
+        var dTagIcon = ADJ_REQ.getEl("ADJ_ii_icon_" + adid);
+        var dTagIconImage = ADJ_REQ.getEl("ADJ_ii_iconimg_" + adid);
+        var dTagText = ADJ_REQ.getEl("ADJ_ii_text_" + adid);
+        ADJ_REQ.setCss3Style(dTag, 'transition', 'width linear 0.2s');
+
+        if (show) {
+            var width = parseInt(dTag.style.width);
+            if (width > 20) {
+                return true;
+            }
+            ADJ_REQ.showEl("ADJ_ii_text_" + adid);
+            dTagIconImage.style["WebkitBorder" + pos + "Radius"] = "0px";
+            dTagIconImage.style["MozBorderRadius" + pos] = "0px";
+            dTagIconImage.style["border" + pos + "Radius"] = "0px";
+            dTag.style.width = "100px";
+            dTagText.style.width = "83px";
+            window.setTimeout(function() {
+                ADJ_REQ.doIconMouseOver(adid, 0, pos);
+            }, 3000);
+            return false;
+        } else {
+            dTag.style.width = "17px";
+            dTagText.style.width = "0px";
+            dTagIconImage.style["WebkitBorder" + pos + "Radius"] = "4px";
+            dTagIconImage.style["MozBorderRadius" + pos] = "4px";
+            dTagIconImage.style["border" + pos + "Radius"] = "4px";
+            ADJ_REQ.hideEl("ADJ_ii_text_" + adid);
+        }
+    },
+    getViewable : function() {
+        var viewableFlag = 0;
+        try {
+            if(top.document) {
+                viewableFlag = 1;
+            }
+        } catch (e) {
+            viewableFlag = 0;
+        }
+        return viewableFlag;
+    },
+    isSafeFrame : function() {
+        if (typeof $sf === 'undefined') {
+            return 0;
+        } else {
+            return 1;
+        }
+    },
+    isIntersectionObserverAPI : function() {
+        if (typeof IntersectionObserver !== 'function') {
+            return 0;
+        } else {
+            return 1;
+        }
+    }
+};
+
+if ( typeof window["amp_psid"] != 'undefined') {
+    simReqNum++;
+} else {
+    var amp_psid;
+    amp_psid = ((new Date().getTime()) % 100000000) + (Math.round(Math.random() * 100000000.0));
+    var simReqNum = 1;
+}
+
+var ADJ_Ctr = 0;
+(function() {
+    ADJ_Ctr++;
+    if (ADJ_REQ.getHeight() == 0 && ADJ_REQ.getWidth() == 0 && ADJ_Ctr < 10) {
+        setTimeout(arguments.callee, 30);
+        return;
+    }
+    ADJ_REQ.sendRequestToAdServer();
+
+})();

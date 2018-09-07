@@ -1,0 +1,17 @@
+document.write("				<!--건강상담-->						");
+document.write("				<div class=\"counsel_newsq\">						");
+document.write("					<h5><a class=\"allat\" href=\"http://health.chosun.com/submain/counseling.html\">건강상담</a> <span id=\"newsq_toggle_add\"><a href=\"http://health.chosun.com/submain/counseling.html\" target=\"_top\"><img src=\"http://health.chosun.com/images/2015/icon_add.png\" alt='전체보기'/></a></span></h5>					");
+document.write("					<div id=\"sec_headline_newsq_id\">					");
+document.write("						<ul class=\"container\">				");
+document.write("							<li>			");
+document.write("								<dl class=\"counsel_newsq_item\">		");
+document.write("									<dt><img src=\"http://health.chosun.com/images/2015/icon_dot.png\" alt=''/><a href=\"http://health.chosun.com/counseling/deptview.jsp?menu=2&submenu=1&bbsid=77460\">병원에서 진단을 받았는데요...</a></dt>	");
+document.write("									<dt><img src=\"http://health.chosun.com/images/2015/icon_dot.png\" alt=''/><a href=\"http://health.chosun.com/counseling/deptview.jsp?menu=2&submenu=1&bbsid=77455\">뇌혈류초음파와 뇌CT 후 문의드립니다</a></dt>	");
+document.write("									<dt><img src=\"http://health.chosun.com/images/2015/icon_dot.png\" alt=''/><a href=\"http://health.chosun.com/counseling/deptview.jsp?menu=2&submenu=1&bbsid=77441\">소변에 빨간 알갱이가 나와요</a></dt>	");
+document.write("									<dt><img src=\"http://health.chosun.com/images/2015/icon_dot.png\" alt=''/><a href=\"http://health.chosun.com/counseling/deptview.jsp?menu=2&submenu=1&bbsid=77434\">식품의 차고 더운 성질이 궁금합니다</a></dt>	");
+document.write("									<dt><img src=\"http://health.chosun.com/images/2015/icon_dot.png\" alt=''/><a href=\"http://health.chosun.com/counseling/deptview.jsp?menu=2&submenu=1&bbsid=77421\">샤워기로 항문을 씻는 것...</a></dt>	");
+document.write("								</dl>		");
+document.write("							</li>			");
+document.write("						</ul>				");
+document.write("					</div>					");
+document.write("				</div>						");

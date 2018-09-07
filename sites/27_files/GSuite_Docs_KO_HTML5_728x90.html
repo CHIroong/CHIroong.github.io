@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<!-- saved from url=(0195)https://s0.2mdn.net/ads/richmedia/studio/pv2/60549455/20180206210636816/GSuite_Docs_KO_HTML5_728x90/GSuite_Docs_KO_HTML5_728x90.html?e=69&renderingType=2&leftOffset=0&topOffset=0&c=ATcCw5P3NU&t=1 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>GSuite_Docs_KO_HTML5_728x90</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- change to match the dimensions of your ad -->
+<meta name="ad.size" content="width=728,height=90">
+<style>
+html, body{
+	margin: 0;
+	padding: 0;
+	background-color: #FFFFFF;
+}
+#canvas{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	-moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	cursor: pointer;
+	visibility: hidden;
+}
+#border{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	border: 1px solid #666666;
+	pointer-events: none;
+	visibility: hidden;
+}
+#plContainer{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background-color: none;
+	border: none;
+}
+div.preloader{
+	position: relative;
+}
+div.preloader p {
+	font-family: arial;
+	font-size: 100%; 
+	color: white;
+	margin: 0;
+	padding: 5px;
+    background: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+</style>
+<!-- DoubleClick Enabler -->
+<script src="./Enabler_01_212.js.download" type="text/javascript"></script>
+<!-- DoubleClick GreenSock -->
+<script src="./tweenmax_1.18.0_499ba64a23378545748ff12d372e59e9_min.js.download"></script>
+<!-- DoubleClick CreateJs -->
+<script src="./createjs_2015.11.26_54e1c3722102182bb133912ad4442e19_min.js.download"></script>
+<!-- AdHelper -->
+<script src="./AdHelper.min.js.download"></script> 
+<!-- Adobe Animate Scripts -->
+<script src="./GSuite_Docs_KO_HTML5_728x90.js.download"></script>
+<script>
+var clickTag = "http://www.adobe.com",
+	adWidth,
+    adHeight,
+    adBorder,
+    preloader,
+    preloaderDiv,
+	canvas,
+    stage,
+    exportRoot,
+    ad,
+    failCount = 1;
+function doClickthrough(evt){
+	if(evt.type === undefined){
+		//window.open(clickTag, "_blank");
+	}else if(evt.nativeEvent.which === 1){
+		//window.open(clickTag, "_blank");
+	}
+}
+function showAd(){
+	preloader.style.display = "none";
+	canvas.style.visibility = "visible";
+    border.style.visibility = "visible";
+}
+function init() {
+    canvas = document.getElementById("canvas");
+    adWidth = canvas.width;
+    adHeight = canvas.height;
+    adBorder = document.getElementById("border");
+    adBorder.style.width = (adWidth-2) + "px";
+    adBorder.style.height = (adHeight-2) + "px";
+    preloader = document.getElementById("plContainer");
+    preloader.style.width = (adWidth-2) + "px";
+    preloader.style.height = (adHeight-2) + "px";
+    preloaderDiv = document.querySelector("div.preloader");
+    preloaderDiv.style.height = (adHeight-2) + "px";
+    //if (!createjs.AdHelper.isSupported()) {
+        //createjs.AdHelper.showAltImage(canvas, "backup_300x250.jpg", "javascript:doClickthrough(this)", "BannerWave", "_blank");
+		//}
+    //remove the duplicate canvas variable assignment
+	canvas = document.getElementById("canvas");
+	images = images||{};
+	var loader = new createjs.LoadQueue(false);
+	loader.addEventListener("fileload", handleFileLoad);
+	loader.addEventListener("complete", handleComplete);
+	loader.loadManifest(lib.properties.manifest);
+}
+function handleFileLoad(evt) {
+	if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
+}
+function handleComplete(evt) {
+	var queue = evt.target;
+	var ssMetadata = lib.ssMetadata;
+	for(i=0; i<ssMetadata.length; i++) {
+		ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
+	}
+	exportRoot = new lib.GSuite_Docs_KO_HTML5_728x90();
+	stage = new createjs.Stage(canvas);
+	stage.addChild(exportRoot);
+	stage.enableMouseOver();
+	createjs.Ticker.setFPS(lib.properties.fps);
+	createjs.Ticker.addEventListener("tick", stage);
+    //uncomment the following line and move it right before the line that sets the FPS of the Ticker
+    //createjs.Ticker.timingMode = createjs.Ticker.RAF_SYNCHED;
+    //stage.enableMouseOver();
+    //stage.snapToPixelEnabled = false;
+    //createjs.Touch.enable(stage);
+	//createjs.Touch.enable(stage, false, true);
+	//stage.preventSelection = false;
+    //stage.on("stagemouseup", doClickthrough);
+	ad = new createjs.AdHelper(stage)
+		//.setSleep(40,0,0)
+		//.timeSync()
+		//.watchFPS(15, 1)
+		.highDPI(true, 1);
+}
+</script>
+</head>
+<body onload="init();">
+	<canvas id="canvas" width="728" height="90" style="background-color: rgb(255, 255, 255); visibility: visible; width: 728px; height: 90px;"></canvas>
+	<div id="border" style="width: 726px; height: 88px; visibility: visible;"></div>
+	<div id="plContainer" style="width: 726px; height: 88px; display: none;">
+		<div class="preloader" style="height: 88px;"><p>&nbsp;Loading Advertisement...&nbsp;</p></div>
+	</div>
+    <script>
+		window.addEventListener('load', showAd, false);
+    </script>
+
+
+</body></html>

@@ -1,0 +1,54 @@
+
+document.write("     					<div class=\"news_left_aside\"> "); 
+document.write("     						<ul class=\"left_aside_sns\"> "); 
+ if(thisCode != "video")
+{
+	document.write("     							<li class=\"cmt\"><a href=\"#news_comment_id\">100자평</a> <span id=\"BBSCNT\">0</span></li> "); 
+}
+document.write("     							<li class=\"fb\"><a href=\"#\" onclick=\"facebook_share();\">페이스북</a><span id=\"FBCNT\">0</span></li> "); 
+document.write("     							<li class=\"tw\"><a href=\"#\" onclick=\"twitter_share();\">트위터</a><span id=\"TWCNT\"></span></li> "); 
+document.write("     							<li class=\"more\"> "); 
+document.write("     								<a href=\"#\" id=\"left_aside_sns_more_id\">더보기</a> "); 
+document.write("     								<ul id=\"left_aside_sns_more_layer\"> "); 
+document.write("     									<li class=\"gp\"><a href=\"#\" onclick=\"google_share();\">구글플러스</a></li> "); 
+document.write("     									<li class=\"kas\"><a href=\"#\" onclick=\"kakaostory_share();\">카카오스토리</a></li> "); 
+document.write("     									<li class=\"email\"><a href=\"#\" onclick=\"mailOpen(); return false;\">이메일로 기사공유</a></li> "); 
+document.write("     								</ul> "); 
+document.write("     							</li> "); 
+document.write("     						</ul> "); 
+
+
+if (thisCode == "11a")
+{
+	document.write("<script type='text/javascript' src='http://health.chosun.com/js/2015/jquery.bxslider.card.js'><"+"/script>");
+	document.write("<script type='text/javascript' src='http://health.chosun.com/js/2016/card_list_left.js'><"+"/script>");
+
+}
+else if(thisCode == "video")
+{
+	document.write("<script type='text/javascript' src='http://health.chosun.com/js/2016/jquery.bxslider.video.js'><"+"/script>");
+	document.write("<script type='text/javascript' src='http://health.chosun.com/js/2016/video_list_left.js'><"+"/script>");
+}
+
+	document.write("     					</div> "); 
+
+
+function facebook_share() {
+	window.open("http://www.facebook.com/sharer.php?u="+encodeURIComponent(location.href)+ "&t=" + encodeURIComponent(document.title), "_blank", "height=580, width=550, location=no,resizable=yes,status=no,scrollbars=no,personalbar=no,toolbar=no,menubar=no")
+}
+
+function twitter_share() {
+	window.open("http://twitter.com/share?url="+encodeURIComponent(location.href)+ "&text=" + encodeURIComponent(document.title), "_blank", "height=580, width=550, location=no,resizable=yes,status=no,scrollbars=no,personalbar=no,toolbar=no,menubar=no")
+}
+
+function google_share() {
+	window.open("https://plus.google.com/share?url="+encodeURIComponent(location.href), "_blank", "height=580, width=550, location=no,resizable=yes,status=no,scrollbars=no,personalbar=no,toolbar=no,menubar=no")
+}
+
+function band_share() {
+	window.open("http://www.band.us/plugin/share?body="+encodeURIComponent(document.title)+encodeURIComponent('\n')+encodeURIComponent(location.href), "_blank", "height=580, width=550, location=no,resizable=yes,status=no,scrollbars=no,personalbar=no,toolbar=no,menubar=no")
+}
+
+function kakaostory_share() {
+	window.open("https://story.kakao.com/share?url="+encodeURIComponent(location.href), "_blank", "height=580, width=550, location=no,resizable=yes,status=no,scrollbars=no,personalbar=no,toolbar=no,menubar=no")
+}

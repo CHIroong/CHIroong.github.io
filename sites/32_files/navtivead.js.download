@@ -1,0 +1,68 @@
+	//nativead slot slide
+	$(function() {
+	    var click_class_obj = $('.ad-300x180-area .number a.button');
+	    var slide_iframe_ad_id_obj = $('.ad-300x180-area .slide_box iframe');
+	    var arr_split_src = slide_iframe_ad_id_obj.attr('src').split('@x1');
+	    //console.log(arr_split_src);
+	    //var change_adslide = setInterval(function() { changeAdSlide(); }, 5000); //auto ad change
+	    
+	    /*
+	    var cur_pos_num = 1;
+	    var cur_pos_cnt = click_class_obj.length;
+        if(cur_pos_cnt>5) {
+        	cur_pos_cnt = cur_pos_cnt -5;
+        }  
+        */
+	    click_class_obj.bind('click mouseover', function(event) { 
+	        event.stopPropagation(); 
+	        var select_num = click_class_obj.index(this) + 1;
+	        //console.log('선택1:' + select_num);
+	        //becase: aticle view page list up, class many count offset
+	        if(select_num>5) {
+	        	select_num = select_num -(parseInt((select_num-1)/5)*5);
+	        }
+	        //console.log('선택2:' + select_num);
+	        //cur_pos_num = select_num; //auto change
+	        var ad_pos = 2 + Number(select_num);
+	        if (Number(select_num) > 2) { var ad_pos = 3 + Number(select_num); } //iframe src pattern diff x15 not use
+	        var change_if_src = arr_split_src[0] + '@x1' + ad_pos + arr_split_src[1].substring(1,arr_split_src[1].length);
+	        //console.log(change_if_src);
+	        slide_iframe_ad_id_obj.attr('src', change_if_src);
+	        if ($('.ad-300x180-area .number > .slide_no').length > 0) {
+	            var sIndex = click_class_obj.index(this);
+	            /*
+		        if(sIndex>5) {
+		        	sIndex = sIndex -5;
+		        }
+		        */
+	            var remove_tag = '<strong class="slide_no"></strong>';
+	            $('.ad-300x180-area .number .slide_no .button').unwrap(remove_tag);
+	            $(click_class_obj, '.button').eq(sIndex).wrap(remove_tag);
+	        }
+	        //clearInterval(change_adslide);
+	    });
+	    /*
+	    click_class_obj.bind('mouseleave', function(event) {
+	        event.stopPropagation();
+	        change_adslide = setInterval(function() { changeAdSlide(); }, 5000);
+	    });
+	    //auto ad change
+	    function changeAdSlide() {
+	        cur_pos_num = cur_pos_num + 1; //next ad slot
+	        if (cur_pos_num > cur_pos_cnt) {
+	            cur_pos_num = 1; //curr slot reset 
+	        }
+	        var select_num = cur_pos_num;
+	        var ad_pos = 2 + Number(select_num);
+	        if (Number(select_num) > 2) { var ad_pos = 3 + Number(select_num); } //iframe src pattern diff x15 not use
+	        var change_if_src = arr_split_src[0] + 'x1' + ad_pos + arr_split_src[1];
+	        slide_iframe_ad_id_obj.attr('src', change_if_src);
+	        if ($('.ad-300x180-area .number > .slide_no').length > 0) {
+	            var sIndex = click_class_obj.index(this);
+	            var remove_tag = '<strong class="slide_no"></strong>';
+	            $('.ad-300x180-area .number .slide_no .button').unwrap(remove_tag);
+	            $(click_class_obj, '.button').eq(select_num - 1).wrap(remove_tag);
+	        }
+	    }
+		*/
+	});

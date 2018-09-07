@@ -1,0 +1,507 @@
+/** BOXSKIN CSS idxno '20' **/
+.td_class { border: 1px solid #ddd; }
+/** BOXSKIN CSS idxno '20' END **/
+/** BOXSKIN CSS idxno '118' **/
+.box_118 .bx_title{position:absolute;display:inline-block;padding:4px 0 0 5px;width:125px;border-top:2px solid #f04402;font-weight:bold;}
+.box_118 .tab_horizon_default{border-top:1px solid #ddd;background-color:#fff}
+.box_118 .tab_horizon_default .tab_menu{list-style:none;padding:0;margin:0;overflow:hidden;height:auto;text-align:right}
+.box_118 .tab_horizon_default .tab_item{display:inline;height:auto;overflow:hidden;background:url(https://im.sisain.co.kr/custom/box/118_icon.png) no-repeat 100% 50%;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;}
+.box_118 .tab_horizon_default .tab_item.none{background-image:none}
+
+.box_118 .tab_no_button,
+.box_118 .tab_button{display:inline-block;padding:5px; font-size:11px;color:#666;text-align:center;font-family:dotum}
+.box_118 .tab_horizon_default .tab_item.on,
+.box_118 .tab_horizon_default .tab_item:hover,
+.box_118 .tab_horizon_default .tab_item.on .tab_button,
+.box_118 .tab_horizon_default .tab_item.on .tab_no_button,
+.box_118 .tab_horizon_default .tab_item:hover .tab_button,
+.box_118 .tab_horizon_default .tab_item:hover .tab_no_button{color:#111;}
+.box_118 .tab_horizon_default .tab_content{clear:both;overflow:hidden;height:auto;display:none;border:0px solid #ccc;padding:0;line-height:1.4em;background-color:#fff}
+.box_118 .tab_horizon_default .tab_content.on{display:block;}
+/** BOXSKIN CSS idxno '118' END **/
+/** BOXSKIN CSS idxno '163' **/
+.box_163{}
+.box_163 .tab_button .title,
+.box_163 .tab_no_button .title{font:bold 18px/1.2 Nanum Gothic,nanumgothic;color:#3482d9}
+.box_163 .tab_button .title.center,
+.box_163 .tab_no_button .title.center{display:block;text-align:center;}
+/** BOXSKIN CSS idxno '163' END **/
+/** BOXSKIN CSS idxno '162' **/
+.box_162{}
+.box_162 .tab_button .title,
+.box_162 .tab_no_button .title{font:bold 15px/1.2 Nanum Gothic,nanumgothic;color:#3482d9}
+.box_162 .tab_button .title::before,
+.box_162 .tab_no_button .title::before{content:"";display:inline-block;margin:0 6px 2px 0;padding:0;width:0;height:15px;overflow:hidden;border-left:3px solid #e61915;vertical-align:middle;}
+/** BOXSKIN CSS idxno '162' END **/
+/** BOXSKIN CSS idxno '161' **/
+.box_161{background-color:#fff;}
+.box_161 .tab_button,
+.box_161 .tab_no_button{display:block;margin:10px 0 0;padding:0 10px 10px;border-bottom:1px solid #e1e1e1;}
+.box_161 .tab_button .title,
+.box_161 .tab_no_button .title{font-weight:bold;font-size:16px;color:#222}
+.box_161 .tab_button .title::before,
+.box_161 .tab_no_button .title::before{content:"";display:inline-block;margin:0 6px 2px 0;padding:0;width:0;height:15px;overflow:hidden;border-left:3px solid #e61915;vertical-align:text-bottom;}
+.box_161 .tab_button .more,
+.box_161 .tab_no_button .more{float:right;margin:5px 0 0 0;text-indent:-10000px;}
+/** BOXSKIN CSS idxno '161' END **/
+/** BOXSKIN CSS idxno '160' **/
+.box_160{}
+.box_160 .tab_button .title,
+.box_160 .tab_no_button .title{font:bold 18px/1.2 Nanum Gothic,nanumgothic;color:#3482d9}
+.box_160 .tab_button .title.center,
+.box_160 .tab_no_button .title.center{display:block;text-align:center;}
+/** BOXSKIN CSS idxno '160' END **/
+/** BOXSKIN CSS idxno '159' **/
+.box_159 .tab_button,
+.box_159 .tab_no_button{display:block;padding:13px 9px 12px 9px;font-size:18px;color:#000;border-top:1px solid #005A99;background-color:#f4f4f4;letter-spacing:-1px}
+/** BOXSKIN CSS idxno '159' END **/
+/** BOXSKIN CSS idxno '158' **/
+.box_158{}
+.box_158 .title{display:inline-block;padding:8px 25px;font:13px/1.2 Nanum Gothic,nanumgothic;text-align:center;border:1px solid #f4f4f4;border-radius:20px;color:#f4f4f4}
+.box_158 .bx{height:290px;overflow:hidden;}
+.box_158 .bx_in{padding:20px}
+
+.box_158 .bx_nums{height:90px;border-top:1px solid #88a8ca;}
+.box_158 .bx_nums .bx_num{float:left;padding:14px;display:inline-block;width:50%;font:13px/1.2 Nanum Gothic,nanumgothic;border-right:1px solid #88a8ca;box-sizing:border-box;text-align:center;color:#f4f4f4;text-decoration:none;}
+.box_158 .bx_nums .bx_num.none{border-right:none}
+.box_158 .bx_nums .bx_num.full{clear:left;display:inline-block;width:100%;border-top:1px solid #88a8ca;}
+.box_158 .bx_nums .bx_num.on{font-weight:bold}
+
+.box_158 .bx_btns{display:none}
+/** BOXSKIN CSS idxno '158' END **/
+/** BOXSKIN CSS idxno '157' **/
+.box_157 .title{display:inline-block;padding:8px 25px;font:13px/1.2 Nanum Gothic,nanumgothic;text-align:center;border:1px solid #f4f4f4;border-radius:20px}
+.box_157 .title.white{color:#f4f4f4}
+.box_157 .bx_in{padding:20px;}
+/** BOXSKIN CSS idxno '157' END **/
+/** BOXSKIN CSS idxno '155' **/
+.box_155{background-color:#ededed}
+.box_155 .bx_td{padding:20px}
+.box_155 .bx_td .bx_in{margin-left:20px;width:220px;background-color:#fff}
+.box_155 .bx_td .bx_in.first{margin-left:0;width:460px;}
+/** BOXSKIN CSS idxno '155' END **/
+/** BOXSKIN CSS idxno '154' **/
+.box_154{}
+.box_154 .bx_in{margin-right:20px;width:230px}
+.box_154 .bx_in.last{margin-right:0}
+/** BOXSKIN CSS idxno '154' END **/
+/** BOXSKIN CSS idxno '153' **/
+.box_153{}
+.box_153 .tab_button .title,
+.box_153 .tab_no_button .title{font:bold 15px/1.2 Nanum Gothic,nanumgothic;color:#3482d9}
+.box_153 .tab_button .title::before,
+.box_153 .tab_no_button .title::before{content:"";display:inline-block;margin:0 6px 2px 0;padding:0;width:0;height:15px;overflow:hidden;border-left:3px solid #e61915;vertical-align:middle;}
+/** BOXSKIN CSS idxno '153' END **/
+/** BOXSKIN CSS idxno '147' **/
+.box_147 .tab_horizon_default{}
+
+.box_147 .tab_horizon_default .tab_item{box-sizing:border-box;background-color:#e7e7e7;text-align:center}
+.box_147 .tab_horizon_default .tab_item.on,
+.box_147 .tab_horizon_default .tab_item:hover{background-color:#e91e63;}
+
+.box_147 .tab_horizon_default .tab_item .tab_button,
+.box_147 .tab_horizon_default .tab_item .tab_no_button{display:block;padding:15px 10px;color:#5d5d5d;text-align:center;cursor:pointer;font-weight:bold}
+.box_147 .tab_horizon_default .tab_item.on .tab_button,
+.box_147 .tab_horizon_default .tab_item.on .tab_no_button,
+.box_147 .tab_horizon_default .tab_item:hover .tab_button,
+.box_147 .tab_horizon_default .tab_item:hover .tab_no_button{color:#fff;}
+/** BOXSKIN CSS idxno '147' END **/
+/** BOXSKIN CSS idxno '146' **/
+.box_146 .tab_button,
+.box_146 .tab_no_button{display:block;}
+.box_146 .tab_button .title,
+.box_146 .tab_no_button .title{display:block;padding:15px 15px;font-weight:bold}
+.box_146 .tab_button .title.line,
+.box_146 .tab_no_button .title.line{border-bottom:1px solid #d2d2d2;}
+.box_146 .tab_button .title.bg,
+.box_146 .tab_no_button .title.bg{color:#fff;background-color:#0276bc}
+
+.box_146 .tab_button .more,
+.box_146 .tab_no_button .more{float:right;display:inline-block;font-weight:normal;color:#fff;letter-spacing:-1px}
+/** BOXSKIN CSS idxno '146' END **/
+/** BOXSKIN CSS idxno '145' **/
+.box_145{margin:0 0 20px;padding:10px;background-color:#464646}
+.box_145 .tab_horizon_default{}
+.box_145 .tab_horizon_default .tab_menu{list-style:none;padding:0;margin:0;height:25px;text-align:left;}
+.box_145 .tab_horizon_default .tab_item{display:inline;height:auto;}
+.box_145 .tab_horizon_default .tab_item:after{content:"|";display:inline-block;margin:0 10px;color:#bcbcbc}
+.box_145 .tab_horizon_default .tab_item.none{}
+.box_145 .tab_horizon_default .tab_item.none:after{content:"";}
+.box_145 .tab_horizon_default .tab_item.on,
+.box_145 .tab_horizon_default .tab_item:hover{}
+
+.box_145 .tab_no_button,
+.box_145 .tab_button{display:inline-block;padding:0;font:bold 12px/1 dotum;color:#fff;text-align:center;}
+.box_145 .tab_horizon_default .tab_item.on .tab_button,
+.box_145 .tab_horizon_default .tab_item.on .tab_no_button,
+.box_145 .tab_horizon_default .tab_item:hover .tab_button,
+.box_145 .tab_horizon_default .tab_item:hover .tab_no_button{color:#ff4800}
+.box_145 .tab_horizon_default .tab_content{clear:both;padding:0;overflow:hidden;height:auto;display:none;}
+.box_145 .tab_horizon_default .tab_content.on{display:block;}
+
+.box_145 .edit_box_empty_content{color:#fff}
+/** BOXSKIN CSS idxno '145' END **/
+/** BOXSKIN CSS idxno '144' **/
+.box_144 .tab_horizon_default{}
+.box_144 .tab_horizon_default .tab_menu{list-style:none;padding:0;margin:0 0 10px 0;overflow:hidden;height:auto;border:1px solid #e5e5e5; border-bottom:none;}
+.box_144 .tab_horizon_default .tab_item{float:left;height:auto;overflow:hidden;border-right:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;background-color:#f1f1f1;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;}
+.box_144 .tab_horizon_default .tab_item .tab_button,
+.box_144 .tab_horizon_default .tab_item .tab_no_button{display:block;padding:0.5em 1.3em;font-weight:bold;color:#818181;text-align:center}
+.box_144 .tab_horizon_default .tab_item.on,
+.box_144 .tab_horizon_default .tab_item:hover{border-bottom:none;background-color:#fff;}
+.box_144 .tab_horizon_default .tab_item.on .tab_button,
+.box_144 .tab_horizon_default .tab_item:hover .tab_button,
+.box_144 .tab_horizon_default .tab_item.on .tab_no_button,
+.box_144 .tab_horizon_default .tab_item:hover .tab_no_button{color:#242424}
+.box_144 .tab_horizon_default .tab_item.none{border-right-width:0}
+.box_144 .tab_horizon_default .tab_content{clear:both;overflow:hidden;height:auto;display:none;border:0px solid #ccc;padding:0;line-height:1.4em;background-color:#fff}
+.box_144 .tab_horizon_default .tab_content.on{display:block;}
+/** BOXSKIN CSS idxno '144' END **/
+/** BOXSKIN CSS idxno '143' **/
+.box_143{margin:0 0 20px;}
+.box_143 .tab_button,
+.box_143 .tab_no_button{display:block;margin:0 0 7px;padding:0 0 8px;color:#384799;font-weight:bold;letter-spacing:-1px;border-bottom:1px solid #ececec}
+.box_143 .tab_button .red,
+.box_143 .tab_no_button .red{color:#cc0001}
+.box_143 .tab_button .more{float:right;display:inline-block;padding-right:6px;color:#c2c2c2;font-weight:normal;font-size:11px;}
+/** BOXSKIN CSS idxno '143' END **/
+/** BOXSKIN CSS idxno '142' **/
+.box_142 .tab_horizon_default{border:1px solid #d0d1d2}
+
+.box_142 .tab_horizon_default .tab_item{box-sizing:border-box;background-color:#dedede;border-bottom:1px solid #d0d1d2;text-align:center}
+.box_142 .tab_horizon_default .tab_item.tab_num_1{border-right:1px solid #d0d1d2}
+.box_142 .tab_horizon_default .tab_item.on,
+.box_142 .tab_horizon_default .tab_item:hover{border-bottom-width:0;background-color:#fff;}
+
+.box_142 .tab_horizon_default .tab_item .tab_button,
+.box_142 .tab_horizon_default .tab_item .tab_no_button{display:block;padding:10px;color:#000;text-align:center;cursor:pointer;font-weight:bold}
+.box_142 .tab_horizon_default .tab_item.on .tab_button,
+.box_142 .tab_horizon_default .tab_item.on .tab_no_button,
+.box_142 .tab_horizon_default .tab_item:hover .tab_button,
+.box_142 .tab_horizon_default .tab_item:hover .tab_no_button{color:#0045a6;}
+/** BOXSKIN CSS idxno '142' END **/
+/** BOXSKIN CSS idxno '141' **/
+.box_141 .tab_button,
+.box_141 .tab_no_button{display:block;padding:0 10px 0;font:bold 1.2em nanumgothic;color:#000;text-align:left; }
+
+@media only screen and	(max-width:640px) {
+.box_141 .tab_button,
+.box_141 .tab_no_button{padding:5px 10px 7px;border-top:1px solid #dedede;background-color:#f6f6f6}
+}
+/** BOXSKIN CSS idxno '141' END **/
+/** BOXSKIN CSS idxno '140' **/
+.box_140 .tab_button,
+.box_140 .tab_no_button{display:block;padding:12px 0 12px 5px;font:bold 18px nanumgothic;color:#2f4888;text-align:left;border-style:solid;border-width:1px 0 1px;border-color:#D4D9DD;background:#f6f7f8;background:linear-gradient(#fff, #f2f3f5); }
+.box_137 .tab_button .blue,
+.box_140 .tab_no_button .blue{color:#4d74cb}
+.box_137 .tab_button .darkblack,
+.box_140 .tab_no_button .darkblack{color:#373737}
+/** BOXSKIN CSS idxno '140' END **/
+/** BOXSKIN CSS idxno '139' **/
+.box_139 .bx_box{border-style:solid;border-color:#e0e0e0;border-width:1px 0 0 1px}
+.box_139 .btn_more{margin:20px 0 0;border:1px solid #cacaca}
+.box_139 .btn_more.load{background:url(https://im.sisain.co.kr/ajax_load_icon_small.gif) no-repeat 410px 60%;}
+.box_139 .btn_more_a{display:block;padding:5px 0 4px;background:url(https://im.sisain.co.kr/custom/box/139_a_icon.png) no-repeat 550px 50%;font-weight:bold;font-size:13px;color:#444;text-align:center;font-family:'나눔고딕','맑은 고딕'}
+/** BOXSKIN CSS idxno '139' END **/
+/** BOXSKIN CSS idxno '138' **/
+.box_138 .tab_button,
+.box_138 .tab_no_button{display:block;padding:12px 0 12px 5px;font:bold 18px nanumgothic;color:#2f4888;text-align:left;border-style:solid;border-width:1px 0 1px;border-color:#9e9e9e;background:#f6f7f8;background:linear-gradient(#f4f4f4, #dddddd); }
+.box_138 .tab_button .blue,
+.box_138 .tab_no_button .blue{color:#4d74cb}
+.box_138 .tab_button .darkblack,
+.box_138 .tab_no_button .darkblack{color:#373737}
+/** BOXSKIN CSS idxno '138' END **/
+/** BOXSKIN CSS idxno '137' **/
+.box_137{margin:0 0 10px}
+.box_137 .bx_title{position:absolute;display:inline-block;padding:5px 0 3px 0;width:202px;font:bold 16px dotum;color:#fff;background-color:#0192d1;letter-spacing:-1px;text-align:center;line-height:1.2em}
+.box_137 .tab_horizon_default{background-color:#fff}
+.box_137 .tab_horizon_default .tab_menu{list-style:none;padding:0;margin:0;height:25px;text-align:right;border-style: solid;border-width: 1px;border-color: #ececec #ececec #0192d1;}
+.box_137 .tab_horizon_default .tab_item{display:inline;height:auto;}
+.box_137 .tab_horizon_default .tab_item.none{background-image:none}
+.box_137 .tab_horizon_default .tab_item.on,
+.box_137 .tab_horizon_default .tab_item:hover{background-color:#fff}
+
+.box_137 .tab_no_button,
+.box_137 .tab_button{display:inline-block;padding:2px 9px 0px 0; font-size:12px;color:#777;font-weight:bold;text-align:center;background-color:#fff;letter-spacing:-1px}
+.box_137 .tab_no_button .bar,
+.box_137 .tab_button .bar{display:inline-block;margin-left:5px;width:0;height:10px;border-left:1px solid #cbcbcb;vertical-align:middle}
+.box_137 .tab_horizon_default .tab_item.on .tab_button,
+.box_137 .tab_horizon_default .tab_item.on .tab_no_button,
+.box_137 .tab_horizon_default .tab_item:hover .tab_button,
+.box_137 .tab_horizon_default .tab_item:hover .tab_no_button{color:#222}
+.box_137 .tab_horizon_default .tab_content{clear:both;padding:10px!important;overflow:hidden;height:auto;display:none;border-style:solid;border-color:#ececec;border-width:0 1px 1px;padding:0;line-height:1.4em;background-color:#fff}
+.box_137 .tab_horizon_default .tab_content.on{display:block;}
+/** BOXSKIN CSS idxno '137' END **/
+/** BOXSKIN CSS idxno '136' **/
+.box_136{margin:0 0 20px}
+.box_136 .first,
+.box_136 .second{width:340px;}
+.box_136 .second{margin-left:20px}
+.box_136 .tab_button,
+.box_136 .tab_no_button{display:block;padding:7px 0 5px;height:auto;overflow:hidden;text-align:center;font:bold 14px dotum;}
+.box_136 .tab_button .t_box,
+.box_136 .tab_no_button .t_box{float:left;display:inline-block;padding:7px 10px 5px;background-color:#ff6906;color:#fff;font-size:12px;border-radius:3px}
+.box_136 .tab_button .t_line,
+.box_136 .tab_no_button .t_line{margin:0;padding:0;display:inline-block;width:250px;vertical-align:text-bottom;border-top-color:#ff6906;}
+/** BOXSKIN CSS idxno '136' END **/
+/** BOXSKIN CSS idxno '135' **/
+.box_135{margin:0 0 20px}
+.box_135 .first,
+.box_135 .second{width:340px;}
+.box_135 .second{margin-left:20px}
+/** BOXSKIN CSS idxno '135' END **/
+/** BOXSKIN CSS idxno '134' **/
+.box_134{margin:0 0 20px}
+/** BOXSKIN CSS idxno '134' END **/
+/** BOXSKIN CSS idxno '133' **/
+.box_133{border-style:solid;border-width:1px;border-color:#ececec}
+
+.box_133 .tab_horizon_default .tab_menu{list-style:none;padding:0;margin:0;overflow:hidden;height:auto}
+.box_133 .tab_horizon_default .tab_item{float:left;height:auto;overflow:hidden;border-bottom:1px solid #ececec;background-color:#f8f8f8;border-right:1px solid #ececec;-webkit-transition:background-color .5s;-moz-transition:background-color .5s;-o-transition:background-color .5s;transition:background-color .5s;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;}
+.box_133 .tab_horizon_default .tab_item.none{border-right-width:0}
+.box_133 .tab_no_button,
+.box_133 .tab_button{display:block;padding:0.7em 1.3em;font-family:nanumgothic, Gulim; font-size:12px;color:#414141; text-align:center;background:url(https://im.sisain.co.kr/custom/box/133_icon.png) no-repeat 0 0;text-indent:-10000px}
+.box_133 .tab_num_1 .tab_no_button,
+.box_133 .tab_num_1 .tab_button{background-position:50% 7px}
+.box_133 .tab_num_2 .tab_no_button,
+.box_133 .tab_num_2 .tab_button{background-position:80%  -52px}
+.box_133 .tab_num_3 .tab_no_button,
+.box_133 .tab_num_3 .tab_button{background-position:90% -110px}
+
+.box_133 .tab_horizon_default .tab_item.on,
+.box_133 .tab_horizon_default .tab_item:hover,
+.box_133 .tab_horizon_default .tab_item.on .tab_button,
+.box_133 .tab_horizon_default .tab_item.on .tab_no_button,
+.box_133 .tab_horizon_default .tab_item:hover .tab_button,
+.box_133 .tab_horizon_default .tab_item:hover .tab_no_button{font-weight:bold;color:#073894;background-color:#fff;border-bottom:none}
+.box_133 .tab_horizon_default .tab_content{clear:both;padding:0 10px;overflow:hidden;height:auto;display:none;border:0px solid #ccc;line-height:1.4em;background-color:#fff}
+.box_133 .tab_horizon_default .tab_content.on{display:block;}
+/** BOXSKIN CSS idxno '133' END **/
+/** BOXSKIN CSS idxno '132' **/
+.box_132{margin:0 0 20px}
+.box_132 .tab_no_button,
+.box_132 .tab_button{display:block;padding:10px 10px 8px;border-style:solid;border-color:#9a96ad transparent #c9c9c9;border-width:2px 0 1px;background-color:#f7f7f9;color:#38479a;font-weight:bold}
+/** BOXSKIN CSS idxno '132' END **/
+/** BOXSKIN CSS idxno '131' **/
+.box_131{margin:0 0 15px;padding:5px 10px;border:1px solid #e4e4e4}
+.box_131 .tab_button{color:#222!important;font-weight:bold;}
+.box_131 .tab_button .red{color:#cc0001}
+.box_131 .tab_button .more{float:right;display:inline-block;padding-right:6px;color:#c2c2c2;font-weight:normal;font-size:11px;}
+/** BOXSKIN CSS idxno '131' END **/
+/** BOXSKIN CSS idxno '130' **/
+.box_130{margin:0 0 15px;padding:5px 10px;border:1px solid #e4e4e4}
+.box_130 .tab_button{color:#222!important;font-weight:bold;}
+.box_130 .tab_button .red{color:#cc0001}
+.box_130 .tab_button .more{float:right;display:inline-block;padding-right:6px;color:#c2c2c2;font-weight:normal;font-size:11px;}
+/** BOXSKIN CSS idxno '130' END **/
+/** BOXSKIN CSS idxno '129' **/
+.box_129{margin:0 0 20px;}
+.box_129 .bx_in{margin-right:25px;padding:0 10px;width:310px;border:1px solid #ccc;}
+.box_129 .bx_in.none{margin-right:0}
+.box_129 .bx_in .tab_button,
+.box_129 .bx_in .tab_no_button{display:block;margin-bottom:10px;padding:8px 0 7px;color:#a60123;border-bottom:1px dotted #d0d0d0;font-family:dotum;font-weight:bold;font-size:14px}
+.box_129 .bx_in .tab_button{text-decoration:none}
+.box_129 .bx_in .tab_button .more{float:right;display:inline-block;color:#c2c2c2;font-weight:normal;font-size:11px;}
+/** BOXSKIN CSS idxno '129' END **/
+/** BOXSKIN CSS idxno '128' **/
+.box_128{margin-bottom:20px;border:1px solid #ddd}
+.box_128 .tab_no_button,
+.box_128 .tab_button{display:block;padding:8px 12px 7px;border-bottom:1px solid #ddd;color:#111;font-family:dotum;font-weight:bold;background:url(https://im.sisain.co.kr/custom/box/128_bg.png) repeat-x 0 0;text-align:left}
+.box_128 .tab_button .more{float:right;display:inline-block;color:#c2c2c2;font-weight:normal;font-size:11px;}
+.box_128 .tab_button .more.arrow{background:url(https://im.sisain.co.kr/custom/box/128_icon.png) no-repeat 0 50%;text-indent:-10000px}
+/** BOXSKIN CSS idxno '128' END **/
+/** BOXSKIN CSS idxno '127' **/
+.box_127{margin-bottom:20px;border:1px solid #ddd}
+.box_127 .bx_in{padding:15px 19px 5px}
+.box_127 .tab_no_button,
+.box_127 .tab_button{display:block;margin-bottom:17px;padding-bottom:12px;border-bottom:1px solid #ddd}
+/** BOXSKIN CSS idxno '127' END **/
+/** BOXSKIN CSS idxno '126' **/
+.box_125{border-style:solid;border-width:1px;border-color:#d8d8d8}
+.box_125 .tab_horizon_default .tab_menu{list-style:none;padding:0;margin:0;overflow:hidden;height:auto}
+.box_125 .tab_horizon_default .tab_item{float:left;height:auto;overflow:hidden;border-bottom:1px solid #ddd;background-color:#f5f5f5;border-right:1px solid #ddd;-webkit-transition:background-color .5s;-moz-transition:background-color .5s;-o-transition:background-color .5s;transition:background-color .5s;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;}
+.box_125 .tab_horizon_default .tab_item.none{border-right-width:0}
+.box_125 .tab_no_button,
+.box_125 .tab_button{display:block;padding:5px 13px;font-family:dotum; font-size:12px;color:#444; text-align:center}
+.box_125 .tab_horizon_default .tab_item.on,
+.box_125 .tab_horizon_default .tab_item:hover,
+.box_125 .tab_horizon_default .tab_item.on .tab_button,
+.box_125 .tab_horizon_default .tab_item.on .tab_no_button,
+.box_125 .tab_horizon_default .tab_item:hover .tab_button,
+.box_125 .tab_horizon_default .tab_item:hover .tab_no_button{font-weight:bold;color:#38479c;background-color:#fff;border-bottom:none}
+.box_125 .tab_horizon_default .tab_content{clear:both;padding:0 10px;overflow:hidden;height:auto;display:none;border:0px solid #ccc;line-height:1.4em;background-color:#fff}
+.box_125 .tab_horizon_default .tab_content.on{display:block;}
+/** BOXSKIN CSS idxno '126' END **/
+/** BOXSKIN CSS idxno '120' **/
+.box_120 .bx_title{position:absolute;display:inline-block;padding:7px 0 0 5px;width:125px;font-weight:bold;}
+.box_120 .tab_horizon_default{background-color:#fff}
+.box_120 .tab_horizon_default .tab_menu{list-style:none;padding:0;margin:0;/*overflow:hidden;*/height:34px;text-align:right;border-bottom:1px solid #535353}
+.box_120 .tab_horizon_default .tab_item{display:inline;height:auto;}
+.box_120 .tab_horizon_default .tab_item.none{background-image:none}
+.box_120 .tab_horizon_default .tab_item.on,
+.box_120 .tab_horizon_default .tab_item:hover{background-color:#fff}
+
+.box_120 .tab_no_button,
+.box_120 .tab_button{display:inline-block;padding:8px 15px 7px; font-size:12px;color:#000;font-weight:bold;text-align:center;font-family:dotum;background-color:#fafafa;border-style:solid;border-width:1px;border-color:#e5e5e5 #e5e5e5 #525252 #e5e5e5}
+.box_120 .tab_horizon_default .tab_item.on .tab_button,
+.box_120 .tab_horizon_default .tab_item.on .tab_no_button,
+.box_120 .tab_horizon_default .tab_item:hover .tab_button,
+.box_120 .tab_horizon_default .tab_item:hover .tab_no_button{border-color:#525252 #525252 #fff #525252;background-color:#fff}
+.box_120 .tab_horizon_default .tab_content{clear:both;overflow:hidden;height:auto;display:none;border:0px solid #ccc;padding:0;line-height:1.4em;background-color:#fff}
+.box_120 .tab_horizon_default .tab_content.on{display:block;}
+/** BOXSKIN CSS idxno '120' END **/
+/** BOXSKIN CSS idxno '119' **/
+.box_119{border-style:solid;border-width:2px 1px 1px;border-color:#093894 #ddd #ddd}
+.box_119 .tab_horizon_default .tab_menu{list-style:none;padding:0;margin:0;overflow:hidden;height:auto}
+.box_119 .tab_horizon_default .tab_item{float:left;height:auto;overflow:hidden;border-bottom:1px solid #ddd;background-color:#f5f5f5;border-right:1px solid #ddd;-webkit-transition:background-color .5s;-moz-transition:background-color .5s;-o-transition:background-color .5s;transition:background-color .5s;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;}
+.box_119 .tab_horizon_default .tab_item.none{border-right-width:0}
+.box_119 .tab_no_button,
+.box_119 .tab_button{display:block;padding:0.6em 1.3em;font-family:nanumgothic, Gulim; font-size:12px;color:#414141; text-align:center}
+.box_119 .tab_horizon_default .tab_item.on,
+.box_119 .tab_horizon_default .tab_item:hover,
+.box_119 .tab_horizon_default .tab_item.on .tab_button,
+.box_119 .tab_horizon_default .tab_item.on .tab_no_button,
+.box_119 .tab_horizon_default .tab_item:hover .tab_button,
+.box_119 .tab_horizon_default .tab_item:hover .tab_no_button{font-weight:bold;color:#073894;background-color:#fff;border-bottom:none}
+.box_119 .tab_horizon_default .tab_content{clear:both;padding:0 10px;overflow:hidden;height:auto;display:none;border:0px solid #ccc;line-height:1.4em;background-color:#fff}
+.box_119 .tab_horizon_default .tab_content.on{display:block;}
+/** BOXSKIN CSS idxno '119' END **/
+/** BOXSKIN CSS idxno '116' **/
+.box_116 .tab_no_button,
+.box_116 .tab_button{display:block;padding:0.5em 1.3em;font-family:nanumgothic, Gulim; font-size:12px;color:#818085; font-weight:bold;text-align:center}
+.box_116 .tab_horizon_default .tab_menu{list-style:none;padding:0;margin:0;overflow:hidden;height:auto;border:1px solid #e7e7e7; border-bottom:1px solid #e7e7e7;background-color:#f3f3f3}
+.box_116 .tab_horizon_default .tab_item{float:left;height:auto;overflow:hidden;border-right:1px solid #e7e7e7;-webkit-transition:background-color .5s;-moz-transition:background-color .5s;-o-transition:background-color .5s;transition:background-color .5s;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;}
+.box_116 .tab_horizon_default .tab_item.none{border-right-width:0}
+.box_116 .tab_horizon_default .tab_item.on,
+.box_116 .tab_horizon_default .tab_item:hover,
+.box_116 .tab_horizon_default .tab_item.on .tab_button,
+.box_116 .tab_horizon_default .tab_item.on .tab_no_button,
+.box_116 .tab_horizon_default .tab_item:hover .tab_button,
+.box_116 .tab_horizon_default .tab_item:hover .tab_no_button{color:#fff;background-color:#6d94d7}
+.box_116 .tab_horizon_default .tab_content{clear:both;overflow:hidden;height:auto;display:none;border:0px solid #ccc;padding:0;line-height:1.4em;background-color:#fff}
+.box_116 .tab_horizon_default .tab_content.on{display:block;}
+/** BOXSKIN CSS idxno '116' END **/
+/** BOXSKIN CSS idxno '115' **/
+.box_115{}
+.box_115 .in_box1{padding:10px;width:260px;height:101px;background:url(https://im.sisain.co.kr/custom/box/115_icon.png) no-repeat 0 0}
+.box_115 .in_box2{padding:5px 10px;}
+/** BOXSKIN CSS idxno '115' END **/
+/** BOXSKIN CSS idxno '114' **/
+.box_114 .tab_no_button,
+.box_114 .tab_button{display:block;padding:0.5em 1.3em;font-family:nanumgothic, Gulim; font-size:12px; font-weight:bold;text-align:center}
+.box_114 .tab_horizon_default{}
+.box_114 .tab_horizon_default .tab_menu{list-style:none;padding:0;margin:0;overflow:hidden;height:auto;border:1px solid #e7e7e7; border-bottom:1px solid #e7e7e7;background-color:#f3f3f3}
+.box_114 .tab_horizon_default .tab_item{float:left;height:auto;overflow:hidden;border-right:1px solid #e7e7e7;-webkit-transition:background-color .5s;-moz-transition:background-color .5s;-o-transition:background-color .5s;transition:background-color .5s;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;}
+.box_114 .tab_horizon_default .tab_item:last-child{border-right-width:0}
+.box_114 .tab_horizon_default .tab_item.on,
+.box_114 .tab_horizon_default .tab_item:hover,
+.box_114 .tab_horizon_default .tab_item.on .tab_button,
+.box_114 .tab_horizon_default .tab_item.on .tab_no_button,
+.box_114 .tab_horizon_default .tab_item:hover .tab_button,
+.box_114 .tab_horizon_default .tab_item:hover .tab_no_button{color:#fff;background-color:#707579}
+.box_114 .tab_horizon_default .tab_content{clear:both;overflow:hidden;height:auto;display:none;border:0px solid #ccc;padding:0;line-height:1.4em;background-color:#fff}
+.box_114 .tab_horizon_default .tab_content.on{display:block;}
+/** BOXSKIN CSS idxno '114' END **/
+/** BOXSKIN CSS idxno '113' **/
+.box_113{margin:0 0 15px;padding:5px 10px;border:1px solid #e4e4e4}
+.box_113 .bx_title{margin:0;padding:10px 0;border-bottom:1px solid #e4e4e4}
+.box_113 .bx_title .tab_button{color:#222!important;font-weight:bold;}
+.box_113 .bx_title .tab_button .red{color:#cc0001}
+.box_113 .bx_title .tab_button .more{float:right;display:inline-block;padding-right:6px;color:#c2c2c2;font-weight:normal;font-size:11px;}
+/** BOXSKIN CSS idxno '113' END **/
+/** BOXSKIN CSS idxno '112' **/
+.box_76{}
+.box_76 .box_slide_horizon_box{height:165px;overflow:hidden;}
+.box_76 .bx_btns{position:relative;float:right;margin-top:15px;}
+.box_76 .bx_btns .bx_btn{width:13px;height:14px;border:none;background:url(https://im.sisain.co.kr/custom/box/112_icon.png) no-repeat 0 0 transparent}
+.box_76 .bx_btns .bx_btn.next{margin-left:-4px;width:12px;background-position:-13px 0}
+/** BOXSKIN CSS idxno '112' END **/
+/** BOXSKIN CSS idxno '111' **/
+.box_111{margin:0 0 15px;padding:5px 10px;border:1px solid #e4e4e4;background-color:#f8f8f8}
+.box_111 .bx_title{margin:0;padding:10px 0;border-bottom:1px solid #e4e4e4}
+.box_111 .bx_title .tab_button{color:#222!important;font-weight:bold;}
+.box_111 .bx_title .tab_button .red{color:#cc0001}
+.box_111 .bx_title .tab_button .more{float:right;display:inline-block;margin:3px 0 0 6px;width:31px;height:9px;background:url(https://im.sisain.co.kr/custom/box/110_icon.png) no-repeat 0 0;text-indent:-10000px}
+/** BOXSKIN CSS idxno '111' END **/
+/** BOXSKIN CSS idxno '110' **/
+.box_110{margin:0 0 15px;padding:0px 0 10px;border-bottom:1px dashed #c6c6c6}
+.box_110 .bx_title{margin:0;padding:10px 0;}
+.box_110 .bx_title .tab_button{color:#222!important;font-weight:bold}
+.box_110 .bx_title .tab_button .red{color:#cc0001}
+.box_110 .bx_title .tab_button .more{float:right;display:inline-block;width:31px;height:9px;margin:2px 0 0 6px;background:url(https://im.sisain.co.kr/custom/box/110_icon.png) no-repeat 0 0;text-indent:-10000px}
+/** BOXSKIN CSS idxno '110' END **/
+/** BOXSKIN CSS idxno '109' **/
+.box_109{margin:0 0 15px;padding:5px 10px;border:1px solid #e4e4e4}
+.box_109 .bx_title{margin:0;padding:10px 0;border-bottom:1px solid #e4e4e4}
+.box_109 .bx_title .tab_button{color:#222!important;font-weight:bold;}
+.box_109 .bx_title .tab_button .red{color:#cc0001}
+.box_109 .bx_title .tab_button .more{float:right;display:inline-block;padding-right:6px;color:#c2c2c2;font-weight:normal;font-size:11px;background:url(https://im.sisain.co.kr/custom/box/109_icon.png) no-repeat 34px 6px;}
+/** BOXSKIN CSS idxno '109' END **/
+/** BOXSKIN CSS idxno '108' **/
+.box_108{padding:10px;border:5px solid #d3d3d3}
+.box_108 .in_box1,.box_108 .in_box2{padding:10px 0}
+.box_108 .in_box2{border-top:1px solid #ddd}
+/** BOXSKIN CSS idxno '108' END **/
+/** BOXSKIN CSS idxno '105' **/
+.box_105{margin:0 0 15px;padding:5px 10px;border:1px solid #e4e4e4}
+.box_105 .bx_title{margin:0;padding:10px 0;border-bottom:1px solid #e4e4e4}
+.box_105 .bx_title .tab_button{color:#222!important;font-weight:bold;}
+.box_105 .bx_title .tab_button .red{color:#cc0001}
+.box_105 .bx_title .tab_button .more{float:right;display:inline-block;margin:3px 0 0 6px;width:31px;height:9px;background:url(https://im.sisain.co.kr/custom/box/110_icon.png) no-repeat 0 0;text-indent:-10000px}
+/** BOXSKIN CSS idxno '105' END **/
+/** BOXSKIN CSS idxno '96' **/
+.box_96 .medi_pre{display:inline-block;position:absolute; bottom:11px; left:2px; width:25px; height:28px; background:url(https://im.sisain.co.kr/medi_btn2.png) 0 0 no-repeat; cursor:pointer; }
+.box_96 .medi_next{display:inline-block;position:absolute; bottom:11px; right:7px; width:25px; height:28px; background:url(https://im.sisain.co.kr/medi_btn2.png) -73px 0 no-repeat; cursor:pointer;}
+/** BOXSKIN CSS idxno '96' END **/
+/** BOXSKIN CSS idxno '83' **/
+.dummy{}
+.box_83 .inside_slide_right_top_arrow{position:absolute; top:10px; right:20px; }
+.box_83 .inside_slide_right_top_prev{float:left; width:18px; height:14px; background:url(https://im.sisain.co.kr/slide-button.gif) 0 0 no-repeat; cursor:pointer; border:none;}
+.box_83 .inside_slide_right_top_next{float:right; width:17px; height:14px; background:url(https://im.sisain.co.kr/slide-button.gif) right 0 no-repeat; cursor:pointer; border:none;}
+
+.box_83 .stitch .edit_article{float:left}
+.box_83 .wid240{width:240px;}
+/** BOXSKIN CSS idxno '83' END **/
+/** BOXSKIN CSS idxno '64' **/
+.box_64 .box_slide_cube{background:#F7F7F8;}
+.box_64 .box_slide_cube_box{margin:0 0.5em;overflow:hidden;width:100%;height:10.5em;}
+/** BOXSKIN CSS idxno '64' END **/
+/** BOXSKIN CSS idxno '57' **/
+.box_title_border_bottom_gray{margin:0;padding:0;border-bottom:1px solid #ddd;color:#d61d00}
+.box_title_border_bottom_gray .tab_button{color:#d61d00}
+/** BOXSKIN CSS idxno '57' END **/
+/** BOXSKIN CSS idxno '56' **/
+.box_title_border_top{margin:0;padding:.5em;border-top:2px solid #d61d00;background-color:#f1ece3;color:#d61d00}
+.box_title_border_top .tab_button,
+.box_title_border_top .tab_no_button{color:#d61d00}
+/** BOXSKIN CSS idxno '56' END **/
+/** BOXSKIN CSS idxno '55' **/
+.box_55 .tab_no_button{display:block;padding:0.5em 1.3em;font-family:nanumgothic, Gulim; font-size:12px; font-weight:bold;text-align:center}
+.box_55 .tab_horizon_default{}
+.box_55 .tab_horizon_default .tab_menu{list-style:none;padding:0;margin:0 0 10px 0;overflow:hidden;height:auto;border:1px solid #e3e5e9; border-bottom:1px solid #ccc;}
+.box_55 .tab_horizon_default .tab_item{float:left;width:25%;height:auto;overflow:hidden;border-right:1px solid #e3e5e9;-webkit-transition:background-color .5s;-moz-transition:background-color .5s;-o-transition:background-color .5s;transition:background-color .5s;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;}
+.box_55 .tab_horizon_default .tab_item.on{background-color:#e7eaed}
+.box_55 .tab_horizon_default .tab_item:hover{background-color:#e7eaed}
+.box_55 .tab_horizon_default .tab_item.tab_num_4{border-right-width:0}
+.box_55 .tab_horizon_default .tab_content{clear:both;overflow:hidden;height:auto;display:none;border:0px solid #ccc;padding:.5em;line-height:1.4em;background-color:#fff}
+.box_55 .tab_horizon_default .tab_content.on{display:block;}
+/** BOXSKIN CSS idxno '55' END **/
+/** BOXSKIN CSS idxno '53' **/
+.box_53 .tab_no_button{display:block; margin-bottom:6px; font-weight:bold; color:#222; letter-spacing:-1px}
+.box_53 a.tab_button{text-decoration:none; font-weight:bold; color:#222; letter-spacing:-1px}
+.box_53 .tab_button:hover{text-decoration:none;   font-weight:bold; color:#222; letter-spacing:-1px}
+.more_btn{display:block;background:url(https://im.sisain.co.kr/more_btn.png) right 6px no-repeat;}
+.box_53 .tab_button{display:block;padding:10px 0;}
+.box_53 .tab_button .more{float:right;display:inline-block;padding-right:6px;color:#c2c2c2;font-weight:normal;font-size:11px;}
+.box_53 .tab_button .more.arrow{padding-right:10px;background:url(https://im.sisain.co.kr/custom/box/109_icon.png) no-repeat 34px 6px;}
+/** BOXSKIN CSS idxno '53' END **/
+/** BOXSKIN CSS idxno '46' **/
+.box_46 .mt10{margin-top:10px;}
+.box_46 .m_slide_cube_box{height:25em}
+/** BOXSKIN CSS idxno '46' END **/
+/** BOXSKIN CSS idxno '41' **/
+.box_41 .tab_item.on,
+.box_41 .tab_item.on:hover{background-color:#ccc}
+.box_41 .tab_item .tab_button,
+.box_41 .tab_item .tab_no_button{font-weight:bold;color:#2F4888;background-color:transparent}
+/** BOXSKIN CSS idxno '41' END **/

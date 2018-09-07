@@ -1,0 +1,10 @@
+document.write ('<OBJECT id=' + banner_objid + ' CLASSID="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"  CODEBASE="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" ID=' + banner_objid + ' WIDTH=' + banner_width + ' HEIGHT=' + banner_height + '> \n');
+document.write ('<PARAM NAME=movie VALUE="' + banner_url + '?click=' + rmad_clickurl + '">\n');
+document.write ('<PARAM NAME=play VALUE=true>\n');
+document.write ('<PARAM NAME=loop VALUE=true>\n');
+document.write ('<PARAM NAME=menu VALUE=false>\n');
+document.write ('<PARAM NAME=quality VALUE=high>\n');
+document.write ('<PARAM NAME=wmode VALUE=transparent>\n');
+document.write ('<param name=allowScriptAccess value-always>\n');
+document.write ('<EMBED SRC="' + banner_url + '?click=' + rmad_clickurl + '" name=' + banner_objid + ' wmode="transparent" type=application/x-shockwave-flash  SWLiveConnect=TRUE play=true loop=true menu=false WIDTH=' + banner_width + ' HEIGHT=' + banner_height + ' scale=showall quality=best salign=BR loop=true pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"></EMBED>\n');
+document.write ('</OBJECT>');

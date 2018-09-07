@@ -1,0 +1,203 @@
+function WriteQuickSearchBanner()
+{   
+    var str = '';
+
+    str += '<ul class="ui-banner-list">';
+//    str += '	<li><a href="http://tour.interpark.com/event/event_view.aspx?seq=5756&mbn=tour&mln=tour_serve_bn_01"><img src="http://openimage.interpark.com/tourpark/tour/common/quickMenuArea/quickBn_01.gif" alt="모바일특가" /></a></li>';
+    str += '	<li><a href="http://tour.interpark.com/customer/ipoint.aspx?type=I&mbn=tour&mln=tour_serve_bn_01"><img ga:ca="PWC-Main" ga:ac="공통바 영역 상단" src="http://openimage.interpark.com/tourpark/tour/common/quickMenuArea/quickBn_02.gif" alt="I-포인트 적립/사용" /></a></li>';
+    str += '	<li><a href="http://tour.interpark.com/event/customerzone/evalmain.aspx?mbn=tour&mln=tour_serve_bn_02"><img ga:ca="PWC-Main" ga:ac="공통바 영역 상단" src="http://openimage.interpark.com/tourpark/tour/common/quickMenuArea/quickBn_03.gif" alt="고객생생리뷰" /></a></li>';
+    str += '	<li><a href="http://tour.interpark.com/customer/creditcard02.aspx?type=hanask&mbn=tour&mln=tour_serve_bn_03"><img ga:ca="PWC-Main" ga:ac="공통바 영역 상단" src="http://openimage.interpark.com/tourpark/tour/common/quickMenuArea/quickBn_04.gif" alt="할인혜택" /></a></li>';
+    str += '</ul>';
+    str += '<ul id="ulQuickRollBanner" class="ui-banner-list01"></ul>';
+    str += '<div class="ui-rolling"> <!-- paging-slide 향후 변경 가능 -->';
+    str += '	<span id="spQuickRollBanner"></span>';
+    str += '	<a id="aQuickRollingStop" href="javascript:;" onclick="QuickBannerStop()" title="이벤트 정지" class="stop on" style="display:none;"><img src="http://openimage.interpark.com/tourpark/tour/common/docu_head/rolling_stop.png" alt="정지" /></a>';
+    str += '	<a id="aQuickRollingPlay" href="javascript:;" onclick="QuickBannerPlay();" title="이벤트 재생" class="play on" style="display:none;"><img src="http://openimage.interpark.com/tourpark/tour/common/docu_head/rolling_play.png" alt="재생" /></a>';
+    str += '</div>';
+    str += '<span id="spQuickCommonBanner" class="ear-banner"></span>';
+
+    document.write(ReplaceQuickBannerImageUrl(ReplaceTourImageUrl(str)));
+    
+    SetQuickBannerKeyWord();
+}
+
+WriteQuickSearchBanner();
+
+//키워드링크 정보 조회
+function SetQuickBannerKeyWord()
+{	
+	var script = document.createElement('script');
+	
+    script.src = (isHTTPS ? 'https' : 'http') + '://tour.interpark.com/exporter/banner/TourMain.aspx?method=QuickBanner'
+    document.getElementsByTagName('head')[0].appendChild(script);    
+}
+
+// 이미지 경로에 ssl 적용
+function ReplaceTourImageUrl(str)
+{
+    var isHTTPS = window.location.href.indexOf("https://") != -1;
+    var openServerPrefix = "http://tourimage";
+    var sslServerPrefix = "https://tourimage";
+    
+    if (isHTTPS) {
+        while (str.indexOf(openServerPrefix) != -1) {
+            str = str.replace(openServerPrefix, sslServerPrefix);
+        }
+    }
+    
+    return str;
+}
+
+function ReplaceQuickBannerImageUrl(str)
+{
+    var isHTTPS = window.location.href.indexOf("https://") != -1;
+    var openServerPrefix = "http://openimage.interpark.com";
+    var sslServerPrefix = "https://sslimage.interpark.com";
+
+    if (isHTTPS) {
+        while (str.indexOf(openServerPrefix) != -1) {
+            str = str.replace(openServerPrefix, sslServerPrefix);
+        }
+    }
+    return str;
+}
+
+// 키워드링크 데이터바인딩
+function SetQuickBannerData(data)
+{
+    if(data.CommonBanner != null && data.CommonBanner.length > 0)
+    {
+        var str = '<a href="' + getQuickSearchParamAddUrl(data.CommonBanner[0].LinkURL,"tour","tour_left_side_",3) + '" target="' + (data.CommonBanner[0].IsNewWindow == "Y" ? "_blank" : "_self") + '" >'
+                + ' <img ga:ca="PWC-Main" ga:ac="공통바 영역 하단" src="http://tourimage.interpark.com/Sites/Tour/ByTemplate/098/' + data.CommonBanner[0].ImageURL + '" alt="' + data.CommonBanner[0].Keyword + '"/>'
+                + '</a>';
+        
+        if (document.getElementById("spQuickCommonBanner") != null)
+            document.getElementById("spQuickCommonBanner").innerHTML = ReplaceTourImageUrl(str);
+    }
+    
+    if(data.RollingBanner != null && data.RollingBanner.length > 0)
+    {
+        var img = "";
+        var roll = "";
+        var imgAlt = "";        
+        
+        for(i = 0 ; i < data.RollingBanner.length ; i++)
+        {
+            imgAlt = (i+1) + "번째 정보";
+        
+            img += '<li' + (i == 0 ? ' class="on"' : '') + '><a href="' +getQuickSearchParamAddUrl(data.RollingBanner[i].LinkURL,"tour","tour_left_side_",i) + '" target="' + (data.RollingBanner[i].IsNewWindow == "Y" ? "_blank" : "_self") + '">'
+            img += '    <img ga:ca="PWC-Main" ga:ac="공통바 영역 하단" src="http://tourimage.interpark.com/Sites/Tour/ByTemplate/098/' + data.RollingBanner[i].ImageURL + '" alt="' + data.RollingBanner[i].Keyword + '" /></a>'
+            img += '</li>';
+            
+//            roll += '<a' + (i == 0 ? ' class="on"' : '') + ' title="" onmouseover="QuickBannerOver(' + i + ');" onmouseout="QuickBannerOut();">' + (i + 1) + '번째 정보</a>';
+            roll += '<a' + (i == 0 ? ' class="on"' : '') + ' title="" href="javascript:;" onmouseover="QuickBannerOver(' + i + ');" onmouseout="QuickBannerOut();">';
+            roll += '<img id="imgQuickMenuBanner' + i + '" src="http://openimage.interpark.com/tourpark/tour/common/docu_head/rolling_' + (i == 0 ? 'on' : 'off') + '.png" alt="' + imgAlt + '" />';
+            roll += '</a>';
+        }
+        
+        if (document.getElementById("ulQuickRollBanner") != null) document.getElementById("ulQuickRollBanner").innerHTML = ReplaceQuickBannerImageUrl(ReplaceTourImageUrl(img));
+        if (document.getElementById("spQuickRollBanner") != null) document.getElementById("spQuickRollBanner").innerHTML = ReplaceQuickBannerImageUrl(ReplaceTourImageUrl(roll));
+        if (document.getElementById("aQuickRollingStop") != null) document.getElementById("aQuickRollingStop").style.display = "inline-block";
+        
+        QuickBannerRolling();
+    }
+}
+
+//--------------------------------------------------------------------
+// 퀵배너 롤링
+var _quickBannerInterval = null;
+
+// 퀵배너 롤링 시작
+function QuickBannerRolling()
+{
+    if(_quickBannerInterval != null)
+        clearInterval(_quickBannerInterval);
+    
+    _quickBannerInterval = setInterval(QuickBannerRollNext, 3000);
+}
+
+// 다음 이미지로 넘김처리
+function QuickBannerRollNext()
+{
+    var lis = document.getElementById("ulQuickRollBanner") != null ? document.getElementById("ulQuickRollBanner").childNodes : [];
+    var as = document.getElementById("spQuickRollBanner") != null ? document.getElementById("spQuickRollBanner").childNodes : [];
+    var idx = 0;
+    
+    for(i = 0; i < lis.length; i++)
+    {
+        if(lis[i].className == "on")
+            idx = i + 1;
+    }
+    
+    if(idx >= lis.length)
+        idx = idx - lis.length;
+    
+    ShowQuickBanner(idx);
+}
+
+// 퀵배너 정지
+function QuickBannerStop()
+{
+    clearInterval(_quickBannerInterval);
+    
+    document.getElementById("aQuickRollingStop").style.display = "none";
+    document.getElementById("aQuickRollingPlay").style.display = "inline-block";
+}
+
+// 퀵배너 플레이
+function QuickBannerPlay()
+{
+    QuickBannerRolling();
+    
+    document.getElementById("aQuickRollingStop").style.display = "inline-block";
+    document.getElementById("aQuickRollingPlay").style.display = "none";
+}
+
+function QuickBannerOver(idx)
+{
+    clearInterval(_quickBannerInterval);
+    
+    ShowQuickBanner(idx);
+}
+
+function QuickBannerOut()
+{
+    if(document.getElementById("aQuickRollingPlay").style.display == "none")
+        QuickBannerRolling();
+}
+
+function ShowQuickBanner(idx)
+{
+    var lis = document.getElementById("ulQuickRollBanner") != null ? document.getElementById("ulQuickRollBanner").childNodes : [];
+    var as = document.getElementById("spQuickRollBanner") != null ? document.getElementById("spQuickRollBanner").childNodes : [];
+
+    var offImg = ReplaceQuickBannerImageUrl("http://openimage.interpark.com/tourpark/tour/common/docu_head/rolling_off.png");
+    var onImg = ReplaceQuickBannerImageUrl("http://openimage.interpark.com/tourpark/tour/common/docu_head/rolling_on.png");
+    
+    for(i = 0; i < lis.length; i++)
+    {
+        lis[i].className = "";
+        if(i == idx)        
+            document.getElementById("imgQuickMenuBanner"+i).setAttribute("src",onImg);
+        else
+            document.getElementById("imgQuickMenuBanner"+i).setAttribute("src",offImg);
+        
+        as[i].className = "";
+    }
+    
+    if (lis.length > 0) lis[idx].className = "on";
+    if (as.length > 0) as[idx].className = "on";
+}
+
+function getQuickSearchParamAddUrl(linkURL, isMain, paramNM, index)
+{
+    try{
+        if(linkURL.indexOf("?") > 0)
+            return linkURL + "&mbn=" + isMain + "&mln=" + paramNM + "_" + (index+1);
+        else
+            return linkURL + "?mbn=" + isMain + "&mln=" + paramNM + "_" + (index+1);
+    }catch(e)
+    {
+        return linkURL;
+    }
+}

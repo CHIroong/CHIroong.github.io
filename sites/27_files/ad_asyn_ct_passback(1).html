@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!-- saved from url=(0091)http://ad.idnad.co.kr/ad/ui/ad_asyn_ct_passback.html?adImpMgrCode=35236&width=468&height=60 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title> IDN CRITEO PASSBACK </title>
+    
+	<meta name="robots" content="noindex">
+	<style type="text/css">
+	*{margin:0;padding:0}
+	</style>
+	<script type="text/javascript">
+		try {document.domain = "ad.idnad.co.kr";} catch (e) {}
+	</script>
+	<script type="text/javascript">
+
+	function getHouseImage()
+	{
+		var img = new Array();
+		var host = '//cache.idnad.co.kr';
+		img['150x150'] = host+'/images/ad/banner_150x150.jpg';
+		img['170x250'] = host+'/images/ad/banner_170x250.jpg';
+		img['200x200'] = host+'/images/ad/banner_200x200.jpg';
+		img['250x250'] = host+'/images/ad/banner_250x250.jpg';
+		img['320x50']  = host+'/images/ad/banner_320x50.jpg';
+		img['300x250'] = host+'/images/ad/banner_300x250.jpg';
+		img['336x280'] = host+'/images/ad/banner_336x280.jpg';
+		img['468x60']  = host+'/images/ad/banner_468x60.jpg';
+		img['600x90']  = host+'/images/ad/banner_600x90.jpg';
+		img['728x90']  = host+'/images/ad/banner_728x90.jpg';
+		img['970x90']  = host+'/images/ad/banner_970x90.jpg';
+		img['120x600'] = host+'/images/ad/banner_120x600.jpg';
+		img['160x600'] = host+'/images/ad/banner_160x600.jpg';
+		var width  = self.innerWidth || document.documentElement.clientWidth || document.body.clientWidth || 300;
+		var height = self.innerHeight || document.documentElement.clientHeight || document.body.clientHeight || 250;
+		var size = width+"x"+height;
+		return (img[size])? img[size]:img['300x250'];
+	}
+	</script>
+ </head>
+<body>
+	<div id="wrap">
+	<a href="http://www.idnad.co.kr/" target="_blank">
+		<img src="http://ad.idnad.co.kr/ad/ui/ad_asyn_ct_passback.html?adImpMgrCode=35236&amp;width=468&amp;height=60" alt="IDNAD image" style="display:none" id="HBimg">
+	</a>
+	</div>
+
+<script type="text/javascript">
+	var i = 0;
+	parentWindow(window.parent);
+	function parentWindow(_window)
+	{
+		try{
+			var impCode = '35236';
+			if(typeof _window.criteoReturnAD == "function") _window.criteoReturnAD(impCode); else
+			if(_window.criteoReturnAD) _window.criteoReturnAD(impCode);
+			else throw 'DivideByZeroException';
+
+		}
+		catch(e)
+		{
+		    if(i < 5)
+			{
+				i++;
+				parentWindow(_window.parent);
+			}
+			else
+			{
+				var impCode = '35236';
+				var width = '468';
+				var height = '60';
+				var apu = '';
+
+				if(impCode != '')
+				{
+					document.write('<ins class="adsByIdn'+impCode+'" data-width="'+width+'" data-height="'+height+'" data-pass="CT" data-apu="'+apu+'"></ins> ');
+					document.write('<scr'+'ipt src="//ad.idnad.co.kr/ad/idn.js?adImpMgrCode='+impCode+'"></scr'+'ipt>');
+				}
+				else if(document.getElementById('HBimg'))
+				{
+					document.getElementById('HBimg').setAttribute('src',getHouseImage());
+					document.getElementById('HBimg').style.display = '';
+				}
+
+				// 2015.03.27 added by eunsik.
+				var _http = null;
+				if(window.ActiveXObject)
+				{
+					try
+					{
+						_http = new ActiveXObject("Msxml2.XMLHTTP");
+					}
+					catch(e1)
+					{
+						try
+						{
+							// IE 하위버전
+							_http = new ActiveXObject("Microsoft.XMLHTTP");
+						}
+						catch(e2){}
+					}
+				}
+				else if(window.XMLHttpRequest)
+				{
+					_http = new XMLHttpRequest();
+				}
+
+				if(_http != null)
+				{
+//					_http.onreadystatechange = '';
+//					_http.open("POST", "/ad/lib/passback_proc.php?t=ins&s=ct", true);
+//					_http.send("t=ins");
+				}
+			}
+		}
+	}
+
+</script>
+</body></html>

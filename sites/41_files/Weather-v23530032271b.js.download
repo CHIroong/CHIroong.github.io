@@ -1,0 +1,93 @@
+/**
+ * Utility functions for the Weather widget.
+ * @namespace
+ */
+ta.widgets.Weather = {
+  init: function() {
+    var system = ta.retrieve('weather.system');
+    if (system == 'english') {
+      ta.widgets.Weather.switchToEnglish();
+    }
+    else if (system == 'metric') {
+      ta.widgets.Weather.switchToMetric();
+    }
+  },
+  
+  _switch: function(showList, hideList) {
+    showList.each(function(elt) { if ($(elt)) { $(elt).setStyle('display', 'inline'); } } );
+    hideList.each(function(elt) { if ($(elt)) {$(elt).hide(); }} );
+  },
+  
+  _generateList : function(temp, precip) {
+    var ret = [];
+    for (var i = 0; i < 3; i++) {
+      ret.push("weatherForecast" + i + "Hi" + temp);
+      ret.push("weatherForecast" + i + "Lo" + temp);
+    }
+    for (var i = 0; i < 6; i++) {
+      ret.push("weatherHistory" + i + "Hi" + temp);
+      ret.push("weatherHistory" + i + "Lo" + temp);
+      ret.push("weatherHistory" + i + "Precip" + precip);
+    }
+    return ret;
+  },
+  
+  switchToMetric: function(event, elmt) {
+    ta.widgets.Weather._switch(ta.widgets.Weather._generateList("C", "Cm"),
+                               ta.widgets.Weather._generateList("F", "In"));
+    $("weatherToggleMetric").removeClass("taLnk");
+    $("weatherToggleMetric").set('text', "C\u00B0");
+    $("weatherToggleEnglish").addClass("taLnk");
+    $("weatherToggleEnglish").addEvent('click', ta.widgets.Weather.switchToEnglish)
+                             .set('text', "F\u00B0");
+
+    return false;
+  },
+  
+  switchToEnglish: function(event, elmt) {
+    ta.widgets.Weather._switch(ta.widgets.Weather._generateList("F", "In"),
+                               ta.widgets.Weather._generateList("C", "Cm"));
+    $("weatherToggleEnglish").removeClass("taLnk");
+    $("weatherToggleEnglish").set('text', "F\u00B0");
+    $("weatherToggleMetric").addClass("taLnk");
+    $("weatherToggleMetric").addEvent('click', ta.widgets.Weather.switchToMetric)
+                            .set('text', "C\u00B0");
+
+    return false;
+  },
+  
+  toggleDisplay: function(event, elmt, geo)
+  {
+      if (elmt.value == '0')
+      {
+          $('monthlyLabel').addClass('selected');
+          $('extendedLabel').removeClass('selected');
+          $('weatherHistory').setStyle('display','inline');
+          $('weatherExtendedForecast').setStyle('display','none');
+          $('weatherHistory').setStyle('height','180px');
+      }
+      else
+      {
+          $('monthlyLabel').removeClass('selected');
+          $('extendedLabel').addClass('selected');
+          $('weatherHistory').setStyle('display','none');  
+          if ($('weatherExtendedForecast').innerHTML.length <= 1)
+          {
+                new Request({
+                  url: '/WeatherAjax?geo='+geo,
+                  method: 'get',
+                  evalScripts: true,
+                  onSuccess: function (txt, xml) {
+                    $("weatherExtendedForecast").innerHTML = txt;
+                    ta.widgets.Weather.init();
+                  }
+                }).send();
+          }
+          else
+          {
+               $('weatherExtendedForecast').setStyle('display','inline');
+          }
+          $('weatherExtendedForecast').setStyle('height','180px');
+       }
+  }
+};

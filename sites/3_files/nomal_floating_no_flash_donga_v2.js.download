@@ -1,0 +1,29 @@
+document.write ('<div id="all_wrapper1" style="position:absolute; left:0px; top:100px; width:100%; height:0px;text-align:center; margin:0 auto; z-index:300;">\n');
+document.write ('<div id="second_wrapper1" style="position:relative; left:0px; top:0px; text-align:left; width:'+page_width+'px; height:0px; margin:0 auto; z-index:300;">\n');
+document.write ('<div ID=FloatLayer1 STYLE="position:absolute; width:' + TI_movie_width + 'px; height:'+ TI_movie_height +'px; z-index:300; \n');
+document.write ('left:'+TI_movie_left+'px; top:'+TI_movie_top+'px; visibility: visible;">\n');
+document.write ('<!--[if lte IE 6]><div id=FloatLayerIE6 STYLE="position:relative; top:-22px; left:265px;"><![endif]-->\n');
+document.write ('<!--[if gte IE 7]><div id=FloatLayerIE7 STYLE="position:relative; top:-22px; left:265px;"><![endif]-->\n');
+document.write ('<object type="application/x-shockwave-flash" data="' + TI_movie_url + '" id="' + TI_movie_objid + '" width="' + TI_movie_width + '" height="' + TI_movie_height + '">\n');
+document.write ('<param name="movie" value="' + TI_movie_url + '" />\n');
+document.write ('<param name="play" value="true" />\n');
+document.write ('<param name="loop" value="true" />\n');
+document.write ('<param name="menu" value="false" />\n');
+document.write ('<param name="quality" value="high" />\n');	
+document.write ('<param name="wmode" value="window" />\n');
+document.write ('<param name="allowScriptAccess" value="always" />\n');
+document.write ('<param name="FlashVars" value="click=' + TI_movie_click + '" />\n');
+document.write ('<div id="close" style="position:absolute; top:5px; left:5px; z-index:301; display:block;">\n');
+document.write ('<a href="javascript:NextMovie1();"><img src="http://adimg.donga.com/madv/img/donga/close.jpg" width="17" height="17" border="0"></a>\n');
+document.write ('</div>\n');
+document.write ('<div id="altImg">\n');
+document.write ('<a href="' + TI_movie_click + '" target="_blank"><img src="' + img_url + '" width="' + TI_movie_width + '" height="' + TI_movie_height + '" border="0" /></a>\n');
+document.write ('</div>\n');
+document.write ('</object>\n');
+document.write ('<!--[if lte IE 6]></div><![endif]-->\n');
+document.write ('<!--[if gte IE 7]></div><![endif]-->\n');
+document.write ('</div>\n');
+document.write ('</div>\n');
+document.write ('</div>\n');
+
+	

@@ -1,0 +1,31 @@
+function onLoad_Chk(fv){
+	vv = fv.value;
+	if (vv == '') {
+		fv.style.backgroundColor = '#FFFFFF';
+	} else {
+		fv.style.backgroundColor = '#FFFAE5';
+	}
+}
+
+function onBlur_Chk(fv){
+	vv = fv.value;
+	if (vv == '') {
+		fv.style.backgroundColor = '#FFFFFF';
+	} else {
+		fv.style.backgroundColor = '#E8F6FC';
+	}
+}
+
+function onBlur_Chk2(fv){
+	vv = fv.value;
+	if (vv == '') {
+		fv.style.backgroundColor = '#FFFFFF';
+	} else {
+		fv.style.backgroundColor = '#FFFAE5';
+	}
+}
+
+function onFocus_Chk(fv){
+	vv = fv.value;
+	fv.style.backgroundColor = '#FFFAE5';
+}

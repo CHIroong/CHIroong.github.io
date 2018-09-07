@@ -1,0 +1,78 @@
+
+var IconAd_ConfChild = function(){
+	this.media = "tenasia";
+	this.mainId = "content";
+	this.posFromBot = 200;
+	this.delay = 200;
+	this.leftPos = 30;
+	this.cssUrl = "//css2.keywordsconnect.com/iconad_tenasia.css";
+	this.isSmall = false;
+};
+
+var IconAd_MainChild = function(){
+
+	this.beforeInit = this.startScrollCheck = function(){
+		if(IconAd_Vars.util.cT(18,9)) IconAd_Vars.iconAdConf.delay=200;
+
+		var curIconTop =  IconAd_Vars.util.getPageSize().height + IconAd_Vars.util.scrollY() - IconAd_Vars.iconAdConf.posFromBot;
+		var adObj = (IconAd_Vars.iconAdConf.isIframe ? parent.document : document).getElementById(IconAd_Vars.iconAdConf.wrapperName);
+		var isDisable = false;
+		
+		var leftAdObj = document.getElementById("aswift_3_expand");
+		if(leftAdObj){			
+			if(curIconTop > IconAd_Vars.util.objXorY(leftAdObj, "offsetTop") + leftAdObj.offsetHeight + 60 || curIconTop < IconAd_Vars.util.objXorY(leftAdObj, "offsetTop")){
+				IconAd_Vars.iconAdConf.leftPos = 30;
+				IconAd_Vars.iconAdConf.adMinWidth = 55;
+				document.getElementById("pscroller2").style.width = IconAd_Vars.iconAdConf.adMinWidth + "px";
+				if(IconAd_Vars.iconAdConf.isSmall) {
+					document.getElementById("sliderDefImage").src = "//img2" + IconAd_Vars.domain + "iconAdImg" + IconAd_Vars.tmpIconNum + ".gif";
+				}
+				IconAd_Vars.iconAdConf.isSmall = false;
+			}else{
+				IconAd_Vars.iconAdConf.leftPos = 44;
+				IconAd_Vars.iconAdConf.adMinWidth = 41;
+				document.getElementById("pscroller2").style.width = IconAd_Vars.iconAdConf.adMinWidth + "px";
+				if(!IconAd_Vars.iconAdConf.isSmall) {
+					document.getElementById("sliderDefImage").src = "//img2" + IconAd_Vars.domain + "iconAdImg" + IconAd_Vars.tmpIconNum + ".gif";
+				}
+				IconAd_Vars.iconAdConf.isSmall = true;
+			}
+		}
+
+		var bottomObj = jQuery("#content .adsbygoogle");
+		if(bottomObj.length > 0){			
+			if(curIconTop < bottomObj.offset().top + bottomObj.height() + 60 && curIconTop > bottomObj.offset().top){
+				isDisable = true;
+			}
+		}
+
+		if(isDisable) adObj.style.display = "none";
+		else if(!IconAd_Vars.isSliderClosed) {
+			adObj.style.display = "block";
+		}
+	};
+
+	this.scrollPosCheck = function(adObj){
+
+	};
+};
+
+var iconAdMain = null;
+
+iconAdLaunch = function(){
+
+	IconAd_ConfChild.prototype = new IconAd_Config();
+	IconAd_MainChild.prototype = new IconAd_Main();
+
+	IconAd_Vars.iconAdConf = new IconAd_ConfChild();
+	iconAdMain = new IconAd_MainChild();
+
+	iconAdInit(); 
+};
+
+var iconAdScript = document.createElement("script");
+iconAdScript.id = "iconAdSetScript";
+iconAdScript.src = "//js2.keywordsconnect.com/IconAd_New_v1.1.js";
+iconAdScript.type = "text/javascript";
+var iconAdHeader = document.getElementsByTagName("head")[0];
+iconAdHeader.appendChild(iconAdScript);

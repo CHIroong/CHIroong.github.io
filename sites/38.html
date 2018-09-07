@@ -1,0 +1,438 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0081)http://bbs.ichannela.com/ch/mboard.cha?tcode=xfile&work=view&no=1973&cmt_p_page=2 -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko" class=" js no-touch cssanimations csstransforms3d csstransitions"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+
+<title>먹거리 x파일 &gt; 시청자 의견 - 인공조미료가 유해하지 않다는 분들 보세요~!</title>
+<link rel="stylesheet" type="text/css" href="./38_files/sub.css">
+<script type="text/javascript" src="./38_files/jquery-1.6.4.min.js.download"></script>
+<script type="text/javascript" src="./38_files/deviceRedirect_board.js.download"></script>
+<script type="text/javascript">
+
+document.domain = "ichannela.com";
+var hTimer = "";
+
+function getContentHeight() {
+	var wd = parent.document.body.clientWidth;
+
+	$(".view_con img").each(function() {
+		var imgwidth = $(this).width();
+		//alert(imgwidth);
+		if (imgwidth > wd) {
+			var imgheight = $(this).height();
+			var ratio = imgwidth / imgheight;
+			var newHeight = Math.round(wd / ratio);
+			$(this).attr({width:wd-30, height:newHeight});
+		}
+	});
+
+	var theFrame = $("#contentIframe", parent.document.body);
+	theFrame.width(wd);
+
+	$("div.view_title").width(wd-20);
+
+	var ht = document.getElementById('wrap').offsetHeight;
+	theFrame.height(ht+60);
+
+	//if (hTimer) clearTimeout(hTimer);
+
+	orientHeight();
+}
+
+function orientHeight() {
+	hTimer = setTimeout("getContentHeight()", 1000);
+}
+
+window.onload=function() {
+	getContentHeight();
+
+	if ("onorientationchange" in window) {
+		parent.document.body.onorientationchange = function() {
+			orientHeight();
+		}
+	}
+	else {
+		parent.window.onresize = function() {
+			orientHeight();
+		}
+	}
+}
+
+var el = document.getElementById("rw_bt")
+el.addEventListener('click',replyWrite2,false);
+
+function replyWrite2() {
+	alert("test");
+}
+
+function replyWrite() {
+	var e = document.getElementById("reply_write");
+	e.style.display = e.style.display=="none"?"block":"none";
+}
+
+function replyAnswer(id) {
+	var e = document.getElementById(id);
+	e.style.display = e.style.display=="none"?"block":"none";
+}
+
+
+	function cmt_delete2(cno,tcode) {
+	var gourl;
+	gourl = escape(location.href);
+	take = confirm('삭제하시겠습니까?');
+	if (take == true) location.href = './cboard/comment_del_cmt.cha?cno='+cno+'&tcode='+tcode+'&gourl='+gourl;
+}
+
+var xmlHttp;
+var ref;
+
+function Querystring(qs) {
+	this.params = {};
+	if (qs == null) qs = location.search.substring(1, location.search.length);
+	if (qs.length == 0) return;
+
+	qs = qs.replace(/\+/g, ' ');
+	var args = qs.split('&');
+	for(var i=0; i<args.length; i++)
+	{
+		var pair = args[i].split('=');
+		var name = decodeURIComponent(pair[0]);
+		var value = (pair.length==2) ? decodeURIComponent(pair[1]) : name;
+		this.params[name] = value;
+	}
+
+	this.get = function(key, default_)
+	{
+		var value = this.params[key];
+		return (value != null) ? value : default_;
+	}
+}
+
+try {
+	var qsMobile = new Querystring();
+	var rqMobile = qsMobile.get("ref");
+
+	if (typeof(rqMobile) != "undefined" && rqMobile == "false") {
+		ref=true;
+	}
+} catch(e){}
+
+var isIPhone = !ref && navigator.userAgent.indexOf("iPhone")>=0;
+var isIPad = !ref && navigator.userAgent.indexOf("iPad")>=0;
+var isWinCE = !ref && navigator.userAgent.indexOf("Windows CE")>=0;
+var isMobile = !ref && navigator.userAgent.indexOf("Mobile")>=0;
+
+
+
+function createXMLHttpRequest() {
+	if (window.ActiveXObject) {
+	    xmlHttp = new ActiveXObject('Microsoft.XMLHTTP');
+	}
+	else if (window.XMLHttpRequest) {
+	    xmlHttp = new XMLHttpRequest();
+	}
+}
+
+function startRequest(no , tcode ) {
+		createXMLHttpRequest();
+		xmlHttp.onreadystatechange = handleStateChange;
+		var url = 'http://bbs.ichannela.com/ch/cboard/reco.cha?no='+no+'&tcode='+tcode;
+
+		xmlHttp.open('GET', url, true);
+		xmlHttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+		xmlHttp.send(null);
+}
+
+function handleStateChange() {
+	var ret_res;
+	if(xmlHttp.readyState == 4) {
+	    if(xmlHttp.status == 200) {
+	        ret_res = xmlHttp.responseText;
+
+	        if ( ret_res == "100" ) {
+	        	 	alert ( '로그인이 필요합니다.' );
+	        	//	if(isIPhone || isWinCE || isMobile == true){
+								var returnURL;
+								returnURL = escape("http://m.ichannela.com/program.do?mode=ifr&cate=&prog_id=&tcode=xfile&ono=&work=view&no=1973");
+								gourl = "http://m.ichannela.com/login.do?ono=&re_url=" + returnURL;
+								parent.window.location	= gourl;
+	        	//	}
+
+	        }
+	       else {  alert ( ret_res ) ;  window.location.reload();  }
+	    }
+	}
+}
+</script>
+
+
+<style>._2beonBnFrm {position:relative;} ._2beonBnFrm div{padding:0px !important;} ._2beonBnFrm ._2beonBnMask{box-sizing:content-box;overflow:hidden !important; padding:0px !important; float:left;} ._2beonBnFrm ._2beonPanFrm{box-sizing:content-box;overflow:hidden;} ._2beonBnFrm ._2beonPan{margin:0px;} ._2beonBnFrm ._2beonPan, ._2beonBnFrm ._2beonSlotWrap{float:left;/*cursor:pointer;*/text-decoration:none !important;font-weight:normal !important;padding:0px !important;margin:0px !important;display:block !important;} ._2beonBnFrm ._2beonSlot{float:left;overflow:hidden;} ._2beonBnFrm ._2beon_material{height:100%;} ._2beonBnFrm ._2beon_matImgBox{text-align:center;} ._2beonBnFrm ._2beon_matImg{vertical-align:middle !important;border:0px !important;clear:both !important;padding:0px !important;margin:0 auto !important;} ._2beonBnFrm ._2beon_matTextBox{overflow:hidden;} ._2beonBnFrm ._2beon_matTextWrap{font:11px/14px gulim;width:100%;overflow:hidden !important;clear:both !important;white-space:nowrap !important;text-overflow:ellipsis !important;word-wrap:normal !important;} ._2beonBnFrm ._2beonSlotGapW{float:left;height:100%;cursor:default;} ._2beonBnFrm ._2beonSlotGapW div{float:left;height:100%;} ._2beonBnFrm ._2beonSlotGapH{clear:both;} ._2beonBnFrm span{background:none !important;padding:0px !important;margin:0px !important; height: auto !important; width: auto !important; float: none !important; display: inline !important;} ._2beonBnFrm span.adplex_segye_tit{display:block !important;font-size:16px !important;line-height:17px !important;margin-bottom:7px !important;color:#000 !important;font-weight:bold;white-space:normal;max-height:33px;overflow:hidden;} ._2beonBnFrm span.adplex_segye_txt{white-space:normal !important;display:block !important;max-height:48px !important;overflow:hidden !important;line-height:16px !important;}</style></head>
+<body>
+<div id="fb-root"></div>
+
+	<div id="wrap">
+		<!--## contents ##-->
+
+		<script type="text/javascript" src="./38_files/word.js.download"></script>
+		<script type="text/javascript" src="./38_files/view.js.download"></script>
+		<div id="contents">
+
+			<!--기사 제목들어가는 부분-->
+			<div class="view_title" style="width: 1867px;">
+				<h3>인공조미료가 유해하지 않다는 분들 보세요~!</h3>
+				<span class="dib m_font gray1_font m_13">박상훈 <font class="text_v1 ss_font"> | </font> 2012.12.03 10:10:46</span>
+                 <span class="dib m_font gray1_font m_13 ml_10">조회 <font class="text_v1 ss_font"> | </font> <font class="blue_font2">6218</font></span>
+                 <span class="btn_white_modern btn_round2 fr ml_10 m_10"><a href="javascript:if( confirm(&#39;정말로 삭제하시겠습니까?&#39;) ) location.href=&#39;/ch/mboard.cha?tcode=xfile&amp;code=&amp;ono=&amp;prog_id=&amp;cate=&amp;work=delete&amp;no=1973&amp;p_page=&amp;p_item=&amp;p_choice=&#39;;">삭제</a></span>
+			</div>
+			<div class="view_con view_con_noneborder">
+				<p></p><p>인공조미료가 유해 하지 않다고요?? </p><p>그럼 중국음식 증후군이라는 병명은 왜 생겼을까요?? 정신병자가 만들었을까?</p><p>한때 우리나라에서 이런 운동을 했었지..오늘은 인공조미료 섭취안하는날 즉 외식 안하는날</p><p>기억 나세요? 저런 운동을 정부에서 왜 권유했을까요?? 정부가 제정신이 아니기때문에??</p><p>간접적으로 나마 인공조미료가 몸에 좋을게 없다는걸 보여주는 셈입니다</p><p>천연 msg하고 인공 msg하고 같은가?천연 비타민하고 인공비타민하고 같은가??</p><p>천연 다이아몬드와 인공다이아몬드가 같은가?</p><p>자연이 만든 물질하고 인간이 공장에서 대량으로 만든 물질이 같다고 생각하시는지?</p><p>비록 모양과 맛이 비슷할지는 몰라도 미세하게는 다릅니다. 100% 똑같다고 장담 가능하나요?</p><p>그리고 인공조미료 사용은 인간의 요리발전의 방해가 됩니다..어떻게 맛있는 음식을 만들지 생각을</p><p>할 필요가 없죠..그냥 봉지 뜯어서 조미료 한스푼 넣으면 돼니..</p><p>이건뭐...초등학생도 요리사가 돼죠..</p><p></p>
+			</div>
+      
+			<div class="vodbox_box_area m_15">
+				<p class="btn03">
+					<a href="javascript:startRequest(&#39;1973&#39;,&#39;xfile&#39;);" class="btn_white_circle btn_round_circle"> <span class="recom">추천하기</span> <font class="red_font2">0</font> </a>
+				</p>
+			</div>
+    <!-- 댓글쓰기/목록보기 버튼-->
+          <div class="btn_comment_box m_15">
+                    <div class="btn_comment">
+                        <ul>
+                            <li class="box_le"><a href="http://bbs.ichannela.com/ch/mboard.cha?tcode=xfile&amp;work=view&amp;no=1973&amp;cmt_p_page=2#" onclick="javascript:$(&quot;#replyContent&quot;).toggle(); return false;"><span>댓글쓰기</span></a></li>
+                            <li class="box_ri"><a href="http://bbs.ichannela.com/ch/mboard.cha?tcode=xfile&amp;code=&amp;ono=&amp;prog_id=&amp;cate=&amp;work=list&amp;p_page=&amp;p_item=&amp;p_choice="><span>목록보기</span></a></li>
+                        </ul>
+                    </div>
+          </div>
+                     <!-- 댓글쓰는 영역-->
+          <div class="replyContent" id="replyContent" style="display:none">
+              <fieldset class="gray">
+
+					<form method="post" name="write_form" id="write_form" action="http://bbs.ichannela.com/ch/cboard/comment_add.cha">
+					<input type="hidden" name="bno" value="1973">
+					<input type="hidden" name="tcode" value="xfile">
+
+                  <div class="textArea">
+                  <textarea name="contents" placeholder=" 댓글 내용을 입력해주세요. 300자 이내"></textarea>
+                  </div>
+
+                  <div class="vodbox_box_area mb_15">
+                    <p class="btn">
+                    <a href="http://bbs.ichannela.com/ch/mboard.cha?tcode=xfile&amp;work=view&amp;no=1973&amp;cmt_p_page=2#" onclick="javascript:$(&quot;#replyContent&quot;).toggle(); return false;" class="btn_white_s btn_round2"><span>취소</span></a>
+                    <a href="http://bbs.ichannela.com/ch/mboard.cha?tcode=xfile&amp;work=view&amp;no=1973&amp;cmt_p_page=2#" onclick="$(&#39;#write_form&#39;).submit();  return false;" class="btn_blue_s btn_round2 fr"><span>등록</span></a>
+                    </p>
+                 </div>
+                 </form>
+             </fieldset>
+          </div>
+          <div class="reply_list_area">
+		    <dl class="reply_list">
+                    <dd class="txt">영철님!!   순진하신분 같아요.. 식약청말은 조금만 믿으시고...<br>
+영철님!!   님의 건강을위해 인공적으로 만든 화학조미료는 조금만 드십시요....</dd>
+                    <dd class="info">백성훈 <font class="text_v1 ss_font"> | </font>2012-12-03 15:18:04</dd>
+                    <dd class="btn_g btn_white_modern btn_round2 fr"><a href="http://bbs.ichannela.com/ch/mboard.cha?tcode=xfile&amp;work=view&amp;no=1973&amp;cmt_p_page=2#" onclick="javascript:$(&quot;#cmt_create0&quot;).toggle(); return false;">답글</a></dd>
+            </dl>
+              <div class="replyContent line_btm" id="cmt_create0" style="display:none">
+                  <fieldset class="gray b_n">
+                  <span class="datname"><font class="text_v1 ss_font"></font></span>
+                         	<form method="post" id="reply_write_form0" name="reply_write_form0" action="http://bbs.ichannela.com/ch/cboard/comment_add_cmt.cha">
+                          	<input type="hidden" name="cno" value="54258">
+                              <input type="hidden" name="bno" value="1973">
+                              <input type="hidden" name="tcode" value="xfile">
+	                      <div class="textArea">
+	                      <textarea name="contents" rows="" cols="" onclick="goLogin()" placeholder=" 댓글 내용을 입력해주세요. 300자 이내"></textarea>
+	                      </div>
+                      <div class="vodbox_box_area mb_15">
+                        <p class="btn">
+                        <a href="http://bbs.ichannela.com/ch/mboard.cha?tcode=xfile&amp;work=view&amp;no=1973&amp;cmt_p_page=2#" class="btn_white_modern btn_round2" onclick="javascript:$(&quot;#cmt_create0&quot;).toggle(); return false;"><span>취소</span></a>
+                        <a href="http://bbs.ichannela.com/ch/mboard.cha?tcode=xfile&amp;work=view&amp;no=1973&amp;cmt_p_page=2#" onclick="$(&#39;#reply_write_form0&#39;).submit();  return false;" class="btn_white_modern btn_round2 fr"><span>등록</span></a>
+                        </p>
+                     </div>
+                     </form>
+                 </fieldset>
+              </div>
+		    <dl class="reply_list">
+                    <dd class="txt">제가 링크한 식약청 공식 자료를 보셨는지요?<br>
+<br>
+"글루타민산은 유제품·육류·어류·채소류 등 단백질 함유 식품에 천연으로도 존재하고 있으며, 식품첨가물인 L-글루타민산나트륨과 비교해 보면 인체내에서 생리적 반응은 동일한 것으로 연구되었다" <br>
+<br>
+ L-글루타민산나트륨이 MSG입니다. 인공과 천연물이 인체에 같은 역할을 한다는 식약청의 자료입니다. 인공적으로 만들어 진다해도 차이는 없습니다.<br>
+<br>
+가장 대표적인 MSG조미료는 MSG함량이 99.5%이며, 0.5%는 리보뉴클레오타이드나트륨으로 핵산 성분으로 또한 해로울 것이 없는 성분으로만 만들어졌습니다.<br>
+<br>
+MSG 성분은 해롭지 않으며, 자연으로 만들어 지지 않고 인공으로 만들어져도 체내에서의 역할은 같습니다. 만약 이 것을 부정하신다면, 식약청의 공식 자료를 부정하는 것입니다. 백성훈님의 말씀이 맞다면, 식약청에서 국민 건강을 크게 위해하고 있는 것이구요.</dd>
+                    <dd class="info">정영철 <font class="text_v1 ss_font"> | </font>2012-12-03 15:10:59</dd>
+                    <dd class="btn_g btn_white_modern btn_round2 fr"><a href="http://bbs.ichannela.com/ch/mboard.cha?tcode=xfile&amp;work=view&amp;no=1973&amp;cmt_p_page=2#" onclick="javascript:$(&quot;#cmt_create1&quot;).toggle(); return false;">답글</a></dd>
+            </dl>
+              <div class="replyContent line_btm" id="cmt_create1" style="display:none">
+                  <fieldset class="gray b_n">
+                  <span class="datname"><font class="text_v1 ss_font"></font></span>
+                         	<form method="post" id="reply_write_form1" name="reply_write_form1" action="http://bbs.ichannela.com/ch/cboard/comment_add_cmt.cha">
+                          	<input type="hidden" name="cno" value="54255">
+                              <input type="hidden" name="bno" value="1973">
+                              <input type="hidden" name="tcode" value="xfile">
+	                      <div class="textArea">
+	                      <textarea name="contents" rows="" cols="" onclick="goLogin()" placeholder=" 댓글 내용을 입력해주세요. 300자 이내"></textarea>
+	                      </div>
+                      <div class="vodbox_box_area mb_15">
+                        <p class="btn">
+                        <a href="http://bbs.ichannela.com/ch/mboard.cha?tcode=xfile&amp;work=view&amp;no=1973&amp;cmt_p_page=2#" class="btn_white_modern btn_round2" onclick="javascript:$(&quot;#cmt_create1&quot;).toggle(); return false;"><span>취소</span></a>
+                        <a href="http://bbs.ichannela.com/ch/mboard.cha?tcode=xfile&amp;work=view&amp;no=1973&amp;cmt_p_page=2#" onclick="$(&#39;#reply_write_form1&#39;).submit();  return false;" class="btn_white_modern btn_round2 fr"><span>등록</span></a>
+                        </p>
+                     </div>
+                     </form>
+                 </fieldset>
+              </div>
+		    <dl class="reply_list">
+                    <dd class="txt">정영철님과 제가 보는 관점이 서로 다른가 봅니다.    <br>
+님은 msg성분을 말씀 하시는것 같고  저는 인공조미료의 부작용에 대해 말씀 드리는 겁니다.<br>
+msg자체가 나쁘다는게 아니고,  인공적으로 만들어졌을때 부작용을 유발 시킨다는 겁니다. <br>
+물론 모유는 순수자연이기 때문에 아기한테 부작용이 없지요.<br>
+조금이라도 몸에 이롭지 않다는데 굳이 먹을 필요가 있을까요??<br>
+우리 모두건강하게 삽시다.</dd>
+                    <dd class="info">백성훈 <font class="text_v1 ss_font"> | </font>2012-12-03 14:11:10</dd>
+                    <dd class="btn_g btn_white_modern btn_round2 fr"><a href="http://bbs.ichannela.com/ch/mboard.cha?tcode=xfile&amp;work=view&amp;no=1973&amp;cmt_p_page=2#" onclick="javascript:$(&quot;#cmt_create2&quot;).toggle(); return false;">답글</a></dd>
+            </dl>
+              <div class="replyContent line_btm" id="cmt_create2" style="display:none">
+                  <fieldset class="gray b_n">
+                  <span class="datname"><font class="text_v1 ss_font"></font></span>
+                         	<form method="post" id="reply_write_form2" name="reply_write_form2" action="http://bbs.ichannela.com/ch/cboard/comment_add_cmt.cha">
+                          	<input type="hidden" name="cno" value="54213">
+                              <input type="hidden" name="bno" value="1973">
+                              <input type="hidden" name="tcode" value="xfile">
+	                      <div class="textArea">
+	                      <textarea name="contents" rows="" cols="" onclick="goLogin()" placeholder=" 댓글 내용을 입력해주세요. 300자 이내"></textarea>
+	                      </div>
+                      <div class="vodbox_box_area mb_15">
+                        <p class="btn">
+                        <a href="http://bbs.ichannela.com/ch/mboard.cha?tcode=xfile&amp;work=view&amp;no=1973&amp;cmt_p_page=2#" class="btn_white_modern btn_round2" onclick="javascript:$(&quot;#cmt_create2&quot;).toggle(); return false;"><span>취소</span></a>
+                        <a href="http://bbs.ichannela.com/ch/mboard.cha?tcode=xfile&amp;work=view&amp;no=1973&amp;cmt_p_page=2#" onclick="$(&#39;#reply_write_form2&#39;).submit();  return false;" class="btn_white_modern btn_round2 fr"><span>등록</span></a>
+                        </p>
+                     </div>
+                     </form>
+                 </fieldset>
+              </div>
+		    <dl class="reply_list">
+                    <dd class="txt">그런 신경작용에 대한 보고는  체 내에서 글루타민이 신경전달 물질 역할을 하기에 나온 이야기입니다.<br>
+그리고 그런 의혹에 대해서 이미 많은 과학자들이 사실인지 검증하기 위해 시험을 했으나 그런 질병과 연관 되었다는 증거를 찾지 못하였습니다. 이 것이 과학적인 사실입니다.<br>
+천연의 MSG와 조미료의 MSG는 정확하게 같은 것입니다. 글루타민의 나트륨염이라는 데에서 아무런 차이가 없습니다.<br>
+글루타민이 극소량이라도 뇌하수체가 파괴될 가능성이 있다니요? 모유에 제일 많은 아미노산이 글루타민입니다.<br>
+나트륨 때문이라구요? 나트륨은 소금 등의 염을 통해 항상 섭취하는 것이고, 과량일 경우 문제가 있지만, 기본적으로는 신경의 전달이나 능동 수송 등의 과정에 필요한 우리 몸의 필수 요소 중 하나입니다.<br>
+<br>
+조미료의 MSG에 글루타민과 나트륨 이외에 다른 성분이 있나요? 전혀 없습니다. 성분명 자체가 화학명입니다. 다른 것이 첨가 되었다면 그 다른 성분을 규명하고 규제해야 합니다.<br>
+<br>
+FDA, 식약청 등은 허수아비로 있는 기관이 아닙니다. 말씀하신 부작용이 있다면, 응당 검증하고 사용을 못하게 하거나, 사용량을 제한해야 하는 기관입니다. 우리 나라 뿐만 아니라 세계적으로 안전하다고 인증하고 사용량에 제한을 두지 않는 식품첨가물을 무슨 근거로 유해하다고 하시는 지요?<br>
+<br>
+<br>
+대한민국 식약청의 공식 자료를 보십시오.<br>
+http://www.kfda.go.kr/index.kfda?mid=56&amp;seq=11961&amp;cmd=v<br>
+<br>
+○ L-글루타민산나트륨은 미국에서는 1977년 일반적으로 안전한 물질(GRAS, Generally Recognized As Safe)로서, 일본에서는 1948년 식품첨가물로 지정되어 사용되어 왔으며, <br>
+- 국제전문기구인 JECFA(FAO/WHO합동 식품첨가물전문가위원회)에서도 위해성관련 인체안전기준치인 1일섭취허용량(ADI)을 별도로 정하고 있지 않는 NS(Not Specified) 품목으로 분류되고 있다.<br>
+○ 글루타민산은 유제품·육류·어류·채소류 등 단백질 함유 식품에 천연으로도 존재하고 있으며, 식품첨가물인 L-글루타민산나트륨과 비교해 보면 인체내에서 생리적 반응은 동일한 것으로 연구되었다.<br>
+※ 식품 중 천연 글루타민산 함량(ppm, mg/kg) : 우유 20, 모유 220, 돼지고기 230, 쇠고기 330, 연어 200, 고등어 360, 토마토 1400, 완두콩 2000<br>
+○ 일부 연구에서 L-글루타민산나트륨을 섭취할 경우 일시적 과민반응으로 메스꺼움·두통이 나타날 수 있다는 보고가 있었으나 동 결과를 국제적으로 수용하고 있지 않다. <br>
+<br>
+<br>
+백성훈님의 말씀이 맞다면 대한민국 식약청은 국민에게 잘못된 정보를 전달하고 커다란 직무유기를 하고 있는 셈이고, 광우병 촛불 시위와 비견할만한 전국민적인 운동이 필요한 사안인 것 같습니다. 극소량이라도 유아의 뇌하수체를 파괴할 수 있는 물질을 대한민국 식약청이 천연물질과 같은 것이고, 안전하다고 말하고 있으니까요.</dd>
+                    <dd class="info">정영철 <font class="text_v1 ss_font"> | </font>2012-12-03 13:41:14</dd>
+                    <dd class="btn_g btn_white_modern btn_round2 fr"><a href="http://bbs.ichannela.com/ch/mboard.cha?tcode=xfile&amp;work=view&amp;no=1973&amp;cmt_p_page=2#" onclick="javascript:$(&quot;#cmt_create3&quot;).toggle(); return false;">답글</a></dd>
+            </dl>
+              <div class="replyContent line_btm" id="cmt_create3" style="display:none">
+                  <fieldset class="gray b_n">
+                  <span class="datname"><font class="text_v1 ss_font"></font></span>
+                         	<form method="post" id="reply_write_form3" name="reply_write_form3" action="http://bbs.ichannela.com/ch/cboard/comment_add_cmt.cha">
+                          	<input type="hidden" name="cno" value="54187">
+                              <input type="hidden" name="bno" value="1973">
+                              <input type="hidden" name="tcode" value="xfile">
+	                      <div class="textArea">
+	                      <textarea name="contents" rows="" cols="" onclick="goLogin()" placeholder=" 댓글 내용을 입력해주세요. 300자 이내"></textarea>
+	                      </div>
+                      <div class="vodbox_box_area mb_15">
+                        <p class="btn">
+                        <a href="http://bbs.ichannela.com/ch/mboard.cha?tcode=xfile&amp;work=view&amp;no=1973&amp;cmt_p_page=2#" class="btn_white_modern btn_round2" onclick="javascript:$(&quot;#cmt_create3&quot;).toggle(); return false;"><span>취소</span></a>
+                        <a href="http://bbs.ichannela.com/ch/mboard.cha?tcode=xfile&amp;work=view&amp;no=1973&amp;cmt_p_page=2#" onclick="$(&#39;#reply_write_form3&#39;).submit();  return false;" class="btn_white_modern btn_round2 fr"><span>등록</span></a>
+                        </p>
+                     </div>
+                     </form>
+                 </fieldset>
+              </div>
+		    <dl class="reply_list">
+                    <dd class="txt">정영철님 말씀은 글루타민 성분 자체를 말씀하시는 것 같네요.  글루타민은 토마토 김 버섯등에 함유되 있으며, 우리 몸에 이롭습니다.   이건 모두  자연에서 얻어지는 겁니다.<br>
+근데 식품첨가제로 만들어진 화학조미료 msg는 우리의 신경조직을 파괴하고,  유아의 경우 극소량이라도 뇌하수체가 파괴될 가능성이 있으며 성장은 물론 일반 대사에 이상을 불러올 수 있다는 보고가 있습니다. <br>
+이밖에도 부작용이 너무도 많은데 굳이 화학조미료를 섭취 할 이유가 있을까요??<br>
+우리 아프지 말고 건강하게 오래 오래삽시다......</dd>
+                    <dd class="info">백성훈 <font class="text_v1 ss_font"> | </font>2012-12-03 13:17:37</dd>
+                    <dd class="btn_g btn_white_modern btn_round2 fr"><a href="http://bbs.ichannela.com/ch/mboard.cha?tcode=xfile&amp;work=view&amp;no=1973&amp;cmt_p_page=2#" onclick="javascript:$(&quot;#cmt_create4&quot;).toggle(); return false;">답글</a></dd>
+            </dl>
+              <div class="replyContent line_btm" id="cmt_create4" style="display:none">
+                  <fieldset class="gray b_n">
+                  <span class="datname"><font class="text_v1 ss_font"></font></span>
+                         	<form method="post" id="reply_write_form4" name="reply_write_form4" action="http://bbs.ichannela.com/ch/cboard/comment_add_cmt.cha">
+                          	<input type="hidden" name="cno" value="54165">
+                              <input type="hidden" name="bno" value="1973">
+                              <input type="hidden" name="tcode" value="xfile">
+	                      <div class="textArea">
+	                      <textarea name="contents" rows="" cols="" onclick="goLogin()" placeholder=" 댓글 내용을 입력해주세요. 300자 이내"></textarea>
+	                      </div>
+                      <div class="vodbox_box_area mb_15">
+                        <p class="btn">
+                        <a href="http://bbs.ichannela.com/ch/mboard.cha?tcode=xfile&amp;work=view&amp;no=1973&amp;cmt_p_page=2#" class="btn_white_modern btn_round2" onclick="javascript:$(&quot;#cmt_create4&quot;).toggle(); return false;"><span>취소</span></a>
+                        <a href="http://bbs.ichannela.com/ch/mboard.cha?tcode=xfile&amp;work=view&amp;no=1973&amp;cmt_p_page=2#" onclick="$(&#39;#reply_write_form4&#39;).submit();  return false;" class="btn_white_modern btn_round2 fr"><span>등록</span></a>
+                        </p>
+                     </div>
+                     </form>
+                 </fieldset>
+              </div></div>
+	<div class="listpagingbox">
+		<div class="pagingbar">
+			<a href="http://bbs.ichannela.com/ch/mboard.cha?tcode=xfile&amp;work=view&amp;no=1973&amp;cmt_p_page=1" class="goleft1">&nbsp;</a><a href="http://bbs.ichannela.com/ch/mboard.cha?tcode=xfile&amp;work=view&amp;no=1973&amp;cmt_p_page=1" class="goleft2">&nbsp;</a> <a class="number" href="http://bbs.ichannela.com/ch/mboard.cha?tcode=xfile&amp;work=view&amp;no=1973&amp;cmt_p_page=1">1</a> <a class="on">2</a> <a class="number" href="http://bbs.ichannela.com/ch/mboard.cha?tcode=xfile&amp;work=view&amp;no=1973&amp;cmt_p_page=3">3</a> <a href="http://bbs.ichannela.com/ch/mboard.cha?tcode=xfile&amp;work=view&amp;no=1973&amp;cmt_p_page=3" class="goright1">&nbsp;</a><a href="http://bbs.ichannela.com/ch/mboard.cha?tcode=xfile&amp;work=view&amp;no=1973&amp;cmt_p_page=3" class="goright2">&nbsp;</a>
+		</div>
+	</div>
+            <div class="cb stit_he4"></div>
+           <!-- 다른글보기-->
+           <div class="other_title">
+               <a href="http://bbs.ichannela.com/ch/mboard.cha?tcode=xfile&amp;work=view&amp;no=1973&amp;cmt_p_page=2#">
+               <h5>다른글 보기</h5>
+               </a>
+           </div>
+
+	     <div class="news_relation other_relation">
+            <ul class="other_list">
+    <li class="other_con">
+              <a href="http://bbs.ichannela.com/ch/mboard.cha?tcode=xfile&amp;code=&amp;ono=&amp;prog_id=&amp;cate=&amp;work=view&amp;no=1975">
+              <font class="cb s_font gray4_font fr">댓글 0</font>
+              특집착한식당 곱창집 위생문제 </a>
+              </li>
+    <li class="other_con">
+              <a href="http://bbs.ichannela.com/ch/mboard.cha?tcode=xfile&amp;code=&amp;ono=&amp;prog_id=&amp;cate=&amp;work=view&amp;no=1974">
+              <font class="cb s_font gray4_font fr">댓글 0</font>
+              착한식당2위 메밀국수집 위생상태 </a>
+              </li>
+              <!-- 현재 보여지고 있는 글-->
+              <li class="other_con">
+              <a href="http://bbs.ichannela.com/ch/mboard.cha?tcode=xfile&amp;code=&amp;ono=&amp;prog_id=&amp;cate=&amp;work=view&amp;no=1973">
+              <font class="cb s_font gray4_font fr">댓글 15</font>
+              <font class="bold_font">인공조미료가 유해하지 않다는 분들 보세요~!</font>
+				</a>
+              </li>
+    <li class="other_con">
+              <a href="http://bbs.ichannela.com/ch/mboard.cha?tcode=xfile&amp;code=&amp;ono=&amp;prog_id=&amp;cate=&amp;work=view&amp;no=1971">
+              <font class="cb s_font gray4_font fr">댓글 0</font>
+              기적의 밥편을 보았습니다. 감사합니다. </a>
+              </li>
+    <li class="other_con">
+              <a href="http://bbs.ichannela.com/ch/mboard.cha?tcode=xfile&amp;code=&amp;ono=&amp;prog_id=&amp;cate=&amp;work=view&amp;no=1970">
+              <font class="cb s_font gray4_font fr">댓글 1</font>
+              착한짬뽕 해명글을 보고 느낀점 </a>
+              </li>
+            </ul>
+           <script type="text/javascript">
+var init2beon = {mdcode:'WSFFFFFP', setZone:[], isTest:false},arrZone=init2beon['setZone'];
+arrZone.push(['S5LLLLLF', '_2BEONS5LLLLLF']);          //(테스트)관련기사텍스트(2slot) 영역선언
+</script>
+<script type="text/javascript" src="./38_files/2beonAdScript.js.download" charset="UTF-8"></script>
+<div id="_2BEONS5LLLLLF"><!--Adtive (테스트)관련기사텍스트(2slot)--></div>
+</div>	</div>	</div>
+		<!--## contents // ##-->
+
+</body></html>

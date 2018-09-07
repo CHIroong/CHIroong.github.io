@@ -1,0 +1,3 @@
+rcHead="<div id='ad_rcssp24'>";
+rcFoot="</div>";
+rcBody="<iframe src='http://nw.realssp.co.kr/?m=aGVhbHRoY2hvc3VuMDAwMDFfMTgyNDM=&c=iframe&n=realclick_premium_pc&s=' width='728' height='90' align='center' frameBorder='0' marginWidth='0' marginHeight='0' scrolling='no' topmargin='0'></iframe>";

@@ -1,0 +1,81 @@
+
+document.write("     <script language=\"JavaScript\" src=\"http://health.chosun.com/js/2015/margin_20.js\"></script>	"); /* 마진값*/
+
+/*
+if(IEver.indexOf("msie") != -1 && verNum >8)
+{
+*/
+
+// 19F : 성의학, 123 : SEX , 11IK : 과별질환 -> 성의학
+if (thisCode != "19F" && thisCode != "123"  && thisCode != "11IK")
+{
+	//document.write("			<script language=\"JavaScript\" src=\"http://health.chosun.com/js/2015/A_sub_banner_doubleClick.js\"></script>			");
+	document.write("			<script language=\"JavaScript\" src=\"http://health.chosun.com/js/2018/a_sub_rolling.js\"></script>			");
+	//document.write("			<script src='http://health.chosun.com/js/2018/edu_banner.js'></script> 		");	
+}
+/*}
+else if(IEver.indexOf("chrome") != -1 || IEver.indexOf("opera") != -1 || IEver.indexOf("firefox") != -1 ||  IEver.indexOf("safari") != -1)
+{
+	document.write("			<script language=\"JavaScript\" src=\"http://health.chosun.com/js/2015/A_sub_banner_doubleClick.js\"></script>			");
+}
+*/
+document.write("     <script language=\"JavaScript\" src=\"http://health.chosun.com/js/2015/margin_10.js\"></script>	"); /* 마진값*/
+document.write("			<script language=\"JavaScript\" src=\"http://health.chosun.com/js/2015/right_news_2015s.js\"></script>				");/*인기기사*/
+
+//document.write("     <script language=\"JavaScript\" src=\"http://health.chosun.com/js/2015/margin_10.js\"></script>	"); /* 마진값*/
+//document.write("			<script language=\"JavaScript\" src=\"http://health.chosun.com/js/2015/right_cbanner_2015s.js\"></script>			");/*배너*/
+
+document.write("     <script language=\"JavaScript\" src=\"http://health.chosun.com/js/2015/margin_10.js\"></script>	"); /* 마진값*/
+document.write("			<script language=\"JavaScript\" src=\"http://health.chosun.com/js/2015/right_bestdoctor_2015s.js\"></script>		");/*명의*/					
+
+
+//	document.write("     <script language=\"JavaScript\" src=\"http://health.chosun.com/js/2015/margin_10.js\"></script>	"); /* 마진값*/
+//	document.write("			<script language=\"JavaScript\" src=\"http://health.chosun.com/js/2015/right_cbanner_2015s.js\"></script>			");/*배너*/
+
+document.write("     <script language=\"JavaScript\" src=\"http://health.chosun.com/js/2015/margin_10.js\"></script>	"); /* 마진값*/
+//document.write("			<script language=\"JavaScript\" src=\"http://health.chosun.com/js/2015/right_column_2015s.js\"></script>			");/*칼럼*/
+document.write("			<script language=\"JavaScript\" src=\"http://health.chosun.com/js/2016/right_list_column.js\"></script>			");/*칼럼*/
+
+document.write("			<script language=\"JavaScript\" src=\"http://health.chosun.com/js/2015/right_counsel_2015s.js\"></script>			");/*상담*/
+
+document.write("			<script language=\"JavaScript\" src=\"http://health.chosun.com/js/2015/right_bestclinic_2015s.js\"></script>		");/*베스트클리닉*/
+document.write("     <script language=\"JavaScript\" src=\"http://health.chosun.com/js/2015/margin_20.js\"></script>	"); /* 마진값*/
+//document.write("			<script language=\"JavaScript\" src=\"http://health.chosun.com/js/2016/article_right_mpress.js\"></script>		");/*mpress*/
+//document.write("     <script language=\"JavaScript\" src=\"http://health.chosun.com/js/2015/margin_20.js\"></script>	"); /* 마진값*/
+
+document.write("     <script language=\"JavaScript\" src=\"http://health.chosun.com/js/2015/margin_20.js\"></script>	"); /* 마진값*/
+document.write("			<script language=\"JavaScript\" src=\"http://health.chosun.com/js/2015/right_healing_2015s.js\"></script>			");/*힐링여행*/
+document.write("     <script language=\"JavaScript\" src=\"http://health.chosun.com/js/2015/margin_20.js\"></script>	"); /* 마진값*/				
+document.write("			<script language=\"JavaScript\" src=\"http://health.chosun.com/js/2015/right_medicalnews_2015s.js\"></script>		");/*의료계뉴스*/
+
+document.write("			<script language=\"JavaScript\" src=\"http://health.chosun.com/js/2015/right_medicalevent_2015s.js\"></script>		");/*의료행사*/
+document.write("     <script language=\"JavaScript\" src=\"http://health.chosun.com/js/2015/margin_20.js\"></script>	"); /* 마진값*/
+
+document.write("     <script language=\"JavaScript\" src=\"http://health.chosun.com/js/2015/right_event_2015s_20160429.js\"></script> "); /* 이벤트 알립니다*/
+document.write("     <script language=\"JavaScript\" src=\"http://health.chosun.com/js/2015/margin_20.js\"></script>	"); /* 마진값*/
+
+document.write("			<div style=\"width:300px; margin:10px auto; \">");
+
+/*
+document.write("			<div id=\"realssp_healthchosun00001_18245\" class=\"realssp_dv\" data-mcode=\"aGVhbHRoY2hvc3VuMDAwMDFfMTgyNDU=\" title=\"리얼클릭 배너광고\"></div>");
+document.write("			<script src=\"//ssp.realclick.co.kr/realclickssp.js?v=1.0&m=healthchosun00001_18245&t=j\" async></script>");
+*/
+document.write("     <script language=\"JavaScript\" src=\"http://health.chosun.com/js/2018/right_bottom_rolling.js\"></script> "); /* 배너*/
+
+/*
+if(IEver.indexOf("msie") != -1 && verNum <8)
+{
+*/
+if (thisCode != "19F" && thisCode != "123"  && thisCode != "11IK")
+{
+	//document.write("			<script language=\"JavaScript\" src=\"http://health.chosun.com/js/2010/sub_right_google3_2015s.js\"></script>			");
+	//document.write("<IFRAME WIDTH=300 height=250 NORESIZE SCROLLING=No FRAMEBORDER=0 MARGINHEIGHT=0 MARGINWIDTH=0 SRC=http://cad.chosun.com/RealMedia/ads/adstream_sx.ads/health.chosun.com/a@x01 title=\"광고(아이프레임)\"></IFRAME>  ");
+}
+/*
+}
+else if(IEver.indexOf("chrome") != -1 || IEver.indexOf("opera") != -1 || IEver.indexOf("firefox") != -1 ||  IEver.indexOf("safari") != -1)
+{
+	document.write("			<script language=\"JavaScript\" src=\"http://health.chosun.com/js/2010/sub_right_google3_2015s.js\"></script>			");
+}
+*/
+document.write("			</div>");

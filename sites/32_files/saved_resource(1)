@@ -1,0 +1,9 @@
+/**/ window.haniSnsCollector.getFacebook({
+   "engagement": {
+      "reaction_count": 0,
+      "comment_count": 0,
+      "share_count": 0,
+      "comment_plugin_count": 0
+   },
+   "id": "http://www.hani.co.kr/arti/science/science_general/532746.html"
+});

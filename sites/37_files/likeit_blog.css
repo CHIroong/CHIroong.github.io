@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+/* background image */
+.u_likeit_list_module .u_likeit_list_btn .u_ico,.u_likeit_list_module .u_likeit_list_btn .u_ico:before{background-image:url("https://ssl.pstatic.net/static/blog/sp_likeit_m5.png") !important;-webkit-background-size:50px 75px;background-size:50px 75px}
+
+/* 엔드 상단 더보기 버튼 */
+.lyr_post_function .u_likeit_list_module .u_likeit_list_btn{width:auto;position:absolute;left:0;top:0;right:0;bottom:0}
+.lyr_post_function .u_likeit_list_module .u_likeit_list_btn .u_ico{position:absolute;top:14px;right:17px;width:16px;height:16px;background-position:0 -17px}
+.lyr_post_function .u_likeit_list_module .u_likeit_list_btn.on .u_ico{background-position:-18px -17px}
+.lyr_post_function .u_likeit_list_module .u_likeit_list_btn .u_cnt{display:none}
+
+/* 엔드 하단 */
+.section_t1 .u_likeit_list_module .u_likeit_list_btn{display:block;height:38px !important;margin-left:-10px;padding:0 6px 0 13px !important;vertical-align:top}
+.section_t1 .u_likeit_list_module .u_likeit_list_btn .u_ico{width:20px;height:17px;margin:17px 5px 0 0 !important;background-position:0 -55px;}
+.section_t1 .u_likeit_list_module .u_likeit_list_btn.on .u_ico:before{display:block;width:20px;height:17px;background-position:-25px -55px;content:'';-webkit-animation:heart_ani2 0.3s;}
+.section_t1 .u_likeit_list_module .u_likeit_list_btn .u_cnt{font-family:Sans-Serif;font-size:13px;line-height:54px !important;font-weight:normal}
+
+/* 엔드 플로팅메뉴 */
+.floating_menu .u_likeit_list_btn{display:block;height:44px;padding:0 5px 0 15px;}
+.floating_menu .u_likeit_list_module .u_likeit_list_btn .u_ico{width:20px;height:17px;margin:13px 5px 0 0;background-position:0 -55px;}
+.floating_menu .u_likeit_list_module .u_likeit_list_btn .u_cnt{font-family:Sans-serif;font-size:13px;line-height:46px;font-weight:normal}
+.floating_menu .u_likeit_list_module .u_likeit_list_btn.on .u_ico:before{display:block;width:20px;height:17px;background-position:-25px -55px !important;content:'';-webkit-animation:heart_ani2 0.3s;}
+@-webkit-keyframes heart_ani2{
+    0%{
+        transform:scale(0,0);
+        opacity:0;
+    }
+    100%{
+        transform:scale(1,1);
+        opacity:1;
+    }
+}
+
+/* 엔드 하단 추천 */
+.lst_detail_t17 .txt_area .btn_like .u_likeit_list_module .u_likeit_list_btn{white-space:nowrap;vertical-align:top;line-height:20px;}
+.lst_detail_t17 .txt_area .btn_like .u_likeit_list_module .u_likeit_list_btn .u_cnt{margin-top:2px;font-family:Sans-Serif;font-weight:300;font-size:13px;vertical-align:top}
+.lst_detail_t17 .txt_area .btn_like .u_likeit_list_module .u_likeit_list_btn .u_ico{width:12px;height:11px;margin:4px 0 0 0;background-position:0 0;}
+
+/* 공통뷰어 */
+.common_view .view_btn_lk .u_likeit_list_module .u_ico{display:inline-block;width:20px !important;height:17px !important;margin:3px 1px 0 0 !important;background-position:0 -55px;}
+.common_view .view_btn_lk .u_likeit_list_module .on .u_ico{background-position:-25px -55px;}
+
+/* 테블릿 엔드 이카테고리의 최신글  */
+.cds2 .cds_bundle .btn_like_w .u_cnt{font-size:15px;font-weight:normal;color:#909090}
+.cds2 .cds_bundle .btn_like_w .u_likeit_list_module .u_likeit_list_btn .u_ico{width:13px;height:12px;margin:3px 5px 0 0;background-position:0 -35px}
+.cds2 .cds_bundle .btn_like_w .u_likeit_list_module .u_likeit_list_btn.on .u_ico{background-position:-15px -35px}
+
+/* 피드 */
+.card .u_likeit_list_module .u_likeit_list_btn{display:inline-block;height:19px;font-size:14px;vertical-align:top;padding:5px}
+.card .u_likeit_list_module .u_likeit_list_btn .u_ico{width:20px;height:17px;margin:1px;background-position:0 -55px}
+.card .u_likeit_list_module .u_likeit_list_btn.on .u_ico{background-position:-25px -55px}
+.card .u_likeit_list_module .u_likeit_list_btn .u_cnt{font-family:Helvetica;font-size:14px;line-height:20px;font-weight:normal;color:#000}
+.card .u_likeit_list_module .u_likeit_list_btn .u_txt{font-family:Sans-Serif;line-height:20px;font-weight:normal;color:#555;}
+.card_s .u_likeit_list_module .u_likeit_list_btn.u_type_img{padding:5px}
+.card_s .u_likeit_list_module .u_likeit_list_btn .u_ico{width:18px;height:16px;margin:3px 0 -3px 0;background-position:0 -35px}
+.card_s .u_likeit_list_module .u_likeit_list_btn.on .u_ico{background-position:-20px -35px}
+.card_s .u_likeit_list_module .u_likeit_list_btn .u_cnt{font-family:Helvetica;font-size:15px;line-height:20px;font-weight:normal;color:#767676}
+/* 피드 좋아요 버튼 2.3.6 오류 대응 BLOGSUS-39501,BLOGSUS-39744 */
+html[data-useragent*="Android 2.3"] .card .u_likeit_list_module .u_likeit_list_btn .u_ico{width:19px;background-position:1px -35px}
+html[data-useragent*="Android 2.3"] .card .u_likeit_list_module .u_likeit_list_btn.on .u_ico{width:19px;background-position:-19px -35px}
+
+/* 공통뷰어 */
+.common_view .view_btn_lk .u_likeit_list_module .u_ico{display:inline-block;width:18px;height:16px;margin:2px 1px -2px 0 !important;background-position:0 -35px;}
+.common_view .view_btn_lk .u_likeit_list_module .on .u_ico{background-position:-20px -35px;}

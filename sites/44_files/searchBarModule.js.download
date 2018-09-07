@@ -1,0 +1,897 @@
+﻿var AUTO_SPOT_LIST = []; //자동완성스팟좌표 리스트
+var localFlag = '';
+
+var recentlyFlag = false;
+
+var SearchBarObj = function (jQuery, window) {
+
+    var _autoBoxObj = jQuery(".autoComBox");
+    var _seaQueryBoxObj = jQuery(".seaQueryBox");
+
+    var _inputBoxObj = jQuery('#SearchGNBText');
+
+    var _protocol = "http://";
+    if (window.location.protocol == 'https:') {
+        _protocol = "https://";
+    }
+
+    var _tourHost = _protocol + localFlag + "tour.interpark.com/";
+    var _searchTourHost = _protocol + localFlag + "search-tour.interpark.com/";
+    var _searchTourHostPC = "http://" + localFlag + "search-tour.interpark.com/Pc/Result?search=";
+
+    var CategoryText = function (item) {
+        return item[0].replace("||", " > ").replace("||", " > ");
+    }
+    ;
+    var BeforeCategory = function (item, currentWord) {
+        return item.split(currentWord)[0];
+    };
+
+    var NextCategory = function (item, currentWord) {
+        return item.replace(item.split(currentWord)[0], "").replace(currentWord, "");
+    };
+
+    var KeywordText = function (item, currentWord) {
+        item.match(currentWord);
+        {
+            if (item.indexOf(currentWord) > -1) {
+                return currentWord;
+            } else {
+                return '';
+            }
+        }
+        return '';
+    };
+
+    var BeforeText = function (item, currentWord) {
+        item.match(currentWord);
+        {
+            var rtnStr = item.split(currentWord)[0];
+            if (typeof rtnStr == 'undefined')
+                return '';
+            else
+                return rtnStr;
+        }
+        return item;
+    };
+
+    var NextText = function (item, currentWord) {
+        item.match(currentWord);
+        {
+            var rtnStr = item.split(currentWord)[1];
+            if (typeof rtnStr == 'undefined')
+                return '';
+            else
+                return rtnStr;
+        }
+        return '';
+    };
+
+    var Pad = function (n, width) {
+        n = n + '';
+        return n.length >= width ? n : new Array(width - n.length + 1).join('0') + n;
+    };
+
+    //날짜관련
+    function Yyyymmdd(dateObj) {
+        var mm = dateObj.getMonth(); //-1;
+        var dd = dateObj.getDate();
+
+        return [dateObj.getFullYear(),
+                (mm > 9 ? '' : '0') + mm,
+                (dd > 9 ? '' : '0') + dd
+        ].join('');
+    };
+
+    function ParseDate(str) {
+        var y = str.substr(0, 4),
+            m = str.substr(4, 2),
+            d = str.substr(6, 2);
+        return new Date(y, m, d);
+    };
+
+    return {
+        ClearAdKeyword: function (obj, keyword) {
+
+            if (typeof keyword == 'undefined' || keyword == null || keyword == '' || keyword.trim() == '') {
+                return;
+            }
+
+            if (jQuery(obj).val() == keyword) {
+                jQuery(obj).val('');
+            }
+        },
+        BoxHide: function () {
+
+            if (jQuery('.recent-btn').hasClass('active')) {
+                jQuery('.recent-btn').removeClass('active');
+                jQuery('.recent-btn').html('최근검색어 열기');
+                _seaQueryBoxObj.hide();
+                return;
+            }
+
+            _autoBoxObj.empty();
+            _autoBoxObj.hide();
+
+        },
+        AutoComplete: function (obj, event) {
+
+            var searchWord = jQuery(obj).val();
+
+            //엔터체크
+            if (event.keyCode == 13) {
+                searchBarModule.EnterForSearch(searchWord);
+                return;
+            }
+
+            if (searchWord.trim().length > 1) {
+
+                jQuery.support.cors = true;
+
+                jQuery.ajax({
+                    type: "POST",
+                    url: _searchTourHost + "/Payco/Auto/GetResult",
+                    crossdomain: true,
+                    dataType: "json",
+                    data: {
+                        query: searchWord
+                    },
+                    error: function (request, status, error) {
+
+                        AUTO_SPOT_LIST = [];
+                        searchBarModule.BoxHide();
+                        //console.log("code:" + request.status + "\n" + "message:" + request.responseText + "\n" + "error:" + error);
+                        //console.log("Auto ERROR");
+
+                    },
+                    success: function (data) {
+
+                        if (!data.result) {
+                            AUTO_SPOT_LIST = [];
+                            searchBarModule.BoxHide();
+                            return;
+                        }
+
+                        AUTO_SPOT_LIST = [];
+                        searchBarModule.BoxHide();
+
+                        if (data.datalist.length == 5) {
+
+                            var html = '';
+                            html += '<h3 aria-hidden="true">자동완성검색콤보박스</h3>';
+
+                            var beforeFlag = true;
+                            if (data.datalist[0].items.length > 0) {
+
+                                var subtag = "";
+                                jQuery.each(data.datalist[0].items, function (key, value) {
+                                    subtag += '<dd role="option" tabindex="0" onclick="searchBarModule.ClickItem(\'' + value[0] + '\')" >';
+                                    subtag += BeforeText(value[0], searchWord) + '<strong>' + KeywordText(value[0], searchWord) + '</strong>' + NextText(value[0], searchWord);
+                                    subtag += '</dd>';
+                                });
+
+                                if (subtag != "") {
+                                    html += '<dl>';
+                                    html += '<dt aria-hidden="true">자동완성검색어</dt>';
+                                    html += subtag;
+                                    html += '</dl>';
+                                    beforeFlag = false;
+                                } else {
+                                    beforeFlag = true;
+                                }
+                            }
+
+                            if (data.datalist[4].items.length > 0) {
+
+                                var subtag = "";
+                                jQuery.each(data.datalist[4].items, function (key, value) {
+                                    if (value[1] != "") {
+                                        subtag += '<dd role="option" tabindex="0" onclick="searchBarModule.ClickCategoryItem(\'' + value[1] + '\')" >';
+                                        subtag += BeforeCategory(CategoryText(value), searchWord);
+                                        subtag += '<strong>' + KeywordText(CategoryText(value), searchWord) + '</strong>';
+                                        subtag += NextCategory(CategoryText(value), searchWord);
+                                        subtag += '</dd>';
+                                    }
+                                });
+
+                                if (subtag != "") {
+                                    html += '<dl>';
+                                    if (beforeFlag) {
+                                        //html += '<dt style="margin-top:0px;">카테고리</dt>';
+                                        html += '<dt>카테고리</dt>';
+                                        beforeFlag = false;
+                                    } else {
+                                        html += '<dt>카테고리</dt>';
+                                        beforeFlag = false;
+                                    }
+                                    html += subtag;
+                                    html += '</dl>';
+                                } else {
+                                    beforeFlag = true;
+                                }
+                            }
+
+                            if (data.datalist[1].items.length > 0) {
+
+                                var subtag = "";
+                                jQuery.each(data.datalist[1].items, function (key, value) {
+                                    subtag += '<dd role="option" tabindex="0" onclick="searchBarModule.ClickSpotItem(\'' + value[0] + '\')">';
+                                    subtag += BeforeText(value[0].split('||')[0], searchWord) + '<strong>' + KeywordText(value[0].split('||')[0], searchWord) + '</strong>' + NextText(value[0].split('||')[0], searchWord);
+                                    subtag += '<sub>' + value[0].split('||')[2] + ',' + value[0].split('||')[1] + '</sub>';
+                                });
+
+                                if (subtag != "") {
+                                    html += '<dl>';
+                                    if (beforeFlag) {
+                                        //html += '<dt style="margin-top:0px;">스팟/명소</dt>';
+                                        html += '<dt>스팟/명소</dt>';
+                                        beforeFlag = false;
+                                    } else {
+                                        html += '<dt>스팟/명소</dt>';
+                                        beforeFlag = false;
+                                    }
+                                    html += subtag;
+                                    html += '</dl>';
+                                } else {
+                                    beforeFlag = true;
+                                }
+
+                                AUTO_SPOT_LIST = data.datalist[1].items;
+                            }
+
+                            if (data.datalist[2].items.length > 0) {
+
+                                var subtag = "";
+                                jQuery.each(data.datalist[2].items, function (key, value) {
+                                    subtag += '<dd role="option" tabindex="0" onclick="searchBarModule.ClickItem(\'' + value[0] + '\')" >';
+                                    subtag += BeforeText(value[0], searchWord) + '<strong>' + KeywordText(value[0], searchWord) + '</strong>' + NextText(value[0], searchWord);
+                                });
+
+                                if (subtag != "") {
+                                    html += '<dl>';
+                                    if (beforeFlag) {
+                                        //html += '<dt style="margin-top:0px;">국가</dt>';
+                                        html += '<dt>국가</dt>';
+                                        beforeFlag = false;
+                                    } else {
+                                        html += '<dt>국가</dt>';
+                                        beforeFlag = false;
+                                    }
+                                    html += subtag;
+                                    html += '</dl>';
+                                } else {
+                                    beforeFlag = true;
+                                }
+                            }
+
+                            if (data.datalist[3].items.length > 0) {
+
+                                var subtag = "";
+                                jQuery.each(data.datalist[3].items, function (key, value) {
+                                    subtag += '<dd role="option" tabindex="0" onclick="searchBarModule.ClickCityItem(\'' + value[0] + '\')" >';
+                                    subtag += BeforeText(value[0].split('||')[1], searchWord) + '<strong>' + KeywordText(value[0].split('||')[1], searchWord) + '</strong>' + NextText(value[0].split('||')[1], searchWord);
+                                    subtag += '<sub>' + value[0].split('||')[0] + '</sub>';
+                                });
+
+                                if (subtag != "") {
+                                    html += '<dl>';
+                                    if (beforeFlag) {
+                                        html += '<dt style="margin-top:0px;">도시</dt>';
+                                        html += '<dt>도시</dt>';
+                                        //beforeFlag = false;
+                                    } else {
+                                        html += '<dt>도시</dt>';
+                                        beforeFlag = false;
+                                    }
+                                    html += subtag;
+                                    html += '</dl>';
+                                } else {
+                                    beforeFlag = true;
+                                }
+                            }
+
+                            _autoBoxObj.append(html);
+
+                            if (data.datalist[0].items.length == 0 &&
+                                data.datalist[1].items.length == 0 &&
+                                data.datalist[2].items.length == 0 &&
+                                data.datalist[3].items.length == 0 &&
+                                data.datalist[4].items.length == 0) {
+                                AUTO_SPOT_LIST = [];
+                                searchBarModule.BoxHide();
+                            } else {
+                                _seaQueryBoxObj.hide();
+                                _autoBoxObj.show();
+                            }
+                        } else {
+                            AUTO_SPOT_LIST = [];
+                            searchBarModule.BoxHide();
+                        }
+                    }
+                });
+            } else {
+                AUTO_SPOT_LIST = [];
+                searchBarModule.BoxHide();
+            }
+        },
+        ClickCategoryItem: function (url) {
+            window.location.href = url;
+        },
+        ClickItem: function (item) {
+
+            var pword = item.split('||')[0];
+            AUTO_SPOT_LIST = [];
+
+            //호스트분기
+            var url = window.location.href.toLowerCase();
+            if (url.indexOf("error") == -1 && (url.indexOf("search-tour.interpark.com") > -1 || url.indexOf("localhost") > -1)) {
+                try {
+                    //비동기호출
+                    searchModule.SetCombineList(pword);
+                } catch (e) {
+                    //url호출
+                    window.location.href = _searchTourHostPC + encodeURIComponent(pword);
+                }
+            } else {
+                //url호출
+                window.location.href = _searchTourHostPC + encodeURIComponent(pword);
+            }
+
+        },
+        ClickCityItem: function (item) {
+
+            var pword = item.split('||')[1];
+            AUTO_SPOT_LIST = [];
+
+            //호스트분기
+            var url = window.location.href.toLowerCase();
+            if (url.indexOf("error") == -1 && (url.indexOf("search-tour.interpark.com") > -1 || url.indexOf("localhost") > -1)) {
+                try {
+                    //비동기호출
+                    searchModule.SetCombineList(pword);
+                } catch (e) {
+                    //url호출
+                    window.location.href = _searchTourHostPC + encodeURIComponent(pword);
+                }
+            } else {
+                //url호출
+                window.location.href = _searchTourHostPC + encodeURIComponent(pword);
+            }
+
+        },
+        ClickSpotItem: function (prop) {
+
+            var pword = prop.split('||')[0];
+
+            //호스트분기
+            var url = window.location.href.toLowerCase();
+            if (url.indexOf("error") == -1 && (url.indexOf("search-tour.interpark.com") > -1 || url.indexOf("localhost") > -1)) {
+
+                //검색패턴: 자동완성클릭으로 스팟찾기
+                var spotlist = AUTO_SPOT_LIST;
+                var tempList = spotlist.filter(function (item) {
+                    return item[0] === prop
+                })
+                AUTO_SPOT_LIST = tempList;
+
+                try {
+                    //비동기호출
+                    searchModule.SetCombineList(pword);
+                } catch (e) {
+                    //url호출
+                    window.location.href = _searchTourHostPC + encodeURIComponent(pword);
+                }
+
+            } else {
+
+                //url호출
+                //검색패턴: 자동완성클릭으로 스팟찾기
+                var spotlist = AUTO_SPOT_LIST;
+                var tempList = spotlist.filter(function (item) {
+                    return item[0] === prop
+                })
+                AUTO_SPOT_LIST = tempList;
+
+                var spotclue = AUTO_SPOT_LIST[0];
+                if (typeof (spotclue) != 'undefined') {
+                    STANDARD_SPOT = spotclue[0].split('||')[0];
+                    latitude = spotclue[1].split(',')[0];
+                    longitude = spotclue[1].split(',')[1];
+                    geotype = spotclue[1].split(',')[2];
+
+                    var url = "&spot=" + encodeURIComponent(STANDARD_SPOT) + "&lat=" + latitude + "&lon=" + longitude + "&geo=" + geotype + "";
+                    window.location.href = _searchTourHostPC + encodeURIComponent(pword) + url;
+                    return;
+                } else {
+                    window.location.href = _searchTourHostPC + encodeURIComponent(pword);
+                    return;
+                }
+            }
+        },
+        RecentlyAdd: function (pword) {
+
+            if (pword.trim().length == 0) {
+                return;
+            }
+
+            var output = localStorage.getItem("recently");
+            var recentlyList = [];
+            if (output != null) {
+                recentlyList = JSON.parse(output);
+            }
+
+            //같은값이없을때만 추가
+            if (recentlyList.indexOf(pword) < 0) {
+                //최근기록 10개이상 삭제
+                if (recentlyList.length >= 10) {
+                    recentlyList.pop();
+                }
+                recentlyList.unshift(pword);
+            }
+
+            localStorage.setItem("recently", JSON.stringify(recentlyList));
+
+            //최근검색어 iframe으로 보내기
+            if (document.getElementById('searchFrame') != null) {
+                document.getElementById('searchFrame').contentWindow.postMessage(JSON.stringify(recentlyList), '*');
+            }
+        },
+        RecentlyDel: function (idx) {
+
+            var output = null;
+            var url = window.location.href.toLowerCase();
+            if (url.indexOf("tour.interpark.com") > -1 && window.location.protocol != 'https:') {
+                output = localStorage.getItem("recently");
+            } else {
+                output = localStorage.getItem("recentlyTemp");
+            }
+
+            var recentlyList = [];
+            if (output != null) {
+                recentlyList = JSON.parse(output);
+            }
+
+            if (idx == 99) {
+                //전체삭제
+                recentlyList = [];
+            } else {
+                recentlyList.splice(idx, 1);
+            }
+
+            if (url.indexOf("tour.interpark.com") > -1 && window.location.protocol != 'https:') {
+                localStorage.setItem("recently", JSON.stringify(recentlyList));
+            } else {
+                localStorage.setItem("recentlyTemp", JSON.stringify(recentlyList));
+            }
+
+            //최근검색어 iframe으로 보내기
+            if (document.getElementById('searchFrame') != null) {
+                document.getElementById('searchFrame').contentWindow.postMessage(JSON.stringify(recentlyList), '*');
+            }
+
+            //searchBarModule.RecentlyShow(true);
+            searchBarModule.HotKeyUpdate(true);
+
+        },
+        RecentlyShow: function (chk, hotkeyTag) {
+
+            if (!chk) {
+                if (jQuery('.recent-btn').hasClass('active')) {
+                    jQuery('.recent-btn').removeClass('active');
+                    jQuery('.recent-btn').html('최근검색어 열기');
+                    _seaQueryBoxObj.hide();
+                    return;
+                } else {
+                    jQuery('.recent-btn').addClass('active');
+                    jQuery('.recent-btn').html('최근검색어 닫기');
+                }
+            }
+
+            try {
+
+                //최근검색어관리 아이프레임
+                var url = window.location.href.toLowerCase();
+                if (url.indexOf("tour.interpark.com") > -1 && window.location.protocol != 'https:') {
+
+                    var output1 = localStorage.getItem("recently");
+                    var recentlyList = [];
+                    if (output1 != null) {
+                        recentlyList = JSON.parse(output1);
+                    }
+                    searchBarModule.SetRecentlyTag(recentlyList, hotkeyTag);
+
+
+                } else {
+
+                    if (!recentlyFlag) {
+                        var recentlyList = [];
+                        jQuery.ajax({
+                            type: "POST",
+                            url: _searchTourHost + "GetRecently",
+                            dataType: "json",
+                            xhrFields: {
+                                withCredentials: true
+                            },
+                            error: function () {
+                                //console.log('최근 검색어 Error');
+                                searchBarModule.SetRecentlyTag(recentlyList, hotkeyTag);
+                                return;
+                            },
+                            success: function (data) {
+                                if (!data.result) {
+                                    //console.log('최근 검색어 Error');
+                                    //console.log(data.recently);
+                                    searchBarModule.SetRecentlyTag(recentlyList, hotkeyTag);
+                                    return;
+                                }
+                                if (data.recently != "" && data.recently != null) {
+                                    recentlyList = JSON.parse(data.recently);
+                                }
+
+                                localStorage.setItem("recentlyTemp", JSON.stringify(recentlyList));
+                                recentlyFlag = true;
+
+                                searchBarModule.SetRecentlyTag(recentlyList, hotkeyTag);
+                            }
+                        });
+
+                    } else {
+
+                        var output1 = localStorage.getItem("recentlyTemp");
+                        var recentlyList = [];
+                        if (output1 != null) {
+                            recentlyList = JSON.parse(output1);
+                        }
+                        searchBarModule.SetRecentlyTag(recentlyList, hotkeyTag);
+
+                    }
+
+                }
+            } catch (e) {
+                jQuery('.recent-btn').removeClass('active');
+                jQuery('.recent-btn').html('최근검색어 열기');
+                _seaQueryBoxObj.empty();
+                _seaQueryBoxObj.hide();
+            }
+        },
+        SetRecentlyTag: function (recentlyList, hotkeyTag) {
+
+            var tag = '<div class="recentWrap">';
+            tag += '<h3>';
+            tag += '<span>최근검색어</span>';
+            tag += '</h3>';
+            tag += '<ul role="combobox">';
+            var idx = 0;
+            jQuery.each(recentlyList, function (key, value) {
+                tag += '<li role="option">';
+                tag += '<a href="javascript:searchBarModule.ClickForSearch(\'' + value + '\');">' + value + '</a>';
+                tag += '<button type="button" class="delBtn" onclick="searchBarModule.RecentlyDel(' + idx + ')" option="' + (idx + 1) + '" ></button>';
+                tag += '</li>';
+                idx++;
+            });
+            tag += '</ul>';
+            tag += '<button type="button" class="allDelBtn" onclick="javascript:searchBarModule.RecentlyDel(99);">전체삭제</button>';
+            tag += '</div>';
+
+            tag += hotkeyTag;
+
+            //우측배너 크롤링
+            //jQuery('#fixedHotSale > li').each(function () {
+            //    console.log(jQuery(this).find('a').eq(0).children('.photo').children('img').attr('src'));
+            //    console.log(jQuery(this).find('a').eq(0).children('.tit').html());
+            //    console.log(jQuery(this).find('a').eq(0).children('.data').html());
+            //});
+
+            tag += '<div class="proWrap">';
+            tag += '<h3>땡처리 특가 상품</h3>';
+            idx = 0;
+            jQuery('#fixedHotSale > li').each(function () {
+                if (idx == 2)
+                    return;
+
+                tag += '<a href="' + jQuery(this).find('a').eq(0).attr('href') + '" class="proLink">';
+                tag += '<img style="width:140px; height:94px;" src="' + jQuery(this).find('a').eq(0).children('.photo').children('img').attr('src') + '" alt="프리미어 빌리지 다낭 리조트">';
+                tag += '<h4 class="proTit">' + jQuery(this).find('a').eq(0).children('.tit').html() + '</h4>';
+                tag += '<p class="proPrice">';
+                tag += '' + jQuery(this).find('a').eq(0).children('.data').html() + '';
+                //tag += '<i class="unit">원~</i>'; 운영에서 사용되지 않음
+                tag += '</p>';
+                tag += '</a>';
+                idx++;
+            });
+            tag += '</div>';
+
+            _seaQueryBoxObj.empty();
+            _seaQueryBoxObj.append(tag);
+            _autoBoxObj.hide();
+            _seaQueryBoxObj.show();
+
+        },
+        HotKeyUpdate: function (chk) {
+
+            var tempList = [
+                {
+                    word: "땡처리"
+                },
+                {
+                    word: "항공권"
+                },
+                {
+                    word: "코타키나발루"
+                },
+                {
+                    word: "오사카"
+                },
+                {
+                    word: "제주도"
+                },
+                {
+                    word: "일본"
+                },
+                {
+                    word: "추석연휴"
+                },
+                {
+                    word: "황금연휴"
+                },
+                {
+                    word: "후쿠오카"
+                },
+                {
+                    word: "대마도"
+                }
+            ];
+
+            var starttag = '';
+            starttag += '<div class="hitWrap">';
+            starttag += '<h3>';
+            starttag += '<span>인기검색어</span>';
+            starttag += '</h3>';
+            starttag += '<ul role="combobox">';
+
+            var endtag = '';
+            endtag += '</ul>';
+            var now = new Date();
+            now.setDate(now.getDate() - 1);
+            endtag += '<sub>' + now.getFullYear() + "." + Pad(now.getMonth() + 1, 2) + '.' + Pad(now.getDate(), 2) + ' 기준</sub>';
+            endtag += '</div>';
+
+            var now = new Date();
+            var hotkeyDate = localStorage.getItem('hotkeyDate');
+            if (hotkeyDate == Yyyymmdd(now)) {
+                //인기검색어 가져오기
+                var output = localStorage.getItem("hotkey");
+                var hotkeyList = []
+                if (output != null) {
+                    hotkeyList = JSON.parse(output);
+                }
+
+                var tag = starttag;
+                idx = 1;
+
+                jQuery.each(hotkeyList, function (key, value) {
+                    tag += '<li role="option">';
+                    tag += '<a href="javascript:searchBarModule.ClickForSearch(\'' + value.word + '\');">' + idx + '.' + value.word + '</a>';
+                    tag += '</li>';
+                    idx++;
+                });
+
+                tag += endtag;
+                searchBarModule.RecentlyShow(chk, tag);
+                return;
+            }
+
+            try {
+
+                jQuery.ajax({
+                    type: "POST",
+                    url: _searchTourHost + "/Payco/Search/GetPaycoHotKeyResult",
+                    dataType: "json",
+                    data: {},
+                    error: function () {
+
+                        var tag = starttag;
+                        idx = 1;
+
+                        jQuery.each(tempList, function (key, value) {
+                            tag += '<li role="option">';
+                            tag += '<a href="javascript:searchBarModule.ClickForSearch(\'' + value.word + '\');">' + idx + '.' + value.word + '</a>';
+                            tag += '</li>';
+                            idx++;
+                        });
+
+                        tag += endtag;
+                        searchBarModule.RecentlyShow(chk, tag);
+                    },
+                    success: function (data) {
+
+                        var tag = starttag;
+                        idx = 1;
+
+                        if (!data.result) {
+
+                            jQuery.each(tempList, function (key, value) {
+                                tag += '<li role="option">';
+                                tag += '<a href="javascript:searchBarModule.ClickForSearch(\'' + value.word + '\');">' + idx + '.' + value.word + '</a>';
+                                tag += '</li>';
+                                idx++;
+                            });
+
+                        } else {
+
+                            jQuery.each(data.hotKeyList, function (key, value) {
+                                tag += '<li role="option">';
+                                tag += '<a href="javascript:searchBarModule.ClickForSearch(\'' + value.word + '\');">' + idx + '.' + value.word + '</a>';
+                                tag += '</li>';
+                                idx++;
+                            });
+
+                            var now = new Date();
+                            localStorage.setItem('hotkeyDate', Yyyymmdd(now));
+                            localStorage.setItem('hotkey', JSON.stringify(data.hotKeyList));
+                        }
+
+                        tag += endtag;
+                        searchBarModule.RecentlyShow(chk, tag);
+                    }
+                });
+
+            } catch (e) {
+                console.log(e.message);
+            }
+        },
+        ClickForSearch: function (pword) {
+
+            _inputBoxObj = jQuery('#SearchGNBText');
+
+            if (typeof pword == 'undefined' || pword == null || pword == '' || pword.trim() == '' || pword.trim() == 'undefined') {
+                pword = _inputBoxObj.val();
+            }
+
+            if (typeof pword == 'undefined' || pword == null || pword == '' || pword.trim() == '' || pword.trim() == 'undefined') {
+                pword = _inputBoxObj.attr('adkeyword');
+            }
+
+            if (pword == _inputBoxObj.attr('adkeyword')) {
+                var link = _inputBoxObj.attr('adlink');
+                if (typeof link != 'undefined' && link != null && link != '' && link.trim() != '' && link.trim() != 'undefined') {
+                    window.location.href = link;
+                    return;
+                }
+
+            }
+
+            if (typeof pword == 'undefined' || pword == null || pword == '' || pword.trim() == '' || pword.trim() == 'undefined') {
+                alert('검색어를 입력해주세요.');
+                return;
+            }
+
+            AUTO_SPOT_LIST = [];
+
+            //호스트분기
+            var url = window.location.href.toLowerCase();
+            if (url.indexOf("error") == -1 && (url.indexOf("search-tour.interpark.com") > -1 || url.indexOf("localhost") > -1)) {
+                try {
+                    //비동기호출
+                    searchModule.SetCombineList(pword);
+                } catch (e) {
+                    //url호출
+                    window.location.href = _searchTourHostPC + encodeURIComponent(pword);
+                }
+            } else {
+                //url호출
+                window.location.href = _searchTourHostPC + encodeURIComponent(pword);
+            }
+
+        },
+        EnterForSearch: function (pword) {
+
+            if (typeof pword == 'undefined' || pword == null || pword == '' || pword.trim() == '') {
+                alert('검색어를 입력해주세요.');
+                return;
+            };
+
+            var pword = pword;
+
+            //호스트분기
+            var url = window.location.href.toLowerCase();
+            if (url.indexOf("error") == -1 && (url.indexOf("search-tour.interpark.com") > -1 || url.indexOf("localhost") > -1)) {
+                try {
+                    //비동기호출
+                    AUTO_SPOT_LIST = []; //엔터시 스팟검색 없앰
+                    searchModule.SetCombineList(pword);
+                } catch (e) {
+                    //url호출
+                    window.location.href = _searchTourHostPC + encodeURIComponent(pword);
+                }
+            } else {
+                //url호출
+                //검색패턴: 자동완성에서 스팟단서찾기
+                var latitude = 0.0;
+                var longitude = 0.0;
+                var geotype = '';
+
+                try {
+
+                    if (pword.trim().length != 0 && AUTO_SPOT_LIST.length != 0) {
+                        var spotclue = AUTO_SPOT_LIST[0];
+                        if (typeof (spotclue) != 'undefined') {
+                            STANDARD_SPOT = spotclue[0].split('||')[0];
+                            latitude = spotclue[1].split(',')[0];
+                            longitude = spotclue[1].split(',')[1];
+                            geotype = spotclue[1].split(',')[2];
+
+                            var param = "&spot=" + encodeURIComponent(STANDARD_SPOT) + "&lat=" + latitude + "&lon=" + longitude + "&geo=" + geotype + "";
+                            window.location.href = _searchTourHostPC + encodeURIComponent(pword);// + param; 엔터시 스팟검색 없앰
+                            return;
+                        }
+                    } else {
+                        window.location.href = _searchTourHostPC + encodeURIComponent(pword);
+                        return;
+                    }
+
+                } catch (err) {
+                    window.location.href = _searchTourHostPC + encodeURIComponent(pword);
+                    return;
+                }
+                //검색패턴
+            }
+        }
+    }
+};
+
+var searchBarModule = null;
+(function () {
+
+    if (typeof jQuery == 'undefined') {
+        // Load the script
+        var script = document.createElement("script");
+        script.src = '//tour.interpark.com/Scripts/jquery-1.10.2.min.js';
+        script.type = 'text/javascript';
+        script.onload = function () {
+            searchBarModule = SearchBarObj(jQuery, window);
+
+            jQuery('.autoComBox').blur(function () {
+                keepFocus = false;
+                window.setTimeout(hiddenAutoBox, 200);
+            }).focus(function () {
+                keepFocus = true;
+            });
+
+            jQuery('#SearchGNBText').blur(function () {
+                keepFocus = false;
+                window.setTimeout(hiddenAutoBox, 200);
+            }).focus(function () {
+                keepFocus = true;
+            });
+        };
+        document.getElementsByTagName("head")[0].appendChild(script);
+    } else {
+        searchBarModule = SearchBarObj(jQuery, window);
+
+        jQuery('.autoComBox').blur(function () {
+            keepFocus = false;
+            window.setTimeout(hiddenAutoBox, 200);
+        }).focus(function () {
+            keepFocus = true;
+        });
+
+        jQuery('#SearchGNBText').blur(function () {
+            keepFocus = false;
+            window.setTimeout(hiddenAutoBox, 200);
+        }).focus(function () {
+            keepFocus = true;
+        });
+    }
+
+})();
+
+var keepFocus = false;
+function hiddenAutoBox() {
+    if (!keepFocus) {
+        searchBarModule.BoxHide();
+    }
+}
+
+
+

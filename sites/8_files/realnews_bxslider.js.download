@@ -1,0 +1,12 @@
+$('.bxslider').bxSlider({
+ auto:true,
+ pager:false,
+ controls:true,
+ adaptiveHeight: true,
+ slideWidth: 225,
+ minSlides: 2,
+ maxSlides: 2,
+ moveSlides:2,
+ slideMargin: 0,
+});
+

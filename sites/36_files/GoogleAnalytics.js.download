@@ -1,0 +1,104 @@
+﻿// $(window).load(function() { 
+$(function() { 
+    
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ohmyanalytics');
+
+  ohmyanalytics('create', 'UA-73278334-1', 'auto'); // 전체
+  ohmyanalytics('create', 'UA-73278334-6', 'auto', 'ScrollDepth'); // 스크롤깊이분석
+  ohmyanalytics('create', 'UA-73278334-7', 'auto', 'Youtube'); // 유투브분석
+  ohmyanalytics('create', 'UA-73278334-8', 'auto', 'Event'); // 이벤트&목표전환
+  ohmyanalytics('create', 'UA-73278334-9', 'auto', 'Journalist'); // 상근기자별(1)
+  ohmyanalytics('create', 'UA-73278334-10', 'auto', 'Journalist2'); // 상근기자별(2)
+  ohmyanalytics('create', 'UA-73278334-13', 'auto', 'Journalist3'); // 상근기자별(3)
+  ohmyanalytics('create', 'UA-73278334-11', 'auto', 'Category'); // 기본분류별
+  ohmyanalytics('create', 'UA-73278334-12', 'auto', 'Region'); // 지역분류별
+  
+  // 맞춤정의변수
+  if ($("#ga_dimenValue1").val() != '') { // 기자명
+    ohmyanalytics('set', 'dimension1', $("#ga_dimenValue1").val());
+    ohmyanalytics('Journalist.set', 'dimension1', $("#ga_dimenValue1").val());
+    ohmyanalytics('Journalist2.set', 'dimension1', $("#ga_dimenValue1").val());
+    ohmyanalytics('Journalist3.set', 'dimension1', $("#ga_dimenValue1").val());
+    ohmyanalytics('Category.set', 'dimension1', $("#ga_dimenValue1").val());
+    ohmyanalytics('Region.set', 'dimension1', $("#ga_dimenValue1").val());
+  }
+  if ($("#ga_dimenValue2").val() != '') { // 기사코드
+    ohmyanalytics('set', 'dimension2', $("#ga_dimenValue2").val());
+    ohmyanalytics('Journalist.set', 'dimension2', $("#ga_dimenValue2").val());
+    ohmyanalytics('Journalist2.set', 'dimension2', $("#ga_dimenValue2").val());
+    ohmyanalytics('Journalist3.set', 'dimension2', $("#ga_dimenValue2").val());
+    ohmyanalytics('Category.set', 'dimension2', $("#ga_dimenValue2").val());
+    ohmyanalytics('Region.set', 'dimension2', $("#ga_dimenValue2").val());
+  }
+  if ($("#ga_dimenValue3").val() != '') { // 회원코드
+    ohmyanalytics('set', 'dimension3', $("#ga_dimenValue3").val());
+    ohmyanalytics('Journalist.set', 'dimension3', $("#ga_dimenValue3").val());
+    ohmyanalytics('Journalist2.set', 'dimension3', $("#ga_dimenValue3").val());
+    ohmyanalytics('Journalist3.set', 'dimension3', $("#ga_dimenValue3").val());
+    ohmyanalytics('Category.set', 'dimension3', $("#ga_dimenValue3").val());
+    ohmyanalytics('Region.set', 'dimension3', $("#ga_dimenValue3").val());
+  }   
+  if ($("#ga_dimenValue5").val() != '') { // 상근or시민기자구분
+    ohmyanalytics('set', 'dimension5', $("#ga_dimenValue5").val());
+    ohmyanalytics('Journalist.set', 'dimension5', $("#ga_dimenValue5").val());
+    ohmyanalytics('Journalist2.set', 'dimension5', $("#ga_dimenValue5").val());
+    ohmyanalytics('Journalist3.set', 'dimension5', $("#ga_dimenValue5").val());
+    ohmyanalytics('Category.set', 'dimension5', $("#ga_dimenValue5").val());
+    ohmyanalytics('Region.set', 'dimension5', $("#ga_dimenValue5").val());
+  }    
+  if ($("#ga_dimenValue6").val() != '') { // 컨텐츠분류
+    ohmyanalytics('set', 'dimension6', $("#ga_dimenValue6").val());
+    ohmyanalytics('Journalist.set', 'dimension6', $("#ga_dimenValue6").val());
+    ohmyanalytics('Journalist2.set', 'dimension6', $("#ga_dimenValue6").val());
+    ohmyanalytics('Journalist3.set', 'dimension6', $("#ga_dimenValue6").val());
+    ohmyanalytics('Category.set', 'dimension6', $("#ga_dimenValue6").val());
+    ohmyanalytics('Region.set', 'dimension6', $("#ga_dimenValue6").val());
+  }
+  if ($("#ga_dimenValue7").val() != '') { // 지역분류
+    ohmyanalytics('set', 'dimension7', $("#ga_dimenValue7").val());
+    ohmyanalytics('Journalist.set', 'dimension7', $("#ga_dimenValue7").val());
+    ohmyanalytics('Journalist2.set', 'dimension7', $("#ga_dimenValue7").val());
+    ohmyanalytics('Journalist3.set', 'dimension7', $("#ga_dimenValue7").val());
+    ohmyanalytics('Category.set', 'dimension7', $("#ga_dimenValue7").val());
+    ohmyanalytics('Region.set', 'dimension7', $("#ga_dimenValue7").val());
+  }   
+  
+  // UID셋팅
+  var memCd = getCookie('MemCd');
+  if (Number(memCd) > 0)
+    ohmyanalytics('set', 'userId', memCd);
+             
+  ohmyanalytics('send', 'pageview'); // 페이지뷰 전송
+  
+//  ohmyanalytics('send', 'pageview', {
+//      'hitCallback': function() {
+//        alert('hit sent');
+//      }
+//  }); // 페이지뷰 전송
+  ohmyanalytics('ScrollDepth.send', 'pageview'); // 스크롤깊이분석
+  ohmyanalytics('Youtube.send', 'pageview'); // 유투브분석
+  ohmyanalytics('Event.send', 'pageview'); // 이벤트&목표전환
+  ohmyanalytics('Journalist.send', 'pageview'); // 상근기자별(1)
+  ohmyanalytics('Journalist2.send', 'pageview'); // 상근기자별(2)
+  ohmyanalytics('Journalist3.send', 'pageview'); // 상근기자별(3)
+  ohmyanalytics('Category.send', 'pageview'); // 기본분류별
+  ohmyanalytics('Region.send', 'pageview'); // 지역분류별
+ });
+ 
+ function GA_Event(category, action, label, value) {
+      
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','eventProperty');
+  
+    eventProperty('create', 'UA-73278334-8', 'auto', 'Event');
+    
+    if (value != null)
+        eventProperty('Event.send', 'event', category, action, label, value);
+    else
+        eventProperty('Event.send', 'event', category, action, label);
+ }

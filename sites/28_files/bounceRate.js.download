@@ -1,0 +1,219 @@
+// <![CDATA[
+/**
+ * 반송률
+ */
+// ------------------------------------------------------
+// bounceRate
+// ------------------------------------------------------
+var mobNWindow = new Array(); // 채워지는 로직으로 인해 광고주가 다를수도 있으므로 윈도우를 배열로 받는다.
+var mobIntervalTime = 1000; // 체크단위 (1000ms = 1s)
+var mobBounceRateTime = 1; // bouncerate
+var mobNomalTime = 8; // nomal
+var mobAvailableTime = 20; // available
+// ------------------------------------------------------
+
+/**
+ * 새창
+ *
+ * @param url
+ * @returns
+ */
+function mobWindowOpen(pUrl) {
+    var winObj = window.open(pUrl, "_blank");
+    try {
+        if(!mobHasPUrl(pUrl)) {
+            var winObjInfo = {};
+            winObjInfo['winObj'] = winObj;
+            winObjInfo['startTime'] = new Date().getTime();
+            winObjInfo['endTime'] = winObjInfo['startTime'];
+            winObjInfo['pUrl'] = pUrl;
+            winObjInfo['bounceStepRun'] = true;
+            winObjInfo['bounceStep'] = 0;
+            mobNWindow.push(winObjInfo);
+            var idx = mobNWindow.length-1;
+            winObjInfo['bounceChecker'] =  setInterval(mobWatchingWindow, mobIntervalTime, pUrl, true);
+        }
+    } catch (e) {
+    }
+    return true;
+}
+
+/**
+ * 윈도우 감시
+ * @param count
+ * @returns
+ */
+//function mobWatchingWindow( count) {
+function mobWatchingWindow(pUrl) {
+    if(mobNWindow.length == 0) return;
+
+    var winObjInfo = undefined;
+    var idx = -1;
+    for(var i = mobNWindow.length -1; i >=0; i--) {
+        if(mobNWindow[i]['pUrl'] == pUrl) {
+            winObjInfo = mobNWindow[i];
+            idx = i;
+            break;
+        }
+    }
+    if(winObjInfo == undefined) return;
+
+    var nowTime = new Date().getTime();
+    winObjInfo['endTime'] = nowTime;
+    if(!winObjInfo['bounceStepRun']){
+        mobClearWinObjInfo(pUrl);
+        return;
+    }
+
+    var sec = Math.floor((nowTime - winObjInfo['startTime']) / 1000);
+    if (winObjInfo['winObj'].closed) {
+        if(sec == mobBounceRateTime && winObjInfo['bounceStep'] == 0) {
+            mobBounceRateAPI(winObjInfo, winObjInfo['startTime'] + mobBounceRateTime*1000);
+        } else if(sec == mobNomalTime && winObjInfo['bounceStep'] == 1) {
+            mobBounceRateAPI(winObjInfo, winObjInfo['startTime'] + mobNomalTime * 1000);
+        } else if(sec >= mobAvailableTime && winObjInfo['bounceStep'] <= 1) {
+            mobBounceRateAPI(winObjInfo, winObjInfo['startTime'] + mobAvailableTime * 1000);
+        }
+        mobClearWinObjInfo(pUrl);
+
+    } else {
+        if(sec == mobBounceRateTime) {
+            if(winObjInfo['bounceStep'] == 0) {
+                mobBounceRateAPI(winObjInfo, winObjInfo['startTime'] + mobBounceRateTime * 1000);
+                winObjInfo['bounceStep'] += 1;
+            }
+        } else if(sec == mobNomalTime) {
+            mobBounceRateAPI(winObjInfo, winObjInfo['startTime'] + mobNomalTime * 1000);
+            winObjInfo['bounceStep'] += 1;
+        } else if(sec >= mobAvailableTime) {
+            mobBounceRateAPI(winObjInfo, winObjInfo['startTime'] + mobAvailableTime * 1000);
+            winObjInfo['bounceStep'] += 1;
+            mobClearWinObjInfo(pUrl);
+        }
+    }
+}
+
+/**
+ * 반송률 API 호출
+ * @param drcUrl
+ * @param startTime
+ * @param endTime
+ * @param count
+ * @returns
+ */
+function mobBounceRateAPI(winObjInfo, endTime) {
+    if(winObjInfo === undefined)    return;
+
+    var drcUrl = winObjInfo['pUrl']
+    var startTime = winObjInfo['startTime']
+
+
+    var productType = mobGetQueryString(drcUrl, 'product'); // 상품구분
+    if (productType == undefined) {
+        productType = mobProductTypeCheck(drcUrl);
+    }
+
+    var parameter; // 파라미터
+    parameter = "adGubun=" + mobGetQueryString(drcUrl, 'gb'); // 광고구분
+    parameter += "&siteCode=" + mobGetQueryString(drcUrl, 'sc'); // 캠페인코드
+    parameter += "&mediaCode=" + mobGetQueryString(drcUrl, 'mc'); // 매체코드
+    parameter += "&adverId=" + mobGetQueryString(drcUrl, 'u'); // 광고주아이디
+    parameter += "&pCode=" + mobGetQueryString(drcUrl, 'pCode'); // 상품코드
+    parameter += "&productType=" + productType; // 상품구분
+    parameter += "&startTime=" + startTime; // 시작시간
+    parameter += "&endTime=" + endTime; // 종료시간
+    parameter += "&step=" + winObjInfo['bounceStep']; // 종료시간
+    parameter = parameter.replace(/undefined/gi, "");
+    $.ajax({
+        type : "GET"
+        , url : "https://www.dreamsearch.or.kr/servlet/bounceRate"
+        , dataType : 'json'
+        , data : parameter
+        , xhrFields: {
+            withCredentials: true
+        }
+        , success : function(data) {
+            winObjInfo['bounceStepRun'] = data.isResult;
+        }
+        , error : function (e) {
+            winObjInfo['bounceStepRun'] = false; // 오류가 발생하는 경우 반송률을 처리 하지 않는다.
+        }
+    });
+}
+
+/**
+ * 파라미터 분리
+ *
+ * @param paramName
+ * @returns
+ */
+function mobGetQueryString(drcUrl, paramName) {
+    var urlSplit = drcUrl.split('?');
+    var params = urlSplit[1].split('&');
+    for (var i = 0; i < params.length; i++) {
+        var param = params[i].split('=');
+        if (param[0] == paramName) {
+            if (param[1].length > 0) {
+                return param[1];
+            }
+        }
+    }
+}
+
+/**
+ * drc구분에 따른 상품타입
+ *
+ * @param drcUrl
+ * @returns
+ */
+function mobProductTypeCheck(drcUrl) {
+    var urlSplit = drcUrl.split('?');
+    if (urlSplit[0].indexOf('sdrc') != -1) {
+        return 'sky';
+    } else if (urlSplit[0].indexOf('idrc') != -1) {
+        return 'ico';
+    } else if (urlSplit[0].indexOf('drc') != -1) {
+        return 'banner';
+    }
+}
+
+
+/**
+ * 같은 OBj 있는지 확인
+ * @param pUrl
+ * @returns
+ */
+function mobHasPUrl(pUrl) {
+    if(pUrl == undefined)        return true;       // pUrl이 없으면 BounceRate 처리중지
+
+    if(mobNWindow.length == 0)   return false;
+
+    var bPUrl = false;
+    for(var idx = 0; idx < mobNWindow.length; idx++){
+        var winObjInfo = mobNWindow[idx];
+        if(winObjInfo['pUrl'] == pUrl) {
+            bPUrl = true;
+            break;
+        }
+    }
+    return bPUrl;
+}
+
+
+/**
+ * 클리어
+ * @param idx
+ * @returns
+ */
+function mobClearWinObjInfo(pUrl) {
+    if(mobNWindow.length == 0) return;
+
+    for(var idx = mobNWindow.length -1; idx >=0; idx--) {
+        if(mobNWindow[idx]['pUrl'] == pUrl) {
+            clearInterval(mobNWindow[idx]['bounceChecker']);
+            var temp = mobNWindow.splice(idx, 1);
+            break;
+        }
+    }
+}
+// ]]>

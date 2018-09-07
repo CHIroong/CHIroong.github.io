@@ -1,0 +1,38 @@
+if (thisCode != "19F" && thisCode != "123")
+{		
+	var	BANNER_CLASSIFY = "common1";
+	//var BANNER_CODE =  "1"; //A배너
+	//var BANNER_CODE =  "2"; //D배너
+	//var BANNER_CODE =  "3"; //구글 배너
+	var BANNER_CODE =  "3"; 
+	var leftMenuBannerScroll= "Y";
+}	
+
+
+var hocnt = 0;
+
+var str1="hospital";
+var str2="hospital";
+var str3="hospital";
+var str4="hospital";
+var str5="hospital";
+
+Array.prototype.shuffle = function(){ 
+  return this.concat().sort( 
+    function(){
+	  return Math.random() - Math.random();
+	  } 
+  ); 
+} 
+
+
+var data = new Array(); 
+
+data[0] = ['고도일병원','http://health.chosun.com/with_hospital/godoil/','http://health.chosun.com/fileupload/withhospital/1491803627526_1.jpg'];
+data[1] = ['서초21세기병원','http://health.chosun.com/with_hospital/21st/','http://health.chosun.com/fileupload/withhospital/1491800426472_1.jpg'];
+data[2] = ['국제나은병원','http://health.chosun.com/with_hospital/naeun/','http://health.chosun.com/fileupload/withhospital/1491806868248_1.jpg'];
+data[3] = ['바른세상병원','http://health.chosun.com/with_hospital/barunsesang/','http://health.chosun.com/fileupload/withhospital/1491887243162_1.jpg'];
+data[4] = ['연세바른병원','http://health.chosun.com/with_hospital/yonseibarun/','http://health.chosun.com/fileupload/withhospital/1491804518174_1.jpg'];
+
+
+hocnt = 3;

@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+* {margin:0px;padding:0px;list-style:none;}
+img {border:0px;}
+ul,ol,dl,li {list-style:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+a:link {text-decoration: none; }
+a:visited {text-decoration: none;}
+a:hover {text-decoration: none;}
+a:active {text-decoration: none;}
+
+.bold {font-weight:bold;}
+
+.IM {filter:contrast(100%);-ms-filter:contrast(100%);-moz-filter:contrast(100%);-webkit-filter:contrast(100%);-o-filter:contrast(100%);}
+.IM:hover {filter:contrast(150%);-ms-filter:contrast(150%);-moz-filter:contrast(150%);-webkit-filter:contrast(150%);-o-filter:contrast(150%);}

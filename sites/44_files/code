@@ -1,0 +1,667 @@
+EGS2_VERSION="2.1.0.20180814";
+
+var __EGS2_DATA = {};
+var __EGS2_TARGET = {
+    clickTargets: {},
+    impressionTargets: {}
+};
+
+var egs2Logger = null;
+var callbackRegistry = {};
+
+(function () {
+    /*!
+    * Bowser - a browser detector
+    * https://github.com/ded/bowser
+    * MIT License | (c) Dustin Diaz 2015
+    */
+    !function(e,t,n){typeof module!="undefined"&&module.exports?module.exports=n():typeof define=="function"&&define.amd?define(t,n):e[t]=n()}(this,"bowser",function(){function t(t){function n(e){var n=t.match(e);return n&&n.length>1&&n[1]||""}function r(e){var n=t.match(e);return n&&n.length>1&&n[2]||""}function N(e){switch(e){case"NT":return"NT";case"XP":return"XP";case"NT 5.0":return"2000";case"NT 5.1":return"XP";case"NT 5.2":return"2003";case"NT 6.0":return"Vista";case"NT 6.1":return"7";case"NT 6.2":return"8";case"NT 6.3":return"8.1";case"NT 10.0":return"10";default:return undefined}}var i=n(/(ipod|iphone|ipad)/i).toLowerCase(),s=/like android/i.test(t),o=!s&&/android/i.test(t),u=/nexus\s*[0-6]\s*/i.test(t),a=!u&&/nexus\s*[0-9]+/i.test(t),f=/CrOS/.test(t),l=/silk/i.test(t),c=/sailfish/i.test(t),h=/tizen/i.test(t),p=/(web|hpw)os/i.test(t),d=/windows phone/i.test(t),v=/SamsungBrowser/i.test(t),m=!d&&/windows/i.test(t),g=!i&&!l&&/macintosh/i.test(t),y=!o&&!c&&!h&&!p&&/linux/i.test(t),b=n(/edge\/(\d+(\.\d+)?)/i),w=n(/version\/(\d+(\.\d+)?)/i),E=/tablet/i.test(t)&&!/tablet pc/i.test(t),S=!E&&/[^-]mobi/i.test(t),x=/xbox/i.test(t),T;/opera/i.test(t)?T={name:"Opera",opera:e,version:w||n(/(?:opera|opr|opios)[\s\/](\d+(\.\d+)?)/i)}:/opr\/|opios/i.test(t)?T={name:"Opera",opera:e,version:n(/(?:opr|opios)[\s\/](\d+(\.\d+)?)/i)||w}:/SamsungBrowser/i.test(t)?T={name:"Samsung Internet for Android",samsungBrowser:e,version:w||n(/(?:SamsungBrowser)[\s\/](\d+(\.\d+)?)/i)}:/coast/i.test(t)?T={name:"Opera Coast",coast:e,version:w||n(/(?:coast)[\s\/](\d+(\.\d+)?)/i)}:/yabrowser/i.test(t)?T={name:"Yandex Browser",yandexbrowser:e,version:w||n(/(?:yabrowser)[\s\/](\d+(\.\d+)?)/i)}:/ucbrowser/i.test(t)?T={name:"UC Browser",ucbrowser:e,version:n(/(?:ucbrowser)[\s\/](\d+(?:\.\d+)+)/i)}:/mxios/i.test(t)?T={name:"Maxthon",maxthon:e,version:n(/(?:mxios)[\s\/](\d+(?:\.\d+)+)/i)}:/epiphany/i.test(t)?T={name:"Epiphany",epiphany:e,version:n(/(?:epiphany)[\s\/](\d+(?:\.\d+)+)/i)}:/puffin/i.test(t)?T={name:"Puffin",puffin:e,version:n(/(?:puffin)[\s\/](\d+(?:\.\d+)?)/i)}:/sleipnir/i.test(t)?T={name:"Sleipnir",sleipnir:e,version:n(/(?:sleipnir)[\s\/](\d+(?:\.\d+)+)/i)}:/k-meleon/i.test(t)?T={name:"K-Meleon",kMeleon:e,version:n(/(?:k-meleon)[\s\/](\d+(?:\.\d+)+)/i)}:d?(T={name:"Windows Phone",osname:"Windows Phone",windowsphone:e},b?(T.msedge=e,T.version=b):(T.msie=e,T.version=n(/iemobile\/(\d+(\.\d+)?)/i))):/msie|trident/i.test(t)?T={name:"Internet Explorer",msie:e,version:n(/(?:msie |rv:)(\d+(\.\d+)?)/i)}:f?T={name:"Chrome",osname:"Chrome OS",chromeos:e,chromeBook:e,chrome:e,version:n(/(?:chrome|crios|crmo)\/(\d+(\.\d+)?)/i)}:/chrome.+? edge/i.test(t)?T={name:"Microsoft Edge",msedge:e,version:b}:/vivaldi/i.test(t)?T={name:"Vivaldi",vivaldi:e,version:n(/vivaldi\/(\d+(\.\d+)?)/i)||w}:c?T={name:"Sailfish",osname:"Sailfish OS",sailfish:e,version:n(/sailfish\s?browser\/(\d+(\.\d+)?)/i)}:/seamonkey\//i.test(t)?T={name:"SeaMonkey",seamonkey:e,version:n(/seamonkey\/(\d+(\.\d+)?)/i)}:/firefox|iceweasel|fxios/i.test(t)?(T={name:"Firefox",firefox:e,version:n(/(?:firefox|iceweasel|fxios)[ \/](\d+(\.\d+)?)/i)},/\((mobile|tablet);[^\)]*rv:[\d\.]+\)/i.test(t)&&(T.firefoxos=e,T.osname="Firefox OS")):l?T={name:"Amazon Silk",silk:e,version:n(/silk\/(\d+(\.\d+)?)/i)}:/phantom/i.test(t)?T={name:"PhantomJS",phantom:e,version:n(/phantomjs\/(\d+(\.\d+)?)/i)}:/slimerjs/i.test(t)?T={name:"SlimerJS",slimer:e,version:n(/slimerjs\/(\d+(\.\d+)?)/i)}:/blackberry|\bbb\d+/i.test(t)||/rim\stablet/i.test(t)?T={name:"BlackBerry",osname:"BlackBerry OS",blackberry:e,version:w||n(/blackberry[\d]+\/(\d+(\.\d+)?)/i)}:p?(T={name:"WebOS",osname:"WebOS",webos:e,version:w||n(/w(?:eb)?osbrowser\/(\d+(\.\d+)?)/i)},/touchpad\//i.test(t)&&(T.touchpad=e)):/bada/i.test(t)?T={name:"Bada",osname:"Bada",bada:e,version:n(/dolfin\/(\d+(\.\d+)?)/i)}:h?T={name:"Tizen",osname:"Tizen",tizen:e,version:n(/(?:tizen\s?)?browser\/(\d+(\.\d+)?)/i)||w}:/qupzilla/i.test(t)?T={name:"QupZilla",qupzilla:e,version:n(/(?:qupzilla)[\s\/](\d+(?:\.\d+)+)/i)||w}:/chromium/i.test(t)?T={name:"Chromium",chromium:e,version:n(/(?:chromium)[\s\/](\d+(?:\.\d+)?)/i)||w}:/chrome|crios|crmo/i.test(t)?T={name:"Chrome",chrome:e,version:n(/(?:chrome|crios|crmo)\/(\d+(\.\d+)?)/i)}:o?T={name:"Android",version:w}:/safari|applewebkit/i.test(t)?(T={name:"Safari",safari:e},w&&(T.version=w)):i?(T={name:i=="iphone"?"iPhone":i=="ipad"?"iPad":"iPod"},w&&(T.version=w)):/googlebot/i.test(t)?T={name:"Googlebot",googlebot:e,version:n(/googlebot\/(\d+(\.\d+))/i)||w}:T={name:n(/^(.*)\/(.*) /),version:r(/^(.*)\/(.*) /)},!T.msedge&&/(apple)?webkit/i.test(t)?(/(apple)?webkit\/537\.36/i.test(t)?(T.name=T.name||"Blink",T.blink=e):(T.name=T.name||"Webkit",T.webkit=e),!T.version&&w&&(T.version=w)):!T.opera&&/gecko\//i.test(t)&&(T.name=T.name||"Gecko",T.gecko=e,T.version=T.version||n(/gecko\/(\d+(\.\d+)?)/i)),!T.windowsphone&&!T.msedge&&(o||T.silk)?(T.android=e,T.osname="Android"):!T.windowsphone&&!T.msedge&&i?(T[i]=e,T.ios=e,T.osname="iOS"):g?(T.mac=e,T.osname="macOS"):x?(T.xbox=e,T.osname="Xbox"):m?(T.windows=e,T.osname="Windows"):y&&(T.linux=e,T.osname="Linux");var C="";T.windows?C=N(n(/Windows ((NT|XP)( \d\d?.\d)?)/i)):T.windowsphone?C=n(/windows phone (?:os)?\s?(\d+(\.\d+)*)/i):T.mac?(C=n(/Mac OS X (\d+([_\.\s]\d+)*)/i),C=C.replace(/[_\s]/g,".")):i?(C=n(/os (\d+([_\s]\d+)*) like mac os x/i),C=C.replace(/[_\s]/g,".")):o?C=n(/android[ \/-](\d+(\.\d+)*)/i):T.webos?C=n(/(?:web|hpw)os\/(\d+(\.\d+)*)/i):T.blackberry?C=n(/rim\stablet\sos\s(\d+(\.\d+)*)/i):T.bada?C=n(/bada\/(\d+(\.\d+)*)/i):T.tizen&&(C=n(/tizen[\/\s](\d+(\.\d+)*)/i)),C&&(T.osversion=C);var k=!T.windows&&C.split(".")[0];if(E||a||i=="ipad"||o&&(k==3||k>=4&&!S)||T.silk)T.tablet=e;else if(S||i=="iphone"||i=="ipod"||o||u||T.blackberry||T.webos||T.bada)T.mobile=e;return T.msedge||T.msie&&T.version>=10||T.yandexbrowser&&T.version>=15||T.vivaldi&&T.version>=1||T.chrome&&T.version>=20||T.samsungBrowser&&T.version>=4||T.firefox&&T.version>=20||T.safari&&T.version>=6||T.opera&&T.version>=10||T.ios&&T.osversion&&T.osversion.split(".")[0]>=6||T.blackberry&&T.version>=10.1||T.chromium&&T.version>=20?T.a=e:T.msie&&T.version<10||T.chrome&&T.version<20||T.firefox&&T.version<20||T.safari&&T.version<6||T.opera&&T.version<10||T.ios&&T.osversion&&T.osversion.split(".")[0]<6||T.chromium&&T.version<20?T.c=e:T.x=e,T}function r(e){return e.split(".").length}function i(e,t){var n=[],r;if(Array.prototype.map)return Array.prototype.map.call(e,t);for(r=0;r<e.length;r++)n.push(t(e[r]));return n}function s(e){var t=Math.max(r(e[0]),r(e[1])),n=i(e,function(e){var n=t-r(e);return e+=(new Array(n+1)).join(".0"),i(e.split("."),function(e){return(new Array(20-e.length)).join("0")+e}).reverse()});while(--t>=0){if(n[0][t]>n[1][t])return 1;if(n[0][t]!==n[1][t])return-1;if(t===0)return 0}}function o(e,r,i){var o=n;typeof r=="string"&&(i=r,r=void 0),r===void 0&&(r=!1),i&&(o=t(i));var u=""+o.version;for(var a in e)if(e.hasOwnProperty(a)&&o[a]){if(typeof e[a]!="string")throw new Error("Browser version in the minVersion map should be a string: "+a+": "+String(e));return s([u,e[a]])<0}return r}function u(e,t,n){return!o(e,t,n)}var e=!0,n=t(typeof navigator!="undefined"?navigator.userAgent||"":"");return n.test=function(e){for(var t=0;t<e.length;++t){var r=e[t];if(typeof r=="string"&&r in n)return!0}return!1},n.isUnsupportedBrowser=o,n.compareVersions=s,n.check=u,n._detect=t,n})
+    /** end */
+
+    // IE < 9 에서의 bind 함수 polyfill
+    if (!Function.prototype.bind) {
+        Function.prototype.bind = function (oThis) {
+            'use strict';
+            if (typeof this !== "function") {
+                // closest thing possible to the ECMAScript 5 internal IsCallable function
+                throw new TypeError("Function.prototype.bind - what is trying to be bound is not callable");
+            }
+
+            var aArgs = Array.prototype.slice.call(arguments, 1),
+                fToBind = this,
+                FNOP = function () {},
+                fBound = function () {
+                    return fToBind.apply(
+                        this instanceof FNOP && oThis ? this : oThis,
+                    aArgs.concat(Array.prototype.slice.call(arguments))
+                );
+                };
+
+            FNOP.prototype = this.prototype;
+            fBound.prototype = new FNOP();
+
+            return fBound;
+        };
+    }
+
+    // 쿠키 조회 함수가 없을 경우에 대한 처리
+    if (!document.getCookie) {
+        document.getCookie = function(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for(var i = 0 ; i < ca.length ; i++) {
+                var c = ca[i];
+                while (c.charAt(0)==' ') c = c.substring(1,c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+            }
+            return null;
+        }
+    }
+
+    // IE < 8 에서의 querySelector 함수 polyfill
+    if (!document.querySelector) {
+        document.querySelector = function(selectors) {
+            var elements = document.querySelectorAll(selectors);
+            return (elements.length) ? elements[0] : null;
+        };
+    }
+
+    // IE < 8 에서의 querySelectorAll 함수 polyfill
+    if (!document.querySelectorAll) {
+        document.querySelectorAll = function(selectors) {
+            var style = document.createElement('style'), elements = [], element;
+            document.documentElement.firstChild.appendChild(style);
+            document._qsa = [];
+
+            style.styleSheet.cssText = selectors + '{x-qsa:expression(document._qsa && document._qsa.push(this))}';
+            window.scrollBy(0, 0);
+            style.parentNode.removeChild(style);
+
+            while (document._qsa.length) {
+                element = document._qsa.shift();
+                element.style.removeAttribute('x-qsa');
+                elements.push(element);
+            }
+            document._qsa = null;
+            return elements;
+        };
+    }
+
+    // IE < 9 에서의 keys 함수 polyfill
+    if (!Object.keys) {
+        Object.keys = function (o) {
+            if (o !== Object(o)) {
+                throw new TypeError('Object.keys called on a non-object');
+            }
+            var k = [],
+                p;
+            for (p in o) {
+                if (Object.prototype.hasOwnProperty.call(o, p)) {
+                    k.push(p);
+                }
+            }
+            return k;
+        }
+    }
+
+    if (!Object.values) {
+        Object.values = function(o) {
+            var allowedTypes = ["[object String]", "[object Object]", "[object Array]", "[object Function]"];
+            var objType = Object.prototype.toString.call(o);
+
+            if(o === null || typeof o === "undefined") {
+                throw new TypeError("Cannot convert undefined or null to object");
+            } else if(!~allowedTypes.indexOf(objType)) {
+                return [];
+            } else {
+                // if ES6 is supported
+                if (Object.keys) {
+                    return Object.keys(o).map(function (key) {
+                        return o[key];
+                    });
+                }
+
+                var result = [];
+                for (var prop in o) {
+                    if (o.hasOwnProperty(prop)) {
+                        result.push(o[prop]);
+                    }
+                }
+
+                return result;
+            }
+        };
+    }
+
+    if (typeof Object.assign != 'function') {
+        (function () {
+            Object.assign = function (target) {
+                'use strict';
+                if (target === undefined || target === null) {
+                    throw new TypeError('Cannot convert undefined or null to object');
+                }
+
+                var output = Object(target);
+                for (var index = 1; index < arguments.length; index++) {
+                    var source = arguments[index];
+                    if (source !== undefined && source !== null) {
+                        for (var nextKey in source) {
+                            if (source.hasOwnProperty(nextKey)) {
+                                output[nextKey] = source[nextKey];
+                            }
+                        }
+                    }
+                }
+                return output;
+            };
+        })();
+    }
+
+    if (typeof Array.prototype.forEach != 'function') {
+        Array.prototype.forEach = function(callback) {
+            for (var i = 0; i < this.length; i++) {
+                callback.apply(this, [this[i], i, this]);
+            }
+        };
+    }
+
+    if (!String.prototype.endsWith) {
+        String.prototype.endsWith = function(searchString, position) {
+            var subjectString = this.toString();
+            if (typeof position !== 'number' || !isFinite(position) || Math.floor(position) !== position || position > subjectString.length) {
+                position = subjectString.length;
+            }
+            position -= searchString.length;
+            var lastIndex = subjectString.indexOf(searchString, position);
+            return lastIndex !== -1 && lastIndex === position;
+        };
+    }
+
+    // IE < 11 에서의 HTMLElement.dataset polyfill
+    if (!document.documentElement.dataset &&
+            // FF is empty while IE gives empty object
+            (!Object.getOwnPropertyDescriptor(Element.prototype, 'dataset')  ||
+            !Object.getOwnPropertyDescriptor(Element.prototype, 'dataset').get)
+        ) {
+        var propDescriptor = {
+            enumerable: true,
+            get: function () {
+                var __this = this;
+                var map = {};
+                var attributes = __this.attributes;
+
+                function getter() {
+                    return this.value;
+                }
+
+                function setter(name, value) {
+                    if (typeof value === 'undefined') {
+                        this.removeAttribute(name);
+                    } else {
+                        this.setAttribute(name, value);
+                    }
+                }
+
+                for (var i = 0, j = attributes.length; i < j; i++) {
+                    var attribute = attributes[i];
+
+                    if (attribute) {
+                        var name = attribute.name;
+
+                        if (name.indexOf('data-') === 0) {
+                            var prop = name.slice(5).replace(/-./g, function (u) {
+                                return u.charAt(1).toUpperCase();
+                            });
+
+                            var value = attribute.value;
+
+                            Object.defineProperty(map, prop, {
+                                enumerable: true,
+                                get: getter.bind({ value: value || '' }),
+                                set: setter.bind(__this, name)
+                            });
+                        }
+                    }
+                }
+
+                return map;
+            }
+        };
+        try {
+            // FF enumerates over element's dataset, but not
+            //   Element.prototype.dataset; IE9 iterates over both
+            Object.defineProperty(Element.prototype, 'dataset', propDescriptor);
+        } catch (e) {
+            propDescriptor.enumerable = false; // IE8 does not allow setting to true
+            Object.defineProperty(Element.prototype, 'dataset', propDescriptor);
+        }
+    }
+})();
+
+
+/**
+ * from https://stackoverflow.com/questions/9899372/pure-javascript-equivalent-to-jquerys-ready-how-to-call-a-function-when-the/9899701#9899701
+ */
+(function(funcName, baseObj) {
+    // The public function name defaults to window.egsReady
+    // but you can pass in your own object and own function name and those will be used
+    // if you want to put them in a different namespace
+    funcName = funcName || "egsReady";
+    baseObj = baseObj || window;
+    var readyList = [];
+    var readyFired = false;
+    var readyEventHandlersInstalled = false;
+
+    function ready() {
+        if (!readyFired) {
+            readyFired = true;
+            for (var i = 0; i < readyList.length; i++) {
+                readyList[i].fn.call(window, readyList[i].ctx);
+            }
+            readyList = [];
+        }
+    }
+
+    function readyStateChange() {
+        if ( document.readyState === "complete" ) {
+            ready();
+        }
+    }
+
+    baseObj[funcName] = function(callback, context) {
+        if (typeof callback !== "function") {
+            throw new TypeError("callback for egsReady(fn) must be a function");
+        }
+        if (readyFired) {
+            setTimeout(function() {callback(context);}, 1);
+            return;
+        } else {
+            readyList.push({fn: callback, ctx: context});
+        }
+        if (document.readyState === "complete") {
+            setTimeout(ready, 1);
+        } else if (!readyEventHandlersInstalled) {
+            if (document.addEventListener) {
+                document.addEventListener("DOMContentLoaded", ready, false);
+                window.addEventListener("load", ready, false);
+            } else {
+                document.attachEvent("onreadystatechange", readyStateChange);
+                window.attachEvent("onload", ready);
+            }
+            readyEventHandlersInstalled = true;
+        }
+    }
+})("egsReady", window);
+
+/**
+ * TODO: move to Egs2 prototype
+ */
+var egs2LogByPushstate = function(response) {
+    if (response.result) {
+        var action = response.data.action;
+
+        // view log
+        egs2Logger.log({
+            "key": "view",
+            "action": action
+        });
+
+        // update targets
+    } else {
+        // console.log(response.message);
+    }
+}
+
+/**
+ * Egs2 prototype initialize function
+ */
+function Egs2(options) {
+    var __this = this;
+
+    this.data = {
+        'url_ref': document.referrer,
+        'url': window.location.href,
+        'web_service_code': 'default',
+        'department_code': 'default'
+    };
+    this.debug_mode = false;
+    this.is_mobile = false;
+    this.frame = null;
+    this.script = null;
+    this.clickTargets = {};
+    this.impressionTargets = {};
+    this.useragent = navigator.userAgent.toLowerCase();
+    this.apiUrl = '//es-script.interpark.com';
+    this.sendingUrl = '//es2.interpark.com';
+
+    this.createFrame();
+    this.createScript();
+
+    this.loadData(options);
+    this.parseBowser();
+    this.parseQueryString();
+    this.parseUseragent();
+    this.parseCookie();
+
+    this.updateTargets();
+
+    this.addClickAction();
+    this.addImpressionAction();
+
+    (function(history){
+        var pushState = history.pushState;
+        if (typeof pushState !== 'undefined' && pushState !== null) {
+            history.pushState = function(state, title, url) {
+                if (typeof history.onpushstate == "function") {
+                    history.onpushstate({state: state});
+                }
+
+                __this.queryLocation(url, egs2LogByPushstate, function(r) {});
+
+                return pushState.apply(history, arguments);
+            };
+        }
+    })(window.history);
+};
+
+/**
+ * Egs2 prototype functions
+ */
+Egs2.prototype = {
+    addClickAction: function() {
+        var __this = this;
+        __this.bindEvent(document, 'click', function(e) {
+            var suspect = e.target;
+            var targetKeys = Object.keys(__this.clickTargets);
+            var targetValues = Object.values(__this.clickTargets);
+            egs2_loop1:
+            for(var i = 0; i < targetKeys.length ; i++) {
+                var selectedArr = document.querySelectorAll(targetKeys[i]);
+                egs2_loop2:
+                for(var j = 0; j < selectedArr.length ; j ++) {
+                    if (selectedArr[j].contains(suspect)) {
+                        egs2Logger.log({"key":"click","section_id":targetValues[i]});
+                        break egs2_loop1;
+                    }
+                }
+            }
+        });
+    },
+    addImpressionAction: function() {
+        var __this = this;
+        __this.bindEvent(document, 'scroll', function () {
+            var oldVisibles = [];
+            var timers = [];
+            var targetKeys = Object.keys(__this.impressionTargets);
+            var targetValues = Object.values(__this.impressionTargets);
+
+            return (function () {
+                for(var i = 0; i < targetKeys.length ; i++) {
+                    (function () {
+                        var selectedArr = document.querySelectorAll(targetKeys[i]);
+                        var targetCallback = targetValues[i];
+
+                        for(var j = 0; j < selectedArr.length ; j ++) {
+                            (function () {
+                                var index = i*(j + 1);
+                                var target = selectedArr[j];
+                                var visible = __this.isElementInViewport(target);
+
+                                if (visible == oldVisibles[index])
+                                    return;
+
+                                if (visible) {
+                                    try {
+                                        timers[index] = targetCallback(Object.assign({}, target.dataset))
+                                    } catch (e) {}
+                                } else {
+                                    clearTimeout(timers[index])
+                                }
+
+                                oldVisibles[index] = visible;
+                            })()
+                        }
+                    })()
+                }
+            })();
+        });
+    },
+    bindEvent: function (el, evt, cb) {
+        if (el.addEventListener) {
+            el.addEventListener(evt, cb, true);
+        } else if (el.attachEvent) {
+            el.attachEvent('on' + evt, function() {
+                cb.call(event.srcElement, event);
+            });
+        }
+    },
+    createFrame: function() {
+        if (this.frame !== null) return;
+
+        this.frame = document.createElement("iframe");
+        this.frame.height = "0";
+        this.frame.width = "0";
+        this.frame.style.display = "none";
+        this.frame.style.visibility = "hidden";
+        this.frame.name = 'egs2frame';
+
+        document.getElementsByTagName('body')[0].appendChild(this.frame);
+    },
+    createScript: function() {
+        if (this.script !== null) return;
+
+        this.script = document.createElement("script");
+
+        document.getElementsByTagName('body')[0].appendChild(this.script);
+    },
+    getQueryStringObject: function() {
+        var s1 = location.search.substring(1, location.search.length).split('&'),
+            r = {}, s2, i;
+        for (i = 0; i < s1.length; i += 1) {
+            s2 = s1[i].split('=');
+            r[decodeURIComponent(s2[0]).toLowerCase()] = decodeURIComponent(s2[1]);
+        }
+        return r;
+    },
+    isElementInViewport: function (el, exposedAreaRate) {
+        var rect = el.getBoundingClientRect();
+        if (typeof exposedAreaRate === "undefined") {
+            exposedAreaRate = 0.5;
+        }
+        if (!this.isNumeric(exposedAreaRate)) {
+            throw new TypeError("Second parameter should be Number type");
+        }
+        return (
+            rect.top + (rect.height * (1 - exposedAreaRate)) >= 0 &&
+            rect.left + (rect.width * (1 - exposedAreaRate)) >= 0 &&
+            rect.bottom - (rect.height * (1 - exposedAreaRate)) <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right - (rect.width * (1 - exposedAreaRate)) <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    },
+    isNumeric: function (n) {
+        return !isNaN(parseFloat(n)) && isFinite(n);
+    },
+    loadData: function(data) {
+        var __this = this;
+        if (typeof data === "object" && Object.keys(data).length > 0) {
+            Object.keys(data).forEach(function(e,i,a) {
+                __this.data[e] = data[e];
+            });
+        }
+    },
+    /**
+     * TODO: log 호출 시 data override 하는데, flush -> assign 로직으로 변경 필요해 보임
+     */
+    log: function(data) {
+        this.data["client_time"] = new Date().getTime();
+        this.data["log_time"] = Math.floor(this.data["client_time"] / 1000);
+
+        if (typeof __EGS_DATAOBJ !== "undefined") {
+            delete __EGS_DATAOBJ["action"]
+            this.loadData(__EGS_DATAOBJ);
+        }
+
+        this.loadData(data);
+
+        // for debug
+        this.data["etm_configured_site"] = this.data["site"]
+
+        var kafkaTopic = "ETM." + this.data['department_code'];
+        var params = "json_data=" + encodeURIComponent(JSON.stringify(this.data));
+
+        this.frame.contentWindow.location.replace(this.sendingUrl + '/logs/' + kafkaTopic + "?" + params);
+    },
+    parseBowser: function() {
+        if (typeof bowser === 'undefined') return;
+        if (typeof bowser.name !== "undefined" && bowser.name !== null && bowser.name !== '') {
+            this.data['browser'] = bowser.name;
+        }
+        if (typeof bowser.version !== "undefined" && bowser.version !== null && bowser.version !== '') {
+            this.data['browser_ver'] = bowser.version;
+        }
+        if (typeof bowser.osname !== "undefined" && bowser.osname !== null && bowser.osname !== '') {
+            var osname = bowser.osname.toLowerCase();
+            if (osname !== 'mac' && osname !== 'windows' && osname !== 'linux') {
+                this.is_mobile = true;
+            }
+        }
+    },
+    parseCookie: function() {
+        var pcid = null;
+        if (document.getCookie('ippcd') !== null) {
+            this.data['ippcd'] = document.getCookie('ippcd');
+        }
+        if (document.getCookie('tempinterparkGUEST') !== null) {
+            this.data['uid'] = decodeURIComponent(document.getCookie('tempinterparkGUEST'));
+        }
+        if (document.getCookie('pcid') !== null) {
+            pcid = document.getCookie('pcid');
+        }
+        if (pcid === null) {
+            if (document.getCookie('m_pcid') !== null || document.getCookie('_SHOP_PC_ID') !== null) {
+                pcid = document.getCookie('m_pcid') || document.getCookie('_SHOP_PC_ID');
+            }
+        }
+        if (pcid !== null) {
+            this.data['pcid'] = pcid;
+        }
+    },
+    parseUseragent: function() {
+        if (this.data['web_service_code'] !== "default") {
+            this.data['site'] = this.data['web_service_code'] + ".pcweb";
+        }
+        if (this.is_mobile && this.data.hasOwnProperty('site') && this.data['site'].toLowerCase().endsWith('pcweb')) {
+            this.data['site'] = this.data['site'].replace('pcweb', 'mweb');
+        }
+        if (this.useragent.indexOf("interparkbrowser-shop") > -1) { //인터파크 통합앱
+            this.data['site'] = "interpark.app";
+        } else if(this.useragent.indexOf("interparktourair") > -1) { //항공 앱
+            this.data['site'] = "air.app";
+        } else if(this.useragent.indexOf("interparktourabroadhotel") > -1 ) { //해외호텔 앱
+            this.data['site'] = "hotel.app";
+        } else if(this.useragent.indexOf("interparktourcheckinnow") > -1 ) { //체크인나우 앱
+            this.data['site'] = "checkinnow.app";
+        } else if(this.useragent.indexOf("interparktourmain") > -1){ //인터파크 투어앱
+            this.data['site'] = "tour.app";
+        }
+    },
+    parseQueryString: function() {
+        var query_string = this.getQueryStringObject();
+
+        if (typeof query_string["utm_source"] !== "undefined") {
+            this.data["utm_source"] = query_string["utm_source"];
+        }
+        if (typeof query_string["utm_medium"] !== "undefined") {
+            this.data["utm_medium"] = query_string["utm_medium"];
+        }
+        if (typeof query_string["utm_campaign"] !== "undefined") {
+            this.data["utm_campaign"] = query_string["utm_campaign"];
+        }
+        if (typeof query_string["utm_term"] !== "undefined") {
+            this.data["utm_term"] = query_string["utm_term"];
+        }
+        if (typeof query_string["utm_content"] !== "undefined") {
+            this.data["utm_content"] = query_string["utm_content"];
+        }
+    },
+    queryLocation: function(url, onSuccess, onError) {
+        var __this = this;
+        var scriptOk = false;
+        var callbackName = 'cb' + String(Math.random()).slice(-6);
+
+        callbackRegistry[callbackName] = function (data) {
+            scriptOk = true;
+            delete callbackRegistry[callbackName];
+            onSuccess(data);
+        };
+
+        function checkCallback() {
+            if (scriptOk) return;
+            delete callbackRegistry[callbackName];
+        }
+
+        // for IE
+        __this.script.onreadystatechange = function () {
+            if (this.readyState == 'complete' || this.readyState == 'loaded') {
+                this.onreadystatechange = null;
+                setTimeout(checkCallback, 0);
+            }
+        }
+
+        var params = 'u=' + encodeURIComponent(url) + '&' + 'callback=callbackRegistry.' + callbackName;
+        var scriptUrl = __this.apiUrl + '/query?' + params;
+
+        __this.script.onload = __this.script.onerror = checkCallback;
+        __this.script.src = scriptUrl;
+    },
+    triggerEvent: function(el, evt) {
+        if (el.dispatchEvent) {
+            var event;
+            try { event = new Event(evt); }
+            catch (error) {
+                event = document.createEvent("Event");
+                event.initEvent(evt, true, true);
+            }
+            el.dispatchEvent(event);
+        } else if (el.fireEvent) {
+            el.fireEvent('on' + evt);
+        }
+    },
+    unbindEvent: function (el, evt, cb) {
+        if (el.removeEventListener) {
+            el.removeEventListener(evt, cb);
+        } else if (el.detachEvent) {
+            el.detachEvent('on' + evt, cb);
+        }
+    },
+    updateTargets: function () {
+        this.clickTargets = {};
+        this.impressionTargets = {};
+
+        if (typeof __EGS2_TARGET !== "undefined" && __EGS2_TARGET !== null) {
+            if (typeof __EGS2_TARGET.clickTargets !== "undefined" && __EGS2_TARGET.clickTargets !== null) {
+                this.clickTargets = Object.assign({}, __EGS2_TARGET.clickTargets);
+            }
+            if (typeof __EGS2_TARGET.impressionTargets !== "undefined" && __EGS2_TARGET.impressionTargets !== null) {
+                this.impressionTargets = Object.assign({}, __EGS2_TARGET.impressionTargets);
+            }
+        }
+    }
+};
+
+Object.freeze(Egs2.prototype);
+
+// Nothing to do
+
+egsReady(function() {
+    egs2Logger = new Egs2(__EGS2_DATA);
+
+    if (typeof EGS2_HALT_VIEWLOG !== "undefined" && eval(EGS2_HALT_VIEWLOG) === true) {
+        // do custom log
+    } else {
+        egs2Logger.log({"key": "view"});
+    }
+
+    egs2Logger.triggerEvent(document, 'scroll');
+});
+

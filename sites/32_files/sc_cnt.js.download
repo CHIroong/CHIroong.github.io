@@ -1,0 +1,55 @@
+$(function() {
+    var returnDataFb = "";
+    var returnDataLivere = "";
+    var fbPrammeter = "";
+    var livePrammeter = "";
+    //var deviceMode = "&D=PC";
+    var facebookApiUrl = 'https://graph.facebook.com/v2.10/?id=' + encodeURIComponent(scAtcUrl) + '&fields=engagement' + '&access_token=262286613837221|bTNeUttLjpgvLU3CW0Z7ah7EUFg';
+    var liveApiUrl = "https://dev.livere.co.kr/API_Livere?command=getCount&calltype=refer&consumer_seq=587&livere_seq=14257&refer=" + encodeURIComponent(scAtcUrl.replace("http://", "") + '');
+    var fbData = $.ajax({ url: facebookApiUrl, crossDomain: true, type: 'get', dataType: 'json', timeout: 3000, success: function(data) { returnDataFb = data; } });
+    var liveData = $.ajax({ url: liveApiUrl, crossDomain: true, type: 'get', dataType: 'jsonp', jsonp: "liverecallback", timeout: 3000, success: function(data) { returnDataLivere = data; } });
+    //successFunction, failFunction
+    $.when(fbData, liveData).then(successCall, failCall);
+    //success call
+    function successCall() {
+        //console.log("페북:" + returnDataFb['engagement']['share_count']);
+        //console.log("라이브리" + returnDataLivere['resultData']['replyCount']);
+        if (returnDataFb && !isNaN(returnDataFb['engagement']['share_count'])) {
+            if (returnDataFb && !isNaN(returnDataFb['engagement']['comment_count'])) {
+                if (returnDataFb && !isNaN(returnDataFb['engagement']['reaction_count'])) {
+                    var fbcnt = returnDataFb['engagement']['reaction_count'] + returnDataFb['engagement']['comment_count'] + returnDataFb['engagement']['share_count'];
+                    var reaction_count = returnDataFb['engagement']['reaction_count'];
+                    var comment_count = returnDataFb['engagement']['comment_count'];
+                    var share_count = returnDataFb['engagement']['share_count'];
+                    fbPrammeter = "&fbcnt=" + fbcnt + "&reaction_count=" + reaction_count + "&comment_count=" + comment_count + "&share_count=" + share_count;
+                }
+            }
+            //console.log(returnDataFb['engagement']['share_count']);
+        }
+        if (returnDataLivere && returnDataLivere['result'] == 200 && returnDataLivere['resultData'] && !isNaN(returnDataLivere['resultData']['replyCount'])) {
+            //console.log(returnDataLivere['resultData']['replyCount']);
+            livePrammeter = "&cmt=" + returnDataLivere['resultData']['replyCount'];
+        }
+        var callParameter = encodeURIComponent(scAtcUrl) + fbPrammeter + livePrammeter;
+        if (window.SERVER_MODE == "develop") {
+            console.log("수집서버 전송:" + callParameter);
+        } else {
+            ScCall(callParameter);
+        }
+    }
+    //fail call
+    function failCall() {
+        //var callParameter = encodeURIComponent(scAtcUrl);
+        //console.log("실패" + callParameter);
+        //ScCall(callParameter);
+    }
+
+    function ScCall(callParameter) {
+        var call_url = "http://sc.hani.co.kr/snscount.php?svcurl=" + callParameter + deviceMode;
+        //console.log("sc:" + call_url);
+        var obj = document.createElement("script");
+        obj.src = call_url;
+        obj.async = 1;
+        document.getElementsByTagName("head")[0].appendChild(obj);
+    }
+});

@@ -1,0 +1,21 @@
+	 $(function(){
+		 $(window).scroll(function() {
+			 if($(this).scrollTop() > 200){
+				 $("#menu").css({ "position": "fixed", "top": "0px" , "display" : "block" });
+				$("#csh_all_id").css({ "display" : "none" });
+				$("#csh_all_id").css({ "display" : "none" });
+				var csmenu_more_btn = document.getElementById("csh_all_trig_id");
+				if (csmenu_more_btn.className  == "csh_all_trig_on") {
+					csmenu_more_btn.className  = "csh_all_trig_off"
+				}
+			 }else{
+				$("#csh_all_id_2").css({ "display" : "none" });
+				$("#menu").css({ "display" : "none" });
+				var csmenu_more_btn_2 = document.getElementById("csh_all_trig_id_2");
+				if (csmenu_more_btn_2.className  == "csh_all_trig_on") {
+					csmenu_more_btn_2.className  = "csh_all_trig_off"
+					$("#csh_all_id_2").css({ "display" : "none" });
+				}
+			 }
+		 });
+	 });

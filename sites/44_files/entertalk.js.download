@@ -1,0 +1,119 @@
+﻿var config = {
+    domain: "http://talk-tour.interpark.com/talk/#/",
+    popObj: null
+};
+
+var TalkEnterModule = (function (config) {
+
+    var strLoginYN = getLoginYN();
+
+    return {
+        DirectStart: function () {
+
+            if (config.popObj != null) {
+                config.popObj.focus();
+            }
+
+            config.popObj = window.open(config.domain,
+                "TalkTourPC",
+                "width=500, height=790, toolbar=no, menubar=no, scrollbars=no, resizable=no");
+        },
+        Start: function () {
+
+            //통합검색일 시 다이렉트 스타트
+            var url = window.location.href.toLowerCase();
+            if (url.indexOf("search-tour.interpark.com") > -1) {
+                TalkEnterModule.DirectStart();
+                return;
+            }
+
+            if (strLoginYN == "N") {
+                goLogin();
+            } else {
+
+                if (config.popObj != null) {
+                    config.popObj.focus();
+                }
+                
+                config.popObj = window.open(config.domain,
+                    "TalkTourPC",
+                    "width=500, height=790, toolbar=no, menubar=no, scrollbars=no, resizable=no");
+            }
+        },
+        ReservationStart: function (r_no, sys_type) {
+            if (strLoginYN == "N") {
+                goLogin();
+            } else {
+
+                if (config.popObj != null) {
+                    config.popObj.focus();
+                }
+
+                config.popObj = window.open(config.domain,
+                    "TalkTourPC",
+                    "width=500, height=790, toolbar=no, menubar=no, scrollbars=no, resizable=no");
+
+                this.FormCreate(r_no, sys_type, '', '', '');
+            }
+        },
+        OAStart: function (body, oa_keyword, oa_account) {
+            
+            if (strLoginYN == "N") {
+                goLogin();
+            } else {
+
+                if (config.popObj != null) {
+                    config.popObj.focus();
+                }
+
+                config.popObj = window.open(config.domain,
+                    "TalkTourPC",
+                    "width=500, height=790, toolbar=no, menubar=no, scrollbars=no, resizable=no");
+
+                this.FormCreate('', '', body, oa_keyword, oa_account);
+            }
+
+        },
+        FormCreate: function (r_no, sys_type, body, oa_keyword, oa_account) {
+
+            var form = document.createElement("form");
+            var element1 = document.createElement("input");
+            var element2 = document.createElement("input");
+            var element3 = document.createElement("input");
+            var element4 = document.createElement("input");
+            var element5 = document.createElement("input");
+
+            form.method = "POST";
+            form.action = config.domain;
+            form.target = "TalkTourPC";
+
+            element1.value = r_no;
+            element1.name = "r_no";
+            element1.type = 'hidden'
+            form.appendChild(element1);
+
+            element2.value = sys_type;
+            element2.name = "sys_type";
+            element2.type = 'hidden'
+            form.appendChild(element2);
+
+            element3.value = body;
+            element3.name = "body";
+            element3.type = 'hidden'
+            form.appendChild(element3);
+
+            element4.value = oa_keyword;
+            element4.name = "oa_keyword";
+            element4.type = 'hidden'
+            form.appendChild(element4);
+
+            element5.value = oa_account;
+            element5.name = "oa_account";
+            element5.type = 'hidden'
+            form.appendChild(element5);
+            
+            document.body.appendChild(form);
+            form.submit();
+        }
+    }
+})(config);

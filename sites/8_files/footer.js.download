@@ -1,0 +1,358 @@
+var pageName = location.href;
+var spDomain = "";
+var domain = "";
+var m_pathname = window.location.pathname;
+var mDir = m_pathname.split('/');
+
+spDomain = pageName.split("?");
+domain = spDomain[0];
+
+document.write("<div class=\"footer_area\"> ");
+document.write("	<div class=\"left_area\"> ");
+document.write("		<div class=\"title\">헬스조선 사업분야</div> ");
+document.write("		<ul class=\"info\"> ");
+document.write("			<li><a href=\"http://company.healthchosun.com/?page_id=888\" target=_blank>국내 최고의 의료포털 <span>헬스조선닷컴</span></a></li> ");
+document.write("			<li><a href=\"http://company.healthchosun.com/?page_id=900\" target=_blank>온라인 마케팅·프로모션<span>배너,이벤트,캠페인</span></a></li> ");
+document.write("			<li><a href=\"http://www.mtree.kr/\" target=_blank>프리미엄 건강쇼핑몰<span>건강나무</span></a></li> ");
+document.write("			<li><a href=\"http://company.healthchosun.com/?page_id=635\" target=_blank>조선일보 건강섹션<span>Health</span></a></li> ");
+document.write("		</ul> ");
+
+document.write("		<ul class=\"info\"> ");
+//document.write("			<li><a href=\"http://company.healthchosun.com/?page_id=763\" target=_blank>신개념 생활건강 매거진<span>월간헬스조선</span></a></li> ");
+//document.write("			<li><a href=\"http://company.healthchosun.com/mpr/magazine/mpr_senior_intro.html\" target=_blank>5060을 위한 건강매거진<span>헬스조선 시니어</span></a></li> ");
+document.write("			<li><a href=\"http://health.chosun.com/good_hospital/good_all.html\" target=_blank>의료 소비자와 전문가가 함께 선정<span>좋은병원</span></a></li> ");
+document.write("			<li><a href=\"http://company.healthchosun.com/?page_id=892\" target=_blank>헬스조선 출판 브랜드<span>비타북스·북클라우드</span></a></li> ");
+document.write("			<li><a href=\"http://company.healthchosun.com/?page_id=890\" target=_blank>건강·의료 전문가를 위한<span>헬스케어N</span></a></li> ");
+document.write("			<li><a href=\"http://company.healthchosun.com/?page_id=929\" target=_blank>개원가의 최고 파트너<span>병·의원 개원컨설팅</span></a></li> ");
+document.write("		</ul> ");
+
+document.write("		<ul class=\"info\"> ");
+document.write("			<li class=\"first\" target=_blank><a href=\"http://company.healthchosun.com/?page_id=2635\" target=_blank>국민 건강 증진 · 나눔 프로젝트<span>함께하는 병원</span></a></li> ");
+document.write("			<li><a href=\"http://health.chosun.com/bestdoctor/index.html\" target=_blank>대한민국 명의를 찾아라<span>헬스조선 명의</span></a></li> ");
+//document.write("			<li><a href=\"http://health.chosun.com/event/healthClassroomMain.html\">헬스조선 힐링 프로그램<span>힐링투어</span></a></li> ");
+document.write("			<li><a href=\"http://health.chosun.com/healingTour/index.html\" target=_blank>헬스조선 힐링 프로그램<span>힐링여행</span></a></li> ");
+document.write("			<li><a href=\"http://talk.healthchosun.com/\" target=_blank>헬스조선 건강강좌<span>세미나·교육</span></a></li> ");
+document.write("		</ul> ");
+document.write("	</div> ");
+document.write("	<div class=\"right_area\"> ");
+document.write("		<div class=\"title\">서비스</div> ");
+document.write("		<ul class=\"service\"> ");
+//document.write("			<li><a href=\"http://company.healthchosun.com/mpr/givingNews/givingnews.jsp\" target=_blank>보도자료등록</a></li> ");
+document.write("			<li><a href=\"http://company.healthchosun.com/?page_id=2411\" >컨텐츠 구매</a></li> ");
+document.write("			<li><a href=\"http://health.chosun.com/news/healthevent_list.jsp\" >의료계행사</a></li> ");
+document.write("			<li><a href=\"http://health.chosun.com/notice/noticeMain.jsp\">공지사항</a></li> ");
+document.write("			<li><a href=\"http://health.chosun.com/letter/medi_letter_form.jsp\">의료계뉴스레터 신청</a></li> ");
+document.write("			<li><a href=\"http://health.chosun.com/event/application.html\">어플리케이션</a></li> ");
+document.write("			<li class=\"facebook\"><a href=\"https://www.facebook.com/healthchosun\" target=_blank>페이스북</a></li> ");
+//document.write("			<li class=\"twitter\"><a href=\"http://twitter.com/healthchosun/\" target=_blank>트위터</a></li> ");
+document.write("			<li class=\"naverblog\"><a href=\"http://blog.naver.com/h-chosun/\" target=_blank>네이버 블로그</a></li> ");
+document.write("			<li class=\"naverpost\"><a href=\"http://post.naver.com/h-chosun/\" target=_blank>네이버 포스트</a></li> ");
+document.write("		</ul> ");
+document.write("	</div> ");
+/*
+document.write("	<div class=\"quick\"> ");
+document.write("		<ul class=\"footer\"> ");
+document.write("			<li class=\"first\"><a href=\"http://company.healthchosun.com/\" target=\"_blank\">회사소개</a></li> ");
+document.write("			<li><a href=\"http://company.healthchosun.com/?page_id=772\" target=_blank>구독신청</a></li> ");
+document.write("			<li><a href=\"http://company.healthchosun.com/?page_id=900\" target=_blank>광고안내</a></li> ");
+document.write("			<li><a href=\"http://health.chosun.com/member/questionAddForm.jsp\">고객문의</a></li>   ");
+document.write("			<li><a href=\"http://members.chosun.com/cms_user/privacy/web/index.jsp\" target=_blank>개인정보 처리방침</a></li>   ");
+document.write("			<li><a href=\"http://health.chosun.com/member/teenager.jsp\" target=_blank>청소년 보호정책</a></li>   ");
+document.write("			<li><a href=\"http://thestory.chosun.com/bizcenter/sub10.html\" target=_blank>저작권규약</a></li>  ");
+//document.write("			<li><a href=\"http://health.chosun.com/mpr/intro/mpr_intro03_employ.html\" target=_blank>채용정보</a></li> ");
+document.write("			<li class=\"rss\"><a href=\"http://health.chosun.com/site/data/rss/rss.xml\" target=_blank>헬스뉴스(RSS)</a></li> ");
+document.write("			<li class=\"rss\"><a href=\"http://health.chosun.com/rss/column.xml\" target=_blank>건강칼럼(RSS)</a></li> ");
+document.write("			<li class=\"rss\"><a href=\"http://health.chosun.com/rss/healthcaren.xml\" target=_blank>헬스케어N(RSS)</a></li> ");
+document.write("		</ul>  ");
+document.write("	</div> ");
+document.write("</div> ");
+document.write("<address>   ");
+
+ if(mDir[1] == "healthcare" || mDir[1] == "healthcarenews" || mDir[1] == "healthcareColumn" || mDir[2] == "dailynews_view.jsp")
+{
+	 document.write("<P align=\"center\">   ");
+	document.write("헬스케어N 사이트의 내용에 대한 저작권 및 법적 책임은 자료제공사 또는 글쓴이에 있으며, 헬스조선 헬스케어N 입장과 다를 수 있습니다.   ");
+	document.write("</P>  ");
+ }
+
+
+document.write("<a class=\"logo\" href=\"http://www.hcbiz.co.kr/\" target=\"_blank\"><img alt=\"헬스조선\" src=\"http://health.chosun.com/images/2013/img_logo_gray.gif\" width=\"107\" height=\"33\" style=\"float:left;\"></a> ");
+document.write("<span class=\"addr\">(주)헬스조선 | 등록번호: 서울, 아01174 | 제호: 헬스조선 | 등록일자: 2010년 3월 19일 | 발행일자: 2005년 10월 14일 <br/> 주소: 서울시 중구 세종대로 21길 30 조선일보사 업무동 3층 | 문의: 02-724-7600 | FAX: 02-722-9339 <br/> 발행인: (주)헬스조선 임호준 | 편집인: 김공필 | 청소년보호책임자: 표형원 </span> ");
+document.write("<span class=\"copyright\">Copyright <a href=\"http://health.chosun.com\">HEALTHCHOSUN.COM</a> All rights reserved</span> ");
+document.write("</address> ");
+*/
+
+document.write("<div id=\"csCopy2\" class=\"cs_copy\"> ");
+document.write("    <div class=\"copy_cslogo\"><a class=\"logo\" href=\"http://www.hcbiz.co.kr/\" target=\"_blank\"><img alt=\"헬스조선\" src=\"http://health.chosun.com/images/2013/img_logo_gray.gif\" style=\"float:left;\"></a></div> ");
+document.write("    <ul class=\"copy_links\"> ");
+document.write("        <li>등록번호 : 서울특별시 아01174</li> ");
+document.write("        <li>등록년월일 :2010.03.19</li> ");
+document.write("        <li>발행년월일 : 2005.10.14</li> ");
+document.write("        <li>발행인 : 임호준 </li> ");
+document.write("        <li>편집인 : 김공필</li> ");
+document.write("        <li>상호 : (주)헬스조선</li> ");
+document.write("        <li class=\"noline\">사업자번호 : 104-81-98445</li> ");
+document.write("        <li>주소 : 서울특별시 중구 세종대로21길 30</li> ");
+document.write("        <li>Tel : 02-724-7600</li> ");
+document.write("        <li>Fax : 02-722-9339</li> ");
+document.write("        <li>청소년보호책임자 : 표형원</li> ");
+document.write("        <li class=\"copy_copyright\">Copyright ⓒ <a href=\"http://health.chosun.com\">HEALTHCHOSUN.COM</a> All rights reserved</li> ");
+document.write("    </ul> ");
+document.write("    <ul class=\"copy_links2\"> ");
+document.write("        <li class=\"noline\"><a href=\"http://company.healthchosun.com/\" target=\"cs_new\">회사소개</a></li> ");
+document.write("        <li><a href=\"http://thestory.chosun.com/bizcenter/sub10.html\" target=\"cs_new\">저작권규약</a></li> ");
+document.write("        <li class=\"black\"><a href=\"http://members.chosun.com/cms_user/privacy/web/index.jsp\" target=\"cs_new\">개인정보처리방침</a></li> ");
+document.write("        <li><a href=\"http://health.chosun.com/member/teenager.jsp\" target=\"cs_new\">청소년보호정책</a></li> ");
+document.write("        <li><a href=\"http://company.healthchosun.com/?page_id=900\" target=\"cs_new\">광고안내</a></li> ");
+document.write("		<li><a href=\"http://company.healthchosun.com/?page_id=2509\" target=\"cs_new\">사진구매</a></li>   ");
+document.write("		<li><a href=\"http://company.healthchosun.com/?page_id=2411\" target=\"cs_new\">컨텐츠구매</a></li>   ");
+document.write("    </ul> ");
+document.write("    <ul class=\"copy_links2\"> ");
+document.write("		<li class=\"noline rss\"><a href=\"http://health.chosun.com/site/data/rss/rss.xml\" target=\"cs_new\">헬스뉴스(RSS)</a></li> ");
+document.write("		<li class=\"noline rss\"><a href=\"http://health.chosun.com/rss/column.xml\" target=\"cs_new\">건강칼럼(RSS)</a></li> ");
+document.write("		<li class=\"noline rss\"><a href=\"http://health.chosun.com/rss/healthcaren.xml\" target=\"cs_new\">헬스케어N(RSS)</a></li> ");
+document.write("    </ul> ");
+
+document.write("    <div class=\"copy_company\"> ");
+document.write("        <select name=\"\" onchange=\"if(this.value) window.open(this.value);\">");
+document.write("            <option>관련회사</option>");
+document.write("            <option value=\"http://sports.chosun.com/company/index.htm\">스포츠조선</option>");
+document.write("            <option value=\"http://www.chosunis.com/main.aspx\">조선아이에스</option>");
+document.write("            <option value=\"http://company.healthchosun.com/mpr/index.jsp\">헬스조선</option>");
+document.write("            <option value=\"http://chosunedu.co.kr/\">CS M&amp;E</option>");
+document.write("            <option value=\"http://chosunnewspress.chosun.com/client/info/info.asp\">조선뉴스프레스</option>");
+document.write("            <option value=\"http://biz.chosun.com/about/company_info.html\">조선경제i</option>");
+document.write("            <option value=\"http://www.tvchosun.com/pressroom/index.cstv\">(주)조선방송</option>");
+document.write("            <option value=\"http://pr.dizzo.com/\">(주)디지틀조선일보</option>");
+document.write("        </select>");
+document.write("    </div>");
+document.write("</div>");
+
+var mobileKeyWords = new Array('iPhone','Mobile','UP.Browser','Android','BlackBerry','Windows CE','Nokia','webOS','Opera Mini','SonyEricsson','opera mobi','Windows Phone','IEMobile','POLARIS');
+for (var word in mobileKeyWords){
+    if (navigator.userAgent.match(mobileKeyWords[word]) != null){
+        document.write('\
+		  <div id="go_mobile" style="text-align:center; font-size:40px; line-height:120px; letter-spacing:-1px;">\
+		   <a href="javascript:;" onclick="DelCookie(\'mobileHealthChosun_key\');" style=" width:100%;height:200px;display:inline-block; line-height:200px; background:#fbfbfb; border:solid 1px #bfbfbf; color:#2d2d2d; text-decoration:none;">모바일 버전 바로 가기</a>\
+		  </div><br>\
+		');
+        break;
+    }
+}
+
+function SetCookie(cKey, cValue)  // name,pwd
+{   
+    document.cookie = cKey + '=' + escape(cValue) + ';expires=0;path=/;domain=health.chosun.com;';      
+}
+
+
+function DelCookie(cKey) {
+     SetCookie(cKey,"",-1);
+
+	var m_hostName = window.location.hostname;
+	var m_href = window.location.href;
+	var m_host = window.location.host;
+	var m_port = window.location.port;
+	var m_pathname = window.location.pathname;
+	var m_search = window.location.search;
+	var m_protocoal = window.location.protocol;
+
+	var mDir = m_pathname.split('/');
+	var m_pathname = window.location.pathname;
+	var b=m_pathname.split('/'); 
+	var mFileName=b[b.length-1].split('.')[0].split('html'); 
+
+
+
+		  
+	switch(mDir[1])
+	{	  
+
+	   case 'site':			
+		  mSite(mFileName[0]);
+		  break;
+		 case 'bestdoctor':			
+		  mDoctor(mFileName[0]);
+		  break;
+	   case 'news':
+		  mNews(mFileName[0]);      
+		  break;
+	   case 'healthyLife':
+			mColumn(mFileName[0]);
+		  break;
+	   case 'healingTour':  // 모바일 환경에서 헬스조선닷컴 pc버전 서비스로 바로 접근
+		  break;
+	   case 'event':  // 모바일 환경에서 헬스조선닷컴 pc버전 서비스로 바로 접근
+		  break;
+	   case 'healthcareColumn':
+			healthcareColumn(mFileName[0]);
+		  break;
+	   case 'healthcare':  // 모바일 환경에서 헬스케어n pc버전 서비스로 바로 접근	
+		  if(GetCookie('mobileHealthChosun_key') != 'pcVersionCookie'){	   
+			  location.href ="http://m.healthcaren.com/";
+		   }     
+		  break;
+	   case 'healthcarenews':  // 모바일 환경에서 헬스케어n pc버전 서비스로 바로 접근	
+		  if(GetCookie('mobileHealthChosun_key') != 'pcVersionCookie'){	   
+			  location.href ="http://m.healthcaren.com/";
+		   }     
+		  break;
+	   case 'senior':  // 시니어 pc버전 서비스로 바로 접근
+		  break;
+	   default:
+		  if(GetCookie('mobileHealthChosun_key') != 'pcVersionCookie'){	   
+			location.href ="http://m.health.chosun.com/";
+			//location.href ="http://m.healthcaren.com/";
+		  }     
+	}
+
+
+
+
+	function mSite(n) {  
+						if(GetCookie('mobileHealthChosun_key') != 'pcVersionCookie'){	
+							var m_pathname = window.location.pathname;
+							var b=m_pathname.split('/'); 
+							var m_id=b[b.length-1].split('.')[0].split('html'); 
+							location.href = "http://m.health.chosun.com/svc/news_view.html?contid="+m_id;  
+		 }      
+		}	
+
+	function mDoctor(n) {  
+						if(GetCookie('mobileHealthChosun_key') != 'pcVersionCookie'){	
+
+							var ori_url = window.location.search
+							var m_pathname = window.location.pathname;
+							var b=m_pathname.split('='); 
+							var m_id=b[b.length-1].split('.')[1].split('jsp'); 
+
+							location.href = "http://m.health.chosun.com/bestdoctor/bestdoctor_view.jsp"+ori_url;  
+		 }      
+		}	
+		
+
+
+	function mNews(n) {	
+		switch(n)
+		{
+	   case 'dailynews_view':      
+						if(GetCookie('mobileHealthChosun_key') != 'pcVersionCookie'){	
+
+							var m_pathname = window.location.search;						
+						  //location.href = "http://m.health.chosun.com/news/news_view.jsp"+m_pathname; 
+						  location.href = "http://m.healthcaren.com/news/news_article_yong.jsp"+m_pathname; 
+						}
+	   break;					
+						
+	   case 'healthavi_view':            
+						if(GetCookie('mobileHealthChosun_key') != 'pcVersionCookie'){	
+							
+							var m_pathname = window.location.search;						
+							location.href = "http://m.health.chosun.com/news/healthavi_view.jsp"+m_pathname; 
+						// location.href = "http://m.healthcaren.com/news/news_article_yong.jsp"+m_pathname;
+						}		
+	   break;								
+				
+		   
+
+		case 'healthevent_view':            
+						if(GetCookie('mobileHealthChosun_key') != 'pcVersionCookie'){	
+							
+						var m_search = window.location.search;
+						var b=m_search.split('='); 
+						var m_id=b[1]; 						
+						//	location.href = "http://m.health.chosun.com/news/healthevent_view.jsp"+m_pathname; 
+							location.href = "http://m.healthcaren.com/event/event_article_yong.jsp?mn_idx="+m_id;
+						}		
+	   break;								
+				
+		   
+		}	
+	}
+
+
+
+
+	function mColumn(n) {
+		switch(n)
+		{
+	   case 'column_view':
+					if(GetCookie('mobileHealthChosun_key') != 'pcVersionCookie'){
+							var m_pathname = window.location.search;
+							location.href = "http://m.health.chosun.com/column/column_view.jsp"+m_pathname; 
+							
+							//var m_pathname = window.location.search;
+							//var mn_idx = m_pathname.split('&')[1];
+							//var mn_idx = mn_idx.split('=')[1];
+							//location.href = "http://m.healthcaren.com/column/column_article_yong.jsp?idx="+mn_idx;
+						}   		      
+				break;     		  
+	   default:
+			 if(GetCookie('mobileHealthChosun_key') != 'pcVersionCookie'){	   
+		  location.href ="http://m.health.chosun.com/";
+		 }
+		  
+		}		
+	}
+
+
+
+
+	function healthcareColumn(n) {
+
+		switch(n)
+		{
+	   case 'column_view':
+					if(GetCookie('mobileHealthChosun_key') != 'pcVersionCookie'){
+							var m_pathname = window.location.search;
+							location.href = "http://m.healthcaren.com/column/column_article_yong.jsp"+m_pathname; 
+							
+							//var m_pathname = window.location.search;
+							//var mn_idx = m_pathname.split('&')[1];
+							//var mn_idx = mn_idx.split('=')[1];
+							//location.href = "http://m.healthcaren.com/column/column_article_yong.jsp?idx="+mn_idx;
+						}   		      
+				break;     		  
+	   default:
+			 if(GetCookie('mobileHealthChosun_key') != 'pcVersionCookie'){	   
+		  location.href ="http://m.healthcaren.com/";
+		 }
+		  
+		}		
+	}
+
+}
+
+
+// 카피시 (Ctrl+c) 자동으로 출처가 붙게 함
+
+var AutoSourcing={div:null,id:"",timer:null,regex:null,strings:[],skip:false,handlers:{},init:function(format,enable){var t=this;var n=navigator;var is_safari=(n.userAgent.indexOf("WebKit")>-1&&n.vendor.indexOf("Apple")>-1);this.div=document.createElement("div");this.div.className=(/MSIE|Gecko/.test(n.userAgent)&&!is_safari)?"autosourcing-stub":"autosourcing-stub-extra";this.id="autosourcing_tmp_"+(Math.random()*10000);this.regex=new RegExp(format.replace("%id%","(\\w+)"));this.handlers.copy=function(){t.copy()};this.handlers.keydown=function(evt){t.keydown(evt)};this.handlers.keypress=function(evt){t.keypress(evt)};if(typeof enable=="undefined")enable=true;this.setEnable(enable);},setEnable:function(bool){if(bool){if(typeof document.body.oncopy!="undefined"){this.addEvent(document.body,"copy",this.handlers.copy);}else{this.addEvent(document,"keydown",this.handlers.keydown);this.addEvent(document,"keypress",this.handlers.keypress);this.addEvent(document,"contextmenu",this.handlers.copy);}}else{if(typeof document.body.oncopy!="undefined"){this.removeEvent(document.body,"copy",this.handlers.copy);}else{this.removeEvent(document,"keydown",this.handlers.keydown);this.removeEvent(document,"keypress",this.handlers.keypress);this.removeEvent(document,"contextmenu",this.handlers.copy);}}},getId:function(rng){var range_s,range_e,par,id;range_s=this.cloneRange(rng)
+range_s.collapse(true);par=this.getParentElement(range_s);while(par&&par.parentNode){if(par.nodeType==1&&this.regex.test(par.id)){id=RegExp.$1;return "article"}
+par=par.parentNode;}
+range_e=this.cloneRange(rng)
+range_e.collapse(false);par=this.getParentElement(range_e);while(par&&par.parentNode){if(par.nodeType==1&&this.regex.test(par.id)){id=RegExp.$1;return id;}
+par=par.parentNode;}
+return 0;},getSelection:function(){if(window.getSelection){return window.getSelection();}else{return document.selection;}},getRange:function(selection){selection=selection||this.getSelection();if(selection.getRangeAt){return selection.getRangeAt(0);}else{return selection.createRange();}},cloneRange:function(rng){rng=rng||this.getRange();if(rng.duplicate){return rng.duplicate();}else{return rng.cloneRange();}},getParentElement:function(range){var par=range.parentElement?range.parentElement():range.commonAncestorContainer;if(!par)return null;while(par.nodeType!=1){par=par.parentNode;}
+return par;},setString:function(id,sTitle,sName,sLink){var data={name:sName,link:sLink,title:sTitle};this.strings[id]=this._template.replace(/\{(\w+)\}/g,function(m0,m1){return data[m1]?data[m1]:"";});},copy:function(evt){var evt=evt||window.event;var self=this;var sel=this.getSelection();var rng=this.getRange(sel);var rngtmp=this.cloneRange(rng);var regcopy=/(?:p|<div)[^<>]+class\s*=\s*"?autosourcing\-stub(?:\-extra)?\-saved(?:\b|")/i;var regtag=/textarea|input/i;var id=this.getId(rng);var node_rng;this.skip=false;clearTimeout(this.timer);if(id==0){try{this.div.parentNode.removeChild(this.div)}catch(e){};return;}
+if(evt&&evt.srcElement&&evt.srcElement.tagName.toUpperCase()=="A")return;this.div.innerHTML=this.strings[id];if(window.getSelection){var html=(window.XMLSerializer)?new XMLSerializer().serializeToString(rng.cloneContents()):"";if(regcopy.test(html)||regtag.test(rng.commonAncestorContainer.tagName)){this.skip=true;return;}
+rngtmp.collapse(false);rngtmp.insertNode(this.div);if(this.div.nextSibling){rng.setEndBefore(this.div.nextSibling);}else{rng.setEndAfter(this.div);}
+sel.removeAllRanges();sel.addRange(rng);}else if(document.selection){var body=document.body||document.getElementsByTagName("body")[0];var div=document.createElement("div");var span=document.createElement("span");span.id=this.id;if(regcopy.test(rng.htmlText)||regtag.test(rng.parentElement().tagName)){this.skip=true;return;}
+rngtmp.collapse(false);rngtmp.pasteHTML(span.outerHTML+'&nbsp;<a></a>');span=document.getElementById(this.id);(span||rngtmp.parentElement()).insertAdjacentElement("afterEnd",this.div);do{rng.moveEnd("character",1);(rngtmp=rng.duplicate()).collapse(false);}while(rngtmp.offsetLeft==0);try{rng.select();}catch(e){}
+if(span&&span.parentNode){span.parentNode.removeChild(span.nextSibling.nextSibling);span.parentNode.removeChild(span.nextSibling.nextSibling);span.parentNode.removeChild(span);}
+if(div.parentNode){div.parentNode.removeChild(div);}}
+if(typeof document.body.oncopy!="undefined"){this.timer=setTimeout(function(){self.aftercopy(rng);},1);}},aftercopy:function(rng){if(this.skip)return;try{this.div.parentNode.removeChild(this.div);if(/WebKit/.test(navigator.userAgent)){var sel=this.getSelection();sel.removeAllRanges();sel.addRange(rng);}}catch(e){}},keydown:function(e){if((e.ctrlKey||e.metaKey)&&e.keyCode==67){this.copy();}},keypress:function(e){if((e.ctrlKey||e.metaKey)&&e.keyCode==67){var t=this;this.timer=setTimeout(function(){t.aftercopy();},10);}},mousedown:function(e){},setTemplate:function(html){this._template=html;},addEvent:function(obj,sEvent,pFunc){function addEventIE(obj,sEvent,pFunc){obj.attachEvent("on"+sEvent,pFunc);}
+function addEventFF(obj,sEvent,pFunc){obj.addEventListener(sEvent,pFunc,false);}
+if(obj.attachEvent)this.addEvent=addEventIE;else this.addEvent=addEventFF;this.addEvent(obj,sEvent,pFunc);},removeEvent:function(obj,sEvent,pFunc){function removeEventIE(obj,sEvent,pFunc){obj.detachEvent("on"+sEvent,pFunc);}
+function removeEventFF(obj,sEvent,pFunc){obj.removeEventListener(sEvent,pFunc,false);}
+if(obj.detachEvent)this.removeEvent=removeEventIE;else this.removeEvent=removeEventFF;}}
+
+
+		
+
+	var siteLink =location.href;
+
+	AutoSourcing.setTemplate("<br>출처 :  {link} ");
+
+	AutoSourcing.init('%id%',true);
+
+	AutoSourcing.setString("article",""  ,"", siteLink);

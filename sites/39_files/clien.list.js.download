@@ -1,0 +1,198 @@
+function List() {
+	var _this = this;
+	
+	_this.env = {
+		groupCd : $('#groupCd').val(),
+		po : $('#po').val(),
+		od : $('#od').val(),
+		sk : $('#sk').val(),
+		sv : $('#sv').val(),
+		category: $('#category').val(),
+		articlePeriod : $('#articlePeriod').val()
+	}
+
+	// 클리앙 리스트 불러오기
+	_this.getArticleList = function(type, directPo) {
+		var groupCd = _this.env.groupCd;
+		var boardCd = $('#boardCd').val();
+		var boardSn = $('#boardSn').val();
+
+		var po = _this.env.po;
+		var od = _this.env.od;
+		var sk = _this.env.sk;
+		var sv = _this.env.sv;
+		var category = _this.env.category;
+		var articlePeriod = _this.env.articlePeriod;
+
+		var url;
+
+		if(sk == '') {
+			url = API_HOST + "/boardView/" + boardCd + '?boardSn=' + boardSn;
+
+			if(type == 'direct') {
+				url = url + '&po='+directPo;
+				viewListPo = Number(directPo);
+
+			} else if(type=='first') {
+				url = url + '&po=0';
+				viewListPo = Number(0);
+
+			} else {
+				if(po == ''){
+					url = url + '&po=0';
+					viewListPo = Number(0);
+				} else {
+					url = url + '&po='+Number(po);
+					viewListPo = Number(Number(po));
+				}
+			}
+
+			if(od != '') {
+				url = url + '&od='+od;
+			}
+			if(category != '') {
+				url = url + '&category='+category;
+			}
+			if(groupCd != '') {
+				url = url + '&groupCd='+groupCd;
+			}
+			if(articlePeriod != 'default' && articlePeriod != '') {
+				url = url + '&articlePeriod='+articlePeriod;
+			}
+
+		} else { // 검색일 경우
+			url = API_HOST + "/search/boardView/" + boardCd + '?boardSn=' + boardSn;
+			
+			if(type == 'direct') {
+				url = url + '&po='+directPo;
+				viewListPo = Number(directPo);
+
+			} else if(type=='first') {
+				url = url + '&po=0';
+				viewListPo = Number(0);
+
+			} else {
+				if(po == ''){
+					url = url + '&po=0';
+					viewListPo = Number(0);
+				} else {
+					url = url + '&po='+Number(po);
+					viewListPo = Number(Number(po));
+				}
+			}
+
+			if(sk != '') {
+				url = url + '&sk='+sk + '&sv='+sv;
+			}
+
+			if(groupCd != '') {
+				url = url + '&groupCd='+groupCd;
+			}
+		}
+
+		$.ajax({
+			url: url,
+			type: 'GET',
+			dataType: 'html',
+			success: function(result) {
+				// 댓글 생성
+				$('#listDiv').html(result);
+				// 직접홍보 리스트 호출
+				hongbo.hongboList();
+				// 목록에서 공감 Class 추가
+				ui.initSymphathy();
+
+				// 현재 게시물 표시
+				$('*[data-role=list-row]').each(function() {
+					var row = $(this);
+					if(row.data('board-sn') == $('#boardSn').val()){
+						row.addClass('active');
+					}
+				});
+
+				// 검색했을 경우 Mark.js 추가
+				if(sv != ""){
+					if(sk == "comment"){
+						$(".post_comment").mark(sv);
+					} else if( sk == "content") {
+						$(".post_article").mark(sv);
+					} else  {
+						$(".view_list").mark(sv);
+					}
+				}
+
+				if (IS_LOGIN) {
+					ui.initBlockArticle();
+					// 주시하기 표시
+					observe.listObserveCheck();
+				}
+
+				// 모바일에서는 여기서 네이버 광고를 호출한다.
+				if(app.env.bizType != 'hongbo' && app.env.bizType != 'insure') {
+					naver.initNaverAdView('view');
+				}
+			},
+			error: function(result) {
+				console.log(result);
+			}
+		});
+	}// 클리앙 리스트 불러오기 End
+
+	// 이전글 / 다음글  기능
+	_this.neiborArticle = function(type) {
+		var boardCd = $('#boardCd').val();
+		var boardSn = $('#boardSn').val();
+		var getUrl = API_HOST+'/board/neighbor/'+boardCd+'/'+boardSn+'/'+type;
+
+		$.ajax({
+			url: getUrl,
+			type: 'GET',
+			success: function(ArticleInfo) {
+				if(ArticleInfo != ""){
+					var url = BASE_URL+'/board/'+ArticleInfo.boardCd+'/'+ArticleInfo.boardSn;
+					var groupCd = _this.env.groupCd;
+					var po = _this.env.po;
+					var od = _this.env.od;
+					var sk = _this.env.sk;
+					var sv = _this.env.sv;
+					var category = _this.env.category;
+					var articlePeriod = _this.env.articlePeriod;
+	
+					if(po == ''){
+						url = url + '?po=0';
+					} else {
+						url = url + '?po='+po;
+					}
+					if(od != ''){
+						url = url + '&od='+od;
+					}
+					if(sk != ''){
+						url = url + '&sk='+sk + '&sv='+sv;
+					}
+					if(category != ''){
+						url = url + '&category='+category;
+					}
+					if(groupCd != ''){
+						url = url + '&groupCd='+groupCd;
+					}
+					if(articlePeriod != 'default') {
+						url = url + '&articlePeriod='+articlePeriod;
+					}
+					location.href = url;
+				} else {
+					if(type=='prev'){
+						alert("이전글이 없습니다.");
+					} else {
+						alert("다음글이 없습니다.");
+					}
+				}
+			},
+			error: function(result) {
+				alert("에러가 발생하였습니다. 관리자에게 문의하세요.");
+			}
+		});
+	};
+
+};
+
+var list = new List();

@@ -1,0 +1,2295 @@
+@charset "utf-8";
+
+@import url("http://ojsimg.ohmynews.com/css/ohmynews/base_2015.css");
+
+/* s:paging_모든페이지공용 붙여넣기 */
+/* paging_topline  */ 
+.pg_lineno{width:100%; padding-top:25px; float:left;}
+.pg_line_w1px{width:100%; padding-top:25px; border-top:solid 1px #e4e5e6; float:left;}
+.pg_line_w2px{width:100%; padding-top:25px; border-top:solid 2px #e4e5e6; float:left;}
+.pg_dot_w1px{width:100%; margin-top:10px; padding-top:10px; border-top:dotted 1px #e4e5e6; float:left;}
+/*bg copy*/
+.aside .W_pagination{border-top:none;padding:0 0 0 0}
+.W_pagination{width:100%; text-align:center; float:left; border-top:2px solid #e4e5e6; padding: 30px 0 45px 0;}
+.W_pagination img {vertical-align: middle;}
+.W_pagination .pre{padding-right:10px;font-family:arial}
+.W_pagination .pre img{margin-left:5px;}
+.W_pagination .next{padding-left:10px;font-family:arial}
+.W_pagination .next img{margin-right:5px;}
+.W_pagination .no {color:#d8472c; font-size:12px; font-weight:bold;}
+.W_pagination .no a{color:#1f2733; text-decoration:none;}
+.W_pagination .no a:hover{color:#1f2733; text-decoration:underline;}
+.W_pagination span{padding:0 5px 0 5px; font-size:11px; font-weight:normal; color:#9ea2a7;}
+.non_bo{border-top:none;}
+
+/*btn_style*/
+.btn_morearea{display:block;width:100%;overflow:hidden;text-align:center;color:#1f2733}
+.btn_morearea a.btn_close{background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/btn_add.gif) 0 0 no-repeat;text-indent:-9999em;float:right;height:30px;width:79px}
+.btn_morearea a.btn_close:hover{background-position: 0 -31px}
+.btn_morearea .more{float:left;width:889px;padding:10px 0 0 0;border:1px solid #ccc;height:18px;text-decoration:none;background-image:none}
+.btn_morearea .more:hover{background:#f4f4f4 !important}
+.btn_morearea .more em{color:#d9482b}
+.c_more .more{width:539px}
+
+a.more{color:#999;background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/bul1.gif) right 6px no-repeat;padding:5px 6px 5px 5px;font-size:11px;display:inline-block;clear:both}
+a.more:hover{color:#cd1821 !important;text-decoration:none}
+
+/*textarea style*/
+textarea{
+	border:1px solid #dbdee4;
+	scrollbar-arrow-color:#c5c9cc;/*화살표*/
+	scrollbar-base-color:#e9e9e9;/*기본*/
+	scrollbar-darkshadow-color:#FFFFFF;/*어두운 그림자*/
+	scrollbar-face-color:#FFFFFF;/*배경*/
+	scrollbar-highlight-color:#e9e9e9;
+	scrollbar-shadow-color:#c5c9cc;/*화살표비활성시*/
+	}
+
+.tab_area{/*border-bottom:2px solid #999;*/width:100%;*zoom:1;background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/tab_bg2.gif) 0 0 repeat-x;height:38px;text-decoration:none }
+.tab_area:after {content:""; display:block; clear:both;}
+.tab{float:left;display:inline}
+
+.tab li{float:left;width:130px;border:1px solid #b8b8b8;margin:0 -1px 0 0;border-bottom:none;position:relative;display:inline;z-index:14}
+.tab li a{display:block;text-align:center;background:#f2f2f2;height:22px;padding-top:13px;color:#969696;font-weight:bold;text-decoration:none}
+.tab li a:hover{color:#cd1821}
+.tab li.on a{background:#fff;color:#cd1821;height:21px;border-bottom:2px solid #fff}
+.tab li.on {border:2px solid #999;border-bottom:none;}
+.w2 .tab li{width:160px}
+
+.tab2{width:100%;overflow:hidden;border-bottom:1px solid #ccc;border-left:1px solid #ccc}
+.tab2 li{float:left;border-top:1px solid #ccc;border-right:1px solid #ccc}
+.tab2 li a{display:block;width:93px;text-align:center;text-decoration:none;color:#949aaa;padding-top:6px;height:17px}
+.tab2 li a:hover{color:#10141d}
+.tab2 li.on a{font-weight:bold;color:#10141d;background-color:#fff}
+.tab_area1{background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/tab_bg.gif) 0 0 repeat-x;height:41px;width:100%;*zoom:1;position:relative;z-index:15}
+.tab_area1:after {content:""; display:block; clear:both;}
+.tab3{float:left;margin:0 0 0 1px;display:inline}
+.tab3 li{float:left;width:108px;border:1px solid #dcdcdc;margin:0 3px -2px -1px;border-bottom:none;height:40px;display:inline;position:relative}
+.tab3 li a{display:block;text-align:center;border-bottom:1px solid #dcdcdc;background:#f2f2f2;padding:8px 0 0 0;height:31px;color:#969696;font-weight:bold;text-decoration:none;}
+.tab3 li a:hover{background:#f2f2f2;color:#666666;font-weight:bold;text-decoration:none}
+
+.tab3 li.on a{background:#fff;color:#0d54ab;border-bottom:1px solid #fff}
+.tab3 li.on {border:1px solid #dcdcdc;border-bottom:none;/*height:39px*/}
+.tab3 li a span{display:block;font-weight:normal;font-size:11px;padding-top:3px}
+a.btn_pay{font-size:11px;background:#cd1821;padding:5px 13px 4px 17px;text-decoration:none;position:absolute;bottom:7px;right:0}
+a.btn_pay span{background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/bul_arw_w.gif) right 3px no-repeat;padding:0 9px 0 0;color:#fff}
+
+/*board*/
+.tb_type1{width:620px;margin:0 auto 0 auto}
+.tb_type1 td{font-size:11px}
+.tb_type1 td.c0{color:#ccc}
+.tb_type1 td.c1{color:#333}
+.tb_type1 td.c2{color:#cd1821}
+.tb_type1 td.title a{font-size:12px;line-height:1.3em}
+.tb_type1 td.title a:hover{color:#1f2733}
+
+/*aside*/
+.box_1{border:1px solid #e6e6e6;background:#fff;}
+.box_1 .images img{ width:602px;}
+.box_2{border:1px solid #ddd;background:#fff; float:left;  margin-top: 15px;}
+
+.aside .section{width:280px; margin:20px; position:relative;padding-bottom:20px; float:left;}
+.aside .section h3{color:#10141d;font-size:12px;font-weight:bold;height:18px;padding-top:5px}
+.aside .section h3.title_line{border-bottom:1px solid #ccc}
+.aside .section .more{/*background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/bul1.gif) right 4px no-repeat;padding:2px 6px 3px 3px;*/font-size:11px;color:#999;position:absolute;top:0;right:3px}
+.aside .section .box_1 li{padding:0 8px 0 8px;}
+.aside .section .box_1 li dl{width:100%;overflow:hidden;background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/dotline.gif) 0 0 repeat-x;padding:14px 0 8px 0;}
+.aside .section .box_1 li.first dl{background-image:none}
+.aside .section .box_1 li dt{background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/bul_sq.gif) 0 4px no-repeat;padding:0 0 0 7px;height:18px}
+.aside .section .box_1 li dt a{font-weight:bold;color:#333; font-size:14px; letter-spacing:-0.1em;}
+.aside .section .box_1 li dt a:hover{color:#000;}
+.aside .section .box_1 li dd{float:left}
+.aside .section .box_1 li dd.img_line{width:50px; padding-right:10px; position:relative;}
+.aside .section .box_1 li dd.img_line .line{width:48px;height:48px; border:solid 1px #e6e6e6; position:absolute;left:0;top:0;}
+
+.section .box_1 li dd.con{width:190px}
+.aside .section .box_1 li dd.con p.rt{line-height:1.3em;color:#333;padding-bottom:4px}
+.aside .section .box_1 li dd.con p.rt a{font-weight:bold;color:#0099ff}
+
+.aside .section .box_1 li dd.con p.rt_so, .aside .section .box_1 li dd.con p.rt_so a{font-size:11px;color:#ccc;font-family:arial}
+.aside .section .box_1 li dd.w_info{font-size:11px;color:#999;line-height:1.5em;padding-bottom:5px;width:100%}
+.aside .section .box_1 li dd.w_info strong{color:#cd1821;padding-right:4px}
+.aside .section .box_1 li dd.w_info span{background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/bar2.gif) 0 0 no-repeat;padding: 0 5px 0 6px}
+.aside .section .box_1 li dd.w_con{line-height:1.3em}
+
+.aside .section .sch_area{width:100%;overflow:hidden;margin-top:15px}
+.aside .section .sch_area span.input_txt1{background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/bg_input.jpg) 0px 0 no-repeat;width: 232px;height:25px;float:left;margin-right: 4px;_margin-right:0px}
+.aside .section .sch_area span.input_txt1 input{width:215px;height:22px;padding:2px 0 0 0;border:0;margin:0 0 0 10px;background-color: transparent;color:#999;line-height:1.7em}
+.aside .section .list_side{margin:5px 0 15px 0}
+.aside .section .list_side li{padding:10px 10px;border-bottom:1px solid #e6e6e6;}
+.aside .section .dl_type1{width:100%;overflow:hidden}
+.aside .section .dl_type1 dd.img_line{float:left;width:50px; padding-right:9px; position:relative;}
+.aside .section .dl_type1 dd.img_line .line{width:48px;height:48px; border:solid 1px #e6e6e6; position:absolute;left:0;top:0;}
+.aside .section .dl_type1 dt{padding:4px 0 6px 0}
+.aside .section .dl_type1 dt a{font-weight:bold;color:#0d54ab;font-size:14px;}
+.aside .section .dl_type1 dt span{font-weight:normal;font-size:11px;color:#cd1821;margin-left:4px}
+.aside .section .dl_type1 dd.name strong{color:#353b4b;font-size:12px;}
+.aside .section .dl_type1 dd.name a{color:#353b4b;font-size:11px}
+
+<!--최종면개편:페이스북-->
+.aside .faceb{width:320px; margin:20px 0; position:relative; padding-bottom:20px;}
+
+
+/**********************/
+/* s:메뉴별 단 구성 outline*/
+/* 970px 가로 3단 */
+.layeout970{width:100%; overflow:hidden; margin:auto 0;}
+.layeout970_left{width:320px; float:left;}
+.layeout970_center{width:320px; float:left;}
+.layeout970_right{width:320px; float:left;}
+
+/* e:메뉴별 단 구성 outline*/
+
+/*sub_title*/
+.stitle{width:100%;*zoom:1;border-bottom:2px solid #262f3b;padding-bottom:10px; /*margin-bottom:15px*/}
+.stitle a{color: #4783ff; font-size:14px;}
+.line_none{border-bottom:none}
+.stitle:after{content:" ";clear:both;display:block}
+.stitle h2{float:left;text-indent:-99999em;background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/stitle.gif) -9999em -9999em no-repeat;margin:0 7px 0 10px;display:inline}
+.stitle h2.s_news{width:32px;height:16px;background-position:0 0}
+.stitle h2.s_story{width:89px;height:17px;background-position:0 -50px}
+.stitle h2.s_zone{width:31px;height:17px;background-position:0 -100px}
+.stitle h2.s_ranking{width:50px;height:17px;background-position:0 -150px}
+.stitle h2.s_blog{width:81px;height:17px;background-position:0 -200px}
+.stitle h2.s_issue{width:110px;height:18px;background-position:0 -250px}
+.stitle h2.s_tree{width:48px;height:18px;background-position:0 -300px}
+.stitle h2.s_ohmy{width:82px;height:18px;background-position:0 -350px}
+.stitle h2.s_tag{width:31px;height:18px;background-position:0 -400px}
+.stitle h2.s_forest{width:103px;height:18px;background-position:0 -450px}
+.stitle h2.s_write{width:63px;height:18px;background-position:0 -500px}
+.stitle h2.s_hold{width:32px;height:18px;background-position:0 -550px}
+.stitle h2.s_history{width:94px;height:18px;background-position:0 -600px}
+.stitle h2.s_weather{width:94px;height:18px;background-position:0 -650px}
+
+.stitle .t_sub{float:left;background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/bar4.gif) 0 5px no-repeat;padding:3px 0 0 9px;color:#10141d;}
+.stitle .t_sub a{float:left}
+.stitle .t_stit{color:#10141d;margin-right:8px; float:left}
+
+/*모이타이틀추가*/
+.stitle .t_sub_moi{float:left;background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/moi-bar.png) 0 0px no-repeat;padding:3px 0 0 30px;color:#10141d;}
+.stitle .t_sub_moi > a{float:left}
+.stitle .t_stit_moi{color:#10141d;margin-right:8px; float:left}
+
+.stitle .t_rss{background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon_group.gif) 0 0 no-repeat;padding-left:13px;font-weight:bold;color:#999;font-size:12px; float:left;}
+.stitle .m_menu{float:right;position:relative;width:80px;z-index:100}
+.stitle .t_sub.none{padding:3px 0 0 0; background: none;}
+
+.stitle h2.txt_stitle{float:left;text-indent:0;font-size:14px;color:#10141d;display:inline;margin-left:5px; }
+.stitle .bar{color:#e5e5e5;margin:0 4px 0 0}
+.stitle_sub1{color:#999;margin:0 0 30px 10px}
+.stitle_sub1 .bar{color:#e5e5e5;margin:0 4px}
+.tit_subject { letter-spacing:-2px}
+
+/*sub_title2*/
+h3.title_s{height:22px; border-bottom: solid 1px #ccc; margin-bottom:15px; background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/s_title.gif) no-repeat;text-indent:-9999em}
+h3.sub_story{background-position:0 0; /*width:62px*/}
+h3.sub_culture{background-position: 0 -50px; /*width:25px*/}
+h3.sub_tour{background-position: 0 -100px; /*width:25px*/}
+h3.sub_book{background-position: 0 -150px; /*width:37px*/}
+h3.sub_movie{background-position: 0 -200px; /*width:25px*/}
+h3.sub_incheon{background-position: 0 -250px; /*width:50px*/}
+h3.sub_daejeon{background-position: 0 -300px; /*width:50px*/}
+h3.sub_gwangju{background-position: 0 -350px; /*width:50px*/}
+h3.sub_daegu{background-position: 0 -400px; /*width:50px*/}
+h3.sub_gangwon{background-position: 0 -450px; /*width:50px*/}
+h3.sub_busan{background-position: 0 -500px; /*width:50px*/}
+h3.sub_serial{background-position: 0 -650px; /*width:25px*/}
+h3.sub_special{background-position: 0 -700px; /*width:48px*/}
+h3.sub_youth{background-position: 0 -750px; }
+
+/*경제*/
+.ctop {width:600px; overflow:hidden; margin:0 auto; padding:9px; float:left;}
+.ctop .img_line{float:left;width:300px;padding-right:15px; position:relative;}
+.ctop .img_line .line{width:298px;height:158px;border:1px solid #e6e6e6;position:absolute;left:0;top:0;}
+.ctop .ctop_con{float:left;width:285px; height:140px; padding-bottom: 20px; position:relative;}
+.ctop .ctop_con dt{padding:2px 0 5px 0}
+.ctop .ctop_con dt a{display:block; font-size: 23px; line-height:1.3em;text-decoration:none}
+.ctop .ctop_con dt a span{font-size: 25px; line-height:105%; text-decoration:none; color:#000; font-weight:bold; letter-spacing:-0.1em;display: -webkit-box;overflow: hidden;-webkit-box-orient: vertical;-webkit-line-clamp: 2;}/*2줄이상 말줄임*/
+.ctop .ctop_con dt a strong{color:#333;letter-spacing:-1px; padding-top: 4px;font-size:12px;line-height: 1.4em;display: -webkit-box;overflow: hidden;-webkit-box-orient: vertical;-webkit-line-clamp: 2;}
+.ctop .ctop_con dd{line-height:1.2em;}
+.ctop .ctop_con dd > a{display: -webkit-box;overflow: hidden;-webkit-box-orient: vertical;-webkit-line-clamp: 3;}
+.ctop .ctop_con dd span{font-size:11px;color:#999}
+.ctop .ctop_con dd span a {font-size:11px;color:#999;display: inline-block;margin: 7px 0 0;}
+.ctop .ctop_con dd.re{padding-bottom:7px;}
+.ctop .ctop_con dd.re p{background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon_group.gif) 0 -49px no-repeat;padding-bottom:3px}
+.ctop .ctop_con dd.re p a{margin-left:17px;line-height:1.2em}
+.ctop .ctop_con dd.re p a:hover{color:#333}
+
+/* 배치기사 sns 컨트롤 */
+.ctop .ctop_con .c_sns{width:100%; padding:0; margin:0; position:absolute; left:0; bottom:0;}
+.ctop .ctop_con .c_sns img{margin:0 0 0 0;vertical-align:middle}
+.ctop .ctop_con .c_sns .fblike{margin:0; padding:0;margin-right:9px; float:left;}
+.ctop .ctop_con .c_sns .twlike{margin:0; padding:0; float:left;}
+.ctop .ctop_con .c_sns .t_count{margin:0 0 0 5px;display:inline-block;vertical-align:middle;font-size:11px;font-family:arial}
+
+.list_type1{width:100%;padding-top:20px}
+.list_type1 li{width:100%;overflow:hidden; padding-bottom:20px}
+.list_type1 .sns{float:left;width:150px;height:75px;background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/bg_sns.gif) 0 0 no-repeat;padding:5px 0 3px 0}
+.list_type1 .sns p{margin:0 0 2px 5px}
+.list_type1 .sns p span{font-size:11px;color:#000;font-family:arial;margin-left:7px}
+.list_type1 .sns p img{vertical-align:middle;}
+
+.list_type1_1{padding-top:0}
+
+.blog .news_list{width:398px}
+.news_list{float:left; width:100%; overflow:hidden}
+.news_list .cont{overflow:hidden; }
+
+/*.news_list .cont dl{height:63px}*/
+.news_list .cont dt a{font-size:17px; letter-spacing:-0.1em; color:#073685;line-height:1.2em;font-weight:bold}
+.news_list .cont dd{padding:5px 0 12px 0}
+.news_list .cont dd a{line-height:1.2em}
+.news_list .cont dd.url a{color:#999;padding:4px 0 3px 0}
+.news_list .cont p.source a, .news_list .cont p.source{font-size:11px;color:#999}
+.news_list .cont p.source .bar1{color:#e4e5e6;margin:0 4px;font-size:12px}
+.news_list .thumb{float:left; width:120px; height:75px; margin-right:15px;position:relative;}
+.news_list .thumb .line{width:118px;height:73px;border:1px solid #e6e6e6; position:absolute; left:0; top:0;}
+.etc1 .news_list{width:552px}
+.etc1 .news_list  dt a{font-size:14px;color:#073685;line-height:1.2em;font-weight:bold;padding-top:2px}
+.etc1 .news_list dd{padding:3px 0 6px 0}
+.etc1 .news_list dd.url a{color:#353b4b;padding:4px 0 3px 0}
+.etc1 .news_list p.source{font-size:11px;color:#999}
+.etc1 .news_list p.source .bar1{color:#e4e5e6;margin:0 4px;font-size:12px}
+.type_space1{padding-top:0 !important}
+.type_space1 li{padding-bottom:15px !important}
+
+/*만화 만평*/
+.list_type2{width:100%;overflow:hidden;padding-top: 15px;}
+.list_type2 li{float:left;width:315px;padding-bottom:30px}
+.list_type2 li.lr{float:left;width:305px}
+.list_type2 li dl.ani{width:295px;overflow:hidden}
+.list_type2 li dl.ani dd.img_line{float:left;width:129px; position:relative;}
+.list_type2 li dl.ani dd.img_line .line{width:118px;height:73px; border:solid 1px #e6e6e6; position:absolute;left:0;top:0;}
+.list_type2 li dl.ani dt{padding:2px 0 7px 0}
+.list_type2 li dl.ani dt a{font-weight:bold;color:#073685;line-height:1.2em}
+.list_type2 li dl.ani dd.source a, .list_type2 li dl.ani dd.source{font-size:11px;color:#999;line-height:1.3em}
+
+/*해외리포트*/
+.ctop_list{overflow:hidden;border-bottom:1px solid #e6e6e6;background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/bg_list1.gif) 0 0 repeat-y;width:100%}
+.ctop_list li{float:left;width:200px;}
+.ctop_list li a{display:block;height:43px;padding:10px 0;color:#333;line-height:1.2em;text-decoration:none;width:194px;padding-right:5px;margin-left:1px}
+.ctop_list li a span.img_line{float:left;width:85px;margin-left:5px;display:inline; position:relative;}
+.ctop_list li a span.img_line .line{width:78px;height:41px; border:solid 1px #e6e6e6; position:absolute;left:0;top:0;}
+.ctop_list li a span.txt{display: -webkit-box;overflow: hidden;height: 42px;margin-bottom: 8px;-webkit-box-orient: vertical;-webkit-line-clamp: 3;}
+.ctop_list li a:hover{background:#f3f3f4}
+.ctop_list li.end{width:218px}
+.ctop_list li.end a{width:213px;padding-right:5px;}
+
+.list_type3{width:620px; padding-top:15px}
+.list_type3 li{width:100%;overflow:hidden;padding-bottom:30px}
+.list_type3 .n_man{float:left;width:50px;padding-right:18px; position:relative;}
+.list_type3 .line{width:48px;height:48px;border:solid 1px #e6e6e6;position:absolute;left:0;top:0;}
+.list_type3 .news_list{float:left;width:550px;overflow:hidden}
+.list_type3 .news_list .cont{overflow:hidden}
+.list_type3 .news_list .cont dt a{font-size:17px; letter-spacing:-0.1em;color:#073685;line-height:1.2em;font-weight:bold}
+.list_type3 .news_list .cont dd{padding:5px 0 12px 0; font-size: 13px; letter-spacing: -0.07em;}
+.list_type3 .news_list .cont dd a{line-height:1.2em;  font-size: 13px; letter-spacing: -0.07em;}
+.list_type3 .news_list .cont dd.url a{color:#999;padding:4px 0 3px 0}
+.list_type3 .news_list .cont p.source a, .news_list .cont p.source{font-size:11px;color:#999}
+.list_type3 .news_list .cont p.source .bar1{color:#e4e5e6;margin:0 4px;font-size:12px}
+.list_type3 .news_list .thumb{float:left;width:120px;height:75px;margin-right:10px;position:relative;}
+.list_type3 .news_list .thumb .line{width:118px;height:73px;border:1px solid #e6e6e6; position:absolute;left:0;top:0;}
+
+/*블로그뉴스2단list*/
+.n_blog_list{float:left;}
+.n_blog_list .source{padding-bottom:13px}
+.n_blog_list .source a{color:#10141d}
+.n_blog_list .source .bar1{color:#ccc;margin:0 4px;font-size:13px}
+
+.list_blog1{width:620px; padding-top:15px}
+.list_blog1 li{width:100%;overflow:hidden;padding-bottom:30px}
+.list_blog1 .n_man{float:left;width:50px;padding-right:18px; position:relative;}
+.list_blog1 .line{width:48px;height:48px; border:solid 1px #e6e6e6; position:absolute;left:0;top:0;}
+.list_blog1 .blog_list{float:left;width:398px;overflow:hidden}
+.list_blog1 .blog_list .cont{overflow:hidden}
+.list_blog1 .blog_list .cont dt a{font-size: 17px; letter-spacing: -0.1em; color:#073685;line-height:1.2em;font-weight:bold}
+.list_blog1 .blog_list .cont dd{padding:5px 0 12px 0}
+.list_blog1 .blog_list .cont dd a{line-height:1.2em}
+.list_blog1 .blog_list .cont dd.url a{color:#999;padding:4px 0 3px 0}
+.list_blog1 .blog_list .cont p.source a, .news_list .cont p.source{font-size:11px;color:#999}
+.list_blog1 .blog_list .cont p.source .bar1{color:#e4e5e6;margin:0 4px;font-size:12px}
+.list_blog1 .blog_list .thumb{float:left;width:120px;height:75px;margin-right:10px;position:relative;}
+.list_blog1 .blog_list .thumb .line{width:118px;height:73px;border:1px solid #e6e6e6; position:absolute;left:0;top:0;}
+
+
+.n_man_list{width:550px; float:left;}
+.n_man_list .source{padding-bottom:13px;}
+.n_man_list .source a{color:#10141d;}
+.n_man_list .source .bar1{color:#ccc;margin:0 4px;font-size:13px;}
+
+.n_man_list .source .country {color:#999;font-size:11px;}
+.n_man_list .source .country a{color:#999;font-size:11px;}
+.n_man_list .source .country a:hover{color:#4978bc;font-size:11px; text-decoration:none;}
+.n_man_list .source .serial {color:#999;font-size:11px;}
+.n_man_list .source .serial a{color:#999;font-size:11px;}
+.n_man_list .source .serial a:hover{color:#4978bc;font-size:11px; text-decoration:none;}
+
+
+.line_t1{/*border-top:1px solid #e6e6e6;*/margin-top:20px}
+.line_t1 .list_type3 li{padding-bottom:17px}
+
+
+.n_man_view{width:584px;margin:0 auto;padding:17px 0 13px 0}
+.n_man_view dt{font-size:14px;color:#0d54ab;font-weight:bold;padding-bottom:6px}
+.n_man_view dd{font-size:12px;color:#353b4b;line-height:1.3em}
+.n_man_view dd span.gy_m{font-size:11px;color:#999;display:block;padding-top:4px}
+.n_man_info{border:1px solid #ddd;background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/bg_1.gif) 0 0 repeat-x;height:30px;overflow:hidden;display:block; margin-top:10px;}
+.n_man_info strong{color:#10141d;float:left;margin:10px 0 0 15px;display:inline}
+.n_man_info strong em{font-weight:normal;color:#cd1821;margin-left:5px}
+.n_man_info a.btn{float:right;padding:0 0 5px 0;margin:0;background-image:none}
+
+.n_maninfo_view{border:1px solid #ddd;background:#f3f3f4;border-top:none;padding:15px 0;overflow:hidden;width:618px}
+.n_maninfo_view .list_infoview{padding-bottom:25px;width:100%;overflow:hidden}
+.n_maninfo_view p.img{float:left;margin-left:14px;display:inline;width:63px}
+.n_maninfo_view p.img img{width:63px;}
+.n_maninfo_view dl{float:left;width: 510px;overflow:hidden;margin-left: 13px;}
+
+.maninfo_view{float:left;width:510px;overflow:hidden;}
+.maninfo_view p.img{float:left;display:inline;width:50px;padding-right:10px;}
+.maninfo_view dl{float:left;width:450px;} 
+
+.maninfo_view dt, .n_maninfo_view dt{color:#10141d;padding-bottom:9px;width:100%;overflow:hidden}
+.maninfo_view dt .n_name a, .n_maninfo_view dt .n_name a{color:#10141d}
+.maninfo_view dt span, .n_maninfo_view dt span{float:left}
+.maninfo_view dt .n_man_icon a, .n_maninfo_view dt .n_man_icon a{float:left;text-indent:-9999em;overflow:hidden;height:14px;background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon_nman.gif) -9999em -9999em no-repeat}
+.maninfo_view dt .n_man_icon a.ic1, .n_maninfo_view dt .n_man_icon a.ic1{width:34px;background-position:0 0}
+.maninfo_view dt .n_man_icon a.ic2, .n_maninfo_view dt .n_man_icon a.ic2{width:35px;background-position:-34px 0}
+.maninfo_view dt .n_man_icon a.ic3, .n_maninfo_view dt .n_man_icon a.ic3{width:34px;background-position:-69px 0}
+.maninfo_view dt .n_man_icon a.ic4, .n_maninfo_view dt .n_man_icon a.ic4{width:32px;background-position:-103px 0}
+.maninfo_view dt .n_man_icon a.ic5, .n_maninfo_view dt .n_man_icon a.ic5{width:32px;background-position:-135px 0}
+.maninfo_view .n_name, .n_maninfo_view .n_name{padding-top:1px}
+.maninfo_view dd.info1, .n_maninfo_view dd.info1{padding-bottom:8px}
+.maninfo_view dd.info1, .maninfo_view dd.info1 a, .n_maninfo_view dd.info1, .n_maninfo_view dd.info1 a{font-size:11px;color:#949aaa;line-height:1.3em}
+.maninfo_view dd.info2 a, .n_maninfo_view dd.info2 a{color:#0d54ab}
+.maninfo_view dd.info2 p, .n_maninfo_view dd.info2 p{padding-bottom:1px}
+p.sdate{color:#999;font-size:11px;width:584px;margin:0 auto}
+.box_com{margin:10px 0; padding:9px 8px}				
+.spon{margin:10px 0}
+
+/*사는이야기*/
+.list_type_pic_1, .list_type_pic{width:961px;overflow:hidden;margin:15px auto 60px auto;border-top:1px solid #ddd;}
+.list_type_pic li{float:left;border:1px solid #ddd;border-left:none;border-top:none;width:319px;height:318px}
+.list_type_pic_1 li.first, .list_type_pic li.first{border-left:1px solid #ddd}
+.list_type_pic_1 li:hover, .list_type_pic li:hover, .menuOver {background:#f3f3f4}
+
+.list_type_pic_1 li, .list_type_pic li  {
+ behavior: expression(
+  this.onmouseover = new Function("this.className += ' menuOver';"),
+  this.onmouseout = new Function("this.className = this.className.replace(' menuOver', '');"),
+  this.style.behavior = null
+ ); 
+}
+
+.list_type_pic dl{width:300px;margin:0 auto;padding-top:9px;height:280px}
+.list_type_pic_1 dd.img_line, .list_type_pic dd.img_line{padding-bottom:8px; position:relative;}
+.list_type_pic_1 dd.img_line .line, .list_type_pic dd.img_line .line{width:298px;height:158px; border:solid 1px #e6e6e6; position:absolute;left:0;top:0;}
+.list_type_pic dt{font-weight:bold;letter-spacing:-0.1em;font-size:25px;color:#000;line-height:105%;}
+.list_type_pic dt a{color:#000;display: -webkit-box;overflow: hidden;-webkit-box-orient: vertical;-webkit-line-clamp: 2;}/*2줄 이상 말줄임*/
+.list_type_pic dt strong{display:block;font-size:12px;color:#999;line-height:14px;padding-top:3px; letter-spacing:-0.07em;}
+.list_type_pic dt strong a{color:#666;}
+/* sns 컨트롤 */
+.list_type_pic .c_sns{margin:0 0 0 9px}
+.list_type_pic .c_sns img{margin:0 0 0 0;vertical-align:middle}
+.list_type_pic .c_sns .fblike{margin:0; padding:0;margin-right:9px; float:left;}
+.list_type_pic .c_sns .twlike{margin:0; padding:0; float:left;}
+.list_type_pic .c_sns .t_count{margin:0 0 0 5px;display:inline-block;vertical-align:middle;font-size:11px;font-family:arial;}
+
+.list_type_pic_1 .p_con, .list_type_pic .p_con{font-size:12px;letter-spacing:-1px;line-height:130%;padding-top:7px;}
+.list_type_pic_1 .p_con a, .list_type_pic .p_con a{text-decoration:none;color:#666;}
+/*.list_type_pic .p_con > a{display: -webkit-box;overflow: hidden;-webkit-box-orient: vertical;-webkit-line-clamp: 2;}*/
+.list_type_pic_1 .p_con a:hover, .list_type_pic .p_con a:hover{text-decoration:none;color:#333;}
+.list_type_pic_1 .p_con span, .list_type_pic .p_con span{font-size:11px;color:#999;margin-left:3px;}
+.list_type_pic_1 .p_con span a, .list_type_pic .p_con span a{color:#999;margin-left:5px;}
+.list_type_pic_1 .p_con span a:hover, .list_type_pic .p_con span a:hover{color:#999;text-decoration:underline;}
+
+.list_type_pic_1 {margin-bottom:50px}
+.list_type_pic_1 li{float:left;border:1px solid #ddd;border-left:none;border-top:none;width:319px;height:296px}
+.list_type_pic_1 dl{width:300px;margin:0 auto;padding-top:9px}
+.list_type_pic_1 dt{font-weight:bold;letter-spacing:-0.1em;font-size:25px;color:#000;line-height:105%;}
+.list_type_pic_1 dt a{color:#000;}
+.list_type_pic_1 dt strong{display:block;font-size:13px;color:#999;line-height:14px;padding-top:3px; letter-spacing:-0.07em;}
+.list_type_pic_1 dt strong a{color:#666;}
+
+.list_type_pic2{width:100%;overflow:hidden; margin-left:4px}
+.list_type_pic2 li{float:left;width:300px;margin:0 15px 40px 5px; display:inline;position:relative; min-height: 154px; _margin:0 8px}
+.list_type_pic2 li a.more{position:absolute;top:3px;right:0;color:#999;background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/bul1.gif) right 1px no-repeat;padding:0 8px 0 0;font-size:11px}
+.list_type_pic2 li a.more:hover{color:#cd1821;text-decoration:none}
+
+.sq_list{display:block;width:100%;background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/bul_sq.gif) 0 7px no-repeat;padding:0 0 6px 7px; font-size:14px;letter-spacing:-1px;line-height:18px; overflow: hidden; text-overflow: ellipsis;white-space: nowrap;}
+.sq_list a:hover{color:#333}
+
+dl.img_type{width:295px;overflow:hidden;margin-bottom:15px;}
+dl.img_type dd.img_line{float:left;width:120px; padding-right:10px; position:relative;}
+dl.img_type dd.img_line .line{width:118px;height:73px; border:solid 1px #e6e6e6; position:absolute;left:0;top:0;}
+dl.img_type dt{padding:2px 0 6px 0}
+dl.img_type dt a{font-weight:bold;color:#073685 !important;line-height:1.2em;font-size:14px}
+dl.img_type dd.source{font-size:12px;color:#353b4b;line-height:1.2em}
+.img_line span.p_zoon{position:absolute;top:1px;left:-3px;z-index:105}
+.sq_list_area{padding-top:5px}
+
+.z_list{width:620px;overflow:hidden;}
+
+.z_list .inbox_l{width:300px;float:left;}
+.z_list .inbox_r{width:300px;float:right;}
+
+.z_list .inbox{width:280px; height:150px; padding:14px 9px 4px 9px; border:solid 1px #dddddd; margin-bottom:15px; overflow:hidden;position: relative;}
+.z_list .inbox .one_more{position: absolute;right: 8px;top: 11px;font-size: 11px;letter-spacing: -1px;text-decoration: none;color:#999999;background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/bul1.gif) right 6px no-repeat;  padding: 4px 8px 5px 5px;display: inline-block;}
+.z_list .inbox .stit_txt{font-weight:bold;color:#000;height:18px;background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/dotline2.gif) 0 bottom repeat-x;margin-bottom:10px}
+.z_list .inbox .img_type{width:280px; margin-bottom:5px;}
+.z_list .inbox .img_type dd.img_line{float:left;width:120px; padding-right:10px; position:relative;}
+.z_list .inbox .img_type dd.img_line .line{width:118px;height:73px; border:solid 1px #e6e6e6; position:absolute;left:0;top:0;}
+.z_list .inbox .img_type dt{padding:2px 0 4px 0}
+.z_list .inbox .img_type dt a{font-weight:bold;color:#073685 !important;line-height:16px;font-size:14px}
+.z_list .inbox .img_type dd.source {font-size:12px;color:#353b4b;line-height:14px; padding-bottom:6px;}
+.z_list .inbox .img_type dd.source a{color:#353b4b;}
+.z_list .inbox .br_list{display:block;width:100%;margin:0;padding:0 0 6px 7px;background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/bul_sq.gif) 0 4px no-repeat;line-height:14px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;}
+.z_list .inbox .br_list a:hover{color:#333}
+
+/*
+.z_list_t{width:280px;padding:9px; border:solid 1px #dddddd; margin-bottom:15px; margin-right:20px; float:left;}
+.z_list_b{width:280px;padding:9px; border:solid 1px #dddddd; margin-bottom:15px; margin-right:20px; float:left;}
+*/
+
+/*랭킹30*/
+.real_area{background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/bg_box2.gif) 0 0 no-repeat;margin-bottom:40px}
+.real_area_b{width:100%;overflow:hidden;background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/bg_box2_b.gif) 0 bottom no-repeat;padding:26px 0 15px 0}
+.real_area .real_l{float:left;width:457px;margin:0 0 0 19px;display:inline}
+.real_area .real_r{float:right;width:451px;margin-right:12px;display:inline}
+.real_area .real_l dl{background:#f6f6f6; height:104px;}
+h3.sub_real{background-position:0 -550px;margin-left:18px}
+h3.sub_rt{background-position:0 -600px}
+.bg_box{background:#f6f6f6;padding:8px 17px}
+.bg_box dt{line-height:1.6em;padding-bottom:5px}
+.bg_box dd.source{font-size:11px;color:#747474;padding-bottom:17px}
+.bg_box dd.source span.pay{color:#e84444}
+.bg_box dd.source span.date{color:#9f9f9f}
+.bg_box dd.source .bar{color:#ccc;margin:0 3px;font-size:10px}
+
+.rt_area p.re, .bg_box dd.re{background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon_group.gif) 0 -100px no-repeat;padding-bottom:5px}
+.rt_area p.re strong, .bg_box dd.re strong{color:#878787}
+.rt_area p.re a, .bg_box dd.re a{font-weight:bold;margin-left:13px;color:#4b4b4b}
+.rt_area{width:100%;overflow:hidden;}
+.rt_area dt.img_line{float:left;width:61px}
+.rt_area dt.img_line .line{width:48px;height:48px; border:solid 1px #e6e6e6; position:absolute;left:0;top:0;}
+.rt_area dd{float:left;width:375px}
+.rt_area dd .rt{line-height:1.3em;padding-bottom:17px}
+.rt_area dd .rt .re_so{font-size:11px;color:#9f9f9f;margin:0 0 0 12px}
+.rt_area dd .rt a strong{color:#3294c2;font-family:arial}
+.rt_area dd .rt a:hover strong{color:#3294c2;font-family:arial;text-decoration:underline;}
+.rt_area dd .rt a.url{color:#018ecf}
+
+.ranking_news{width:100%;overflow:hidden;margin-bottom:30px}
+.ranking_news li{float:left;width:240px;margin-left:3px;display:inline;}
+.ranking_news li.first{margin-left:0}
+
+.ranking_news .tnews dd{width:100%;height:74px;background:#f8f8f8}
+.ranking_news .tnews  dd.bg{background:#fff}
+
+.ranking_news .tnews  dd a{width:237px;height:65px;margin:0 auto;display:block;text-decoration:none;color:#373737;padding:9px 0 0 3px}
+.ranking_news .tnews  dd a.on{background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/box_red.gif) 0 0 no-repeat;width:237px;height:74px;font-weight:bold}
+.ranking_news .tnews  dd a span.news{display:block;margin:0 0 0 17px;width:210px;line-height:1.3em;padding-top:0; font-size:15px; letter-spacing: -0.05em;}
+
+.ranking_news dd{width:240px;height:74px;background:#f8f8f8}
+.ranking_news dd.bg{background:#fff}
+.ranking_news dd a{height:65px;margin:0 auto;display:block;text-decoration:none;color:#373737;padding:10px 0 0 3px;}
+
+.ranking_news dd a.on{background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/box_red.gif) 0 0 no-repeat;width:237px;height:74px;font-weight:bold}
+
+.ranking_news dd a span.news{display:block;margin:0 0 0 10px;width:210px;line-height:1.3em;padding-top:0; font-size:15px; letter-spacing: -0.05em;display: -webkit-box;overflow: hidden;-webkit-box-orient: vertical;-webkit-line-clamp: 2;}/*2줄이상 말줄임*/
+.ranking_news dd a em{margin:0 0 0 10px;font-size:14px;font-weight:bold;display:block;padding-bottom:2px}
+.ranking_news .tnews dd a em{font-style:italic;font-family:arial;}
+.ranking_news dd a em.num1{color:#cf0000}
+.ranking_news dd a em.pt{background-image:none;text-indent:0;font-size:11px;color:#e84444}
+.ranking_news dd a em.pt .et{color:#919191;margin-left:5px;font-weight:normal}
+.ranking_news dd a.on em.pt .et {font-weight:bold}
+.ranking_news dd a em.pt .et .rd{color:#e84444}
+.ranking_news dd a em.pt .et .bl{color:#3294c2}
+.ranking_news dd a em.bt{background-image:none;text-indent:0;font-size:11px;color:#4aa7d3}
+.ranking_news dl dt {background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/bg_ranking_tit.gif) 0 bottom repeat-x;height:57px}
+.ranking_news dl dt span{background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/list_ranking.gif) -9999em -9999em no-repeat;width:100%;text-indent:-9999em;height:47px;margin-top:31px;display:block}
+.ranking_news .tnews dt span{background-position:0 3px}
+.ranking_news .tscore dt span{background-position:0 -60px}
+.ranking_news .tpay dt span{background-position:0 -117px}
+.ranking_news .trt dt span{background-position:0 -177px}
+.ranking_news .tsns dt span{background-position:0 -236px}
+*:first-child+html .ranking_news dl dt {height:90px} * html .ranking_news dl dt {height:90px}
+
+/*이슈연재*/
+.box_position{/*position:relative;*/ margin-bottom:60px; }
+.boxissue_more{width:961px; text-align:right; padding-top:10px;}
+.boxissue_more a.more{background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/bul1.gif) right 2px no-repeat;padding:0 6px 0 0;font-size:11px;text-decoration:none}
+.boxissue_more a.more:hover{color:#cd1821;text-decoration:none}
+.list_type_pic_2{width:961px;overflow:hidden;margin:15px 0 0 4px;border-top:1px solid #ddd}
+.list_type_pic_2 li{float:left;border:1px solid #ddd;border-left:none;border-top:none;width:319px;height:278px}
+.list_type_pic_2 li.first{border-left:1px solid #ddd}
+.list_type_pic_2 li:hover, .menuOver{background:#f3f3f4}
+.list_type_pic_2 li{
+ behavior: expression(
+  this.onmouseover = new Function("this.className += ' menuOver';"),
+  this.onmouseout = new Function("this.className = this.className.replace(' menuOver', '');"),
+  this.style.behavior = null
+ ); 
+}
+
+.list_type_pic_2 dl{width:300px;margin:0 auto;padding-top:9px;height:248px;clear:both}
+.list_type_pic_2 dd.img_line{padding-bottom:10px; position:relative;}
+.list_type_pic_2 dd.img_line .line{width:298px;height:193px; border:solid 1px #e6e6e6; position:absolute;left:0;top:0;}
+.list_type_pic_2 dt em.is_tit{font-weight:bold;color:#10141d}
+.list_type_pic_2 dt em.is_tit img{vertical-align:middle;margin:0 4px 3px 0;}
+.list_type_pic_2 dt strong{display:block;color:#0d54ab;padding-top:2px;letter-spacing:-1px;font-size:20px}
+.list_type_pic_2 dt a{text-decoration:none !important}
+.c_news{font-size:11px;color:#999;width:300px;margin:0 auto}
+
+.section_area{width:100%;position:relative;}
+.serial_area{width:610px;margin-left:4px}
+.section_area a.more{position:absolute;top:3px;right:0}
+.serial_area a.more{position:absolute;top:3px;right:9px}
+.list_serial{width:610px;overflow:hidden}
+
+.list_serial li{float:left;width:295px;height:135px;margin:0 5px 5px 0;display:inline;border:1px solid #ddd;background:#f3f3f4;padding:9px 0}
+
+.list_serial li p.sq_list{margin-left:10px;width:280px}
+
+dl.img_type2{margin:0 9px 15px 9px;overflow:hidden}
+dl.img_type2 dd.img_line{float:left;width:59px; position:relative;}
+dl.img_type2 dd.img_line .line{width:48px;height:48px; border:solid 1px #e6e6e6; position:absolute;left:0;top:0;}
+dl.img_type2 dt{padding:3px 0 5px 0}
+dl.img_type2 dt a{font-weight:bold;color:#0d54ab;line-height:1.2em; font-size:17px;letter-spacing:-0.1em;}
+dl.img_type2 dd.source{font-size:13px;color:#10141d;line-height:1.2em}
+dl.img_type2 dd.source a{color:#10141d}
+
+.list_special{border:1px solid #ddd;border-top:none;}
+.list_special li a{display:block; font-size:15px; font-weight:bold; color:#000;background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/bul_gy.gif) 304px 11px no-repeat;text-decoration:none;padding:8px 17px 8px 10px;line-height:1.3em;height:20px;border-top:1px solid #ddd}
+.list_special li a:hover{background:#f3f3f4 url(http://ojsimg.ohmynews.com/images/ohmynews/common/bul_bl.gif) 304px 11px no-repeat;color:#0d54ab;font-weight:bold;}
+
+.title_box{border:4px solid #c2c6cc;font-weight:bold;font-size:14px;color:#10141d;height:22px;padding:11px 0 0 6px;margin-bottom:30px}
+.title_box img{margin:0 4px 0 0}
+.article{margin-bottom:30px}
+.article ul{ margin-top: 26px;}
+.article h3.s_tit{font-weight:bold;color:#000a19;padding-bottom:14px}
+.article h3.s_tit span{background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/bul3.gif) right 3px no-repeat;padding-right:11px}
+p.s_tit1{color:#10141d;padding-bottom:5px; font-size:13px;}
+p.s_tit1 img{margin:0 5px -2px 0}
+.list_type_etc li{padding-bottom:30px;width:100%;overflow:hidden}
+.list_type_etc p.img{float:left;width:215px;padding-right:20px;position:relative;}
+.list_type_etc p.img .line{width:213px;height:138px; border:solid 1px #e6e6e6; position:absolute;left:0;top:0;}
+.ar_list{float:left;width:385px}
+.ar_list dt{padding-bottom:13px;font-size:20px; letter-spacing:-0.1em;color:#0d54ab;font-weight:bold;}
+.ar_list dt span{font-size:11px;color:#999;display:block;padding:1px 0 6px 0}
+.ar_list dt a{font-size:20px; letter-spacing:-0.1em;color:#0d54ab;font-weight:bold}
+.ar_list dd{background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/bul_sq.gif) 0 7px no-repeat; padding-bottom:10px; padding-left:10px; font-size:15px; letter-spacing:-0.05em;}
+
+/*.ar_list dd a{margin-left:10px}*/
+.ar_list dd a:hover{color:#333}
+.pic_list{width:100%;overflow:hidden;margin-bottom:15px;}
+.pic_list li{float:left;width:200px;height:140px;margin-bottom:15px;overflow:hidden;margin-left:9px;display:inline;position:relative;text-align:center}
+.pic_list li.first{margin-left:0;width:200px;height:140px;margin-bottom:15px;overflow:hidden;}
+.pic_list li .line{width:198px;height:138px; border:solid 1px #e6e6e6; position:absolute;left:0;top:0;}
+.pic_list li .line_ov{width:196px;height:136px; border:solid 2px #e6e6e6; position:absolute;left:0;top:0;}
+
+.list_vod{width:100%;overflow:hidden;margin-bottom:15px}
+.list_vod li{float:left;width:200px;margin-left:9px;margin-bottom:15px;display:inline;}
+.list_vod li.first{margin-left:0;margin-bottom:15px;}
+.list_vod li dd.img{position:relative;width:100%;}
+.list_vod li dd.img .line{width:198px;height:113px; border:solid 1px #e6e6e6; position:absolute;left:0;top:0;}
+.list_vod li dd.img .btn_vod{position:absolute;right:6px;bottom:6px;}
+
+.list_vod li dt{padding:10px 0 11px 0;text-align:center}
+.list_vod li dt a{font-size:14px;color:#10141d;font-weight:bold;line-height:1.2em}
+.list_vod li dd.date{font-size:11px;color:#999;text-align:center}
+.list_vod li dd.date .bar{font-size:11px;color:#e4e5e6;margin:0 3px;font-size:10px}
+.t_time{background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon_group.gif) 0 -150px no-repeat;padding-left:16px}
+
+.list_type4{border:1px solid #ddd;border-top:none;margin:15px 0}
+.list_type4 li a{display:block;background:#f3f3f4 url(http://ojsimg.ohmynews.com/images/ohmynews/common/bul_gy.gif) 260px 11px no-repeat; padding:10px 0 10px 11px; border-top:1px solid #ddd; font-size:15px; font-weight:bold; color:#000; text-decoration:none; letter-spacing:-1px;}
+.list_type4 li a em{color:#cd1821;font-size:11px;font-weight:normal;margin-left:5px}
+.list_type4 li a:hover{background:#FFF url(http://ojsimg.ohmynews.com/images/ohmynews/common/bul_bl.gif) 260px 11px no-repeat; color:#0d54ab;}
+
+.box_des{border:4px solid #ddd;background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/bg_gra.jpg) 0 0 repeat-x;padding:10px 15px 5px 15px;line-height:1.3em;margin-bottom:25px}
+.box_des p.gry{font-size:11px;color:#999}
+
+.stit_info{font-size:11px;color:#999;margin:15px 0 32px 10px;padding-top:3px}
+/*검색*/
+.sch_title{border-bottom:2px solid #e6e6e6;padding:14px 0 10px 0;width:100%;overflow:hidden;margin-top:30px;}
+.sch_title li{float:left;margin-right:6px}
+.sch_title li a{display:block;margin:0 0 0 5px;background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/sch_title.gif) -9999em -9999em no-repeat;text-indent:-9999em;height:10px;padding:5px}
+.sch_title .s_s1 a{background-position:5px 5px;width:52px}
+.sch_title .s_s2 a{background-position:-64px 5px;width:26px}
+.sch_title .s_s3 a{background-position:-107px 5px;width:39px}
+.sch_title .s_s4 a{background-position:-162px 5px;width:41px}
+.sch_title .s_s5 a{background-position:-220px 5px;width:40px}
+.sch_title .s_s6 a{background-position:-277px 5px;width:52px}
+.sch_title .s_s7 a{background-position:-346px 5px;width:53px}
+.sch_title .s_s8 a{background-position:-416px 5px;width:52px}
+.sch_title .s_s9 a{background-position:-485px 5px;width:51px}
+.sch_title .s_s1 a:hover,.sch_title .s_s1 a.on {background-position:5px -25px;width:52px}
+.sch_title .s_s2 a:hover, .sch_title .s_s2 a.on{background-position:-64px -25px;width:26px}
+
+
+.sch_title .s_s3 a:hover, .sch_title .s_s3 a.on{background-position:-107px -25px;width:39px}
+.sch_title .s_s4 a:hover, .sch_title .s_s4 a.on{background-position:-162px -25px;width:41px}
+.sch_title .s_s5 a:hover, .sch_title .s_s5 a.on{background-position:-220px -25px;width:40px}
+.sch_title .s_s6 a:hover, .sch_title .s_s6 a.on{background-position:-277px -25px;width:52px}
+.sch_title .s_s7 a:hover, .sch_title .s_s7 a.on{background-position:-346px -25px;width:53px}
+.sch_title .s_s8 a:hover, .sch_title .s_s8 a.on{background-position:-416px -25px;width:52px}
+.sch_title .s_s9 a:hover, .sch_title .s_s9 a.on{background-position:-485px -25px;width:51px}
+
+.sch_listarea {position:relative;z-index:100;}
+.sch_listarea .sort{position:absolute;top:34px;right:10px}
+.sch_listarea .sort a{background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/bul_sort.gif) right 4px no-repeat;padding-right:12px;color:#999}
+.sch_listarea .sort a.on{background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/bul_sort2.gif) right 4px no-repeat;padding-right:12px;color:#3e3e3e}
+.section_sch{border-top:1px solid #e6e6e6;padding-top:30px;position:relative;z-index:300;}
+.bd_none{border-top:none}
+
+.sch_listarea .sort .bar{color:#b1b1b1;font-size:10px;margin:0 8px;background:none}
+.sh_title{background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon_group.gif) 0 -197px no-repeat;padding-left:17px;font-weight:bold;font-size:14px;color:#10141d;margin-left:10px;margin-bottom:28px}
+.sh_title span{font-weight:normal;color:#737373;font-size:12px;margin-left:5px}
+.sh_title_sponsor{font-weight:bold;font-size:14px;color:#10141d;margin-left:10px;margin-bottom:28px}
+.sch_newslist{margin-bottom:30px;padding:0 10px 0 17px}
+.search_wrap{width:100%;position:relative;z-index:200;}
+.search_wrap .box_sch{border:5px solid #b5161e;height:33px;width:779px;position:relative;z-index:200;}
+.search_wrap .re_sch{color:#000;position:absolute;top:13px;right:3px}
+.search_wrap .re_sch *{vertical-align:middle}
+.search_wrap .re_sch input{margin:0 3px 1px 0}
+.search_wrap .re_sch img{margin:0 0 4px 16px}
+.line_b{border-bottom:2px solid #e4e5e6}
+.sch_bottom{clear:both;width:779px;margin:40px auto 0 auto;position:relative}
+
+.supp{width:100%;overflow:hidden;padding:28px 0 30px 0}
+.supp .su_l{float:left;width:;color:#737373;line-height:1.6em;width:603px;margin-left:24px;display:inline}
+.supp .su_r{float:right;width:138px}
+.asch_more{text-align:right;padding-bottom:0;margin:25px 0 12px 0}
+.asch_more a{font-size:11px;background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/bul1.gif) right 2px no-repeat;padding:0 8px 0 0;margin-right:10px}
+.asch_more a:hover{color:#cd1821;}
+.search_wrap a.btn_sch{display:block;background:#b5161e;color:#FFF;width:62px;font-weight:bold;text-align:center;font-size:17px;padding:12px 0 11px 0;position:absolute;top:-5px;right:-5px;text-decoration:none}
+.u_sch{width:100%;overflow:hidden}
+.u_sch a{float:left;color:#cd1821;font-weight:bold;width:86px;padding:10px 0 8px 21px;text-decoration:none;background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon_sch.gif) 88px 14px no-repeat}
+.u_sch input{font-size:17px;color:#000;font-weight:bold;padding:7px 0 6px 15px;width:600px;border:0}
+
+.select_box{width:104px;border:1px solid #cbc7c7;background:#fff;position:absolute;top:31px;left:0}
+.select_box li a{display:block;padding:5px 0 5px 21px;text-decoration:none;width:82px}
+.select_box li a:hover{background:#f4f4f4;color:#666}
+.search_link{padding:18px 0 0 0;margin:0 0 29px 129px}
+.search_link strong{color:#cd1821;margin-right:6px}
+.search_link a{margin:0 6px;color:#737373}
+.search_link span{color:#d0d0d0;font-size:10px}
+.sch_more{border:1px solid #ddd;background:#eee;width:100%;overflow:hidden;margin-bottom:52px; margin-top:30px;height:105px}
+.sch_more ul{margin:17px 0 0 89px;float:left;width:690px;display:inline;_margin-top:15px}
+*:first-child+html .sch_more ul {margin-top:15px}
+.sch_more li{width:100%;overflow:hidden;height:27px}
+.sch_more li strong{width:74px;color:#393939;float:left;line-height:1.4em;_line-height:2.0em}
+*:first-child+html .sch_more li strong {line-height:2.0em}
+.sch_more li input{margin:0 5px 3px 0}
+.sch_more li span {margin-right:15px; margin-left:5px;} 
+.sch_more li label{margin-right:15px}
+.sch_more select{font-size:13px;font-family:arial;}
+.sch_more select.year{width:55px}
+.sch_more select.month, .sch_more select.day{width:40px}
+.sch_more select.selec{width:86px}
+.sch_more .b_sch{float:left;margin:42px 0 0 0;display:inline }
+.b_sch a{padding:6px 28px; background:#c2c6cc; color:#ffffff !important;  margin-right:5px;display:block}
+.b_sch a:hover{color:#eef1f5; background:#8a9099; text-decoration:none; }
+
+.tab_info{margin-top:35px;height:17px;border-bottom:1px solid #e6e6e6;position:relative}
+.tab_info p.info_l{padding-left:7px;color:#969593;font-size:11px}
+.tab_info p.info_l span{color:#db472b}
+.tab_info p.info_r{position:absolute;top:0;right:0}
+.tab_info p.info_r a{color:#969593;font-size:11px;padding:5px}
+.tab_info p.info_r a.on{color:#db472b;font-weight:bold}
+.tab_info p.info_r span.bar{color:#e4e5e6;font-size:11px;margin:0 5px}
+
+.count{background:#fcfcfc;border:1px solid #e2e5e9;width:150px;height:82px;float:right;padding:0 0}
+.count .point{font-size:25px;font-family:arial;color:#6f7587;text-align:right;padding-right:13px;background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/txt_point.gif) right 10px no-repeat;margin:9px 4px 0 4px;height:28px}
+.count .graph{background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/img_graph.gif) center bottom no-repeat;width:137px;height:36px;position:relative;margin:0 0 0 6px}
+.count .f1{position:absolute;top:0;left:2px;font-size:9px;font-family:arial;color:#0d54ab}
+.count .e1{position:absolute;top:0;right:2px;font-size:9px;font-family:arial;color:#cd1821}
+.count .graph img{position:absolute;top:9px;margin-left:-8px}
+.count .won_area{width:134px;margin:0 auto;padding-top:11px}
+.count .won_area .won{background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/txt_won.gif) right 8px no-repeat;padding-right:13px;text-align:right;font-size:20px;color:#6f7587;font-family:arial;height:27px;margin-right:2px;letter-spacing:-1px}
+.count .won_area .geon{font-size:11px;text-align:right;color:#969593;height:15px;margin-right:5px}
+.count .won_area .geon em{color:#db472b}
+.count .won_area .agree{border-top:1px solid #e2e7f0;text-align:right;color:#969593;padding:7px 4px 0 0;font-size:11px}
+
+/* 점수주기+- 블로그뉴스 */
+.graph{background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/img_graph.gif) center bottom no-repeat;width:137px;height:36px;position:relative;margin:0 0 0 6px;}
+.graph img{position:absolute;top:9px;margin-left:-8px}
+.graph .graph_area{width:137px;height:232px;position:absolute;top:0;left:0;overflow:hidden;}
+.graph .graph_area li{float:left;text-indent:-9999em;overflow:hidden;height:36px; background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/img_graph_g.gif) center bottom no-repeat;}
+.graph .graph_area li.pointm5{width:68px; background-position: 0 14px; margin-left:0;}
+.graph .graph_area li.pointm4{width:47px; background-position: -21px 14px; margin-left:21px;}
+.graph .graph_area li.pointm3{width:36px; background-position: -32px 14px; margin-left:32px;}
+.graph .graph_area li.pointm2{width:24px; background-position: -44px 14px; margin-left:44px;}
+.graph .graph_area li.pointm1{width:12px; background-position: -56px 14px; margin-left:56px;}
+.graph .graph_area li.point0{background-position: 0 14px;display:none; }
+.graph .graph_area li.pointp1{width:13px; background-position:-68px 14px; margin-left:68px;}
+.graph .graph_area li.pointp2{width:25px; background-position:-68px 14px; margin-left:68px;}
+.graph .graph_area li.pointp3{width:36px; background-position:-68px 14px; margin-left:68px;}
+.graph .graph_area li.pointp4{width:47px; background-position:-68px 14px; margin-left:68px;}
+.graph .graph_area li.pointp5{width:68px; background-position:-68px 14px; margin-left:68px;}
+
+/*news_view*/
+.news_view{position:relative;z-index:400;padding:0 9px}
+.stitle_sub{margin-left:10px;padding-bottom:16px}
+.rule{text-align:center;line-height:1.6em;color:#cd1821;padding:11px 0 13px 0}
+.newswrap{ padding: 0; /*padding:0 0 40px 0;*/}
+.newstitlwrap{padding:20px 0 40px 0; clear:both;}
+.newstitle h3.tit_subject{font-size:31px; letter-spacing:-0.1em; font-weight:bold;color:#000a19;padding:0 0 8px 0;line-height:1.2em}
+.newstitle h3.tit_subject a{color:#000a19;}
+.newstitle .tit_subtit{display:block;font-size:15px;color:#666;padding-bottom:18px}
+.newstitle .tit_subtit a{color:#666;}
+.newstitle {border-bottom:1px solid #e6e6e6;padding:0 10px 26px 10px;margin-bottom:9px}
+.info_data{width:100%;*zoom:1}
+.info_data:after{content:""; display:block; clear:both;}
+
+
+.info_data div{float:left;font-size:11px;color:#999;}
+.info_data div .bar{color:#e5e5e5;margin:0 5px 0 4px;font-size:12px}
+.info_data .on {float:left;height:13px;padding-top:1px;margin-right:11px;position:relative;z-index:460;word-break:break-all;text-overflow:ellipsis; white-space:nowrap;word-break:break-all;}
+.info_data .on a{font-size:11px;color:#999;}
+.info_data .on .reporter{padding-left:5px;}
+.info_data .on .reporter img{vertical-align:middle;}
+/*.info_data div a.reporter{float:left;background:url(../images/common/icon_group.gif) right -250px no-repeat;padding-right:18px;height:13px;padding-top:1px;margin-right:11px}
+.info_data div.on a.reporter, .info_data div a.reporter:hover{background-position:right -300px}*/
+
+.info_data div ul{position:absolute;top:13px;right:0;width:90px;border:1px solid #ddd;background:#fff;/*z-index: 300;*/}
+.info_data div ul li{width:90px}
+.info_data div ul li a{display:block;color:#999;font-size:11px;padding:7px 0 7px 27px;background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon_nman1.gif) -9999em -9999em no-repeat;text-decoration:none;width:63px}
+.info_data div ul li.r1 a{background-position:9px 0px}
+.info_data div ul li.r1_1 a{background-position:9px -30px}
+.info_data div ul li.r2 a{background-position:9px -60px}
+.info_data div ul li.r3 a{background-position:9px -90px}
+.info_data div ul li.r4 a{background-position:9px -120px}
+.info_data div ul li a:hover{display:block;color:#333;font-size:11px;padding:7px 0 7px 27px;background:#f3f3f4 url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon_nman2.gif) -9999em -9999em no-repeat;text-decoration:none}
+.info_data div ul li.r1 a:hover{background-position:9px 0px}
+.info_data div ul li.r1_1 a:hover{background-position:9px -30px}
+.info_data div ul li.r2 a:hover{background-position:9px -60px}
+.info_data div ul li.r3 a:hover{background-position:9px -90px}
+.info_data div ul li.r4 a:hover{background-position:9px -120px}
+
+.news_section{padding:0 10px}
+.box_editor{border:1px solid #999;padding:10px 10px;line-height:1.6em;margin-bottom:38px}
+.box_editor strong{display:block}
+p.copyright{font-size:11px;text-align:right;color:#999; padding-top:20px;}
+.box_news{border:1px solid #ddd;margin:37px 0}
+.box_news dt{border-bottom:1px solid #ddd;font-size:14px;font-weight:bold;padding:11px 10px 10px 13px}
+.box_news dd{line-height:1.6em;padding:16px 10px 13px 13px}
+.news_content{line-height:1.5em}
+.news_body{/*padding:0 9px*/}
+.acc_area{width:100%;*zoom:1; padding:10px 0 30px 0;}
+.acc_area:after{content:""; display:block; clear:both;}
+.acc_area .ac1{float:left; display:inline; }
+.acc_area .ac1 .sn1{float:left;padding:5px 0 0 0;margin:0 0 0 12px;display:inline;font-size:11px;color:#6f7587;}
+.acc_area .ac1 .sn1 strong{color:#0d54ab}
+.acc_area .ac1 .sn1 .bar{color:#e5e5e5;margin:0 4px 0 3px;font-size:12px}
+
+.acc_area .ac3{float:right;display:inline;}
+
+.acc_area .ac2{float:right;display:inline; border:1px solid #ddd;border-left:none; line-height:20px;}
+.acc_area .ac2 div{float:left;border-left:1px solid #ddd;position:relative;}
+.acc_area .ac2 div a{display:block;font-size:11px;color:#999;padding:3px 3px 1px 5px;text-decoration:none}
+.acc_area .ac2 div a span{display:block;font-size:11px;color:#999;background:url(http://ojsimg.ohmynews.com/images/i_room_2011/common/ico_arrow.gif) right 3px no-repeat;padding-right:13px}
+.acc_area .ac2 div .btn_ly3{padding:3px 13px 1px 13px; font-size:11px;}
+
+.ft_size{position:absolute;top:19px;_top:19px;right:-1px;border:1px solid #ddd;background-color:#fff}
+.ft_size li a{display:block;background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon_group.gif) -9999em -99999em no-repeat;width:39px;padding:5px 0 2px 23px !important;}
+.ft_size li a:hover{background-color:#f3f3f4;color:#333 !important}
+.ft_size li.up a{background-position:12px -346px; }
+.ft_size li.dw a{background-position:12px -392px; }
+.nsns{position:absolute;top:24px;_top:24px;right:-1px;border:1px solid #ddd;background:#fff; width:63px; z-index:100;}
+.nsns li{ line-height:100%; }
+.nsns li a{display:block;padding:5px 0 2px 7px !important;width:55px}
+.nsns li a:hover{background-color:#f3f3f4;color:#333 !important}
+.url_ar{position:absolute;top:24px;	_top:24px;	right:-1px;	border:1px solid #ddd;height:30px;width:272px;background:#f3f3f4;padding:8px 0 0 9px; z-index:100; }
+/*최종면수정:z-index:500 !important;*/
+.info_con .url .url_ar{position:absolute;top:20px;_top:21px;left:0;border:1px solid #ddd;height:30px;width:240px;background:#f3f3f4;padding:8px 0 0 9px; z-index:600;}
+.zp1{position:relative; /*z-index:665*/ !important; }/*+++++++++++++++++++*/
+.zp2{position:relative; /*z-index:665*/ !important; }/*+++++++++++++++++++*/
+p.url_ar .input_url{border:1px solid #ddd;padding:4px 0 0 5px;height:16px;color:#262f3b;width:180px;float:left}
+p.url_ar a.btn_copy{float:left;font-size:12px;color:#4978bc;background:#fff;border:1px solid #ddd;margin-left:6px;display:inline;width:36px;padding:3px 0 3px 0}
+p.url_ar a.btn_copy em{display:block;text-align:center;padding:0 0 0 0}
+p.url_ar a.btn_copy:hover{background:#4978bc;color:#fff;text-decoration:none;}
+
+.newstag_area{width: 600px;margin: 20px 10px 40px;font-size: 13px;color:#666;display: block; /*광고*/clear: both;}
+.newstag_area a{margin: 0 0 0 6px; font-size: 14px; color: #227dc5;}
+.newstag_area a.btn_taginput{background:#999;color:#fff;font-size:14px;padding:3px 5px 3px 5px;text-decoration:none;margin-left:10px}
+.support_area{margin-bottom:20px}
+.noti_area{background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/bg_noti.jpg) 0 0 no-repeat;height:40px;width:100%;overflow:hidden;margin-bottom:20px}
+.noti_area .join_area{float:right;background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/bg_notibar.jpg) 0 0 no-repeat;color:#fff;padding:0 10px 0 8px;height:40px}
+.noti_area .join_area strong{color:#91fffd;font-size:11px}
+.noti_area .join_area  img{vertical-align:middle}
+.noti_area .join_area p{padding-top:10px}
+.noti_area .join_area p span{margin-right:8px}
+.noti_area .noti_l{float:left;padding:10px 0 0 10px}
+.noti_area .noti_l img{vertical-align:middle;margin-right:7px}
+.noti_l a, .noti_l span{color:#fff !important;}
+
+
+/* mini면 컨트롤 base로 이동 */
+
+
+/*기사최종면*/
+.tab_list{margin:13px 0 20px 0}
+.tab_list li{border-bottom:1px solid #e5e5e5;width:100%;overflow:hidden;padding:20px 0}
+.tab_list2 li{padding:15px 0 }
+.tab_list li.first{border-top:none}
+.tab_list li .tl_l{float:left;margin-left:10px;display:inline;width:456px}
+.tab_list li .tl_r{float:right;width:135px;margin-right:10px;display:inline}
+.tab_list li .pay dt{font-size:11px;color:#9ea2a7;text-align:right;padding-bottom:4px}
+.tab_list li .pay dd{font-size:20px;color:#cd1821;font-family:arial;text-align:right;letter-spacing:-1px;}
+.tab_list li .pay dd span{font-size:12px;color:#6f7587;font-family:malgun gothic;margin:0 0 0 1px}
+.tab_list li .ment dt{padding-bottom:10px}
+.tab_list li .ment dt span.bar{margin:0 4px;font-size:12px;}
+.tab_list li .ment dt span.mail a{font-size:11px;color:#9EA2A7;}
+.tab_list li .ment dt span.mail a:hover {text-decoration:underline;}
+.tab_list li .ment dd{line-height:1.6em;}
+.tab_list li .ment dd a:hover {text-decoration:none}
+.tab_list li .ment dd span a, .tab_list li .ment dd span{color:#9ea2a7;font-size:11px}
+.tab_list li .ment dd span{margin-left:7px}
+.tab_list li .ment dd span.bar{margin:0 4px;font-size:12px}
+li.no_list{text-align:center;border-bottom:1px solid #eaeced;padding:42px 0}
+a.btn_rt{font-size:11px;padding:4px 10px 3px 15px;text-decoration:none;position:absolute;bottom:7px;right:0;color:#717171;border:1px solid #dbe2e6}
+a.btn_rt span{background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/bul_arw_b.gif) right 3px no-repeat;padding:0 9px 0 0;}
+a.btn_rt strong{color:#00acdd}
+.rt_list{width:100%;overflow:hidden}
+.rt_list .img_line{float:left; width:50px; padding-right:10px; position:relative;}
+.rt_list .img_line .line{width:48px;height:48px; border:solid 1px #e6e6e6; position:absolute;left:0;top:0;}
+.rt_list .con p.rt a{color:#00adfe;line-height:1.2em}
+.rt_list .con p.rt a.b{font-weight:bold}
+.rt_list .con p.rt {color:#262f3b;padding-bottom:9px}
+.rt_list .con p.rt_so a, .rt_list .con p.rt_so{color:#9ea2a7;font-size:11px}
+.rt_list dd {width:560px; float:right;line-height:1.2em}
+
+/*댓글*/
+.r_sort{position:absolute;bottom:11px;right:0}
+.r_sort a {color:#818181;font-size:11px;padding:3px}
+.r_sort a.on{font-weight:bold;color:#262f3b;}
+.r_sort span.bar {color:#e5e5e5;margin:0 1px 0 4px; }
+.writeform{width:600px;margin:0 auto 20px auto;}
+
+.writeform .input_form{margin:29px 0 0 0;width:100%;overflow:hidden}
+.edit{/* margin-bottom:20px */}
+.edit .input_form{margin-top:0}
+.writeform .l_r .btn_send2{border:1px solid #dbdee4;width:58px;height:24px;display:block;text-decoration:none;background:#FFF}
+.writeform .l_r .btn_send2 strong{display:block;text-align:center;padding-top:7px;color:#10141d}
+.writeform .l_r .btn_cancel2{border:1px solid #dbdee4;width:58px;height:24px;display:block;text-decoration:none;background:#c2c6cc;margin-top:3px}
+.writeform .l_r .btn_cancel2 strong{display:block;text-align:center;padding-top:7px;color:#fff}
+.edit .l_r span{margin-top:4px}
+
+.reply_input{width:600px; padding: 15px 0 10px 0; margin:0 auto 0 auto;overflow:hidden}
+.l_l{float:left}
+.reply_input textarea, .writeform .input_form textarea{font-size:12px;color:#949aaa;background:#f3f3f4;overflow:auto;width:518px;height:58px;padding:5px}
+.reply_input textarea{background:#fff}
+.reply_input .l_r, .writeform .l_r{float:right;width:62px}
+.reply_input .l_r .btn_send, .writeform .l_r .btn_send{border:1px solid #dbdee4;width:58px;height:48px;display:block;text-decoration:none;background:#FFF}
+.reply_input .l_r a.btn_send:hover strong, .writeform .l_r a.btn_send:hover strong{color:#cd1821}
+.reply_input .l_r .btn_send strong, .writeform .l_r .btn_send strong{display:block;text-align:center;padding-top:19px;color:#10141d}
+.reply_input .l_r span, .writeform .l_r span{display:block;margin-top:8px}
+.reply_input .l_r span em, .writeform .l_r span em{color:#cd1821}
+
+.sns_posting{position:relative;padding-top:14px; padding-bottom:15px; overflow:hidden;width:100%}
+.sns_posting  p{float:left;padding-top:3px; padding-right:10px;}
+.sns_posting  p a{color:#6f7587}
+.sns_posting  span.bar{color:#e5e5e5;padding:0 4px}
+.sns_posting  p.wrap_input{padding:0;margin:0;}
+.sns_posting  p.wrap_input *{vertical-align:middle}
+.sns_posting  p.wrap_input img{padding:0 13px 0 5px;}
+.sns_posting  p.my_sns{float:right;margin-right:70px;display:inline}
+.sns_posting  p.my_sns a{font-size:11px;color:#9ea2a7}
+.reply_wrap{background:#f3f3f5;/*border-top:1px solid #ddd;border-bottom:1px solid #ddd;padding:0 0 16px 0;*/margin-bottom:9px;}
+
+.list_re{width:600px;margin:0 auto; padding-top:10px;}
+.list_re li{background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/bg_line.gif) 0 bottom repeat-x;padding:9px 9px 14px 9px}
+.list_re li dt{color:#464e58;padding-bottom:9px}
+.list_re li dt a{color:#464e58;}
+.list_re li dd{color:#262f3b;line-height:1.6em}
+.list_re li dd a, .list_re li dd span{font-size:11px;color:#9ea2a7}
+.list_re li dd a {padding:3px}
+.list_re li dd span{margin-left:7px}
+.list_re li dd span.bar{color:#ccc;font-size:12px;margin:0 1px 0 4px}
+.reply_count{padding: 0;margin:6px 0 0 0;border-bottom:1px solid #ddd;}
+.reply_count a{font-size:11px;color:#8d9298;display:inline-block;background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/btn_arw2.gif) 5px 4px no-repeat;padding:5px 5px 5px 24px;text-decoration:none;margin-left:5px}
+.reply_count a:hover{text-decoration:none}
+.reply_count a strong{color:#0d54ab;margin-left:4px}
+
+/*쇼셜댓글추가 130711 */
+.livere_comment{width:620px;margin-bottom:40px;  padding:0; }/*border-bottom:1px solid #dddddd;*/
+.livere_bt{ bottom:-40px; position: absolute; }
+.livere_bt a{ float:left; text-align:center; }
+
+.news_comment{margin-top:7px; margin-bottom:10px;}
+.reply_btnout{margin-top:10px; margin-bottom:10px;}
+.list_news_mentno{position:relative; }
+.list_news_ment{position:relative; /*border-bottom:1px solid #ddd;*/}
+.list_news_ment p.recommend{position:absolute;top:20px;right:0;border:1px solid #dbdee4}
+.list_news_ment p.recommend a{float:left;width:58px;text-align:center;padding:4px 0 3px 0;font-size:11px;text-decoration:none}
+.list_news_ment p.recommend a:hover{background:#f3f3f4}
+.list_news_ment p.recommend a.up{border-right:1px solid #dbdee4;color:#000a19}
+.list_news_ment p.recommend a.down{color:#9ea2a7}
+.list_news_ment p.recommend a strong{color:#000a19;margin-left:3px}
+.comment{border-bottom:1px solid #ddd;}
+.news_ment_area {width:600px;margin:0 auto 0 auto;padding: 25px 0 15px 0;}
+.news_ment_area dt{padding-bottom:10px}
+.news_ment_area dt a{color:#464e58}
+.news_ment_area dt a.nick{margin-right:5px}
+.news_ment_area dt a.mr{font-size:11px;color:#9ea2a7}
+.news_ment_area dt span.bar{color:#e5e5e5;margin:0 4px;font-size:12px}
+.news_ment_area dt img{margin:0 0 -3px 5px}
+.news_ment_area dd.trackback{font-size:11px;color:#8d8d8d;padding:0 0 13px 0}
+.news_ment_area dd.trackback a{color:#afafaf;margin-left:8px}
+
+/*은영수정120404*/
+.news_ment_area dd.txt{color:#262f3b;line-height:1.6em;font-size:12px}
+.news_ment_area dd.txt a{font-size:12px;color:#262f3b}
+.news_ment_area dd.txt a:hover{text-decoration:none;}
+.news_ment_area dd.txt span{font-size:11px;color:#9ea2a7;}
+.news_ment_area dd.txt span a{font-size:11px;color:#9ea2a7;padding:3px}
+.news_ment_area dd.txt span.bar{color:#ccc;font-size:12px;margin:0 1px 0 4px}
+.news_ment_area dd.txt span.date {padding-left:7px}
+
+/*은영수정120404:최종면 개편수정*/
+.newsinfo_area{background:#f3f3f4 url(http://ojsimg.ohmynews.com/images/ohmynews/common/bg_ns.gif) 0 0 no-repeat;border-bottom:1px solid #dcdcdc;padding-top:27px;margin-bottom:10px}
+.reply{color:#6f7587;font-size:12px}
+.reply strong{font-weight:bold;color:#0d54ab;}
+.reply span.bar{margin:0 5px;color:#e5e5e5}
+.sub_link{float:left;padding-top:1px}
+.newsinfo{width:600px;margin:0 auto}
+
+/*수빈수정 131004*/
+.sub_link a strong span {color:#0d54ab;}
+
+.newsinfo .info_title{float:left;width:90px;color:#353b4b;padding-top:2px;word-spacing:1px}
+.newsinfo .info_con{float:left;width:510px;}
+.newsinfo .info_con .ar1{float:left;width:275px;padding-top:2px}
+.newsinfo .info_con .ar2{float:left;width:95px;text-align:right;font-size:18px;font-family:Arial;color:#353b4b;letter-spacing:-1px;}
+.newsinfo .info_con .ar2 span{font-family:Malgun Gothic;font-size:12px;color:#6f7587;padding-left:2px}
+.newsinfo .info_con .ar1 strong{color:#353b4b}
+.newsinfo .info_con .ar1 strong a{color:#0d54ab}
+
+.maninfo_view dt .ar3, .newsinfo .info_con .ar3{float:right;text-align:right}
+.maninfo_view dt .ar3 a ,.newsinfo .info_con .ar3 a{font-size:11px;color:#666;background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/bul1.gif) right 1px no-repeat;padding:0 8px 0 0}
+
+.newsinfo .info_con .ar3 {padding-top:2px}
+.newsinfo .info_con .link_ar{float:left;border:1px solid #e6e6e6;background:#FFF;padding:0 1px 0 3px}
+.newsinfo .info_con .link_ar a{color:#999;font-size:11px;padding:4px 4px 3px 4px;text-decoration:none;float:left}
+.newsinfo .info_con .link_ar a:hover{color:#333}
+.newsinfo .info_con .link_ar span.bar{color:#ccc;font-size:11px;margin:0 0;float:left;padding:4px 0 3px 0}
+.newsinfo .info_con .url{float:left;position:relative;margin:0 0 0 0; width:90px; height: 22px;}
+.newsinfo .info_con .url a.link_url{color:#666;font-size:11px;letter-spacing:-1px;padding:4px 4px 2px 34px; line-height:16px; text-decoration:none;display:block;background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/bubble_btn.png) no-repeat; background-position: -60px -248px;}
+.newsinfo .info_con .url a.link_url:hover{color:#333}
+
+.newsinfo li{background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/bg_line2.gif) 0 0 repeat-x;*zoom:1;padding:20px 0 10px 0}
+.newsinfo li:after {content:""; display:block; clear:both;}
+.newsinfo li.first{background-image:none}
+.fb_info{float:left;width:100%}
+.fb_info {clear:both;padding-top:7px}
+.gauge{position:relative;}
+
+/* 점수주기+- *//*최종면 개편: z-index값 추가 및 수정*/
+.gauge_area_mp{background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/bg_gauge.gif) 0 0 no-repeat;width:221px;height:26px;position:relative;margin-top:-8px; /*z-index:400;*/}
+.gauge_area_mp img{position:absolute;top:-4px;left:0;margin-left:-8px; /*z-index:100;*/}
+.gauge_area_mp .point_area{width:221px;height:26px;position:absolute;top:0;left:0;overflow:hidden; /*z-index: 600;*/}
+.gauge_area_mp .point_area li{float:left;text-indent:-9999em;overflow:hidden;height:26px; background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/bg_gauge.gif) 0 -50px no-repeat;}
+.gauge_area_mp .point_area li.pointm5{width:110px; background-position: 0 -50px; margin-left:0;}
+.gauge_area_mp .point_area li.pointm4{width:80px; background-position: -30px -50px; margin-left:30px;}
+.gauge_area_mp .point_area li.pointm3{width:60px; background-position: -50px -50px; margin-left:50px;}
+.gauge_area_mp .point_area li.pointm2{width:40px; background-position: -70px -50px; margin-left:70px;}
+.gauge_area_mp .point_area li.pointm1{width:20px; background-position: -90px -50px; margin-left:90px;}
+.gauge_area_mp .point_area li.point0{background-position: 0 -50px;}
+.gauge_area_mp .point_area li.pointp1{width:20px; background-position: -110px -50px; margin-left:110px;}
+.gauge_area_mp .point_area li.pointp2{width:40px; background-position: -110px -50px; margin-left:110px;}
+.gauge_area_mp .point_area li.pointp3{width:60px; background-position: -110px -50px; margin-left:110px;}
+.gauge_area_mp .point_area li.pointp4{width:80px; background-position: -110px -50px; margin-left:110px;}
+.gauge_area_mp .point_area li.pointp5{width:110px; background-position: -110px -50px; margin-left:110px;}
+
+/* 점수주기기본 */
+.gauge_area{background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/bg_gauge.gif) 0 0 no-repeat;width:221px;height:26px;position:relative;margin-top:-8px;}
+.gauge_area img{position:absolute;top:-4px;left:0;margin-left:-8px; /*z-index: 350;*/}
+.g_up{font-size:11px;font-family:arial;color:#cd1821;background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/btn_arw_up.gif) right 5px no-repeat;padding-right:10px;position:absolute;top:-2px;right:0; /*z-index:610;*/ }
+.g_down{font-size:11px;font-family:arial;color:#0d54ab;background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/btn_arw_down.gif) right 5px no-repeat;padding-right:10px;position:absolute;bottom:-3px;right:0; /*z-index:610;*/}
+.club_area{width:100%;overflow:hidden; margin-bottom:40px;}
+.club_area a.btn_club{float:left;margin-right:5px;}
+.club_area a.btn_journalist{float:left;margin-right:5px;}
+.club_area .report_area{float:right;color:#999;font-size:11px;}
+.club_area .report_area a{display:inline-block;border:1px solid #ddd;text-decoration:none;padding:4px 3px 4px 5px;margin:0 0 0 8px;vertical-align:middle}
+.list_sq{margin:0 0 15px 10px}
+.list_sq li{background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/bul_sq.gif) 0 5px no-repeat;padding:0 0 8px 9px}
+.list_sq li a{color:#666}
+.list_sq li a:hover{color:#333}
+.list_sq li a span{font-size:11px}
+	.relation_area{margin-bottom:20px; border-bottom:solid 1px #dddddd; position:relative;width:100%}
+	.title_issue{font-weight:bold;padding-bottom:7px}
+	.title_issue img{margin-right:5px}
+	.view_conlist{padding-bottom:15px;width:100%;overflow:hidden}
+	.view_conlist p.img{float:left;width:215px;padding-right:20px; position:relative}
+	.view_conlist p.img .line{width:213px;height:138px; border:solid 1px #e6e6e6; position:absolute;left:0;top:0;}
+	.box_img{border:1px solid #ddd;padding:9px;margin-bottom:10px}
+.box_img a img{max-width: 600px;} 
+.list_stop{margin:5px 0;}
+.list_stop li{height:30px;padding:0 0 0 10px;margin-bottom:0; line-height: 22px;}
+.list_stop li a{background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/bul_list.gif) -99999em -99999em no-repeat; padding-left:15px; display:inline-block; padding-top:6px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;display: block;}
+.list_stop li a:hover{color:#333;}
+
+.list_stop li .pre4{background-position:0 10px}
+.list_stop li.on .pre4{background-position:0 11px}
+.list_stop li .pre3{background-position:0 -12px}
+.list_stop li.on .pre3{background-position:0 -11px}
+.list_stop li .pre2{background-position:0 -32px}
+.list_stop li.on .pre2{background-position:0 -33px}
+.list_stop li .pre{background-position:0 -51px}
+.list_stop li.on .pre{background-position:0 -50px}
+.list_stop li .now{background-position:0 -75px}
+.list_stop li.on .now{background-position:0 -75px}
+.list_stop li .next{background-position:0 -99px}
+.list_stop li.on .next{background-position:0 -100px}
+.list_stop li .next2{background-position:0 -119px}
+.list_stop li.on .next2{background-position:0 -120px}
+.list_stop li .next3{background-position:0 -140px}
+.list_stop li.on .next3{background-position:0 -141px}
+.list_stop li .next4{background-position:0 -161px}
+.list_stop li.on .next4{background-position:0 -161px}
+.list_stop li.on{background:#f3f3f4;}
+.list_stop li.on a{font-size:14px;color:#333;font-weight:bold;padding-top:4px}
+.list_pic{width:100%;overflow:hidden; margin-bottom:15px;}
+.list_pic li{float:left;margin:0 10px 0 30px;display:inline;width:120px;position:relative;}
+.list_pic li.first{margin-left:10px}
+.list_pic li a{color:#666;font-size:11px}
+.list_pic li a:hover{color:#333}
+.list_pic li span.text_link{display:block;text-align:center;line-height:1.3em;padding:6px 0 0 0}
+.list_pic li span.line{width:118px;height:73px; border:solid 1px #e6e6e6; position:absolute;left:0;top:0;}
+.m_pg{position:absolute;top:-3px;right:0}
+.m_pg span{color:#949aaa;font-size:11px;margin-right:5px}
+.m_pg span em{color:#cd1821}
+.m_pg a{display:inline-block;text-indent:-9999em;overflow:hidden;border:1px solid #ddd;width:18px;height:18px;vertical-align:middle;margin:0 0 3px 0}
+.m_pg a.btn_mpre{background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/btn_arw_pre.gif) 6px 6px no-repeat}
+.m_pg a.btn_mpre:hover{background:#f3f3f4 url(http://ojsimg.ohmynews.com/images/ohmynews/common/btn_arw_pre_on.gif) 6px 6px no-repeat}
+.m_pg a.btn_mnext{border-left:none;background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/btn_arw_next.gif) 6px 6px no-repeat}
+.m_pg a.btn_mnext:hover{border-left:none;background:#f3f3f4 url(http://ojsimg.ohmynews.com/images/ohmynews/common/btn_arw_next_on.gif) 6px 6px no-repeat}
+.btn_area{text-align:right}
+.btn_area a.btn_all{background:#cd1821;color:#FFF;display:inline-block;padding:7px 5px 6px 8px;text-decoration:none}
+/* 관련기사 130424*/
+.relation_news{margin-bottom:40px; position:relative;width:100%}
+.relation_title{width:100%;*zoom:1;margin-bottom:10px}
+.relation_title h2.txt_stitle{text-indent:0;font-size:14px;color:#10141d;display:inline;}
+.list_renews{margin:0;}
+.list_renews li{background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/ico_reple.gif) 0 1px no-repeat;padding:0 0 8px 18px;}
+.list_renews li a{color:#333; font-size:14px; font-weight:bold;}
+.list_renews li a:hover{color:#000;}
+.list_renews li a span{font-size:11px;color:#666;font-weight:normal;padding-right:3px; text-decoration:none;}
+
+/* 공통기사분류 */
+/* 기타 */.article_sort{font-size:11px;color:#949aaa;padding-right:5px;}
+/* 속보 */.article_flash{font-size:11px;color:#cd1821;padding-right:5px;font-weight:bold;}
+
+/* 기사제보 */
+.atcwrite_area{border-left:solid 2px #999;border-right:solid 2px #999;border-bottom:solid 2px #999; padding:25px; margin-bottom:40px}
+.atcwrite_area .explanation dt{font-size:12px;color:#333333; font-weight:bold;padding-bottom:10px}
+.atcwrite_area .explanation dd{font-size:12px;color:#666666;line-height:1.6em;}
+.atcwrite_box{margin-bottom:40px}
+.atcwrite_box .text{float:left; padding-left:5px; padding-top:6px; font-size:12px; color:#ccc;}
+
+/* 기사제보 */
+.top_history_search{ height:20px; padding:19px;border:solid 1px #dddddd;background:#f3f3f4;margin-bottom:40px;}
+.top_history_search .m_menu{float:left;position:relative;width:80px;height:20px;z-index:400;margin-right:5px;color:FFFFFF;}
+.top_history_search .btn_search{float:left;padding:3px 10px;line-height:15px;text-align:center;color:#FFF;background:#b6bbc9;}
+.top_history_search .btn_search:hover{color:#FFF;background:#7e8391;text-decoration:none;}
+
+.top_history_tit{width:100%;height:20px;font-family:Arial;color:#999;font-size:11px; border-bottom:solid 1px #dddddd; position:relative;}
+.top_history_tit .time{font-family:Arial;color:#10141d;font-size:14px; font-weight:bold;}
+.top_history_tit a.more{position:absolute;top:3px;right:0;color:#999;background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/bul1.gif) right 1px no-repeat;padding:0 8px 0 0;font-size:11px}
+.top_history_tit a.more:hover{color:#cd1821;text-decoration:none}
+
+
+
+/* 검색 도움말 */ 
+.sch_help_out {width:100%;float:left; margin-bottom:40px;} 
+.sch_help_box1 {width:923px; float:left; padding:25px 20px 25px 25px; background-color:#f5f5f5; border:#dddddd solid 1px; margin-bottom:10px;}
+.sch_help_box1 .tit {font-size:14px;color:#073685;font-weight:bold;line-height:30px;}
+.sch_help_box1 .text {font-size:12px;color:#777777;line-height:17px;}
+.sch_help_box2 {width:968px; float:left; border-top:#dddddd solid 1px; border-left:#dddddd solid 1px; border-right:#dddddd solid 1px;}
+.sch_help_box2_out {width:968px; float:left;border-bottom:#dddddd solid 1px;}
+.sch_help_box2 dt {width:65px; padding:25px 20px 25px 25px; float:left; font-size:12px;color:#000033;font-weight:bold;line-height:16px; letter-spacing:-1px;}
+.sch_help_box2 dd {width:800px; padding:25px 20px 25px 25px; float:left; border-left:#dddddd solid 1px;font-size:12px;color:#777777;line-height:17px;}
+.sch_help_box2 dd .b {font-weight:bold;}
+.sch_help_box2 dd .blue {font-size:12px;color:#6188e1;line-height:24px;}
+.sch_help_box2 dd .ex {font-size:11px;color:#999999;line-height:16px;} 
+
+
+/* 지역별날씨 아이프래임 */
+.weather_outline{width:620px; overflow:hidden;}
+@charset "utf-8";
+/* CSS Document */
+
+
+/*우측개편2013*/
+/*최종면 개편:right_side영역*/
+
+/*줌인/이기사 관련콘텐츠/이시각주요기사 타이틀*/
+.aside_tit{float:left;width:319px;height:45px; border-top:2px solid #666666; border-bottom:1px solid #c1c1c1; background-color:#FFFFFF;}
+.aside_tit dl{margin-top:15px;}
+.aside_tit dt{height:45px; float:left;background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/sub_title_img.png) no-repeat; }
+.aside_tit dt.tit{width:57px;height: 14px;background-position:0px 0px; text-indent:-9999em;border-right:1px solid #c1c1c1;}
+.aside_tit dt.tit01{width:160px;height: 14px;background-position:0px -81px; text-indent:-9999em;}
+.aside_tit dt.tit02{width:120px;height: 14px;background-position:0px -165px; text-indent:-9999em;}
+.aside_tit dt.tit03{width:57px;height: 14px;background-position:0px -497px; text-indent:-9999em;border-right:1px solid #c1c1c1;}
+.aside_tit dd.link_guide{float:right;width: 250px;height: 14px; padding-left:10px;/* margin-left: 7px; */ overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.aside_tit dd.link_guide a{ text-decoration:underline; font-weight:bold; color:#0e54aa;}
+.aside_tit dd.link_guide a:hover{ text-decoration:underline; font-weight:bold; color:#1272e7;}
+
+/*많이본기사 타이틀*/
+.aside_tit01{float:left;width:319px;height:45px; border-top:2px solid #666666; border-bottom:1px solid #c1c1c1;background-color:#FFFFFF; position:relative;}
+.aside_tit01 dl{margin-top:15px;}
+.aside_tit01 dt{height:45px; float:left;background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/sub_title_img.png) no-repeat; }
+.aside_tit01 dt.tit03{width:120px;height: 14px;background-position:0px -329px; text-indent:-9999em;}
+.aside_tit01 dd{position:absolute; right:10px; font-size:11px; }
+.aside_tit01 dd a{text-decoration:none; display:block;color:#999999;}
+.red_allow{ color:#db0000; font-size:11px; padding-left:3px; font-weight:bold;}
+
+/*오마이스타 타이틀*/
+.aside_tit_star{float:left;width:319px;height:45px; border-top:2px solid #9acd32; border-bottom:1px solid #c1c1c1; background-color:#FFFFFF;position:relative;}
+.aside_tit_star dl{margin-top:15px;}
+.aside_tit_star dt{height:45px; float:left;background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/sub_title_img.png) no-repeat; }
+.aside_tit_star dt.tit04{width:120px;height: 14px;background-position:0px -248px; text-indent:-9999em;}
+.aside_tit_star p{position:absolute;width:55px; right:0; border:1px solid #000;}
+.aside_tit_star .gro{background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/gr_icon.jpg) no-repeat;}
+.aside_tit_star span.icon{background-position:0px 0px;padding-right:5px;}
+.aside_tit_star span.icon_on{background-position:-17px 0px;padding-right:5px;}
+.indicator {width: 63px;display: block;list-style: none;float: left;padding: 12px 0px 12px 5px;text-align: center;position:absolute; top:5px; right:0px;}
+.indicator ul {width: 36px;margin: 0 auto;}
+.indicator li {float: left;display: block;list-style: none;width: 6px;height: 6px;text-indent: -9999em;-webkit-border-radius: 4px;background: #dbdde1;overflow: hidden;margin-right: 4px;border: 1px solid #ccced2;}
+.indicator li.active {background: #9acd32;border: 1px solid #cecece;}
+
+
+/*오마이TV 타이틀*/
+.aside_tit_tv{float:left;width:319px;height:45px; border-top:2px solid #4978bc; border-bottom:1px solid #c1c1c1; background-color:#FFFFFF;}
+.aside_tit_tv dl{margin-top:15px;}
+.aside_tit_tv dt{height:45px; float:left;background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/sub_title_img.png) no-repeat;}
+.aside_tit_tv dt.tit05{width:120px;height: 14px;background-position:0px -413px; text-indent:-9999em;}
+.aside_tit_tv dd.t_arro{ float:right; padding-right:10px;}
+
+/*줌인/관련콘텐츠*/
+.zoom_in{padding-bottom: 30px;float:left;}/*최종면 개편:패딩수정*/
+.zoom_in .list{float:left;}
+.zoom_in .list li{float:left;padding: 10px 19px 0px 19px;width:280px;line-height:16px;padding-bottom: 7px; position:relative;}
+.zoom_in .list li.z_b{font-weight:bold;display:block;border:1px solid #db0000; background-color:#ffffff;}
+.choice_allow{position:absolute; top:38%;left:-8px;}
+.list_zoom {padding-top:10px;}
+.list_zoom li {float: left;width:100%;}
+.list_zoom .zoom_top {background-position: 0 3px;}
+.list_zoom .zoom_news {float: left;width: 8px;height: 8px;margin-top: 2px;}
+.zoom_news {display: block;overflow: hidden;background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/red_dot.png) no-repeat; text-indent: -9999px;}
+.zoom_link {float: left;width: 265px;vertical-align: top;padding-left:2px;}
+
+
+/*오마이스타*/
+.o_star{float:left;background:#ccc; position:relative;}
+.o_star li{float:left;width:320px; height:166px;}
+.o_star li a{ cursor:pointer;}
+.o_star li a:hover{text-decoration:none;}
+.o_star p.area{position:absolute;width:300px;background: rgba(0, 0, 0, 0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";}
+.o_star .txt{bottom:0; color:#fff; font-size:16px; font-weight:bold;letter-spacing: -1px; padding:10px;line-height:20px;}
+.o_star .allow_left{ padding:15px;position:absolute; top:30%; left:5px;}
+.o_star .allow_right{padding:15px;position:absolute;top:30%; right:5px;}
+
+
+/*오마이tv*/
+.o_tv{float:left;background:#000; position:relative;}
+.o_tv li{float:left;width:320px; height:166px;}
+.o_tv li a{ cursor:pointer; display:block;}
+.o_tv li a:hover{text-decoration:none;}
+.o_tv p.area{position:absolute;width:300px;background: rgba(0, 0, 0, 0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";}
+.o_tv .p_area{opacity:0.8;}
+.o_tv .txt{bottom:0; color:#fff; font-size:16px; font-weight:bold;letter-spacing: -1px; padding:10px;line-height:20px;}
+.o_tv .allow_left a{background: url(../images/allow_left001.png) no-repeat; padding:24px;position:absolute;text-indent: -9999px; top:40%; left:5px;}
+.o_tv .allow_right a{background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/allow_right001.png) no-repeat; padding:15px;position:absolute;text-indent: -9999px; top:40%; right:0px;}
+.o_tv .mov_btn{position: absolute;top: 50%;right: 50%;opacity:0.8;}
+
+/*이시각 주요기사*/
+.imp_news{padding:20px 20px 0px 20px;float:left;}
+.list_topic {overflow: hidden;width: 100%;}
+.list_topic .im_b {letter-spacing: -1px;}
+.list_topic li {overflow: hidden;float: left;width: 100%;height: 15px;margin: 4px 0;line-height: 15px;}
+.list_topic .topic_top {background-position: 0 3px;}
+.list_topic .num_news01 {float: left;width: 8px;height: 8px;margin-top: 2px;}
+.num_news01 {display: block;overflow: hidden;background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/red_dot.png) no-repeat; text-indent: -9999px;}
+.topic_link {overflow: hidden;text-overflow:ellipsis; white-space:nowrap;float: left;width: 265px;height: 15px;vertical-align: top;padding-left:2px;}
+.im_b {font-weight: bold;}
+.im_p{ padding-bottom:8px;}
+.bo{font-size:11px; color:#db0000; padding:0px 3px 0px 0px;}
+
+/*많이본기사*/
+.veiw_jn .list02{ float:left; width:79px; height:33px;text-align:center; font-size:11px; font-weight:bold;border-right:1px solid #bababa;border-bottom:1px solid #bababa; height:33px; line-height:33px; background:#f1f1f1;}
+.veiw_jn .list02 a{display:block; text-decoration:none;}
+.veiw_jn .list02.n{text-align:center;height:33px; line-height:33px; border-right:none;width: 79px;}
+.veiw_jn .list02 .on{text-align:center;height:32px; line-height:33px; border-top:2px solid #db0000;border-bottom:none; color:#db0000;background:#fbfbfb;margin-bottom:-2px;}
+.veiw_jn .list02 .s_number{float:left;line-height:21px; padding:15px 15px 0px 15px;width:290px;}
+.veiw_jn .list02 .s_number p{overflow:hidden; text-overflow:ellipsis; white-space:nowrap;padding-left:15px;}
+.veiw_jn .list02 .s_number span{background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/number_img.png) no-repeat;padding-right:8px; margin-right:8px; width:5px;}
+.veiw_jn .list02 .s_number a.first{font-weight:bold;}
+
+.list_aside {overflow: hidden;}
+.list_aside .fw_b {letter-spacing: -1px;}
+.list_aside li {overflow: hidden;float: left;height: 24px;line-height: 15px;}
+.list_aside .numtop1 {background-position: 0 0;}
+.list_aside .numtop2 {background-position: 0 -15px;}
+.list_aside .numtop3 {background-position: 0 -30px;}
+.list_aside .numtop4 {background-position: 0 -45px;}
+.list_aside .numtop5 {background-position: 0 -60px;}
+.list_aside .numtop6 {background-position: 0 -75px;}
+.list_aside .numtop7 {background-position: 0 -90px;}
+.list_aside .numtop8 {background-position: 0 -105px;}
+.list_aside .numtop9 {background-position: 0 -120px;}
+.list_aside .numtop10 {background-position: 0 -135px;}
+.list_aside .num_news {float: left;width: 13px;height: 8px;margin-top: 2px;}
+.num_news {display: block;overflow: hidden; background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/num_news.gif) no-repeat;text-indent: -9999px;}
+.txt_link {overflow: hidden;text-overflow:ellipsis; white-space:nowrap;float: left;width: 265px;height: 15px;vertical-align: top;padding-left:2px;}
+.fw_b {font-weight: bold;}
+.cont_tab{padding:20px 20px 0px 20px;float:left;}
+
+
+
+/* s:추가131210 */
+/*s:공통*/
+.aside_box{width:319px;clear: both;}
+.aside_box h3{height:30px; border-bottom:1px solid #c1c1c1; background:#FFFFFF; padding-top:15px; overflow:hidden;}
+.aside_box h3.l_rd{border-top:2px solid #db0000;}
+.aside_box h3.l_gr{border-top:2px solid #666666;}
+.aside_box h3.l_sb{border-top:2px solid #666666;}
+.aside_box h3.l_db{border-top:2px solid #666666;}
+.aside_box h3.l_gy{border-top:2px solid #666666;}
+/*e:공통*/
+/* 연재 */
+.aside_box .serial{width:62px; height:30px; background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/sub_title_img.png) 0 -497px no-repeat; font-size:0; text-indent:-9999em; float:left;}
+.aside_box .sub_link a{padding-left:10px; border-left:1px solid #c1c1c1; font-weight:bold; color:#0e54aa; float:left; }
+.aside_box .sub_link a:hover{color:#1272e7; text-decoration:underline;}
+.aside_box .list_st01{padding-top:10px;}
+.aside_box .list_st01 li{background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/red_dot.png) 19px 15px no-repeat; padding:10px 19px 7px 30px; line-height:16px;}
+/* e:추가131210 */
+
+
+
+/* 왼쪽 sns영역(스크롤)공통: position:relative=wrap */
+.sns_scroll{position:absolute;top:350px;left:-92px;}
+.sns_scroll li{margin-bottom:8px;}
+.sns_scroll li dt{position:relative;background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/bubble_btn.png) no-repeat;text-indent:-9999em;width:57px;height:48px;padding-top:5px;font-size:11px;color:#999;letter-spacing:-1px;}
+.sns_scroll li a{display:block; width:57px; height:48px;}
+.sns_scroll li dt.ten{background-position:0px -382px;}
+.sns_scroll li dt.fb{background-position:0px 31px;}
+.sns_scroll li dt.tw{background-position:0px -52px;}
+.sns_scroll li dt.rp{background-position:0px -134px;}
+.sns_scroll li dt.sc{background-position:0px -464px;}
+.sns_scroll li dt.py{background-position:-1px -546px;}
+.sns_scroll li p{position:absolute;background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/bubble_btn.png) no-repeat;font-size:11px;font-weight:bold; letter-spacing:-0.1em;text-align:center;}
+.sns_scroll li p a{margin:0; border:0;}
+.sns_scroll li p.ten{background-position:-93px -410px;width: 57px;height: 27px;line-height: 27px;}
+.sns_scroll li p.fb{background-position:-93px 3px;width: 57px;height: 27px;line-height: 27px;}
+.sns_scroll li p.tw{background-position:-93px -80px;width: 57px;height: 27px;line-height: 27px;}
+.sns_scroll li p.rp{background-position:-93px -162px;width: 57px;height: 27px;line-height: 27px;}
+.sns_scroll li p.sc{background-position:-93px -492px;width: 57px;height: 27px;line-height: 27px;}
+.sns_scroll li p.py{background-position: -93px -575px;width: 57px;height: 27px;line-height: 27px;}
+.sns_scroll li .line{border:1px solid #ddd;width:98px;height:66px;position:absolute;top:0;left:0}
+.sns_scroll li dt a{font-size:11px;color:#999;line-height:12px;letter-spacing:-1px;}
+.sns_area620{width:620px; margin-bottom:40px;}
+/*//최종면 개편:right_side영역*/
+/*추천추가*/
+.sns_scroll li p.good_on{background-position:-93px -916px;width: 57px;height: 27px;line-height: 27px;}
+.sns_scroll li dt.good_on{background-position:0px -889px;}
+.sns_scroll li p.good_off{background-position:-93px -980px;width: 57px;height: 27px;line-height: 27px;}
+.sns_scroll li dt.good_off{background-position:0px -952px;}
+
+/* s:최종면하단UI정리 171106 */
+.atc_btns{width: 600px;margin: 0 auto;height: 80px;margin-bottom: 40px}
+.atc_btns > ul{ display: inline-block;}
+.atc_btns li{float: left; margin: 0 5px 0 0;}
+.atc_btns li:last-child{float: left; margin-right: 0;}
+.atc_btns a{display: inline-block;width: 78px;height: 48px;background-color: #a9a9a9;border: solid 1px #c5c5c5;border-radius: 5px;padding: 10px 0 20px 0;vertical-align: middle;text-align: center;}
+.atc_btns a:hover{ text-decoration: none;}
+.atc_btns .lielse li a{ width: 36px;height: 36px;border: none;text-indent: -9999em;background-color: rgba(255,255,255,0);padding: 0;}
+.atc_btns a.on{background-color: #db0000;}
+/*@media only screen and (min-width: 1024px){.atc_btns a:hover{background-color: #db0000;}*/
+.atc_btns span.num{  display: block;color: #fff; font-size: 12px; font-weight: 400; line-height: 25px;}
+.atc_btns span.num em.won {font-size: 20px; color: #fff; font-weight: 600;font-family: Helvetica-light,'AppleSDGothicNeo-Light','Malgun Gothic','맑은 고딕',Dotum,'돋움',sans-serif; letter-spacing: -0.025em;
+padding-right: 2px;}
+.atc_btns span.num em.non {font-size: 15px;color: #fff;font-weight: 600; font-family: Helvetica-light,'AppleSDGothicNeo-Light','Malgun Gothic','맑은 고딕',Dotum,'돋움',sans-serif; letter-spacing: -0.025em;}
+
+.atc_btns span.title{ font-size: 14px;color: #fff; vertical-align: text-top; display: inline-block;}
+.atc_btns a .ico{line-height: 25px;display: block;text-align: left;font-size: 13px;color: #fff;padding-left: 39px;background-repeat: no-repeat;background-position: -3px 5px;background-size: 52px 22px;-webkit-background-size:52px 22px;-moz-background-size:22px;-ms-background-size:22px;-o-background-size:22px;padding-top: 5px;}
+.atc_btns .recommend .ico.thumb{  background-image: url(http://ojsimg.ohmynews.com/images/star/2016/icon_thumb.svg);}
+.atc_btns .reply .ico.reply{ background-image: url(http://ojsimg.ohmynews.com/images/star/2016/icon_rpy-w.svg);}
+.atc_btns .share .ico.share{ background-image: url(http://ojsimg.ohmynews.com/images/star/2016/icon_share.svg);}
+.atc_btns .payment{width: 155px;border: solid 1px #2bb4bb;background-color: #2bb4bb;opacity: 0.85;}
+.atc_btns .payment:hover{background-color: #2bb4bb;opacity: 1;text-decoration: none;}
+.atc_btns .payment .ico.pay{display: block;text-align: left;font-size: 13px;color: #fff;padding-left: 58px;background-repeat: no-repeat;background-position: 13px center;background-image: url(http://ojsimg.ohmynews.com/images/star/2016/icon_pay.svg);background-size: 52px 23px;-webkit-background-size: 52px 23px;-moz-background-size:22px;-ms-background-size:22px;-o-background-size:22px;}
+.atc_btns .payli{ position: relative;}
+.atc_btns .payli .cheer{position: absolute; z-index: 1; right: 6px; top: -25px; font-size: 11px; color: #2bb4bb; padding: 3px 10px 3px; border: 1px solid #2bb4bb; border-radius: 5px; background-color: #fff; line-height: 25px;}
+.atc_btns .payli .cheer:hover{ font-weight: bold;color: #2bb4bb;border-color: #2bb4bb;}
+.atc_btns .payli .cheer:after{ position:absolute; bottom: -12px;right: 18px;content: "";border-top: 12px solid #fff;border-left: 2px solid transparent;  border-right: 7px solid transparent; border-bottom: 0px solid transparent; }
+
+.atc_btns .tenmanin { width: 180px;border: solid 1px #f6691c; background-color: #f6691c; opacity: 0.85;}
+.atc_btns .tenmanin:hover{ background-color: #f6691c; opacity: 1;text-decoration: none;}
+.atc_btns .tenmanin .ico.ten{display: block;text-align: left;padding-left: 46px;background-position: 5px top;background-image: url(http://ojsimg.ohmynews.com/images/star/2016/icon_club_w.svg);background-size: 52px 30px;-webkit-background-size: 52px 30px;-moz-background-size:22px;-ms-background-size:22px;-o-background-size:22px;}
+.atc_btns .payment .count:after{ content: "원"; font-size: 11px; color: rgba(255,255,255,0.7); margin-left: 3px;font-weight: normal; }
+.atc_btns .tenmanin .count:after{ content: "명"; font-size: 11px; color: rgba(255,255,255,0.7); margin-left: 3px;font-weight: normal;}
+.atc_btns .payment .count, .atc_btns .tenmanin .count{margin-top: 11px;}
+.lielse{ position: relative;}
+.atc_btns .btn_else{ z-index: 1; display: block; position: absolute; top: 79px; left: 0; width: 170px; padding: 10px 8px; border: 1px solid #ccc;border-radius: 5px; background-color: #fff;}
+.atc_btns .btn_else ul{display: inline-block;}
+.atc_btns .btn_else ul li {margin: 3px; }
+.atc_btns .btn_else .url {margin: 7px 3px 0 3px; }
+.atc_btns .btn_else .url a {width: 36px;}
+.atc_btns .btn_else:after{ position:absolute; top: -12px; left: 34px; content: ""; border-top: 0px solid transparent; border-left: 6px solid transparent;  border-right: 6px solid transparent;  border-bottom: 12px solid #fff; }
+.atc_btns .btn_else .url a{ background-color: rgba(255,255,255,0); padding: 0;}
+.atc_btns .btn_else .url {margin: 7px 3px 0 3px;}
+.atc_btns .btn_else .url input{ float: left; width: 116px; height: 28px; border: 1px solid #ccc; padding-left: 8px; font-size: 11px; color: #333;
+ background-color: #e7e7e7}
+.lielse .btn_else .url a { text-indent: 0em; display: inline-block; width: 35px; height: 28px; border-top: 1px solid #ccc; border-right: 1px solid #ccc; border-bottom: 1px solid #ccc; border-left: none; font-size: 11px; color: #333; text-align: center;line-height: 2.4em;border-radius: 0;}
+
+.btn_box .els:hover, .btn_box .els.on{ background-color: #808080; background-image: url(http://ojsimg.ohmynews.com/images/star/2016/icon_els-w.svg);   background-repeat: no-repeat; background-position: center center; background-size: 20px; -webkit-background-size:20px; -moz-background-size:20px; -ms-background-size:20px; -o-background-size:20px; opacity: 1; }
+
+.atc_btns .payment .count, .atc_btns .tenmanin .count{margin-top: 11px;}
+
+.btn_else .glp{ background-image: url(http://ojsimg.ohmynews.com/images/star/2016/icon_glp.svg); background-repeat: no-repeat; background-position: center center; background-size: 36px;-webkit-background-size:36px; -moz-background-size:36px; -ms-background-size:36px; -o-background-size:36px;background-color: #d13f2d;}
+.btn_else .kks{ background-image: url(http://ojsimg.ohmynews.com/images/star/2016/icon_kks.svg); background-repeat: no-repeat; background-position: center center; background-size: 36px; -webkit-background-size:36px; -moz-background-size:36px; -ms-background-size:36px; -o-background-size:36px; background-color: #ffc20e;}
+.btn_else .ban{ background-image: url(http://ojsimg.ohmynews.com/images/star/2016/icon_ban.svg); background-repeat: no-repeat; background-position: center center; background-size: 36px; -webkit-background-size:36px; -moz-background-size:36px; -ms-background-size:36px; -o-background-size:36px;}
+.btn_else .omb{ background-image: url(http://ojsimg.ohmynews.com/images/star/2016/icon_omb.svg); background-repeat: no-repeat; background-position: center center; background-size: 36px; -webkit-background-size:36px; -moz-background-size:36px; -ms-background-size:36px; -o-background-size:36px; background-color: #3755ba;}
+.btn_else .fb{ background-image: url(http://ojsimg.ohmynews.com/images/star/2016/icon_rpt-fb-w.svg); background-repeat: no-repeat; background-position: center center; background-size: 23px; -webkit-background-size:23px; -moz-background-size:23px; -ms-background-size:23px; -o-background-size:23px; background-color: #3755ba;}
+.btn_else .tw{ background-image: url(http://ojsimg.ohmynews.com/images/star/2016/icon_rpt-tw-w.svg); background-repeat: no-repeat; background-position: center center; background-size: 23px; -webkit-background-size:23px; -moz-background-size:23px; -ms-background-size:23px; -o-background-size:23px; background-color: #1da1f2;}
+.btn_else .mail{ background-image: url(http://ojsimg.ohmynews.com/images/star/2016/icon_mail.svg); background-repeat: no-repeat; background-position: center center; background-size: 36px; -webkit-background-size:36px; -moz-background-size:36px; -ms-background-size:36px; -o-background-size:36px; background-color: #757575;}
+/* e:최종면하단UI정리 171106 */
+
+/*position:relative=wrap */
+.more_at_box{position:absolute; right:0px; z-index:1000;}
+.more_at{width:278px;height:186px;float:left;border-top:2px solid #db0000;padding:10px; border-left:1px solid #ccc;border-right:1px solid #ccc;border-bottom:1px solid #ccc;background:#fff; position:relative;}
+.more_at .lef{width:20px;float:left;position:absolute; top:45%; left:5px;}
+.more_at .rit{width:258px;float:right;}
+.more_at .rit .m_pt{color:#db0000;}
+.more_at .rit .m_close{float:right;position:absolute; top:5px; right:5px;}
+.more_at .rit h4{padding:6px 0px 15px 0px;}
+.more_at .rit li{padding: 3px 0px 0px 0px; float:left; line-height:14px;height: 72px;}
+.more_at .rit li.liner{border-bottom:1px solid #e6e6e6; height:1px; text-indent:-9999em; width:100%; float:left;margin-bottom: 6px;}
+.more_dat{font-size:11px; color:#b9b9bb; margin-top:3px;}
+.more_sum{width:95px; height:60px; border:1px solid #d7d7d7; float:left; margin-right:5px;}
+
+/*최종면: main개편 s*/
+/*분류*/
+.catego{width:100%;*zoom:1;border-bottom:2px solid #e6e6e6;padding-bottom:7px;margin-bottom:15px; height:18px;}
+.catego .t_h{float:left;padding:3px 0 0 0px;color:#10141d;}
+.catego .t_h a{float:left}
+.catego .t_sub{float:left;background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/bar4.gif) 0 5px no-repeat;padding:3px 0 0 9px;color:#10141d;}
+.catego .t_sub a{float:left}
+.catego .t_stit{color:#10141d;margin-right:8px; float:left}
+
+.s_sort{width:100%; *zoom:1; padding:10px 0 0 0; float:left;}
+.s_sort li{float:left; font-size:11px; background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/notice_icon.png) no-repeat; height:14px; line-height:14px; /*추가*/ padding-right:15px;}
+.s_sort li.issue{background-position:0 0; padding-left:35px;}
+.s_sort li.serial{background-position:0px -52px;padding-left:35px;}
+.s_sort li.special{background-position:0px -104px;padding-left:53px;}
+
+/*기자소개부분*/ 
+.intro_etc{width:600px; border:1px solid #e6e6e6; background-color:#f9f9f9; height:21px; padding:10px; margin-bottom:20px; overflow:hidden;}
+.intro_etc .sub_l{float:left; }
+.intro_etc .sub_l .pic{float:left;  margin-right:7px; }
+.intro_etc .sub_l li{float:left; margin-right:7px; height:21px;line-height:21px;}
+.intro_etc .sub_l li a{background:url(http://ojsimg.ohmynews.com/images/i_room_2011/common/ico_sns.png) -9999em -9999em no-repeat; text-decoration:none;display:block;}
+.intro_etc .sub_l li.message a{width:14px; background-position:0px 2px; text-indent:-9999em;}
+.intro_etc .sub_l li.rss a{width:13px; background-position:0px -87px; text-indent:-9999em;}
+.intro_etc .sub_l li.jim{width:55px; height:18px; border:1px solid #e6e6e6; background:#fff;font-size:11px;color:#777777;}
+.intro_etc .sub_l li.jim a{padding-left:20px;background-position:2px -27px;}
+.intro_etc .sub_l li.jim_out{width:55px; height:18px; border:1px solid #e6e6e6; background:#fff; font-size:11px; color:#777777;}
+.intro_etc .sub_l li.jim_out a{padding-left:20px; background-position:2px -57px;}
+
+.intro_etc .sub_r{float:right; }
+.intro_etc .sub_r li{float:left;  margin-left:7px; height:21px;line-height:21px;}
+.intro_etc .sub_r li a{background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon_info01.png) -9999em -9999em no-repeat; text-decoration:none;display:block;}
+.intro_etc .sub_r li.oblog a{width:18px; background-position:0px -123px; text-indent:-9999em;}
+.intro_etc .sub_r li.follow a{width:60px; background-position:0px -159px; text-indent:-9999em;}
+.intro_etc .sub_r .fb{float:left; height:21px; }/*overflow:hidden;*/
+
+
+/*세부아이콘메뉴*//*최종면 개편:  z-index:610;추가*/
+.detail_area {width:100%; *zoom:1;padding-bottom:20px;}
+.detail_acc li.sm{position:relative;}
+.detail_acc p{float:left;}
+.detail_acc li{float:left; font-size:11px; line-height:20px;margin-left:3px;}
+.detail_acc li a{background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/s_icon.png) 0 0px no-repeat;text-decoration:none;display:block;}
+.detail_acc li.plus a{background-position:0px 5px;padding-left:11px;}
+.detail_acc li.mias a{background-position:0px -71px;padding-left:11px;}
+.detail_acc li.s_print a{background-position:0px -149px;padding-left:16px;}
+.detail_acc li.sm a{background-position:55px -238px;padding:0 11px 0 0px;}
+.detail_acc li .bar{color:#e5e5e5;margin:0 4px 0 3px;font-size:12px}
+.detail_acc .ac2{float:right;display:inline;border:1px solid #ddd;border-left:none;}
+.detail_acc .ac2 div{float:left;border-left:1px solid #ddd;position:relative;}
+.detail_acc .ac2 div a{display:block;font-size:11px;color:#999;padding:3px 3px 1px 5px;text-decoration:none}
+.detail_acc .ac2 div a span{display:block;font-size:11px;color:#999;background:url(http://ojsimg.ohmynews.com/images/i_room_2011/common/ico_arrow.gif) right 0 no-repeat;padding-right:10px}
+.detail_acc .ac2 div .btn_ly3{padding:3px 13px 1px 13px; font-size:11px;}
+
+.detail_acc .url_ad{position:absolute;top:22px;_top:22px;right:0px;border:1px solid #ddd;height:30px;width:272px;background:#f3f3f4;padding:8px 0 0 9px;}
+.detail_acc .url_ad .input_url{border:1px solid #ddd;padding:4px 0 0 5px;height:16px;color:#262f3b;width:203px;float:left}
+.detail_acc .url_ad a.btn_copy{float:left;font-size:12px;color:#4978bc;background:#fff;border:1px solid #ddd;margin-left:6px;display:inline;width:36px;padding:0px 0 0px 0}
+.detail_acc .url_ad a.btn_copy em{display:block;text-align:center;padding:0 0 0 0}
+.detail_acc .url_ad a.btn_copy:hover{background:#4978bc;color:#fff;text-decoration:none;}
+
+.sns_sm{padding:0px; float:right;}
+.sns_sm span{font-size:11px;padding-right:10px;}
+.sns_sm li a{background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/sns_quick.jpg) no-repeat; border-right:1px solid #e5e5e5;}
+.sns_sm li.fb a{background-position:0px 0px;padding-left:18px;margin-right:5px;}
+.sns_sm li.tw a{background-position:0px -58px;padding-left:18px;margin-right:5px;}
+.sns_sm li.rp a{background-position:0px -110px;padding-left:18px;margin-right:5px;}
+.sns_sm li.mail a{background-position:3px -161px; width:30px;text-indent: -9999em;}
+.sns_sm li.more{ position: relative;}
+.sns_sm li.more a{background-position:7px -382px;width:30px;text-indent:-9999em; border:none;}/*오블수정_position위치조절*/
+
+/*더보기 상단*//*최종면 개편:  z-index:605;추가*/
+.sns_sm li.more .morebox{width: 240px;position:absolute; border:1px solid #dddddd;  right:9px;top:22px;}
+.morebox span{ float:left;height:27px;line-height:27px; font-size:11px;}
+.morebox span a{background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/sns_quick.jpg) no-repeat; text-decoration:none;display:block; padding-left:25px;background-color:#ffffff;}
+.morebox span.me a{background-position:3px -260px;text-indent:0;width: 50px;}
+.morebox span.cy a{background-position:3px -312px;text-indent:0;width: 50px;}
+.morebox span.ob a{background-position:3px -378px;text-indent:0;width: 30px;}
+
+.morebox span a:hover{background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/sns_quick_over.jpg) no-repeat; text-decoration:none;display:block; padding-left:25px;background-color:#fff;}
+.morebox span.me a:hover{background-position:3px -260px;width: 50px;}
+.morebox span.cy a:hover{background-position:3px -312px;width: 50px;}
+.morebox span.ob a:hover{background-position:3px -378px;width: 30px;}
+
+/*더보기 하단*/
+.morebox_down{width:74px; height:81px;position:absolute; border:1px solid #dddddd; right:4px; top:20px;z-index: 660;}/*+++++++++++++++++++*/
+.morebox_down span{ float:left;width:74px; height:27px;line-height:27px; font-size:11px;}
+.morebox_down span a{background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/sns_quick.jpg) no-repeat; text-decoration:none;display:block; padding-left:25px;background-color:#ffffff;}
+.morebox_down span.me a{background-position:3px -260px;}
+.morebox_down span.cy a{background-position:3px -312px;}
+.morebox_down span.ob a{background-position:3px -378px;}
+
+.morebox_down span a:hover{background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/sns_quick_over.jpg) no-repeat; text-decoration:none;display:block; padding-left:25px;background-color:#fff;}
+.morebox_down span.me a:hover{background-position:3px -260px;}
+.morebox_down span.cy a:hover{background-position:3px -312px;}
+.morebox_down span.ob a:hover{background-position:3px -378px;}
+
+.more_view01{float:left;position:relative;z-index: 650;}/*+++++++++++++++++++*/
+.more_view01 .more_btn{background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/bubble_btn.png) no-repeat;text-indent:-9999em;background-position:0px -330px;}
+.more_view01 .more_btn a{display:block;width:85px; height:22px;padding-left:5px;}
+
+.newsinfo .info_title01{float:left;width:90px;color:#353b4b;padding-top:2px;word-spacing:1px;letter-spacing:1.5px;}
+.newsinfo .info_con01{float:left;width:510px;}
+.newsinfo .info_con01 .ar1{float:left;padding-top:2px}
+.newsinfo .info_con01 .ar2{float:left;width:95px;text-align:right;font-size:18px;font-family:Arial;color:#353b4b;letter-spacing:-1px;}
+.newsinfo .info_con01 .ar2 span{font-family:Malgun Gothic;font-size:12px;color:#6f7587;padding-left:2px}
+.newsinfo .info_con01 .ar1 strong{color:#353b4b}
+.newsinfo .info_con01 .ar1 strong a{color:#ff6501}
+.newsinfo .info_con01 .ar3{float:right;text-align:right}
+.newsinfo .info_con01 .ar3 a{font-size:11px;color:#666;background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/bul1.gif) right 1px no-repeat;padding:0 8px 0 0}
+.newsinfo .info_con .ar4 {float:right;padding-bottom:3px}
+.newsinfo .info_con01 .ar4 {float:right;padding-bottom:3px}
+
+
+/*141128*/
+.bubble_icon{ position:relative;float:left; margin-bottom:3px;}
+.bubble_icon dd{float:left;background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/bubble_btn.png) no-repeat;}
+.bubble_icon dd a{display:block; padding-left:5px;text-indent:-9999em;}
+.bubble_icon dd.fb{background-position:0px 0px;}
+.bubble_icon dd.tw{background-position:0px -84px;}
+.bubble_icon dd.rp{background-position:0px -165px;}
+
+.bubble_icon dd.more{background-position:0px -330px; position:relative;}
+.bubble_icon dd span{position:absolute; top:-27px;width:57px; height:24px;background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/bubble_btn.png) no-repeat; line-height:22px; font-size:11px;text-align:center; font-weight:bold; letter-spacing:-0.1em;}
+.bubble_icon dd span.fb_b{background-position:-93px 0px;}
+.bubble_icon dd span.tw_b{background-position:-93px -83px;}
+.bubble_icon dd span.rp_b{background-position:-93px -165px;}
+
+/*추가*/
+.bubble_icon dd a.fb00{width:54px; height:22px; }
+.bubble_icon dd a.tw00{width:54px; height:22px; }
+.bubble_icon dd a.rp00{width:54px; height:22px; }
+.bubble_icon dd a.gg00{width:54px; height:22px; }
+.bubble_icon dd a.ka00{width:83px; height:22px; }
+.bubble_icon dd a.nline00{width:54px; height:22px; }
+.bubble_icon dd a.bend00{width:54px; height:22px; }
+
+.bubble_icon dd.gg{background-position:0px -649px;}
+.bubble_icon dd span.gg_b{background-position:-93px -165px;}
+.bubble_icon dd.ka{background-position:2px -721px; position:relative;}
+.bubble_icon dd span.ka_b{background-position:-93px -720px;position: absolute;top: -27px;left: 14px;}
+.bubble_icon dd.nline{background-position:0px -785px;}
+.bubble_icon dd.bend{background-position:0px -854px;}
+
+.bubble-box{display: inline-block;clear: both;}
+.bubble-box .bubble_em{float: left;background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/bubble_btn.png) 0px -248px no-repeat;}
+.bubble-box .bubble_em a{display: block;width: 54px;height: 22px;padding-left: 5px;text-indent: -9999em;}
+
+/*141128*/
+.sns_sm li.kas a{background-position:0px -483px; width:30px;text-indent:-9999em;margin-left: 6px;}
+.sns_sm li.gg_plus a{background-position:0px -434px;width:30px;text-indent:-9999em;}
+
+
+
+
+/* 전문보기 */
+.full_view{padding:40px 0px 40px 0px; float:left;}
+.full_view .titl{ font-size:11px; font-weight:bold; padding-bottom:6px;}
+.full_view .em_box{width:600px; height:600px; border:1px solid #e5e5e5; overflow-y:scroll;}
+
+
+
+/*갤러리부분 S*/
+.gallery_area{ margin-bottom:40px; border-bottom:solid 1px #dddddd; position:relative;width:100%}
+.gallery_area .stitle{width:100%;border-bottom: 2px solid #e6e6e6;padding-bottom: 6px;margin-bottom: 15px;}
+.gallery_area .txt_stitle {float: left;text-indent: 0;font-size: 14px;color: #10141d;display: inline;margin-left: 5px;}
+.gallery_box{position:relative; width:620px;  background-color:#101010; display:inline-table; z-index:10005;}
+.gallery_con{z-index:10005; position:relative; background-color:#101010; }
+.gallery_con .tit{height:68px; }
+.gallery_con .tit_txt{float:left; padding-left:20px;padding-top:20px;font-size:16px; letter-spacing:-1px; font-weight:bold;}
+.gallery_con .tit_txt a:link{color:#CCCCCC;}
+.gallery_con .tit_txt a:hover{text-decoration:underline;color:#AEAEAE; }
+
+.gallery_con .tit_nav {text-align: right;color: #AEAEAE;padding: 20px;float: right;position: relative;}/*140124수정*/
+.gallery_con .num {position: absolute;top: 24px;right: 65px;width: 70px;text-align: right;}/*140124수정*/
+
+/*최종면 개편:캡션내용 간격*/
+.cap_con {line-height: 16px;letter-spacing: -0.03em;font-size: 11px;margin: 5px;    color: #aeaeae;}/*140124수정*/
+.scroll_txt{
+overflow-y: scroll;margin: auto;height: 76px;margin: 0px 35px 0px 35px;padding: 10px;color: #AEAEAE;background: #000000;margin-bottom: 47px;}
+.scroll_ef{scrollbar-face-color:#2b2b2b;scrollbar-track-color:#272727;scrollbar-arrow-color:#000;scrollbar-3dlight-color:#000;scrollbar-darkshawdow-color:#000;scrollbar-shawdow-color:#252525;}
+.scroll_t {font-size: 14px;padding-bottom: 5px;letter-spacing: -0.1em;    color: #aeaeae;}/*140124수정*/
+.scroll_sns {float: left;position: absolute;right: 53px;top: 495px;margin-top: 5px;}/*140124수정*/
+.scroll_sns li{ float:left;width:19px; height:19px; background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/sns_icon_gallery.png) no-repeat; text-indent:-99999em;}
+.scroll_sns a{ display:block;width:19px; height:19px;}
+.scroll_sns .fbi{background-position:0px 0px;}
+.scroll_sns .twi{background-position:-22px 0px;}
+.scroll_sns .mpi{background-position:-43px 0px;}
+.scroll_sns .cyi{background-position:-63px 0px;}
+.cen_photo{float:left;width:538px;height:320px;text-align:center;border:1px solid #4e4e4c;}
+.photo_box{float: left; margin-bottom:5px;}
+.photo_pre{float:left;width:40px;background-color:#101010;text-align:center;padding-top:153px;}
+.photo_next{width:40px;float:left;background-color:#101010;text-align:center;padding-top:153px;}
+
+/*확장날개*/
+.gallery_box .gallery_new{width:310px;height:627px;background-color:#333436;position: absolute;top: 0px;right:-310px; z-index: 10004;}
+.f_btn{text-align:right;padding:10px;}
+.wing_logo{padding:10px 23px 10px 15px;}
+.wing_sum{margin:0 auto; width:286px; }
+.wing_sum li{ float:left; width:135px;padding-right:4px;padding-left:4px;height: 190px; }
+.wing_sum li dl{float:left;}
+.wing_sum li dt{width: 134px;height:135px; border:1px solid #4c4c4b;text-align:center;display:table-cell;vertical-align: middle;}
+.wing_sum li dt img{max-width: 134px;max-height: 135px; }
+.wing_sum li dd{font-size:11px; color:#aeaeae; padding:3px 0px 20px 0px;line-height:14px;letter-spacing: -0.1em;}/*140124수정*/
+.wing_sum li a{color:#aeaeae;}
+.wing_sum li a:hover{color:#ccc;}
+.wing_gallery_banner{width:280px; height:140px; margin-top:5px; border:1px solid #4e4e4c;float:left; background-color:#000;}
+
+
+
+/**갤러리세부*/
+.jcarousel-skin-tango{margin-bottom: 0px;}
+.jcarousel-skin-tango li{}
+.jcarousel-skin-tango .jcarousel-container {background:#1c201f;  border-top: 1px solid #333436;border-bottom: 1px solid #333436;position: relative; display: block;}
+.jcarousel-skin-tango .jcarousel-direction-rtl {direction: rtl;}
+.jcarousel-skin-tango .jcarousel-container-horizontal {width: 540px;padding: 10px 40px;height: 55px;}
+.jcarousel-skin-tango .jcarousel-container-vertical {width: 75px;height: 245px;padding: 40px 20px;}
+.jcarousel-skin-tango .jcarousel-clip {overflow: hidden;}
+.jcarousel-skin-tango .jcarousel-clip-horizontal {width:  540px;height: 75px;}
+.jcarousel-skin-tango .jcarousel-clip-vertical {width:  75px;height: 245px;}
+.jcarousel-skin-tango .jcarousel-item {width: 62px;height: 45px;border: 3px solid #434343;overflow: hidden;background: #000;}
+.jcarousel-skin-tango .jcarousel-item-horizontal {margin-left:2px;margin-right: 8px;text-align: center;}
+.jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-item-horizontal {margin-left: 10px; margin-right: 0;}
+.jcarousel-skin-tango .jcarousel-item-vertical { margin-bottom: 10px;}
+.jcarousel-skin-tango .jcarousel-item-placeholder { background: #fff;color: #000;}
+
+
+/***  Horizontal Buttons*/
+.jcarousel-skin-tango .jcarousel-next-horizontal {position: absolute;top: 10px;right: 0px; width:20px;height:50px;cursor: pointer;background: transparent url(http://ojsimg.ohmynews.com/images/ohmynews/common/p_list_next.gif) no-repeat 0 0;}
+.jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-next-horizontal {left: 5px;right: auto;width:20px;height:50px;background-image: url(http://ojsimg.ohmynews.com/images/ohmynews/common/p_list_pre.gif);}
+.jcarousel-skin-tango .jcarousel-next-horizontal:hover,.jcarousel-skin-tango .jcarousel-next-horizontal:focus {}
+.jcarousel-skin-tango .jcarousel-next-horizontal:active {}
+.jcarousel-skin-tango .jcarousel-next-disabled-horizontal,
+.jcarousel-skin-tango .jcarousel-next-disabled-horizontal:hover,
+.jcarousel-skin-tango .jcarousel-next-disabled-horizontal:focus,
+.jcarousel-skin-tango .jcarousel-next-disabled-horizontal:active {cursor: default;}
+.jcarousel-skin-tango .jcarousel-prev-horizontal {position: absolute;top: 10px;left: 0px;width:20px;height:50px;cursor: pointer;background: transparent url(http://ojsimg.ohmynews.com/images/ohmynews/common/p_list_pre.gif) no-repeat 0 0;}
+.jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-prev-horizontal {left: auto; right: 5px;width:20px;height:50px;background-image: url(http://ojsimg.ohmynews.com/images/ohmynews/common/p_list_next.gif);}
+.jcarousel-skin-tango .jcarousel-prev-horizontal:hover, 
+.jcarousel-skin-tango .jcarousel-prev-horizontal:focus {}
+.jcarousel-skin-tango .jcarousel-prev-horizontal:active {}
+.jcarousel-skin-tango .jcarousel-prev-disabled-horizontal,
+.jcarousel-skin-tango .jcarousel-prev-disabled-horizontal:hover,
+.jcarousel-skin-tango .jcarousel-prev-disabled-horizontal:focus,
+.jcarousel-skin-tango .jcarousel-prev-disabled-horizontal:active {cursor: default;}
+
+/**
+ *  Vertical Buttons*/
+
+.jcarousel-skin-tango .jcarousel-next-vertical {position: absolute;bottom: 5px;left: 43px; width: 32px;height: 32px;cursor: pointer;background: transparent url(next-vertical.png) no-repeat 0 0;}
+.jcarousel-skin-tango .jcarousel-next-vertical:hover,
+.jcarousel-skin-tango .jcarousel-next-vertical:focus { background-position: 0 -32px;}
+.jcarousel-skin-tango .jcarousel-next-vertical:active {background-position: 0 -64px;}
+.jcarousel-skin-tango .jcarousel-next-disabled-vertical,
+.jcarousel-skin-tango .jcarousel-next-disabled-vertical:hover,
+.jcarousel-skin-tango .jcarousel-next-disabled-vertical:focus,
+.jcarousel-skin-tango .jcarousel-next-disabled-vertical:active {cursor: default;background-position: 0 -96px;}
+.jcarousel-skin-tango .jcarousel-prev-vertical {position: absolute; top: 5px;left: 43px;width: 32px;height: 32px;cursor: pointer;background: transparent url(prev-vertical.png) no-repeat 0 0;}
+.jcarousel-skin-tango .jcarousel-prev-vertical:hover,
+.jcarousel-skin-tango .jcarousel-prev-vertical:focus { background-position: 0 -32px;}
+.jcarousel-skin-tango .jcarousel-prev-vertical:active {background-position: 0 -64px;}
+.jcarousel-skin-tango .jcarousel-prev-disabled-vertical,
+.jcarousel-skin-tango .jcarousel-prev-disabled-vertical:hover,
+.jcarousel-skin-tango .jcarousel-prev-disabled-vertical:focus,
+.jcarousel-skin-tango .jcarousel-prev-disabled-vertical:active {cursor: default; background-position: 0 -96px;}  
+.gimage{max-width: 65px;max-height: 48px;/* border: 3px solid #434343; *//* overflow: hidden; */}  
+.gimage_white{border: 3px solid white;}  
+.gimage_white li img:hover{border: 3px solid white;} */
+/*갤러리부분 E*/    
+
+/*140408스크랩아이콘추가*/
+.detail_acc li.scrap{position: relative;}
+.detail_acc li.scrap a{background-position: 5px -298px;padding-left: 16px;}
+.detail_acc li.scrap_off a{background-position: 5px -372px;padding-left: 16px;}
+.newsinfo .info_con .scrap_url {float: left;position: relative;margin: 0 0 0 2px;width: 60px;height: 22px;}
+.newsinfo .info_con .scrap_url a.scrap {color: #666;font-size: 11px;letter-spacing: -1px;padding: 4px 4px 2px 20px;height: 16px;    line-height: 16px;text-decoration: none;display: block;background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/bubble_btn.png) no-repeat;background-position: 0px -289px;}
+.newsinfo .info_con .scrap_url a.scrap_off {color: #666;font-size: 11px;letter-spacing: -1px;padding: 4px 4px 2px 20px;height: 16px;line-height: 16px;text-decoration: none;display: block;background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/bubble_btn.png) no-repeat;background-position: -60px -289px;}
+
+/*140813나의정보 추가*/
+.myinfo00{ border:1px solid #e6e6e6; background-color:#f9f9f9; padding:12px; margin-bottom:25px; position:relative; height:112px;}
+.myinfo00 .profile_club{position:absolute;top: -5px;left: -5px; z-index: 200; width: 40px;height: 40px;text-indent: -999em; background-image: url(http://ojsimg.ohmynews.com/images/mobile_2017/icon_myroom_club.svg);background-repeat:no-repeat; background-position:center;display: inline-block;}
+.myinfo00 .p_area{ position:absolute; left:12px; top:12px; border:1px solid #e6e6e6;background-size: cover;background-position: 50%;width: 110px;height: 110px;}
+.myinfo00 .p_area > img{ object-fit: cover;}
+.myinfo00 .txt_area{padding:5px 0px 0px 130px;}
+
+.txt_area .sub00_l{float:left; }
+.txt_area .sub00_l .pic{float:left;  margin-right:7px; }
+.txt_area .sub00_l li{float:left; margin-right:7px; height:21px;line-height:21px;}
+.txt_area .sub00_l li a{background:url(http://ojsimg.ohmynews.com/images/i_room_2011/common/ico_sns.png) -9999em -9999em no-repeat; text-decoration:none;display:block;}
+.txt_area .sub00_l li.message a{width:14px; background-position:0px 2px; text-indent:-9999em;}
+.txt_area .sub00_l li.rss a{width:13px; background-position:0px -87px; text-indent:-9999em;}
+.txt_area .sub00_l li.jim{/*width:55px;*/ height:18px; border:1px solid #e6e6e6; background:#fff;font-size:11px;color:#777777;}
+.txt_area .sub00_l li.jim a{padding: 0 5px 0 20px;background-position:2px -27px;}
+.txt_area .sub00_l li.jim_out{/*width:55px;*/ height:18px; border:1px solid #e6e6e6; background:#fff; font-size:11px; color:#777777;}
+.txt_area .sub00_l li.jim_out a{padding: 0 5px 0 20px; background-position:2px -57px;}
+
+.txt_area .sub00_r li{float:left;  margin-left:7px; height:21px;line-height:21px;}
+.txt_area .sub00_r li a{background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon_info01.png) -9999em -9999em no-repeat; text-decoration:none;display:block;}
+.txt_area .sub00_r li.oblog a{width:18px; background-position:0px -123px; text-indent:-9999em;}
+.txt_area .sub00_r li.follow a{width:60px; background-position:0px -159px; text-indent:-9999em;}
+.txt_area .sub00_r .fb{float:left; height:21px; }/*overflow:hidden;*/
+.txt_area .sub00_r li.fb00 a{width:18px; background-position:0px -196px; text-indent:-9999em;}
+.txt_area .sub00_r li.tw00 a{width:18px; background-position:0px -223px; text-indent:-9999em;}
+.txt_area .sub00_r li.st00 a{width:18px; background-position:0px -250px; text-indent:-9999em;}
+
+
+.txt_area .info_txt{clear: both;padding-top: 12px; line-height: 130%;}
+.txt_area .info_txt .info_more{font-size:11px; color:#999999; position: absolute;bottom: 10px;right: 15px;text-decoration: underline;}
+.nameim{margin-bottom: 5px;}
+
+/*141015 후원배너 */
+.support_club_area{ margin-bottom:20px ; text-align:center;}
+.support_bnr a{position: relative; margin:0 auto;width: 150px; height: 150px; background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/view_club.png) no-repeat; display: block; text-decoration: none; }
+.support_bnr a:hover{width: 150px; height: 150px; background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/view_club_ov.png) no-repeat; display: block; text-decoration: none; }
+.support_bnr a span{position: absolute; font-size: 26px; font-family: arial; font-weight: bold; right: 47px; bottom: 10px; color: #000000; text-decoration: none; letter-spacing:-1px }
+
+/*지역메인2015*/
+.local_box{width: 225px; padding: 5px; border:1px solid #ddd; display:block; margin: 17px 0 17px 5px; position:relative; float:left;}
+.local_box img{width: 100%;}
+.local_box .local_tit{ height:20px;line-height:20px; position:relative; margin-top:15px; margin-bottom:10px;}
+.local_box .local_tit h3{background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/s_title.gif) no-repeat; text-indent:-9999em;}
+.local_box .local_tit h3 a{ display:block;}
+.local_box .local_tit h3.sub_story{background-position:5px 0; /*width:62px*/}
+.local_box .local_tit h3.sub_culture{background-position: 5px -50px; /*width:25px*/}
+.local_box .local_tit h3.sub_incheon{background-position: 5px -250px; /*width:50px*/}
+.local_box .local_tit h3.sub_daejeon{background-position: 5px -300px; /*width:50px*/}
+.local_box .local_tit h3.sub_gwangju{background-position: 5px -350px; /*width:50px*/}
+.local_box .local_tit h3.sub_daegu{background-position: 5px -400px; /*width:50px*/}
+.local_box .local_tit h3.sub_gangwon{background-position: 5px -450px; /*width:50px*/}
+.local_box .local_tit h3.sub_busan{background-position: 5px -500px; /*width:50px*/}
+.local_box .local_tit h3.sub_seoul{background-position: 5px -800px; /*width:50px*/}
+.local_box .local_tit a.puls{position:absolute; right:10px; top:0px; background: url(http://ojsimg.ohmynews.com/images/ohmynews/main/main_title_list.png) no-repeat; background-position: -176px -33px;  width:16px;  height:16px; overflow:hidden; text-indent:-9999em;}
+.local_box .local_tit a.puls:hover{ position:absolute; right:10px; top:0px; background: url(http://ojsimg.ohmynews.com/images/ohmynews/main/main_title_list.png) no-repeat; background-position: -146px -33px;  width: 16px;  height:16px; overflow:hidden; text-indent:-9999em;}
+.local_box .g_list{ padding:0px 0px 10px 3px;}
+.local_box .g_list li{font-size:12px; padding:5px 0 0 7px; background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/bul_sq.gif) 0 10px no-repeat; overflow: hidden;  text-overflow: ellipsis;  white-space: nowrap;}
+.local_box .g_list li a{color:#000;}
+.local_box .g_list .on{font-weight:bold;}
+
+
+
+/*지역면 생성*/
+.local_list{background: #fff;float: left;}
+.local_list ul{background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/one_dot.jpg) 0px 16px no-repeat; position:relative; }
+.local_list li{padding:7px;}
+.local_list li a{font-size:14px; font-weight:bold; text-decoration:none; color:#073685;}
+.local_list li a:hover{ text-decoration:underline;}
+.local_list .namebox{position:absolute; top:10px; right:0px;}
+.local_list .namebox .name00{ font-size:11px;color: #999;padding: 0px 8px 0px 0px;}
+.local_list .namebox .date00{ font-size:11px;color: #999;padding: 0px 0px 0px 8px;background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/w_line.png) 0px 0px no-repeat;}
+.emp{ height:30px; text-indent:-999em;display: block;clear: both;}
+
+/*150209 카드뉴스 생성 : 수빈*/
+.cardNews{overflow: hidden;float: left;}
+.cardNews_li{display: inline;float: left; margin:0 0 26px 26px; height:330px;}
+.cardNews_li a{text-decoration: none; color:#0d54ab;display: block;overflow: hidden;width: 270px;}
+.cardNews_li a:hover{text-decoration:underline;}
+.cardN_thum{width:270px; height:270px; display: block; overflow: hidden; margin-bottom:10px;}
+.cardN_thum img{ width:268px; height:268px; border:solid 1px #ddd;}
+.cardN_tit{display: block;overflow: hidden; margin-bottom:6px; color:#0d54ab; font-weight:bold; font-size:17px; letter-spacing: -0.05em;}
+.cardNews_li .date{margin-top:5px; font-size: 13px; color: #999;}
+
+
+/*150311 특별면 생성 : 박종현*/
+.special_page{overflow: hidden;float: left;}
+.special_page_li{display: inline;float: left; margin:0 0 26px 26px; height:330px;}
+.special_page_li a{text-decoration: none; color:#0d54ab;display: block;overflow: hidden;width: 270px;}
+.special_page_li a:hover{text-decoration:underline;}
+.specialN_thum{width:270px; height:270px; display: block; overflow: hidden; margin-bottom:10px}
+.specialN_thum img{ width:270px; height:270px;}
+.specialN_tit{display: block;overflow: hidden; margin-bottom:6px; color:#0d54ab; font-weight:bold; font-size:17px}
+.special_page_li .date{margin-top:5px; font-size: 13px; color: #999;}
+
+/*sns수정 150604*/
+
+.social_bind{  padding: 0px;  float: right;}
+.social_bind .best{height:21px; position:absolute; right:0; top:0; text-align:right; float:right;}
+.social_bind .best em{font-weight:bold;}
+
+.sns_list_ic{height:13px; margin-right:4px;float:left; display:inline;}
+.sns_list_ic .non{background:none;}
+.sns_list_ic li{display: inline-block; font-size: 11px; line-height:13px;position:relative;}
+.sns_list_ic li a{background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/sns_comm_01.png) no-repeat;color:#424242;display: block;height: 27px;width: 40px; border-radius:2px 2px;}
+.sns_list_ic li a.fb{background-position: 8px 0px; background-color: #4b67b8;}
+.sns_list_ic li a.tw{background-position: -36px 0px;background-color: #19b3e9;}
+.sns_list_ic li a.google{background-position: -78px 0px;background-color: #e33534;}
+.sns_list_ic li a.kakao{background-position: -124px 0px;background-color: #fdcd00;}
+.sns_list_ic li a.sreply{background-position: -168px 0px;background-color: #c12d2d;}
+.sns_list_ic li a.fb:hover{background-color: #354b8b;}
+.sns_list_ic li a.tw:hover{background-color: #1081a8;}
+.sns_list_ic li a.google:hover{background-color: #b52928;}
+.sns_list_ic li a.kakao:hover{background-color: #e0b500;}
+.sns_list_ic li a.sreply:hover{background-color: #8f2121;}
+.sns_list_ic li .bu_num{ position:absolute;   top: 29px;left:0px; border:1px solid #b8bfc5;width: 28px; border-radius:2px 2px; padding: 0px 5px;  text-align: center; letter-spacing: 0px; font-size: 11px; height: 18px; line-height: 18px; color: #656565; font-family: arial;}
+/*편집권개방*/
+.sns_list_ic li .fb_num{position:absolute;top: 0px;left: 46px;border:1px solid #b8bfc5;width: 26px;border-radius:2px 2px;padding: 0px 5px;text-align: center;letter-spacing: 0px;font-size: 11px;height: 25px;line-height: 24px;color: #656565;font-family: arial;}
+.sns_list_ic li.fb-e{margin-right: 44px;}
+.sns_list_ic li .fb_num_a{background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon-all.png) -42px -970px no-repeat;text-indent: -99999em;position:absolute;top: 1px;left: 42px;width: 28px;height: 25px;}
+
+
+.sns_list02_ic{height:19px; border:1px solid #DBE2E6; padding: 4px 8px 4px 4px; float:left; display:inline;}
+.sns_list02_ic li{color: #9EA2A7; display:inline; line-height:19px; font-size:11px; padding:0 15px 0 6px; background:url(http://ojsimg.ohmynews.com/images/ohmytv2011/tv/ico_arrow.gif) no-repeat 65px 2px;}
+.sns_list02_ic li a{color:#9EA2A7;}
+.sns_list02_ic li a:hover{color:#262f3b; text-decoration:none;}
+
+/* 후원하기박스 150821 */
+.spon_explain{background:#f4f4f4; border: solid 1px #c7cbce; border-top:none; padding:30px; font-size:17px; line-height:140%;}
+.spot_box{width:100%; height:115px; margin:0 auto; overflow:hidden; background:#223636; margin-top:15px; clear:both;}
+.rspon_btn{ float:right; background:#ff6633; height:115px; text-align:center; }
+.rspon_btn a{ padding:0 20px; display:block; text-decoration:none;}
+.rspon_btn .bttitle{color:#fff; font-size:15px; letter-spacing:-0.1em; padding-top:35px; display:block;}
+.rspon_btn .btspon{color:#fff600; font-size:25px; font-weight:bold; letter-spacing:-0.1em; display:block;}
+.collect_area{ float:left; width:70%; padding:15px 25px; box-sizing:border-box;}
+.coll_per{float:left; padding-top:7px; font-size:11px;color:#fff; margin-right:8px; }
+.coll_per em{color:#00ffff;letter-spacing:0;font-style: normal;}
+.dday{ float:left; margin:4px 8px 0 0;padding:0;height:18px;background:#00a2b1;line-height:18px;color:#fff;text-align:center;white-space:nowrap}
+.dday strong{font-size:11px;color:#fff;font-family:arial;letter-spacing:0;vertical-align:middle; padding:0 4px;}
+.graph_area{overflow:hidden}
+.graph{float:left;position:relative;width:250px;height:5px;margin-top:9px; margin-right:12px; background:url(http://ojsimg.ohmynews.com/images/club/spon_graph.jpg) no-repeat 0 0;}
+.graph .inr_graph{display:inline-block;position:absolute;top:0;left:0;height:5px;background:url(http://ojsimg.ohmynews.com/images/club/spon_graph.jpg) no-repeat 0 -10px;text-indent:-9999em;}
+.graph .inr_graph span{display:block;position:absolute;top:0;right:0;width:2px;height:5px;background:url(http://ojsimg.ohmynews.com/images/club/spon_graph.jpg) no-repeat right -10px;}
+.percent{overflow:hidden;float:left;margin:2px 8px 0 0;}
+.percent em{display:block;float:left;font-family:arial;font-size:20px;color:#00ffff;font-style: normal;}
+.coll_title{overflow:hidden;margin-bottom:3px;}
+.coll_txt{overflow:hidden;margin-top:3px;}
+.coll_txt em{display:block; float:left; font-family:arial; font-size:30px; color:#ff6633;font-weight: bold; font-style: normal;}
+.coll_txt span{display:block;float:left; margin:10px 0 0 2px; font-size:12px; color:#fff; font-weight:bold;}
+.coll_txt .txt1{margin-right:10px;}
+/* 후원하기박스 150821 */
+
+/*리포트배너영역_펀딩
+.report-banner{margin-bottom: 40px;}
+.report-banner .rbox{ display:block; margin:0 auto;}
+.report-banner .rbox:hover{text-decoration: none;}
+.report-banner .pund{ height: 58px; padding: 10px; position:relative;letter-spacing: -0.5px;}
+.report-banner .pund .man{margin: 0px;text-align: center;width: 480px; font-size:13px;  font-weight: 700;position: relative;}
+.report-banner .pund .man .goal{ font-size:12px; font-weight:normal;position: absolute;right: 0px;}
+.report-banner .pund .bar_progress{display:block;overflow:hidden;position:relative;height:3px;border-radius:4px;background-color:#e2e2e2;width:480px;}
+.report-banner .pund .bar_support{position:absolute;top:0;left:0;height:3px;border-radius:2px;background-color:#ff7625}
+.report-banner .pund .wonbox{margin: 5px 0px 5px 0px;text-align: center;width: 480px; position:relative;}
+.report-banner .pund .wonbox .per{position: absolute;left: 0px; top:0px;}
+.report-banner .pund .wonbox .won .swon{font-size:22px; font-weight:700; letter-spacing:-1.8px;padding-right: 3px;color: #000;}
+.report-banner .pund .wonbox .day00{ position: absolute;right: 0px; top:0px;}
+.report-banner .pund .btn-box{position: absolute;top:20px;right: 10px; background-color: #ff7625; padding:10px 15px; color:#fff;font-size: 16px;font-weight: 700;border-radius:50px;}*/
+
+/*160118 피클 생성*/
+.swiper-container{margin-top: 10px; border:1px solid #ddd;}
+.picle_sns{margin:10px 0px;display: block;text-align: right;font-weight: bold;}
+.picle_sns a{ text-decoration:none;}
+.picle_sns .p-fb{border: 1px solid #567ad4;height: 25px;line-height: 25px;display: inline-block; margin-right: 5px;padding: 2px 5px; color:#567ad4;}
+.picle_sns .p-fb:hover{border: 1px solid #4462ab; color:#4462ab;}
+.picle_sns .p-fb .fimg{background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/p-sns_s.png) no-repeat 0 0px;display:inline-block; width:15px;}
+.picle_sns .p-kakao{border: 1px solid #ffd800;height: 25px;line-height: 25px;display: inline-block;padding: 2px 5px; color:#777;}
+.picle_sns .p-kakao:hover{border: 1px solid #ffb424; color:#222;}
+.picle_sns .p-kakao .kimg{background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/p-sns_s.png) no-repeat 0 -36px;display:inline-block;width:15px;}
+.picle{overflow: hidden;}
+.picle_li{display: inline;float: left; margin:0 0 0px 26px; height:230px;}
+.picle_li a{text-decoration: none; color:#0d54ab;display: block;overflow: hidden;width: 270px;}
+.picle_li a:hover{text-decoration:underline;}
+.picle_thum{width:270px; height:170px; display: block; overflow: hidden; margin-bottom:10px;}
+.picle_thum img{ width:268px; height:168px; border:solid 1px #ddd;}
+.picle_tit{display: block;overflow: hidden; margin-bottom:6px; color:#0d54ab; font-weight:bold; font-size:17px; letter-spacing: -0.05em;}
+.picle_li .date{margin-top:5px; font-size: 13px; color: #999;}
+.pic_box{margin: 30px 0px 30px 0px;}
+.pic_box .tit{
+    font-size: 17px;
+    font-weight: 600;
+    margin: 15px 0px;
+    border-bottom: 2px solid #dbdbdb;
+    padding: 12px 12px 10px;
+    color: #000;}
+.pic_box .vp{ color:#7f3e98;font-size:17px; }
+
+/*170418피클 리스트면 수정*/
+.picle-list{overflow: hidden;}
+.picle-list .list-num{
+	float: left;
+    width: 50%;
+    margin-bottom: 10px;}
+.picle-list .list-num a{
+	text-decoration: none;
+    color: #0d54ab;
+	display: block;
+    margin: 0 10px;
+    zoom: 1;
+}
+.picle-list .list-num .photo_img{
+	position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    padding-top: 100%;
+    box-sizing: border-box;
+    background-size: cover !important;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-position: top center!important;
+}
+.picle_txt {
+    overflow: hidden;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: -0.05em;
+    padding: 5px 5px;
+    height: 50px;
+    line-height: 1.3em;
+}
+.picle_view_txt {
+    overflow: hidden;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: -0.05em;
+    padding: 5px 0px;
+    height: 50px;
+    line-height: 1.3em;
+}
+/*피클 최종면 하단 3단리스트*/
+.picle-list .list-num-three{
+	float: left;
+    width: 33.3%;
+    margin-bottom: 10px;}
+.picle-list .list-num-three a{
+	text-decoration: none;
+    color: #0d54ab;
+	display: block;
+    margin: 0 5px;
+    zoom: 1;
+}
+.picle-list .list-num-three .photo_img{
+	position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    padding-top: 100%;
+    box-sizing: border-box;
+    background-size: cover !important;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-position: top center!important;
+}
+
+.swiper-slide{position:relative;}
+.swiper-slide .tit{ position:absolute;    top: 170px;display: block;z-index: 60;color: #fff; line-height: 110%;font-size: 34px;width: 100%; text-align: center;text-shadow: 1px 1px 1px rgba(0,0,0,.4); letter-spacing: -1px;}
+.swiper-cover{bottom: -1px; position:absolute; width:100%; height:100%; position:relative; z-index:50;
+background:-moz-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,0) 42%,rgba(0,0,0,.8) 100%);
+background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(0,0,0,0)),color-stop(42%,rgba(0,0,0,0)),color-stop(100%,rgba(0,0,0,.8)));
+background:-webkit-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,0) 42%,rgba(0,0,0,.8) 100%);
+background:-o-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,0) 42%,rgba(0,0,0,.8) 100%);
+background:-ms-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,0) 42%,rgba(0,0,0,.8) 100%);
+background:linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,0) 42%,rgba(0,0,0,.8) 100%);}
+
+/* 실글 _선거기간 */
+.livebox-top{padding: 30px 50px 30px 50px; margin-bottom: 30px;  background-image: linear-gradient(-90deg, #1C717D, #136a8a); position: relative; color: #fff;}
+.livebox-top .btn_wt{position: absolute;padding: 8px 20px;right: 30px;bottom: 30px;border-radius: 40px;font-size: 1.2em;font-weight: 400;color: #fff;text-align: center;background: #ff6655;border: none;}
+.livebox-top .btn_wt:hover{background: #e65444;}
+.livebox-top > ul li{background: url(http://ojsimg.ohmynews.com/images/ohmynews/main/bul_sq.gif) 0px 7px no-repeat; line-height: 160%; font-size: 1em; color: #ddd; padding-left: 8px;}
+.livebox-top .tit01{font-size: 2.8em; margin-bottom: 7px; text-align: left; color: #fff; position: static; }
+.livebox-top .tit01 a{color: #fff; }
+.livebox-top .tit02{font-size: 1.2em; margin-bottom: 15px; text-align: left; color: #fff; font-weight: normal;}
+.livebox-top a.tlink01{text-decoration: underline; color: #fff9cc;}
+.livebox-top .tcolor01{color: #ffe970;}
+.livebox-top .tcolor02{color: #ff8d70;}
+
+.news-box .popular_full{ width: 900px; border: 1px solid #e6e6e6; padding:15px 35px; position: relative; height: 316px; }
+.news-box .popular_full .allow_l{position: absolute; top:40%; left:-35px; width: 32px; height: 62px;background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon-all.png) -2px -61px no-repeat;text-indent: -999999em;}
+.news-box .popular_full .allow_r{position: absolute; top:40%; right:-35px;width: 32px; height: 62px;background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon-all.png) -62px -61px no-repeat;text-indent: -999999em;}
+.news-box .popular_full > h4{color:#000; font-size:18px;padding:10px;}
+.news-box .popular_full .rolling >ul{padding:10px;}
+.news-box .popular_full .rolling >ul > li > span{ font-family: arial; font-size:1.2em; padding:0px 10px 0 0;}
+.news-box .popular_full .rolling >ul > li > span.on{color:#db0000;}
+.news-box .popular_full .rolling >ul > li {padding:10px; font-size: 15px; letter-spacing: -1px; border-bottom: 1px dotted #cfcfcf;}
+.news-box .popular_full .rolling .list{width: 600px; font-size: 15px;  overflow: hidden; white-space: nowrap; text-overflow: ellipsis; display: inline-block; }
+/*e: 실글 _선거기간 */
+
+/*편집권개방_실시간글*/
+.atc-tit{position: relative; margin-bottom: 20px;}
+.atc-tit .wbtn{border: 1px solid #db0000;display: block;position: absolute;top: 60px;right: 0px;width: 104px;height: 82px;line-height: 82px;text-align: center;font-size: 22px;letter-spacing: -1px;color: #454545;font-weight: 600;padding: 0px 15px 0px 35px; background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon-all.png) -254px 29px no-repeat;}
+.atc-tit .wbtn:hover{text-decoration: none;color: #000;box-shadow: 3px 3px 6px #ccc;-o-box-shadow: 3px 3px 6px #ccc;-moz-box-shadow: 3px 3px 6px #ccc;-webkit-box-shadow: 3px 3px 6px #ccc;}
+.atc-tit a.use{ position: absolute;right: 0px;
+top: -20px;padding: 5px 0px 5px 15px; background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon-all.png) -10px -367px no-repeat; color: #919191;}
+.atc-tit a.use:hover{ text-decoration: none; color: #000;}
+.atc-tit .tit{position: relative;}
+.atc-tit .tit>h4{font-size: 2.5em;color:#000;letter-spacing: -0.05em; display: inline-block;}
+.atc-tit .tit span{color:#999; margin-left: 5px;}
+.atc-tit .tit .beta{font-size: 14px;
+position: absolute;top: 3px;left: 114px;color: #222;}.atc-tit p.notice{font-size: 1.3em; line-height: 1.3em; margin: 34px 0  10px 0; color:#000;}
+.atc-tit p.refer{color: #3d6e97; padding: 10px 0px 0px 0px;font-size: 13px;letter-spacing: -0.5px;}
+.news-box{display: inline-block;}
+.news-box .popular{ float: left; width: 460px; border: 1px solid #e6e6e6; padding:10px; position: relative; height: 316px;    margin-right: 4px;}
+.news-box .popular .allow_l{position: absolute; top:40%; left:-10px; width: 32px; height: 62px;background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon-all.png) -2px -61px no-repeat;text-indent: -999999em;}
+.news-box .popular .allow_r{position: absolute; top:40%; right:-10px;width: 32px; height: 62px;background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon-all.png) -62px -61px no-repeat;text-indent: -999999em;}
+.news-box .popular > h4{color:#000; font-size:18px;padding:10px;}
+.news-box .popular .rolling >ul{padding:10px;}
+.news-box .popular .rolling >ul > li > span{ font-family: arial; font-size:1.2em; padding:0px 10px 0 0;}
+.news-box .popular .rolling >ul > li > span.on{color:#db0000;}
+.news-box .popular .rolling >ul > li {padding:10px; font-size: 15px; letter-spacing: -1px; border-bottom: 1px dotted #cfcfcf;}
+.box-pagination{width: 100%;text-align: center;padding:10px 0 17px 0;}
+.box-pagination > span {padding:2px; color: #000;font-weight: 800;}
+.box-pagination > a{padding:2px; color: #b6b6b6;font-weight: 800;}
+.box-pagination > a:hover{text-decoration: none; color:#000;}
+.news-box .list{ font-size: 15px;  overflow: hidden; white-space: nowrap; text-overflow: ellipsis; display: inline-block; width: 276px;}
+.news-box .ibox{ float:right;}
+.news-box .ibox > span {background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon-all.png) no-repeat;padding: 2px 0px 2px 22px;width: 30px; height: 20px; display: inline-block;line-height: 16px; font-weight: 800;}
+.news-box .ibox .comment-a{background-position: -7px -8px;margin-left: 3px;color:#000;}
+.news-box .ibox .share-a{background-position: -7px -34px; margin-left: 4px; color:#000;}
+.news-box .ibox .sym-a{background-position: -9px -128px;margin-right: 5px;color:#000;}
+.news-box .popular > ul > li.noline{border:none;}
+.news-box .best{ float: right; width: 460px; padding:10px;border: 1px solid #e7e7e7; position: relative;height: 316px;}
+.news-box .best .best-btn{float: right; position: relative;color: #919191;padding: 5px 20px 5px 15px;background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon-all.png) 127px -367px no-repeat;}
+.news-box .best .best-btn:hover{text-decoration: none; color: #000;}
+.news-box .best .best-btn .box-a{position: absolute;right: 0px;top: -62px; width: 320px;border: 1px solid #000;padding: 14px; background-color: #222; filter: alpha(opacity=80);opacity:0.8;-moz-opacity:0.2;color: #fff;line-height: 16px;}
+.news-box .best > h4{color:#000; font-size:18px;padding:10px; float:left;}
+.news-box .best > ul {padding:10px; clear: both;}
+.news-box .best > ul > li > span{ font-family: arial; font-size:1.2em; padding:0px 10px 0 0;}
+.news-box .best > ul > li > span.on{color:#db0000;}
+.news-box .best > ul > li {padding:10px; font-size: 15px; letter-spacing: -1px; border-bottom: 1px dotted #cfcfcf;}
+.news-box .best > ul > li.noline{border:none;}
+.introduce{margin:50px 0px;}
+.introduce > h2{font-size:24px; letter-spacing:-1px;text-align: center; color:#000; margin-bottom: 44px;}
+.introduce .figure-a{ position: relative; overflow: hidden;}
+.figure-a .move{background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon-all.png) no-repeat;}
+.figure-a .f_le{ position: absolute; left:0px; top:74px; width: 25px; height: 44px;background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon-all.png) -8px -160px; no-repeat; text-indent:-99999em}
+.figure-a .f_ri{ position: absolute; right:0px; top:74px;width: 25px; height: 44px;background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon-all.png) -8px -212px; text-indent:-99999em}
+.figure-a .rolling-a > ul {padding: 0px 64px;display: inline-block; margin: 0px 0px 20px 0px;}
+.figure-a .rolling-a > ul > li{float:left;height: 182px;width: 140px;margin: 0px 14px;}
+.figure-a .rolling-a > ul > li > a{display: block;}
+.figure-a .rolling-a > ul > li > a:hover{opacity: .7;}
+.figure-a .rolling-a > ul > li .p-img{ border-radius:50% 50%;width: 140px;height: 140px; border: 1px solid #eee;}
+.figure-a .rolling-a > ul > li .txt-area{ margin: 10px 0px; text-align: center;}
+.figure-a .rolling-a > ul > li .txt-area .name{font-size: 14px; color: black;}
+.figure-a .rolling-a > ul > li .txt-area .m-id{color: #919191;}
+.menu-nav{clear:both; border-bottom: 1px solid #e5e5e5;border-top: 1px solid #e5e5e5; height: 48px;}
+.menu-nav > ul { height: 100%;}
+.menu-nav > ul > li{ float:left;padding-top: 13px; font-weight: 600;}
+.menu-nav > ul > li > a {display: inline-block;_display: inline;zoom:1;max-width:152px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;height: 34px;line-height:20px;color:#666666;font-size:15px;letter-spacing:-1px;padding-right: 147px; }
+.menu-nav > ul > li.on a, .menu-nav > ul > li  a:hover{border-bottom:2px solid #db0000; color:#db0000; text-decoration: none;}
+.nav-box .section-box{ border-bottom: 1px solid #ddd; padding:20px 0px 25px 0px;}
+.info-a{overflow: hidden;clear:both;}
+.info-a .pf{float: left; padding: 0px 0px 10px 0px;}
+.info-a .pf > a.select_on:hover{opacity: .7;}
+.info-a .pf > a.select_off:hover{opacity: .7;}
+.info-a .pf > a.message:hover{opacity: .7;}
+.info-a .pf .p-thumb{border-radius: 50% 50%;display: inline-block; width: 40px; height: 40px;border: 1px solid #eee;}
+.info-a .pf .name-b{display: inline-block;height: 40px;line-height: 40px;vertical-align: top; font-size: 14px; font-weight: 600; color:#000; padding: 0px 3px 0px 5px;}
+.info-a .pf .id-b{display: inline-block;height: 40px;line-height: 40px;vertical-align: top; font-size: 12px;}
+.info-a .pf .select_on{width: 24px;height: 30px;vertical-align: top;display: inline-block;background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon-all.png) -8px -257px; text-indent:-99999em;margin-top: 5px;}
+.info-a .pf .select_off{width: 24px;height: 30px;vertical-align: top;display: inline-block;background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon-all.png) -8px -283px; text-indent:-99999em;margin-top: 5px;}
+.info-a .pf .message{width: 24px;height: 30px;vertical-align: top;display: inline-block;background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon-all.png) -8px -308px; text-indent:-99999em;margin: 5px 0px 0px 8px;}
+
+.info-s{overflow: hidden;clear:both;margin-top: 8px;}
+.info-s .pf{float: left;}
+.info-s .pf > a.select_on:hover{opacity: .7;}
+.info-s .pf > a.select_off:hover{opacity: .7;}
+.info-s .pf > a.message:hover{opacity: .7;}
+.info-s .pf .p-thumb{border-radius: 50% 50%;display: inline-block;width: 16px;height: 16px;border: 1px solid #e5e5e5;}
+.info-s .pf .name-b{display: inline-block;vertical-align: top; font-size: 12px; font-weight: 600; color:#000; padding: 0px 3px 0px 5px;}
+.info-s .pf .id-b{display: inline-block;vertical-align: top; font-size: 12px;}
+.info-s .pf .select_on{width: 24px;height: 22px;vertical-align: top;display: inline-block;background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon-all.png) -8px -264px; text-indent:-99999em;}
+.info-s .pf .select_off{width: 24px;height: 22px;vertical-align: top;display: inline-block;background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon-all.png) -8px -288px; text-indent:-99999em;}
+.info-s .pf .message{width: 24px;height: 22px;vertical-align: top;display: inline-block;background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon-all.png) -8px -314px; text-indent:-99999em;margin: 0px 0px 0px 8px;}
+
+.article-box{ display: block; position: relative;}
+.article-box:after{content:""; display:block; clear:both;}
+.article-box .time-a {color:#c6c5c5; padding:10px 0 5px 0;}
+.article-box > h4 > a{font-size: 20px; color:#000; letter-spacing: -1px; font-weight: 600; display: block;padding: 0px 0px 8px 0px;}
+.article-box > h4.lock{font-size: 20px; letter-spacing: -1px; font-weight: 600; display: inline-block;padding: 0px 0px 8px 0px; }
+.article-box > h4.lock > a{color:#6e6e6e;}
+.article-box .lock-icon{background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon-all.png) -10px -341px;vertical-align: top; text-indent:-99999em; width: 14px; height: 20px;display: inline-block;margin-left: 8px;}
+.article-box .con-box{padding: 8px 0px;font-size: 15px;}
+.article-box .con-box-lock{padding: 8px 0px;font-size: 15px; color: #a7a7a7;}
+.sort-box{margin: 10px 0px 0px 0px; position: relative; height: 16px;}
+.sort-box .sign{position: relative;color: #a2a2a2;}
+.sort-box .sign em{background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon-all.png) -10px -371px; text-indent: -9999em;width: 16px;height: 16px;display: inline-block;margin-right: 3px;  cursor: pointer;}
+.sort-box .sign .sign-d{position: absolute;left: 0px;top: -67px;width: 420px;border: 1px solid #000;padding: 14px; color: #fff;background-color: #222; filter: alpha(opacity=80);opacity:0.8;-moz-opacity:0.2;line-height: 16px;}
+.view-icon{position: absolute; right: 0; bottom:-14px;/* width: 226px; */}
+.view-icon .comment-b{padding-left: 28px;height: 28px;display: inline-block;line-height: 28px;background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon-all.png) -10px -427px;color: #000;font-weight: 600;font-size: 15px;width: 52px;}
+.view-icon .sym{padding-left: 25px;height: 28px;display: inline-block;line-height: 28px;background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon-all.png) -10px -395px;color: #000;font-weight: 600;font-size: 15px;width: 52px;margin-left: 50px;}
+.more-a{text-align: center; line-height: 55px;margin-top: -1px;position: relative; font-size: 16px;}
+.more-a .down-icon{background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon-all.png) -8px -459px; padding: 0px 5px;    margin-left: 5px;}
+.more-a a{display: block;border:1px solid #ddd;}
+.more-a a:hover{ text-decoration: none;border:1px solid #cccccc; background-color: #f6f6f6;}
+
+.stitle_n{width:100%;*zoom:1;border-bottom:1px solid #262f3b;padding-bottom:10px; /*margin-bottom:15px*/}
+.stitle_n .t_sub.none{padding:3px 0 0 0; background: none; }
+
+.section-sns{ position:absolute;right: 0px;bottom: -1px;border:1px solid #e6e6e6;}
+.section-sns > ul > li{ float:left; width:42px; height:42px; border:1px solid #e6e6e6;margin: -1px;}
+.section-sns > ul > li > a{background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon-all.png);display: block;height: 100%;text-indent: -9999em;background-color: #fff;}
+.section-sns > ul > li > a.plus{ background-position: 4px -469px;}
+.section-sns > ul > li > a.plus:hover{ background-position: -87px -469px;background-color:#808080;}
+.section-sns > ul > li > a.minus{ background-position:-39px -469px;}
+.section-sns > ul > li > a.minus:hover{ background-position:-130px -469px;background-color:#808080;}
+.section-sns > ul > li > a.fb{ background-position: 6px -515px;}
+.section-sns > ul > li > a.fb:hover{ background-position: -117px -515px; background-color:#4a70b8;}
+.section-sns > ul > li > a.tw{ background-position: -37px -515px;}
+.section-sns > ul > li > a.tw:hover{ background-position: -159px -515px; background-color:#00aced;}
+.section-sns > ul > li > a.ka{ background-position: -79px -515px;}
+.section-sns > ul > li > a.ka:hover{ background-position: -202px -515px; background-color:#f8d000;}
+
+.f-box{margin:15px 0px 0px 0px;overflow: hidden;}
+.f-box .state-s{ float:left;margin-left: 5px; color:#a2a2a2; font-size:14px;}
+.f-box .state-s-on{ float:left;margin-left: 5px; color:#3d6e97; font-size:14px;}
+.f-box .bar{color:#e5e5e5;margin:0 5px 0 4px;font-size:12px;}
+.f-box .box-s{ float:right;}
+.f-box .box-s > a{display:inline-block;font-size: 15px;font-weight: 700;  line-height: 30px; color:#000;margin-left: 30px;}
+.f-box .box-s > a:hover{text-decoration:none; opacity:.7;}
+.f-box .box-s .sym-s_on{display: inline-block;width: 23px; height: 30px; background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon-all.png) -8px -396px no-repeat;text-indent: -9999em;margin:0px 3px 0px 0px;}
+.f-box .box-s .sym-s_off{display: inline-block;width: 23px;height: 30px;background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon-all.png) -120px -396px no-repeat;text-indent: -9999em;margin:0px 3px 0px 0px;}
+.f-box .box-s .comment-s{display: inline-block;width: 26px;height: 30px;background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon-all.png) -9px -429px no-repeat;text-indent: -9999em;margin:0px 3px 0px 0px;}
+
+.recommend-box{ width:100%;overflow: hidden; text-align:center;padding: 30px 0 30px;display:inline-block;margin:0 auto 0;}
+.recommend-box .like_con{text-align:center; font-size:14px; color:#838383; padding:10px 0;}
+
+.recommend-box .btn-like{height: 84px;display:inline-block;width: 84px;padding: 0px 6px;background-color:#a9a9a9; border-radius: 5px;}
+.recommend-box .btn-like:hover{ text-decoration:none; background-color:#db0000;}
+.recommend-box .btn-like .fin_on{background: url(http://ojsimg.ohmynews.com/images/star/2016/icon_thumb.svg) no-repeat;text-indent: -9999em;display: inline-block;color: black;width: 22px;margin-right: 4px; border-radius: 5px;}
+.btn-like .icon-area{padding: 25px 0px;color: #fff;font-weight:bold;font-size: 15px;line-height: 31px;}
+.btn-like .count-a{color: #fff;font-weight: 700;font-size: 15px;}
+
+.recommend-box .btn-like_on{height: 84px;display:inline-block;width: 84px;padding: 0px 6px;background-color:#db0000;border-radius: 5px;}
+.recommend-box .btn-like_on:hover{ text-decoration:none; background-color:#cb0202;}
+.recommend-box .btn-like_on .fin_on{background: url(http://ojsimg.ohmynews.com/images/star/2016/icon_thumb.svg) no-repeat;text-indent: -9999em;display: inline-block;color: black;width: 22px;margin-right: 4px;}
+.btn-like_on .icon-area{padding-top: 17px;color: #fff;font-weight:bold;font-size: 15px;line-height: 31px;}
+.btn-like_on .count-a{color: #fff;font-weight: 700;font-size: 15px;line-height: 15px;}
+
+.recommend-box .btn-like_off{ height:84px; display:inline-block;width: 84px;padding: 0px 6px; background-color:#a9a9a9;border-radius: 5px;}
+.recommend-box .btn-like_off:hover{ text-decoration:none; background-color:#db0000;}
+.recommend-box .btn-like_off .fin_on{background: url(http://ojsimg.ohmynews.com/images/star/2016/icon_thumb.svg) no-repeat;text-indent: -9999em;display: inline-block;color: black;width: 22px;margin-right: 4px;}
+.btn-like_off .icon-area{padding-top:17px;color: #fff;font-weight:bold;font-size: 15px;line-height: 31px;}
+.btn-like_off .count-a{color: #fff;font-weight: 700;font-size: 15px;line-height: 15px;}
+
+
+/*우측기사영역*/
+.w_news-box{display: inline-block;}
+.w_news-box .popular{ padding:10px; position: relative;background-color: #fff;border-bottom: 1px solid #e5e5e5;width: 299px;margin-bottom: 15px;}
+.w_news-box .popular .allow_l{position: absolute; top:50%; left:0; width: 32px; height: 62px;background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon-all.png) -2px -61px no-repeat;text-indent: -999999em;}
+.w_news-box .popular .allow_r{position: absolute; top:50%; right:0;width: 32px; height: 62px;background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon-all.png) -62px -61px no-repeat;text-indent: -999999em;}
+.w_news-box .popular > h4{color:#000; font-size:18px;padding:10px;}
+.w_news-box .popular > ul {padding:10px;}
+.w_news-box .popular > ul > li > span{ font-family: arial; font-size:1.2em;padding: 0px 15px 0 0;}
+.w_news-box .popular > ul > li > span.on{color:#db0000;}
+.w_news-box .popular > ul > li {padding: 10px 10px 10px 0px; font-size: 15px; letter-spacing: -1px; border-bottom: 1px dotted #cfcfcf;}
+.w_box-pagination{width: 100%;text-align: center;padding:10px 0 17px 0;}
+.w_box-pagination > span {padding:2px; color: #000;font-weight: 800;}
+.w_box-pagination > a{padding:2px; color: #b6b6b6;font-weight: 800;}
+.w_box-pagination > a:hover{text-decoration: none; color:#000;}
+.w_news-box .list{ font-size: 15px;  overflow: hidden; white-space: nowrap; text-overflow: ellipsis; display: inline-block;width: 230px;}
+.w_news-box .list-best{ font-size: 15px;display: inline-block;width: 188px;}
+.w_news-box .ibox{ float:right;}
+.w_news-box .ibox > span {background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon-all.png) no-repeat;padding: 2px 0px 2px 22px;width: 30px; height: 20px; display: inline-block;line-height: 16px; font-weight: 800;}
+.w_news-box .ibox .comment-a{background-position: -7px -8px;margin-left: 3px;color:#000;}
+.w_news-box .ibox .share-a{background-position: -7px -34px; margin-left: 4px; color:#000;}
+.w_news-box .ibox .sym-a{background-position: -9px -128px;/* margin-right: 5px; */color:#000;}
+.w_news-box .popular > ul > li.noline{border:none;}
+.w_news-box .best{ padding:10px; position: relative;background-color: #fff;border-bottom: 1px solid #e5e5e5;border-top: 1px solid #e5e5e5;width: 299px;margin-top: -1px;}
+.w_news-box .best .best-btn{float: right; position: relative;color: #919191;padding: 5px 20px 5px 15px;background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon-all.png) 94px -367px no-repeat;}
+.w_news-box .best .best-btn:hover{text-decoration: none; color: #000;}
+.w_news-box .best .best-btn .box-a{position: absolute;right: 0px;top: -62px; width: 320px;border: 1px solid #000;padding: 14px; background-color: #222; filter: alpha(opacity=80);opacity:0.8;-moz-opacity:0.2;color: #fff;line-height: 16px;}
+.w_news-box .best > h4{color:#000; font-size:18px;padding:10px; float:left;}
+.w_news-box .best > ul {padding:10px; clear: both;}
+.w_news-box .best > ul > li > span{ font-family: arial; font-size:1.2em; padding:0px 10px 0 0;vertical-align: top;}
+.w_news-box .best > ul > li > span.on{color:#db0000;vertical-align: top;}
+.w_news-box .best > ul > li {padding: 10px 10px 10px 0px; font-size: 15px; letter-spacing: -1px; border-bottom: 1px dotted #cfcfcf;}
+.w_news-box .best > ul > li.noline{border:none;}
+
+
+/*선거특별면*/
+.list_sp{width:100%;padding-top:15px}
+.list_sp li{width:100%;overflow:hidden;padding-bottom:30px}
+.list_sp .sns{float:left;width:150px;height:75px;background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/bg_sns.gif) 0 0 no-repeat;padding:5px 0 3px 0}
+.list_sp .sns p{margin:0 0 2px 5px}
+.list_sp .sns p span{font-size:11px;color:#000;font-family:arial;margin-left:7px}
+.list_sp .sns p img{vertical-align:middle;}
+.list_sp_1{padding-top:0}
+.list_sp li{padding-bottom:22px}
+
+.list-section{ margin-top:20px;}
+.news_sp{float:left;width:100%;overflow:hidden}
+.news_sp .thumb{float:left;width:120px;height:75px;margin-right:10px;position:relative;}
+.news_sp .thumb .line{width:118px;height:73px;border:1px solid #e6e6e6; position:absolute; left:0; top:0;}
+.news_sp .cont dt a{font-size:17px; letter-spacing:-0.1em; color:#073685;line-height:1.2em;font-weight:bold}
+.news_sp .cont dd{padding:5px 0 12px 0}
+.news_sp .cont dd a{line-height:1.2em}
+.news_sp .cont dd.url a{color:#999;padding:4px 0 3px 0}
+.news_sp .cont p.source a, .news_sp .cont p.source{font-size:11px;color:#999}
+.news_sp .cont p.source .bar1{color:#e4e5e6;margin:0 4px;font-size:12px}
+
+.nochoice{ margin: 10px 100px;font-size: 13px;line-height: 19px;border: 1px solid #e1e1e1;padding: 10px;background-color: #eee;}
+
+/*편집권개방_실시간글 상단 160418*/
+.atc-top{width:970px;height:280px;position: relative; margin-bottom: 50px;background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/top_realtime.png)}
+.atc-top .btn_write{width:172px;height:50px;position: absolute;left: 135px;top: 190px; background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon-all.png) -10px -630px no-repeat;text-indent:-9999em}
+.atc-top .btn_write:hover{text-decoration: none;background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon-all.png) -10px -680px no-repeat;}
+.atc-top a.use{ position: absolute;right: 0px;
+top: -20px;padding: 5px 0px 5px 15px; background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon-all.png) -10px -367px no-repeat; color: #919191;}
+.atc-top a.use:hover{ text-decoration: none; color: #000;}
+.atc-top p.notice{font-size: 1.3em; line-height: 1.3em; margin: 34px 0  10px 0; color:#000;}
+.atc-top p.refer{ width:430px;position: absolute;left: 320px;top: 195px; padding:5px 0 0 44px;background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon-all.png) -10px -728px no-repeat; color: #68656a;}
+.atc-top .refer_red {color:#dd0f0f}
+
+
+/*블로그뉴스 리스트 추천버튼 160426*/
+.recommend-box-blog{overflow: hidden;text-align:center;padding: 0px;float:right;}
+.recommend-box-blog .like_con{text-align:center; font-size:14px; color:#838383; padding:10px 0;}
+
+.recommend-box-blog .btn-like{display:inline-block;width: 84px;padding: 0px 6px;background-color:#c9c9c9;border-radius:5px;}
+.recommend-box-blog .btn-like:hover{ text-decoration:none; }
+.recommend-box-blog .btn-like .fin_on{background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon-all.png) -234px -396px no-repeat;text-indent: -9999em;display: inline-block;color: black;width: 22px;margin-right: 4px;}
+.recommend-box-blog .btn-like .icon-area{padding:19px 0px;color: #fff;font-weight:bold;font-size: 15px;line-height: 31px;}
+.recommend-box-blog .btn-like .count-a{color: #fff;font-weight: 700;font-size: 15px;}
+
+.recommend-box-blog .btn-like_on{height: 70px;display:inline-block;width: 84px;padding: 0px 6px;background-color:#db0000;border-radius:5px;}
+.recommend-box-blog .btn-like_on:hover{ text-decoration:none;}
+.recommend-box-blog .btn-like_on .fin_on{background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon-all.png) -234px -396px no-repeat;text-indent: -9999em;display: inline-block;color: black;width: 22px;margin-right: 4px;}
+.recommend-box-blog .btn-like_on .icon-area{padding-top: 10px;color: #fff;font-weight:bold;font-size: 15px;line-height: 31px;}
+.recommend-box-blog .btn-like_on .count-a{color: #fff;font-weight: 700;font-size: 13px;line-height: 15px;}
+
+.recommend-box-blog .btn-like_off{ height: 70px; display:inline-block;width: 84px;padding: 0px 6px; background-color:#c9c9c9;border-radius:5px;}
+.recommend-box-blog .btn-like_off:hover{ text-decoration:none; }
+.recommend-box-blog .btn-like_off .fin_on{background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon-all.png) -234px -396px no-repeat;text-indent: -9999em;display: inline-block;color: black;width: 22px;margin-right: 4px;}
+.recommend-box-blog .btn-like_off .icon-area{padding-top:10px;color: #fff;font-weight:bold;font-size: 15px;line-height: 31px;}
+.recommend-box-blog .btn-like_off .count-a{color: #fff;font-weight: 700;font-size: 13px;line-height: 15px;}
+
+
+/*좋은기사 원고료 주기버튼 상단 160504*/
+.atc_group{height: 30px; margin-top:20px;}
+.atc_group .btn_money {float:left; font-size:13px; font-weight:bold; border: 1px solid #c8c8c8; line-height:20px; background:url(http://ojsimg.ohmynews.com/images/mobile_2013/news/icon_money.png) 6px -58px no-repeat; background-size:80px; letter-spacing:-1px; margin-left:5px;}
+.atc_group .btn_money a{padding:6px 10px 5px 25px; display: block; color:#000; text-decoration:none; }
+.atc_group .btn_money a:hover{opacity:.7;}
+
+
+/*좋은기사 원고료 주기버튼 하단 160517*/ 
+.goodfee{margin: 0 auto;height: 84px; display:inline-block;vertical-align: middle;text-align: center;}
+.goodfee .payment_box {background-color: #fff;border: 1px solid #e6e6e6;margin-left:15px;}
+.goodfee .payment_box .payment {margin:4px 10px 4px 10px; ;color: #666;}
+.goodfee .payment_box .payment .cnt_txt {font-size:16px;font-weight:600;vertical-align: text-middle;display: inline-block;vertical-align:middle;padding-right:5px}
+.goodfee .payment_box .payment .person {font-weight:600;font-size: 16px; color: #666;;font-family:arial;letter-spacing:-1px; vertical-align:middle;}
+.goodfee .payment_box .payment .money {font-weight:600;font-size: 26px; color:#f18c0d; font-family:arial;letter-spacing:-1px; vertical-align:middle;padding-left:5px}
+.goodfee .payment_box .payment .cnt:hover {text-decoration: underline;}
+.goodfee .payment_box .payment .ico{display: inline-block;background:url(http://ojsimg.ohmynews.com/images/mobile_2013/news/icon_money.png) 6px -58px no-repeat; background-size:80px; text-indent: -9999em;width: 22px;padding:2px 0 0 0}
+.goodfee .payment_box .payment .btn-fee{width: 190px;height: 43px;display: inline-block;background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon-all.png) -5px -830px no-repeat;text-indent: -9999em;vertical-align:middle;}
+.goodfee .payment_box .payment .btn-fee:hover {opacity: 0.85;}
+.goodfee .payment_box .payment .btn-fee-big{width: 238px;height: 47px;display: inline-block;background: url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon-all.png) -5px -890px no-repeat;text-indent: -9999em;vertical-align:middle;}
+.goodfee .payment_box .payment .btn-fee-big:hover {opacity: 0.85;}
+
+.goodfee .payment_box .message {background-color: #fff;border-bottom:1px solid #e6e6e6;margin:0;}
+.goodfee .payment_box .message .ico_w{display: inline-block;background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon-all.png) -10px -962px no-repeat; text-indent: -9999em;width: 22px;padding:2px 0 0 0}
+.goodfee .payment_box .message .ico_a{display: inline-block;background:url(http://ojsimg.ohmynews.com/images/ohmynews/common/icon-all.png) -5px -934px no-repeat; text-indent: -9999em;width: 12px;padding:2px 0 0 0}
+.goodfee .payment_box .message .txt { font-weight:600;font-size: 12px;}
+.goodfee .payment_box .message .view {font-size: 9px;color: #4d4d4d; padding-left:5px}
+.goodfee .payment_box .message .view:hover {text-decoration: underline;}
+.goodfee .payment_box .message_none {height: 22px;background-color: #fff; margin-top:5px}
+.goodfee .payment_box .message_none .txt { font-weight:600;font-size: 12px;}
+
+
+
+/*연재면 카드뉴스로 교체*/
+.list_type_pic_card{width:961px;overflow:hidden;margin:15px 0 0 4px;border-top:1px solid #ddd}
+.list_type_pic_card li{float:left;border:1px solid #ddd;border-left:none;border-top:none;width:319px;height:378px}
+.list_type_pic_card li.first{border-left:1px solid #ddd}
+.list_type_pic_card li:hover, .menuOver{background:#f3f3f4}
+.list_type_pic_card li{
+ behavior: expression(
+  this.onmouseover = new Function("this.className += ' menuOver';"),
+  this.onmouseout = new Function("this.className = this.className.replace(' menuOver', '');"),
+  this.style.behavior = null
+ ); 
+}
+
+.list_type_pic_card dl{width:300px;margin:0 auto;padding-top:9px;height:370px;clear:both}
+.list_type_pic_card dd.img_line{padding-bottom:10px; position:relative;}
+.list_type_pic_card dd.img_line .line{width:298px;height:298px; border:solid 1px #e6e6e6; position:absolute;left:0;top:0;}
+.list_type_pic_card dt em.is_tit{font-weight:bold;color:#10141d}
+.list_type_pic_card dt em.is_tit img{vertical-align:middle;margin:0 4px 3px 0;}
+.list_type_pic_card dt strong{display:block;color:#0d54ab;padding-top:2px;letter-spacing:-1px;font-size:18px}
+.list_type_pic_card dt a{text-decoration:none !important}
+
+/*실시간기사 공지문*/
+.notice-list{position: absolute;bottom: -20px;left: 5px;}
+.notice-list .hed{color: #fff;font-weight: 600;margin-right: 5px;background-color: #db0000;padding: 3px 5px;border-radius: 10px 10px;}
+
+
+/*언컷뉴스 리스트*/
+.uncut_title{width: 100%;border-bottom: 2px solid #262f3b; padding-bottom: 10px; font-size:20px; color:#000; font-weight:600;}
+.uncut-wrap{margin: 0 auto; width: 100%;}
+.uncut-wrap .uncut-list{margin: 0 auto;margin-top: 40px;width: 800px;}
+.uncut-wrap .uncut-list ul li{display: block;margin: 0 7px 20px 7px;}
+.uncut-wrap .uncut-list .basic-box{padding-bottom: 20px; border-bottom: 1px solid #e4e4e4;}
+.uncut-wrap .uncut-list .basic-box .thum{float: left;display: inline-block; width: 300px;height: 160px;border: 1px solid #e4e4e4;margin-right:25px; overflow: hidden;text-align: center;}
+.uncut-wrap .uncut-list .basic-box .thum img{object-fit: cover;object-position: center top;width: 300px;height: 160px;}
+.uncut-wrap .uncut-list .basic-box .atc-text{margin-top: 8px;display: inline-block;width: 450px;height:160px;}
+.uncut-wrap .uncut-list .basic-box .atc-text.nothum{margin-top: 8px; display: inline-block;width: 100%;height: 120px;}
+.uncut-wrap .uncut-list .basic-box .atc-text .tit{ margin-bottom: 5px;overflow: hidden;}
+.uncut-wrap .uncut-list .basic-box .atc-text .tit a{font-size: 18px;font-weight:600; color: #000;line-height: 1.4em;}
+.uncut-wrap .uncut-list .basic-box .atc-text .tit a:hover{text-decoration: underline;}
+.uncut-wrap .uncut-list .basic-box .atc-text .sub-tit{  max-height: 70px;margin-bottom: 15px;overflow: hidden;text-overflow: ellipsis;    }
+.uncut-wrap .uncut-list .basic-box .atc-text .sub-tit a{font-size: 13px;color: #78818e;line-height: 1.4em;   }
+.uncut-wrap .uncut-list .basic-box .atc-text .sub-tit a:hover{ text-decoration: underline;}
+.uncut-wrap .uncut-list .basic-box .atc-text .info{font-size: 11px;color: #A3A3A3;line-height: 1.5em;font-weight: normal;}
+.uncut-wrap .uncut-list .basic-box .atc-text .info a{font-size: 11px;color: #A3A3A3;line-height: 1.5em;font-weight: normal;}
+.uncut-wrap .spon-list{margin: 0 auto;margin-top: 20px;margin-bottom:-30px; width: 100%;}
+.uncut-wrap .spon-list ul{    text-align: center;}.uncut-wrap .spon-list ul li{ display:inline-block; width:150px; height:50px; padding:9px; margin:10px 8px; background:#fff; overflow:hidden;text-align: center; }
+.uncut-wrap .spon-list ul li img{object-fit: cover; object-position: center center;  width:100%; height:100%;}
+
+/*리포트배너영역_펀딩*/
+.report-banner{overflow: hidden;}
+.report-banner .rbox{ display:block;}
+.report-banner .rbox:hover{text-decoration:none;}
+.report-banner .rbox .banner-box{/*background-color:#fb673d;*/}
+.report-banner .rbox .banner-img{margin:0 auto;text-align: center;}
+.report-banner .pund{border-top: 1px solid #c7cbce;padding: 0px 20px;position:relative;letter-spacing: -0.5px;height:60px;background-color: #fff;}
+.report-banner .pund .man{margin: 5px 0px 5px 0px;text-align: center;font-size:11px;  font-weight: 400;position: relative;}
+.report-banner .pund .man .goal{ font-size:11px; font-weight:normal;position: absolute;right: 0px;}
+.report-banner .pund .bar_progress{display:block;overflow:hidden;position:relative;height:5px;border-radius:4px;background-color:#e2e2e2;}
+.report-banner .pund .bar_support{position:absolute;top:0;left:0;border-radius:2px;background: #ffeb3b; /* Old browsers */background: -moz-linear-gradient(left, #ffc107 0%, #22ffcc 100%); /* FF3.6-15 */background: -webkit-linear-gradient(left, #ffc107 0%,#22ffcc 100%); /* Chrome10-25,Safari5.1-6 */background: linear-gradient(to right, #ffc107 0%,#22ffcc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffc107', endColorstr='#22ffcc',GradientType=1 ); /* IE6-9 */float: left;height: 100%;width: 100%;}
+.report-banner .pund .wonbox{margin: 5px 0px 5px 0px;text-align: center;position:relative;}
+.report-banner .pund .wonbox .per{position: absolute;left: 0px; top:0px;font-size:11px;}
+.report-banner .pund .wonbox .won{font-size:11px;}
+.report-banner .pund .wonbox .won .swon{font-size:18px; font-weight:700; letter-spacing:-1.8px;padding-right: 3px;}
+.report-banner .pund .wonbox .day00{ position: absolute;right: 0px; top:0px; font-size:11px;}
+.report-banner .pund .btn-box{background-color: #ff7625; padding:8px 6px; color:#fff;font-size: 14px;font-weight: 700;border-radius:50px; text-align:center;width: 200px;margin: 5px auto 0px auto;}
+
+.special_banner{margin: 30px 0;text-align: center;}
+.special_banner .sp-box{display: inline-block;text-align: center;}
+
+
+/*2018평창 기사 내 특별면 바로가기 배너 추가*/
+.news_body > .news_view > .banner-link{display: block;width: 600px;}
+.news_body > .news_view > .banner-link > img{max-width: 100%}

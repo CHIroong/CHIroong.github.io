@@ -1,0 +1,18 @@
+document.write("<div id='taboola-below-article-thumbnails-top' style='padding:0 0 0 60px'></div>") ;
+window._taboola = window._taboola || [];
+_taboola.push({
+	mode: 'alternating-thumbnails-a',
+	container: 'taboola-below-article-thumbnails-top',
+	placement: 'Below Article Thumbnails Top',
+	target_type: 'mix'
+});
+document.write("<div id='taboola-below-article-thumbnails-organics' style='padding:0 0 30px 60px'></div>") ;
+window._taboola = window._taboola || [];
+_taboola.push({
+	mode: 'organic-thumbnails-a',
+	container: 'taboola-below-article-thumbnails-organics',
+	placement: 'Below Article Thumbnails Organics',
+	target_type: 'mix'
+});
+window._taboola = window._taboola || [];
+_taboola.push({flush: true});

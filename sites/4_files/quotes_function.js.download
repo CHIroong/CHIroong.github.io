@@ -1,0 +1,30 @@
+// Highlight for gray system buttons
+function overButton(s) {
+    try {
+        if ("INPUT"==event.srcElement.tagName)
+        {
+            event.srcElement.className=s;
+        } 
+    } catch(exc) {
+        ;
+    }
+}
+
+function itemOver(obj){
+    obj.style.color = "blue";
+    obj.style.textDecoration = "underline"
+}
+
+function itemOut(obj){
+    obj.style.color = "black";
+    obj.style.textDecoration = "none"
+}
+
+function modalpop(url){
+    window.showModelessDialog(url,'','dialogHeight:330px;dialogWidth:478px;dialogtop=0;dialogleft='+(screen.width-470));
+}
+
+function label_Clk(label){
+    label.focus();
+    label.checked = true; 	
+}

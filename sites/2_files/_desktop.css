@@ -1,0 +1,20 @@
+@CHARSET "UTF-8";
+/*
+@media (max-width: 970px){
+	body{
+		overflow: inherit;
+	}
+}
+.visible-desktop{
+	display : block !important;
+}
+.visible-phone{
+	display : none !important;
+}
+*/
+.btn_mobile_view{
+	display : none !important;
+}
+.btn_desktop_view{
+	display : none !important;
+}

@@ -1,0 +1,40 @@
+//document.write("		<div id=\"favbar\">	 ");
+//document.write(" <IFRAME WIDTH=\"728\" height=\"90\" NORESIZE SCROLLING=\"No\" FRAMEBORDER=\"0\" MARGINHEIGHT=\"0\" MARGINWIDTH=\"0\" src=\"http://cad.chosun.com/RealMedia/ads/adstream_sx.ads/health.chosun.com/mainTop@x01\"></IFRAME> "); 
+//document.write("		</div > ");
+
+/*
+//구글
+if(ver_num != "NaN" && ver_num <9)
+{}
+else
+{
+
+	  googletag.cmd.push(function() {
+		googletag.defineSlot('/169272497/pc_article_top', [728, 90], 'div-gpt-ad-1455497687469-0').addService(googletag.pubads());
+		googletag.pubads().enableSingleRequest();
+		googletag.enableServices();
+	  });
+
+		if (thisCode != "19F" && thisCode != "123"   && thisCode != "11IK")
+		{
+			document.write(" <div style='width:1200px;margin:0 auto;text-align:center;'><div id='div-gpt-ad-1455497687469-0' style='height:90px; width:728px;margin:0 auto;'> ");
+
+			googletag.cmd.push(function() { googletag.display('div-gpt-ad-1455497687469-0'); });
+
+			document.write("</div></div> ");
+		}
+}
+*/
+
+
+//리얼클릭
+//document.write(" <div style='height:90px; width:728px;margin:0 auto;'  id=\"realssp_healthchosun00001_18243\" class=\"realssp_dv\" data-mcode=\"aGVhbHRoY2hvc3VuMDAwMDFfMTgyNDM=\" title=\"리얼클릭 배너광고\"></div> 	 ");
+//document.write(" <script src=\"//ssp.realclick.co.kr/realclickssp.js?v=1.0&m=healthchosun00001_18243&t=j\" async></script> 	 ");
+
+document.write("<SCRIPT language=JavaScript src=\"http://health.chosun.com/js/2018/top_chosun.js\"></SCRIPT>");
+    //chosun.com simple gnb var 2018.08.20 조선닷컴 패밀리 링크 추가
+document.write(" <div style='height:90px; width:728px;margin:0 auto;'>	 ");
+//document.write(" <IFRAME WIDTH=\"728\" height=\"90\" NORESIZE SCROLLING=\"No\" FRAMEBORDER=\"0\" MARGINHEIGHT=\"0\" MARGINWIDTH=\"0\" src=\"http://cad.chosun.com/RealMedia/ads/adstream_sx.ads/health.chosun.com/top@x01\"></IFRAME> "); 
+//document.write("	<script src='http://cad.chosun.com/RealMedia/ads/adstream_jx.ads/health.chosun.com/top@x01'></script> 		");							
+document.write("			<script language=\"JavaScript\" src=\"http://health.chosun.com/js/2018/top_rolling.js\"></script>			");
+document.write(" </div> ");

@@ -1,0 +1,9 @@
+document.write("<script> ");
+    //chosun.com simple gnb var 2018.08.20 조선닷컴 패밀리 링크 추가
+document.write("    var csmgsgnbWidth = '1196',");
+document.write("        csmgsgnbLogin = 'Y', ");
+document.write("        csmgsgnbSearch = 'Y' ; ");
+document.write("</script> ");
+document.write("<script src=\"http://health.chosun.com/js/2018/csmgs_simple_gnb.js\" charset=\"utf-8\"></script> ");
+/* <!-- http 사이트라면 위 주소를 그대로 사용해도 무방 -->*/
+/* <!-- https 사이트인 경우 위 js를 해당 사이트 서버로 복사해 쓰세요 -->*/

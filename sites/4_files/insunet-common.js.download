@@ -1,0 +1,864 @@
+﻿(function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+    m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+ga('create', 'UA-1716278-2', 'auto');
+ga('send', 'pageview');
+
+//url 파라메터 Jquery로 가져오기
+$.urlParam = function (name) {
+	name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+	var regexS = "[\\?&]" + name + "=([^&#]*)";
+	var regex = new RegExp(regexS);
+	var results = regex.exec(window.location.search);
+	if (results == null){
+		return "";
+    }else{
+		try{
+        var returnData = decodeURIComponent(results[1].replace(/\+/g, " "));
+		}catch(e){
+			var returnData = results[1].replace(/\+/g, " ");
+		}
+		return returnData;
+	}
+};
+
+(function () {		
+	setcookies();
+})();
+
+//쿠키입력
+function setcookies() {
+	if ($.urlParam("visit_sn") != "") {
+		jQuery.ajax({
+			type: "POST",
+			url: "/library/ajax/setCookie.asp",
+			data: "visit_sn=" + $.urlParam("visit_sn")
+		});
+	}
+};
+
+function isValidEmailAddress(emailAddress) {
+	var pattern = new RegExp(/^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$/i);
+	return pattern.test(emailAddress);
+}
+function isValidPhoneNumber(phoneNumber) {
+	var pattern = new RegExp(/(01[016789])(\d{4}|\d{3})\d{4}$/g);
+	return pattern.test(phoneNumber);
+}
+
+//스크린 사이즈 체크
+function screenCheck() {
+	if ($(window).width() < 600) {
+		return "m";
+	} else {
+		return "t";
+	}
+}
+
+function signOut() {
+	$.removeCookie('mloginHSN', { domain: '.insunet.co.kr', path: '/' });
+	$.removeCookie('mloginId', { domain: '.insunet.co.kr', path: '/' });
+	$.removeCookie('mloginName', { domain: '.insunet.co.kr', path: '/' });
+	$.removeCookie('mlogin', { domain: '.insunet.co.kr', path: '/' });
+	window.location.href = "/index.html"; 
+	/*
+	$.ajax({
+		type: "POST",
+		url: "/data/signOut.asp",
+		success: function (data, textStatus, jqXHR) {
+			window.location.href = "/index.html";                        
+		}
+	});	
+	*/
+}
+
+// 로그인 여부
+function checkSignIn() {
+	if ($.cookie('mloginHSN') == undefined || $.cookie('mloginHSN') == "" || $.cookie('mloginId') == undefined || $.cookie('mloginId') == "") {
+		return false;
+	} else {
+		return true;
+	};
+};
+
+//인슈넷 문서 불러오기
+function docsJohweLoad(docsSN, docsID) {
+	$.getJSON("/data/docs/docs.asp?sn=" + docsSN, function (jdata) {
+		$("#" + docsID).html(jdata['naeyong']);
+	})
+}
+
+var mailDns = [
+			"daum.net",
+			"gmail.com",
+			"hanmail.net",
+			"hotmail.com",
+			"msn.co.kr",
+			"naver.com",
+			"nate.com"
+];
+
+function signInVerify() {    
+	var loginData = "m_id=" + $("#form-login-id").val() + "&m_ps=" + $("#form-login-ps").val();
+	$.getJSON("/data/loginApp.asp?" + loginData, function (jdata) {        
+		if (jdata.sn == 0) {
+			$("#form-login-result").html("아이디 또는 비밀번호가 일치하지 않습니다.").show();
+			$("#form-login-submit").addClass('disabled');
+		} else {
+			$.cookie('mloginHSN', jdata.sn);
+			$.cookie('mloginId', jdata.id);
+			$.cookie('mloginName', jdata.name);
+
+			if (location.search !== "") {
+				var tmpUrl = location.search.replace('?', '').split('&')[1].replace("referer=", "");
+				if (tmpUrl.indexOf("/m/signIn.asp") > 0) {
+					window.location.replace("/index.html");
+				} else {
+					var refererUrl = $.urlParam("referer");
+					window.location.href = refererUrl;
+				}
+			}
+			else {
+				window.location.replace("/index.html");
+			}
+		}
+	})
+}
+
+//유효성
+function isValidEmailAddress(emailAddress) {
+	var pattern = new RegExp(/^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$/i);
+	return pattern.test(emailAddress);
+}
+function isValidPhoneNumber(phoneNumber) {
+	var pattern = new RegExp(/(01[016789])(\d{4}|\d{3})\d{4}$/g);
+	return pattern.test(phoneNumber);
+}
+
+function goHome() {
+	location.href = "/index.html";
+}
+
+/**
+* 작성일 : 2004.03.27
+* 년도검사를 한다.
+* 1841~2043년 까지만 검사가 가능하다.
+* 년도가 검사 범위를 벗어나면 경고창 후 멈춘다.
+*
+* @param int
+* @return int
+*/
+function get_year(src) {
+	if ((src < 1841) || (src > 2043)) {
+		//jqmAlert('연도 범위는 1841 ~ 2043 까지입니다.');
+		return;
+	} else {
+		return src;
+	}
+}
+/**
+ * 달이 12보다 크거나 1보다 작은지 검사한다.
+ * 날짜가 잘못된 경우에는 경고창 후 멈춘다.
+ *
+ * @param int
+ * @return int
+ */
+function get_month(src) {
+	if ((src < 1) || (src > 12)) {
+		//jqmAlert('월 범위는 1 ~ 12 까지입니다.');
+		return;
+	} else {
+		return src;
+	}
+}
+
+/**
+ * 날짜가 1일보다 크고 src보다 작은 경우는 날짜를 반환한다.
+ * 날짜가 잘못된 경우에는 경고창 후 멈춘다.
+ *
+ * @param int
+ * @param int
+ * @return int
+ */
+function get_day(src, day) {
+	if ((src < 1) || (src > day)) {
+		jqmAlert('일 범위가 틀립니다.');
+		return;
+	} else {
+		return src;
+	}
+}
+
+/**
+ * 음력을 양력으로 바꾸어서 반환한다.
+ *
+ * @param string
+ * return string
+ */
+function lunerCalenderToSolarCalenger(input_day) {
+	var kk = [[1, 2, 4, 1, 1, 2, 1, 2, 1, 2, 2, 1],   /* 1841 */
+		[2, 2, 1, 2, 1, 1, 2, 1, 2, 1, 2, 1],
+		[2, 2, 2, 1, 2, 1, 4, 1, 2, 1, 2, 1],
+		[2, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2],
+		[1, 2, 1, 2, 2, 1, 2, 1, 2, 1, 2, 1],
+		[2, 1, 2, 1, 5, 2, 1, 2, 2, 1, 2, 1],
+		[2, 1, 1, 2, 1, 2, 1, 2, 2, 2, 1, 2],
+		[1, 2, 1, 1, 2, 1, 2, 1, 2, 2, 2, 1],
+		[2, 1, 2, 3, 2, 1, 2, 1, 2, 1, 2, 2],
+		[2, 1, 2, 1, 1, 2, 1, 1, 2, 2, 1, 2],
+		[2, 2, 1, 2, 1, 1, 2, 1, 2, 1, 5, 2],   /* 1851 */
+		[2, 1, 2, 2, 1, 1, 2, 1, 2, 1, 1, 2],
+		[2, 1, 2, 2, 1, 2, 1, 2, 1, 2, 1, 2],
+		[1, 2, 1, 2, 1, 2, 5, 2, 1, 2, 1, 2],
+		[1, 1, 2, 1, 2, 2, 1, 2, 2, 1, 2, 1],
+		[2, 1, 1, 2, 1, 2, 1, 2, 2, 2, 1, 2],
+		[1, 2, 1, 1, 5, 2, 1, 2, 1, 2, 2, 2],
+		[1, 2, 1, 1, 2, 1, 1, 2, 2, 1, 2, 2],
+		[2, 1, 2, 1, 1, 2, 1, 1, 2, 1, 2, 2],
+		[2, 1, 6, 1, 1, 2, 1, 1, 2, 1, 2, 2],
+		[1, 2, 2, 1, 2, 1, 2, 1, 2, 1, 1, 2],   /* 1861 */
+		[2, 1, 2, 1, 2, 2, 1, 2, 2, 3, 1, 2],
+		[1, 2, 2, 1, 2, 1, 2, 2, 1, 2, 1, 2],
+		[1, 1, 2, 1, 2, 1, 2, 2, 1, 2, 2, 1],
+		[2, 1, 1, 2, 4, 1, 2, 2, 1, 2, 2, 1],
+		[2, 1, 1, 2, 1, 1, 2, 2, 1, 2, 2, 2],
+		[1, 2, 1, 1, 2, 1, 1, 2, 1, 2, 2, 2],
+		[1, 2, 2, 3, 2, 1, 1, 2, 1, 2, 2, 1],
+		[2, 2, 2, 1, 1, 2, 1, 1, 2, 1, 2, 1],
+		[2, 2, 2, 1, 2, 1, 2, 1, 1, 5, 2, 1],
+		[2, 2, 1, 2, 2, 1, 2, 1, 2, 1, 1, 2],   /* 1871 */
+		[1, 2, 1, 2, 2, 1, 2, 1, 2, 2, 1, 2],
+		[1, 1, 2, 1, 2, 4, 2, 1, 2, 2, 1, 2],
+		[1, 1, 2, 1, 2, 1, 2, 1, 2, 2, 2, 1],
+		[2, 1, 1, 2, 1, 1, 2, 1, 2, 2, 2, 1],
+		[2, 2, 1, 1, 5, 1, 2, 1, 2, 2, 1, 2],
+		[2, 2, 1, 1, 2, 1, 1, 2, 1, 2, 1, 2],
+		[2, 2, 1, 2, 1, 2, 1, 1, 2, 1, 2, 1],
+		[2, 2, 4, 2, 1, 2, 1, 1, 2, 1, 2, 1],
+		[2, 1, 2, 2, 1, 2, 2, 1, 2, 1, 1, 2],
+		[1, 2, 1, 2, 1, 2, 5, 2, 2, 1, 2, 1],   /* 1881 */
+		[1, 2, 1, 2, 1, 2, 1, 2, 2, 1, 2, 2],
+		[1, 1, 2, 1, 1, 2, 1, 2, 2, 2, 1, 2],
+		[2, 1, 1, 2, 3, 2, 1, 2, 2, 1, 2, 2],
+		[2, 1, 1, 2, 1, 1, 2, 1, 2, 1, 2, 2],
+		[2, 1, 2, 1, 2, 1, 1, 2, 1, 2, 1, 2],
+		[2, 2, 1, 5, 2, 1, 1, 2, 1, 2, 1, 2],
+		[2, 1, 2, 2, 1, 2, 1, 1, 2, 1, 2, 1],
+		[2, 1, 2, 2, 1, 2, 1, 2, 1, 2, 1, 2],
+		[1, 5, 2, 1, 2, 2, 1, 2, 1, 2, 1, 2],
+		[1, 2, 1, 2, 1, 2, 1, 2, 2, 1, 2, 2],   /* 1891 */
+		[1, 1, 2, 1, 1, 5, 2, 2, 1, 2, 2, 2],
+		[1, 1, 2, 1, 1, 2, 1, 2, 1, 2, 2, 2],
+		[1, 2, 1, 2, 1, 1, 2, 1, 2, 1, 2, 2],
+		[2, 1, 2, 1, 5, 1, 2, 1, 2, 1, 2, 1],
+		[2, 2, 2, 1, 2, 1, 1, 2, 1, 2, 1, 2],
+		[1, 2, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1],
+		[2, 1, 5, 2, 2, 1, 2, 1, 2, 1, 2, 1],
+		[2, 1, 2, 1, 2, 1, 2, 2, 1, 2, 1, 2],
+		[1, 2, 1, 1, 2, 1, 2, 5, 2, 2, 1, 2],
+		[1, 2, 1, 1, 2, 1, 2, 1, 2, 2, 2, 1],   /* 1901 */
+		[2, 1, 2, 1, 1, 2, 1, 2, 1, 2, 2, 2],
+		[1, 2, 1, 2, 3, 2, 1, 1, 2, 2, 1, 2],
+		[2, 2, 1, 2, 1, 1, 2, 1, 1, 2, 2, 1],
+		[2, 2, 1, 2, 2, 1, 1, 2, 1, 2, 1, 2],
+		[1, 2, 2, 4, 1, 2, 1, 2, 1, 2, 1, 2],
+		[1, 2, 1, 2, 1, 2, 2, 1, 2, 1, 2, 1],
+		[2, 1, 1, 2, 2, 1, 2, 1, 2, 2, 1, 2],
+		[1, 5, 1, 2, 1, 2, 1, 2, 2, 2, 1, 2],
+		[1, 2, 1, 1, 2, 1, 2, 1, 2, 2, 2, 1],
+		[2, 1, 2, 1, 1, 5, 1, 2, 2, 1, 2, 2],   /* 1911 */
+		[2, 1, 2, 1, 1, 2, 1, 1, 2, 2, 1, 2],
+		[2, 2, 1, 2, 1, 1, 2, 1, 1, 2, 1, 2],
+		[2, 2, 1, 2, 5, 1, 2, 1, 2, 1, 1, 2],
+		[2, 1, 2, 2, 1, 2, 1, 2, 1, 2, 1, 2],
+		[1, 2, 1, 2, 1, 2, 2, 1, 2, 1, 2, 1],
+		[2, 3, 2, 1, 2, 2, 1, 2, 2, 1, 2, 1],
+		[2, 1, 1, 2, 1, 2, 1, 2, 2, 2, 1, 2],
+		[1, 2, 1, 1, 2, 1, 5, 2, 2, 1, 2, 2],
+		[1, 2, 1, 1, 2, 1, 1, 2, 2, 1, 2, 2],
+		[2, 1, 2, 1, 1, 2, 1, 1, 2, 1, 2, 2],   /* 1921 */
+		[2, 1, 2, 2, 3, 2, 1, 1, 2, 1, 2, 2],
+		[1, 2, 2, 1, 2, 1, 2, 1, 2, 1, 1, 2],
+		[2, 1, 2, 1, 2, 2, 1, 2, 1, 2, 1, 1],
+		[2, 1, 2, 5, 2, 1, 2, 2, 1, 2, 1, 2],
+		[1, 1, 2, 1, 2, 1, 2, 2, 1, 2, 2, 1],
+		[2, 1, 1, 2, 1, 2, 1, 2, 2, 1, 2, 2],
+		[1, 5, 1, 2, 1, 1, 2, 2, 1, 2, 2, 2],
+		[1, 2, 1, 1, 2, 1, 1, 2, 1, 2, 2, 2],
+		[1, 2, 2, 1, 1, 5, 1, 2, 1, 2, 2, 1],
+		[2, 2, 2, 1, 1, 2, 1, 1, 2, 1, 2, 1],   /* 1931 */
+		[2, 2, 2, 1, 2, 1, 2, 1, 1, 2, 1, 2],
+		[1, 2, 2, 1, 6, 1, 2, 1, 2, 1, 1, 2],
+		[1, 2, 1, 2, 2, 1, 2, 2, 1, 2, 1, 2],
+		[1, 1, 2, 1, 2, 1, 2, 2, 1, 2, 2, 1],
+		[2, 1, 4, 1, 2, 1, 2, 1, 2, 2, 2, 1],
+		[2, 1, 1, 2, 1, 1, 2, 1, 2, 2, 2, 1],
+		[2, 2, 1, 1, 2, 1, 4, 1, 2, 2, 1, 2],
+		[2, 2, 1, 1, 2, 1, 1, 2, 1, 2, 1, 2],
+		[2, 2, 1, 2, 1, 2, 1, 1, 2, 1, 2, 1],
+		[2, 2, 1, 2, 2, 4, 1, 1, 2, 1, 2, 1],   /* 1941 */
+		[2, 1, 2, 2, 1, 2, 2, 1, 2, 1, 1, 2],
+		[1, 2, 1, 2, 1, 2, 2, 1, 2, 2, 1, 2],
+		[1, 1, 2, 4, 1, 2, 1, 2, 2, 1, 2, 2],
+		[1, 1, 2, 1, 1, 2, 1, 2, 2, 2, 1, 2],
+		[2, 1, 1, 2, 1, 1, 2, 1, 2, 2, 1, 2],
+		[2, 5, 1, 2, 1, 1, 2, 1, 2, 1, 2, 2],
+		[2, 1, 2, 1, 2, 1, 1, 2, 1, 2, 1, 2],
+		[2, 2, 1, 2, 1, 2, 3, 2, 1, 2, 1, 2],
+		[2, 1, 2, 2, 1, 2, 1, 1, 2, 1, 2, 1],
+		[2, 1, 2, 2, 1, 2, 1, 2, 1, 2, 1, 2],   /* 1951 */
+		[1, 2, 1, 2, 4, 2, 1, 2, 1, 2, 1, 2],
+		[1, 2, 1, 1, 2, 2, 1, 2, 2, 1, 2, 2],
+		[1, 1, 2, 1, 1, 2, 1, 2, 2, 1, 2, 2],
+		[2, 1, 4, 1, 1, 2, 1, 2, 1, 2, 2, 2],
+		[1, 2, 1, 2, 1, 1, 2, 1, 2, 1, 2, 2],
+		[2, 1, 2, 1, 2, 1, 1, 5, 2, 1, 2, 2],
+		[1, 2, 2, 1, 2, 1, 1, 2, 1, 2, 1, 2],
+		[1, 2, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1],
+		[2, 1, 2, 1, 2, 5, 2, 1, 2, 1, 2, 1],
+		[2, 1, 2, 1, 2, 1, 2, 2, 1, 2, 1, 2],   /* 1961 */
+		[1, 2, 1, 1, 2, 1, 2, 2, 1, 2, 2, 1],
+		[2, 1, 2, 3, 2, 1, 2, 1, 2, 2, 2, 1],
+		[2, 1, 2, 1, 1, 2, 1, 2, 1, 2, 2, 2],
+		[1, 2, 1, 2, 1, 1, 2, 1, 1, 2, 2, 1],
+		[2, 2, 5, 2, 1, 1, 2, 1, 1, 2, 2, 1],
+		[2, 2, 1, 2, 2, 1, 1, 2, 1, 2, 1, 2],
+		[1, 2, 2, 1, 2, 1, 5, 2, 1, 2, 1, 2],
+		[1, 2, 1, 2, 1, 2, 2, 1, 2, 1, 2, 1],
+		[2, 1, 1, 2, 2, 1, 2, 1, 2, 2, 1, 2],
+		[1, 2, 1, 1, 5, 2, 1, 2, 2, 2, 1, 2],   /* 1971 */
+		[1, 2, 1, 1, 2, 1, 2, 1, 2, 2, 2, 1],
+		[2, 1, 2, 1, 1, 2, 1, 1, 2, 2, 2, 1],
+		[2, 2, 1, 5, 1, 2, 1, 1, 2, 2, 1, 2],
+		[2, 2, 1, 2, 1, 1, 2, 1, 1, 2, 1, 2],
+		[2, 2, 1, 2, 1, 2, 1, 5, 2, 1, 1, 2],
+		[2, 1, 2, 2, 1, 2, 1, 2, 1, 2, 1, 1],
+		[2, 2, 1, 2, 1, 2, 2, 1, 2, 1, 2, 1],
+		[2, 1, 1, 2, 1, 6, 1, 2, 2, 1, 2, 1],
+		[2, 1, 1, 2, 1, 2, 1, 2, 2, 1, 2, 2],
+		[1, 2, 1, 1, 2, 1, 1, 2, 2, 1, 2, 2],   /* 1981 */
+		[2, 1, 2, 3, 2, 1, 1, 2, 2, 1, 2, 2],
+		[2, 1, 2, 1, 1, 2, 1, 1, 2, 1, 2, 2],
+		[2, 1, 2, 2, 1, 1, 2, 1, 1, 5, 2, 2],
+		[1, 2, 2, 1, 2, 1, 2, 1, 1, 2, 1, 2],
+		[1, 2, 2, 1, 2, 2, 1, 2, 1, 2, 1, 1],
+		[2, 1, 2, 2, 1, 5, 2, 2, 1, 2, 1, 2],
+		[1, 1, 2, 1, 2, 1, 2, 2, 1, 2, 2, 1],
+		[2, 1, 1, 2, 1, 2, 1, 2, 2, 1, 2, 2],
+		[1, 2, 1, 1, 5, 1, 2, 1, 2, 2, 2, 2],
+		[1, 2, 1, 1, 2, 1, 1, 2, 1, 2, 2, 2],   /* 1991 */
+		[1, 2, 2, 1, 1, 2, 1, 1, 2, 1, 2, 2],
+		[1, 2, 5, 2, 1, 2, 1, 1, 2, 1, 2, 1],
+		[2, 2, 2, 1, 2, 1, 2, 1, 1, 2, 1, 2],
+		[1, 2, 2, 1, 2, 2, 1, 5, 2, 1, 1, 2],
+		[1, 2, 1, 2, 2, 1, 2, 1, 2, 2, 1, 2],
+		[1, 1, 2, 1, 2, 1, 2, 2, 1, 2, 2, 1],
+		[2, 1, 1, 2, 3, 2, 2, 1, 2, 2, 2, 1],
+		[2, 1, 1, 2, 1, 1, 2, 1, 2, 2, 2, 1],
+		[2, 2, 1, 1, 2, 1, 1, 2, 1, 2, 2, 1],
+		[2, 2, 2, 3, 2, 1, 1, 2, 1, 2, 1, 2],   /* 2001 */
+		[2, 2, 1, 2, 1, 2, 1, 1, 2, 1, 2, 1],
+		[2, 2, 1, 2, 2, 1, 2, 1, 1, 2, 1, 2],
+		[1, 5, 2, 2, 1, 2, 1, 2, 2, 1, 1, 2],
+		[1, 2, 1, 2, 1, 2, 2, 1, 2, 2, 1, 2],
+		[1, 1, 2, 1, 2, 1, 5, 2, 2, 1, 2, 2],
+		[1, 1, 2, 1, 1, 2, 1, 2, 2, 2, 1, 2],
+		[2, 1, 1, 2, 1, 1, 2, 1, 2, 2, 1, 2],
+		[2, 2, 1, 1, 5, 1, 2, 1, 2, 1, 2, 2],
+		[2, 1, 2, 1, 2, 1, 1, 2, 1, 2, 1, 2],
+		[2, 1, 2, 2, 1, 2, 1, 1, 2, 1, 2, 1],   /* 2011 */
+		[2, 1, 6, 2, 1, 2, 1, 1, 2, 1, 2, 1],
+		[2, 1, 2, 2, 1, 2, 1, 2, 1, 2, 1, 2],
+		[1, 2, 1, 2, 1, 2, 1, 2, 5, 2, 1, 2],
+		[1, 2, 1, 1, 2, 1, 2, 2, 2, 1, 2, 2],
+		[1, 1, 2, 1, 1, 2, 1, 2, 2, 1, 2, 2],
+		[2, 1, 1, 2, 3, 2, 1, 2, 1, 2, 2, 2],
+		[1, 2, 1, 2, 1, 1, 2, 1, 2, 1, 2, 2],
+		[2, 1, 2, 1, 2, 1, 1, 2, 1, 2, 1, 2],
+		[2, 1, 2, 5, 2, 1, 1, 2, 1, 2, 1, 2],
+		[1, 2, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1],   /* 2021 */
+		[2, 1, 2, 1, 2, 2, 1, 2, 1, 2, 1, 2],
+		[1, 5, 2, 1, 2, 1, 2, 2, 1, 2, 1, 2],
+		[1, 2, 1, 1, 2, 1, 2, 2, 1, 2, 2, 1],
+		[2, 1, 2, 1, 1, 5, 2, 1, 2, 2, 2, 1],
+		[2, 1, 2, 1, 1, 2, 1, 2, 1, 2, 2, 2],
+		[1, 2, 1, 2, 1, 1, 2, 1, 1, 2, 2, 2],
+		[1, 2, 2, 1, 5, 1, 2, 1, 1, 2, 2, 1],
+		[2, 2, 1, 2, 2, 1, 1, 2, 1, 1, 2, 2],
+		[1, 2, 1, 2, 2, 1, 2, 1, 2, 1, 2, 1],
+		[2, 1, 5, 2, 1, 2, 2, 1, 2, 1, 2, 1],   /* 2031 */
+		[2, 1, 1, 2, 1, 2, 2, 1, 2, 2, 1, 2],
+		[1, 2, 1, 1, 2, 1, 5, 2, 2, 2, 1, 2],
+		[1, 2, 1, 1, 2, 1, 2, 1, 2, 2, 2, 1],
+		[2, 1, 2, 1, 1, 2, 1, 1, 2, 2, 1, 2],
+		[2, 2, 1, 2, 1, 4, 1, 1, 2, 1, 2, 2],
+		[2, 2, 1, 2, 1, 1, 2, 1, 1, 2, 1, 2],
+		[2, 2, 1, 2, 1, 2, 1, 2, 1, 1, 2, 1],
+		[2, 2, 1, 2, 5, 2, 1, 2, 1, 2, 1, 1],
+		[2, 1, 2, 2, 1, 2, 2, 1, 2, 1, 2, 1],
+		[2, 1, 1, 2, 1, 2, 2, 1, 2, 2, 1, 2],   /* 2041 */
+		[1, 5, 1, 2, 1, 2, 1, 2, 2, 2, 1, 2],
+		[1, 2, 1, 1, 2, 1, 1, 2, 2, 1, 2, 2]];
+	var gan = new Array("甲", "乙", "丙", "丁", "戊", "己", "庚", "辛", "壬", "癸");
+	var jee = new Array("子", "丑", "寅", "卯", "辰", "巳", "午", "未", "申", "酉", "戌", "亥");
+	var ddi = new Array("쥐", "소", "범", "토끼", "용", "뱀", "말", "양", "원숭이", "닭", "개", "돼지");
+	var week = new Array("일", "월", "화", "수", "목", "금", "토");
+	var md = new Array(31, 0, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+	var year = input_day.substring(0, 4);
+	var month = input_day.substring(4, 6);
+	var day = input_day.substring(6, 8);
+	// 음력에서 양력으로 변환
+	var lyear, lmonth, lday, leapyes;
+	var syear, smonth, sday;
+	var mm, y1, y2, m1;
+	var i, j, k1, k2, leap, w;
+	var td, y;
+	lyear = get_year(year);        // 년도 check
+	lmonth = get_month(month);     // 월 check
+	y1 = lyear - 1841;
+	m1 = lmonth - 1;
+	leapyes = 0;
+	if (kk[y1][m1] > 2) {
+		if (document.frmTest.yoon[0].checked) {
+			leapyes = 1;
+			switch (kk[y1][m1]) {
+				case 3:
+				case 5:
+					mm = 29;
+					break;
+				case 4:
+				case 6:
+					mm = 30;
+					break;
+			}
+		} else {
+			switch (kk[y1][m1]) {
+				case 1:
+				case 3:
+				case 4:
+					mm = 29;
+					break;
+				case 2:
+				case 5:
+				case 6:
+					mm = 30;
+					break;
+			} // end of switch
+		} // end of if
+	} // end of if
+
+	lday = get_day(day, mm);
+
+	td = 0;
+	for (i = 0; i < y1; i++) {
+		for (j = 0; j < 12; j++) {
+			switch (kk[i][j]) {
+				case 1:
+					td = td + 29;
+					break;
+				case 2:
+					td = td + 30;
+					break;
+				case 3:
+					td = td + 58;    // 29+29
+					break;
+				case 4:
+					td = td + 59;    // 29+30
+					break;
+				case 5:
+					td = td + 59;    // 30+29
+					break;
+				case 6:
+					td = td + 60;    // 30+30
+					break;
+			} // end of switch
+		} // end of for
+	} // end of for
+
+	for (j = 0; j < m1; j++) {
+		switch (kk[y1][j]) {
+			case 1:
+				td = td + 29;
+				break;
+			case 2:
+				td = td + 30;
+				break;
+			case 3:
+				td = td + 58;    // 29+29
+				break;
+			case 4:
+				td = td + 59;    // 29+30
+				break;
+			case 5:
+				td = td + 59;    // 30+29
+				break;
+			case 6:
+				td = td + 60;    // 30+30
+				break;
+		} // end of switch
+	} // end of for
+
+	if (leapyes == 1) {
+		switch (kk[y1][m1]) {
+			case 3:
+			case 4:
+				td = td + 29;
+				break;
+			case 5:
+			case 6:
+				td = td + 30;
+				break;
+		} // end of switch
+	} // end of switch
+
+	td = td + parseFloat(lday) + 22;
+	// td : 1841 년 1 월 1 일 부터 원하는 날짜까지의 전체 날수의 합
+	y1 = 1840;
+	do {
+		y1 = y1 + 1;
+		if ((y1 % 400 == 0) || ((y1 % 100 != 0) && (y1 % 4 == 0))) {
+			y2 = 366;
+		}
+		else {
+			y2 = 365;
+		}
+		if (td <= y2) {
+			break;
+		}
+		else {
+			td = td - y2;
+		}
+	} while (1); // end do-While
+
+	syear = y1;
+	md[1] = parseInt(y2) - 337;
+	m1 = 0;
+	do {
+		m1 = m1 + 1;
+		if (td <= md[m1 - 1]) {
+			break;
+		}
+		else {
+			td = td - md[m1 - 1];
+		}
+	} while (1); // end of do-While
+
+	smonth = parseInt(m1);
+	sday = parseInt(td);
+
+	// 월이 한자리인경우에는 앞에 0을 붙혀서 반환
+	if (smonth < 10) {
+		smonth = "0" + smonth;
+	}
+	// 일이 한자리인경우에는 앞에 0을 붙혀서 반환
+	if (sday < 10) {
+		sday = "0" + sday;
+	}
+
+	return new String(syear + smonth + sday);
+}
+
+/**
+  * 주말인 검사한다.
+  * 입력형식 : 2004년 3월 1일 --> 20040301
+  * 주말이면 false반환
+  * @param string
+  * @return boolean
+  */
+function isWeekend(yyyymmdd) {
+	var yyyy = parseInt(yyyymmdd.substring(0, 4), 10);
+	var mm = (parseInt(yyyymmdd.substring(4, 6), 10) - 1);
+	var dd = parseInt(yyyymmdd.substring(6, 8), 10);
+	var date = new Date(yyyy, mm, dd); //Date 개체를 만듭니다.
+
+	// 토요일, 일요일인 경우는 false반환
+	if (date.getDay() == 6 || date.getDay() == 0) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+
+function isSunday(yyyymmdd) {
+	var yyyy = parseInt(yyyymmdd.substring(0, 4), 10);
+	var mm = (parseInt(yyyymmdd.substring(4, 6), 10) - 1);
+	var dd = parseInt(yyyymmdd.substring(6, 8), 10);
+	var date = new Date(yyyy, mm, dd); //Date 개체를 만듭니다.
+
+	// 일요일인 경우는 false반환
+	if (date.getDay() == 0) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+//날짜형식 공통함수
+Date.prototype.format = function (f) {
+	if (!this.valueOf()) return " ";
+	var weekName = ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"];
+	var d = this;
+	return f.replace(/(yyyy|yy|MM|dd|E|hh|mm|ss|a\/p)/gi, function ($1) {
+		switch ($1) {
+			case "yyyy": return d.getFullYear();
+			case "yy": return (d.getFullYear() % 1000).zf(2);
+			case "MM": return (d.getMonth() + 1).zf(2);
+			case "dd": return d.getDate().zf(2);
+			case "E": return weekName[d.getDay()];
+			case "HH": return d.getHours().zf(2);
+			case "hh": return ((h = d.getHours() % 12) ? h : 12).zf(2);
+			case "mm": return d.getMinutes().zf(2);
+			case "ss": return d.getSeconds().zf(2);
+			case "a/p": return d.getHours() < 12 ? "오전" : "오후";
+			default: return $1;
+		}
+	});
+};
+String.prototype.string = function (len) { var s = '', i = 0; while (i++ < len) { s += this; } return s; };
+String.prototype.zf = function (len) { return "0".string(len - this.length) + this; };
+Number.prototype.zf = function (len) { return this.toString().zf(len); };
+//날짜 선언
+var today = new Date();
+var lastYear = new Date();
+var nextYear = new Date();
+var nextMonth = new Date();
+var before2Minute = new Date();
+var after10Minute = new Date();
+var thisYear;
+var thisMonth;
+var thisHour;
+var thisMinute;
+var nextMonthMonth;
+var tomorrow = new Date(today.getFullYear(), today.getMonth(), today.getDate() + 1);
+lastYear.setFullYear(today.getFullYear() - 1);
+nextYear.setFullYear(today.getFullYear() + 1);
+nextMonth.setMonth(today.getMonth() + 1);
+before2Minute.setMinutes(today.getMinutes() - 2);
+after10Minute.setMinutes(today.getMinutes() + 10);
+//날짜 양식(문자형)
+thisYear = today.format("yyyy");
+thisMonth = today.format("MM");
+thisHour = today.format("HH");
+thisMinute = today.format("mm");
+lastYearYear = lastYear.format("yyyy");
+nextYearYear = nextYear.format("yyyy");
+nextMonthMonth = nextMonth.format("MM");
+
+function stringToDate(sDate) {
+	var date;
+	var nYear = 0;
+	var nMonth = 8;
+	var nDay = 0;
+	if (sDate.length == 8) {
+		nYear = parseInt(sDate.substr(0, 4), 10);
+		nMonth = parseInt(sDate.substr(4, 2), 10);
+		nDay = parseInt(sDate.substr(6, 2), 10);
+	} else if (sDate.length == 10) {
+		var arrDate = sDate.split("-");
+		if (arrDate.length == 3) {
+			nYear = parseInt(arrDate[0], 10);
+			nMonth = parseInt(arrDate[1], 10);
+			nDay = parseInt(arrDate[2], 10);
+		}
+	}
+	date = new Date(nYear, nMonth - 1, nDay);
+	return date;
+}
+
+function getTime() {
+	var now = new Date();
+	now = now.format("yyyyMMddHHmmss");
+	return now;
+}
+
+function convertTo24Hour(time) {    
+	var minute = time.substring(2, 5)
+	var hours = parseInt(time.substr(0, 2));    
+	if (time.indexOf('am') != -1 && hours == 12) {
+		hours = "00";
+	}
+	if (time.indexOf('pm') != -1 && hours < 12) {
+		hours = hours + 12;
+	}
+	return hours + minute;
+}
+
+/**
+* 입력한 날짜가 공휴일인지 검사를 한다.
+* 공휴일인 경우에는 경고창 후 멈춘다.
+* 입력형식 : 2004년 3월 1일 --> 20040301
+*
+* @param string
+*/
+function isHoliday(yyyymmdd) {
+	// 검사년도
+	var yyyy = yyyymmdd.substring(0, 4);
+	var holidays = new Array();
+	// 음력 공휴일을 양력으로 바꾸어서 입력
+	var tmp01 = lunerCalenderToSolarCalenger(yyyy + "0101");// 음력설날
+	var tmp02 = lunerCalenderToSolarCalenger(yyyy + "0815");// 음력추석
+	holidays[0] = tmp01 - 1; // 음력설 첫째날
+	holidays[1] = tmp01;   // 음력설 둘째날
+	holidays[2] = tmp01 + 1; // 음력설 셋째날
+	holidays[3] = tmp02 - 1; // 추석 첫째날
+	holidays[4] = tmp02;   // 추석 둘째날
+	holidays[5] = tmp02 + 1; // 추석 셋째날 
+	holidays[6] = lunerCalenderToSolarCalenger(yyyy + "0408"); // 석가탄신일
+
+	// 양력 공휴일 입력
+	holidays[7] = yyyy + "0101";  // 양력설날
+	holidays[8] = yyyy + "0301";  // 삼일절    
+	holidays[9] = yyyy + "0505";  // 어린이날
+	holidays[10] = yyyy + "0606";  // 현충일
+	holidays[11] = yyyy + "0717";  // 제헌절
+	holidays[12] = yyyy + "0815";  // 광복절
+	holidays[13] = yyyy + "1003";  // 개천절
+	holidays[14] = yyyy + "1009";  // 한글날
+	holidays[15] = yyyy + "1225";  // 성탄절
+	holidays[16] = "20130920";  // 누락음력추석
+
+
+	for (var i = 0; i < holidays.length ; i++) {
+		if (holidays[i] == yyyymmdd) {
+			return true;
+		}
+	}
+}
+
+/**
+* 입력한 날짜가 토요일, 일요일, 공휴일인지 검사를 한다.
+* 입력형식 : 2004년 3월 1일 --> 20040301
+*
+* @param string
+*/
+function isHolidayWeekendCheck(yyyymmdd) {
+	if (isHoliday(yyyymmdd) || isWeekend(yyyymmdd)) {
+		jqmAlert("토요일, 일요일, 공휴일에는 거래가 불가능합니다.");
+		return true;
+	} else {
+		return false;
+	}
+}
+function isHolidaySundayCheck(yyyymmdd) {
+	if (isHoliday(yyyymmdd) || isSunday(yyyymmdd)) {
+		return true;
+	} else {
+		return false;
+	}
+};
+
+function todayEnable() {
+	var thisDay = today.format("yyyyMMdd");
+	var jigumsigan = parseInt(after10Minute.format("HH"), 10);
+	if (isHoliday(thisDay) || isSunday(thisDay)) {
+		//공휴일, 일요일
+		return false;
+	} else {
+		if (today.getDay() == 6) {
+			//토요일
+			if (jigumsigan > 14) {
+				return false;
+			} else {
+				return true;
+			}
+		} else {
+			//업무일
+			if (jigumsigan > 18) {
+				return false;
+			} else {
+				return true;
+			}
+		};
+	}
+};
+
+function enableDay() {
+	var thatDay = tomorrow.format("yyyyMMdd");
+	if (isHolidaySundayCheck(thatDay)) {
+		var after1Day = dateAdd(thatDay);
+		if (isHolidaySundayCheck(after1Day)) {
+			var after2Day = dateAdd(after1Day);
+			if (isHolidaySundayCheck(after2Day)) {
+				var after3Day = dateAdd(after2Day);
+				if (isHolidaySundayCheck(after3Day)) {
+					var after4Day = dateAdd(after3Day);
+					if (isHolidaySundayCheck(after4Day)) {
+						var after5Day = dateAdd(after4Day);
+						if (isHolidaySundayCheck(after5Day)) {
+							var after6Day = dateAdd(after5Day);
+							if (isHolidaySundayCheck(after6Day)) {
+								var after7Day = dateAdd(after6Day);
+								if (isHolidaySundayCheck(after7Day)) {
+								} else {
+									$("#sangdamil").val(after7Day.substring(0, 4) + "-" + after7Day.substring(4, 6) + "-" + after7Day.substring(6, 8));
+								};
+							} else {
+								$("#sangdamil").val(after6Day.substring(0, 4) + "-" + after6Day.substring(4, 6) + "-" + after6Day.substring(6, 8));
+							}
+						} else {
+							$("#sangdamil").val(after5Day.substring(0, 4) + "-" + after5Day.substring(4, 6) + "-" + after5Day.substring(6, 8));
+						}
+					} else {
+						$("#sangdamil").val(after4Day.substring(0, 4) + "-" + after4Day.substring(4, 6) + "-" + after4Day.substring(6, 8));
+					}
+				} else {
+					$("#sangdamil").val(after3Day.substring(0, 4) + "-" + after3Day.substring(4, 6) + "-" + after3Day.substring(6, 8));
+				}
+			} else {
+				$("#sangdamil").val(after2Day.substring(0, 4) + "-" + after2Day.substring(4, 6) + "-" + after2Day.substring(6, 8));
+			}
+		} else {
+			$("#sangdamil").val(after1Day.substring(0, 4) + "-" + after1Day.substring(4, 6) + "-" + after1Day.substring(6, 8));
+		}
+	} else {
+		$("#sangdamil").val(thatDay.substring(0, 4) + "-" + thatDay.substring(4, 6) + "-" + thatDay.substring(6, 8));
+	};
+
+
+}
+
+function dateAdd(gDay) {
+	var gYear = gDay.substring(0, 4);
+	var gMonth = gDay.substring(4, 6);
+	var gDate = gDay.substring(6, 8);
+	var newDay = stringToDate(gYear + gMonth + gDate);
+	var nextDay = new Date(newDay.getFullYear(), newDay.getMonth(), newDay.getDate() + 1);
+	return nextDay.format("yyyyMMdd");
+}
+
+function fbParseDate(str) {
+	return new Date((str || "").replace(/-/g, "/").replace(/[TZ]/g, " "));
+}
+
+function twitParseDate(str) {
+	var v = str.split(' ');
+	return new Date(Date.parse(v[1] + " " + v[2] + ", " + v[5] + " " + v[3] + " UTC"));
+}
+
+function parseAgoDate(date) {
+	var now = new Date();
+	var diff = Math.floor((now.getTime() - date.getTime()) / 1000);
+	if (diff < 60) {
+		return diff + '초 전';
+	} else if (diff < 60 * 60) {
+		return Math.floor(diff / 60) + '분 전';
+	} else if (diff < 60 * 60 * 24) {
+		return Math.floor(diff / (60 * 60)) + '시간 전';
+	} else if (diff < 60 * 60 * 24 * 7) {
+		return Math.floor(diff / (60 * 60 * 24)) + '일 전';
+	} else {
+		var temp = now.getFullYear() - date.getFullYear();
+		//if (temp > 0) {
+		//    return temp + '년 전';
+		//}
+		temp = now.getMonth() - date.getMonth();
+		if (temp > 0) {
+			return temp + '개월 전'
+		}
+		return Math.floor(diff / (60 * 60 * 24 * 7)) + '주일 전';
+	}
+}

@@ -1,0 +1,270 @@
+function find_code(thisCode) {
+
+	if (thisCode=="")
+	{
+		thisCode = "1";
+	}
+	var flag =0 ;
+	var i = 0;
+	var j = 0;
+
+	var code ;
+	var codename;
+	var upcode;
+	var upcodename;
+	var parentcode;
+	var parentcodename;
+	var tempgroup = "" ;
+	var	codegroup = new Array();	
+
+	var tp;
+	var codelist;
+
+	while (i<arrCats.length)
+	{
+		if (thisCode==arrCats[i][5])
+		{
+			flag = 3;
+			
+			code = arrCats[i][5];
+			codename = arrCats[i][4];
+			
+			upcode = arrCats[i][3];
+			upcodename = arrCats[i][2];
+
+			parentcode = arrCats[i][1];
+			parentcodename = arrCats[i][0];
+
+			for (var k=0;k<arrCats.length ;k++ )
+			{
+				if (arrCats[i][3]==arrCats[k][3])
+				{
+					tempgroup = tempgroup  + arrCats[k][4] + "+" + arrCats[k][5] +"|" ;
+					codegroup = tempgroup.split("|");
+				}			
+			} 
+		}  
+		
+		if (flag==3)
+		{
+			    break;
+		} else if ((flag != 3) && (thisCode==arrCats[i][3])) {
+
+				flag = 2;
+				code = arrCats[i][3];
+				codename = arrCats[i][2];
+				
+				upcode = arrCats[i][1];
+				upcodename = arrCats[i][0];
+
+
+				for (var k=0;k<arrCats.length ;k++ )
+				{
+					if (arrCats[i][3]==arrCats[k][3])
+					{
+						tempgroup = tempgroup  + arrCats[k][4] + "+" + arrCats[k][5] +"|" ;
+						codegroup = tempgroup.split("|");
+					}
+					
+				} 
+		}
+		
+		if (flag == 2)
+		{
+			break;
+		} else if ((flag != 2) && (thisCode==arrCats[i][1])) {
+				
+				flag = 1;
+				code = arrCats[i][1];
+				codename = arrCats[i][0];
+				
+				upcode = arrCats[i][1];
+				upcodename = arrCats[i][0];
+
+				for (var k=0;k<arrCats.length ;k++ )
+				{	
+					if (arrCats[i][1]==arrCats[k][1])
+					{
+						tempgroup = tempgroup  + arrCats[k][2] + "+" + arrCats[k][3] +"|" ;
+						codegroup = tempgroup.split("|");	
+					}
+					
+				} 
+		}
+
+		if (flag == 1)
+		{
+			break;
+		} else if ((flag != 1) && (thisCode==1)) {
+				flag = 0;
+				code = 1;
+				codename = "최신뉴스";
+				
+				upcode = 1;
+				upcodename = "전체뉴스";
+
+				for (var k=0;k<arrCats.length ;k++ )
+				{	
+					if (arrCats[i][1]!="1")
+					{
+						tempgroup = tempgroup  + arrCats[k][0] + "+" + arrCats[k][1] +"|" ;
+						codegroup = tempgroup.split("|");	
+					}
+					
+				} 
+		}
+		i++;
+	}
+
+
+document.write("			<div class=\"news_title_cat\"> ");
+document.write("					<dl> ");
+document.write("						<!-- News_category --> ");
+document.write("						<dt id=\"cat_list_trigger_id\"> ");
+document.write("							<a href=\"#\">"+upcodename+"</a> ");
+document.write("						</dt> ");
+document.write("						<!-- News_sub_category --> ");
+document.write("						<dd> ");
+
+ if (flag ==3)
+ {
+	document.write("						<a href=\"http://health.chosun.com/list.html?menu="+parentcode+"&more_menu="+upcode+"&more_smenu="+code+"&nowcode="+code+"&pn=1\">"+codename+"</a></li> ");
+ } 
+ else if (flag ==2) 
+ {
+	 document.write("						<a href=\"http://health.chosun.com/list.html?menu="+upcode+"&more_menu="+code+"&nowcode="+code+"&pn=1\">"+codename+"</a></li> ");
+ }
+ else
+ {
+	document.write("						<a href=\"http://health.chosun.com/list.html?menu="+code+"&nowcode="+code+"&pn=1\">"+codename+"</a></li> ");
+ }
+
+document.write("						</dd> ");
+document.write("					</dl> ");
+
+document.write("					<ul id=\"cat_list_id\" class=\"news_title_cat_list\"><!-- 기사 옆 왼쪽 메뉴 --> ");
+
+
+ if (flag ==3)
+ {
+	document.write("					<li class=\"b\"><a id=\"cat0\"  href=\"http://health.chosun.com/list.html?menu="+parentcode+"&more_menu="+upcode+"&nowcode="+upcode+"&pn=1\">상위메뉴<div class=\"redline\"> </div></a></li> ");
+ } 
+ else if (flag ==2) 
+ {
+	 document.write("					<li class=\"b\"><a id=\"cat0\"  href=\"http://health.chosun.com/list.html?menu="+upcode+"&nowcode="+upcode+"&pn=1\">상위메뉴<div class=\"redline\"> </div></a></li> ");
+ }
+ else if (flag ==1) 
+ {
+	 document.write("					<li class=\"b\"><a id=\"cat0\"  href=\"http://health.chosun.com/list.html?menu=1&nowcode=1&pn=1\">상위메뉴<div class=\"redline\"> </div></a></li> ");
+ }
+
+ if (flag ==0)
+ {
+	document.write("			<li><a id=\"cat\"  href=\"http://health.chosun.com/list.html?menu=1&nowcode=1&pn=1\">최신뉴스</a></li> ");
+ }
+
+ if ((upcode != "0101010201") && (thisCode != "01010102") && (thisCode != "0101010201"))
+ {
+	document.write("					<li class=\"cline\"><a id=\"cat99\"   href=\"http://health.chosun.com/list.html?menu=01010102&more_menu=0101010201&more_smenu=11I1&nowcode=11I1&pn=1\">과별분류<div class=\"grayline\"> </div></a></li> ");
+ }
+
+tp = uniqArr(codegroup); /*중복값제거*/
+
+for (j=0;j<tp.length-1; j++)
+{
+	 var codelist = tp[j].split("+");
+	 var go_url0 = "http://health.chosun.com/list.html?menu="+codelist[1]+"&nowcode="+codelist[1]+"&pn=1";
+	 var go_url1 = "http://health.chosun.com/list.html?menu="+upcode+"&more_menu="+codelist[1]+"&nowcode="+codelist[1]+"&pn=1";
+	 var go_url2 = "http://health.chosun.com/list.html?menu="+upcode+"&more_menu="+code+"&more_smenu="+codelist[1]+"&nowcode="+codelist[1]+"&pn=1";
+	 var go_url3 = "http://health.chosun.com/list.html?menu="+parentcode+"&more_menu="+upcode+"&more_smenu="+codelist[1]+"&nowcode="+codelist[1]+"&pn=1";
+
+
+	 if (codelist[1]==code)
+	 {
+		 if (flag ==3)
+		 {
+			document.write("			<li><a id=\"cat\"  href=\""+go_url3+"\">"+codelist[0]+"</a></li> ");
+		 } 
+		 else if (flag ==2) 
+		 {
+			 if (codelist[1]== "0101010201")
+			 {
+				 document.write("			<li class=\"cline\"><a id=\"cat\"  href=\""+go_url2+"\">"+codelist[0]+"<div class=\"grayline\"> </div></a></li> ");
+			 } else {
+				 document.write("			<li><a id=\"cat\"  href=\""+go_url2+"\">"+codelist[0]+"</a></li> ");
+			 }
+		 }
+		 else
+		 {
+			document.write("		    <li><a id=\"cat\"  href=\""+go_url1+"\">"+codelist[0]+"</a></li> ");
+		 }
+	 } 
+	 else 
+	 {
+		 if (flag ==3)
+		 {
+			document.write("			<li><a id=\"cat"+j+"\"  href=\""+go_url3+"\">"+codelist[0]+"</a></li> ");
+		 }
+		 else if (flag == 2) 
+		 {
+			 if (codelist[1]== "0101010201")
+			 {
+				 document.write("			<li class=\"cline\"><a id=\"cat"+j+"\"  href=\""+go_url2+"\">"+codelist[0]+"<div class=\"grayline\"> </div></a></li> ");
+			 } else {
+				document.write("			<li><a id=\"cat"+j+"\"  href=\""+go_url2+"\">"+codelist[0]+"</a></li> ");
+			 }
+		 }
+		 else if (flag == 1) 
+		 {
+			document.write("			<li><a id=\"cat"+j+"\"  href=\""+go_url1+"\">"+codelist[0]+"</a></li> ");
+		 }
+		 else if (flag == 0) 
+		 {
+			document.write("			<li><a id=\"cat"+j+"\"  href=\""+go_url0+"\">"+codelist[0]+"</a></li> ");
+		 }
+	 }
+	
+};
+
+if (flag ==0)
+{
+ document.write("			<li class=\"cline\"><a href=\"#\"></a></li> ");
+ document.write("			<li><a id=\"cat80\"  href=\"http://health.chosun.com/rank/weekly.html\">캘린더뉴스</a></li> ");
+ document.write("			<li><a id=\"cat81\"  href=\"http://newsplus.chosun.com/inside/list.html?in_theme=2&in_sitecd=8\">인사이드뉴스</a></li> ");
+ document.write("			<li><a id=\"cat82\"  href=\"http://health.chosun.com/news/dailynews_list.jsp\">의료건강뉴스</a></li> ");
+ document.write("			<li><a id=\"cat83\"  href=\"http://health.chosun.com/submain/column_main.html\">건강칼럼</a></li> ");
+  document.write("			<li class=\"cline\"><a href=\"#\"></a></li> ");
+ document.write("			<li><a id=\"cat84\"  href=\"http://health.chosun.com/news/healthevent_list.jsp\">의료행사</a></li> ");
+ document.write("			<li><a id=\"cat85\"  href=\"http://health.chosun.com/news/healthavi_main.jsp\">건강동영상</a></li> ");
+ document.write("			<li><a id=\"cat86\"  href=\"http://health.chosun.com/cartoon_list.html?catid=11J5&page=1\">건강웹툰</a></li> ");
+}
+document.write("					</ul>	 ");
+document.write("			  </div> ");	
+}
+
+
+  function uniqArr(arr) {
+        var chk = [];
+        for (var i = 0; i < arr.length; i++) {
+            if (chk.length == 0) {
+                chk.push(arr[i]);
+            } else {
+                var flg = true;
+                for (var j = 0; j < chk.length; j++) {
+                    if (chk[j] == arr[i]) {
+                        flg = false;
+                        break;
+                    }
+                }
+                if (flg) {
+                    chk.push(arr[i]);
+                }
+            }
+        }
+        return chk;
+    }
+
+
+
+
+

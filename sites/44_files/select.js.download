@@ -1,0 +1,230 @@
+var nowDomain = location.href;
+var notUseDomain = new Array();
+var exceptUseDomain = new Array();
+//아래 항목들은 select.js 적용 안함.
+notUseDomain.push("rentcar/");
+
+//아래 항목들은 select.js를 notUseDomain에 있더라도 적용
+exceptUseDomain.push("rentcar/reservation");
+
+var isUseSelectJS = true;
+for (var i = 0, len = notUseDomain.length; i < len; i++) {
+    if (nowDomain.indexOf(notUseDomain[i]) != -1) {
+        isUseSelectJS = false;
+    }
+}
+for (var i = 0, len = exceptUseDomain.length; i < len; i++) {
+    if (nowDomain.indexOf(exceptUseDomain[i]) != -1) {
+        isUseSelectJS = true;
+    }
+}
+if (isUseSelectJS) {
+    AddWindowEvent(replaceSelects);
+}
+
+function replaceSelects() {
+    if(navigator.userAgent.match(/iPhone|iPod|iPad|Mobile|UP.Browser|Android|BlackBerry|Windows CE|Nokia|webOS|Opera Mini|SonyEricsson|Opera Mobi|Windows Phone|IEMobile|POLARIS|SKT|LG|LGPlayer|Bada|Kindle|Wii/) != null)
+    {
+        return;
+    }
+
+    var selects = document.getElementsByTagName('select');
+
+    for(var i=0; i < selects.length; i++) {
+		var select = selects[i];
+		if (!select.id) select.id = 'se_' + i;
+		new selectO(select, select.id);
+	}
+}
+
+function refreshSelect(selectId) {
+
+    if(navigator.userAgent.match(/iPhone|iPod|iPad|Mobile|UP.Browser|Android|BlackBerry|Windows CE|Nokia|webOS|Opera Mini|SonyEricsson|Opera Mobi|Windows Phone|IEMobile|POLARIS|SKT|LG|LGPlayer|Bada|Kindle|Wii/) != null)
+    {
+        return;
+    }
+    
+	var select = document.getElementById(selectId);
+	new selectO(select, selectId);
+}
+
+var openedOption = "";
+
+var selectO = Class.create();
+selectO.prototype = {
+    selectId: null,
+    selectObj: null,
+    optionsUl: null,
+    id_selectInput: null,
+	id_optionsUl: null,
+	
+	initialize: function (select, selectId) {
+
+	        this.replace(select, selectId);
+	},
+	
+	replace: function(select, selectId) {
+	    var sel = this;
+	    this.selectObj = select;
+		// 내부적으로 쓰일 ID 값들을 선언
+		this.selectId = selectId;
+		this.id_selectInput = 'si_' + selectId;
+		this.id_optionsUl = 'ou_' + selectId;
+		
+		if(select.style.display == "none") {
+		    return false;
+		}
+		
+		var selectWidth = parseInt(select.offsetWidth);
+		if (!selectWidth) selectWidth = parseInt(select.style.width);
+
+		
+		var wrapSpan = document.createElement('span');
+		var classNm = (select.className ?  select.className : "bsc");
+		
+		var selectInput = $(this.id_selectInput);
+		if (!selectInput) {
+		    
+			wrapSpan.className = classNm + "SelectWrapN";
+			select.parentNode.insertBefore(wrapSpan, select);
+			
+		    var selSpan = document.createElement('span');
+			selSpan.className = classNm + "SelectsN";
+			selSpan.onclick = function() {
+			    sel.showOptions();
+			};
+			wrapSpan.appendChild(selSpan);
+			
+			selectInput = document.createElement('input');
+			selectInput.setAttribute("type", "button");
+			selectInput.id = this.id_selectInput;
+//			selectInput.onclick = function() {
+//			    sel.showOptions();
+//			};
+            selSpan.appendChild(selectInput);
+		}
+		
+	    wrapSpan.style.width = selectWidth + "px";
+	    selectInput.style.width = (selectWidth - 17) + "px";
+		
+
+	    var optionsUl = $(this.id_optionsUl);
+	    if (!optionsUl) {
+		    optionsUl = document.createElement('ul');
+		    optionsUl.id = this.id_optionsUl;
+		    optionsUl.className = "bscOptionsN " + classNm + "OptionsAddN";
+		    wrapSpan.appendChild(optionsUl);
+		    
+		    optionsUl = $(this.id_optionsUl);
+	    }
+	    optionsUl.style.width = (selectWidth - 2) + "px";
+        
+	    optionsUl.childElements().each(function(child) {
+		    child.remove();
+	    });
+		
+        var k=0;
+	    for(k=0; k < select.options.length; k++) {
+		    var optionLi = document.createElement('li');
+		    optionLi.style.width = (selectWidth - 16) + "px";
+		    var optionAnchor = document.createElement('a');
+		    var optionTxt = document.createTextNode(select.options[k].text);
+		    optionAnchor.index = k;
+		    optionAnchor.href = "#";
+		    if(select.options[k].style.color != null) optionAnchor.style.color = select.options[k].style.color;		    
+		    optionAnchor.onclick = function() {
+			    sel.showOptions();
+			    sel.selectVal(this.index);
+			    return false;
+		    };
+		    optionAnchor.appendChild(optionTxt);
+		    optionLi.appendChild(optionAnchor);
+		    optionsUl.appendChild(optionLi);
+
+			if (select.options[k].selected) {
+				selectInput.value = select.options[k].text;
+				//optionLi.className = "selected";
+				if(select.options[k].style.color != null) selectInput.style.color = select.options[k].style.color;
+			}
+	    }
+		
+	    var rows = select.getAttribute("rows");
+	    if(!rows && k>12) { rows = 12; }
+        if(rows) {
+	        if(rows < select.options.length)
+	            optionsUl.style.height = rows * 15 + "px";
+	    }
+		
+	    select.style.position = "absolute";
+	    select.style.visibility = 'hidden';
+	    optionsUl.style.display = 'none';
+		
+        this.optionsUl = optionsUl;
+        
+        
+    },
+
+    showOptions: function (stats) {
+
+        var optionUl = this.optionsUl;
+    	
+    	if(openedOption != this.id_optionsUl) {
+    	    if(openedOption != "" && document.getElementById(openedOption)){
+    	        document.getElementById(openedOption).style.display = 'none';
+    	    }
+    	    openedOption = this.id_optionsUl;
+    	}
+    	
+        if (!stats){
+	        optionUl.style.display = (optionUl.style.display == 'none') ? 'block' : 'none';
+        } else {
+	        optionUl.style.display = stats;
+        }
+    },
+    
+    selectVal: function (optionNo) {
+        
+//        var optionUl = $(this.id_optionsUl);
+//        var optionUl = this.optionsUl;
+//        for(var k = 0; k < selectObj.options.length; k++) {
+//	        if(k == optionNo) {
+//		        //selectObj.options[k].selected = true;
+//		        optionUl.childNodes[k].className = "selected";
+//	        } else {
+//		        //selectObj.options[k].selected = false;
+//		        optionUl.childNodes[k].className = "";
+//	        }
+//        }
+        var selectObj = this.selectObj;
+        selectObj.selectedIndex = optionNo;
+        if(selectObj.onchange){selectObj.onchange()};
+                
+        var selectInput = $(this.id_selectInput);
+        
+        if (selectInput) {
+            selectInput.value = selectObj.options[optionNo].text;
+            if(selectObj.options[optionNo] != null && selectObj.options[optionNo].style.color != null) selectInput.style.color = selectObj.options[optionNo].style.color;
+        }
+    }
+
+}
+
+function selectMe(selectId, optionNo) {
+	//feed selected option to the actual select field
+	var selectObj = document.getElementById(selectId);
+	selectObj.selectedIndex = optionNo;
+//	var optionObj = document.getElementById("ou_" + selectId);
+//	for(var k = 0; k < selectObj.options.length; k++) {
+//		if(k == optionNo) {
+//				selectObj.options[k].selected = true;
+//				optionObj.childNodes[optionNo].className = "selected";
+//		} else {
+//			selectObj.options[k].selected = false;
+//			optionObj.childNodes[k].className = "";
+//		}
+//	}
+	if(selectObj.onchange){selectObj.onchange()};
+	//show selected options
+	document.getElementById("si_" + selectId).value = selectObj.options[optionNo].text;
+}
+

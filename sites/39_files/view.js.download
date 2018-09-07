@@ -1,0 +1,935 @@
+function App() {
+	var _this = this;
+
+	// ENV
+	_this.env = {
+		writer: $('#writer').val(), // 본문 작성자
+		loginId: $('#loginUserId').val(),
+		groupCd: $('#groupCd').val(), // 게시판 하단 리스트 그룹 코드
+		boardCd: $('#boardCd').val(), // 게시판 코드
+		boardSn: $('#boardSn').val(), // 게시글 코드
+		sk: $('#sk').val(), // 게시판 하단 리스트 검색조건
+		sv: $('#sv').val(), // 게시판 하단 리스트 검색어
+		isBoardGroupPage: false, // 그룹 목록여부
+		category: $('#category').val(), // 카테고리
+		commentCurrPage: 0, // 현재 댓글 페이지 번호
+		images: {}, // 업로드 이미지
+		editCommentSn: 0, // 댓글 수정시 번호
+		commentTotalCount: $('#commentCount').val(), // 전체 댓글 갯수
+		commentCurrentCount: 0, // 현재 페이지 까지의 댓글 카운트
+		bizType: $('#bizType').val(), // 게시판 정보중 bizType
+		commentReloadSize: 0,
+		confImageExt: $('#confUploadImageExt').val(),
+		confImageSize : $('#confUploadImageSize').val()
+	};
+
+	// 게시판 하단 리스트 그룹 여부
+	if(_this.env.groupCd != '') {
+		_this.env.isBoardGroupPage = true;
+	}
+
+	// 댓글입력창
+	var iptComment = $('.commentFroala');
+	// 업로드 갯수 제한
+	var imageCnt = 0;
+	// 댓글 작성 및 수정할 경우 위치 이동 변수
+	var commentFocus = false;
+
+	// 수정 화면 이동
+	_this.articleUpdate = function() {
+		location.href = BASE_URL + '/board/regist?boardCd='+_this.env.boardCd+'&boardSn='+_this.env.boardSn+'&mode=update';
+	};
+
+	// 게시글 삭제
+	_this.articleDelete = function() {
+		if (confirm('삭제된 본문은 복구되지 않습니다. 정말로 삭제하시겠습니까?')) {
+			var url = API_HOST + '/board/'+_this.env.boardCd+'/delete';
+
+			$.ajax({
+				url: url,
+				type: 'POST',
+				data: {
+					boardSn: _this.env.boardSn
+				},
+				success: function(result) {
+					var redirectUrl = BASE_URL + '/board/' + _this.env.boardCd;
+					location.href = redirectUrl;
+				},
+				error: function(result) {
+					util.log(result);
+					var res = JSON.parse(result.responseText);
+					alert(res.message);
+				}
+			});
+		}
+	};
+
+	// 댓글 목록
+	_this.getCommentList = function(type) {
+		var url = BASE_URL + '/board/'+_this.env.boardCd+'/'+_this.env.boardSn+'/comment';
+		var data = {};
+
+		if (type == 'next') {
+			data = {
+				order: 'date',
+				po: _this.env.commentCurrPage,
+				ps: $('#configCommentPageSize').val(),
+				writer: _this.env.writer
+			}
+		} else if (type == 'all') {
+			data = {
+				order: 'date',
+				po: 0,
+				ps: 999999,
+				writer: _this.env.writer
+			};
+		}
+
+		$('*[data-role=comment-loading]').show();
+
+		$.ajax({
+			url: url,
+			type: 'GET',
+			data: data,
+			dataType: 'html',
+			success: function(result) {
+				// 댓글창 위치 원위치
+				_this.commentDivCallBack();
+				
+				var html = '';
+
+				var totalCount = _this.env.commentTotalCount;
+				var currentCount = _this.env.commentCurrentCount;
+
+				$('*[data-role=comment-loading]').hide();
+
+				html = result;
+
+				// 메모 글자 수 제한 (영문 50자)
+				var $html = $(html);
+				$html.find('*[data-role=memo-note]').maxLength(50);
+
+				if (type == 'all') {
+					$('*[data-role=comment]').html($html);
+				} else if (type == 'next') {
+					$('*[data-role=comment]').append($html); 
+				}
+
+				_this.env.commentCurrentCount = $('*[data-role=comment-row]').length;
+
+				// observeList를 위해 현재 로우 다시 업데이트 및 주시하기 업데이트
+				$('#nowCommentCount').val(_this.env.commentCurrentCount);
+
+				$('*[data-role=comment-current-count]').text(_this.env.commentCurrentCount);
+
+				// 댓글을 불러오고 크기를 저장한다. 다시 불러왔을때, 비교하기위해
+				var refreshCommentReloadSize = result.length;
+				if (_this.env.commentReloadSize == refreshCommentReloadSize) {
+					$('*[data-role=comment-empty-result]').show();
+
+					setTimeout(function(){
+						$('*[data-role=comment-empty-result]').fadeOut();
+					}, 1000);
+				} else {
+					_this.env.commentReloadSize = refreshCommentReloadSize;
+				}
+
+				if (totalCount > _this.env.commentCurrentCount) {
+					_this.env.commentCurrPage = Number(_this.env.commentCurrPage) + 1;
+					$('*[data-role=comment-newest]').hide();
+					$('*[data-role=comment-more]').show();
+				} else {
+					$('*[data-role=comment-newest]').show();
+					$('*[data-role=comment-more]').hide();
+				}
+
+				// 로그인 사용자 댓글 차단 및 메모정보
+				if (IS_LOGIN) {
+					var memoListJSON = localStorage.getItem('MY_MEMO_LIST');
+					var jsonInfo = JSON.parse(memoListJSON);
+					// 댓글 목록 메모, 차단 처리
+					$('*[data-role=comment-row]').each(function() {
+						var row = $(this);
+						var authorId = row.data('author-id');
+
+						for(var i in jsonInfo.memoList) {
+							var destId = jsonInfo.memoList[i].destId;
+							var note = jsonInfo.memoList[i].note;
+							var blockArticleYn = jsonInfo.memoList[i].blockArticleYn;
+							if (destId == authorId) {
+								row.find('*[data-role=memo-note]').val(note);
+								row.find('*[data-role=comment-memo-content]').text(note).show();
+
+								if (blockArticleYn) {
+									row.addClass(' blocked-row hidden');
+									row.html('');
+								}
+							}
+						}
+					});
+				}
+
+				if(commentFocus){
+					_this.highCommentFocus();
+				}
+
+				// 이미지 레이지 로딩 처리하는 함수~!
+				$('.lazy').lazy();
+
+				// 주시하기 업데이트
+				var updateIsVaild = false;
+				var observeList = localStorage.getItem('OBSERVELIST_'+sessionUserId);
+				if(observeList != null){
+					observeList = JSON.parse(observeList);
+					if(observeList.length > 0){
+						for(var i in observeList) {
+							var obBoardSn = observeList[i].boardSn;
+							var obCmCount = observeList[i].cmCount;
+							if(obBoardSn == app.env.boardSn && obCmCount != $('#nowCommentCount').val()){
+								observeList[i].cmCount = $('#nowCommentCount').val();
+								var nowDate = new Date();
+								observeList[i].ttl = new Date(Date.parse(nowDate) + 1 * 1000 * 60 * 60 * 24).getTime();
+								updateIsVaild = true;
+							}
+						}
+					}
+					if(updateIsVaild) {
+						localStorage.setItem('OBSERVELIST_'+sessionUserId, JSON.stringify(observeList));
+					}
+				}
+			},
+			error: function(result) {
+				console.log("Error");
+			}
+		});
+	};
+
+	// 댓글 중 가장 commentSn이 큰 댓글에 Focus
+	_this.highCommentFocus = function() {
+		var highCommentSn = 0;
+		$('*[data-role=comment-row]').each(function() {
+			var row = $(this);
+			var commentSn = row.data('comment-sn');
+
+			if(highCommentSn < commentSn){
+				highCommentSn = commentSn;
+			}
+		});
+		$('*[data-comment-sn='+highCommentSn+']').css('outline', 'none !important').attr("tabindex", -1).focus();
+		commentFocus = false;
+	}
+
+	// 팝업 댓글 알림 클릭시 Focus 이동 함수
+	_this.focusAlarmComment = function(commentSn) {
+		$('*[data-comment-sn='+commentSn+']').css('outline', 'none !important').attr("tabindex", -1).focus();
+	}
+
+	// 댓글창 열기 Toogel
+	var toogleValue = "close";
+	_this.openCommentToogle = function() {
+		if(toogleValue == "close"){
+			$('#oriCommentArea').show();
+			$('#commentToogleBtn').hide();
+			$('.fr-view').focus();
+			toogleValue = "open";
+			_this.initCommentImg();
+		} else {
+			$('#oriCommentArea').hide();
+			$('#commentToogleBtn').show();
+			toogleValue = "close";
+		}
+	}
+
+	// 댓글 수정 레이어 열기
+	_this.commentEditorOpen = function(commentSn, fileSn, fileKey, imgUrl, imgName, imgExt, imgThumbUrl, imgThumbSn) {
+		if (!IS_LOGIN) {
+			if (confirm('로그인이 필요한 기능 입니다.')) {
+				location.href = BASE_URL + '/auth/login';
+			}
+			return false;
+		}
+
+		_this.commentInitialization();
+
+		// 댓글 수정 관련 값 넣기
+		$('#comment_mode').val('update');
+		$('#comment_commentSn').val(commentSn);
+
+		// 댓글 수정시 이미지가 있으면, 변수 등록
+		if(fileSn > 0){
+			_this.env.images['file_' + fileSn] = {
+				fileSn: fileSn,
+				fileKey: fileKey,
+				fileExt: imgExt
+			}
+
+			if(imgExt == 'mp4') {
+				imgUrl = imgThumbUrl;
+			}
+
+			var imgHtml = "";
+			imgHtml += '<ul class="upload_preview" data-role="fileupload-image-preview">';
+			imgHtml += '	<li class="image_thumbnail"><span class="imgbox"><img src="' + CDN_URL+ "/file" +imgUrl + COMMENT_IMG_PARAMETER +'"/></span></li>';
+			imgHtml += '	<li class="file_name">'+imgName
+			imgHtml += '		<button type="button" class="fa fa-times-circle" data-role="fileupload-remove-btn" data-thumb-sn="'+imgThumbSn+'" data-file-sn="'+fileSn+'" data-file-key="'+fileKey+'" data-file-type="F03"></button>';
+			imgHtml += '	</li>';
+			imgHtml += '</ul>';
+			$('#img_prev_div').append(imgHtml);
+			
+			imageCnt = 1;
+		}
+
+		// 수정 레이어 열기 시 바로 수정창 오픈
+		$('#oriCommentArea').show();
+		$('#commentToogleBtn').hide();
+		toogleValue = "open";
+
+		$('#rewrite_height').text('댓글 수정');
+		$('#oriCommentArea').addClass('re');
+
+		// 플로라 에디터 TEXT 창 초기화 후, 수정 내용 입력
+		iptComment.froalaEditor('html.set', $('*[data-comment-modify=' + commentSn + ']').val());
+
+		$('#comment_write_div').insertAfter('*[data-comment-sn=' + commentSn + ']');
+		$('.fr-view').focus();
+	};
+
+	// 대댓글 작성 레이어 열기
+	_this.commentReEditorOpen = function(commentSn, reUserId) {
+		if (!IS_LOGIN) {
+			if (confirm('로그인이 필요한 기능 입니다.')) {
+				location.href = BASE_URL + '/auth/login';
+			}
+			return false;
+		}
+		_this.commentInitialization();
+
+		// 댓글 수정 관련 값 넣기
+		$('#comment_mode').val('reWrite');
+		$('#comment_commentSn').val(commentSn);
+		$('#re_writer').val(reUserId);
+
+		// 대댓글 작성 레이어 열기 시 바로 수정창 오픈
+		$('#oriCommentArea').show();
+		$('#commentToogleBtn').hide();
+		toogleValue = "open";
+		_this.initCommentImg();
+
+		$('#rewrite_height').text('대댓글 작성');
+		$('#oriCommentArea').addClass('re');
+
+		// 플로라 에디터 TEXT 창 초기화
+		iptComment.froalaEditor('html.set', '');
+		$('#comment_write_div').insertAfter('*[data-comment-sn=' + commentSn + ']');
+		$('.fr-view').focus();
+	};
+
+	// 대댓글 언급 작성 레이어 열기
+	_this.commentReMentionOpen = function(commentSn, reCommentSn, reUserId) {
+		if (!IS_LOGIN) {
+			if (confirm('로그인이 필요한 기능 입니다.')) {
+				location.href = BASE_URL + '/auth/login';
+			}
+			return false;
+		}
+
+		_this.commentInitialization();
+		
+		var mentionHtml = "";
+		
+		$.each( froala.env.mention, function(i, value) {
+			if(reUserId == value.userId){
+				if(value.nickImageUrl){
+					mentionHtml += '<p><span class="atwho-inserted"><span class="data" data-id="'+value.userId+'"></span>@<img data-role="highlite" data-nick-id="'+value.userId+'" src="' + CDN_URL + '/file'+value.nickImageUrl+'?gif=true">님</span>&nbsp;</p>';
+				} else {
+					mentionHtml += '<p><span class="atwho-inserted"><span class="data" data-id="'+value.userId+'"></span>@<span data-role="highlite" data-nick-id="'+value.userId+'" class="nick">'+value.nick+'</span>님</span>&nbsp;</p>';
+				}
+			}
+		});
+
+		// 댓글 수정 관련 값 넣기
+		$('#comment_mode').val('reWrite');
+		$('#comment_commentSn').val(reCommentSn);
+		$('#re_writer').val(reUserId);
+
+		// 대댓글 작성 레이어 열기 시 바로 수정창 오픈
+		$('#oriCommentArea').show();
+		$('#commentToogleBtn').hide();
+		toogleValue = "open";
+
+		$('#rewrite_height').text('대댓글 작성');
+		$('#oriCommentArea').addClass('re');
+
+		// 플로라 에디터 TEXT 창 초기화
+		iptComment.froalaEditor('html.set', mentionHtml);
+		$('#comment_write_div').insertAfter('*[data-comment-sn=' + commentSn + ']');
+		$('.fr-view').focus();
+	};
+
+	// 댓글 쓰기창 원래 위치로 복귀
+	_this.commentDivCallBack = function() {
+		_this.commentInitialization();
+		$('#oriCommentArea').removeClass('re');
+		$('#comment_write_div').insertAfter('*[data-role=comment-newest]');
+	}
+	
+	// 댓글 관련 변수 초기화
+	_this.commentInitialization = function() {
+		$('#comment_mode').val('write');
+		$('#comment_commentSn').val('');
+		$('#re_writer').val('');
+		$('#img_prev_div').empty(); // 댓글 수정 이미지 DIV 내용 초기화
+		_this.env.images = {}; // 이미지 변수 초기화
+		imageCnt = 0;
+		iptComment.froalaEditor('html.set', '');
+		$('#rewrite_height').text('댓글쓰기');
+	}
+
+	// 댓글 쓰기 밸리데이션
+	_this.commentWriteValidation = function(mode, commentSn) {
+		var isValid = true;
+		var confMinContentLength = $('#configMinContentLength').val() * 1;
+		var commentValue;
+
+		commentValue = iptComment.froalaEditor('html.get');
+
+		// 댓글 스페이스바 체크
+		var spaceCheck = util.stripTags(commentValue);
+		if(spaceCheck.length < confMinContentLength){
+			alert('댓글은 최소'+confMinContentLength+'글자 이상 입력해 주세요.');
+			return false;
+		}
+
+		// 금칙어 적용 (본문/댓글)
+		var contentBanWordStr = $('#configStopWord').val();
+		var contentValue = commentValue;
+		var isValidWord = true;
+		var prohibitionWordCheck = {};
+
+		prohibitionWordCheck = util.prohibitionWord(contentValue, contentBanWordStr);
+		isValidWord = prohibitionWordCheck.isValidWord;
+		contentValue = prohibitionWordCheck.content;
+
+		if (!isValidWord) {
+			alert('허용되지 않은 문자가 있습니다. 허용되지 않은 문자는 “ * ”로 변경되어 표시됩니다.');
+		}
+
+		iptComment.froalaEditor('html.set', contentValue);
+
+		// 댓글 반복 클릭 막기
+		if (isValid) {
+			$('#rewrite_height').prop('disabled', true);
+		}
+		return isValid;
+	};
+
+	// 댓글 쓰기
+	_this.commentWrite = function() {
+		var mode = $('#comment_mode').val();
+		var commentSn = parseInt($('#comment_commentSn').val());
+		var reUserId = $('#re_writer').val();
+
+		if (IS_LOGIN) {
+			var isValid = _this.commentWriteValidation(mode, commentSn);
+			if (isValid) {
+				var comment = iptComment.froalaEditor('html.get');
+				var images = _this.env.images;
+				var url;
+
+				if (mode == 'write') {
+					url = API_HOST + '/board/'+_this.env.boardCd+'/'+_this.env.boardSn+'/comment/regist';
+				} else if (mode == 'update') {
+					url = API_HOST + '/board/'+_this.env.boardCd+'/'+_this.env.boardSn+'/comment/update/' + commentSn;
+				} else if (mode == 'reWrite') {
+					url = API_HOST + '/board/'+_this.env.boardCd+'/'+_this.env.boardSn+'/comment/regist/';
+				}
+
+				var checkComment = comment;
+
+				checkComment = util.stripTags(checkComment);
+				checkComment = util.replaceAll(checkComment, '&nbsp;', '');
+				checkComment = util.deleteSpace(checkComment);
+
+				if(checkComment.length < 1){
+					comment = '   ';
+				}
+
+				var alarmUserId = '';
+				if(mode == 'write') {
+					alarmUserId = _this.env.writer;
+				} else if(mode == 'reWrite') {
+					alarmUserId = reUserId;
+				}
+
+				var data = {
+					boardSn: _this.env.boardSn,
+					param: {
+						comment: comment,
+						images: [],
+						alarmUserId: alarmUserId
+					}
+				};
+
+				$.each(images, function(key, val) {
+					data.param.images.push(val);
+				});
+
+				if(mode == 'reWrite') {
+					data.param.reCommentSn = commentSn;
+				}
+
+				data.param = JSON.stringify(data.param);
+
+				$.ajax({
+					url: url,
+					type: 'POST',
+					data: data,
+					success: function(commentSn) {
+						// 글쓰기 창 튼 원위치
+						_this.commentDivCallBack();
+						// 댓글 Reload 하기전, Focus 조정
+						if (mode != 'update') {
+							commentFocus = true;
+						}
+						// 댓글 다시 Reload
+						_this.getCommentList('all');
+
+						// 댓글 연속쓰기 방지 버튼
+						$('#rewrite_height').prop('disabled', false);
+
+					},
+					error: function(request) {
+						_this.commentInitialization();
+						_this.commentDivCallBack();
+
+						if(request.status == 400) {
+							var res = JSON.parse(request.responseText);
+							alert(res.message);
+							// 버튼 다시 활성화
+							$('#rewrite_height').prop('disabled', false);
+
+						} else {	
+							var errUrl = API_HOST + '/ajax/error';
+							var parm = {};
+							if(commentSn == undefined){
+								parm = {
+									params : request.responseText,
+									type : 'Comment',
+									location : 'write',
+									boardCd : _this.env.boardCd,
+									boardSn : _this.env.boardSn
+								};
+							} else {
+								parm = {
+									params : request.responseText,
+									type : 'Comment',
+									location : 'write',
+									boardCd : _this.env.boardCd,
+									boardSn : _this.env.boardSn,
+									commentSn : commentSn
+								};
+							}
+							util.ajaxError(errUrl, parm);
+						}
+					}
+				});
+			}
+		} else {
+			if (confirm('로그인이 필요한 기능 입니다.')) {
+				location.href = BASE_URL + '/auth/login';
+			}
+		}
+	};
+
+	// 댓글 삭제
+	_this.commentDelete = function(commentSn) {
+		if (confirm('삭제된 댓글은 복구되지 않습니다. 정말로 삭제 하시겠습니까?')) {
+			var url = API_HOST + '/board/'+_this.env.boardCd+'/'+_this.env.boardSn+'/comment/delete/'+commentSn;
+			var params = {};
+
+			$.ajax({
+				url: url,
+				type: 'POST',
+				data: params,
+				success: function(result) {
+					if(result) {
+						location.reload();
+					}
+				},
+				error: function(request) {
+					if(request.status == 400) {
+						var res = JSON.parse(request.responseText);
+						alert(res.message);
+					} else {
+						var errUrl = API_HOST + '/ajax/error';
+						var parm = {
+							params : request.responseText,
+							type : 'Comment',
+							location : 'write',
+							boardCd : _this.env.boardCd,
+							boardSn : _this.env.boardSn,
+							commentSn : commentSn
+						};
+						util.ajaxError(errUrl, parm);
+					}
+				}
+			});
+		}
+	};
+
+	// 작성자 게시물 리스트 정보
+	_this.articleWriterList = function(){
+		var url = BASE_URL + '/board/articleWriterList/'+ _this.env.writer;
+		$.ajax({
+			url: url,
+			type: 'GET',
+			dataType: 'html',
+			success: function (result){
+				$("#writerList_div").html(result);
+				$('#tab_writer_list_article').addClass('active');
+				$('#tab_writer_list_comment').removeClass('active');
+				// 목록에서 공감 Class 추가
+				ui.initSymphathy();
+			},
+			error: function (result) {
+				console.log(result);
+			}
+		});
+	};
+
+	// 작성자 댓글 리스트 정보
+	_this.commentWriterList = function(){
+		var url = BASE_URL + '/board/commentWriterList/'+ _this.env.writer;
+		$.ajax({
+			url: url,
+			type: 'GET',
+			dataType: 'html',
+			success: function (result){
+				$("#writerList_div").html(result);
+				$('#tab_writer_list_comment').addClass('active');
+				$('#tab_writer_list_article').removeClass('active');
+				// 목록에서 공감 Class 추가
+				ui.initSymphathy();
+			},
+			error: function (result) {
+				console.log(result);
+			}
+		});
+	};
+	
+	// 서명 레이아웃 설정
+	_this.initSignatureLayout = function() {
+		var h = $('.signature-content').outerHeight();
+
+		if (h > 210) {
+			$('.button-expand').show();
+		} else {
+			$('.button-expand').hide();
+		}
+	};
+	
+	// 본문 작정자 메모
+	_this.initBlockView = function() {
+		if(IS_LOGIN){
+			// LocalStroage 메모 정보
+			var memoListJSON = localStorage.getItem('MY_MEMO_LIST');
+			var jsonInfo = JSON.parse(memoListJSON);
+			// 게시물 본문 메모 처리
+			for(var i in jsonInfo.memoList) {
+				var destId = jsonInfo.memoList[i].destId;
+				var note = jsonInfo.memoList[i].note;
+
+				if(destId == _this.env.writer) {
+					$('*[data-role=post-info] *[data-role=memo-note]').val(note);
+					$('*[data-role=post-memo-content]').text(note).show()
+				}
+			}
+		}
+	};
+
+	// 메모 등록
+	_this.memo = function(userId, note) {
+		if (_this.env.loginId == userId) {
+			alert('내가 쓴 게시물은 메모 할 수 없습니다.');
+			return false;
+		}
+
+		if (IS_LOGIN){
+			var url = API_HOST + '/mypage/memo/block/' + userId;
+			var params = {
+				note: note
+			};
+	
+			$.ajax({
+				url: url,
+				type: 'POST',
+				data: {
+					myUserMemo: JSON.stringify(params)
+				},
+				success: function(result) {
+					//로컬 스토리지 업데이트
+					storage.storageUpdatePopup(userId);
+					location.reload();
+				},
+				error: function(result) {
+					var res = JSON.parse(result.responseText);
+				}
+			});
+		} else {
+			if (confirm('로그인이 필요한 기능 입니다.')) {
+				location.href = BASE_URL + '/auth/login';
+			}
+		}
+	};
+
+	// 스크랩
+	_this.articleScrap = function() {
+		if (IS_LOGIN) {
+			popup.scrapPopup(_this.env.boardCd, _this.env.boardSn, 'regist');
+		} else {
+			if (confirm('로그인이 필요한 기능 입니다.')) {
+				location.href = BASE_URL + '/auth/login';
+			}
+		}
+	};
+
+	// 신고
+	_this.articleSingo = function(authorId, commentSn) {
+		if (_this.env.loginId == authorId) {
+			alert('내가 쓴 게시물은 신고할 수 없습니다.');
+			return false;
+		}
+
+		if (IS_LOGIN) {
+			if (commentSn != undefined) {
+				popup.singoPopup(_this.env.boardCd, _this.env.boardSn, commentSn);
+			} else {
+				popup.singoPopup(_this.env.boardCd, _this.env.boardSn);
+			}
+		} else {
+			if (confirm('로그인이 필요한 기능 입니다.')) {
+				location.href = BASE_URL + '/auth/login';
+			}
+		}
+	};
+
+	// 이미지 업로드 초기화
+	_this.initCommentImg = function() {
+		$input = $('*[data-role=fileupload-image]').filter('*[data-idx=imgComment]');
+		fileUpload.initFileUpload($input, 'comment', 'viewInit');
+	}
+
+	// 이벤트 바인드
+	_this.eventBind = function() {
+		// 메모 글자 수 제한 (영문 50자)
+		$('*[data-role=memo-note]').maxLength(50);
+
+		// 댓글 닉 클릭시 활성화
+		$(document).on('click', '*[data-role=highlite]', function(e) {
+			var userNick = $(this).data('nick-id');
+			$('*[data-author-id').removeClass("highlight");
+			$('*[data-author-id="'+userNick+'"]').addClass("highlight");
+		});
+
+		// 댓글의 MP4 재생 버튼
+		$(document).on('click', '*[data-role=comment-video]', function(e) {
+			var vKey = $(this).data("video-key");
+
+			var video = document.getElementById(vKey);
+			if(video.paused){
+				video.play();
+			} else {
+				video.pause();
+			}
+		});
+
+		// 댓글의 GIF 썸네일 이미지 클릭시 애니메이션 GIF 보여줌 
+		$(document).on('click', '*[data-role=image-gif]', function(e) {
+			var isGif = $(this).data('gif');
+			var imgSrc = $(this).attr('src');
+
+			if (isGif) {
+				imgSrc = imgSrc.replace('&gif=true', '');
+			} else {
+				imgSrc = imgSrc.replace('&gif=false', '');
+				imgSrc = imgSrc + '&gif=true';
+			}
+			$(this).data('gif', !isGif);
+			$(this).attr('src', imgSrc);
+		});
+
+		// 이미지 클릭 시 새창에서 보여주기
+		$(document).on('click', '*[data-role=attach-image]', function(e) {
+			var imgFullUrl = $(this).attr('src');
+			var imgUrl = imgFullUrl.split('?')[0];
+			var width = $(this).data('img-width');
+			var height = $(this).data('img-height');
+			var subject = $('#subject').val();
+
+			if(width == undefined) {
+				width = 1024;
+				height = 800;
+			} else {
+				width = width * 1;
+				height = height * 1;
+			}
+			popup.imgOriPopup(width + 22, height + 22, imgUrl, subject);
+		});
+
+		// 파일 추가
+		$(document).on('click', '*[data-role=fileupload-add-btn]', function(e){
+			if (IS_LOGIN) {
+				var imagesData = _this.env.images;
+
+				if (imageCnt == 0) {
+					$input = $('*[data-role=fileupload-image]').filter('*[data-idx=imgComment]');
+					fileUpload.initFileUpload($input, 'comment', '');
+				} else {
+					alert('이미지 파일은 한개만 등록할 수 있습니다.');
+				}
+			} else {
+				if (confirm('로그인이 필요한 기능 입니다.')) {
+					location.href = BASE_URL + '/auth/login';
+				}
+			}
+		});
+
+		// 파일 삭제
+		$(document).on('click', '*[data-role=fileupload-remove-btn]', function(e) {
+			if (confirm('저장된 파일이 삭제되며 복원할 수 없습니다. 삭제 하시겠습니까?')) {
+				var scope = $(this);
+				var commentSn = $(this).data('comment-sn');
+				var fileSn = $(this).data('file-sn');
+				var fileType = 'F03';
+				var fileKey = $(this).data('file-key');
+				var thumbSn = scope.data('thumb-sn');
+				var url = API_HOST + '/file/delete';
+
+				if(fileKey == undefined){
+					fileKey = '';
+				}
+				if(thumbSn == undefined){
+					thumbSn = '';
+				}
+
+				var params = {
+					fileType: fileType,
+					fileSn: fileSn,
+					thumbSn: thumbSn,
+					k: fileKey
+				};
+
+				$.ajax({
+					url: url,
+					type: 'POST',
+					data: params,
+					success: function(result) {
+						_this.env.images = {};
+						delete _this.env.images['file_' + fileSn];
+						scope.closest('*[data-role=fileupload-image-preview]').remove();
+						imageCnt = 0;
+					},
+					error: function(result) {
+						util.log(result);
+						var res = JSON.parse(result.responseText);
+						alert(res.message);
+					}
+				});
+			}
+		});
+
+		// 메모 입력창 EnterKey
+		$('*[data-role=memo-note]').on('keydown', function(e){
+			if (e.keyCode == 13) {
+				$('*[data-role=memo-note-botton]').trigger('click');
+			}
+		});
+	};
+
+	// 중고장터 판매 완료 버튼 : 사용하지 않음
+	_this.marketDealComplete = function() {
+		var url = API_HOST + '/board/'+_this.env.boardCd + '/modify/category';
+		$.ajax({
+			url: url,
+			type: 'POST',
+			data: {
+				boardSn: _this.env.boardSn
+			},
+			dataType: 'json',
+			success: function(result) {
+				location.reload();
+			},
+			error: function(request, status, error) {
+				
+			}
+		});
+	};
+
+	// 알구개 품절 버튼
+	_this.jirumDealComplete = function(status) {
+		if("sell" == status) {
+			var isVaild = confirm("품절을 취소 하시겠습니까?");
+			if(!isVaild) {
+				return false;
+			}
+		}
+		var url = API_HOST + '/board/'+_this.env.boardCd + '/modify/addonData';
+		$.ajax({
+			url: url,
+			type: 'POST',
+			data: {
+				boardSn: _this.env.boardSn,
+				status: status
+			},
+			dataType: 'json',
+			success: function(result) {
+				location.reload();
+			},
+			error: function(request, status, error) {
+				
+			}
+		});
+	};
+	
+	// Init
+	_this.init = function() {
+		// 댓글 목록 호출
+		_this.getCommentList('next');
+		// 네이버 광고 호출 - 직접홍보 게시판에서는 사용하지 않는다.
+		if(_this.env.bizType != 'hongbo' && _this.env.bizType != 'insure') {
+			naver.initNaverAd('view');
+		}
+		if(_this.env.bizType != 'insure') {
+			// 작성자 게시물 리스트 호출
+			_this.articleWriterList();
+			// 하단 게시물 리스트 호출
+			list.getArticleList('new');
+		}
+
+		// 서명 레이아웃 설정
+		_this.initSignatureLayout();
+
+		//
+		if($('#od').val() == "T31"){
+			ui.getYearPeriod();
+		};
+		
+		// 검색했을 경우 검색 조건 SelectBox 설정
+		ui.selectBoxSelected();
+		
+		// 본문 작정자 메모 및 댓글 메모&목록 차단
+		_this.initBlockView();
+		
+		// 이벤트 함수
+		_this.eventBind();
+		
+		// 플로라 에디터 초기화
+		froala.initFroala();
+		
+		// 댓글 이미지 업로드 초기화
+//		_this.initCommentImg();
+
+	}();
+}
+
+var app = new App();

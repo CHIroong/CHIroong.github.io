@@ -1,0 +1,17 @@
+var nName=navigator.appName
+if (nName=="Microsoft Internet Explorer") {
+document.write ('<OBJECT id=' + Shape_objid + ' CLASSID="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"  CODEBASE="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" ID=' + Shape_objid + ' WIDTH=' + Shape_width + ' HEIGHT=' + Shape_height + '> \n');
+document.write ('<PARAM NAME=movie VALUE="' + Shape_url + '">\n');
+}
+else{
+document.write ('<OBJECT type="application/x-shockwave-flash" data="' + Shape_url + '" id=' + Shape_objid + ' ID=' + Shape_objid + ' WIDTH=' + Shape_width + ' HEIGHT=' + Shape_height + '> \n');
+}
+document.write ('<PARAM NAME=play VALUE=true>\n');
+document.write ('<PARAM NAME=loop VALUE=true>\n');
+document.write ('<PARAM NAME=menu VALUE=false>\n');
+document.write ('<PARAM NAME=quality VALUE=high>\n');
+document.write ('<PARAM NAME=wmode VALUE=transparent>\n');
+document.write ('<param name="FlashVars" value="click='+Shape_click+'" >\n');
+document.write ('<param name=allowScriptAccess value=always>\n');
+document.write ('</OBJECT>\n');
+

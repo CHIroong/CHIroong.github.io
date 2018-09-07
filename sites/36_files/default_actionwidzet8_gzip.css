@@ -1,0 +1,177 @@
+@charset "utf-8";
+.livereActionWidzet * { margin: 0px; padding: 0px; font-family: "맑은 고딕",Malgun Gothic, Arial; font-size: 12px; line-height: 18px; color: #6c6c6c; width: auto; height: auto; }
+.livereActionWidzet div { zoom: 1; }
+.livereActionWidzet div:after { content:"."; display:block; font-size:0; line-height:0; height:0; clear:both; visibility:hidden; }
+.livereActionWidzet dl { zoom: 1; }
+.livereActionWidzet dl:after { content:"."; display:block; font-size:0; line-height:0; height:0; clear:both; visibility:hidden; }
+.livereActionWidzet ul { list-style-type: none; zoom: 1; }
+.livereActionWidzet ul:after { content:"."; display:block; font-size:0; line-height:0; height:0; clear:both; visibility:hidden; }
+.livereActionWidzet img { vertical-align:top; }
+.livereActionWidzet button { overflow: visible; width: auto; cursor: pointer; }
+.livereActionWidzet button:focus, .livereActionWidzet input:focus { outline: 1px dotted #000; }
+.livereActionWidzet button::-moz-focus-inner { padding: 0; border: 0 }
+.livereActionWidzet button > span { overflow: hidden; }
+.livereActionWidzet button:hover > span { text-decoration: underline; font-weight: bold; }
+.livereActionWidzet button:hover > strong { text-decoration: underline; font-weight: bold; }
+.livereActionWidzet textarea { resize: none; color: #000; }
+.livereActionWidzet .livereAction_t_indent { text-indent: -9999px; width: 16px; height: 16px; }
+.livereActionWidzet .livereAction_t_center { text-align: center; }
+.livereActionWidzet .livereAction_None { display: none; }
+.livereActionWidzet .livereAction_AfterClear:after { content:"."; display:block; font-size:0; line-height:0; height:0; clear:both; visibility:hidden; }
+
+/* .livereActionWidzet .livereActionBtn1 { background-color: transparent; border: none; padding: 8px 11px; border-left: 1px solid #e5e5e5; } */
+.livereActionWidzet .livereActionBtn1 { background-color: transparent; border: none; padding: 8px 0px; border-left: 1px solid #e5e5e5; width: 60px; }
+.livereActionWidzet .livereActionBtn1:hover { 
+	background-image: -webkit-gradient( linear, left top, left bottom, color-stop(0.01, rgb(235,235,235)), color-stop(1, rgb(255,255,255)) );
+	background-image: -moz-linear-gradient( center top, rgb(235,235,235), rgb(255,255,255) );
+	Filter: progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#ebebeb, endColorstr=#ffffff);
+}
+
+.livereActionWidzet .livereActionBtn2 { 
+	background-color: #fdfdfd; border: none; border-left: 1px solid #e5e5e5;
+	background-image: -webkit-gradient( linear, left top, left bottom, color-stop(0.01, rgb(253,253,253)), color-stop(1, rgb(245,245,245)) );
+	background-image: -moz-linear-gradient( center top, rgb(253,253,253), rgb(245,245,245) );
+	Filter: progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#fdfdfd, endColorstr=#f5f5f5);
+}
+
+.livereActionWidzet .livereActionBtn2:hover { background: #ececec; Filter: none; }
+
+.livereActionWidzet .livereActionBtn3 { 
+	border: 1px solid #b0000a; background-color: #b0000a;
+	background-image: -webkit-gradient( linear, left top, left bottom, color-stop(0.01, rgb(254,52,62)), color-stop(1, rgb(202,2,13)) );
+	background-image: -moz-linear-gradient( center top, rgb(254,52,62), rgb(202,2,13) );
+	Filter: progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#fe343e, endColorstr=#ca020d);
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	padding: 2px 10px;
+}
+
+.livereActionWidzet .livereActionBtn3:hover { 
+	background-image: -webkit-gradient( linear, left top, left bottom, color-stop(0.01, rgb(202,2,13)), color-stop(1, rgb(254,52,62)) );
+	background-image: -moz-linear-gradient( center top, rgb(202,2,13), rgb(254,52,62) );
+	Filter: progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#ca020d, endColorstr=#fe343e);
+}
+
+.livereActionWidzet .livereActionBtn4 { background-color: transparent; border: none; }
+
+.livereActionWidzet { display: inline-block; zoom: 1; *display: inline; }
+
+#livereActionWidzetTitleWrapper { float: left; clear: both; margin-bottom: 5px; }
+#livereActionWidzetTitle { float: left; width: 99px; height: 16px; background: url("//101.livere.co.kr/images/ver8/actionwidzet/widzet_banner.png") no-repeat 0px 0px; }
+
+#livereActionEmotionContainer { float: left; clear: both; border-top: 1px solid #e5e5e5; border-right: 1px solid #e5e5e5; border-radius: 5px 5px 0px 0px; display: inline-block; zoom: 1; *display: inline; }
+#livereActionEmotionWrapper { display: inline-block; zoom: 1; *display: inline; }
+#livereActionEmotionWrapper .livereActionEmotionBtnWrapper { float: left; display: inline-block; zoom: 1; *display: inline; }
+#livereActionEmotionWrapper .livereActionEmotionBtn { }
+#livereActionEmotionWrapper .livereActionEmotionBtn span { display: block; font-size: 12px; font-family: "Dotum"; letter-spacing: -1px; color: #000; }
+#livereActionEmotionWrapper .livereActionEmotionBtn:hover span { font-size: 11px; }
+#livereActionEmotionWrapper .livereActionEmotionBtn strong { display: block; font-size: 16px; font-family: "Arial"; color: #555; }
+
+#livereActionDomainContainer { float: left; clear: both; border: 1px solid #e5e5e5; border-left: none; border-radius: 0px 0px 5px 5px; display: inline-block; zoom: 1; *display: inline; }
+/*
+#livereActionDomainContainer .livereActionDomainControlBtn { float: left; padding: 19px 3px; }
+#livereActionDomainContainer .livereActionDomainControlBtn span { float: left; font-size: 0px; background: url("//101.livere.co.kr/images/ver8/pluginicon8.png") no-repeat 3px -196px; width: 11px; }
+#livereActionDomainContainer #livereActionDomainLeftBtn span { background-position: 3px -195px; }
+#livereActionDomainContainer #livereActionDomainRightBtn span { background-position: 3px -210px; }
+#livereActionSNSButtonCarousel { float: left; overflow: hidden; width: 277px; }
+#livereActionSNSButtonContainer { position: relative; top: 0px; left: 0px; width: 1000px; }
+*/
+#livereActionSNSButtonContainer { position: relative; display: inline-block; zoom: 1; *display: inline; z-index: 10; }
+#livereActionSNSButtonContainer .livereActionSNSButtonWrapper { display: inline-block; zoom: 1; *display: inline; }
+/* #livereActionSNSButtonContainer .livereActionSNSButton { padding: 10px 15px; text-align: center; width: 56px; } */
+#livereActionSNSButtonContainer .livereActionSNSButton { padding: 7px 0px; text-align: center; width: 60px; }
+#livereActionSNSButtonContainer .livereActionSNSButton span { display: block; margin: 0 auto; width: 18px; height: 18px; background: url("//101.livere.co.kr/images/ver8/snsicon8.png") no-repeat -46px -299px; }
+#livereAction_twitter.livereActionSNSButton span { background-position: -46px 0px; }
+#livereAction_facebook.livereActionSNSButton span { background-position: -46px -23px; }
+#livereAction_me2day.livereActionSNSButton span { background-position: -46px -46px; }
+#livereAction_yozm.livereActionSNSButton span { background-position: -46px -69px; }
+#livereAction_cyworld.livereActionSNSButton span { background-position: -46px -92px; }
+#livereAction_weibo_sina.livereActionSNSButton span { background-position: -46px -207px; }
+#livereAction_linkedIn.livereActionSNSButton span { background-position: -46px -276px; }
+#livereAction_naver.livereActionSNSButton span { background-position: -46px -299px; }
+#livereAction_kakao.livereActionSNSButton span {background: url("//101.livere.co.kr/images/ver8/share_kakaostory.png") no-repeat;}
+
+
+#livereActionSNSButtonContainer .livereActionSNSButton strong { display: block; font-size: 12px; font-family: "Arial"; color: #555; margin-top: 3px; }
+
+#livereActionPostingContainer { position: absolute; top: 60px; left: 0px; width: 301px; z-index: 5; }
+#livereActionPostingLayer { border-radius: 3px; }
+#livereActionPostingTitle { color: #fff; float: left; }
+#livereActionPostingClose { float: right; }
+#livereActionPostingClose span { float: left; background: url("//101.livere.co.kr/images/ver8/pluginicon8.png") no-repeat 0px -257px; width: 9px; height: 10px; margin-top: 3px; }
+#livereActionPostingLayer .livereActionPostingTop { padding: 5px 10px; border-radius: 5px 5px 0px 0px; zoom: 1; *display: block; }
+#livereActionPostingLayer #livereActionPostingTop_twitter { background-color: #32ccfe; }
+#livereActionPostingLayer #livereActionPostingTop_facebook { background-color: #446ba3; }
+#livereActionPostingLayer #livereActionPostingTop_me2day { background-color: #594190; }
+#livereActionPostingLayer #livereActionPostingTop_yozm { background-color: #ef365a; }
+#livereActionPostingLayer #livereActionPostingTop_cyworld { background-color: #ff6202; }
+#livereActionPostingLayer #livereActionPostingTop_weibo_sina { background-color: #edb53d; }
+#livereActionPostingLayer #livereActionPostingTop_linkedIn { background-color: #007AB6; }
+#livereActionPostingLayer #livereActionPostingTop_naver { background-color: #2DBE00; }
+#livereActionPostingLayer #livereActionPostingTop_kakao { background-color: #FFEB00; }
+#livereActionPostingLayer #livereActionPostingTop_kakao #livereActionPostingTitle { color: #000000; } 
+#livereActionPostingLayer #livereActionPostingTop_twitter strong, #livereActionPostingLayer #livereActionPostingTop_cyworld strong, #livereActionPostingLayer #livereActionPostingTop_weibo_sina strong { color: #000; }
+
+
+#livereActionPostingLayer #livereActionPostingMiddle { padding: 0px 20px; border-left: 1px solid #e5e5e5; border-right: 1px solid #e5e5e5; zoom: 1; background-color: #fff; }
+#livereActionPostingMemberName { padding-top: 10px; color: #000; font-size: 12px; font-weight: bold; text-align: left; }
+#livereActionPostingThumbWrapper { position: relative; float: left; display: inline-block; border: 1px solid #C7C7C7; border-bottom: 1px solid #C4C4C4; padding: 3px; border-radius: 5px; background-color: #fff; box-shadow: 0px 1px 3px #C4C4C4; }
+#livereActionPostingThumb { width: 50px; height: 50px; }
+
+#livereActionPostingThumbWrapper .livereActionPostingFavi { position: absolute; right: -7px; bottom: -7px; display: block; width: 18px; height: 18px; background: url("//101.livere.co.kr/images/ver8/snsicon8.png") no-repeat -46px 0px; }
+#livereActionPostingThumbWrapper #livereActionPostingFavi_twitter { background-position: -46px 0px; }
+#livereActionPostingThumbWrapper #livereActionPostingFavi_facebook { background-position: -46px -23px; }
+#livereActionPostingThumbWrapper #livereActionPostingFavi_me2day { background-position: -46px -46px; }
+#livereActionPostingThumbWrapper #livereActionPostingFavi_yozm { background-position: -46px -69px; }
+#livereActionPostingThumbWrapper #livereActionPostingFavi_cyworld { background-position: -46px -92px; }
+#livereActionPostingThumbWrapper #livereActionPostingFavi_weibo_sina { background-position: -46px -207px; }
+#livereActionPostingThumbWrapper #livereActionPostingFavi_linkedIn { background-position: -46px -276px; }
+#livereActionPostingThumbWrapper #livereActionPostingFavi_naver { background-position: -46px -299px; }
+#livereActionPostingThumbWrapper #livereActionPostingFavi_kakao { background-position: -46px -345px; }
+
+#livereActionPostingText { border: 1px solid #c7c7c7; border-radius: 5px; margin-left: 10px; width: 181px; *width: 178px; height: 73px; padding: 4px; overflow: hidden; }
+
+#livereActionPostingLayer #livereActionPostingBottom { padding: 10px 20px; border: 1px solid #e5e5e5; border-top: none; border-bottom: none; zoom: 1; background-color: #fff; }
+
+#livereActionPostingTextCountWrapper { float:left; display: inline-block; zoom: 1; *display: inline; position: relative; top: -10px; left: 70px; }
+#livereActionPostingSubmitBtn { float: right; padding-right: 6px; }
+#livereActionPostingSubmitBtn span { font-weight: bold; color: #fff; padding-right: 18px; background: url("//101.livere.co.kr/images/ver8/pluginicon8.png") no-repeat 100% 2px; }
+#livereActionPostingLayer #livereActionPostingPersonContainer { border: 1px solid #e5e5e5; border-top: none; border-radius: 0px 0px 5px 5px; zoom: 1; background: url("//101.livere.co.kr/images/ver8/actionwidzet/person_pattern.png") repeat #fff; }
+#livereActionPostingPersonTop { padding: 5px 9px; background-color: #e2e2e2; }
+#livereActionPostingPersonTop #livereActionPostingPersonTitle { font: 11px bold "Dotum"; color: #404040; padding-left: 13px; background: url("//101.livere.co.kr/images/ver8/actionwidzet/icon.png") no-repeat 0px -79px; }
+#livereActionPostingPersonMiddle { float: left; padding: 0px 22px; position: relative; }
+#livereActionPostingPersonMiddle.livereActionPostingPersonCarouselActive { padding: 0px 40px; }
+#livereActionPostingPersonCarouselContainer { width: 255px; position: relative; overflow: hidden; padding: 9px 0px; }
+#livereActionPostingPersonMiddle.livereActionPostingPersonCarouselActive #livereActionPostingPersonCarouselContainer { width: 219px; }
+#livereActionPostingPersonMiddle .livereActionPostingPersonCarouselBtn { display: none; position: absolute; width: 20px; height: 33px; 
+	background-color: #fff; border: 1px solid #d9d9d9;
+	background-image: -webkit-gradient( linear, left top, left bottom, color-stop(0.01, rgb(255,255,255)), color-stop(1, rgb(243,243,243)) );
+	background-image: -moz-linear-gradient( center top, rgb(255,255,255), rgb(243,243,243) );
+	Filter: progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#ffffff, endColorstr=#f3f3f3);
+}
+#livereActionPostingPersonMiddle .livereActionPostingPersonCarouselBtn span { float: left; background: url("//101.livere.co.kr/images/ver8/actionwidzet/icon.png") no-repeat 6px 5px; }
+#livereActionPostingPersonMiddle #livereActionPostingPersonCarouselBtn_left { top: 10px; left: 9px; }
+#livereActionPostingPersonMiddle #livereActionPostingPersonCarouselBtn_left span { background-position: 6px 5px; }
+#livereActionPostingPersonMiddle #livereActionPostingPersonCarouselBtn_right { top: 10px; right: 9px; }
+#livereActionPostingPersonMiddle #livereActionPostingPersonCarouselBtn_right span { background-position: 6px -15px; }
+#livereActionPostingPersonMiddle.livereActionPostingPersonCarouselActive .livereActionPostingPersonCarouselBtn { display: block; }
+#livereActionPostingPersonMiddle.livereActionPostingPersonEmpty { float: none; }
+#livereActionPostingPersonMiddle.livereActionPostingPersonEmpty #livereActionPostingPersonCarouselContainer { display: none; }
+#livereActionPostingPersonMiddle.livereActionPostingPersonEmpty p { text-align: center; padding: 15px 0px; font-size: 11px; font-family: "Dotum"; color: #626262; }
+#livereActionPostingPersonCarousel { float: left; position: relative; left: 0px; width: 1600px; }
+#livereActionPostingPersonCarousel .livereActionPostingPersonBtnWrapper { float: left; padding-bottom: 4px; display: inline-block; margin-right: 15px;}
+#livereActionPostingPersonMiddle.livereActionPostingPersonCarouselActive .livereActionPostingPersonBtnWrapper { margin-right: 11px; }
+#livereActionPostingPersonCarousel .livereActionPostingPersonThumbBtn { position: relative; float: left; margin-right: 4px; }
+#livereActionPostingPersonCarousel .livereActionPostingPersonThumb { float: left; width: 33px; height: 33px; border: 1px solid #dedede; }
+#livereActionPostingPersonCarousel .livereActionPostingPersonFavi { position: absolute; bottom: -4px; right: -4px; width: 15px; height: 15px; background: url("//101.livere.co.kr/images/ver8/snsicon8.png") no-repeat -69px 0px; }
+#livereActionPostingPersonCarousel .livereActionPostingPerson_twitter .livereActionPostingPersonFavi { background-position: -69px 0px; }
+#livereActionPostingPersonCarousel .livereActionPostingPerson_facebook .livereActionPostingPersonFavi { background-position: -69px -20px; }
+#livereActionPostingPersonCarousel .livereActionPostingPerson_me2day .livereActionPostingPersonFavi { background-position: -69px -40px; }
+#livereActionPostingPersonCarousel .livereActionPostingPerson_yozm .livereActionPostingPersonFavi { background-position: -69px -60px; }
+#livereActionPostingPersonCarousel .livereActionPostingPerson_cyworld .livereActionPostingPersonFavi { background-position: -69px -80px; }
+#livereActionPostingPersonCarousel .livereActionPostingPerson_linkedIn .livereActionPostingPersonFavi { background-position: -69px -276px; }
+#livereActionPostingPersonCarousel .livereActionPostingPerson_naver .livereActionPostingPersonFavi { background-position: -69px -299px; }
+#livereActionPostingPersonCarousel .livereActionPostingPerson_kakao .livereActionPostingPersonFavi { background-position: -69px -345px; }
+
+#livereActionSNSButtonContainer #livereAction_naver_wrapper.livereActionSNSButtonWrapper { display: none; }

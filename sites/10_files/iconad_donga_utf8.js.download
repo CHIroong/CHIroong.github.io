@@ -1,0 +1,107 @@
+sliderConfigData = {
+	media : "donga",
+	mainId : "container",
+	posFromBot : 250,
+	//openDelay : 300,
+	openDelay : 200,
+	closeDelay : 100,
+	adBannerWidth : 230,
+	adWidth : 230,
+	adTextWidth : 230,
+	adMinWidth : 55,
+	adBannerHeight : 72,
+	adMinHeight : 60,
+	openSpd : 35,
+	leftPos : 6,
+	iconKind1 : 5,
+	mode : "R",
+	cutLen : 37,
+	rndBannerRatio : {T:100, I:0},
+	adMode : null,
+	baseHtml2 : '<div id="textLasOut"><img id="sliderDefImage" /><div id="sliderAdText"><a href="[#LINK#]" target="_blank" class="titleAdLink"><div class="textAdTitle" style="margin-top:6px">[#TITLE#]</div></a><a href="[#LINK#]" target="_blank" class="titleAdLink"><div class="textAdDesc">[#DESC#]</div></a><a href="[#LINK#]" target="_blank" class="titleAdLink"><div class="textAdSite">[#SITE#]</div></a></div></div><div id="iconAdBtn" style="display:none;width:15px;height:9px;top:45px;left:192px;position:absolute"><a href="http://ad.kakaocorp.com/adinfo/search" target="_blank" style="border:none"><img src="//img2.keywordsconnect.com/btn_premium.png" style="border:none;vertical-align:top;" /></a></div>'
+}
+
+initScrollSlider = function(){
+
+	//try{document.charset = "utf-8";}catch(e){}
+
+	var hostname = document.location.hostname;
+	if(hostname.indexOf("shindonga.donga.com") > -1){
+		sliderConfigData.media = "donga_shindonga";
+		sliderConfigData.mainId = "article_text"
+	}else if(hostname.indexOf("weekly.donga.com") > -1){
+		sliderConfigData.media = "donga_weekly";
+		sliderConfigData.mainId = "text"
+	}else if(hostname.indexOf("economy.donga.com") > -1){
+		sliderConfigData.media = "donga_economy";
+	}else if(hostname.indexOf("bizn.donga.com") > -1){
+		sliderConfigData.media = "donga_biz";
+	}else if(hostname.indexOf("magazine.donga.com") > -1){
+		sliderConfigData.media = "donga_magazine";
+		sliderConfigData.mainId = "text"
+		if(!document.getElementById(sliderConfigData.mainId)){
+			sliderConfigData.mainId = "left_view"
+		}
+	}else if(document.location.pathname.indexOf("/ISSUE/Vote2016/") > -1){
+		sliderConfigData.media = "donga_vote";
+	}else if(document.location.pathname.indexOf("/ISSUE/2016Rio/") > -1){
+		sliderConfigData.media = "donga_rio";
+	}else if(document.location.pathname.indexOf("/ISSUE/election2016/") > -1){
+		sliderConfigData.media = "donga_election";
+	}else if(document.location.pathname.indexOf("/ISSUE/2017president/") > -1){
+		sliderConfigData.media = "donga_president";
+		sliderConfigData.leftPos = 104;
+	}else if(document.location.pathname.indexOf("/ISSUE/2018Pyeongchang/") > -1){
+		sliderConfigData.media = "donga_pyeongchang";
+		sliderConfigData.leftPos = 104;
+	}else{
+		if(!jQuery(".article_txt").attr("id")){
+			jQuery(".article_txt").attr("id","articleBody");
+		}
+
+		sliderConfigData.mainId = jQuery(".article_txt").attr("id");
+		sliderConfigData.leftPos = 14;
+
+		if(document.location.pathname.indexOf("/ISSUE/Vote2018") > -1){
+			sliderConfigData.media = "donga_vote";
+		}
+	}
+
+	if(SliderUtilFunc.cT(19,9)) sliderConfigData.openDelay=200;
+
+	if(document.getElementById("ct")) sliderConfigData.mainId = "ct";
+
+	SliderUtilFunc.attachEvt(window, 'scroll', function(){
+		var iconObj = document.getElementById("scrollDiv");
+		var p = SliderUtilFunc.getPageSize();
+		var iconObjTop = p.height + SliderUtilFunc.scrollY() - ScrollSlider.scrollObj.clientHeight - sliderConfigData.posFromBot
+
+		if(iconObj){
+			if(!isSliderClosed) {
+				if(sliderConfigData.media == "donga"){
+					var reply = jQuery(".reply_box");
+					if(reply.length > 0){
+						if(iconObjTop + 60 > reply.offset().top){
+							iconObj.style.display = "none";
+							return;
+						}
+					}
+				}
+				iconObj.style.display = "block";
+			}
+		}
+	});
+
+	sliderConfigData.adMode = "T";
+	var reLoadParam = "";
+	if(typeof(isReLoadIcon)!="undefined") {
+		if(isReLoadIcon) reLoadParam = "&isRe=1";
+	}
+	SliderUtilFunc.createCss("//css2.keywordsconnect.com/iconad_donga_new.css");
+	//SliderUtilFunc.createScript("http://get2.keywordsconnect.com/icon_ov_xml_utf8_new.asp?media="+sliderConfigData.media+reLoadParam, "sliderAdScript");
+
+	SliderUtilFunc.createScript("//cm.keywordsconnect.com/I/" + sliderConfigData.media + "/?u=" + encodeURIComponent(window.document.location.href), "sliderAdScript");
+
+};
+
+document.write("<script src=\"//js2.keywordsconnect.com/Scroll_Slider_v2.4.js\" type=\"text/javascript\" ></script>");

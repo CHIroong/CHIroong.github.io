@@ -1,0 +1,44 @@
+﻿var pLOGO_HTML = "";
+
+
+
+// 구정용
+//pLOGO_HTML += '<div style="position: absolute; z-index: 2200; top: -20px; left: 590px;">';
+//pLOGO_HTML += '     <img src="http://ojsimg.ohmynews.com/images/ohmynews/common/sub_logo.png" alt="2016 새해 복 많이 받으세요" style="width: 108px;" onclick="$(this).parent().hide();">';
+//pLOGO_HTML += '</div>';
+
+// 일반용
+pLOGO_HTML += '<h1>';
+pLOGO_HTML += '     <a href="http://www.ohmynews.com">';
+pLOGO_HTML += '         <img src="http://ojsimg.ohmynews.com/images/ohmynews/common/h1_ohmynews_2016.gif" alt="오마이뉴스 메인 가기">';
+pLOGO_HTML += '     </a>';
+pLOGO_HTML += '</h1>';
+
+// 16주년
+//pLOGO_HTML += '<h1>';
+//pLOGO_HTML += '     <a href="http://www.ohmynews.com">';
+//pLOGO_HTML += '         <img src="http://ojsimg.ohmynews.com/images/ohmynews/common/h1_ohmynews_16th.gif" alt="오마이뉴스 메인 가기">';
+//pLOGO_HTML += '     </a>';
+//pLOGO_HTML += '</h1>';
+
+// 세월호 로고
+//pLOGO_HTML += '<div style="position: absolute;z-index: 3001;top: -21px;left: 525px;">';
+//pLOGO_HTML += '     <img src="http://ojsimg.ohmynews.com/images/ohmynews/common/sewolup170324_logo.png" style="width: 190px;" onclick="$(this).hide();">';
+//pLOGO_HTML += '</div>';
+
+
+// 2017 대선 로고
+//pLOGO_HTML += '<div style="overflow: hidden; width: 115px; height: 40px; position: absolute; z-index: 1000; top: 30px; left: 680px;">';
+//pLOGO_HTML += '     <a href="http://www.ohmynews.com/NWS_Web/Event/elect2017/index.aspx"><img src="http://ojsimg.ohmynews.com/design/2017/ohmynews/170406_election_19th/main_election_19th.png" style="height: 40px;"></a>';
+//pLOGO_HTML += '</div>';
+
+//4.3릴레이
+//pLOGO_HTML += '<h1><img src="http://ojsimg.ohmynews.com/images/ohmynews/common/h1_ohmynews_jeju43.gif" alt="오마이뉴스 메인 가기" usemap="#Map_logo" border="0">';
+//pLOGO_HTML += '    <map name="Map_logo" id="Map_logo">';
+//pLOGO_HTML += '     <area shape="rect" coords="1,1,212,48" href="http://www.ohmynews.com" alt="오마이뉴스메인" />';
+//pLOGO_HTML += '     <area shape="rect" coords="219,5,358,44" href="/NWS_Web/View/mov_pg.aspx?gb=5&tag=제주 4.3 릴레이" alt="제주4.3 릴레이영상" />';
+//pLOGO_HTML += '    </map>';
+//pLOGO_HTML += '</h1>';
+
+
+document.write(pLOGO_HTML);

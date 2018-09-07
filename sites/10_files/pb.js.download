@@ -1,0 +1,20 @@
+var apxTag = window.apxTag || {};
+apxTag.cmd = apxTag.cmd || [];
+apxTag.data = apxTag.data || {};
+apxTag.init = true;
+
+window.googletag = window.googletag || {};
+window.googletag.cmd = window.googletag.cmd || [];
+
+(function(){
+    apxTag.data.zones = apxTag.data.zones || {};
+    apxTag.data.zones["mhWe9ro1"] = apxTag.data.zones["mhWe9ro1"] || {};
+    apxTag.data.zones["mhWe9ro1"].cid = "AK7xXWKASU-tuBfjeb0zXw";
+    apxTag.data.zones["mhWe9ro1"].crid = "EOyphkQEQkWQNWXlHLEb3w";
+    window.googletag.cmd.push(function() {
+      var pubads = window.googletag.pubads();
+      pubads.setTargeting("apxzone_mhWe9ro1", "1");
+      pubads.setTargeting("apx_info", encodeURIComponent(JSON.stringify({"page_title": document.title})));
+    });
+})();
+

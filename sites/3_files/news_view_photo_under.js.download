@@ -1,0 +1,2 @@
+adHtml = "<iframe width='300' height='65' src='http://ar.donga.com/RealMedia/ads/adstream_sx.ads/2014.donga.com/news@x78' frameborder='0' marginwidth='0' marginheight='0' scrolling='no'></iframe>" ;
+$("#adBox").html( adHtml ) ;

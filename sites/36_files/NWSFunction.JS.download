@@ -1,0 +1,3934 @@
+﻿
+//////////////////////////////////////////////////////////////////////////////////
+// - JS 스크립트 공통 합수
+//////////////////////////////////////////////////////////////////////////////////
+
+var _cContentID = "ctl00_cphNWS_";
+var _cContentID_MED = "ctl00_cphMED_";
+
+/************************************************************************************************
+* Procedure   : cross browsing
+* Description : Enter 키 막음
+* Parameter   : 
+* Return      : 
+*************************************************************************************************/
+// cross browsing
+document.onkeypress  = function(e){
+    if(typeof(e) != "undefined")
+    {
+	    if (e.which == 13)
+	    {
+		    if(e.target.tagName.toUpperCase() != "TEXTAREA")
+			    e.preventDefault();
+	    }
+    }
+    else
+    {
+	    if (event.keyCode == 13)
+	    {
+		    if(event.srcElement.tagName.toUpperCase() != "TEXTAREA")
+			    event.returnValue = false;
+	    }
+    }
+}
+
+
+/************************************************************************************************
+* Procedure   : doEnterKey
+* Description : Enter 키 실행 처리
+* Parameter   : 
+* Return      : 
+*************************************************************************************************/
+function doEnterKey(pPostBackObjNm)
+{
+    if (event.keyCode == 13)
+    {
+        try
+        {
+            __doPostBack(pPostBackObjNm, "");
+        }
+        catch(e) {}
+    }
+}
+
+/************************************************************************************************
+* Procedure   : AllLayerClose
+* Description : 모든 열린 layer 닫음
+* Parameter   : 
+* Return      : 
+*************************************************************************************************/
+function AllLayerClose() {
+    if(event.srcElement.tagName.toUpperCase() != "A" && event.srcElement.tagName.toUpperCase() != "IMG" && event.srcElement.tagName.toUpperCase() != "INPUT")
+    {
+        PopupClose("ball1");                //커뮤니티 팝업 닫음
+        PopupClose("dvSimpleLogIn");        //심플로긴 팝업 닫음
+        //PopupClose("repl_layer");           //조회(쓴편집노트 등) 팝업 닫음
+        //PopupClose("hist_layer");           //기사배치이력 팝업 닫음
+    }
+}
+//document.onclick = AllLayerClose;
+
+function PopupClose(pId)
+{
+    var rId = document.getElementById(pId);
+    
+    if(rId != null)
+    {
+        if(rId.style.display == "block" || rId.style.display == "")
+        {
+            rId.style.display = "none";
+        }
+    }
+}
+
+/************************************************************************************************
+* Procedure   : GetBrowserType
+* Description : 브라우저 알아내기
+* Parameter   : 
+* Return      : string
+*************************************************************************************************/
+function GetBrowserType()
+{
+    var strType;
+
+    if(new RegExp(/Firefox/).test(navigator.userAgent)){ 
+        strType = "FF";
+    }else if(new RegExp(/Netscape/).test(navigator.userAgent)){ 
+        strType = "NS";
+    }else if(new RegExp(/MSIE/).test(navigator.userAgent)){
+        strType = "IE";
+    }
+    return strType;
+}
+
+function GetBrowserType2() {
+    var strType;
+
+    if (new RegExp(/Firefox/).test(navigator.userAgent)) {
+        strType = "FF";
+    } else if (new RegExp(/Netscape/).test(navigator.userAgent)) {
+        strType = "NS";
+    } else if (new RegExp(/MSIE/).test(navigator.userAgent)) {
+        strType = "IE";
+    }
+    else if (new RegExp(/rv:11.0/).test(navigator.userAgent)) {
+        strType = "IE";
+    }
+
+    return strType;
+}
+    
+/************************************************************************************************
+* Procedure   : GetObject
+* Description : .NET 에서 master 를 쓸때 페이지에서 해당 컨트롤의 Object 값을 가져올때.
+* Parameter   : pObjNm - string 컨트롤명
+* Return      : Object
+*************************************************************************************************/
+function GetObject(pObjNm)
+{
+    //return eval("document.getElementById('" + _cContentID + pObjNm + "')");
+    if (document.getElementById(_cContentID + pObjNm)) return eval("document.getElementById('" + _cContentID + pObjNm + "')");
+    else return eval("document.getElementById('" + "cphNWS_" + pObjNm + "')");
+}
+
+function GetObject(pObjNm, psMaster)
+{
+    if (psMaster == "MED") {
+        if (document.getElementById(_cContentID + pObjNm)) return eval("document.getElementById('" + _cContentID_MED + pObjNm + "')");
+        else return eval("document.getElementById('" + "cphMED_" + pObjNm + "')");
+        //return eval("document.getElementById('" + _cContentID_MED + pObjNm + "')");
+    }
+    else {
+        if (document.getElementById(_cContentID + pObjNm)) return eval("document.getElementById('" + _cContentID + pObjNm + "')");
+        else return eval("document.getElementById('" + "cphNWS_" + pObjNm + "')");
+        //return eval("document.getElementById('" + _cContentID + pObjNm + "')");
+    }
+        
+        
+}
+/************************************************************************************************
+* Procedure   : GetObjectNm
+* Description : .NET 에서 master 를 쓸때 페이지에서 해당 컨트롤의 Name 값을 가져올때.
+* Parameter   : pObjNm - string 컨트롤명
+* Return      : string 컨트롤 명
+*************************************************************************************************/
+function GetObjectNm(pObjNm)
+{
+    return _cContentID + pObjNm;
+}
+
+function GetObjectNm(pObjNm, psMaster)
+{
+    if(psMaster == "MED")
+        return _cContentID_MED + pObjNm;
+    else
+        return _cContentID + pObjNm;
+}
+/************************************************************************************************
+* Procedure   : XMLHTTPObject
+* Description : HTML로 작성된 파일 웹로그 처리
+* Parameter   : 
+* Return      : 
+*************************************************************************************************/
+function XMLHTTPObject()
+{
+  var oReq = null;  
+  
+  if (window.XMLHttpRequest)
+  {
+    oReq = new XMLHttpRequest();
+    //oReq.overrideMimeType('text/xml');
+  }
+  else if (window.ActiveXObject)
+  {
+    var ms_xml_http = new Array('Msxml2.XMLHTTP.7.0',
+                                'Msxml2.XMLHTTP.6.0',
+                                'Msxml2.XMLHTTP.5.0',
+                                'Msxml2.XMLHTTP.4.0',
+                                'Msxml2.XMLHTTP.3.0',
+                                'Msxml2.XMLHTTP',
+                                'Microsoft.XMLHTTP');
+
+    for (var i = 0; i < ms_xml_http.length; i++)
+    {
+      try
+      {
+        oReq = new ActiveXObject(ms_xml_http[i]);
+        break;
+      }
+      catch (e)
+      {
+        oReq = null;
+      }
+    }
+  }
+
+  return oReq;
+}
+
+function InsWebLog(pCUR_URL, pPRE_URL)
+{
+    var xmlhttp = XMLHTTPObject();
+    var url = "/NWS_Web/Common/Pages/WebLog_INS.aspx?CUR_URL=" + pCUR_URL + "&PRE_URL=" + pPRE_URL;          
+    
+    xmlhttp.open("GET", url, true); // false일때 리턴값 반환
+    xmlhttp.send(null);
+    
+    //alert(xmlhttp.responseText);
+}
+
+/************************************************************************************************
+* Procedure   : goView
+* Description : 구성요소 상세보기 이동
+* Parameter   : pURL     : 이동 URL
+*               pCNTN_CD : 컨텐츠코드
+*               pPAGE_CD : 면코드
+*               pBLCK_NO : 블럭번호
+*               pCMPT_CD : 구성요소코드
+*               pNEW_GB  : 새창여부
+* Return      : 
+*************************************************************************************************/
+function goView(pURL, pCNTN_CD, pPAGE_CD, pBLCK_NO, pCMPT_CD, pNEW_GB)
+{   
+    document.getElementById("CNTN_CD").value = pCNTN_CD;
+    document.getElementById("PAGE_CD").value = pPAGE_CD;
+    document.getElementById("BLCK_NO").value = pBLCK_NO;
+    document.getElementById("CMPT_CD").value = pCMPT_CD;
+
+    if (pNEW_GB == "T" || pCNTN_CD.substring(0, 1) == "B"|| pCNTN_CD.substring(0, 1) == "P")
+    {
+        window.open("", "_WinView", "").focus();
+        document.getElementById("frmLog").target = "_WinView";
+    }
+    else
+    {
+        document.getElementById("frmLog").target = "_self";
+    }
+        
+    document.getElementById("frmLog").method = "get";
+    document.getElementById("frmLog").action = pURL;
+     
+    document.getElementById("frmLog").submit();
+    //location.href = pURL;
+}
+
+function goViewlink(pURL, pCNTN_CD, pPAGE_CD, pBLCK_NO, pCMPT_CD, pNEW_GB, objlink)
+{   
+    var strhref = pURL;
+    if (pNEW_GB == "T" || pCNTN_CD.substring(0, 1) == "B"|| pCNTN_CD.substring(0, 1) == "P" || location.href.toLowerCase().indexOf("ojs_adminweb") > 0)
+    {
+        objlink.target="_WinView";
+    }
+    else
+    {
+        strhref = strhref.replace("http://www.ohmynews.com", "");
+    }
+    strhref = strhref + "?CNTN_CD=" + pCNTN_CD;
+    strhref += "&PAGE_CD=" + pPAGE_CD;
+    strhref += "&BLCK_CD=" + pPAGE_CD;
+    strhref += "&CMPT_CD=" + pCMPT_CD;
+    objlink.href = strhref;    
+}
+
+/************************************************************************************************
+* Procedure   : showPopup
+* Description : 팝업으로 보여짐
+* Parameter   : e : event, id : 팝업으로 보여질 아이디
+* Return      : 
+*************************************************************************************************/
+function showPopup(e, id) {
+	var obj=document.getElementById(id);
+	if (!e) var e = window.event;
+	var posx=0;
+	var posy=0;
+
+	if (e.pageX || e.pageY) { // pageX/Y 표준 검사
+		posx = e.pageX -20;
+		posy = e.pageY;
+	} 
+	else if (e.clientX || e.clientY) { //clientX/Y 표준 검사 Opera
+		posx = e.clientX - 20;
+		posy = e.clientY;
+		
+		if (window.event) { // IE 여부 검사
+			posx += document.documentElement.scrollLeft;
+			posy += document.documentElement.scrollTop;
+		}
+	}
+
+	obj.style.left = posx + "px";
+	obj.style.top = posy + "px";
+	obj.style.display='block';
+}
+
+/************************************************************************************************
+* Procedure   : hidePopup
+* Description : 팝업 숨김
+* Parameter   : id : 숨길 아이디
+* Return      : 
+*************************************************************************************************/
+function hidePopup(id){
+		document.getElementById(id).style.display='none';
+}
+
+/************************************************************************************************
+* Procedure   : showPopupCommunity
+* Description : 커뮤니티 팝업 보여짐
+* Parameter   : pMEM_CD - 멤버CD
+* Return      : 
+*************************************************************************************************/
+function showPopupCommunity(e, id, pMEM_CD, pIsFriend, pPCE_CD) {
+		
+	var obj=document.getElementById(id);
+	obj.setAttribute("memcd",pMEM_CD);
+	obj.setAttribute("pcecd",pPCE_CD);
+	
+	if (pIsFriend)
+	{
+	    var dvProposeFrd = document.getElementById("dvProposeFrd");
+	    var dvGoodByeFrd = document.getElementById("dvGoodByeFrd");
+	    
+	    if (pIsFriend == "Y") //친구사이 : 친구신청 숨김, 결별하기 보임
+	    {
+	        dvProposeFrd.style.display = "none";
+	        dvGoodByeFrd.style.display = "block";
+	    }
+	    else if (pIsFriend == "W") //친구 대기자 : 친구신청,결별하기 모두 숨김.
+	    {
+	        dvProposeFrd.style.display = "none";
+	        dvGoodByeFrd.style.display = "none";
+	    }  
+	}
+	
+	if (!e) var e = window.event;
+	var posx=0;
+	var posy=0;
+
+	if (e.pageX || e.pageY) { // pageX/Y 표준 검사
+		posx = e.pageX -20;
+		posy = e.pageY;
+	} 
+	else if (e.clientX || e.clientY) { //clientX/Y 표준 검사 Opera
+		posx = e.clientX - 20;
+		posy = e.clientY;
+		
+		if (window.event) { // IE 여부 검사
+			posx += document.documentElement.scrollLeft;
+			posy += document.documentElement.scrollTop;
+		}
+	}
+
+	obj.style.left = posx + "px";
+	obj.style.top = posy + "px";
+	obj.style.display='block';
+	obj.style.zIndex = 300;	
+}
+
+/************************************************************************************************
+* Procedure   : hidePopupCommunity
+* Description : 커뮤니티 팝업 숨김
+* Parameter   : 
+* Return      : 
+*************************************************************************************************/
+function hidePopupCommunity(pID){
+	
+	var dvID = (pID) ? pID : "ball1";
+	
+	document.getElementById(dvID).style.display='none';
+}
+
+/************************************************************************************************
+* Procedure   : showPopupSummary
+* Description : 간략히 보기 보여짐
+* Parameter   : pCNTN_CD - 컨텐츠 코드
+* Return      : 
+*************************************************************************************************/
+function showPopupSummary(e, id, pCNTN_CD){
+	var obj=document.getElementById(id);
+	if (!e) var e = window.event;
+	var posx=0;
+	var posy=0;
+
+	if (e.pageX || e.pageY) { // pageX/Y 표준 검사
+		posx = e.pageX - 190;
+		posy = e.pageY;
+	} 
+	else if (e.clientX || e.clientY) { //clientX/Y 표준 검사 Opera
+		posx = e.clientX - 190;
+		posy = e.clientY;
+		if (window.event) { // IE 여부 검사
+			posx += document.documentElement.scrollLeft;
+			posy += document.documentElement.scrollTop;
+		}
+	}
+
+	obj.style.left = posx + "px";
+	obj.style.top = posy + "px";
+	obj.style.display='block';
+	obj.style.zIndex = 200;
+	
+	var strReturn = "";
+	strReturn = NWSSummary.ShowSummary(pCNTN_CD);
+	document.getElementById("tdSummary").innerText = strReturn.value;
+}
+
+/************************************************************************************************
+* Procedure   : hidePopupSummary
+* Description : 간략히 보기 숨김
+* Parameter   : 
+* Return      : 
+*************************************************************************************************/
+function hidePopupSummary()
+{
+    document.getElementById("summary").style.display='none';
+}
+
+/************************************************************************************************
+* Procedure   : setRecommendCnt
+* Description : 추천수 처리
+* Parameter   : pCNTN_CD - 컨텐츠 코드
+* Return      : 
+*************************************************************************************************/
+function setRecommendCnt(pCNTN_CD)
+{
+	var arrResults = "";
+	var strReturn = "";
+	var strMemCd = "";
+	
+	strMemCd = NWSLogIn.GetMemberCd();
+	strReturn = NWSRecommend.ContentsRecommend(pCNTN_CD, strMemCd.value);
+		
+	arrResults = strReturn.value.split("|");
+	if (arrResults[0] == "0")  // 성공적으로 추천
+	{
+	    if (arrResults[1] == "T") // 중복 추천일 경우
+	        alert("해당 컨텐츠의 추천은 한번씩만 가능 합니다.    ");
+        else
+            alert("추천 하였습니다.    ");        
+	}
+	else
+	{
+	    alert("추천하기에 실패 하였습니다.    ");
+	}
+}
+
+/************************************************************************************************
+* Procedure   : setSimpleLogInLoc
+* Description : 간편로그인 팝업 위치 설정
+* Parameter   : 
+* Return      : 
+*************************************************************************************************/
+function setSimpleLogInLoc(e, id, pPositionType) {
+	var obj=document.getElementById(id);
+	if (!e) var e = window.event;
+	var posx=0;
+	var posy=0;
+
+	if (e.pageX || e.pageY) { // pageX/Y 표준 검사
+		posx = e.pageX - 20;
+		posy = e.pageY + 10;
+	} 
+	else if (e.clientX || e.clientY) { //clientX/Y 표준 검사 Opera
+		posx = e.clientX - 20;
+		posy = e.clientY + 10;
+		
+		if (window.event) { // IE 여부 검사
+			posx += document.documentElement.scrollLeft;
+			posy += document.documentElement.scrollTop;
+		}
+	}
+	if (pPositionType == "T")
+	    posx = posx - 100;
+
+	obj.style.left = posx + "px";
+	obj.style.top = posy + "px";
+	//obj.style.display='block';
+}
+/************************************************************************************************
+* Procedure   : GoSimpLogIn
+* Description : 간편로그인 팝업 띄우기(로그인여부 체크 후)
+* Parameter   : 
+* Return      : 
+************************************************************************************************/
+var AFTER_SRC = "";
+var AFTER_TYPE = "";
+function GoSimpLogIn(ev,pAfterSrc,pAfterType, pPositionType, pBackground)
+{   
+  //  alert("이꺼 사용~");
+    
+    AFTER_SRC = pAfterSrc;
+    AFTER_TYPE = pAfterType;
+    if (getCookie("MemCd") == "-1" || getCookie("MemCd") == "")  // 로그인 안됐을때
+    {
+        var pGoUrl = location.href;
+        if (pAfterSrc)
+        {
+            var pAfterSrc1 = pAfterSrc.toLowerCase();
+            if (pAfterSrc1.indexOf("article_write.aspx") > 0 || pAfterSrc1.indexOf("edit_write.aspx") > 0 
+                || pAfterSrc1.indexOf("tv_input.aspx") > 0 || pAfterSrc1.indexOf("photo_input.aspx") > 0 
+                || pAfterSrc1.indexOf("outpost_write.aspx") > 0)
+                    pGoUrl = pAfterSrc;
+        }                
+        location.href = "http://member.ohmynews.com/NWS_Web/Mem/mem_login.aspx?goUrl=" + escape(pGoUrl);
+    }
+    else  // 로그인 되었을때
+    {
+        if (pAfterSrc)
+        {
+            var pAfterSrc1 = pAfterSrc.toLowerCase();
+            if (pAfterSrc1.indexOf("article_write.aspx") > 0 || pAfterSrc1.indexOf("edit_write.aspx") > 0)
+                location.href = pAfterSrc1;
+            
+            if(pAfterSrc1.indexOf("tv_input.aspx") > 0 || pAfterSrc1.indexOf("photo_input.aspx") > 0 )
+                location.href = pAfterSrc1;
+            
+            if(pAfterSrc1.indexOf("outpost_write.aspx") > 0)
+                location.href = pAfterSrc1;
+            
+            if (pAfterSrc == "InsertProcess();" || pAfterSrc == "InsertAdsProcess();")
+                 GoLoginAfterLogIn();
+        }
+    }
+}
+
+function CallBack_GoSimpLogIn(response)
+{
+    if (response.error != null)
+    {
+        alert(response.error);
+        return false;
+    }
+     
+   if (response.value)
+   {          
+       GoLoginAfterLogIn();
+   } 
+   else if (!response.value)
+   {
+       // 포토, TV면일때 컨트롤 잠시 숨김
+       try
+       {
+           document.getElementById("sltSrch_GB").style.visibility = "hidden";
+       }
+       catch (e) {}
+       
+       var dvSimpleLogIn = document.getElementById("dvSimpleLogIn");
+       dvSimpleLogIn.style.visibility = "visible";     
+       
+       try
+       {
+        var frm = ifrLogin.document.frmSimpleLogIn;
+        frm.MEM_ID.focus();
+       }
+       catch(e)
+       {
+       }
+   }          
+}
+function SetAfterLogIn(pAfterSrc,pAfterType)
+{
+    var frm = document.frmSimpleLogIn;
+    frm.AFTER_SRC.value = pAfterSrc;
+    frm.AFTER_TYPE.value = pAfterType;
+}
+function GoAfterLogIn()
+{
+
+        var frm = document.frmSimpleLogIn;
+         if (frm.AFTER_TYPE.value == "url")
+            goURL(frm.AFTER_SRC.value);
+         else if (frm.AFTER_TYPE.value == "script")
+            eval("parent." + frm.AFTER_SRC.value);
+
+}
+
+function GoLoginAfterLogIn()
+{
+     if (AFTER_TYPE == "url")
+        goURL(AFTER_SRC);
+     else if (AFTER_TYPE == "script")
+        eval(AFTER_SRC);
+}
+
+function hideSimpLogIn()
+{
+    self.location.href = "http://www.ohmynews.com/NWS_Web/Common/Pages/LoginClose.htm";
+    // 포토, TV면일때 컨트롤 다시 살림
+//    try
+//    {
+//       document.getElementById("sltSrch_GB").style.visibility = "visible";
+//    }
+//    catch (e) {}
+//       
+//    document.getElementById("dvSimpleLogIn").style.visibility = "hidden";
+}
+
+/************************************************************************************************
+* Procedure   : GoLogIn
+* Description : 로그인 페이지로 이동(로그인여부 체크 후)
+* Parameter   : 
+* Return      : 
+*************************************************************************************************/
+var _AfterSrc = null;
+var _AfterType = null;
+function GoLogIn(pAfterSrc,pAfterType)
+{     
+    _AfterSrc = pAfterSrc;
+    _AfterType = pAfterType;
+    
+    NWSLogIn.IsMemberLogIn(CallBack_GoLogIn);                             
+}
+function CallBack_GoLogIn(response)
+{
+    if (response.error != null)
+    {
+        alert(response.error);
+        return false;
+    }
+             
+   if (response.value)
+   {
+       if (_AfterType == "url")
+            goURL(_AfterSrc);
+       else if (_AfterType == "script")
+            eval(_AfterSrc);  
+   } 
+   else if (!response.value)
+   {
+      var sUrl = "http://member.ohmynews.com/NWS/Mem/mem_login.aspx";
+      var sGoUrl = "";
+      
+      if (_AfterType == "url" && _AfterSrc != null)
+          sGoUrl = _AfterSrc;
+      
+      if (sGoUrl == "") sGoUrl = location.href;
+      
+      sUrl += "?gourl=" + escape(sGoUrl);
+      goURL(sUrl);
+   }          
+}       
+
+/************************************************************************************************
+* Procedure   : Login Y/N
+* Description : 로그인 여부 확인(메인면, 서브면과 같은 HTML 화면에서..)
+* Parameter   : 
+* Return      : 
+************************************************************************************************/
+function SetLoginYN()
+{   
+    NWSLogIn.IsMemberLogIn(CallBack_SetLoginYN);                             
+}
+function CallBack_SetLoginYN(response)
+{     
+    var bLoginYN = false;
+    
+    if (response.error != null)
+    {
+        bLoginYN = false;
+    }
+          
+    bLoginYN = response.value;
+           
+    if (bLoginYN)
+    {
+        var aLogIn = document.getElementById("aLogIn");
+        aLogIn.innerHTML = "로그아웃";
+
+        var aMember = document.getElementById("ctl00_aMember");          
+        aMember.innerHTML = "정보수정";
+        aMember.href = "/NWS_Web/Mem/Mem_Upd_Check.aspx"; 
+        
+        //document.getElementById("divFlash").style.display = "";
+        GetMain_MemCd();
+    }
+}
+
+ function getCookie(Name) {
+    var search = Name + "=";
+    
+    if (document.cookie.length > 0) {                 
+
+        offset = document.cookie.indexOf(search);
+        if (offset != -1){                                                
+
+            offset += search.length;                          
+            end = document.cookie.indexOf(";", offset);   
+            if (end == -1) 
+                end = document.cookie.length;
+            return unescape(document.cookie.substring(offset, end));
+        } 
+        return offset;
+    }
+ }
+
+/************************************************************************************************
+* Procedure   : Get MEM_CD
+* Description : 로그인 여부 확인(메인면, 서브면과 같은 HTML 화면에서..)
+* Parameter   : 
+* Return      : 
+************************************************************************************************/
+function GetMain_MemCd()
+{   
+    NWSLogIn.GetMemberCd(CallBack_GetMain_MemCd);                             
+}
+function CallBack_GetMain_MemCd(response)
+{     
+    var strMEM_CD = "";
+      
+    strMEM_CD = response.value;
+          
+    if (strMEM_CD != "")
+    {        
+    	var u = "/NWS_Web/Flash/i-service/i-service.swf";
+    	var w = "388";
+    	var h = "34";
+    	var id = "swf_tag";
+    	var md = "transparent";
+    	var lc = "true";
+    	var fv = "pathDat=/NWS_Web/Flash/i-service/iservice.aspx?s_code=" + strMEM_CD;
+    	var sc = "";
+    	
+    	var strHTML = "";
+    	strHTML += '<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" id="' + id + '" width="' + w + '" height="' + h + '">\n';
+        strHTML += '	<param name=movie value="' + u + '" />\n';
+        strHTML += '	<param name=quality value="high" />\n';
+        strHTML += '	<param name=wmode value="' + md + '" />\n';
+        strHTML += '	<param name=flashVars value="' + fv + '" />\n';
+        strHTML += '	<param name=allowScriptAccess value="' + sc + '" />\n';
+        strHTML += '	<embed name="' + id + '" src="' + u + '" width="' + w + '" height="' + h + '" wmode="' + md + '" flashVars="' + fv + '" allowScriptAccess="' + sc + '" type="application/x-shockwave-flash" quality=high pluginspage="http://www.macromedia.com/go/getflashplayer" />\n';
+        strHTML += '</object>\n';
+        
+        try {
+            document.getElementById("divFlash").innerHTML = strHTML;
+            document.getElementById("divFlash").style.display = "";
+        }
+        catch (e) {}
+    }
+}
+
+/************************************************************************************************
+* Procedure   : Get MEM_CD
+* Description : 로그인 여부 확인(메인면, 서브면과 같은 HTML 화면에서..)
+* Parameter   : 
+* Return      : 
+************************************************************************************************/
+function GetSSLMemCd()
+{   
+    NWSLogIn.GetMemberCd(CallBack_GetSSLMemCd);
+}
+function CallBack_GetSSLMemCd(response)
+{     
+    var strMEM_CD = "";
+      
+    strMEM_CD = response.value;
+
+    if (strMEM_CD != "")
+    {        
+    	var u = "/NWS_Web/Flash/i-service/i-service.swf";
+    	var w = "388";
+    	var h = "34";
+    	var id = "swf_tag";
+    	var md = "transparent";
+    	var lc = "true";
+    	var fv = "pathDat=/NWS_Web/Flash/i-service/iservice.aspx?s_code=" + strMEM_CD;
+    	var sc = "";
+    	
+    	var strHTML = "";
+    	strHTML += '<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" id="' + id + '" width="' + w + '" height="' + h + '">\n';
+        strHTML += '	<param name=movie value="' + u + '" />\n';
+        strHTML += '	<param name=quality value="high" />\n';
+        strHTML += '	<param name=wmode value="' + md + '" />\n';
+        strHTML += '	<param name=flashVars value="' + fv + '" />\n';
+        strHTML += '	<param name=allowScriptAccess value="' + sc + '" />\n';
+        strHTML += '	<embed name="' + id + '" src="' + u + '" width="' + w + '" height="' + h + '" wmode="' + md + '" flashVars="' + fv + '" allowScriptAccess="' + sc + '" type="application/x-shockwave-flash" quality=high pluginspage="http://www.macromedia.com/go/getflashplayer" />\n';
+        strHTML += '</object>\n';
+        
+        try
+        {
+            parent.document.getElementById("divFlash").innerHTML = strHTML;
+            parent.document.getElementById("divFlash").style.display = "";
+        }
+        catch(e) {}
+    }
+}
+
+
+/************************************************************************************************
+* Procedure   : goURL
+* Description : 페이지 이동
+* Parameter   : pURL     : 이동 URL
+* Return      : 
+*************************************************************************************************/
+function goURL(pURL)
+{   
+    parent.location.href = pURL;
+}
+
+/************************************************************************************************
+* Procedure   : goTagNetwork
+* Description : 태그 페이지 이동
+* Parameter   : pTAG_NM : 태그명
+* Return      : 
+*************************************************************************************************/
+function goTagNetwork(pTAG_NM)
+{
+    window.location.href = "/NWS_Web/Flash/Tag/index.aspx?type=1&str=" + escape(pTAG_NM);
+}
+
+/************************************************************************************************
+* Procedure   : Trim
+* Description : 공백 제거 함수로 스페이스바로 입력 한 공백을 제거한다..
+* Parameter   : pStr - string 확인할 내용
+* Return      : string 공백을 제거한 내용
+*************************************************************************************************/
+function Trim(pStr) 
+{		
+    while (pStr.search(/^\s/) != -1)
+        pStr = pStr.replace(/^\s/,"");	
+    while (pStr.search(/\s$/) != -1)	
+        pStr = pStr.replace(/\s$/,"");
+    return pStr;
+}
+
+/*******************************************************************
+* Procedure   : IsNumeric
+* Description : 소수점 없는 숫자인지 체크.
+* Parameter   : pStr - string 확인할 내용
+* Return      : true/false
+*******************************************************************/
+function IsNumeric(pStr){
+	for(var i=0; i<pStr.length; i++) {
+        var uniCode = pStr.charCodeAt(i);
+
+        if(!(uniCode >= 48 && uniCode <= 57))
+            return false;
+    }
+
+    return true;
+}
+
+/*******************************************************************
+* Procedure   : chkNumKeyPress
+* Description : Keypress Event Only Number  
+* Example     : <asp:TextBox ID="txtYYYY" style="ime-mode:disabled;" onkeypress="chkNumKeyPress();"
+* Parameter   : 
+* Return      : true/false
+*******************************************************************/    
+function chkNumKeyPress() {
+    if ((event.keyCode<48) || (event.keyCode>57))
+        event.returnValue = false;
+}
+
+//소수점 허용
+function chkNumPointKeyPress() {
+   
+    if ((event.keyCode!=46) && (event.keyCode<48) || (event.keyCode>57))
+        event.returnValue = false;
+  
+}
+
+/*******************************************************************
+* Procedure   : IsNumeric
+* Description : 숫자(소수점 포함)인지 체크.
+* Parameter   : pStr - string 확인할 내용
+* Return      : true/false
+*******************************************************************/
+function IsDecimal(pStr){
+	for(var i=0; i<pStr.length; i++) {
+        var uniCode = pStr.charCodeAt(i);
+        
+        if(!((uniCode >= 48 && uniCode <= 57) || uniCode==46))
+            return false;
+    }
+    return true;
+}
+
+/************************************************************************************************
+* Procedure   : CheckRequired
+* Description : 필수항목 체크..입력이 안되었을 경우 메시지 Alert 후 해당 컨트롤에 포커스 이동
+* Parameter   : pObjID - string 컨트롤ID
+*               pMsg   - string 메시지 
+* Return      : true/false
+*************************************************************************************************/
+function CheckRequired(pObjID, pMsg) {
+    if (document.getElementById(pObjID)) {
+        if (Trim(document.getElementById(pObjID).value) == "") {
+            alert(pMsg + "     ");
+
+            try {
+                document.getElementById(pObjID).focus();
+            }
+            catch (E) { }
+
+            return false;
+        } 
+    }
+	
+	return true;
+}
+
+/************************************************************************************************
+* Procedure   : CheckRequired
+* Description : 필수항목 체크..입력이 안되었을 경우 메시지 Alert 후 해당 컨트롤에 포커스 이동
+* Parameter   : pObjID - string 컨트롤ID
+*               pMsg   - string 메시지 
+* Return      : true/false
+*************************************************************************************************/
+function CheckRequired2(pObjID, pMsg) {
+    if ($("[id*='" + pObjID + "']").length) {
+        if (Trim($("[id*='" + pObjID + "']").val()) == "") {
+            alert(pMsg + "     ");
+
+            try {
+                $("[id*='" + pObjID + "']").val().focus();
+            }
+            catch (E) { }
+
+            return false;
+        }
+    }
+
+    return true;
+}
+
+/************************************************************************************************
+* Procedure   : CheckMaxLength
+* Description : 필수항목 체크..입력이 안되었을 경우 메시지 Alert 후 해당 컨트롤에 포커스 이동
+* Parameter   : pObjID - string 컨트롤ID
+*               pMsg   - string 메시지 
+* Return      : true/false
+*************************************************************************************************/
+function CheckMaxLength(pObjID, pMaxLength, pMsg) {
+    if (GetByteSize(document.getElementById(pObjID).value) > pMaxLength) {
+		alert(pMsg + "     ");
+		
+		try {
+		    document.getElementById(pObjID).focus();
+		}
+		catch (E) {}
+		
+		return false; 
+	}
+	
+	return true;
+}
+
+/************************************************************************************************
+* Procedure   : CheckMaxLength2
+* Description : 필수항목 체크..입력이 안되었을 경우 메시지 Alert 후 해당 컨트롤에 포커스 이동
+* Parameter   : pObjID - string 컨트롤ID
+*               pMsg   - string 메시지 
+* Return      : true/false
+*************************************************************************************************/
+function CheckMaxLength2(pObjID, pMaxLength, pMsg) {
+    if (document.getElementById(pObjID).value.length > pMaxLength) {
+		alert(pMsg + "     ");
+		
+		try {
+		    document.getElementById(pObjID).focus();
+		}
+		catch (E) {}
+		
+		return false; 
+	}
+	
+	return true;
+}
+
+/************************************************************************************************
+* Procedure   : CheckMaxLength2
+* Description : 필수항목 체크..입력이 안되었을 경우 메시지 Alert 후 해당 컨트롤에 포커스 이동
+* Parameter   : pObjID - string 컨트롤ID
+*               pMsg   - string 메시지 
+* Return      : true/false
+*************************************************************************************************/
+function CheckMaxLength3(pObjID, pMaxLength, pMsg) {
+    if ($("[id*='" + pObjID + "']").val().length > pMaxLength) {
+        alert(pMsg + "     ");
+
+        try {
+            $("[id*='" + pObjID + "']").focus();
+        }
+        catch (E) { }
+
+        return false;
+    }
+
+    return true;
+}
+
+/************************************************************************************************
+* Procedure   : CheckMaxLengthAll
+* Description : input,textarea 항목의 입력 길이 체크.
+*               maxlength 속성이 지정된 경우에만 체크가능함.
+*               (※textarea는 코드비하인드에서 속성을 추가한다. (예) txtADM_NOTE.Attributes.Add("maxlength", "4000");
+* Parameter   : pObjID - string 컨트롤ID
+*               pMsg   - string 메시지 
+* Return      : true/false
+*************************************************************************************************/
+function CheckMaxLengthAll()
+{   
+     /* 입력 길이 체크 */
+     var controls = document.getElementsByTagName("INPUT");             
+     var i=0;
+     for (i=0; i<controls.length; i++)
+     {
+        if (controls[i].type == "text")
+        {
+            var bMaxLenNoCheck = controls[i].getAttribute("maxlengthnocheck");
+            
+            if(bMaxLenNoCheck == null || !eval(bMaxLenNoCheck))
+            {
+                var intMaxLen = controls[i].getAttribute("maxlength");
+                if (intMaxLen != null && GetByteSize(controls[i].value) > intMaxLen)
+                {
+                    alert(intMaxLen + " Byte" + MSG_5013_6);
+                    controls[i].focus();
+                    controls[i].select();
+                    return false;
+                }
+            }
+        }
+     }
+     controls = document.getElementsByTagName("TEXTAREA"); 
+     for (i=0; i<controls.length; i++)
+     {                
+        var bMaxLenNoCheck = controls[i].getAttribute("maxlengthnocheck");
+        
+        if(bMaxLenNoCheck == null || !eval(bMaxLenNoCheck))
+        {
+            var intMaxLen = controls[i].getAttribute("maxlength");
+            if (intMaxLen != null && GetByteSize(controls[i].value) > intMaxLen)
+            {
+                alert(intMaxLen + " Byte" + MSG_5013_6);
+                controls[i].focus();
+                controls[i].select();
+                return false;
+            }                
+        }
+     }
+     
+     return true;
+}
+
+/************************************************************************************************
+* Procedure   : GetByteSize
+* Description : Byte Size 를 구한다.
+* Parameter   : pStr - string 확인할 내용
+* Return      : int Byte Size
+*************************************************************************************************/
+function GetByteSize(pStr)
+{
+    var intNo, intByteSize;
+    intByteSize = 0;
+    
+    for (intNo = 0; intNo < pStr.length; intNo++)
+    {
+        if ((pStr.charCodeAt(intNo) < 0) || (pStr.charCodeAt(intNo) > 127))
+            intByteSize = intByteSize + 2;
+        else
+            intByteSize++;
+    }
+    
+    return intByteSize;
+}
+
+/************************************************************************************************
+* Procedure   : Modal
+* Description : Modal 로 뛰운다..
+* Parameter   : pUrl - string URL
+*             : pWidth - int Width
+*             : pHeight - int Height
+* Return      : boolean
+*************************************************************************************************/
+function Modal(pUrl, pWidth, pHeight)
+{
+    var strReturnValue = showModalDialog(pUrl, null, 'scroll:0;help:0;status:0;dialogWidth:'+ pWidth + 'px;dialogHeight:' + pHeight + 'px' );
+    
+    return strReturnValue;
+}
+
+/************************************************************************************************
+* Procedure   : Modal
+* Description : Modal 로 뛰운다..
+* Parameter   : pUrl - string URL
+*             : pWidth - int Width
+*             : pHeight - int Height
+* Return      : boolean
+*************************************************************************************************/
+function Modal(pUrl, pWidth, pHeight, pFeature)
+{
+	var strReturnValue = "";
+	
+	if(pFeature != null && pFeature != "")
+		strReturnValue = showModalDialog(pUrl, null, pFeature + 'dialogWidth:'+ pWidth + 'px;dialogHeight:' + pHeight + 'px' );
+	else
+		strReturnValue = showModalDialog(pUrl, null, 'scroll:0;help:0;status:0;dialogWidth:'+ pWidth + 'px;dialogHeight:' + pHeight + 'px' );
+    
+    return strReturnValue;
+}
+
+/************************************************************************************************
+* Procedure   : Open
+* Description : Popup 로 뛰운다..
+* Parameter   : pUrl - string URL
+*             : pWidth - int Width
+*             : pHeight - int Height
+*             : pTop - int Top
+*             : pLeft - int Left
+* Return      : void
+*************************************************************************************************/
+function WinOpen(pUrl, pWidth, pHeight, pTop, pLeft)
+{
+    window.open(pUrl, "","toobar=no,direction=no,status=yes,menubar=no,resizeable=yes,scrollbars=no,width=" + pWidth + ",height=" + pHeight + ",top=" + pTop + ",left=" + pLeft + "");
+}
+	
+/************************************************************************************************
+* Procedure   : WinOpen
+* Description : Popup 로 뛰운다.. (스크롤여부,Resize여부 지정)
+* Parameter   : pUrl - string URL
+*             : pWidth - int Width
+*             : pHeight - int Height
+*             : pWinName - string window name
+*             : pScroll - string 스크롤여부(yes,no)
+*             : pResize - string Resize여부(yes,no)
+* Return      : void
+*************************************************************************************************/
+function WinOpen(pUrl, pWidth, pHeight, pWinName,pScroll,pResize)
+{
+	var nLeft  = screen.width/2 - pWidth/2 ;
+	var nTop  = screen.height/2 - pHeight/2 ;
+	
+	var scl = "no";
+	if ( pScroll == 'yes' ) scl = pScroll;
+	if ( pUrl.indexOf("article_goodfee_write") > -1) scl = "yes";
+	 
+	var opt = ",toolbar=no,menubar=no,location=no,scrollbars="  + scl + ",status=yes";		
+	if (pResize)
+		opt += ",resizable=" + pResize;
+		
+	var oNewWindow = window.open(pUrl, pWinName, "left=" + nLeft + ",top=" +  nTop + ",width=" + pWidth + ",height=" + pHeight  + opt );
+	
+	//return oNewWindow;
+}
+
+/************************************************************************************************
+* Procedure   : CheckFileExt
+* Description : 파일 확장자 체크
+* Parameter   : pFileName - 파일명(풀 Path 포함 가능)
+*               pAllowExt - 허용 확장자 명, 배열 처리(Array("gif", "jpg", ...))
+* Return      : boolean
+*************************************************************************************************/
+function CheckFileExt(pFileName, pAllowExt)
+{
+    var booAllow    = false;
+    
+    var strExt      = pFileName.substring(pFileName.lastIndexOf(".") + 1);
+    var strAllowExt = "";
+    
+    for (var i = 0; i < pAllowExt.length; i++)
+    {
+        strAllowExt += "*." + pAllowExt[i] + ",";
+        
+        if (pAllowExt[i].toLowerCase() == strExt.toLowerCase())
+        {
+            booAllow = true;
+            break;
+        }
+    }
+    
+    if (!booAllow) 
+        alert(MSG_2019.replace("Ext", strAllowExt.substring(0, strAllowExt.lastIndexOf(","))) + "     ");
+    
+    return booAllow;
+}
+
+/************************************************************************************************
+* Procedure   : ExceptionFile
+* Description : 파일 확장자 체크
+* Parameter   : pFileName - 파일명(풀 Path 포함 가능)
+* Return      : boolean
+*************************************************************************************************/
+function ExceptionFile(pFileName)
+{
+    var strExt = pFileName.substring(pFileName.lastIndexOf("."));
+    
+    strExt = strExt.toLowerCase();
+    
+    switch(strExt)
+    {
+        case ".asp":
+        case ".aspx":
+        case ".exe":
+        case ".bat":
+        case ".php":
+        case ".sqp":
+        case ".html":
+        case ".ashx":
+        case ".js":
+        case ".vbs":
+        case ".dll":
+        case ".com":
+        case ".css":
+        case ".cer":
+        case ".htm":
+        case ".asa":
+            return false;
+            break;
+        
+    }
+}
+/************************************************************************************************
+* Procedure   : replaceAll
+* Description : Replace All
+* Parameter   : pValue
+*               pSource
+*               pTarget
+* Return      : string
+*************************************************************************************************/
+function replaceAll(pValue, pSearch, pReplace)
+{
+    var intLimit = 0;
+    while (pValue.indexOf(pSearch) != -1 || intLimit > 10000)
+    {
+        pValue = pValue.replace(pSearch, pReplace);
+        intLimit++;
+    }
+
+    return pValue;
+}
+
+/************************************************************************************************
+* Procedure   : Calendar
+* Description : Calendar
+* Parameter   : pValue
+*               pSource
+*               pTarget
+* Return      : Calendar(this, this.value)
+*************************************************************************************************/
+function Calendar(Object, strCurrentDate) 
+{
+    strUrl = "/NWS_Web/Common/Pages/Calendar.aspx";
+    strFeatures = "dialogWidth:340px; dialogHeight:380px; dialogTop:200px; dialogLeft:400px; help:no; status:no ";
+    strDate = window.showModalDialog(strUrl, strCurrentDate, strFeatures);
+    if (strDate != "")
+        Object.value = strDate;
+}
+
+
+/************************************************************************************************
+* Procedure   : Calendar2
+* Description : 닷넷에서 지원하는 달력을 사용하여 공통 모듈로 만듦
+* Parameter   : 
+* Return      : 
+*************************************************************************************************/
+function Calendar2(Object, strCurrentDate, e) {
+    if (!document.getElementById("dvCalendar")) {
+        if (!e) var e = window.event;
+        var posx = 0;
+        var posy = 0;
+
+        if (e.pageX || e.pageY) { // pageX/Y 표준 검사
+            posx = e.pageX - 20;
+            posy = e.pageY;
+        }
+        else if (e.clientX || e.clientY) { //clientX/Y 표준 검사 Opera
+            posx = e.clientX - 20;
+            posy = e.clientY;
+
+            if (window.event) { // IE 여부 검사
+                posx += document.documentElement.scrollLeft;
+                posy += document.documentElement.scrollTop;
+            }
+        }
+        
+        var pID = Object.attributes.getNamedItem('id').value;
+        var strHtml = "<iframe id='ifrCalendar' scrolling='no' frameborder='0' width='220' height='200' src='/nws_web/common/pages/Calendar2.aspx?objid=" + pID + "&date=" + strCurrentDate + "' ></iframe>";
+        var pDiv = document.createElement("div");
+        pDiv.id = "dvCalendar";
+        pDiv.style.position = "absolute";
+        pDiv.style.top = posy + "px";
+        pDiv.style.left = posx + "px";
+        pDiv.innerHTML = strHtml;
+        document.body.appendChild(pDiv);
+    }
+}
+
+function Calendar3(Object, strCurrentDate) 
+{
+    if (GetBrowserType() == "IE")
+    {
+        var pWidth = "260px";
+        var pHeight = "260px";
+    }
+    else
+    {
+        var pWidth = "270px";
+        var pHeight = "230px";
+    }
+    strUrl = "/NWS_Web/Common/Pages/jQuery_Calendar.aspx?curDate=" + strCurrentDate;   
+    strFeatures = "dialogWidth:" + pWidth + "; dialogHeight:" + pHeight + "; dialogTop:200px; dialogLeft:400px; help:no; status:no; scroll:no;";
+    strDate = window.showModalDialog(strUrl, strCurrentDate, strFeatures);
+    if (strDate)
+        Object.value = strDate;
+}
+
+/************************************************************************************************
+* Procedure   : DownFindTagObj
+* Description : 테이블내 특정 태그 ID 가져오기 -> DownFindTagObj(document.getElementByID("tblList").rows(0).cells(0), "INPUT") 형태로 사용
+* Parameter   : eventObj
+*               TagName
+* Return      : string
+*************************************************************************************************/
+function DownFindTagObj(eventObj,TagName)
+{
+	if(eventObj.tagName.toUpperCase() == TagName.toUpperCase()) return eventObj;
+	
+	var cnt		= 0;
+	var childs	= eventObj.children;
+	var rChild	= null;
+	
+	if(childs.length == null || childs.length == undefined) return rChild;
+	for(var cnt = 0 ; cnt < childs.length ; cnt++)
+	{
+		if(childs[cnt].tagName.toUpperCase() == TagName.toUpperCase())
+		{
+			rChild = childs[cnt];
+			break;
+		}
+		else
+		{
+			var returnValue = fn_DownFindTagObj(childs[cnt],TagName);
+			
+			if(returnValue != null)
+			{
+				rChild = returnValue;
+				break;
+			}
+		}
+	}
+	
+	return rChild;
+}
+
+/************************************************************************************************
+* Procedure   : ChangePageNo
+* Description : 검색결과 페이징시 선택한 페이지번호 저장
+* Parameter   : ObjectName : 페이지 번호 저장할 컨트롤 명
+*               PageNo : 선택한 페이지 번호
+* Return      : void
+*************************************************************************************************/
+
+function ChangePageNo(ObjectName, PageNo)
+{
+    document.getElementById(ObjectName).value = PageNo;
+}
+
+/************************************************************************************************
+* Procedure   : AllSettingCheckBoxInDataGrid
+* Description : DataGrid 에서 헤더의 체크박스를 체크하면 전체가 선택또는 비선택 됨
+* Parameter   : sConID : DataGrid 의 고유 id
+                state  : 헤더의 체크박스 체크 상태값
+*               sCheckBoxID : 체크박스ID (옵션)                
+* Return      : void
+*************************************************************************************************/
+function AllSettingCheckBoxInDataGrid(sConID,state,sCheckBoxID) 
+{ 
+    var inputs = document.getElementById(sConID).getElementsByTagName("input");
+
+    for(var i = 0; i < inputs.length ; i++) 
+    { 
+        if (inputs[i].type == "checkbox")
+        {
+            var oCheckBox = null;
+            if (sCheckBoxID)
+                if (inputs[i].id == sCheckBoxID) oCheckBox = inputs[i];
+            else
+                oCheckBox = inputs[i];
+            
+            if( oCheckBox != null && oCheckBox.disabled == false) oCheckBox.checked = state;
+        } 
+    } 	 
+} 
+
+/************************************************************************************************
+* Procedure   : SearchZipNo
+* Description : 우편번호 검색창 호출
+* Parameter   : none
+* Return      : void
+*************************************************************************************************/
+function SearchZipNo(pArg)
+{
+    //var sUrl = "/NWS_Web/Member/popup/post_search.aspx";   
+    //var sUrl = "/NWS_Web/Mem/Mem_post_search.aspx";
+    var sUrl = "/NWS_Web/Mem/Mem_post.aspx";
+    var sArg = "null";
+    
+    if (pArg) sArg = pArg;
+    
+    sUrl += "?ARG=" + pArg;
+        
+    //WinOpen(sUrl,430,220,'wZipNo','yes','no');
+    WinOpen(sUrl,500,540,'wZipNo','yes','no');
+}
+
+/************************************************************************************************
+* Procedure   : CitizenNo_Validation
+* DateTime    : 2004-10-09
+* Description : CitizenNo_Validation
+* Parameter   : 
+*************************************************************************************************/	
+function CitizenNo_Validation(pCitizenNo)
+{
+    var intCheckNum, booReturn, intNum, strObjectName;
+    var strCitizenNo = pCitizenNo.replace("-","");
+    var strCitizenNo1, strCitizenNo2;
+	
+    if (strCitizenNo.length != 13)
+    {
+        alert(MSG_5013_5);
+        return false;
+    }
+	
+    strCitizenNo1 = strCitizenNo.substring(0,6);
+    strCitizenNo2 = strCitizenNo.substring(6,13);		
+	
+    intCheckNum = 0;
+    for(intNum = 0; intNum <= 5; intNum++){
+	    intCheckNum = intCheckNum + ((intNum%8+2) * parseInt(strCitizenNo1.substring(intNum, intNum+1)))
+    }
+    for(intNum = 6; intNum <= 11; intNum++){
+	    intCheckNum = intCheckNum + ((intNum%8+2) * parseInt(strCitizenNo2.substring(intNum-6, intNum-5)))
+    }
+    
+    intCheckNum = 11 - (intCheckNum %11)
+    intCheckNum = intCheckNum % 10
+    if (intCheckNum != parseInt(strCitizenNo2.substring(6,7))){
+	    booReturn = false;
+    }
+    else{
+	    booReturn = true;
+    }
+	
+    if(booReturn == false){
+	    alert(MSG_5013_5);			
+    }
+		
+    return booReturn;
+}
+/************************************************************************************************
+* Procedure   : Date_Validation
+* DateTime    : 
+* Description : 유효한 날짜형식(ex : 2004-06-06)인지 체크한다. (-)대시를 붙여서 파라미터로 넘긴다.
+* Parameter   : 
+*************************************************************************************************/
+function Date_Validation(str)
+{
+    if( str.length == 10 )
+    {
+        var vDate = new Date();
+        
+        vDate.setFullYear(str.substring(0, 4));
+        vDate.setMonth(str.substring(5, 7)-1);
+        vDate.setDate(str.substring(8));
+        
+        if(vDate.getFullYear() != str.substring(0, 4) ||
+            vDate.getMonth() != (str.substring(5, 7) - 1) ||
+             vDate.getDate() != str.substring(8))
+        {
+
+            return false;
+        }
+
+        return true;
+    }
+    else
+        return false;
+        
+}
+
+/************************************************************************************************
+* Procedure   : BlogWinOpen
+* Description : 블로그 팝업창
+* Parameter   : none
+* Return      : void
+*************************************************************************************************/
+function BlogWinOpen(pBlogUrl)
+{
+	window.open(pBlogUrl, "blog", "scrollbars, menubar, resizable, status, toolbar, location, width=900, height=600");
+}
+
+/************************************************************************************************
+* Procedure   : SendMemoWinOpen
+* Description : 쪽지보내기 팝업창
+* Parameter   : pMEM_CD(회원코드), pCNTN_CD(컨텐츠코드), pPCE_CD(회신대상 쪽지번호)
+* Return      : 
+*************************************************************************************************/
+function SendMemoWinOpen(pMEM_CD,pCNTN_CD,pPCE_CD)
+{
+    //alert(pMEM_CD + ":" + pCNTN_CD + ":" + pPCE_CD);
+    var sUrl = "http://www.ohmynews.com/NWS_Web/i_Room/memo/memo_send.aspx";
+    
+    if (pMEM_CD && pMEM_CD != null)
+        sUrl += "?MEMCD=" + pMEM_CD;
+        
+    if (pCNTN_CD && pCNTN_CD != null)
+    {
+        if (sUrl.indexOf("?") > -1) 
+            sUrl += "&";
+        else
+            sUrl += "?";
+            
+        sUrl += "CNTNCD=" + pCNTN_CD;
+    }
+    
+    if (pPCE_CD && pPCE_CD != null)
+    {
+        if (sUrl.indexOf("?") > -1) 
+            sUrl += "&";
+        else
+            sUrl += "?";
+            
+        sUrl += "PCECD=" + pPCE_CD;
+    }
+    
+    WinOpen(sUrl,600,400,'wSendMemo','no','no');
+    
+}
+ 
+/************************************************************************************************
+* Procedure   : CommunityFriendPropose
+* Description : 친구신청
+* Parameter   : id(커뮤니티팝업레이어 ID), pMEM_CD(회원코드 : 커뮤니티 팝업 사용하지 않을 때)
+* Return      : 
+*************************************************************************************************/
+function CommunityFriendPropose(id,pMEM_CD)
+{     
+    if(!confirm(MSG_8001)) 
+       return void(0);  
+    var obj;
+    var pMEM_FRD_CD;
+    
+        
+    if (pMEM_CD)
+        pMEM_FRD_CD = pMEM_CD;
+    else
+    {
+        obj=document.getElementById(id);
+	    pMEM_FRD_CD = obj.getAttribute("memcd");
+	}
+		
+	if (pMEM_FRD_CD != null && pMEM_FRD_CD != "")
+        NWSCommunity.CommProposeFriend(pMEM_FRD_CD,CallBack_FriendPropose);
+    else
+        alert(MSG_5050);
+}
+function CallBack_FriendPropose(response)
+{
+    if (response.error != null)
+    {
+        alert(response.error);
+        return false;
+    }
+           
+    alert(eval(response.value)); 
+}
+
+/************************************************************************************************
+* Procedure   : CommunityFriendGoodBye
+* Description : 친구결별
+* Parameter   : id(커뮤니티팝업레이어 ID), pMEM_CD(회원코드 : 커뮤니티 팝업 사용하지 않을 때)
+* Return      : 
+*************************************************************************************************/
+function CommunityFriendGoodBye(id,pMEM_CD)
+{        
+    var obj;
+    var pMEM_FRD_CD;
+    
+    if (pMEM_CD)
+        pMEM_FRD_CD = pMEM_CD;
+    else
+    {
+        obj=document.getElementById(id);
+	    pMEM_FRD_CD = obj.getAttribute("memcd");
+	}	
+		
+	if (pMEM_FRD_CD == null || pMEM_FRD_CD == "")
+    {
+        alert(MSG_5050);
+        return;
+    }   
+            
+    NWSCommunity.CommGoodByeFriend(pMEM_FRD_CD,CallBack_FriendGoodBye);
+}
+
+function CallBack_FriendGoodBye(response)
+{
+    if (response.error != null)
+    {
+        alert(response.error);
+        return false;
+    }
+             
+    alert(eval(response.value));    
+}     
+
+/************************************************************************************************
+* Procedure   : CommunityProfile
+* Description : 프로필
+* Parameter   : id(커뮤니티팝업레이어 ID), pMEM_CD(회원코드 : 커뮤니티 팝업 사용하지 않을 때)
+* Return      : 
+*************************************************************************************************/
+function CommunityProfile(id,pMEM_CD)
+{   
+    var obj;
+    var pMEM_FRD_CD;
+    
+    if (pMEM_CD)
+        pMEM_FRD_CD = pMEM_CD;
+    else
+    {
+        obj=document.getElementById(id);
+	    pMEM_FRD_CD = obj.getAttribute("memcd");
+	}   
+	
+	if (pMEM_FRD_CD == null || pMEM_FRD_CD == "")
+    {
+        alert(MSG_5059);
+        return;
+    }  
+	
+	var strUrl = "http://www.ohmynews.com/NWS_Web/I_Room/profile/profile.aspx?MEMCD=" + pMEM_FRD_CD + "&goUrl=" + escape(document.URL);
+	
+	location.href = strUrl;
+}  
+
+/************************************************************************************************
+* Procedure   : CommunitySendMemo
+* Description : 쪽지보내기
+* Parameter   : id(커뮤니티팝업레이어 ID), pMEM_CD(회원코드 : 커뮤니티 팝업 사용하지 않을 때)
+* Return      : 
+*************************************************************************************************/
+function CommunitySendMemo(id,pMEM_CD)
+{   
+    //if (!confirm(MSG_5063)) return;
+     
+    var obj;
+    var pMEM_FRD_CD;
+    var pPCE_CD;
+    
+    if (pMEM_CD)
+        pMEM_FRD_CD = pMEM_CD;
+    else
+    {
+        obj=document.getElementById(id);
+	    pMEM_FRD_CD = obj.getAttribute("memcd");
+	    pPCE_CD = obj.getAttribute("pcecd");
+	}
+	
+	//alert(pMEM_FRD_CD + ":" + pPCE_CD);
+	
+	//if (pMEM_FRD_CD == "00297928")
+	//{
+	  //  alert(pMEM_FRD_CD);
+	//}
+		
+	SendMemoWinOpen(pMEM_FRD_CD, "", pPCE_CD);
+}
+
+/************************************************************************************************
+* Procedure   : CommunityReportRead
+* Description : 구독하기
+* Parameter   : id(커뮤니티팝업레이어 ID), pMEM_CD(회원코드 : 커뮤니티 팝업 사용하지 않을 때)
+* Return      : 
+*************************************************************************************************/
+function CommunityReportRead(id, pMEM_CD, pCNTN_CD)
+{
+    var obj;
+    var CNTN_CD;
+    var MEM_CD;
+    
+    if (pMEM_CD)
+    {
+        MEM_CD  = pMEM_CD;
+        CNTN_CD = pCNTN_CD;
+    }
+    else
+    {
+        obj=document.getElementById(id);
+        CNTN_CD = obj.getAttribute("ctl00_cphNWS_Wuc_opioion_list01_1_hdnCntnCd");
+	    MEM_CD  = obj.getAttribute("memcd");
+    }
+    
+   	if (MEM_CD == null || MEM_CD == "")
+    {
+        alert(MSG_5059);
+        return;
+    }  
+    
+    WinOpen("http://www.ohmynews.com/NWS_Web/Common/rss_popup.aspx?MEMCD=" + MEM_CD + "&CNTNCD=" + CNTN_CD + "", 500, 225, 100, 100);
+} 
+
+/************************************************************************************************
+* Procedure   : CommunityImprint
+* Description : 발자국
+* Parameter   : id(커뮤니티팝업레이어 ID), pMEM_CD(회원코드 : 커뮤니티 팝업 사용하지 않을 때)
+* Return      : 
+*************************************************************************************************/
+function CommunityImprint(id,pMEM_CD)
+{        
+    var obj;
+    var pMEM_FRD_CD;
+    
+    if (pMEM_CD)
+        pMEM_FRD_CD = pMEM_CD;
+    else
+    {
+        obj=document.getElementById(id);
+	    pMEM_FRD_CD = obj.getAttribute("memcd");
+	}
+	
+	if (pMEM_FRD_CD == null || pMEM_FRD_CD == "")
+    {
+        alert(MSG_5059);
+        return;
+    }  	
+		
+	var strUrl = "http://www.ohmynews.com/NWS_Web/I_Room/Imprint/Imprint_Index.aspx?MEMCD=" + pMEM_FRD_CD + "&goUrl=" + escape(document.URL);
+	
+	location.href = strUrl;
+} 
+
+/************************************************************************************************
+* Procedure   : CommunityWriteArticle
+* Description : 쓴기사
+* Parameter   : id(커뮤니티팝업레이어 ID), pMEM_CD(회원코드 : 커뮤니티 팝업 사용하지 않을 때)
+* Return      : 
+*************************************************************************************************/
+function CommunityWriteArticle(id,pMEM_CD)
+{        
+    var obj;
+    var pMEM_FRD_CD;
+    
+    if (pMEM_CD)
+        pMEM_FRD_CD = pMEM_CD;
+    else
+    {
+        obj=document.getElementById(id);
+	    pMEM_FRD_CD = obj.getAttribute("memcd");
+	}
+	
+	if (pMEM_FRD_CD == null || pMEM_FRD_CD == "")
+    {
+        alert(MSG_5059);
+        return;
+    }  	
+		
+    NWSCommunity.CheckMemberType(pMEM_FRD_CD,CallBack_WriteArticle);	
+}
+function CallBack_WriteArticle(response)
+{
+    if (response.error != null)
+    {
+        alert(response.error);
+        return false;
+    }
+    
+    var arrMemInfo = response.value;             
+    if (arrMemInfo[0] == "3")
+    {
+        var strUrl = "http://www.ohmynews.com/NWS_Web/I_Room/Imprint/Article/Writed_Article_List.aspx?MEMCD=" + arrMemInfo[1] + "&goUrl=" + escape(document.URL);	
+	    location.href = strUrl;
+    }
+    else
+    {
+        alert(MSG_5055);
+    }   
+}
+
+/************************************************************************************************
+* Procedure   : CommunityWriteEdit
+* Description : 쓴편집노트
+* Parameter   : id(커뮤니티팝업레이어 ID), pMEM_CD(회원코드 : 커뮤니티 팝업 사용하지 않을 때)
+* Return      : 
+*************************************************************************************************/
+function CommunityWriteEdit(id,pMEM_CD)
+{        
+    var obj;
+    var pMEM_FRD_CD;
+    
+    if (pMEM_CD)
+        pMEM_FRD_CD = pMEM_CD;
+    else
+    {
+        obj=document.getElementById(id);
+	    pMEM_FRD_CD = obj.getAttribute("memcd");
+	}
+	
+	if (pMEM_FRD_CD == null || pMEM_FRD_CD == "")
+    {
+        alert(MSG_5059);
+        return;
+    }  		
+		
+	var strUrl = "http://www.ohmynews.com/NWS_Web/I_Room/Imprint/Edited/Writed_Edited_List.aspx?MEMCD=" + pMEM_FRD_CD + "&goUrl=" + escape(document.URL);
+	
+	location.href = strUrl;
+}
+
+/************************************************************************************************
+* Procedure   : CommunityWriteOpinion
+* Description : 쓴독자의견
+* Parameter   : id(커뮤니티팝업레이어 ID), pMEM_CD(회원코드 : 커뮤니티 팝업 사용하지 않을 때)
+* Return      : 
+*************************************************************************************************/
+function CommunityWriteOpinion(id,pMEM_CD)
+{        
+    var obj;
+    var pMEM_FRD_CD;
+    
+    if (pMEM_CD)
+        pMEM_FRD_CD = pMEM_CD;
+    else
+    {
+        obj=document.getElementById(id);
+	    pMEM_FRD_CD = obj.getAttribute("memcd");
+	}
+	
+	if (pMEM_FRD_CD == null || pMEM_FRD_CD == "")
+    {
+        alert(MSG_5059);
+        return;
+    }  		
+		
+	var strUrl = "http://www.ohmynews.com/NWS_Web/I_Room/Imprint/Opinion/Writed_Opinion_List.aspx?MEMCD=" + pMEM_FRD_CD + "&goUrl=" + escape(document.URL);
+	
+	location.href = strUrl;
+}
+
+/************************************************************************************************
+* Procedure   : ArticleMobileWinOpen
+* Description : 기사 휴대폰 전송 팝업
+* Parameter   : 
+* Return      : 
+*************************************************************************************************/
+function ArticleMobileWinOpen(cntn_cd)
+{
+    window.open("http://www.m-kok.com/w2p/mkok.jsp?mcode=10201&cate=&nid=" + cntn_cd,"mobile","width=900,height=730");
+}
+
+/************************************************************************************************
+* Procedure   : ArticleEmailWinOpen
+* Description : 기사 이메일 전송 팝업
+* Parameter   : 
+* Return      : 
+*************************************************************************************************/
+function ArticleEmailWinOpen(cntnCd)
+{
+    window.open("/NWS_Web/Articleview/article_email.aspx?cntn_cd=" + cntnCd, "email", "width=600, height=700");
+}
+
+/************************************************************************************************
+* Procedure   : ArticlePrintWinOpen
+* Description : 기사 프린트 팝업
+* Parameter   : 
+* Return      : 
+*************************************************************************************************/
+function ArticlePrintWinOpen(cntnCd)
+{
+    window.open("/NWS_Web/Articleview/article_print.aspx?cntn_cd=" + cntnCd, "print", "width=700, height=607,scrollbars=yes,top=50,left=150 ");
+}
+
+/************************************************************************************************
+* Procedure   : ArticleBlogWinOpen
+* Description : 기사 블로그 담기 팝업
+* Parameter   : 
+* Return      : 
+*************************************************************************************************/
+function ArticleBlogWinOpen(cntnCd, Page_Gb)
+{
+    window.open("/NWS_Web/Articleview/article_blogscrap.aspx?cntn_cd=" + cntnCd + "&PAGE_GB=" + Page_Gb, "blog", "width=600, height=320");
+}
+
+/************************************************************************************************
+* Procedure   : ArticleStraightWinOpen
+* Description : 글자 +, - 하기 팝업
+* Parameter   : 
+* Return      : 
+*************************************************************************************************/
+function ArticleTextViewWinOpen(cntnCd)
+{
+    window.open("/NWS_Web/Articleview/article_textview.aspx?cntn_cd=" + cntnCd, "TextView", "width=700, height=607,scrollbars=yes,top=50,left=150 ");
+}
+
+/************************************************************************************************
+* Procedure   : ArticleStraightWinOpen
+* Description : 글자 +, - 하기 팝업
+* Parameter   : 
+* Return      : 
+*************************************************************************************************/
+function ArticleStraightWinOpen(cntnCd)
+{
+    window.open("/NWS_Web/Articleview/article_straight.aspx?cntn_cd=" + cntnCd, "straight", "width=600, height=520");
+}
+
+/************************************************************************************************
+* Procedure   : SedUrlWinOpen
+* Description : 편집노트 출처 팝업
+* Parameter   : 
+* Return      : 
+*************************************************************************************************/
+function SedUrlWinOpen(url)
+{
+    try{ _trk_clickTrace( "RFO", url ); }catch(_e){ };
+    window.open(url, "SedUrl", "scrollbars, menubar, resizable, status, toolbar, location, width=900, height=600");
+}
+
+/************************************************************************************************
+* Procedure   : ImgResizeTosmall
+* Description : 이미지 리사이즈
+* Parameter   : 
+* Return      : 
+*************************************************************************************************/
+function ImgResizeTosmall(x, pWBalance, pHBalance)
+{
+    var vWidth  = x.width;
+    var vHeight = x.height;
+    var vWBalance = pWBalance;
+    var vHBalance = pHBalance;
+
+    if (vWidth >= vHeight) {
+        if (vWidth > vWBalance) {
+	        vHeight = vHeight * (vWBalance/vWidth);
+	        vWidth = vWBalance;
+		    
+	        if (vHeight > vHBalance) {
+	            vWidth = vWidth * (vHBalance/vHeight);
+	            vHeight = vHBalance;
+            }
+		    
+        }
+    } else {
+        if (vHeight > vHBalance) {
+	        vWidth = vWidth * (vHBalance/vHeight);
+	        vHeight = vHBalance;
+		    
+	        if (vWidth > vWBalance) {
+	            vHeight = vHeight * (vWBalance/vWidth);
+	            vWidth = vWBalance;
+	        }
+		    
+        }
+    }
+
+    x.style.display = "none";
+    x.width = vWidth;
+    x.height = vHeight;
+    x.style.display = "block";
+}
+
+/************************************************************************************************
+* Procedure   : juminAge
+* Description : 생년월일로 나이계산
+* Parameter   : pYYYMMDD 생년월일
+* Return      : 만나이
+*************************************************************************************************/
+function juminAge(pJuminNm)
+{
+     ys=ms=ds=''; //년월일
+     d=new Date(); //데이트객체
+     cy=d.getYear(); //올해
+     cm=d.getMonth()+1;//이번달
+     
+     var pYYYYMMDD = "";
+     var pTyp = pJuminNm.substring(6,7);
+     if (pTyp == "1" || pTyp == "2")
+     {
+        pYYYYMMDD = "19" + pJuminNm.substring(0,6);
+     }
+     else if (pTyp == "3" || pTyp == "4")
+     {
+        pYYYYMMDD = "20" + pJuminNm.substring(0,6);
+     }
+     
+
+     var by=pYYYYMMDD.substr(0,4); //출생 년
+     var bm=pYYYYMMDD.substr(4,2); //출생 월
+     (parseInt(bm)<parseInt(cm))?aged=cy-by:aged=cy-by-1; //생일이 지나지 않으면 1을 뺀다
+     return aged;
+ }
+
+/************************************************************************************************
+* Procedure   : Left_I_FlashView
+* Description : I판 왼쪽 플래쉬
+* Parameter   : 
+* Return      : 
+*************************************************************************************************/ 
+ function Left_I_FlashView()
+ {
+     document.write("<object classid='clsid:d27cdb6e-ae6d-11cf-96b8-444553540000' codebase='http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0' width='90' height='33' id='left_scroll_i' align='middle'>");
+     document.write("   <param name='allowScriptAccess' value='sameDomain' />");
+     document.write("   <param name='movie' value='http://ojsimg.ohmynews.com/images/left_scroll_i.swf' />");
+     document.write("   <param name='quality' value='high' /><param name='bgcolor' value='#ffffff' />");
+     document.write("   <embed src='http://ojsimg.ohmynews.com/images/left_scroll_i.swf' quality='high' bgcolor='#ffffff' width='90' height='33' name='left_scroll_i' align='middle' allowScriptAccess='sameDomain' type='application/x-shockwave-flash' pluginspage='http://www.macromedia.com/go/getflashplayer' />");
+     document.write("</object>");
+}
+
+/************************************************************************************************
+* Procedure   : Left_E_FlashView
+* Description : E판 왼쪽 플래쉬
+* Parameter   : 
+* Return      : 
+*************************************************************************************************/ 
+ function Left_E_FlashView()
+ {
+     document.write("<object classid='clsid:d27cdb6e-ae6d-11cf-96b8-444553540000' codebase='http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0' width='90' height='33' id='left_scroll_e' align='middle'>");
+     document.write("   <param name='allowScriptAccess' value='sameDomain' />");
+     document.write("   <param name='movie' value='http://ojsimg.ohmynews.com/images/left_scroll_e.swf' />");
+     document.write("   <param name='quality' value='high' /><param name='bgcolor' value='#ffffff' />");
+     document.write("   <embed src='http://ojsimg.ohmynews.com/images/left_scroll_e.swf' quality='high' bgcolor='#ffffff' width='90' height='33' name='left_scroll_e' align='middle' allowScriptAccess='sameDomain' type='application/x-shockwave-flash' pluginspage='http://www.macromedia.com/go/getflashplayer' />");
+     document.write("</object>");
+}
+
+/************************************************************************************************
+* Procedure   : __ws__
+* Description : 광고용 플래쉬에서 사용
+* Parameter   : 
+* Return      : 
+*************************************************************************************************/ 
+function __ws__(id)
+{ 
+    document.write(id.text);
+    id.id='';
+}
+
+/************************************************************************************************
+* function vscroller(s_id, s_width, s_height, s_itemheight, s_scrollitem, s_swap, s_delay, s_darray)
+*         s_id : 임의의 스크롤 ID 값
+*      s_width : 화면에서 차지하는 width
+*     s_height : 화면에서 차지하는 height
+* s_itemheight : 한 항목이 차지하는 height
+* s_scrollitem : 한 번에 스크롤되는 항목 수
+*       s_swap : 스크롤 과정 없이 한 번에 항목 교체 (false, true)
+*      s_delay : delay 값
+*     s_darray : 표출 항목들의 array variable
+*************************************************************************************************/ 
+var vArg = new Array();
+var vRolling = true;  // E노트 롤링을 위한 변수
+
+function vscroller(s_id, s_width, s_height, s_itemheight, s_scrollitem, s_swap, s_delay, s_darray)
+{
+	vArg[s_id] = new Object();
+	var args = vArg[s_id];
+
+	args.s_id = s_id;
+	args.s_delay = s_delay;
+	args.s_scrollheight = args.scrollamount = s_itemheight * s_scrollitem;
+	args.s_swap = s_swap;
+	args.mouseover = false;
+	args.swap_pos = args.pos = 0;
+
+	var nl = s_darray.length;
+	args.swap_pos = nl * s_itemheight;
+	document.write("<div id=\"" + s_id + "\" style=\"position:relative; height:" + s_height + "px; width:" + s_width + "px; overflow:hidden;\" onMouseover=\"vArg['" + s_id + "'].mouseover=true;\" onMouseout=\"vArg['" + s_id + "'].mouseover=false;\">");
+	document.write("<div id=\"" + s_id + "_scroll_area\" style=\"position:absolute; top:0; overflow:hidden; width:" + s_width + "px; height:" + (nl * s_itemheight + args.s_scrollheight) + "px;\">\n");
+	for (var i = 0; i < nl; i++)
+		document.write("<div style=\"overflow:hidden; width:" + s_width + "px; height:" + s_itemheight + "px;\">"+ s_darray[i] + "</div>\n");
+	for (i = 0; i < s_scrollitem; i++)
+		document.write("<div style=\"overflow:hidden; width:" + s_width + "px; height:" + s_itemheight + "px;\">"+ s_darray[i] + "</div>\n");
+	document.write("</div>\n");
+	document.write("</div>\n");
+
+	args.scroll_id = document.getElementById(s_id + "_scroll_area");
+	if (s_id == "e_scroll")
+		window.setTimeout("e_vscroller_scroll(\"" + s_id + "\");", s_delay);
+	else
+	    window.setTimeout("vscroller_scroll(\"" + s_id + "\");", s_delay);
+}
+
+function vscroller2(s_id, s_width, s_height, s_itemheight, s_scrollitem, s_swap, s_delay, s_darray, s_speed) {
+    vArg[s_id] = new Object();
+    var args = vArg[s_id];
+
+    args.s_id = s_id;
+    args.s_delay = s_delay;
+    args.s_scrollheight = args.scrollamount = s_itemheight * s_scrollitem;
+    args.s_swap = s_swap;
+    args.mouseover = false;
+    args.swap_pos = args.pos = 0;
+    args.s_speed = s_speed;
+
+    var nl = s_darray.length;
+    args.swap_pos = nl * s_itemheight;
+    document.write("<div id=\"" + s_id + "\" style=\"position:relative; height:" + s_height + "px; width:" + s_width + "px; overflow:hidden;\" onMouseover=\"vArg['" + s_id + "'].mouseover=true;\" onMouseout=\"vArg['" + s_id + "'].mouseover=false;\">");
+    document.write("<div id=\"" + s_id + "_scroll_area\" style=\"position:absolute; top:0; overflow:hidden; width:" + s_width + "px; height:" + (nl * s_itemheight + args.s_scrollheight) + "px;\">\n");
+    for (var i = 0; i < nl; i++)
+        document.write("<div style=\"overflow:hidden; width:" + s_width + "px; height:" + s_itemheight + "px;\">" + s_darray[i] + "</div>\n");
+    for (i = 0; i < s_scrollitem; i++)
+        document.write("<div style=\"overflow:hidden; width:" + s_width + "px; height:" + s_itemheight + "px;\">" + s_darray[i] + "</div>\n");
+    document.write("</div>\n");
+    document.write("</div>\n");
+
+    args.scroll_id = document.getElementById(s_id + "_scroll_area");
+    if (s_id == "e_scroll")
+        window.setTimeout("e_vscroller_scroll(\"" + s_id + "\");", s_delay);
+    else
+        window.setTimeout("vscroller_scroll2(\"" + s_id + "\");", s_delay);
+}
+
+function vscroller_scroll(s_id)
+{
+    var args = vArg[s_id];
+    if (!args.mouseover) {
+	    if (args.s_swap) {
+		    args.pos -= args.s_scrollheight;
+		    args.scrollamount = 0;
+	    }
+	    else {
+		    --args.pos;
+		    --args.scrollamount;
+	    }
+
+	    if (args.pos + args.swap_pos <= 0) args.pos = 0;
+	    args.scroll_id.style.top = args.pos + "px";
+	    if (args.scrollamount <= 0) {
+		    args.scrollamount = args.s_scrollheight;
+		    window.setTimeout("vscroller_scroll(\"" + s_id + "\");", args.s_delay);
+		    return;
+	    }
+    }
+
+	window.setTimeout("vscroller_scroll(\"" + s_id + "\");", 1);
+}
+
+
+function vscroller_scroll2(s_id) {
+    var args = vArg[s_id];
+    if (!args.mouseover) {
+        if (args.s_swap) {
+            args.pos -= args.s_scrollheight;
+            args.scrollamount = 0;
+        }
+        else {
+            --args.pos;
+            --args.scrollamount;
+        }
+
+        if (args.pos + args.swap_pos <= 0) args.pos = 0;
+        args.scroll_id.style.top = args.pos + "px";
+        if (args.scrollamount <= 0) {
+            args.scrollamount = args.s_scrollheight;
+            window.setTimeout("vscroller_scroll2(\"" + s_id + "\");", args.s_delay);
+            return;
+        }
+    }
+
+    window.setTimeout("vscroller_scroll2(\"" + s_id + "\");", args.s_speed);
+}
+
+
+// E노트 롤링
+function e_vscroller_scroll(s_id)
+{
+    if (vRolling == true)
+    {
+	    var args = vArg[s_id];
+	    if (!args.mouseover) {
+		    if (args.s_swap) {
+			    args.pos -= args.s_scrollheight;
+			    args.scrollamount = 0;
+		    }
+		    else {
+			    --args.pos;
+			    --args.scrollamount;
+		    }
+
+		    if (args.pos + args.swap_pos <= 0) args.pos = 0;
+		    args.scroll_id.style.top = args.pos + "px";
+		    if (args.scrollamount <= 0) {
+			    args.scrollamount = args.s_scrollheight;
+			    window.setTimeout("e_vscroller_scroll(\"" + s_id + "\");", args.s_delay);
+			    return;
+		    }
+	    }
+    }
+
+	window.setTimeout("e_vscroller_scroll(\"" + s_id + "\");", 1);
+}
+
+// 메인면 오른쪽 E노트 롤링 토글
+function vscrollToggle(scrollName, pObj)
+{
+     if (vRolling == false)
+     {
+        if (pObj) pObj.src = 'http://ojsimg.ohmynews.com/images/title_Etoggle_stop.gif';
+        vRolling = true;
+     }
+     else
+     {
+        if (pObj) pObj.src = 'http://ojsimg.ohmynews.com/images/title_Etoggle.gif';
+        vRolling = false;
+     }
+}
+
+/************************************************************************************************
+* Procedure   : LogImageNews
+* Description : 이미지 뉴스 웹로그
+* Parameter   : 
+* Return      : 
+*************************************************************************************************/
+function LogImageNews(obj)
+{
+    eval("try{ _trk_clickTrace('EVT', obj.href ); }catch(_e){ }");
+}
+
+
+
+
+/************************************************************************************************
+* Procedure   : Write_JingGae
+* Description : 징계 : 게시판쓰기, 댓글쓰기, 편집노트쓰기, 기사쓰기, 사진동영상 제한
+* Parameter   : 회원 pMEM_CD, 징계 유형 pJING_TYP 1:게시판쓰기, 2:댓글쓰기, 3:편집노트, 4:기사쓰기, 5:사진동영상, 9:스패머
+* Return      : 
+************************************************************************************************/
+function Write_JingGae1(pMEM_CD, pJING_TYP)
+{   
+       var CheckJing =  NWSCheckJoin.Write_JingGae(pMEM_CD, pJING_TYP);
+       if(CheckJing.value != "")
+       {
+           if (CheckJing.value == "1")
+           {
+                alert("준회원 정책이 폐지되어 서비스 이용이 제한 됩니다.\n일반 회원으로 전환 가입하세요.");
+                location.href = 'http://member.ohmynews.com/NWS_Web/Mem/Mem_Choice.aspx';
+                return false; 
+           }
+            
+           var year = CheckJing.value.substring(2,4) + '년 ';
+           var month = CheckJing.value.substring(5,7) + '월 ';
+           var day = CheckJing.value.substring(8,10) + '일';
+           
+           switch(pJING_TYP)
+           {
+                case "1":
+                    alert("징계중입니다." + year + month + day + "부터 게시판 쓰기가 가능합니다");
+                    return false;
+                    break;
+                case "2":
+                    alert("징계중입니다." + year + month + day + "부터 댓글 쓰기가 가능합니다");
+                    return false;
+                    break;
+                case "3":
+                    alert("징계중입니다." + year + month + day + "부터 편집노트 쓰기가 가능합니다");
+                    return false;
+                    break;
+                case "4":
+                    alert("징계중입니다." + year + month + day + "부터 기사 쓰기가 가능합니다");
+                    return false;
+                    break;
+                case "5":
+                    alert("징계중입니다." + year + month + day + "부터 사진,동영상 올리기가 가능합니다");
+                    return false;
+                    break; 
+                case "6":
+                    alert("징계중입니다." + year + month + day + "부터 찬성이 가능합니다");
+                    return false;
+                    break;
+                case "7":
+                    alert("징계중입니다." + year + month + day + "부터 반대가 가능합니다");
+                    return false;
+                    break;  
+           }
+       }
+       
+       // 스패머
+       CheckJing =  NWSCheckJoin.Write_JingGae(pMEM_CD, '9');
+       if(CheckJing.value != "")
+       {
+            alert("등록이 제한되었습니다.");
+            return false;
+       }
+
+       // 30초 시간체크
+       switch(pJING_TYP)
+       {
+           case "6":
+           case "7":
+                break;
+            default:
+                CheckJing = NWSCheckWords.PostTimeCheck(pMEM_CD);
+                if (CheckJing.value != "") {
+                    alert("등록이 제한되었습니다.");
+                    return false;
+                }
+                break;
+       }
+       return true;
+       
+       
+}
+function CallBack_Write_JingGae(response)
+{
+   
+    if (response.error != null)
+    {
+        alert(response.error);
+        return false;
+    }
+     
+    if (response.value)
+    {          
+        alert(response.value);
+    } 
+}
+
+/************************************************************************************************
+* Procedure   : Check_Words
+* Description : 금칙어
+* Parameter   : 
+* Return      : 
+************************************************************************************************/
+function Check_Words(pContents)
+{
+       // 금칙어
+       CheckJing = NWSCheckWords.CheckWord(pContents);
+       if(CheckJing.value != "")
+       {
+            alert("금칙어로 인해 입력이 제한됩니다.");
+            return false;
+       }
+       return true;
+}
+
+function CallBack_Check_Words(response)
+{
+    if (response.error != null)
+    {
+        alert(response.error);
+        return false;
+    }
+     
+    if (response.value)
+    {          
+        alert(response.value);
+    } 
+}
+
+
+
+/************************************************************************************************
+* Procedure   : js_search_to_object
+* Description : js, htm 파일의 쿠리스트링 가져오기
+* Parameter   : str : 검색할 쿼리스트링 value
+* Return      : obj 
+* 사용법 예제 : obj['abcd']  abcd --> 검색할 쿼리스트링
+************************************************************************************************/
+function js_search_to_object(str){ 
+    if(str){ 
+        var t = str.substr(0,1) 
+        if(t=='?' ||t=='&')    var qy = str.substr(1); 
+        else    var qy = str; 
+    }else{    var qy = document.location.search.substr(1); 
+    } 
+    var obj = new Object(); 
+    var t = qy.split('&'); 
+    var tt = Array(); 
+    for(var i=0,m=t.length;i<m;i++){ 
+        tt = t[i].split('='); 
+        if(tt.length>2){ tt[1] = (tt.slice(1)).join('='); } 
+        else if(tt.length==2){} 
+        else if(tt.length==1){} 
+        if(/[^\[]*\[[^\]]*\]$/.test(tt[0])){ 
+            var tn =  tt[0].match(/([^\[]*)\[([^\]]*)\]$/); 
+            var tk = tn[1];tv = tn[2]; 
+            if(tv==''){ //a[]=x  형식 처리 
+                if(obj[tk]==null){obj[tk]= new Array();} 
+                obj[tk].push(decodeURI(tt[1])); 
+            }else{ //a[x]=y 형 처리 
+                if(obj[tk]==null){obj[tk]= new Object();} 
+                obj[tk][tv] = decodeURI(tt[1]); 
+            } 
+        }else{ 
+            if(tt[0].length>1)    obj[tt[0]] = tt[1]; 
+        } 
+    } 
+    return obj; 
+} 
+
+
+/************************************************************************************************
+* Procedure   : showPopupEHelp
+* Description : E도움말 보기 보여짐
+* Parameter   : 
+* Return      : 
+*************************************************************************************************/
+function showPopupEHelp(e, id, pPosition){
+	var obj=document.getElementById(id);
+	if (!e) var e = window.event;
+	var posx=0;
+	var posy=0;
+
+	if (e.pageX || e.pageY) { // pageX/Y 표준 검사
+		posx = e.pageX;
+		posy = e.pageY;
+	} 
+	else if (e.clientX || e.clientY) { //clientX/Y 표준 검사 Opera
+		posx = e.clientX;
+		posy = e.clientY;
+		if (window.event) { // IE 여부 검사
+			posx += document.documentElement.scrollLeft;
+			posy += document.documentElement.scrollTop;
+		}
+	}
+    
+    if (pPosition == "right")
+    {
+        posx = posx - 400;
+    }
+    
+	obj.style.left = posx + "px";   
+	obj.style.top = posy + "px";
+	obj.style.display='block';
+	obj.style.zIndex = 200;
+}
+
+/************************************************************************************************
+* Procedure   : hidePopupEHelp
+* Description : 간략히 보기 숨김
+* Parameter   : 
+* Return      : 
+*************************************************************************************************/
+function hidePopupEHelp(id)
+{
+    document.getElementById(id).style.display='none';
+}
+
+/************************************************************************************************
+* Procedure   : getElementsByClassName
+* Description : 해당하는 태그, 클래스 객체를 모두 찾아 리턴한다. (IE, Firefox 모두 에서 ellips 적용에 필요한 function)
+* Parameter   : 
+* Return      : 
+*************************************************************************************************/
+function getElementsByClassName(strClassName, strTagName, oElm){
+        var arrElements = (strTagName == "*" && document.all)? document.all : oElm.getElementsByTagName(strTagName);
+        var arrReturnElements = new Array();
+        strClassName = strClassName.replace(/\-/g, "\\-");
+        var oRegExp = new RegExp("(^|\\s)" + strClassName + "(\\s|$)");
+        var oElement;
+        for(var i=0; i<arrElements.length; i++){
+            oElement = arrElements[i];     
+            if(oRegExp.test(oElement.className)){
+                arrReturnElements.push(oElement);
+            }  
+        }
+        return (arrReturnElements)
+    }
+
+ /************************************************************************************************
+* Procedure   : ellipsForFirefox
+* Description : Firefox ellips 실행
+* Parameter   : 
+* Return      : 
+*************************************************************************************************/
+function ellipsForFirefox(strTagName)   
+{
+    var EllipsisText = (function(){
+    
+    	if( document.getBoxObjectFor && window.openDialog){
+    		var d = document.createElement(strTagName);
+	    	var sNS = 'http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul';
+		    var xml =  document.createElementNS(sNS , 'window');
+		    var label = document.createElementNS(sNS, 'description');
+            label.setAttribute('crop','end');
+        
+			xml.appendChild(label); 
+
+    		var fn = function(el){
+
+			    var xml2 =  xml.cloneNode(true);
+			    xml2.firstChild.setAttribute('value',el.textContent);
+			    el.innerHTML = '';
+			    el.appendChild(xml2);
+		    };
+		
+		    var a = getElementsByClassName('ellipsis',strTagName, document);
+		    for(var i=0;el=a[i];i++){
+			    fn(el);
+		    };
+
+	    }else{
+		    return function(){};
+	    };
+	    return fn;
+    })();
+}        
+
+/************************************************************************************************
+* Procedure   : goLoginPage()
+* Description : 로그인 여부 판단하여 로그인 페이지로 이동
+* Parameter   : 
+* Return      : 
+*************************************************************************************************/
+function goLoginPage() {
+
+    var pLoginUrl = "https://member.ohmynews.com/NWS_Web/Mem/mem_login.aspx?goUrl=";
+    //if (IsMobile()) pLoginUrl = "https://member.ohmynews.com/NWS_Web/Mem/mobile_login.aspx?goUrl=";
+    
+    if (getCookie("MemCd") == "-1" || getCookie("MemCd") == "" || getCookie("MemCd") == null) {
+        if (document.location.href == parent.document.location.href) {
+            location.href = pLoginUrl + escape(location.href);
+            return false;
+        }
+        else if(document.getElementById("hdnNUM1"))
+        {
+            parent.document.location.href = pLoginUrl + escape(parent.document.location.href);
+            return false;        
+        }
+        else
+        {
+            parent.document.location.href = pLoginUrl + escape(parent.document.location.href);
+            return false;
+        }
+    }
+    return true;
+}
+
+/************************************************************************************************
+* Procedure   : goLoginPage(pURL)
+* Description : 로그인 여부 판단하여 로그인 페이지로 이동
+* Parameter   : 
+* Return      : 
+*************************************************************************************************/
+function goLoginPage(pURL) {
+    var pLoginUrl = "https://member.ohmynews.com/NWS_Web/Mem/mem_login.aspx?goUrl=";
+    //if (IsMobile()) pLoginUrl = "https://member.ohmynews.com/NWS_Web/Mem/mobile_login.aspx?goUrl=";
+
+    if (getCookie("MemCd") == "-1" || getCookie("MemCd") == "" || getCookie("MemCd") == null)
+    {
+        location.href = pLoginUrl + escape(pURL);
+        return false;
+    }
+    return true;
+}
+
+ /************************************************************************************************
+* Procedure   : goLoginPageMobile()
+* Description : 로그인 여부 판단하여 로그인 페이지로 이동 - 이기종
+* Parameter   : 
+* Return      : 
+*************************************************************************************************/
+function goLoginPageMobile()
+{
+    if (getCookie("MemCd") == "-1" || getCookie("MemCd") == "" || getCookie("MemCd") == null)
+    {
+        location.href = "/NWS_Web/Mobile/login.aspx?goUrl=" + escape(location.href);
+        return false;
+    }
+    return true;
+}
+
+ /************************************************************************************************
+* Procedure   : goLoginPageMobile(pURL)
+* Description : 로그인 여부 판단하여 로그인 페이지로 이동 - 이기종
+* Parameter   : 
+* Return      : 
+*************************************************************************************************/
+function goLoginPageMobile(pURL)
+{
+    if (getCookie("MemCd") == "-1" || getCookie("MemCd") == "" || getCookie("MemCd") == null)
+    {
+        location.href = "/NWS_Web/Mobile/login.aspx?goUrl=" + pURL;
+        return false;
+    }
+    return true;
+}
+/****************************************************************************************************
+*Procedure      :  contents_cp,attach_kinref 
+*Description    :  기사 및 E노트 최종면 붙여넣기시 출처 복사
+*Parameter      :  ptitl : 제목, pCncnCd : 컨텐츠 코드
+*Return         :
+****************************************************************************************************/
+//s:기사 copy & paste 시 출처 복사
+function contents_cp(ptitl,pCntnCd)
+{   
+     
+     if (window.event)
+     {
+      window.event.returnValue = true;
+      window.setTimeout("attach_kinref('" + ptitl + "','" + pCntnCd + "')", 25);
+     }
+} 
+
+function attach_kinref(ptitl,pCntnCd)      // Attaching Knowledge-IN Reference. 즉, 지식인 참조(출처) 붙이기
+{
+    if (window.clipboardData) // IE
+    {
+        var txt = window.clipboardData.getData('Text');
+        txt = txt + "\r\n(출처 : " + ptitl + " - 오마이 뉴스)\r\n";
+        var result = window.clipboardData.setData('Text', txt);
+    }
+ }
+ //e:기사 copy & paste 시 출처 복사
+ /****************************************************************************************************
+*Procedure      :  copyClipboard
+*Description    :  클립보드에 복사
+*Parameter      :  
+*Return         :
+****************************************************************************************************/
+ function copyUrl(url){          
+    if(GetBrowserType() == "IE") {  
+        window.clipboardData.setData('Text',url);  
+        window.alert("주소가 복사되었습니다");  
+    } else {  
+        url = encodeforFlash(url);  
+        var flashcopier = 'flashcopier';  
+        if(!document.getElementById(flashcopier))  
+        {  
+            var divholder = document.createElement('div');  
+            divholder.id = flashcopier;  
+            document.body.appendChild(divholder);  
+        }  
+        document.getElementById(flashcopier).innerHTML = '';  
+        var divinfo = '<embed src="/nws_web/flash/clipboard/clipboard.swf" flashvars="clipboard='+url+'" type="application/x-shockwave-flash" width="1" height="1">';  
+        document.getElementById(flashcopier).innerHTML = divinfo;  
+        window.alert("주소가 복사되었습니다");  
+    }  
+ }  
+
+ function encodeforFlash(str)
+{
+    var SAFECHARS = "0123456789" +
+                  "ABCDEFGHIJKLMNOPQRSTUVWXYZ" +
+                  "abcdefghijklmnopqrstuvwxyz" +
+                  "-_.!~*'()";
+
+    var HEX = "0123456789ABCDEF";
+
+    var plaintext = str;
+    var encoded = "";
+    for (var i = 0; i < plaintext.length; i++ ) {
+        var ch = plaintext.charAt(i);
+        if (ch == " ") {
+            encoded += "+";
+        } else if (SAFECHARS.indexOf(ch) != -1) {
+            encoded += ch;
+        } else {
+            var charCode = ch.charCodeAt(0);
+            if (charCode > 255) {
+                encoded += ch;
+            } else {
+                encoded += "%";
+                encoded += HEX.charAt((charCode >> 4) & 0xF);
+                encoded += HEX.charAt(charCode & 0xF);
+            }
+        }
+    }
+    return encoded;
+};
+
+
+var gClientID = "";
+function blogTrackBack(loginid, obj, stdTrack, clientID)
+{   
+    gClientID = clientID;
+    if(obj.checked)
+    {
+        if (document.getElementById(gClientID + "_stdTrack"))
+            document.getElementById(gClientID + "_stdTrack").value = stdTrack;
+//        if (document.getElementById("ctl00_cphNWS_Wuc_opioion_list01_1_stdTrack"))
+//            document.getElementById("ctl00_cphNWS_Wuc_opioion_list01_1_stdTrack").value = stdTrack;
+//            
+//        if (document.getElementById("ctl00_cphNWS_wuc_opioion_open01_1_stdTrack"))
+//            document.getElementById("ctl00_cphNWS_wuc_opioion_open01_1_stdTrack").value = stdTrack;            
+//            
+//        if (document.getElementById("ctl00_cphMED_Wuc_opioion_open03_1_stdTrack"))
+//            document.getElementById("ctl00_cphMED_Wuc_opioion_open03_1_stdTrack").value = stdTrack;            
+        
+        document.domain = "ohmynews.com";
+        window.open("/nws_web/blog/blog_trackback.aspx?at_cd=" + stdTrack, "","toobar=no,direction=no,status=yes,menubar=no,resizeable=yes,scrollbars=no,width=430,height=230");
+    }
+    else
+    {        
+        if (document.getElementById(gClientID + "_stdTrack"))
+            document.getElementById(gClientID + "_stdTrack").value = "";    
+//        if (document.getElementById("ctl00_cphNWS_Wuc_opioion_list01_1_stdTrack"))
+//            document.getElementById("ctl00_cphNWS_Wuc_opioion_list01_1_stdTrack").value = "";
+//            
+//        if (document.getElementById("ctl00_cphNWS_wuc_opioion_open01_1_stdTrack"))
+//            document.getElementById("ctl00_cphNWS_wuc_opioion_open01_1_stdTrack").value = "";            
+//            
+//        if (document.getElementById("ctl00_cphMED_Wuc_opioion_open03_1_stdTrack"))
+//            document.getElementById("ctl00_cphMED_Wuc_opioion_open03_1_stdTrack").value = "";                        
+    }
+}
+
+function trackBack(pBlogurl, pCaId, pVisi)
+{
+    var pBurl = ""; 
+    var pCaname = ""; 
+    var arrBurl = pBlogurl.split('|');
+    var arrCaId = pCaId.split('|');
+    
+    if (document.getElementById(gClientID + "_blogurl"))
+        document.getElementById(gClientID + "_blogurl").value = arrBurl[0];
+        
+    if (document.getElementById(gClientID + "_category_id"))
+        document.getElementById(gClientID + "_category_id").value = arrCaId[0];        
+        
+    if (document.getElementById(gClientID + "_visibility"))
+        document.getElementById(gClientID + "_visibility").value = pVisi;        
+    
+    if (arrBurl.length == 1)  pBurl = arrBurl[0]; else pBurl = arrBurl[1];
+    if (arrCaId.length == 1)  pCaname = arrCaId[0]; else pCaname = arrCaId[1];
+    
+    var stdTrack = "";
+    
+    if (document.getElementById(gClientID + "_stdTrack"))
+        stdTrack = document.getElementById(gClientID + "_stdTrack").value;    
+    
+//    if (document.getElementById("ctl00_cphNWS_Wuc_opioion_list01_1_stdTrack"))
+//        stdTrack = document.getElementById("ctl00_cphNWS_Wuc_opioion_list01_1_stdTrack").value;
+
+//    if (document.getElementById("ctl00_cphNWS_wuc_opioion_open01_1_stdTrack"))
+//        stdTrack = document.getElementById("ctl00_cphNWS_wuc_opioion_open01_1_stdTrack").value;        
+//        
+//    if (document.getElementById("ctl00_cphMED_Wuc_opioion_open03_1_stdTrack"))
+//        stdTrack = document.getElementById("ctl00_cphMED_Wuc_opioion_open03_1_stdTrack").value;   
+             
+//document.getElementById('sptrackback' + stdTrack).innerHTML = " (" + pBurl + " | " + pCaname + ") ";
+
+}    
+
+/********************************************************************
+* Function    : target(tar)
+* Description : 새창 본창 여부
+* Argument    : 
+* Return      :
+* 작성자      : 김재훈
+*********************************************************************/
+
+function tagtting(tar, pNewGB)
+{
+    // 관리자 일경우 새창으로
+    if(location.href.indexOf("ojsadm.ohmynews.com") > 0 || location.href.indexOf("OJS_AdminWeb") > 0)
+    {   
+        tar.target = '_blank';
+    }
+    
+    // 새창 여부
+    if (pNewGB == 'T')
+    {
+        tar.target = '_blank';
+    }
+    
+    // 블로그 일경우 새창
+    var idxBlog = tar.href.toUpperCase().indexOf("CNTN_CD=");
+    idxBlog = idxBlog + 8;
+    var cntnGB = tar.href.substring(idxBlog,idxBlog + 1);
+    if (cntnGB == "B")
+        tar.target = '_blank';
+
+}
+
+
+/********************************************************************
+* Function    : cut(str, len)
+* Description : 글자를 앞에서부터 원하는 바이트만큼 잘라 리턴합니다. 한글의 경우 2바이트로 계산하며, 글자 중간에서 잘리지 않습니다.
+* Argument    : str : 글 , len : 자르는 길이
+* Return      : 
+* 작성자      : 최용민
+*********************************************************************/
+function cut(str, len) {
+    var l = 0;
+    for (var i = 0; i < str.length; i++) {
+        l += (str.charCodeAt(i) > 128) ? 2 : 1;
+        if (l > len) return str.substring(0, i);
+    }
+    return str;
+}
+
+
+
+/************************************************************************************************
+* Procedure   : Write_JingGae
+* Description : 징계 : 게시판쓰기, 댓글쓰기, 편집노트쓰기, 기사쓰기, 사진동영상 제한
+* Parameter   : 회원 pMEM_CD, 징계 유형 pJING_TYP 1:게시판쓰기, 2:댓글쓰기, 3:편집노트, 4:기사쓰기, 5:사진동영상, 9:스패머
+* Return      : true, false
+************************************************************************************************/
+function CheckRule(pJING_TYP, pContents) {
+    var pMsg = "";
+    $.ajax({
+        type: "POST",
+        url: "http://www.ohmynews.com/NWS_Web/Common/Pages/CommonChkMember.aspx",
+        data: "jingtyp=" + pJING_TYP + "&contents=" + escape(pContents),
+        success: function(msg) {
+            if (msg != "") {
+                alert(msg);
+            }
+            else {
+
+            }
+        },
+        error: function(error) {
+            alert("입력실패 했습니다.");
+        }
+    });
+}
+
+
+/************************************************************************************************
+* Procedure   : SNS(type, title, longurl)
+* Description : SNS 서비스(페이스북,트위터,미투데이,요즘)
+* Parameter   : type: 서비스종류 title : 컨텐츠내용 logurl : 컨텐츠 URL
+* Return      : 
+* 작성자      : 김재훈
+************************************************************************************************/
+function SNS(type, title, longurl, pSummary, pThumbnail) {
+
+    switch (type) {
+
+        case 'me2day':
+            if (location.href.indexOf('OhmyStar') > -1) title = escape(title);
+            var tag = '오마이뉴스';
+            var link = 'http://me2day.net/posts/new?new_post[body]="' + title + '":' + encodeURIComponent(longurl) + '&new_post[tags]=' + encodeURIComponent(tag);
+            popwin = window.open(link, 'popwin', 'menubar=yes,toolbar=yes,status=yes,resizable=yes,location=yes,scrollbars=yes');
+            if (popwin)
+                popwin.focus();
+            break;
+
+        case 'twitter':
+            if (location.href.indexOf('OhmyStar') > -1) title = escape(title);
+            var link = '/NWS_Web/View/at_pg_tw.aspx?titl=' + title + '&cncd=' + encodeURIComponent(longurl);
+            //popwin = window.open(link,'popwin');
+            popwin = window.open(link, 'popwin', 'menubar=yes,toolbar=yes,status=yes,resizable=yes,location=yes,scrollbars=yes');
+            if (popwin)
+                popwin.focus();
+            break;
+
+        case 'yozzm':
+            if (location.href.indexOf('OhmyStar') > -1) title = escape(title);
+            var link = 'http://yozm.daum.net/api/popup/prePost?sourceid=41&link=' + encodeURIComponent(longurl) + '&prefix=' + title;
+            popwin = window.open(link, 'popwin', 'width=400,height=364,scrollbars=no,resizable=no');
+            if (popwin)
+                popwin.focus();
+            break;
+
+        case 'facebook':
+            var link = 'http://www.facebook.com/sharer.php?u=' + encodeURIComponent(longurl) + "&t=" + encodeURIComponent(title);
+            popwin = window.open(link, 'recom_icon_pop', 'width=600,height=500,scrollbars=no,resizable=no');
+            if (popwin)
+                popwin.focus();
+            break;
+
+        case 'gongam':
+            var link = '';
+            if (title == 'Article') link = '/NWS_Web/View/at_pg_tw.aspx?sns=gongam&cncd=' + longurl;
+            else link = 'http://csp.cyworld.com/bi/bi_recommend_pop.php?url=' + encodeURIComponent(longurl) + "&title=" + title + "&thumbnail=" + pThumbnail + "&summary=" + encodeURIComponent(pSummary);
+            popwin = window.open(link, 'recom_icon_pop', 'width=400,height=364,scrollbars=no,resizable=no');
+            if (popwin)
+                popwin.focus();
+            break;
+        
+        default:
+            break;
+    }
+    return;
+
+}
+
+/************************************************************************************************
+* Procedure   : SnsShare_Count(type, cntncd)
+* Description : 페북, 트위터 공유 카운트 저장
+* Parameter   : type: 서비스종류 pCNTN_CD: 컨텐츠 코드
+* Return      : 
+* 작성자      : 최용민
+************************************************************************************************/
+function SnsShare_Count(pCNTN_CD) {
+    if (pCNTN_CD.substr(0, 1) == "A") {
+        var pStr = $.ajax({
+            url: "/NWS_Web/Common/Pages/CommAjaxFunction.aspx",
+            async: false,
+            type: "POST",
+            data: ({
+                std : 'articleinfo',
+                CNTN_CD : pCNTN_CD
+            })
+        }).responseText;
+
+        var pSTD_KND = pStr.split('|')[0];
+        var pFORM_KND = pStr.split('|')[1];
+        var pURL = "";
+        if (pSTD_KND == "24" && pFORM_KND == "503") {
+            pURL = escape("http://star.ohmynews.com/NWS_Web/OhmyStar/at_pg_w.aspx?CNTN_CD=" + pCNTN_CD);
+        }
+        else if (pSTD_KND == "24" && pFORM_KND != "503") {
+            pURL = escape("http://star.ohmynews.com/NWS_Web/OhmyStar/at_pg.aspx?CNTN_CD=" + pCNTN_CD);
+        }
+        else if (pSTD_KND != "24" && pFORM_KND == "503") {
+            pURL = escape("http://www.ohmynews.com/NWS_Web/View/at_pg_w.aspx?CNTN_CD=" + pCNTN_CD);
+        }
+        else if (pSTD_KND != "24" && pFORM_KND != "503") {
+            pURL = escape("http://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=" + pCNTN_CD);
+        }
+        else if (pFORM_KND == "500" && pFORM_KND == "501") {
+            pURL = escape("http://www.ohmynews.com/NWS_Web/Tenman/report_last.aspx?CNTN_CD=" + pCNTN_CD);
+        }
+
+        var pFB_COUNT = 0;
+        var pTW_COUNT = 0;
+
+        // 페이스북 공유 카운트
+        $.ajax({
+            url: "https://graph.facebook.com/",
+            type: "GET",
+            data: "fields=share&id=" + pURL,
+            dataType: 'jsonp',
+            error: function(xhr, status, error) {
+                //alert(error);
+            },
+            success: function(data) {
+                if (data) {
+                    if (data.share) {
+                        pFB_COUNT = data.share.share_count;
+                        var pStr = $.ajax({
+                            url: "/NWS_Web/Common/Pages/CommAjaxFunction.aspx",
+                            async: false,
+                            type: "POST",
+                            data: ({ std: "snscount",
+                                CNTN_CD: pCNTN_CD,
+                                fbcount: pFB_COUNT,
+                                twcount: pTW_COUNT
+                            })
+                        }).responseText;
+                    }
+                }
+            }
+        });
+
+/*
+        $.ajax({
+            url: "https://graph.facebook.com/fql",
+            type: "GET",
+            data: "q=SELECT url, normalized_url, share_count, like_count, comment_count, total_count, commentsbox_count, comments_fbid, click_count FROM link_stat WHERE url=\"" + pURL + "\"",
+            dataType: 'jsonp',
+            error: function(xhr, status, error) {
+                alert(error);
+            },
+            success: function(data) {
+                var pCount = 0;
+                var pShare_Count = 0;
+
+                if (data) {
+                    pFB_COUNT = data.data[0].total_count;
+
+                    var pStr = $.ajax({
+                        url: "/NWS_Web/Common/Pages/CommAjaxFunction.aspx",
+                        async: false,
+                        type: "POST",
+                        data: ({ std: "snscount",
+                            CNTN_CD: pCNTN_CD,
+                            fbcount: pFB_COUNT,
+                            twcount: pTW_COUNT
+                        })
+                    }).responseText;
+                    
+                    // 트위터 공유 카운트
+//                    $.getJSON("http://urls.api.twitter.com/1/urls/count.json?url=" + pURL + "&callback=?", function(data) {
+//                        pTW_COUNT = data.count;
+//                        var pStr = $.ajax({
+//                            url: "/NWS_Web/Common/Pages/CommAjaxFunction.aspx",
+//                            async: false,
+//                            type: "POST",
+//                            data: ({ std: "snscount",
+//                                CNTN_CD: pCNTN_CD,
+//                                fbcount: pFB_COUNT,
+//                                twcount: pTW_COUNT
+//                            })
+//                        }).responseText;
+//                    });
+                }
+            }
+        });
+*/
+    }
+}
+
+/************************************************************************************************
+* Procedure   : GA_Share(pURL)
+* Description : SNS 공유 구글 애널리틱스 리포트 
+* Parameter   : 
+* Return      : 
+* 작성자      : 박준규
+************************************************************************************************/
+function GA_Share(type, pURL) {
+    //구글 애널리틱스 처리
+    var socialTarget;
+    if (IsMobile()) 
+        socialTarget = "m.ohmynews.com";
+    else
+        socialTarget = "www.ohmynews.com";
+        
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ohmyanalytics');
+  
+    ohmyanalytics('create', 'UA-73278334-8', 'auto', 'GA_Share');
+             
+    switch (type.replace("ten", "")) {
+        case 'twitter':
+            ohmyanalytics('GA_Share.send', 'social', 'twitter', 'share', socialTarget, {'page': pURL});
+            break;
+        case 'facebook':
+            ohmyanalytics('GA_Share.send', 'social', 'facebook', 'share', socialTarget, {'page': pURL});
+            break;
+        case 'kakao':
+            ohmyanalytics('GA_Share.send', 'social', 'kakao', 'share', socialTarget, {'page': pURL});
+            break;
+        case 'kas':
+            ohmyanalytics('GA_Share.send', 'social', 'kas', 'share', socialTarget, {'page': pURL});
+            break;                
+        case 'google':
+            ohmyanalytics('GA_Share.send', 'social', 'google', 'share', socialTarget, {'page': pURL});
+            break;            
+        case 'band':
+            ohmyanalytics('GA_Share.send', 'social', 'band', 'share', 'www.ohmynews.com', {'page': pURL});
+            break;                
+        case 'band_mobile':
+            ohmyanalytics('GA_Share.send', 'social', 'band', 'share', 'm.ohmynews.com', {'page': pURL});
+            break;                
+        case 'line':
+            ohmyanalytics('GA_Share.send', 'social', 'line', 'share', 'www.ohmynews.com', {'page': pURL});
+            break;                
+        case 'line_mobile':
+            ohmyanalytics('GA_Share.send', 'social', 'line', 'share', 'm.ohmynews.com', {'page': pURL});
+            break;                
+        default:
+            break;
+    }
+}
+
+
+/************************************************************************************************
+* Procedure   : SNS(type, cntncd)
+* Description : SNS 서비스(페이스북,트위터,미투데이,요즘)
+* Parameter   : type: 서비스종류 cntncd: 컨텐츠 코드
+* Return      : 
+* 작성자      : 최용민
+************************************************************************************************/
+function SnsShare(type, cntncd, pTitl, pThumbNail, pURL, pDESC) {
+
+    GA_Share(type, pURL);
+    
+    var pUrl = "/NWS_Web/Common/Pages/CommSNS.aspx?SNS=" + type + "&CNTN_CD=" + cntncd + "&TITL=" + pTitl + "&THUMBNAIL=" + pThumbNail + "&URL=" + pURL + "&DESC=" + pDESC;
+    var popwin;
+        
+    switch (type.replace("ten", "")) {
+        case 'twitter':
+            SnsShare_Count(cntncd); // 공유카운트 저장
+            var userAgent = navigator.userAgent;
+            if (userAgent.indexOf('ohmyapp') > -1)
+                location.href = pUrl;
+            else
+                popwin = window.open(pUrl, 'popwin', 'menubar=yes,toolbar=yes,status=yes,resizable=yes,location=yes,scrollbars=yes');
+            break;
+        case 'facebook':
+        case 'facebook_newsphoto':
+            SnsShare_Count(cntncd); // 공유카운트 저장
+
+            var userAgent = navigator.userAgent;
+            if (userAgent.indexOf('ohmyapp') > -1)
+                location.href = pUrl;
+            else
+                popwin = window.open(pUrl, 'popwin', 'width=600,height=500,scrollbars=no,resizable=no');
+            break;
+        case 'kakao':
+            var pMsg = $("meta[property='og:title']").attr("content");
+            kakao.link("talk").send({
+                msg: pMsg,
+                url: pURL,
+                appid: "www.ohmynews.com",
+                appver: "2.0",
+                appname: "오마이뉴스",
+                type: "link"
+            });
+            break;
+        case 'kas':
+            popwin = window.open(pUrl, 'popwin', 'width=400,height=364,scrollbars=no,resizable=no');
+            break;
+            
+        case 'google':
+            popwin = window.open(pUrl, 'popwin', 'width=400,height=364,scrollbars=no,resizable=no');
+            break;
+        
+        case 'band':         
+            popwin = window.open(pUrl, 'popwin', 'width=400,height=364,scrollbars=no,resizable=no');
+            break;
+
+        case 'band_mobile':
+            var titl = "";
+            var url = "";
+            if (cntncd.substr(0, 1) == "A") {
+                titl = $("meta[property='og:title']:eq(0)").attr("content");
+                if ($("#dvShareTitl").length > 0) titl = $("#dvShareTitl").html();
+                url = 'http://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=' + cntncd;
+            } else if (cntncd.substr(0, 1) == "M") {
+                titl = $("meta[property='og:title']:eq(0)").attr("content");
+                if ($("#dvShareTitl").length > 0) titl = $("#dvShareTitl").html();
+                url = 'http://www.ohmynews.com/NWS_Web/View/mov_pg.aspx?CNTN_CD=' + cntncd;
+            } else if (cntncd.substr(0, 1) == "I") {
+                titl = $("meta[property='og:title']:eq(0)").attr("content");
+                if ($("#dvShareTitl").length > 0) titl = $("#dvShareTitl").html();
+                url = 'http://www.ohmynews.com/NWS_Web/View/img_pg.aspx?CNTN_CD=' + cntncd;
+            } else {
+                titl = pTitl;
+                url = pURL;
+            }
+                        
+            if ($("#txtShortUrl").html() != "" && $("#txtShortUrl").html() != "undefined")
+                url = $("#txtShortUrl").html();
+
+            var o = {
+                method: 'web2app',
+                param: 'create/post?text=' + titl + ' ' + url,
+                a_store: 'itms-apps://itunes.apple.com/app/id542613198?mt=8',
+                a_proto: 'bandapp://',
+                g_store: 'market://details?id=com.nhn.android.band',
+                g_proto: 'scheme=bandapp;package=com.nhn.android.band'
+            };
+
+            if (navigator.userAgent.match(/android/i)) {
+                // Android
+                setTimeout(function() { location.href = 'intent://' + o.param + '#Intent;' + o.g_proto + ';end' }, 100);
+            }
+            else if (navigator.userAgent.match(/(iphone)|(ipod)|(ipad)/i)) {
+                // Apple
+                if (cntncd.substr(0, 1) == "I") {
+                    setTimeout(function() { parent.location.href = o.a_proto + o.param }, 100);
+                    setTimeout(function() { parent.location.href = o.a_store; }, 200);
+                }
+                else {
+                    setTimeout(function() { location.href = o.a_proto + o.param }, 100);
+                    setTimeout(function() { location.href = o.a_store; }, 200);
+                }
+            }
+            else {
+                alert('이 기능은 모바일에서만 사용할 수 있습니다.');
+            }
+            break;             
+            
+        case 'line':
+            popwin = window.open(pUrl, 'popwin', 'width=400,height=364,scrollbars=no,resizable=no');
+            break;
+            
+        case 'line_mobile':
+            var titl= "";
+            var url = "";
+            if (cntncd.substr(0, 1) == "A") {
+                titl= $("#mtTitl").attr('content');
+                url = 'http://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=' + cntncd;
+            }else{
+                titl= pTitl;
+                url = pURL;
+            }
+            
+            var o = {
+                method:'web2app',
+                param:'msg/text/'+ titl  + '\r\n' + url,
+                a_store:'itms-apps://itunes.apple.com/app/id542613198?mt=8',
+                g_store:'market://details?id=jp.naver.line.android',
+                a_proto:'line://',
+                g_proto:'scheme=line;package=jp.naver.line.android'
+            };
+            
+            if(navigator.userAgent.match(/android/i)) {
+                // Android
+                setTimeout(function(){ location.href = 'intent://' + o.param + '#Intent;' + o.g_proto + ';end'}, 100);
+            }
+            else if(navigator.userAgent.match(/(iphone)|(ipod)|(ipad)/i)) {
+                // Apple
+                setTimeout(function(){ location.href = o.a_store; }, 200);          
+                setTimeout(function(){ location.href = o.a_proto + o.param }, 100);
+            }
+            else {
+                alert('이 기능은 모바일에서만 사용할 수 있습니다.');
+            }
+            break;      
+               
+            
+        default:
+            break;
+    }
+    if (popwin)
+        popwin.focus();
+    return;
+}
+
+// SNS(페이스북) 카운트 업데이트
+function SetFbCount(pCNTN_CD) {
+
+    // 페이스북 공유 카운트
+    var pFbUrl = escape("http://www.ohmynews.com/nws_web/view/at_pg.aspx?CNTN_CD=" + pCNTN_CD);
+    $.ajax({
+        url: "https://graph.facebook.com/",
+        type: "GET",
+        data: "fields=share&id=" + pFbUrl,
+        dataType: 'jsonp',
+        error: function(xhr, status, error) {
+            //alert(error);
+        },
+        success: function(data) {
+            var pCount = 0;
+            if (data) {
+                if (data.share) {
+                    pCount = data.share.share_count;
+                }
+            }
+
+            var pStr = $.ajax({
+                url: "/NWS_Web/Common/Pages/CommAjaxFunction.aspx",
+                async: false,
+                type: "POST",
+                data: ({ std: "fbcount",
+                    CNTN_CD: pCNTN_CD,
+                    count: pCount
+                })
+            }).responseText;
+        }
+    });
+/*
+    $.ajax({
+        url: "https://graph.facebook.com/fql",
+        type: "GET",
+        data: "q=SELECT url, normalized_url, share_count, like_count, comment_count, total_count, commentsbox_count, comments_fbid, click_count FROM link_stat WHERE url=\"" + pFbUrl + "\"",
+        dataType: 'jsonp',
+        error: function(xhr, status, error) {
+            alert(error);
+        },
+        success: function(data) {
+            var pCount = 0;
+            if (data) {
+                pCount = data.data[0].total_count;
+            }
+
+            var pStr = $.ajax({
+                url: "/NWS_Web/Common/Pages/CommAjaxFunction.aspx",
+                async: false,
+                type: "POST",
+                data: ({ std: "fbcount",
+                    CNTN_CD: pCNTN_CD,
+                    count: pCount
+                })
+            }).responseText;
+        }
+    });
+*/
+}
+
+/************************************************************************************************
+* Procedure   : SnsShare2(type, cntncd, pTitl, pThumbNail, pURL, pDESC)
+* Description : SNS 서비스(페이스북,트위터,미투데이,요즘)
+* Parameter   : type: 서비스종류 cntncd: 컨텐츠 코드
+* Return      : 
+* 작성자      : 박준규
+************************************************************************************************/
+function SnsShare2(type, cntncd, pTitl, pThumbNail, pURL, pDESC) {
+    var pUrl = "/NWS_Web/Common/Pages/CommSNS.aspx?SNS=" + type + "&CNTN_CD=" + cntncd + "&TITL=" + escape(pTitl) + "&THUMBNAIL=" + escape(pThumbNail) + "&URL=" + escape(pURL) + "&DESC=" + escape(pDESC);
+    var popwin;
+    switch (type) {
+        case 'me2day':
+            popwin = window.open(pUrl, 'popwin', 'menubar=yes,toolbar=yes,status=yes,resizable=yes,location=yes,scrollbars=yes');
+            break;
+        case 'twitter':
+            popwin = window.open(pUrl, 'popwin', 'menubar=yes,toolbar=yes,status=yes,resizable=yes,location=yes,scrollbars=yes');
+            break;
+        case 'yozzm':
+            popwin = window.open(pUrl, 'popwin', 'width=400,height=364,scrollbars=no,resizable=no');
+            break;
+        case 'facebook':
+            popwin = window.open(pUrl, 'popwin', 'width=600,height=500,scrollbars=no,resizable=no');
+            break;
+        case 'gongam':
+            popwin = window.open(pUrl, 'popwin', 'width=400,height=364,scrollbars=no,resizable=no');
+            break;
+        default:
+            break;
+    }
+    if (popwin)
+        popwin.focus();
+    return;
+}
+
+/************************************************************************************************
+* Procedure   : confirmMovie_Mobile(pIsFree)
+* Description : 모바일에서 영상 보기 할때...
+* Parameter   : pIsFree: 유료 무료
+* Return      : 
+* 작성자      : 최용민
+************************************************************************************************/
+// 영상보기 경고 메세지
+function confirmMovie_Mobile(pIsFree, pMOV_CD) {
+
+    if (pIsFree != "F") {
+        if (!goLoginPage()) return false;
+    }
+    var pStr = $.ajax({
+        url: "/NWS_Web/OhmyTV/tvinfoa_mobile.aspx",
+        async: false,
+        type: "POST",
+        data: ({ MOV_CD: pMOV_CD })
+    }).responseText;
+
+    if (pStr != 'FAIL') {
+        if (confirm('3G로 접속할 경우 과도한 데이터패킷이 발생할 수 있습니다.')) {
+            window.open(pStr);
+        }
+    }
+    else {
+        if (pIsFree != "F") alert('유료영상 콘텐츠입니다.');
+        else alert('플레이에 실패 하였습니다.');
+    }
+}
+/************************************************************************************************
+* Procedure   : confirmMovie_Mobile(pIsFree, pMOV_CD, pDivice)
+* Description : 모바일 특강 인증
+* Parameter   : pIsFree: 유료 무료, pMOV_CD: 영상코드, pDivice: 기기
+* Return      : 
+* 작성자      : 이기종
+************************************************************************************************/
+// 영상보기 경고 메세지
+function confirmMovie_Mobile2(pIsFree, pMOV_CD, pDivice) {
+    if (pIsFree != "F") {
+        if(pDivice == "Mobile")
+        {
+            if (!goLoginPageMobile()) return false;
+        }else{
+            if (!goLoginPage()) return false;
+        }
+    }
+    
+    var pStr = $.ajax({
+        url: "/NWS_Web/OhmyTV/tvinfoa_mobile.aspx",
+        async: false,
+        type: "POST",
+        data: ({ MOV_CD: pMOV_CD })
+    }).responseText;
+
+    if (pStr != 'FAIL') {
+        if (confirm('3G로 접속할 경우 과도한 데이터패킷이 발생할 수 있습니다.')) {
+            window.open(pStr);
+        }
+    }
+    else {
+        if (pIsFree != "F") alert('유료영상 콘텐츠입니다.');
+        else alert('플레이에 실패 하였습니다.');
+    }
+} 
+
+
+// 추천, 찬성, 반대
+// pStd 설명 1: 게시판 첨부파일 다운로드 로그, recommand : 추천, disagree : 반대
+function Recommand(pCNTN_CD, pID, pStd) {
+    
+    var pStr = $.ajax({
+        url: "/NWS_Web/Common/Pages/CommAjaxFunction.aspx",
+        async: false,
+        type: "POST",
+        data: ({ CNTN_CD: pCNTN_CD, std: pStd })
+    }).responseText;
+
+    if (pStr == "OK") {
+        if (pID != '') {
+            var pCnt = Number($('#' + pID).html()) + 1;
+            $('#' + pID).html(pCnt);
+        }
+        else {
+            alert("추천 하였습니다.    ");
+        }
+    }
+    else {
+        switch (pCNTN_CD.substr(0, 1)) {
+            case 'M':
+            case 'I':            
+                alert(MSG_6013);
+                break;
+            default :
+                alert(eval(pStr));
+                break;
+        }
+    }
+}
+
+// 축약주소 알아내기 ajax 사용
+function GetShortUrl(pCNTN_CD, pSTD) {
+    var pCT_GB = pCNTN_CD.substr(0, 1)
+    var pURL = "";
+    switch (pCT_GB) {
+        case "A":
+            if (pSTD == "24")
+                pURL = "http://www.ohmynews.com/NWS_Web/OhmyStar/at_pg.aspx?CNTN_CD=" + pCNTN_CD;
+            else
+                pURL = "http://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=" + pCNTN_CD;
+            break;
+        case "I":
+            if (pSTD == "24")
+                pURL = "http://www.ohmynews.com/NWS_Web/OhmyStar/img_pg.aspx?CNTN_CD=" + pCNTN_CD;
+            else
+                pURL = "http://www.ohmynews.com/NWS_Web/View/img_pg.aspx?CNTN_CD=" + pCNTN_CD;
+            break;
+        case "M":
+            pURL = "http://www.ohmynews.com/NWS_Web/View/mov_pg.aspx?CNTN_CD=" + pCNTN_CD;
+            break;
+    }
+    
+    var pStr = $.ajax({
+        url: "/NWS_Web/Common/Pages/CommSNS.aspx",
+        async: false,
+        type: "POST",
+        data: ({ ajaxurl: pURL, CNTN_CD: pCNTN_CD })
+    }).responseText;
+    pStr = $.trim(pStr);
+
+    return pStr;
+}
+
+/************************************************************************************************
+* Procedure   : Layer_Popup
+* Description : 레이어 팝업
+* Parameter   : 
+* Return      : 
+*************************************************************************************************/
+function Layer_Popup(pID, pUrl, pWidth, pHeight, pScroll) {
+    var pLayerHtml = "";
+    pLayerHtml += "<div id='dvPopUp' style='display:none; position:fixed; _position:absolute; top:0; left:0; width:100%; height:100%; z-index:10000;'>";
+    pLayerHtml += "     <div id='dvBg' style='position:absolute; top:0; left:0; width:100%; height:100%; background:#000; opacity:.5; filter:alpha(opacity=50);'></div>";
+    pLayerHtml += "</div>";
+    pLayerHtml += "<div id='dvPopContent' style='display:none; position:absolute; left:50%; background:#fff; padding:0px; border:4px solid #ddd; border-top:30px solid #ddd; width:" + pWidth + "px; height:" + pHeight + "px; z-index:10001;'></div>";
+
+    $('body').append(pLayerHtml);
+    $('#dvPopContent').append("<img id='imgClose' src='http://ojsimg.ohmynews.com/images/close.jpg' style='position:absolute;top:-25px;left:" + (pWidth - 20) + "px;cursor:pointer;' />")
+
+    if (pID != "") {
+        $('#dvPopContent').append($('#' + pID).html());
+    }
+    if (pUrl != "") {
+        $('#dvPopContent').append("<iframe id='ifr' src='" + pUrl + "' width='" + pWidth + "' height='" + pHeight + "' frameborder='0' scrolling='" + pScroll + "'></iframe>");
+    }
+
+    var pDocHeight = $(document).height();
+    $('#dvPopUp').css('height', pDocHeight + 'px');
+    $('#dvBg').css('height', pDocHeight + 'px');
+
+    // 팝업 열기
+    $('#dvPopUp, #dvPopContent').fadeIn();
+    centerScreen($('#dvPopContent'));
+
+
+    // 팝업닫기
+    $(document).keydown(function(e) {
+        if (e.keyCode == 27) {
+            LayerPopup_Hide();
+        }
+    });
+
+    $('#imgClose').click(function() {
+        LayerPopup_Hide();
+    });
+
+    $("#dvPopContent").on({
+        "mouseover": function() {
+            $(this).draggable({ cursor: "move" });
+            $(this).css("cursor", "move");
+        }
+    });
+}
+
+/************************************************************************************************
+* Procedure   : Layer_Popup2
+* Description : 레이어 팝업
+* Parameter   : 
+* Return      : 
+*************************************************************************************************/
+function Layer_Popup2(pID, pUrl, pWidth, pHeight, pScroll) {
+    var pLayerHtml = "";
+    pLayerHtml += "<div id='dvPopUp' style='display:none; position:fixed; _position:absolute; top:0; left:0; width:100%; height:100%; z-index:10000;'>";
+    pLayerHtml += "     <div id='dvBg' style='position:absolute; top:0; left:0; width:100%; height:100%; background:#000; opacity:.5; filter:alpha(opacity=50);'></div>";
+    pLayerHtml += "</div>";
+    pLayerHtml += "<div id='dvPopContent' style='display:none; position:absolute; left:50%; background:#fff; padding:0px; border:4px solid #ddd; width:" + pWidth + "px; height:" + pHeight + "px; z-index:10001;'></div>";
+
+    $('body').append(pLayerHtml);
+    //$('#dvPopContent').append("<img id='imgClose' src='http://ojsimg.ohmynews.com/images/close.jpg' style='position:absolute;top:-25px;left:" + (pWidth - 20) + "px;cursor:pointer;' />")
+
+    if (pID != "") {
+        $('#dvPopContent').append($('#' + pID).html());
+    }
+    if (pUrl != "") {
+        $('#dvPopContent').append("<iframe id='ifr' src='" + pUrl + "' width='" + pWidth + "' height='" + pHeight + "' frameborder='0' scrolling='" + pScroll + "'></iframe>");
+    }
+
+    var pDocHeight = $(document).height();
+    $('#dvPopUp').css('height', pDocHeight + 'px');
+    $('#dvBg').css('height', pDocHeight + 'px');
+
+    // 팝업 열기
+    $('#dvPopUp, #dvPopContent').fadeIn();
+    centerScreen($('#dvPopContent'));
+
+
+    // 팝업닫기
+    $(document).keydown(function(e) {
+        if (e.keyCode == 27) {
+            LayerPopup_Hide();
+        }
+    });
+
+    $('#imgClose').click(function() {
+        LayerPopup_Hide();
+    });
+
+    $("#dvPopContent").on({
+        "mouseover": function() {
+            $(this).draggable({ cursor: "move" });
+            $(this).css("cursor", "move");
+        }
+    });
+    
+    
+}
+
+/************************************************************************************************
+* Procedure   : Layer_Popup_Loading
+* Description : 레이어 팝업
+* Parameter   : 
+* Return      : 
+*************************************************************************************************/
+function Layer_Popup_Loading() {
+    $('body').ajaxStart(function() {
+        var pLayerHtml = "<div id='dvPopUp' style='position:absolute; top:0; left:0; width:100%; height:" + document.body.scrollHeight + "px; background:#000; opacity:.5; filter:alpha(opacity=50);  z-index:10000;'></div>";
+        $(this).append(pLayerHtml);
+       
+        $('#dvPopUp').append("<img id='imgLoading' src='http://ojsimg.ohmynews.com/images/loading2012.gif' style='position:absolute; top:-50px; left:-50px; cursor:pointer;' />");
+        centerScreen($('#imgLoading'));
+
+    });
+
+    $("body").ajaxStop(function() {
+        setTimeout(LayerPopup_Hide, 500);
+    });
+}
+
+function Layer_Popup_Loading2() {
+    var pLayerHtml = "<div id='dvPopUp' style='position:absolute; top:0; left:0; width:100%; height:" + document.body.scrollHeight + "px; background:#000; opacity:.5; filter:alpha(opacity=50);  z-index:10000;'></div>";
+    $('body').append(pLayerHtml);
+
+    $('#dvPopUp').append("<img id='imgLoading' src='http://ojsimg.ohmynews.com/images/loading2012.gif' style='position:absolute; top:-50px; left:-50px; cursor:pointer;' />");
+    centerScreen($('#imgLoading'));
+}
+
+// 팝업닫기
+function LayerPopup_Hide() {
+    $('#dvPopUp, #dvPopContent').fadeOut('fast', function() {
+        $('#dvPopUp, #dvPopContent').remove();
+    });
+}
+
+// 팝업가운데로
+function centerScreen(obj) {
+    var pTop = $(document).scrollTop() + Math.ceil(($(window).height() - obj.outerHeight()) / 2);
+    obj.css('top', pTop + 'px');
+    obj.css('left', $(window).width() / 2 - obj.width() / 2);
+}
+
+//숫자콤마
+function set_commma(n){
+    var reg=/(^[+-]?\d+)(\d{3})/;
+    n += '';
+    while(reg.test(n))
+        n = n.replace(reg,'$1' + ',' + '$2');
+        
+    return n;
+}
+
+//동일IP 연속등록 제한
+function CheckIpLimit(pBoardCd)    
+{
+    var pStr = $.ajax({
+        url: "/NWS_Web/Common/Pages/CommonChkMember.aspx",
+        async: false,
+        type: "POST",
+        data: ({ pMode: "ipLimit", pCheck: "timeLmt", pBoardCd: pBoardCd })
+    }).responseText;
+    
+    // 0: 등록가능, 1: 30초(26초) 등록제한, 2: 3시간(2시간30분) 이내 연속등록 5회
+    if (pStr == '1') {
+        alert('동일 IP로 30초이내 연속등록은 제한됩니다.');
+        return false;
+    } else if (pStr == '2') {
+        alert('동일 IP로 5회이상 연속등록하여 3시간동안 제한됩니다.');
+        
+        return false;
+    }
+    
+    return true;
+}
+
+// 1,000단위 마다 콤마(,) 추가하기
+function setComma(pStr) {
+    var reg = /(^[+-]?\d+)(\d{3})/;
+    pStr += '';
+    while (reg.test(pStr))
+        pStr = pStr.replace(reg, '$1' + ',' + '$2');
+    return pStr;
+}
+
+//금액 콤마 삭제
+function delComma(n) {
+    return parseInt(n.replace(/,/g, ""));
+}
+
+// 모바일 페이지 여부 확인
+function IsMobile()
+{
+    var ua = window.navigator.userAgent.toLowerCase(); 
+    if ( /iphone/.test(ua) || /android/.test(ua) || /opera/.test(ua) || /bada/.test(ua) ) { 
+        return true;
+    } else {
+        return false;
+    }
+}
+
+//** IsIOSHiddn()
+function IsIOSHiddn()
+{
+//    var ua = window.navigator.userAgent.toLowerCase(); 
+
+//    if (ua.match(/(iphone)|(ipod)|(ipad)/i) && ua.indexOf("ohmyapp") > -1) { 
+//        //mobilemaster2016
+//        $(".btn_give, .payment > .give, .clubbt_box, .payment_box, .btn_money, .button_left > .btn_money").hide();
+//        $("#aMemUpd").hide();
+//        $("#tenman_li_support").hide();
+//        
+//        //mem_login.aspx
+//        $(".find_info").hide();
+//        $(".join_fb").hide();
+//        
+//        //pay_ini/10mainin.aspx
+//        $("#dvDin").hide();
+//        $("#dvMin").show();
+//        $("#autoPay").attr("href","javascript:;");    
+//        
+//        //ten/10manin.aspx
+//        $("#yearPay").attr("href","javascript:;");
+//        
+//        //mobile/tenman.aspx
+//        $(".diviPhoneforbidden").hide();
+//    } 
+}
+
+// 기사스크랩
+function CntnScrap(pCNTN_CD, pGB) {
+    if (goLoginPage(location.href)) {
+        var pStr = $.ajax({
+            url: "/NWS_Web/Common/Pages/CommAjaxFunction.aspx",
+            async: false,
+            type: "POST",
+            data: ({ std: "scrap",
+                CNTN_CD: pCNTN_CD,
+                gb: pGB
+            })
+        }).responseText;
+
+        if (pStr == "1") alert("이미 스크랩 되었습니다.");
+
+        if (pGB == "add") {
+            $(".cssAScrap").attr("href", "javascript:CntnScrap('" + pCNTN_CD + "', 'delete');");
+            $(".scrap_off").addClass("scrap");
+            $(".scrap_off").removeClass("scrap_off");
+
+            if (confirm("기사를 스크랩했습니다. \n스크랩 페이지로 이동 하시겠습니까?")) {
+                if (IsMobile()) location.href = "/NWS_Web/Mobile/scrap.aspx";
+                else location.href = "/NWS_Web/i_room/Closed/scrap.aspx";
+            }
+
+            var pObj = $(".arc-btns-wrap").find("button[onclick*='CntnScrap(']");
+            if (pObj.length) {
+                pObj.addClass("on");
+                var pONCLICK_TXT = pObj.attr("onclick");
+                pONCLICK_TXT = pONCLICK_TXT.replace("'add'", "'delete'");
+                pObj.attr("onclick", pONCLICK_TXT);
+            }
+            
+        }
+        else {
+            $(".cssAScrap").attr("href", "javascript:CntnScrap('" + pCNTN_CD + "', 'add');");
+            $(".scrap").addClass("scrap_off");
+            $(".scrap").removeClass("scrap");
+
+            var pObj = $(".arc-btns-wrap").find("button[onclick*='CntnScrap(']");
+            if (pObj.length) {
+                pObj.removeClass("on");
+                var pONCLICK_TXT = pObj.attr("onclick");
+                pONCLICK_TXT = pONCLICK_TXT.replace("'delete'", "'add'");
+                pObj.attr("onclick", pONCLICK_TXT);
+            }
+                        
+            
+        }
+    }
+}
+
+// 태그제거
+function stripHTMLtag(string) {
+    var objStrip = new RegExp();
+    objStrip = /[<][^>]*[>]/gi;
+    return string.replace(objStrip, "");
+}
+
+
+// 송고된 기사인지 검사
+function IsToDesk(pCNTN_CD) {
+    var pStr = $.ajax({
+        url: "/NWS_Web/Common/Pages/CommAjaxFunction.aspx",
+        async: false,
+        type: "POST",
+        data: ({ std: "istodesk",
+                 CNTN_CD: pCNTN_CD
+        })
+    }).responseText;
+
+    if (pStr == "true") {
+        alert("이미 송고된 기사 입니다.");
+        return true;
+    }
+    else if (pStr == "false") return false;
+}
+
+/************************************************************************************************
+* Procedure   : Set_Slide
+* Description : 슬라이드 기본형
+* Parameter   : pSlideID, pNaviClassName, pTitleID, pJnrstID
+* Return      : 
+*************************************************************************************************/
+function Set_Slide(pSlideID, pNaviClassName, pTitleID, pJnrstID, pIsRandom, LRShow) {
+
+    var pIdx = 0;
+    if (pIsRandom == true) pIdx = Math.floor(Math.random() * $("." + pNaviClassName).length);
+    
+    if (LRShow == null || LRShow == "")
+    {
+        LRShow = "1";   
+    }
+    
+    var options = {
+        $StartIndex: pIdx,
+        $ArrowNavigatorOptions: {                           //[Optional] Options to specify and enable arrow navigator or not
+            $Class: $JssorArrowNavigator$,                   //[Requried] Class to create arrow navigator instance
+            $ChanceToShow: LRShow                            //0: nerver, 1:mouse over, 2:always
+        }
+    };
+    var jssor_slider1 = new $JssorSlider$(pSlideID, options);
+
+    var pCNTN_CD = $("." + pNaviClassName + ":eq(" + pIdx + ")").find("img").attr("imgcd");
+    var pJNRST_CD = $("." + pNaviClassName + ":eq(" + pIdx + ")").find("img").attr("jnrstcd");
+    var pURL = $("." + pNaviClassName + ":eq(" + pIdx + ")").find("img").attr("viewurl");
+    if (pCNTN_CD) {
+        if (pTitleID == "aMovBoxTitle") {
+            $(".playbtn").attr("onclick", "PlayMovie('" + $("." + pNaviClassName + ":eq(" + pIdx + ")").find("img").attr("imgcd") + "')");
+            $("#" + pTitleID).attr("href", pURL);
+            if (pURL.indexOf('onair.aspx') > -1) $("#" + pTitleID).attr("target", "_blank");
+            else $("#" + pTitleID).removeAttr("target");
+            $("#" + pJnrstID).attr("href", "/NWS_Web/I_Room/Open/Open_Profile.aspx?MEM_CD=" + pJNRST_CD + "&CMPT_CD=M0116");
+        }
+        if (pTitleID == "aPhBoxTitle") {
+            $("#" + pTitleID).attr("href", pURL);
+            $("#" + pJnrstID).attr("href", "/NWS_Web/I_Room/Open/Open_Profile.aspx?MEM_CD=" + pJNRST_CD + "&CMPT_CD=M0115");
+        }
+    }
+
+    jssor_slider1.$On($JssorSlider$.$EVT_PARK, function(slideIndex, fromIndex) {
+        $("." + pNaviClassName).removeClass("on");
+        $("." + pNaviClassName + ":eq(" + slideIndex + ")").addClass("on");
+        $("#" + pTitleID).html($("." + pNaviClassName + ":eq(" + slideIndex + ")").find("img").attr("alt"));
+        $("#" + pJnrstID).html($("." + pNaviClassName + ":eq(" + slideIndex + ")").find("img").attr("jnrst"));
+
+        pCNTN_CD = $("." + pNaviClassName + ":eq(" + slideIndex + ")").find("img").attr("imgcd");
+        pJNRST_CD = $("." + pNaviClassName + ":eq(" + slideIndex + ")").find("img").attr("jnrstcd");
+        pURL = $("." + pNaviClassName + ":eq(" + slideIndex + ")").find("img").attr("viewurl");
+        if (pCNTN_CD) {
+            if (pTitleID == "aMovBoxTitle") {
+                $(".playbtn").attr("onclick", "PlayMovie('" + $("." + pNaviClassName + ":eq(" + pIdx + ")").find("img").attr("imgcd") + "')");
+                $("#" + pTitleID).attr("href", pURL);
+                if (pURL.indexOf('onair.aspx') > -1) $("#" + pTitleID).attr("target", "_blank");
+                else $("#" + pTitleID).removeAttr("target");
+                $("#" + pJnrstID).attr("href", "/NWS_Web/I_Room/Open/Open_Profile.aspx?MEM_CD=" + pJNRST_CD + "&CMPT_CD=M0116");
+            }
+            if (pTitleID == "aPhBoxTitle") {
+                $("#" + pTitleID).attr("href", pURL);
+                $("#" + pJnrstID).attr("href", "/NWS_Web/I_Room/Open/Open_Profile.aspx?MEM_CD=" + pJNRST_CD + "&CMPT_CD=M0115");
+            }
+        }
+
+        if (pSlideID == "movbox_slider_container") { // 2015 영상 메인
+            $("#" + pSlideID).find("img").show();
+            $(".playbtn").show();
+            $("#" + pSlideID).find("iframe").remove();
+        }
+    });
+
+    $("." + pNaviClassName).click(function() {
+        jssor_slider1.$PlayTo($(this).attr('idx'));
+    });
+}
+
+//추천-취소
+function Set_RECM(pRECMGB, pCNTNCD) {
+
+    var pStr = $.ajax({
+        url: "/NWS_Web/Common/Pages/CommAjaxFunction.aspx",
+        async: false,
+        type: "POST",
+        datatype: "xml",
+        data: ({ std: "ajaxRecm", CNTN_CD: pCNTNCD, RECMGB: pRECMGB })
+    }).responseText;
+
+    var arrStr = pStr.split("|");
+    
+    
+    var pObj = $(".arc-btns-wrap").find("button[onclick*='Set_RECM(']");
+    
+    if(arrStr[0] == "OK")
+    {
+        if(pRECMGB == "F")//취소
+        {
+            $("#top_recm").html("<span class='sym-s_off'>추천</span>"+arrStr[1]);
+            $("#bottom_recm").attr("class","btn-like_off");
+            $("#top_recm, #bottom_recm").attr("onclick","javascript:Set_RECM('T', '" + pCNTNCD + "');");
+            $(".cssSCCnt, .cssSCdt").removeClass("good_on").addClass("good_off");
+            $("#list_recm" + pCNTNCD).attr("class","btn-like_off");
+            $("#list_recm" + pCNTNCD).attr("onclick","javascript:Set_RECM('T', '" + pCNTNCD + "');");
+
+            $(".recm_btn").removeClass("on");
+            $(".recm_btn").attr("onclick", "javascript:Set_RECM('T', '" + pCNTNCD + "');");
+            
+            
+            
+            if (pObj.length) {
+                pObj.removeClass("on");
+                var pONCLICK_TXT = pObj.attr("onclick");
+                pONCLICK_TXT = pONCLICK_TXT.replace("'F'", "'T'");
+                pObj.attr("onclick", pONCLICK_TXT);
+            }            
+        }else{
+            $("#top_recm").html("<span class='sym-s_on'>추천</span>"+arrStr[1]);
+            $("#bottom_recm").attr("class","btn-like_on");
+            $("#top_recm, #bottom_recm").attr("onclick","javascript:Set_RECM('F', '" + pCNTNCD + "');");
+            $(".cssSCCnt, .cssSCdt").removeClass("good_off").addClass("good_on");
+            $("#list_recm" + pCNTNCD).attr("class","btn-like_on");
+            $("#list_recm" + pCNTNCD).attr("onclick","javascript:Set_RECM('F', '" + pCNTNCD + "');");
+            
+            $(".recm_btn").addClass("on");
+            $(".recm_btn").attr("onclick", "javascript:Set_RECM('F', '" + pCNTNCD + "');");
+
+
+            if (pObj.length) {
+                pObj.addClass("on");
+                var pONCLICK_TXT = pObj.attr("onclick");
+                pONCLICK_TXT = pONCLICK_TXT.replace("'T'", "'F'");
+                pObj.attr("onclick", pONCLICK_TXT);
+            }              
+        }
+
+        pObj = $(".arc-btns-wrap").find("button[onclick*='Set_RECM(']");
+        if (pObj.find(".number").length > 0)
+            pObj.find(".number").html(arrStr[1]);
+        else
+            pObj.append("<span class='number'>" + arrStr[1] + "</span>");
+        
+        $(".cssSCCnt").html(arrStr[1]);
+        $(".recm_btn").find(".non").html(arrStr[1]);
+        $("#bottom_recm").html("<div class='icon-area'><span class='fin_on'>추천</span>추천</div><div class='count-a'>"+arrStr[1]+"</div>");
+        $("#list_recm" + pCNTNCD).html("<div class='icon-area'><span class='fin_on'>추천</span>추천</div><div class='count-a'>"+arrStr[1]+"</div>");
+        
+        if(arrStr[1] == "0") // 점수없음
+        {
+            $("#bottom_recm").attr("class","btn-like");
+            $("#bottom_recm").html("<div class='icon-area'><span class='fin_on'>추천</span>추천</div>");
+            
+            $("#list_recm" + pCNTNCD).attr("class","btn-like");
+            $("#list_recm" + pCNTNCD).html("<div class='icon-area'><span class='fin_on'>추천</span>추천</div>");
+
+            pObj.find(".number").remove();
+        }
+    }else{
+        alert(pStr);
+    }
+}
+
+// 팩트체크
+function Set_FCHK(pNum, pCNTNCD) {
+    var pStr = $.ajax({
+        url: "/NWS_Web/Common/Pages/CommAjaxFunction.aspx",
+        async: false,
+        type: "POST",
+        data: ({ std: "ajaxFchk", CNTN_CD: pCNTNCD, num: pNum })
+    }).responseText;
+
+    var arrStr = pStr.split("|");
+    
+    if(arrStr[0] == "OK") {
+        var NUM_MAX = parseInt(arrStr[1]);
+        var NUM = new Array(0, parseInt(arrStr[2]), parseInt(arrStr[3]), parseInt(arrStr[4]), parseInt(arrStr[5]), parseInt(arrStr[6]), parseInt(arrStr[7]));
+        var i;
+        for (i = 1; i <= 6; i++) {
+            if (NUM_MAX != 0 && NUM_MAX == NUM[i]) $("#fchkcss"+i).attr("class", "pinocchio"+i+"_on");
+            else $("#fchkcss"+i).attr("class", "pinocchio"+i+"_off");
+            $("#fchkcnt"+i).html(""+NUM[i]);
+        }
+    }
+    else alert(pStr);
+}
+
+function MoveTenman_bottom()
+{
+    GA_Event('10민_버튼', 'mnb_링크_클릭', '메인_버튼_하단배너_10만인후원');
+    location.href = 'http://www.ohmynews.com/NWS_Web/tenman/club_support.aspx?CMPT_CD=PT005';
+}

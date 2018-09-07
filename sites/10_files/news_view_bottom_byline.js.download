@@ -1,0 +1,26 @@
+function shuffle(d){
+   for(var c = d.length - 1; c > 0; c--){
+       var b = Math.floor(Math.random() * (c + 1));
+       var a = d[c]; d[c] = d[b]; d[b] = a;
+   }
+   return d ;
+};
+
+arrAD = ['http://ar.donga.com/RealMedia/ads/adstream_sx.ads/2018.donga.com/news@Bottom', 'http://ar.donga.com/RealMedia/ads/adstream_sx.ads/2018.donga.com/news@Bottom1', 'http://ar.donga.com/RealMedia/ads/adstream_sx.ads/2018.donga.com/news@Bottom2', 'http://ar.donga.com/RealMedia/ads/adstream_sx.ads/2018.donga.com/news@Bottom3'] ;
+
+arrAD = shuffle(arrAD);
+
+var adHtml = '' ;
+adHtml += "<span class='icon_ad'>AD</span>" ;
+adHtml += "<div class='sub_cont_AD07'>" ;
+adHtml += "<ul>" ;
+adHtml += "<li class='l1'><iframe width='580' height='23' src='http://ar.donga.com/RealMedia/ads/adstream_sx.ads/2018.donga.com/news@Middle' frameborder='0' marginwidth='0' marginheight='0' scrolling='no'></iframe></li>" ;
+adHtml += "<li class='l2'><iframe width='580' height='23' src='http://ar.donga.com/RealMedia/ads/adstream_sx.ads/2018.donga.com/news@Middle1' frameborder='0' marginwidth='0' marginheight='0' scrolling='no'></iframe></li>" ;
+adHtml += "<li class='l3'><iframe width='580' height='23' src='"+arrAD[0]+"' frameborder='0' marginwidth='0“ marginheight='0' scrolling='no'></iframe></li>" ;
+adHtml += "<li class='l4'><iframe width='580' height='23' src='"+arrAD[1]+"' frameborder='0' marginwidth='0' marginheight='0' scrolling='no'></iframe></li>" ;
+adHtml += "<li class='l5'><iframe width='580' height='23' src='"+arrAD[2]+"' frameborder='0' marginwidth='0' marginheight='0' scrolling='no'></iframe></li>" ;
+adHtml += "<li class='l6'><iframe width='580' height='23' src='"+arrAD[3]+"' frameborder='0' marginwidth='0' marginheight='0' scrolling='no'></iframe></li>" ;
+adHtml += "</ul>" ;
+adHtml += "</div>" ;
+
+document.write(adHtml) ;

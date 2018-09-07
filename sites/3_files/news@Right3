@@ -1,0 +1,6 @@
+document.write ('<div align="center">\n');
+document.write ('<body>\n');
+document.write ('<a href="http://ar.donga.com/RealMedia/ads/click_lx.ads/2016.donga.com/news/L19/411278831/Right3/donga/kj_300250/dy_300250.html/6b7937787831754f42443441425a4172" target="_blank" >\n');
+document.write ('<img src="http://image.donga.com/adma/donga/kj_300250_0905.gif" alt="" border="0"></a>\n');
+document.write ('</body>\n');
+document.write ('</div>\n');
