@@ -1,0 +1,267 @@
+html {
+	height: 100%; -ms-overflow-y: scroll;
+}
+blockquote {
+	margin: 0px; padding: 0px;
+}
+body {
+	margin: 0px; padding: 0px;
+}
+button {
+	margin: 0px; padding: 0px;
+}
+code {
+	margin: 0px; padding: 0px;
+}
+dd {
+	margin: 0px; padding: 0px;
+}
+div {
+	margin: 0px; padding: 0px;
+}
+dl {
+	margin: 0px; padding: 0px;
+}
+dt {
+	margin: 0px; padding: 0px;
+}
+fieldset {
+	margin: 0px; padding: 0px;
+}
+form {
+	margin: 0px; padding: 0px;
+}
+h1 {
+	margin: 0px; padding: 0px;
+}
+h2 {
+	margin: 0px; padding: 0px;
+}
+h3 {
+	margin: 0px; padding: 0px;
+}
+h4 {
+	margin: 0px; padding: 0px;
+}
+h5 {
+	margin: 0px; padding: 0px;
+}
+h6 {
+	margin: 0px; padding: 0px;
+}
+input {
+	margin: 0px; padding: 0px;
+}
+legend {
+	margin: 0px; padding: 0px;
+}
+li {
+	margin: 0px; padding: 0px;
+}
+ol {
+	margin: 0px; padding: 0px;
+}
+p {
+	margin: 0px; padding: 0px;
+}
+pre {
+	margin: 0px; padding: 0px;
+}
+select {
+	margin: 0px; padding: 0px;
+}
+td {
+	margin: 0px; padding: 0px;
+}
+textarea {
+	margin: 0px; padding: 0px;
+}
+th {
+	margin: 0px; padding: 0px;
+}
+ul {
+	margin: 0px; padding: 0px;
+}
+fieldset {
+	border: 0px currentColor; border-image: none; vertical-align: top;
+}
+img {
+	border: 0px currentColor; border-image: none; vertical-align: top;
+}
+dl {
+	list-style: none;
+}
+li {
+	list-style: none;
+}
+menu {
+	list-style: none;
+}
+ol {
+	list-style: none;
+}
+ul {
+	list-style: none;
+}
+blockquote {
+	quotes: none;
+}
+q {
+	quotes: none;
+}
+blockquote::after {
+	content: none;
+}
+blockquote::before {
+	content: none;
+}
+q::after {
+	content: none;
+}
+q::before {
+	content: none;
+}
+button {
+	vertical-align: middle;
+}
+input {
+	vertical-align: middle;
+}
+select {
+	vertical-align: middle;
+}
+textarea {
+	vertical-align: middle;
+}
+input::-ms-clear {
+	display: none;
+}
+button {
+	border: 0px currentColor; border-image: none; cursor: pointer; background-color: transparent;
+}
+body {
+	height: 100%;
+}
+body {
+	color: rgb(26, 26, 26); font-family: Apple SD Gothic Neo,"Apple SD »êµ¹°íµñ Neo",NanumGothic,"³ª´®°íµñ",ng,sans-serif; font-size: 12px;
+}
+button {
+	color: rgb(26, 26, 26); font-family: Apple SD Gothic Neo,"Apple SD »êµ¹°íµñ Neo",NanumGothic,"³ª´®°íµñ",ng,sans-serif; font-size: 12px;
+}
+input {
+	color: rgb(26, 26, 26); font-family: Apple SD Gothic Neo,"Apple SD »êµ¹°íµñ Neo",NanumGothic,"³ª´®°íµñ",ng,sans-serif; font-size: 12px;
+}
+select {
+	color: rgb(26, 26, 26); font-family: Apple SD Gothic Neo,"Apple SD »êµ¹°íµñ Neo",NanumGothic,"³ª´®°íµñ",ng,sans-serif; font-size: 12px;
+}
+td {
+	color: rgb(26, 26, 26); font-family: Apple SD Gothic Neo,"Apple SD »êµ¹°íµñ Neo",NanumGothic,"³ª´®°íµñ",ng,sans-serif; font-size: 12px;
+}
+textarea {
+	color: rgb(26, 26, 26); font-family: Apple SD Gothic Neo,"Apple SD »êµ¹°íµñ Neo",NanumGothic,"³ª´®°íµñ",ng,sans-serif; font-size: 12px;
+}
+th {
+	color: rgb(26, 26, 26); font-family: Apple SD Gothic Neo,"Apple SD »êµ¹°íµñ Neo",NanumGothic,"³ª´®°íµñ",ng,sans-serif; font-size: 12px;
+}
+a {
+	color: rgb(26, 26, 26); text-decoration: none;
+}
+a:active {
+	text-decoration: underline;
+}
+a:hover {
+	text-decoration: underline;
+}
+a:active {
+	background-color: transparent;
+}
+address {
+	font-style: normal; font-weight: 400;
+}
+caption {
+	font-style: normal; font-weight: 400;
+}
+cite {
+	font-style: normal; font-weight: 400;
+}
+code {
+	font-style: normal; font-weight: 400;
+}
+dfn {
+	font-style: normal; font-weight: 400;
+}
+em {
+	font-style: normal; font-weight: 400;
+}
+var {
+	font-style: normal; font-weight: 400;
+}
+.screen_out {
+	width: 0px; height: 0px; line-height: 0; text-indent: -9999px; overflow: hidden; position: absolute;
+}
+body {
+	background: 0px 0px;
+}
+.ico_widget {
+	background: url("../img/ico_widget.png") no-repeat 0px 0px; line-height: 0; text-indent: -9999px; overflow: hidden; font-size: 0px; display: block;
+}
+.widget_channel {
+	position: relative;
+}
+.widget_channel .btn_widget {
+	background-position: 0px 0px; width: 59px; height: 20px;
+}
+.widget_channel .ly_widget {
+	display: none; position: absolute; z-index: 10;
+}
+.widget_channel .ly_widget .txt_num {
+	text-align: center; color: rgb(26, 26, 26); line-height: 20px; text-indent: 0px; overflow: hidden; font-family: Helvetica Neue,Helvetica,sans-serif; font-size: 12px; font-weight: 700; white-space: nowrap;
+}
+.widget_channel.v2 .btn_widget {
+	background-position: -60px 0px;
+}
+.widget_channel.v2 .ly_widget .txt_num {
+	color: rgb(26, 26, 26);
+}
+.widget_channel.showFollower .ly_widget {
+	display: block;
+}
+.widget_ch1 {
+	width: 85px; height: 20px;
+}
+.widget_ch1 .ly_widget {
+	background-position: 0px -55px; left: 59px; top: 0px; height: 20px; padding-left: 8px; min-width: 18px;
+}
+.widget_ch1 .ly_widget .txt_num {
+	background-position: 100% -55px; height: 20px; padding-right: 4px;
+}
+.widget_ch2 {
+	width: 59px; height: 20px;
+}
+.widget_ch2.showFollower .btn_widget {
+	left: 0px; top: 26px; position: absolute;
+}
+.widget_ch2.showFollower .ico_widget .ico_widget {
+	background: 0px 0px; line-height: 20px; text-indent: 0px; font-size: 12px;
+}
+.widget_ch2 .ly_widget {
+	background-position: 0px -25px; padding: 0px 3px 5px; width: 53px; height: 21px; position: static;
+}
+.widget_ch2 .ly_widget .txt_num {
+	text-align: center; line-height: 21px;
+}
+.widget_ch2.v2 .ly_widget .txt_num {
+	color: rgb(26, 26, 26);
+}
+@media not all, not all
+{
+.ico_widget {
+	background-image: url("../img/ico_widget_rtn.png"); background-size: 120px 75px; -webkit-background-size: 120px 75px;
+}
+}
+.__desktop_rtn__ .ico_widget {
+	background-image: url("../img/ico_widget_rtn.png"); background-size: 120px 75px; -webkit-background-size: 120px 75px;
+}
+.__mobile_rtn__ .ico_widget {
+	background-image: url("../img/ico_widget_rtn.png"); background-size: 120px 75px; -webkit-background-size: 120px 75px;
+}

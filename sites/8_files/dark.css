@@ -1,0 +1,261 @@
+body.senkawa.dark {
+	background-color: rgb(0, 0, 0);
+}
+.senkawa.dark .navbar-wrapper {
+	background-color: rgb(55, 58, 60);
+}
+.senkawa.dark .navbar {
+	background-color: rgb(55, 58, 60);
+}
+.senkawa.dark .navbar-nav .nav-link:hover {
+	background-color: rgb(50, 90, 86);
+}
+.senkawa.dark .navbar .dropdown-menu {
+	border: 1px solid rgb(204, 204, 204); border-image: none; background-color: rgb(55, 58, 60);
+}
+.senkawa.dark .navbar .dropdown-menu::after {
+	border-bottom-color: rgb(55, 58, 60);
+}
+.senkawa.dark .navbar .dropdown-menu .dropdown-item {
+	color: rgb(221, 221, 221);
+}
+.senkawa.dark .navbar .dropdown-menu .dropdown-item:hover {
+	background-color: rgb(33, 33, 33);
+}
+.senkawa.dark .navbar .search-box input {
+	color: rgb(221, 221, 221); background-color: rgb(55, 58, 60);
+}
+.senkawa.dark .navbar .search-box .btn {
+	color: rgb(221, 221, 221); background-color: rgb(55, 58, 60);
+}
+.senkawa.dark .navbar .user-dropdown .user-info:hover {
+	background-color: rgb(33, 33, 33);
+}
+.senkawa.dark .wiki-article {
+	color: rgb(221, 221, 221); background-color: rgb(0, 0, 0);
+}
+.senkawa.dark .wiki-article > h1.title > a {
+	color: white;
+}
+.senkawa.dark .wiki-article > footer {
+	color: rgb(221, 221, 221); background-color: rgb(0, 0, 0);
+}
+.senkawa.dark .wiki-article .wiki-article-menu a {
+	color: rgb(221, 221, 221); background-color: rgb(52, 52, 52);
+}
+.senkawa.dark .wiki-article .wiki-article-menu a.discuss-bold {
+	background-color: rgb(50, 90, 86);
+}
+.senkawa.dark .wiki-article .wiki-article-menu a.discuss-bold:hover {
+	background-color: rgb(67, 138, 131);
+}
+.senkawa.dark .wiki-article .wiki-article-menu a:hover {
+	background-color: rgb(17, 17, 17);
+}
+.senkawa.dark .wiki-article table {
+	background-color: rgb(0, 0, 0);
+}
+.senkawa.dark .wiki-article table th {
+	background-color: rgb(29, 29, 29);
+}
+.senkawa.dark .wiki-content table {
+	color: black; background-color: rgb(245, 245, 245);
+}
+.senkawa.dark .wiki-content table.wiki-closure {
+	color: rgb(221, 221, 221); background-color: transparent;
+}
+.senkawa.dark .breadcrumb.link-nav {
+	border: 1px solid rgb(204, 204, 204); border-image: none; background-color: rgb(33, 33, 33);
+}
+.senkawa.dark .wiki-article .form-group select {
+	color: rgb(221, 221, 221); background-color: rgb(0, 0, 0);
+}
+.senkawa.dark .wiki-article .site-notice {
+	color: black;
+}
+.senkawa.dark .live-topbar-area {
+	color: rgb(221, 221, 221); border-bottom-color: white; background-color: rgb(0, 43, 39);
+}
+.senkawa.dark .live-topbar-area a {
+	color: rgb(221, 221, 221);
+}
+.senkawa.dark .footer-wrapper {
+	background-color: rgb(0, 0, 0);
+}
+.senkawa.dark .footer {
+	color: rgb(221, 221, 221);
+}
+.senkawa.dark .wiki-article pre {
+	color: rgb(221, 221, 221); background-color: rgb(51, 51, 51);
+}
+.senkawa.dark .wiki-article .syntax-wrapper {
+	background-color: rgb(68, 68, 68);
+}
+.senkawa.dark .wiki-article .syntax-wrapper > pre {
+	background: none;
+}
+.senkawa.dark .wiki-article .syntax-wrapper > .syntax-lines {
+	background: rgb(71, 108, 161);
+}
+.senkawa.dark .wiki-content table caption {
+	color: rgb(221, 221, 221);
+}
+.senkawa.dark .wiki-article table.diff tbody th {
+	background: rgb(17, 17, 34); border: 1px solid rgb(68, 68, 51); border-image: none; color: rgb(119, 119, 153);
+}
+.senkawa.dark .wiki-article table.diff thead {
+	background: rgb(16, 16, 16); border-bottom-color: rgb(68, 68, 51); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.senkawa.dark .wiki-article table.diff .empty {
+	background-color: rgb(34, 34, 34);
+}
+.senkawa.dark .wiki-article table.diff .replace {
+	background-color: rgb(0, 34, 136);
+}
+.senkawa.dark .wiki-article table.diff .delete {
+	background-color: rgb(0, 68, 68);
+}
+.senkawa.dark .wiki-article table.diff .skip {
+	border-width: 1px; border-style: solid; border-color: rgb(85, 85, 85) rgb(68, 68, 51) rgb(85, 85, 85) rgb(85, 85, 85); border-image: none; background-color: rgb(16, 16, 16);
+}
+.senkawa.dark .wiki-article table.diff .insert {
+	background-color: rgb(68, 0, 68);
+}
+.senkawa.dark .wiki-article table.diff th.author {
+	background: rgb(16, 16, 16); border-top-color: rgb(68, 68, 51); border-top-width: 1px; border-top-style: solid;
+}
+.senkawa.dark .wiki-article ins.diff {
+	background-color: rgb(175, 0, 175);
+}
+.senkawa.dark .wiki-article del.diff {
+	color: rgb(102, 102, 102); background-color: rgb(0, 0, 0);
+}
+.senkawa.dark .wiki-article a:not([class]) {
+	color: rgb(202, 136, 23);
+}
+.senkawa.dark .wiki-article a.wiki-link-anchor {
+	color: rgb(202, 136, 23);
+}
+.senkawa.dark .sidebar a:not([class]) {
+	color: rgb(202, 136, 23);
+}
+.senkawa.dark .wiki-article a.wiki-link-internal {
+	color: rgb(202, 136, 23);
+}
+.senkawa.dark .wiki-article a.wiki-fn-content {
+	color: rgb(202, 136, 23);
+}
+.senkawa.dark .wiki-article a.wiki-self-link {
+	color: rgb(202, 136, 23);
+}
+.senkawa.dark .sidebar a.wiki-link-internal {
+	color: rgb(202, 136, 23);
+}
+.senkawa.dark .footer a:not([class]) {
+	color: rgb(202, 136, 23);
+}
+.senkawa.dark .wiki-content a.wiki-link-external {
+	color: rgb(94, 164, 167);
+}
+.senkawa.dark .wiki-content a.wiki-link-external::before {
+	background-color: rgb(94, 164, 167);
+}
+.senkawa.dark .wiki-article a.not-exist {
+	color: rgb(195, 0, 0);
+}
+.senkawa.dark .wiki-article .res .r-head {
+	background-color: rgb(42, 42, 42);
+}
+.senkawa.dark .wiki-article .res .r-head.first-author {
+	background-color: rgb(64, 86, 64);
+}
+.senkawa.dark .wiki-article .res .r-body {
+	background-color: rgb(11, 11, 11);
+}
+.senkawa.dark .wiki-article .res .wiki-quote {
+	background-color: rgb(1, 1, 1);
+}
+.senkawa.dark .wiki-article .wiki-quote {
+	background-color: rgb(68, 68, 68);
+}
+.senkawa.dark .wiki-content .wiki-unfold-fn {
+	color: rgb(221, 221, 221); background-color: rgb(68, 68, 68);
+}
+.senkawa.dark .wiki-article .more-box {
+	color: rgb(221, 221, 221); background-color: rgb(50, 90, 86);
+}
+.senkawa.dark .wiki-article .more-box:hover {
+	background-color: rgb(67, 138, 131);
+}
+.senkawa.dark .sidebar .card {
+	color: rgb(221, 221, 221); background-color: black;
+}
+.senkawa.dark .sidebar .card .card-title {
+	background-color: black;
+}
+.senkawa.dark .recent-card .link-table a:hover {
+	background-color: black;
+}
+.senkawa.dark .recent-card a.more-link {
+	background-color: black;
+}
+.senkawa.dark .recent-card a.more-link {
+	color: white;
+}
+.senkawa.dark .recent-card .link-table a span {
+	color: rgb(221, 221, 221);
+}
+.senkawa.dark .settings-nav .nav-pills .nav-link {
+	color: rgb(221, 221, 221);
+}
+.senkawa.dark .mypage-nav .nav-pills .nav-link {
+	color: rgb(221, 221, 221);
+}
+.senkawa.dark .nav-control {
+	background-color: rgb(55, 58, 60);
+}
+.senkawa.dark .modal .modal-content {
+	color: rgb(221, 221, 221); background-color: rgb(68, 68, 68);
+}
+.senkawa.dark .modal .modal-header {
+	border-bottom-color: rgb(170, 170, 170); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.senkawa.dark .modal .modal-footer {
+	border-top-color: rgb(170, 170, 170); border-top-width: 1px; border-top-style: solid;
+}
+.senkawa.dark .modal#footnoteModal .modal-footer .btn {
+	background-color: rgb(85, 85, 85);
+}
+.senkawa.dark .modal .close {
+	color: white; opacity: 0.6;
+}
+.senkawa.dark input {
+	color: rgb(221, 221, 221); background-color: rgb(0, 0, 0);
+}
+.senkawa.dark textarea {
+	color: rgb(221, 221, 221); background-color: rgb(0, 0, 0);
+}
+.senkawa.dark .btn-secondary {
+	color: rgb(221, 221, 221); background-color: rgb(51, 51, 51);
+}
+.senkawa.dark .btn-secondary:hover {
+	background-color: rgb(85, 85, 85);
+}
+.senkawa.dark .table-hover tbody tr:hover {
+	background-color: rgb(51, 51, 51);
+}
+.senkawa.dark #nprogress .bar {
+	background: white;
+}
+.senkawa.dark ul.ui-widget-content.ui-menu.ui-autocomplete {
+	background: rgb(34, 34, 34); border: 1px solid rgb(204, 204, 204); border-image: none; color: rgb(221, 221, 221);
+}
+.senkawa.dark ul.ui-widget-content.ui-menu.ui-autocomplete li.ui-menu-item {
+	background: rgb(85, 85, 85);
+}
+.senkawa.dark ul.ui-widget-content.ui-menu.ui-autocomplete li.ui-menu-item.ui-state-focus {
+	background: rgb(119, 119, 119); border: 1px solid rgb(204, 204, 204); border-image: none; color: rgb(204, 204, 204);
+}
+.senkawa.dark .wiki-document-namespace {
+	color: rgb(199, 199, 199);
+}

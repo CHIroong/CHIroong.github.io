@@ -1,0 +1,144 @@
+.no_scroll {
+	height: 100%; overflow: hidden;
+}
+.no_scroll body {
+	height: 100%; overflow: hidden;
+}
+.screen_out {
+	width: 0px; height: 0px; line-height: 0; text-indent: -9999px; overflow: hidden; position: absolute;
+}
+.container_postbtn {
+	padding: 35px 0px; overflow: hidden; position: relative;
+}
+.container_postbtn::after {
+	clear: both; display: block; content: "";
+}
+.container_postbtn .ico_postbtn {
+	background: url("//t1.daumcdn.net/tistory_admin/static/admin/editor/ico_postbtn.png") no-repeat; text-indent: -9999px; overflow: hidden; vertical-align: top; display: inline-block;
+}
+.bundle_ccl .ico_postbtn {
+	background: url("//t1.daumcdn.net/tistory_admin/static/admin/editor/ico_postbtn.png") no-repeat; text-indent: -9999px; overflow: hidden; vertical-align: top; display: inline-block;
+}
+.container_postbtn .postbtn_like {
+	border-radius: 1px; border: 1px solid rgba(149, 149, 149, 0.25); border-image: none; float: left;
+}
+.container_postbtn .postbtn_like .like_btn {
+	float: left;
+}
+.container_postbtn .postbtn_like label {
+	padding: 0px 13px; height: 30px; line-height: 28px; overflow: hidden; float: left; cursor: pointer;
+}
+.container_postbtn .postbtn_like .ico_bar {
+	background: rgba(149, 149, 149, 0.25); margin: 8px 0px 0px; width: 1px; height: 14px; overflow: hidden; font-family: AppleSDGothicNeo-Regular,"Malgun Gothic","¸¼Àº °íµñ",dotum,"µ¸¿ò",sans-serif; font-size: 1px; float: left;
+}
+.container_postbtn .postbtn_like .inp_btn {
+	left: -99999px; top: -20px; width: 1px; height: 1px; position: absolute;
+}
+.container_postbtn .postbtn_like .ico_postbtn {
+	width: 14px; height: 14px; margin-top: 8px;
+}
+.container_postbtn .postbtn_like .ico_like {
+	background-position: 0px 0px; margin-right: 1px;
+}
+.container_postbtn .postbtn_like .empathy_up .ico_like {
+	background-position: -20px 0px;
+}
+.container_postbtn .postbtn_like .empathy_up_without_ani .ico_like {
+	background-position: -20px 0px;
+}
+.container_postbtn .postbtn_like .ico_sns {
+	background-position: -40px 0px;
+}
+.container_postbtn .postbtn_like .ico_report {
+	background-position: -60px 0px; line-height: 30px;
+}
+.container_postbtn .postbtn_like .txt_like {
+	line-height: 30px; font-family: AppleSDGothicNeo-Regular,"Malgun Gothic","¸¼Àº °íµñ",dotum,"µ¸¿ò",sans-serif; font-size: 12px;
+}
+.container_postbtn .postbtn_ccl {
+	padding-top: 8px; float: right; position: relative;
+}
+.container_postbtn .link_ccl {
+	height: 16px; font-size: 0px; display: block;
+}
+.container_postbtn .bundle_ccl {
+	display: block;
+}
+.bundle_ccl .ico_postbtn {
+	width: 16px; height: 16px; margin-left: 2px;
+}
+.bundle_ccl .ico_ccl1 {
+	background-position: 0px -20px;
+}
+.bundle_ccl .ico_ccl2 {
+	background-position: -20px -20px;
+}
+.bundle_ccl .ico_ccl3 {
+	background-position: -40px -20px;
+}
+.bundle_ccl .ico_ccl4 {
+	background-position: -60px -20px;
+}
+.layer_ccl {
+	background: rgb(255, 255, 255); padding: 8px 17px 16px 16px; border-radius: 1px; border: 1px solid rgb(197, 205, 215); border-image: none; display: none; white-space: nowrap; position: absolute; box-shadow: 0px 2px 5px rgba(0,0,0,0.12);
+}
+.layer_ccl .txt_mark {
+	color: rgb(51, 51, 51); line-height: 16px; padding-top: 8px; font-family: AppleSDGothicNeo-Regular,"Malgun Gothic","¸¼Àº °íµñ",dotum,"µ¸¿ò",sans-serif; font-size: 12px; display: block;
+}
+.layer_ccl .ico_postbtn {
+	margin: 0px 5px 0px 0px;
+}
+.layer_ccl .ico_arrbt {
+	background-position: -80px 0px; width: 20px; height: 10px; right: 0px; bottom: -10px; position: absolute;
+}
+.layer_sns {
+	left: 0px; top: 0px; right: 0px; bottom: 0px; display: none; position: fixed; z-index: 9999;
+}
+.layer_sns .bg_layer {
+	background: url("//t1.daumcdn.net/tistory_admin/static/admin/editor/bg_layer.png") 0px 0px; left: 0px; top: 0px; right: 0px; bottom: 0px; position: fixed;
+}
+.layer_sns .ico_sns {
+	background: url("//t1.daumcdn.net/tistory_admin/static/admin/editor/ico_sns.png") no-repeat; width: 48px; height: 48px; text-indent: -9999px; overflow: hidden; vertical-align: top; display: block; cursor: pointer;
+}
+.layer_sns .btn_close {
+	background: none; margin: -57px 0px 0px 112px; padding: 10px; border: 0px currentColor; border-image: none; left: 50%; top: 50%; display: block; position: absolute; cursor: pointer;
+}
+.layer_sns .ico_close {
+	background-position: -150px 0px; width: 12px; height: 12px;
+}
+.layer_sns .list_sns {
+	background: rgb(255, 255, 255); list-style: none; margin: -62px 0px 0px -149px; padding: 1px 0px 0px 29px; border-radius: 1px; border: 1px solid rgb(70, 84, 104); border-image: none; left: 50%; top: 50%; width: 267px; height: 116px; position: absolute; box-sizing: content-box;
+}
+.layer_sns .list_sns li {
+	list-style: none; margin: 32px 16px 0px 0px; float: left;
+}
+.layer_sns .ico_fb {
+	background-position: 0px 0px;
+}
+.layer_sns .ico_kt {
+	background-position: -50px 0px;
+}
+.layer_sns .ico_ks {
+	background-position: -100px 0px;
+}
+.layer_sns .ico_tw {
+	background-position: 0px -50px;
+}
+.layer_sns .ico_cafe {
+	background-position: -50px -50px;
+}
+.layer_sns .ico_url {
+	background-position: -99px -49px; margin: -1px; width: 50px; height: 50px;
+}
+@media not all, not all, only screen and (min-resolution:144dpi), not all
+{
+.container_postbtn .ico_postbtn {
+	background-image: url("//t1.daumcdn.net/tistory_admin/static/admin/editor/r2/ico_postbtn.png"); background-size: 102px 40px;
+}
+.bundle_ccl .ico_postbtn {
+	background-image: url("//t1.daumcdn.net/tistory_admin/static/admin/editor/r2/ico_postbtn.png"); background-size: 102px 40px;
+}
+.layer_sns .ico_sns {
+	background-image: url("//t1.daumcdn.net/tistory_admin/static/admin/editor/r2/ico_sns.png"); background-size: 170px 100px;
+}
+}

@@ -1,0 +1,204 @@
+.tistoryProfileLayerTrigger {
+	background: url("//t1.daumcdn.net/tistory_admin/static/profilelayer/ico_profile.png") no-repeat; margin: 0px 4px; width: 40px; height: 13px; display: inline-block; cursor: pointer;
+}
+* html .tistoryProfileLayerTrigger {
+	background-image: none;
+}
+#tistoryProfileLayer {
+	width: 172px; text-align: left; display: block; visibility: hidden; position: absolute; z-index: 99999;
+}
+#tistorySidebarProfileLayer {
+	margin: 0px auto; width: 172px; text-align: left; display: block;
+}
+#tistorySidebarProfileLayer div {
+	margin: 0px; padding: 0px; float: none;
+}
+#tistoryProfileLayer ul.itemWrap {
+	list-style: none; margin: 0px; padding: 0px; width: auto; font-size: 0px; position: relative;
+}
+#tistorySidebarProfileLayer ul.itemWrap {
+	list-style: none; margin: 0px; padding: 0px; width: auto; font-size: 0px; position: relative;
+}
+#tistoryProfileLayer ul li {
+	margin: 0px; padding: 0px !important; border: 0px currentColor; border-image: none; display: block;
+}
+#tistorySidebarProfileLayer ul li {
+	margin: 0px; padding: 0px !important; border: 0px currentColor; border-image: none; display: block;
+}
+#tistoryProfileLayer .wrapTop {
+	background: url("//t1.daumcdn.net/tistory_admin/static/profilelayer/bg_comment_bg1.png") no-repeat; height: 3px; font-size: 0px;
+}
+#tistorySidebarProfileLayer .wrapTop {
+	background: url("//t1.daumcdn.net/tistory_admin/static/profilelayer/bg_comment_bg1.png") no-repeat; height: 3px; font-size: 0px;
+}
+#tistoryProfileLayer div {
+	padding: 0px; border: 0px currentColor; border-image: none; width: auto; line-height: normal; clear: none; background-color: transparent;
+}
+#tistorySidebarProfileLayer div {
+	padding: 0px; border: 0px currentColor; border-image: none; width: auto; line-height: normal; clear: none; background-color: transparent;
+}
+* html #tistoryProfileLayer .wrapTop {
+	background-image: none;
+}
+* html #tistorySidebarProfileLayer .wrapTop {
+	background-image: none;
+}
+#tistoryProfileLayer .wrapMiddle {
+	background: url("//t1.daumcdn.net/tistory_admin/static/profilelayer/bg_comment_bg2.png") no-repeat;
+}
+#tistorySidebarProfileLayer .wrapMiddle {
+	background: url("//t1.daumcdn.net/tistory_admin/static/profilelayer/bg_comment_bg2.png") no-repeat;
+}
+* html #tistoryProfileLayer .wrapMiddle {
+	background-image: none;
+}
+* html #tistorySidebarProfileLayer .wrapMiddle {
+	background: url("//t1.daumcdn.net/tistory_admin/static/profilelayer/bg_comment_m6.gif") repeat-y;
+}
+#tistoryProfileLayer .wrapMiddle li.item {
+	background: url("//t1.daumcdn.net/tistory_admin/static/profilelayer/ico_dotted.gif") repeat-x left top !important; margin: 0px 2px; width: auto; height: 29px; line-height: normal; padding-top: 1px !important; font-family: dotum; float: none;
+}
+#tistorySidebarProfileLayer .wrapMiddle li.item {
+	background: url("//t1.daumcdn.net/tistory_admin/static/profilelayer/ico_dotted.gif") repeat-x left top !important; margin: 0px 2px; width: auto; height: 29px; line-height: normal; padding-top: 1px !important; font-family: dotum; float: none;
+}
+#tistoryProfileLayer .wrapMiddle li.item.first {
+	height: 21px; padding-top: 3px !important; background-image: none !important;
+}
+#tistorySidebarProfileLayer .wrapMiddle li.item.first {
+	background: none !important;
+}
+#tistoryProfileLayer .wrapMiddle .innerItem {
+	padding: 7px 0px 0px 10px; height: 23px; color: rgb(153, 153, 153); font-size: 11px;
+}
+#tistorySidebarProfileLayer .wrapMiddle .innerItem {
+	padding: 7px 0px 0px 10px; height: 23px; color: rgb(153, 153, 153); font-size: 11px;
+}
+#tistoryProfileLayer .wrapMiddle .innerItem a {
+	padding: 0px; border: 0px currentColor; border-image: none; width: 131px; color: rgb(51, 51, 51); letter-spacing: -1px; overflow: hidden; font-family: dotum; font-size: 11px; text-decoration: none; display: inline-block; white-space: nowrap;
+}
+#tistorySidebarProfileLayer .wrapMiddle .innerItem a {
+	padding: 0px; border: 0px currentColor; border-image: none; width: 131px; color: rgb(51, 51, 51); letter-spacing: -1px; overflow: hidden; font-family: dotum; font-size: 11px; text-decoration: none; display: inline-block; white-space: nowrap;
+}
+#tistoryProfileLayer .wrapMiddle .innerItem a .info {
+	background: none; margin: 0px; padding: 0px 1px 0px 0px; border: 0px currentColor; border-image: none; color: rgb(153, 153, 153);
+}
+#tistorySidebarProfileLayer .wrapMiddle .innerItem a .info {
+	background: none; margin: 0px; padding: 0px 1px 0px 0px; border: 0px currentColor; border-image: none; color: rgb(153, 153, 153);
+}
+#tistoryProfileLayer .wrapMiddle .innerItem a .info .infoCount {
+	color: rgb(153, 153, 153); font-weight: bold;
+}
+#tistorySidebarProfileLayer .wrapMiddle .innerItem a .info .infoCount {
+	color: rgb(153, 153, 153); font-weight: bold;
+}
+#tistoryProfileLayer .wrapMiddle .innerItem .favicon {
+	margin: 0px 6px 0px 0px; vertical-align: top;
+}
+#tistorySidebarProfileLayer .wrapMiddle .innerItem .favicon {
+	margin: 0px 6px 0px 0px; vertical-align: top;
+}
+#tistoryProfileLayer .wrapMiddle .item.first .innerItem {
+	background-position: top; padding: 0px 0px 0px 10px; height: 22px;
+}
+#tistoryProfileLayer .wrapMiddle .innerItem.hover {
+	background: url("//t1.daumcdn.net/tistory_admin/static/profilelayer/bg_select_box.gif") no-repeat;
+}
+#tistorySidebarProfileLayer .wrapMiddle .innerItem.hover {
+	background: url("//t1.daumcdn.net/tistory_admin/static/profilelayer/bg_select_box.gif") no-repeat;
+}
+#tistoryProfileLayer .wrapMiddle .innerItem.hover a {
+	color: rgb(255, 98, 29); text-decoration: underline;
+}
+#tistoryProfileLayer .wrapMiddle .innerItem.hover a .info {
+	color: rgb(255, 98, 29); text-decoration: underline;
+}
+#tistoryProfileLayer .wrapMiddle .innerItem.hover a .info .infoCount {
+	color: rgb(255, 98, 29); text-decoration: underline;
+}
+#tistorySidebarProfileLayer .wrapMiddle .innerItem.hover a {
+	color: rgb(255, 98, 29); text-decoration: underline;
+}
+#tistorySidebarProfileLayer .wrapMiddle .innerItem.hover a .info {
+	color: rgb(255, 98, 29); text-decoration: underline;
+}
+#tistorySidebarProfileLayer .wrapMiddle .innerItem.hover a .info .infoCount {
+	color: rgb(255, 98, 29); text-decoration: underline;
+}
+#tistoryProfileLayer .wrapBottom {
+	background: url("//t1.daumcdn.net/tistory_admin/static/profilelayer/bg_comment_p2.png") no-repeat; padding: 5px 0px 0px 10px; height: 52px;
+}
+* html #tistoryProfileLayer .wrapBottom {
+	background-image: none;
+}
+#tistorySidebarProfileLayer .wrapBottom {
+	background: url("//t1.daumcdn.net/tistory_admin/static/profilelayer/bg_sidebar_p2.png") no-repeat; padding: 5px 0px 0px 10px; height: 52px;
+}
+* html #tistorySidebarProfileLayer .wrapBottom {
+	background-image: none;
+}
+#tistoryProfileLayer .wrapBottomM {
+	background: url("//t1.daumcdn.net/tistory_admin/static/profilelayer/bg_comment_bg3.png") no-repeat; padding: 10px 0px 0px 10px; height: 52px;
+}
+* html #tistoryProfileLayer .wrapBottomM {
+	background-image: none;
+}
+#tistorySidebarProfileLayer .wrapBottomM {
+	background: url("//t1.daumcdn.net/tistory_admin/static/profilelayer/bg_sidebar_b2.png") no-repeat; padding: 10px 0px 0px 10px; height: 52px;
+}
+* html #tistorySidebarProfileLayer .wrapBottomM {
+	background-image: none;
+}
+#tistoryProfileLayer .profileInfoWrap {
+	width: 109px; padding-top: 1px; float: left; position: relative;
+}
+#tistorySidebarProfileLayer .profileInfoWrap {
+	width: 109px; padding-top: 1px; float: left; position: relative;
+}
+#tistoryProfileLayer .profileInfoWrap .profileTitle a.title {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; width: 85px; color: rgb(51, 51, 51); overflow: hidden; font-family: dotum; font-size: 11px; font-weight: bold; text-decoration: none; float: left; display: inline-block; white-space: nowrap;
+}
+#tistorySidebarProfileLayer .profileInfoWrap .profileTitle a.title {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; width: 85px; color: rgb(51, 51, 51); overflow: hidden; font-family: dotum; font-size: 11px; font-weight: bold; text-decoration: none; float: left; display: inline-block; white-space: nowrap;
+}
+#tistoryProfileLayer .profileTitle .AddRss {
+	background: url("//t1.daumcdn.net/tistory_admin/static/profilelayer/bt_plus.gif") no-repeat; padding: 0px; border: 0px currentColor; border-image: none; width: 14px; height: 14px; margin-left: 7px; vertical-align: middle; display: inline-block;
+}
+#tistorySidebarProfileLayer .profileTitle .AddRss {
+	background: url("//t1.daumcdn.net/tistory_admin/static/profilelayer/bt_plus.gif") no-repeat; padding: 0px; border: 0px currentColor; border-image: none; width: 14px; height: 14px; margin-left: 7px; vertical-align: middle; display: inline-block;
+}
+#tistoryProfileLayer .profileInfoWrap .profileNickname {
+	width: 110px; color: rgb(153, 153, 153); letter-spacing: -1px; overflow: hidden; clear: both; font-size: 11px; margin-top: 3px; white-space: nowrap;
+}
+#tistorySidebarProfileLayer .profileInfoWrap .profileNickname {
+	width: 110px; color: rgb(153, 153, 153); letter-spacing: -1px; overflow: hidden; clear: both; font-size: 11px; margin-top: 3px; white-space: nowrap;
+}
+#tistoryProfileLayer .profileImageWrap {
+	width: 35px; height: 35px; margin-right: 8px; float: left; display: inline; position: relative;
+}
+#tistorySidebarProfileLayer .profileImageWrap {
+	width: 35px; height: 35px; margin-right: 8px; float: left; display: inline; position: relative;
+}
+#tistoryProfileLayer .profileButtonWrap {
+	height: 8px; padding-top: 5px; position: relative;
+}
+#tistorySidebarProfileLayer .profileButtonWrap {
+	height: 8px; padding-top: 5px; position: relative;
+}
+#tistoryProfileLayer .profileButtonWrap .profileHelp {
+	background: url("//t1.daumcdn.net/tistory_admin/static/profilelayer/bt_help.gif") no-repeat; width: 6px; height: 8px; float: right; display: inline-block;
+}
+#tistorySidebarProfileLayer .profileButtonWrap .profileHelp {
+	background: url("//t1.daumcdn.net/tistory_admin/static/profilelayer/bt_help.gif") no-repeat; width: 6px; height: 8px; float: right; display: inline-block;
+}
+#tistoryProfileLayer .profileButtonWrap .profileClose {
+	background: url("//t1.daumcdn.net/tistory_admin/static/profilelayer/bt_close_x2.gif") no-repeat; width: 7px; height: 7px; margin-right: 8px; float: right; display: inline-block; cursor: pointer;
+}
+#tistorySidebarProfileLayer .profileButtonWrap .profileClose {
+	background: url("//t1.daumcdn.net/tistory_admin/static/profilelayer/bt_close_x2.gif") no-repeat; width: 7px; height: 7px; margin-right: 8px; float: right; display: inline-block; cursor: pointer;
+}
+#tistoryProfileLayer .profileButtonWrap .div {
+	background: url("//t1.daumcdn.net/tistory_admin/static/profilelayer/img_topline.gif") no-repeat; margin: 0px 7px; width: 1px; height: 7px; float: right;
+}
+#tistorySidebarProfileLayer .profileButtonWrap .div {
+	background: url("//t1.daumcdn.net/tistory_admin/static/profilelayer/img_topline.gif") no-repeat; margin: 0px 7px; width: 1px; height: 7px; float: right;
+}

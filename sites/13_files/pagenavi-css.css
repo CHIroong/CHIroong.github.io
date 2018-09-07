@@ -1,0 +1,18 @@
+.wp-pagenavi {
+	clear: both;
+}
+.wp-pagenavi a {
+	margin: 2px; padding: 3px 5px; border: 1px solid rgb(191, 191, 191); border-image: none; text-decoration: none;
+}
+.wp-pagenavi span {
+	margin: 2px; padding: 3px 5px; border: 1px solid rgb(191, 191, 191); border-image: none; text-decoration: none;
+}
+.wp-pagenavi a:hover {
+	border-color: rgb(0, 0, 0);
+}
+.wp-pagenavi span.current {
+	border-color: rgb(0, 0, 0);
+}
+.wp-pagenavi span.current {
+	font-weight: bold;
+}

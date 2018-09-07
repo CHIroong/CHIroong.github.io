@@ -1,0 +1,984 @@
+html {
+	-ms-overflow-style: scrollbar;
+}
+html {
+	font-family: "Open Sans", arial, "Apple SD Gothic Neo", "Noto Sans CJK KR", "º»°íµñ", "KoPubDotum Medium", "³ª´®¹Ù¸¥°íµñ", "³ª´®°íµñ", "NanumGothic", "¸¼Àº°íµñ", "Malgun Gothic", sans-serif;
+}
+body {
+	font-family: "Open Sans", arial, "Apple SD Gothic Neo", "Noto Sans CJK KR", "º»°íµñ", "KoPubDotum Medium", "³ª´®¹Ù¸¥°íµñ", "³ª´®°íµñ", "NanumGothic", "¸¼Àº°íµñ", "Malgun Gothic", sans-serif;
+}
+th {
+	font-family: "Open Sans", arial, "Apple SD Gothic Neo", "Noto Sans CJK KR", "º»°íµñ", "KoPubDotum Medium", "³ª´®¹Ù¸¥°íµñ", "³ª´®°íµñ", "NanumGothic", "¸¼Àº°íµñ", "Malgun Gothic", sans-serif;
+}
+td {
+	font-family: "Open Sans", arial, "Apple SD Gothic Neo", "Noto Sans CJK KR", "º»°íµñ", "KoPubDotum Medium", "³ª´®¹Ù¸¥°íµñ", "³ª´®°íµñ", "NanumGothic", "¸¼Àº°íµñ", "Malgun Gothic", sans-serif;
+}
+input {
+	font-family: "Open Sans", arial, "Apple SD Gothic Neo", "Noto Sans CJK KR", "º»°íµñ", "KoPubDotum Medium", "³ª´®¹Ù¸¥°íµñ", "³ª´®°íµñ", "NanumGothic", "¸¼Àº°íµñ", "Malgun Gothic", sans-serif;
+}
+select {
+	font-family: "Open Sans", arial, "Apple SD Gothic Neo", "Noto Sans CJK KR", "º»°íµñ", "KoPubDotum Medium", "³ª´®¹Ù¸¥°íµñ", "³ª´®°íµñ", "NanumGothic", "¸¼Àº°íµñ", "Malgun Gothic", sans-serif;
+}
+textarea {
+	font-family: "Open Sans", arial, "Apple SD Gothic Neo", "Noto Sans CJK KR", "º»°íµñ", "KoPubDotum Medium", "³ª´®¹Ù¸¥°íµñ", "³ª´®°íµñ", "NanumGothic", "¸¼Àº°íµñ", "Malgun Gothic", sans-serif;
+}
+button {
+	font-family: "Open Sans", arial, "Apple SD Gothic Neo", "Noto Sans CJK KR", "º»°íµñ", "KoPubDotum Medium", "³ª´®¹Ù¸¥°íµñ", "³ª´®°íµñ", "NanumGothic", "¸¼Àº°íµñ", "Malgun Gothic", sans-serif;
+}
+div {
+	font-family: "Open Sans", arial, "Apple SD Gothic Neo", "Noto Sans CJK KR", "º»°íµñ", "KoPubDotum Medium", "³ª´®¹Ù¸¥°íµñ", "³ª´®°íµñ", "NanumGothic", "¸¼Àº°íµñ", "Malgun Gothic", sans-serif;
+}
+p {
+	font-family: "Open Sans", arial, "Apple SD Gothic Neo", "Noto Sans CJK KR", "º»°íµñ", "KoPubDotum Medium", "³ª´®¹Ù¸¥°íµñ", "³ª´®°íµñ", "NanumGothic", "¸¼Àº°íµñ", "Malgun Gothic", sans-serif;
+}
+h1 {
+	font-family: "Open Sans", arial, "Apple SD Gothic Neo", "Noto Sans CJK KR", "º»°íµñ", "KoPubDotum Medium", "³ª´®¹Ù¸¥°íµñ", "³ª´®°íµñ", "NanumGothic", "¸¼Àº°íµñ", "Malgun Gothic", sans-serif;
+}
+h2 {
+	font-family: "Open Sans", arial, "Apple SD Gothic Neo", "Noto Sans CJK KR", "º»°íµñ", "KoPubDotum Medium", "³ª´®¹Ù¸¥°íµñ", "³ª´®°íµñ", "NanumGothic", "¸¼Àº°íµñ", "Malgun Gothic", sans-serif;
+}
+h3 {
+	font-family: "Open Sans", arial, "Apple SD Gothic Neo", "Noto Sans CJK KR", "º»°íµñ", "KoPubDotum Medium", "³ª´®¹Ù¸¥°íµñ", "³ª´®°íµñ", "NanumGothic", "¸¼Àº°íµñ", "Malgun Gothic", sans-serif;
+}
+h4 {
+	font-family: "Open Sans", arial, "Apple SD Gothic Neo", "Noto Sans CJK KR", "º»°íµñ", "KoPubDotum Medium", "³ª´®¹Ù¸¥°íµñ", "³ª´®°íµñ", "NanumGothic", "¸¼Àº°íµñ", "Malgun Gothic", sans-serif;
+}
+h5 {
+	font-family: "Open Sans", arial, "Apple SD Gothic Neo", "Noto Sans CJK KR", "º»°íµñ", "KoPubDotum Medium", "³ª´®¹Ù¸¥°íµñ", "³ª´®°íµñ", "NanumGothic", "¸¼Àº°íµñ", "Malgun Gothic", sans-serif;
+}
+h6 {
+	font-family: "Open Sans", arial, "Apple SD Gothic Neo", "Noto Sans CJK KR", "º»°íµñ", "KoPubDotum Medium", "³ª´®¹Ù¸¥°íµñ", "³ª´®°íµñ", "NanumGothic", "¸¼Àº°íµñ", "Malgun Gothic", sans-serif;
+}
+a {
+	font-family: "Open Sans", arial, "Apple SD Gothic Neo", "Noto Sans CJK KR", "º»°íµñ", "KoPubDotum Medium", "³ª´®¹Ù¸¥°íµñ", "³ª´®°íµñ", "NanumGothic", "¸¼Àº°íµñ", "Malgun Gothic", sans-serif;
+}
+span {
+	font-family: "Open Sans", arial, "Apple SD Gothic Neo", "Noto Sans CJK KR", "º»°íµñ", "KoPubDotum Medium", "³ª´®¹Ù¸¥°íµñ", "³ª´®°íµñ", "NanumGothic", "¸¼Àº°íµñ", "Malgun Gothic", sans-serif;
+}
+li {
+	font-family: "Open Sans", arial, "Apple SD Gothic Neo", "Noto Sans CJK KR", "º»°íµñ", "KoPubDotum Medium", "³ª´®¹Ù¸¥°íµñ", "³ª´®°íµñ", "NanumGothic", "¸¼Àº°íµñ", "Malgun Gothic", sans-serif;
+}
+body {
+	font-size: 0.9rem;
+}
+th {
+	font-size: 0.9rem;
+}
+td {
+	font-size: 0.9rem;
+}
+div {
+	font-size: 0.9rem;
+}
+p {
+	font-size: 0.9rem;
+}
+li {
+	font-size: 0.9rem;
+}
+input {
+	font-size: 0.9rem !important;
+}
+select {
+	font-size: 0.9rem !important;
+}
+textarea {
+	font-size: 0.9rem !important;
+}
+button {
+	font-size: 0.9rem !important;
+}
+.senkawa .btn {
+	font-size: 0.9rem !important;
+}
+body.senkawa {
+	background-color: rgb(239, 239, 239);
+}
+:focus {
+	
+}
+.senkawa .table-wrap {
+	margin: 10px 0px; display: block; -ms-overflow-x: auto; max-width: 100%;
+}
+.senkawa .tab-content.bordered {
+	border-width: medium 1px 1px; border-style: none solid solid; border-color: currentColor rgb(221, 221, 221) rgb(221, 221, 221); border-image: none;
+}
+.senkawa .navbar-wrapper {
+	z-index: 91001; background-color: rgb(0, 130, 117);
+}
+.senkawa .navbar {
+	padding: 0px 1rem; font-size: 1rem; background-color: rgb(0, 130, 117);
+}
+.senkawa .navbar .navbar-brand {
+	margin-right: 0.7rem;
+}
+@media screen and (max-width:420px)
+{
+.senkawa .navbar .navbar-brand {
+	margin-right: 0.3rem;
+}
+}
+.senkawa .navbar .wiki-logo {
+	background: url("../img/namuwiki_logo_kor_white_small.png") no-repeat center / auto 35px; padding: 0px; width: 6.6rem; height: 2.6rem;
+}
+.senkawa .navbar-nav .nav-item {
+	padding: 0px;
+}
+.senkawa .navbar-nav .nav-item + .nav-item {
+	margin-left: 0.2rem;
+}
+.senkawa .navbar-nav .icon::before {
+	text-align: center; min-width: 1em;
+}
+.senkawa .navbar-nav .icon-title {
+	margin-left: 0.3rem;
+}
+.senkawa .navbar-nav .nav-link {
+	padding: 0.6rem 0.7rem 0.5rem; color: white; font-size: 1rem;
+}
+.senkawa .navbar-nav .nav-link:hover {
+	color: white; background-color: rgb(56, 165, 154);
+}
+@media screen and (max-width:42em)
+{
+.senkawa .navbar-nav .icon {
+	margin-right: 0px;
+}
+.senkawa .navbar-nav .nav-item + .nav-item {
+	margin-left: 0px;
+}
+.senkawa .navbar-nav .nav-link {
+	padding: 0.6rem 0.9rem 0.5rem;
+}
+.senkawa .navbar-nav .nav-link > .icon-title {
+	display: none;
+}
+}
+@media screen and (max-width:420px)
+{
+.senkawa .navbar {
+	padding: 0px 0.3rem;
+}
+.senkawa .navbar-nav .nav-link {
+	padding: 0.6rem 0.5rem 0.5rem;
+}
+.senkawa .navbar .search-box-parent {
+	margin: 0px 0.7rem;
+}
+}
+.senkawa .navbar .search-box {
+	float: right;
+}
+.senkawa .navbar .search-box input {
+	border-radius: 0px; width: 220px; height: 2.62rem;
+}
+.senkawa .navbar .search-box .btn {
+	padding: 0.25rem 0.5rem; border-radius: 0px; height: 2.62rem; color: black; font-size: 1.2rem !important; border-top-color: rgb(204, 204, 204); border-right-color: rgb(204, 204, 204); border-bottom-color: rgb(204, 204, 204); border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid;
+}
+.senkawa .navbar .search-box .right-search-btns :first-of-type.btn {
+	margin-left: 0px; border-left-color: currentColor; border-left-width: 0px; border-left-style: none;
+}
+@media screen and (max-width:42em)
+{
+.senkawa .navbar .search-box .left-search-btns :first-of-type.btn {
+	margin-left: 0px; border-left-color: currentColor; border-left-width: 0px; border-left-style: none;
+}
+}
+@media screen and (max-width:1020px)
+{
+.senkawa .navbar .search-box {
+	width: calc(100% + 2rem); height: 2rem !important; margin-left: -1rem; float: left; display: table !important;
+}
+.senkawa .navbar .search-box input {
+	width: 100%; height: 2.2rem;
+}
+.senkawa .navbar .search-box .input-group-btn {
+	width: 1%;
+}
+.senkawa .navbar .search-box .btn {
+	padding: 0.15rem 0.5rem 0.35rem; height: 2.2rem;
+}
+.senkawa .navbar .search-box :last-of-type.btn {
+	border-right-color: currentColor; border-right-width: 0px; border-right-style: none;
+}
+}
+.senkawa .navbar .user-menu-parent {
+	width: 42px; height: 42px;
+}
+.senkawa .navbar .user-menu-parent > a {
+	width: 42px; height: 42px;
+}
+.senkawa .navbar .user-menu-parent {
+	margin-left: 0.5rem;
+}
+.senkawa .navbar .user-menu {
+	padding: 0px; display: inline-block;
+}
+.senkawa .navbar .user-menu .icon {
+	width: 2.4rem; text-align: center; padding-top: 0.3rem; padding-left: 0.3rem; font-size: 1.4rem; margin-right: 0px; margin-bottom: 0.1rem; display: inline-block;
+}
+.senkawa .navbar .user-menu::after {
+	margin-left: 0px; border-top-color: currentColor; border-right-color: currentColor; border-left-color: currentColor; border-top-width: 0px; border-right-width: 0px; border-left-width: 0px; border-top-style: none; border-right-style: none; border-left-style: none;
+}
+.senkawa .navbar .user-menu .user-img {
+	width: 42px; height: 42px;
+}
+.senkawa .navbar .dropdown-menu {
+	border-radius: 0px; left: -0.2rem; font-size: 0.9rem; margin-top: 1rem;
+}
+.senkawa .navbar .dropdown-menu.right {
+	left: auto; right: -6px;
+}
+.senkawa .navbar .dropdown-menu.user-dropdown.right {
+	right: 0px;
+}
+.senkawa .navbar .dropdown-menu::after {
+	border: solid transparent; border-image: none; width: 0px; height: 0px; bottom: 100%; position: absolute; content: " "; pointer-events: none;
+}
+.senkawa .navbar .dropdown-menu::before {
+	border: solid transparent; border-image: none; width: 0px; height: 0px; bottom: 100%; position: absolute; content: " "; pointer-events: none;
+}
+.senkawa .navbar .dropdown-menu::after {
+	border-width: 10px; left: 1.25rem; right: auto; border-bottom-color: white;
+}
+.senkawa .navbar .dropdown-menu::before {
+	border-width: 11px; left: 1.2rem; right: auto; border-bottom-color: rgb(204, 204, 204);
+}
+.senkawa .navbar .dropdown-menu.right::after {
+	left: auto; right: 10px;
+}
+.senkawa .navbar .dropdown-menu.right::before {
+	left: auto; right: 9px;
+}
+.senkawa .navbar .user-dropdown .user-info:hover {
+	background-color: white;
+}
+.senkawa .navbar .user-dropdown .user-info .user-info {
+	text-align: right; line-height: 20px; margin-right: -0.5rem;
+}
+.senkawa .navbar .user-dropdown .user-info .user-info div {
+	font-size: 0.8rem;
+}
+.senkawa .navbar .user-dropdown .user-info .user-info div:first-of-type {
+	font-size: 1rem !important; font-weight: bold;
+}
+.senkawa .footer-wrapper {
+	border-top-color: rgb(204, 204, 204); border-top-width: 1px; border-top-style: solid; background-color: white;
+}
+.senkawa .footer {
+	margin: 0px auto; padding: 1rem; text-align: center;
+}
+.senkawa .footer p {
+	margin-bottom: 0.5rem;
+}
+.senkawa .footer p:last-of-type {
+	margin-bottom: 0px;
+}
+.senkawa .footer .sep::before {
+	margin: 0px 0.5rem; color: rgb(170, 170, 170); content: "|";
+}
+@media screen and (max-width:1020px)
+{
+.senkawa .footer {
+	padding-bottom: 3rem;
+}
+}
+.senkawa .sidebar {
+	margin: 1rem 1rem 1rem 0px; width: 17rem; float: right;
+}
+@media screen and (max-width:1020px)
+{
+.senkawa .sidebar {
+	display: none;
+}
+}
+.senkawa .sidebar.has-site-notice {
+	
+}
+.senkawa .sidebar .card {
+	border-color: rgb(204, 204, 204); border-radius: 0px; background-color: white;
+}
+.senkawa .sidebar .card {
+	padding: 0px;
+}
+.senkawa .sidebar .card .card-title {
+	margin: 1.25rem;
+}
+.senkawa .sidebar .card .link-table a {
+	padding: 0.3rem 3.3rem 0.3rem 0.5rem; overflow: auto; border-top-color: rgb(204, 204, 204); border-top-width: 1px; border-top-style: solid; display: block; -ms-word-wrap: break-word;
+}
+.senkawa .sidebar .card .link-table a:last-of-type {
+	border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.senkawa .sidebar .card .link-table a span.time {
+	color: black; margin-right: -2.8rem; float: right;
+}
+.senkawa .sidebar .card a.more-link {
+	padding: 0.5rem 0.7rem; text-align: right; display: block;
+}
+.senkawa .sidebar .card a:hover {
+	text-decoration: none; background-color: rgb(252, 252, 252);
+}
+.senkawa .sidebar .card.live-list-card .link-table a {
+	overflow: hidden; padding-right: 0.3rem; white-space: nowrap; -ms-word-wrap: normal; -ms-text-overflow: ellipsis;
+}
+.senkawa .sidebar .card.live-list-card .link-table a:hover {
+	overflow: visible; white-space: normal;
+}
+.senkawa .wiki-article {
+	margin: 0px 19rem 0px 0px; padding: 1.5rem; border-right-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; -ms-word-break: break-all; min-height: 35rem; background-color: white;
+}
+@media screen and (max-width:1020px)
+{
+.senkawa .wiki-article {
+	margin: 0px; padding: 0.7rem; border: 0px currentColor !important; border-image: none !important;
+}
+}
+.senkawa .wiki-article .site-notice {
+	margin: -1.5rem -1.5rem 1.5rem; padding: 0.3rem 1rem; border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: solid; background-color: rgb(240, 239, 117);
+}
+@media screen and (max-width:1020px)
+{
+.senkawa .wiki-article .site-notice {
+	margin: -0.7rem -0.7rem 0.7rem; padding: 0.2rem 0.7rem;
+}
+}
+.senkawa .live-topbar-area {
+	padding: 0.3rem 0.7rem; height: 2.2em !important; color: white; overflow: hidden; border-bottom-color: rgb(187, 187, 187); border-bottom-width: 1px; border-bottom-style: solid; -ms-word-break: break-all; background-color: rgb(0, 167, 152);
+}
+.senkawa .live-topbar-area .treadmill-unit {
+	margin-bottom: 0.1em; white-space: nowrap; -ms-word-wrap: normal; -ms-text-overflow: ellipsis;
+}
+@media screen and (min-width:1021px)
+{
+.senkawa .live-topbar-area {
+	display: none;
+}
+}
+.senkawa .live-topbar-area a {
+	color: white;
+}
+.senkawa .live-topbar-area a:hover {
+	text-decoration: none;
+}
+.senkawa .leaf-info {
+	background: rgb(0, 130, 117); padding: 0px 0.3rem; border-radius: 0.3rem; color: white; font-family: "Monospace"; font-size: 0.8em; margin-top: 0.2rem; margin-right: 0.2rem;
+}
+.senkawa .wiki-article .alert {
+	margin-bottom: 0.7rem;
+}
+.senkawa .wiki-article .alert.last {
+	margin-bottom: 1.4rem;
+}
+.senkawa .wiki-article > .title {
+	margin: 0px 0px 2rem; font-weight: bold;
+}
+.senkawa .wiki-article > h1.title {
+	font-size: 2.2rem;
+}
+.senkawa .wiki-article > h1.title > a {
+	color: black;
+}
+.senkawa .wiki-article > .title + .wiki-edit-date {
+	text-align: right; font-size: 0.85rem; margin-top: -1.8rem; margin-bottom: 1rem;
+}
+@media screen and (max-width:1020px)
+{
+.senkawa .wiki-article > .title + .wiki-edit-date {
+	margin-top: -1.4rem;
+}
+}
+.senkawa .wiki-article .wiki-article-menu {
+	float: right;
+}
+.senkawa .wiki-article .wiki-article-menu a {
+	padding: 0.3rem 0.8rem; font-size: 0.9rem;
+}
+.senkawa .wiki-article .wiki-article-menu a.discuss-bold {
+	background-color: rgb(187, 234, 187);
+}
+@media screen and (max-width:1020px)
+{
+.senkawa .wiki-article .wiki-article-menu ~ h1.title {
+	margin-top: 1rem;
+}
+.senkawa .wiki-article .wiki-article-menu {
+	margin: -0.7rem -0.7rem 0px; text-align: right; border-bottom-color: rgb(204, 204, 204); border-bottom-width: 0.06rem; border-bottom-style: solid; float: none;
+}
+.senkawa .wiki-article .wiki-article-menu .btn {
+	border-radius: 0px; border-top-color: currentColor; border-bottom-color: currentColor; border-top-width: 0px; border-bottom-width: 0px; border-top-style: none; border-bottom-style: none;
+}
+.senkawa .wiki-article .alert + .wiki-article-menu {
+	border-top-color: rgb(204, 204, 204); border-top-width: 1px; border-top-style: solid;
+}
+.senkawa .btn-group > :last-child:not(:first-child).btn {
+	border-right-color: currentColor; border-right-width: 0px; border-right-style: none;
+}
+}
+.senkawa .wiki-article ul:not([class]) {
+	padding-left: 2rem;
+}
+.senkawa .wiki-content {
+	min-height: 22rem;
+}
+.senkawa .wiki-article tr.no-line + tr td {
+	padding-top: 0px; padding-left: 1.5rem; border-top-color: currentColor; border-top-width: 0px; border-top-style: none;
+}
+.senkawa .wiki-article > footer {
+	margin: 1.5rem 0px 0px; padding: 0.7rem 0px 0px; text-align: right; border-top-color: gray; border-top-width: 1px; border-top-style: solid; background-color: white;
+}
+.senkawa .wiki-article > footer p:last-of-type {
+	margin-bottom: 0px;
+}
+.senkawa .wiki-article .recent-option {
+	margin-bottom: 1.4rem;
+}
+.senkawa .wiki-article .recent-option .form-group label {
+	line-height: 1.8rem; margin-right: 0.7rem;
+}
+.senkawa .wiki-article .recent-option .form-group select {
+	padding: 0.1rem 0.3rem; min-width: 10rem;
+}
+.senkawa .wiki-article .recent-option .btns {
+	margin: 1rem 0px 0px; float: none;
+}
+@media screen and (min-width:420px)
+{
+.senkawa .wiki-article .recent-option .btns {
+	margin: 0px; float: right;
+}
+}
+.senkawa .wiki-content .wiki-unfold-fn {
+	border: 1px solid rgb(206, 206, 206); border-image: none; color: rgb(85, 85, 85); font-size: 0.8rem; margin-right: 0.2rem; margin-left: 0.1rem; background-color: rgb(239, 239, 239);
+}
+.senkawa .wiki-content .wiki-unfold-fn .wiki-fn-content {
+	font-size: 1em; vertical-align: baseline;
+}
+.senkawa .wiki-article #previewFrame {
+	border: currentColor; border-image: none; width: 100%; height: 30rem; display: block;
+}
+.senkawa .wiki-article #editForm #textInput {
+	border: currentColor; border-image: none; width: 100%; height: 30rem;
+}
+.senkawa #uploadForm {
+	overflow: hidden;
+}
+.senkawa #lostForm {
+	overflow: hidden;
+}
+.senkawa #uploadForm [readonly]#fakeFileInput {
+	cursor: default; background-color: white;
+}
+.senkawa #uploadForm #textInput {
+	margin: 0.3rem 0px 1rem; width: 100%; height: 30rem;
+}
+.senkawa #uploadForm #uploadBtn {
+	width: 7rem;
+}
+.senkawa .login-form {
+	width: 100%;
+}
+.senkawa .signup-form {
+	width: 100%;
+}
+.senkawa .login-form input[type='text'] {
+	width: 100%;
+}
+.senkawa .login-form input[type='password'] {
+	width: 100%;
+}
+.senkawa .signup-form input[type='text'] {
+	width: 100%;
+}
+.senkawa .signup-form input[type='email'] {
+	width: 100%;
+}
+.senkawa .signup-form input[type='password'] {
+	width: 100%;
+}
+@media screen and (min-width:34rem)
+{
+.senkawa .login-form {
+	margin: 0px auto; width: 28rem;
+}
+.senkawa .signup-form {
+	margin: 0px auto; width: 34rem;
+}
+.senkawa .login-form label {
+	display: block;
+}
+.senkawa .signup-form label {
+	display: block;
+}
+.senkawa .login-form input[type='text'] {
+	width: calc(100% - 0.7rem); margin-left: 0.7rem; display: inline-block;
+}
+.senkawa .login-form input[type='password'] {
+	width: calc(100% - 0.7rem); margin-left: 0.7rem; display: inline-block;
+}
+.senkawa .signup-form input[type='text'] {
+	width: calc(100% - 0.7rem); margin-left: 0.7rem; display: inline-block;
+}
+.senkawa .signup-form input[type='email'] {
+	width: calc(100% - 0.7rem); margin-left: 0.7rem; display: inline-block;
+}
+.senkawa .signup-form input[type='password'] {
+	width: calc(100% - 0.7rem); margin-left: 0.7rem; display: inline-block;
+}
+}
+.senkawa form .error-desc {
+	color: red; margin-left: 0.7em;
+}
+.senkawa form .btns {
+	text-align: right; margin-top: 2rem;
+}
+.senkawa .settings-section .btns {
+	text-align: right; margin-top: 2rem;
+}
+.senkawa .login-form button[type='submit'] {
+	width: 5rem;
+}
+.senkawa .signup-form button[type='submit'] {
+	width: 5rem;
+}
+.senkawa .small-doc {
+	border: 1px solid rgb(204, 204, 204); border-image: none; color: black; overflow: scroll; background-color: white;
+}
+.senkawa .small-doc .small-title {
+	font-size: 1.4rem;
+}
+.senkawa .small-doc ul {
+	list-style: none;
+}
+.senkawa .settings-nav {
+	padding: 0.3rem; border: 1px solid rgb(204, 204, 204); border-image: none; height: 2.6rem; margin-bottom: 1.2rem;
+}
+.senkawa .settings-nav .nav-pills .nav-link {
+	padding: 0.3rem 0.5rem; border-radius: 0px;
+}
+.senkawa .settings-nav .nav-pills .nav-item + .nav-item {
+	margin-left: 0.5rem;
+}
+.senkawa .settings-section {
+	overflow: hidden;
+}
+.senkawa .settings-section h3 {
+	margin-top: 1.5rem; margin-bottom: 1rem;
+}
+.senkawa .settings-section h3:first-of-type {
+	margin-top: 0px;
+}
+.senkawa .settings-section .form-group .checkbox {
+	padding-left: 1rem;
+}
+.senkawa .settings-section .form-group select {
+	margin-left: 1rem; max-width: 16rem;
+}
+.senkawa .settings-section .form-group input[type='text'] {
+	margin-left: 1rem; max-width: 22rem;
+}
+@media screen and (max-width:768px)
+{
+.senkawa .settings-section .form-group input[type='text'] {
+	width: calc(100% - 2rem);
+}
+}
+.senkawa .settings-section .form-group button {
+	margin-left: 1rem;
+}
+.senkawa .settings-section small {
+	font-size: 80% !important;
+}
+.senkawa .mypage-nav {
+	padding: 0.5rem; border: 1px solid rgb(204, 204, 204); border-image: none; width: 13rem; margin-bottom: 1.2rem; float: left;
+}
+.senkawa .mypage-nav .nav-pills .nav-link {
+	border-radius: 0px;
+}
+.senkawa .mypage-section {
+	margin-left: 14rem;
+}
+@media screen and (max-width:42em)
+{
+.senkawa .mypage-nav {
+	width: auto; float: none;
+}
+.senkawa .mypage-section {
+	margin-left: 0px;
+}
+}
+.senkawa .license-table {
+	table-layout: fixed;
+}
+.senkawa .license-table tr td:first-of-type {
+	text-align: right;
+}
+.senkawa .alert.search-help {
+	overflow: hidden; margin-bottom: 0.8rem; min-height: 3.2rem;
+}
+.senkawa .alert.search-help .pull-left {
+	line-height: 2.1rem;
+}
+.senkawa .search-summary {
+	padding-bottom: 0.9rem; border-bottom-color: rgb(229, 229, 229); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.senkawa .search-section .search-item {
+	padding-bottom: 1.1rem; border-bottom-color: rgb(229, 229, 229); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.senkawa .search-section .arrow-circle {
+	padding: 0px 8px 1px 9px; border-radius: 16px; text-align: center; color: white; margin-right: 4px; background-color: rgb(0, 152, 136);
+}
+.senkawa .search-section h4 {
+	margin-top: 1.3rem; margin-bottom: 0.9rem;
+}
+.senkawa .search-section h4 a {
+	color: black;
+}
+.senkawa .search-section h4 a:hover {
+	text-decoration: none;
+}
+.senkawa .search-section .search-highlight {
+	padding: 0px 0.2em; border-radius: 4px; color: white; background-color: rgb(72, 173, 151);
+}
+.senkawa .search-section .pagination > li > a {
+	padding: 0.4rem 0.75rem;
+}
+.senkawa .wiki-content.character {
+	background-position: right top !important; background-repeat: no-repeat !important;
+}
+.senkawa .wiki-content.munya-notfound {
+	background-image: url("../img/character/munya/notfound.png"); background-size: auto 340px;
+}
+@media screen and (max-width:360px), screen and (max-height:360px)
+{
+.senkawa .wiki-content.munya-notfound {
+	background-size: auto 200px;
+}
+}
+.senkawa .wiki-content.sephi-notfound0 {
+	background-image: url("../img/character/sephirot/notfound0.png"); background-size: auto 340px;
+}
+@media screen and (max-width:360px), screen and (max-height:360px)
+{
+.senkawa .wiki-content.sephi-notfound0 {
+	background-size: auto 200px;
+}
+}
+.senkawa .wiki-content.sephi-notfound1 {
+	background-image: url("../img/character/sephirot/notfound1.png"); background-size: auto 340px;
+}
+@media screen and (max-width:360px), screen and (max-height:360px)
+{
+.senkawa .wiki-content.sephi-notfound1 {
+	background-size: auto 200px;
+}
+}
+.senkawa .nav-control {
+	border-width: 1px medium medium 1px; border-style: solid none none solid; border-color: rgb(204, 204, 204) currentColor currentColor rgb(204, 204, 204); margin: 0px; padding: 0px; right: 0px; bottom: 0px; list-style-type: none; position: fixed; z-index: 90005; opacity: 0.8; border-top-left-radius: 5px; background-color: rgb(0, 130, 117);
+}
+.senkawa .nav-control li {
+	float: left;
+}
+.senkawa .nav-control li a {
+	width: 40px; height: 40px; text-align: center; color: white; line-height: 42px; font-size: 1.8rem; border-left-color: rgb(204, 204, 204); border-left-width: 2px; border-left-style: dashed; display: inline-block;
+}
+.senkawa .nav-control li:first-of-type a {
+	border-left-color: currentColor; border-left-width: medium; border-left-style: none;
+}
+@media screen and (max-width:1020px)
+{
+.senkawa .nav-control li a {
+	width: 45px; height: 45px; line-height: 48px; font-size: 2.2rem;
+}
+}
+.senkawa.modal-open.modal-open-fix {
+	overflow: visible !important; padding-right: 0px !important;
+}
+.senkawa.modal-open.modal-open-fix2 {
+	padding-right: 0px !important;
+}
+.senkawa.modal-open.modal-open-fix3 {
+	padding-right: 17px !important;
+}
+.senkawa .modal#shortcutHelpModal .modal-body dl {
+	margin: 0rem;
+}
+.senkawa .modal#shortcutHelpModal .modal-body dt {
+	text-align: right;
+}
+.senkawa .modal#shortcutHelpModal .modal-body b {
+	color: rgb(189, 65, 71); background-color: rgb(247, 247, 249);
+}
+.senkawa .modal#searchModal {
+	left: auto; right: 1.5rem !important;
+}
+.senkawa .modal#searchModal .modal-content {
+	border-radius: 0px; border: 0px currentColor; border-image: none;
+}
+.senkawa .modal#searchModal .close {
+	top: 4px; position: relative;
+}
+.senkawa .modal#searchModal .modal-header {
+	border-width: 1px 1px 0px; border-style: solid solid none; border-color: rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.2) currentColor; padding: 0.3rem 0.7rem; border-image: none;
+}
+.senkawa .modal#searchModal .modal-body {
+	padding: 1px;
+}
+.senkawa .modal#footnoteModal .modal-header {
+	padding: 10px 15px;
+}
+.senkawa .modal#footnoteModal .modal-footer {
+	padding: 0px;
+}
+.senkawa .modal#footnoteModal .modal-footer .btn {
+	padding: 7px; border-radius: 0px 0px 0.3rem 0.3rem;
+}
+.senkawa .modal#footnoteModal .modal-dialog {
+	margin: 60px auto 60px -300px; left: 50%; width: 600px; position: relative; max-width: 600px;
+}
+@media screen and (max-width:630px)
+{
+.senkawa .modal#footnoteModal .modal-dialog {
+	margin: 60px 10px; left: auto; width: calc(100% - 20px);
+}
+}
+.senkawa.fixed-size .wiki-article {
+	border-left-color: rgb(204, 204, 204); border-left-width: 1px; border-left-style: solid;
+}
+@media screen and (max-width:1020px)
+{
+.senkawa.fixed-size .wiki-article {
+	border-left-color: currentColor !important; border-left-width: medium !important; border-left-style: none !important;
+}
+}
+.senkawa.fixed-size.hide-sidebar .wiki-article {
+	margin-right: 0px;
+}
+.senkawa.fixed-size .content-wrapper {
+	margin: 0px auto;
+}
+.senkawa.fixed-size.fixed-800 .content-wrapper {
+	max-width: 800px;
+}
+.senkawa.fixed-size.fixed-800 .navbar {
+	max-width: 800px;
+}
+.senkawa.fixed-size.fixed-800 .footer {
+	max-width: 800px;
+}
+.senkawa.fixed-size.fixed-1000 .content-wrapper {
+	max-width: 1000px;
+}
+.senkawa.fixed-size.fixed-1000 .navbar {
+	max-width: 1000px;
+}
+.senkawa.fixed-size.fixed-1000 .footer {
+	max-width: 1000px;
+}
+.senkawa.fixed-size.fixed-1100 .content-wrapper {
+	max-width: 1100px;
+}
+.senkawa.fixed-size.fixed-1100 .navbar {
+	max-width: 1100px;
+}
+.senkawa.fixed-size.fixed-1100 .footer {
+	max-width: 1100px;
+}
+.senkawa.fixed-size.fixed-1200 .content-wrapper {
+	max-width: 1200px;
+}
+.senkawa.fixed-size.fixed-1200 .navbar {
+	max-width: 1200px;
+}
+.senkawa.fixed-size.fixed-1200 .footer {
+	max-width: 1200px;
+}
+.senkawa.fixed-size.fixed-1300 .content-wrapper {
+	max-width: 1300px;
+}
+.senkawa.fixed-size.fixed-1300 .navbar {
+	max-width: 1300px;
+}
+.senkawa.fixed-size.fixed-1300 .footer {
+	max-width: 1300px;
+}
+.senkawa.fixed-size.fixed-1500 .content-wrapper {
+	max-width: 1500px;
+}
+.senkawa.fixed-size.fixed-1500 .navbar {
+	max-width: 1500px;
+}
+.senkawa.fixed-size.fixed-1500 .footer {
+	max-width: 1500px;
+}
+.senkawa.fixed-size.fixed-1600 .content-wrapper {
+	max-width: 1600px;
+}
+.senkawa.fixed-size.fixed-1600 .navbar {
+	max-width: 1600px;
+}
+.senkawa.fixed-size.fixed-1600 .footer {
+	max-width: 1600px;
+}
+.senkawa.fixed-size .navbar {
+	margin: 0px auto;
+}
+:not(.left-sidebar).senkawa.fixed-size .wiki-article .site-notice {
+	
+}
+.senkawa.fixed-navbar .wiki-article .wiki-fn-content .target {
+	margin-top: -40px; position: absolute;
+}
+.senkawa.fixed-navbar .wiki-article .footnote-list .target {
+	margin-top: -40px; position: absolute;
+}
+.senkawa.fixed-navbar .wiki-article {
+	margin-top: 2.53rem;
+}
+@media screen and (max-width:1020px)
+{
+.senkawa.fixed-navbar .wiki-article {
+	margin-top: 4.83rem;
+}
+}
+.senkawa.fixed-navbar .navbar-wrapper {
+	width: 100%; height: 2.6rem; margin-top: -40px; position: fixed;
+}
+@media screen and (max-width:1020px)
+{
+.senkawa.fixed-navbar .navbar-wrapper {
+	height: 2.5rem;
+}
+}
+.senkawa.fixed-navbar .navbar {
+	z-index: 90004;
+}
+.senkawa.fixed-navbar.modal-open .modal .modal-dialog {
+	margin-top: 60px !important;
+}
+@media screen and (max-width:1020px)
+{
+.senkawa.fixed-navbar.modal-open .modal .modal-dialog {
+	margin-top: 90px !important;
+}
+}
+.senkawa.hide-sidebar .sidebar {
+	display: none;
+}
+:not(.fixed-size).senkawa.hide-sidebar .wiki-article {
+	margin-right: 0px; margin-left: 0px;
+}
+.senkawa.hide-sidebar .wiki-article .site-notice {
+	margin: -1.5rem -1.5rem 1.5rem;
+}
+@media screen and (max-width:1020px)
+{
+.senkawa.hide-sidebar .wiki-article .site-notice {
+	margin: -0.7rem -0.7rem 0.7rem;
+}
+}
+.senkawa.nowrap-wiki-table .wiki-article .wiki-table {
+	white-space: nowrap;
+}
+.senkawa.left-sidebar .wiki-article {
+	margin-right: 0px; margin-left: 19rem; border-left-color: rgb(204, 204, 204); border-left-width: 1px; border-left-style: solid;
+}
+@media screen and (max-width:1020px)
+{
+.senkawa.left-sidebar .wiki-article {
+	margin-left: 0px;
+}
+}
+.senkawa.left-sidebar .sidebar {
+	margin: 1rem 0px 1rem 1rem; float: left;
+}
+.senkawa.left-sidebar .wiki-article .site-notice {
+	margin: -1.5rem -1.5rem 1.5rem;
+}
+.senkawa.left-sidebar .sidebar.has-site-notice {
+	
+}
+@media print
+{
+.senkawa .navbar {
+	display: none !important;
+}
+.senkawa .tab_bar {
+	display: none !important;
+}
+.senkawa .wiki-article .wiki-article-menu {
+	display: none !important;
+}
+.senkawa .nav-control {
+	display: none !important;
+}
+.senkawa .sidebar {
+	display: none !important;
+}
+.senkawa .wiki-article {
+	margin: 0px; border: 0px currentColor !important; border-image: none !important;
+}
+}
+.senkawa #nprogress .bar {
+	background: rgb(187, 234, 187); position: fixed;
+}
+.senkawa #nprogress .peg {
+	box-shadow: 0px 0px 10px white, 0px 0px 5px white;
+}
+.senkawa .treadmill-unit {
+	overflow: hidden; position: relative;
+}
+.senkawa .line-break {
+	border-width: medium medium 1px; border-style: none none solid; border-color: currentColor currentColor rgb(204, 204, 204); border-image: none; display: block;
+}
+.senkawa table.diff tbody th {
+	white-space: nowrap;
+}
+.senkawa .modal del {
+	color: gray;
+}
+.senkawa .popover del {
+	color: gray;
+}
+.senkawa .modal .not-exists {
+	color: red;
+}
+.senkawa .popover .not-exists {
+	color: red;
+}
+.senkawa .modal .not-exists {
+	font-weight: bold;
+}
+.senkawa .popover .not-exists {
+	font-weight: bold;
+}
+.senkawa .modal .wiki-link-external {
+	color: rgb(0, 153, 0);
+}
+.senkawa .popover .wiki-link-external {
+	color: rgb(0, 153, 0);
+}
+.senkawa .modal img {
+	display: inline-block; max-width: 100%;
+}
+.senkawa .popover img {
+	display: inline-block; max-width: 100%;
+}
+@media screen and (max-width:335px)
+{
+.senkawa .navbar .user-menu-parent {
+	width: 20px;
+}
+.senkawa .navbar .user-menu-parent > a {
+	width: 20px;
+}
+.senkawa .navbar .user-menu .icon {
+	width: 20px;
+}
+.senkawa .navbar .user-menu .icon {
+	padding-left: 0px;
+}
+}
+#div-gpt-ad-1449622106273-0 {
+	text-align: center; padding-top: 1rem; padding-bottom: 1rem;
+}

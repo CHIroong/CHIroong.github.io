@@ -1,0 +1,1125 @@
+dfn {
+	font-style: inherit;
+}
+sup {
+	line-height: 1em;
+}
+sub {
+	line-height: 1em;
+}
+ol.references {
+	font-size: 90%; margin-bottom: 0.5em;
+}
+div.reflist {
+	font-size: 90%; margin-bottom: 0.5em;
+}
+div.refbegin {
+	font-size: 90%; margin-bottom: 0.5em;
+}
+div.refbegin-100 {
+	font-size: 100%;
+}
+div.reflist ol.references {
+	font-size: 100%; list-style-type: inherit;
+}
+span:target.citation {
+	background-color: rgb(221, 238, 255);
+}
+sup.reference {
+	font-style: normal; font-weight: normal;
+}
+.citation {
+	-ms-word-wrap: break-word;
+}
+cite {
+	font-style: inherit;
+}
+.citation cite.article {
+	font-style: inherit;
+}
+.citation cite.contribution {
+	font-style: inherit;
+}
+.citation cite {
+	font-style: italic;
+}
+.citation cite.periodical {
+	font-style: italic;
+}
+@media screen, handheld
+{
+.citation *.printonly {
+	display: none;
+}
+}
+.messagebox {
+	background: rgb(249, 249, 249); margin: 0px auto 1em; padding: 0.2em; border: 1px solid rgb(170, 170, 170); border-image: none; width: 80%; text-align: justify; font-size: smaller;
+}
+.messagebox.standard-talk {
+	border: 1px solid rgb(192, 192, 144); border-image: none; background-color: rgb(248, 234, 186);
+}
+.messagebox.small {
+	margin: 0px 0px 1em 1em; width: 238px; line-height: 1.25em; clear: both; font-size: smaller; float: right;
+}
+.messagebox.small-talk {
+	background: rgb(248, 234, 186); margin: 0px 0px 1em 1em; width: 238px; line-height: 1.25em; clear: both; font-size: smaller; float: right;
+}
+table.messagebox + table.messagebox {
+	margin-top: -1px;
+}
+th.mbox-text {
+	padding: 0.25em 0.9em; border: currentColor; border-image: none; width: 100%; font-size: small;
+}
+td.mbox-text {
+	padding: 0.25em 0.9em; border: currentColor; border-image: none; width: 100%; font-size: small;
+}
+td.mbox-image {
+	padding: 2px 0px 2px 0.9em; border: currentColor; border-image: none; text-align: center;
+}
+td.mbox-imageright {
+	padding: 2px 0.9em 2px 0px; border: currentColor; border-image: none; text-align: center;
+}
+td.mbox-empty-cell {
+	padding: 0px; border: currentColor; border-image: none; width: 1px;
+}
+table.ambox {
+	background: rgb(251, 251, 251); border-width: 1px 1px 1px 10px; border-style: solid; border-color: rgb(170, 170, 170) rgb(170, 170, 170) rgb(170, 170, 170) rgb(30, 144, 255); margin: 0px 10%; border-image: none;
+}
+table.ambox + table.ambox {
+	margin-top: -1px;
+}
+.ambox th.mbox-text {
+	padding: 0.25em 0.5em;
+}
+.ambox td.mbox-text {
+	padding: 0.25em 0.5em;
+}
+.ambox td.mbox-image {
+	padding: 2px 0px 2px 0.5em;
+}
+.ambox td.mbox-imageright {
+	padding: 2px 0.5em 2px 0px;
+}
+table.ambox-notice {
+	border-left-color: rgb(30, 144, 255); border-left-width: 10px; border-left-style: solid;
+}
+table.ambox-speedy {
+	background: rgb(255, 238, 238); border-left-color: rgb(178, 34, 34); border-left-width: 10px; border-left-style: solid;
+}
+table.ambox-delete {
+	border-left-color: rgb(178, 34, 34); border-left-width: 10px; border-left-style: solid;
+}
+table.ambox-content {
+	border-left-color: rgb(242, 133, 0); border-left-width: 10px; border-left-style: solid;
+}
+table.ambox-style {
+	border-left-color: rgb(244, 196, 48); border-left-width: 10px; border-left-style: solid;
+}
+table.ambox-move {
+	border-left-color: rgb(153, 50, 204); border-left-width: 10px; border-left-style: solid;
+}
+table.ambox-protection {
+	border-left-color: rgb(187, 187, 170); border-left-width: 10px; border-left-style: solid;
+}
+table.imbox {
+	background: rgb(251, 251, 251); margin: 4px 10%; border: 3px solid rgb(30, 144, 255); border-image: none; border-collapse: collapse;
+}
+.imbox .mbox-text .imbox {
+	margin: 0px -0.5em; display: block;
+}
+.mbox-inside .imbox {
+	margin: 4px;
+}
+table.imbox-notice {
+	border: 3px solid rgb(30, 144, 255); border-image: none;
+}
+table.imbox-speedy {
+	background: rgb(255, 238, 238); border: 3px solid rgb(178, 34, 34); border-image: none;
+}
+table.imbox-delete {
+	border: 3px solid rgb(178, 34, 34); border-image: none;
+}
+table.imbox-content {
+	border: 3px solid rgb(242, 133, 0); border-image: none;
+}
+table.imbox-style {
+	border: 3px solid rgb(244, 196, 48); border-image: none;
+}
+table.imbox-move {
+	border: 3px solid rgb(153, 50, 204); border-image: none;
+}
+table.imbox-protection {
+	border: 3px solid rgb(187, 187, 170); border-image: none;
+}
+table.imbox-license {
+	background: rgb(247, 248, 255); border: 3px solid rgb(136, 136, 170); border-image: none;
+}
+table.imbox-featured {
+	border: 3px solid rgb(203, 161, 53); border-image: none;
+}
+table.cmbox {
+	background: rgb(223, 232, 255); margin: 3px 10%; border: 1px solid rgb(170, 170, 170); border-image: none; border-collapse: collapse;
+}
+table.cmbox-notice {
+	background: rgb(216, 232, 255);
+}
+table.cmbox-speedy {
+	background: rgb(255, 219, 219); border: 4px solid rgb(178, 34, 34); border-image: none; margin-top: 4px; margin-bottom: 4px;
+}
+table.cmbox-delete {
+	background: rgb(255, 219, 219);
+}
+table.cmbox-content {
+	background: rgb(255, 231, 206);
+}
+table.cmbox-style {
+	background: rgb(255, 249, 219);
+}
+table.cmbox-move {
+	background: rgb(228, 216, 255);
+}
+table.cmbox-protection {
+	background: rgb(239, 239, 225);
+}
+table.ombox {
+	background: rgb(249, 249, 249); margin: 4px 10%; border: 1px solid rgb(170, 170, 170); border-image: none; border-collapse: collapse;
+}
+table.ombox-notice {
+	border: 1px solid rgb(170, 170, 170); border-image: none;
+}
+table.ombox-speedy {
+	background: rgb(255, 238, 238); border: 2px solid rgb(178, 34, 34); border-image: none;
+}
+table.ombox-delete {
+	border: 2px solid rgb(178, 34, 34); border-image: none;
+}
+table.ombox-content {
+	border: 1px solid rgb(242, 133, 0); border-image: none;
+}
+table.ombox-style {
+	border: 1px solid rgb(244, 196, 48); border-image: none;
+}
+table.ombox-move {
+	border: 1px solid rgb(153, 50, 204); border-image: none;
+}
+table.ombox-protection {
+	border: 2px solid rgb(187, 187, 170); border-image: none;
+}
+table.tmbox {
+	background: rgb(248, 234, 186); margin: 4px 10%; border: 1px solid rgb(192, 192, 144); border-image: none; border-collapse: collapse;
+}
+.mediawiki .mbox-inside .tmbox {
+	margin: 2px 0px; width: 100%;
+}
+.mbox-inside .tmbox.mbox-small {
+	line-height: 1.5em; font-size: 100%;
+}
+table.tmbox-speedy {
+	background: rgb(255, 238, 238); border: 2px solid rgb(178, 34, 34); border-image: none;
+}
+table.tmbox-delete {
+	border: 2px solid rgb(178, 34, 34); border-image: none;
+}
+table.tmbox-content {
+	border: 2px solid rgb(242, 133, 0); border-image: none;
+}
+table.tmbox-style {
+	border: 2px solid rgb(244, 196, 48); border-image: none;
+}
+table.tmbox-move {
+	border: 2px solid rgb(153, 50, 204); border-image: none;
+}
+table.tmbox-protection {
+	border: 1px solid rgb(192, 192, 144); border-image: none;
+}
+table.tmbox-notice {
+	border: 1px solid rgb(192, 192, 144); border-image: none;
+}
+table.dmbox {
+	background: none; margin: 0.9em 1em; clear: both; border-top-color: rgb(204, 204, 204); border-bottom-color: rgb(204, 204, 204); border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid;
+}
+table.fmbox {
+	background: rgb(249, 249, 249); margin: 0.2em 0px; border: 1px solid rgb(170, 170, 170); border-image: none; width: 100%; clear: both;
+}
+table.fmbox-system {
+	background: rgb(249, 249, 249);
+}
+table.fmbox-warning {
+	background: rgb(255, 219, 219); border: 1px solid rgb(187, 112, 112); border-image: none;
+}
+table.fmbox-editnotice {
+	background: none;
+}
+div.mw-warning-with-logexcerpt {
+	background: rgb(255, 219, 219); margin: 0.2em 0px; padding: 0.25em 0.9em; border: 1px solid rgb(187, 112, 112); border-image: none; clear: both;
+}
+div.mw-lag-warn-high {
+	background: rgb(255, 219, 219); margin: 0.2em 0px; padding: 0.25em 0.9em; border: 1px solid rgb(187, 112, 112); border-image: none; clear: both;
+}
+div.mw-cascadeprotectedwarning {
+	background: rgb(255, 219, 219); margin: 0.2em 0px; padding: 0.25em 0.9em; border: 1px solid rgb(187, 112, 112); border-image: none; clear: both;
+}
+div#mw-protect-cascadeon {
+	background: rgb(255, 219, 219); margin: 0.2em 0px; padding: 0.25em 0.9em; border: 1px solid rgb(187, 112, 112); border-image: none; clear: both;
+}
+div.mw-lag-warn-normal {
+	background: rgb(249, 249, 249); margin: 0.2em 0px; padding: 0.25em 0.9em; border: 1px solid rgb(170, 170, 170); border-image: none; clear: both;
+}
+div.fmbox-system {
+	background: rgb(249, 249, 249); margin: 0.2em 0px; padding: 0.25em 0.9em; border: 1px solid rgb(170, 170, 170); border-image: none; clear: both;
+}
+body.mediawiki table.mbox-small {
+	margin: 4px 0px 4px 1em; width: 238px; line-height: 1.25em; clear: right; font-size: 100%; float: right;
+}
+body.mediawiki table.mbox-small-left {
+	margin: 4px 1em 4px 0px; width: 238px; line-height: 1.25em; font-size: 100%; border-collapse: collapse;
+}
+.template-documentation {
+	margin: 1em 0px 0px; padding: 1em; border: 1px solid rgb(170, 170, 170); border-image: none; clear: both; background-color: rgb(236, 252, 244);
+}
+.infobox {
+	background: rgb(249, 249, 249); margin: 0.5em 0px 0.5em 1em; padding: 0.2em; border: 1px solid rgb(170, 170, 170); border-image: none; width: 25em; clear: right; font-size: small; float: right;
+}
+.infobox td {
+	vertical-align: top;
+}
+.infobox th {
+	vertical-align: top;
+}
+.infobox caption {
+	font-size: 125%; font-weight: bold;
+}
+.infobox caption.colored {
+	margin: 0.25em 0px 0.5em; border-top-width: 0.3em; border-bottom-width: 0.3em; border-top-style: solid; border-bottom-style: solid;
+}
+.infobox th {
+	white-space: nowrap;
+}
+.infobox th[colspan='2'] {
+	text-align: center;
+}
+.infobox.bordered {
+	border-collapse: collapse;
+}
+.infobox.bordered td {
+	border: 1px solid rgb(170, 170, 170); border-image: none;
+}
+.infobox.bordered th {
+	border: 1px solid rgb(170, 170, 170); border-image: none;
+}
+.infobox.bordered .borderless td {
+	border: 0px currentColor; border-image: none;
+}
+.infobox.bordered .borderless th {
+	border: 0px currentColor; border-image: none;
+}
+.infobox.sisterproject {
+	width: 20em; font-size: smaller;
+}
+.infobox.bordered .mergedtoprow td {
+	border-width: 1px 1px 0px 0px; border-style: solid solid none none; border-color: rgb(170, 170, 170) rgb(170, 170, 170) currentColor currentColor; border-image: none;
+}
+.infobox.bordered .mergedtoprow th {
+	border-width: 1px 1px 0px 0px; border-style: solid solid none none; border-color: rgb(170, 170, 170) rgb(170, 170, 170) currentColor currentColor; border-image: none;
+}
+.infobox.bordered .mergedrow td {
+	border-width: 0px 1px 0px 0px; border-style: none solid none none; border-color: currentColor rgb(170, 170, 170) currentColor currentColor; border-image: none;
+}
+.infobox.bordered .mergedrow th {
+	border-width: 0px 1px 0px 0px; border-style: none solid none none; border-color: currentColor rgb(170, 170, 170) currentColor currentColor; border-image: none;
+}
+.infobox.geography {
+	text-align: left; line-height: 1.2em; font-size: smaller; border-collapse: collapse;
+}
+.infobox.geography td {
+	padding: 0.4em 0.6em; border-top-color: rgb(170, 170, 170); border-top-width: 1px; border-top-style: solid;
+}
+.infobox.geography th {
+	padding: 0.4em 0.6em; border-top-color: rgb(170, 170, 170); border-top-width: 1px; border-top-style: solid;
+}
+.infobox.geography .mergedtoprow td {
+	padding: 0.4em 0.6em 0.2em; border-top-color: rgb(170, 170, 170); border-top-width: 1px; border-top-style: solid;
+}
+.infobox.geography .mergedtoprow th {
+	padding: 0.4em 0.6em 0.2em; border-top-color: rgb(170, 170, 170); border-top-width: 1px; border-top-style: solid;
+}
+.infobox.geography .mergedrow td {
+	padding: 0px 0.6em 0.2em; border: 0px currentColor; border-image: none;
+}
+.infobox.geography .mergedrow th {
+	padding: 0px 0.6em 0.2em; border: 0px currentColor; border-image: none;
+}
+.infobox.geography .mergedbottomrow td {
+	padding: 0px 0.6em 0.4em; border-top-color: currentColor; border-bottom-color: rgb(170, 170, 170); border-top-width: 0px; border-bottom-width: 1px; border-top-style: none; border-bottom-style: solid;
+}
+.infobox.geography .mergedbottomrow th {
+	padding: 0px 0.6em 0.4em; border-top-color: currentColor; border-bottom-color: rgb(170, 170, 170); border-top-width: 0px; border-bottom-width: 1px; border-top-style: none; border-bottom-style: solid;
+}
+.infobox.geography .maptable td {
+	padding: 0px; border: 0px currentColor; border-image: none;
+}
+.infobox.geography .maptable th {
+	padding: 0px; border: 0px currentColor; border-image: none;
+}
+.notice {
+	margin: 1em; padding: 0.2em;
+}
+.notice.section {
+	margin: 0px 1em; width: auto; font-size: smaller; border-top-color: rgb(170, 170, 170); border-bottom-color: rgb(170, 170, 170); border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid;
+}
+.notice.section + .notice.section {
+	margin-top: -1px; border-top-color: currentColor; border-top-width: 0px; border-top-style: none;
+}
+#disambig {
+	border-top-color: rgb(204, 204, 204); border-bottom-color: rgb(204, 204, 204); border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid;
+}
+.spoiler {
+	border-top-color: rgb(221, 221, 221); border-bottom-color: rgb(221, 221, 221); border-top-width: 2px; border-bottom-width: 2px; border-top-style: solid; border-bottom-style: solid;
+}
+table.stub {
+	margin: 1em auto 0px; width: 100%; font-size: smaller; border-top-color: rgb(204, 204, 204); border-bottom-color: rgb(204, 204, 204); border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid;
+}
+table.stub + table.stub {
+	margin-top: -1px; border-top-color: currentColor; border-top-width: 0px; border-top-style: none;
+}
+#file img {
+	background: url("//upload.wikimedia.org/wikipedia/commons/5/5d/Checker-16x16.png");
+}
+#wpSave {
+	font-weight: bold;
+}
+.jamocomposed_block {
+	font-family: "ÇÔÃÊ·Òµ¸¿ò LVT","HCR Dotum LVT","ÇÔÃÊ·Ò¹ÙÅÁ LVT","HCR Batang LVT","º»°íµñ","Source Han Sans K","º»°íµñ KR","Source Han Sans KR","Noto Sans CJK KR","³ª´®¹Ù¸¥°íµñ ¿¾ÇÑ±Û","NanumBarunGothic YetHangul","³ª´®¸íÁ¶ ¿¾ÇÑ±Û","NanumMyeongjo YetHangul","Àº ¹ÙÅÁ","Un Batang","µ¸¿ò ¿¾ÇÑ±Û","Dotum Old Hangul","¹ÙÅÁ ¿¾ÇÑ±Û","Batang Old Hangul","±¼¸² ¿¾ÇÑ±Û","NewGulim Old Hangul","±Ã¼­ ¿¾ÇÑ±Û","Gungsuh Old Hangul","¸¼Àº °íµñ","Malgun Gothic","ÇÔÃÊ·Òµ¸¿ò","HCR Dotum","ÇÔÃÊ·Ò¹ÙÅÁ","HCR Batang",Code2000;
+}
+.oldhanyang {
+	font-family: "New Gulim","»õ±¼¸²","»õµ¸¿ò","ÇÑÄÄµ¸¿ò","Naver Dictionary","³×ÀÌ¹ö»çÀü","Haansoft Batang","ÇÑÄÄ¹ÙÅÁ","»õ¹ÙÅÁ";
+}
+.nounderlines a {
+	text-decoration: none;
+}
+.IPA a:link {
+	text-decoration: none;
+}
+.IPA a:visited {
+	text-decoration: none;
+}
+.audiolink a {
+	background: url("//upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Loudspeaker.svg/11px-Loudspeaker.svg.png") no-repeat left !important; padding-right: 0px !important; padding-left: 16px !important;
+}
+table.navbox {
+	margin: auto; padding: 1px; border: 1px solid rgb(170, 170, 170); border-image: none; width: 100%; text-align: center; clear: both; font-size: 88%; border-collapse: separate; border-spacing: 2px;
+}
+table.navbox + table.navbox {
+	margin-top: -1px;
+}
+.navbox-title {
+	text-align: center; padding-right: 1em; padding-left: 1em;
+}
+.navbox-abovebelow {
+	text-align: center; padding-right: 1em; padding-left: 1em;
+}
+table.navbox th {
+	text-align: center; padding-right: 1em; padding-left: 1em;
+}
+.navbox-group {
+	text-align: right; padding-right: 1em; padding-left: 1em; font-weight: bold; white-space: nowrap;
+}
+.navbox {
+	background: rgb(253, 253, 253);
+}
+.navbox-subgroup {
+	background: rgb(253, 253, 253);
+}
+.navbox-list {
+	border-color: rgb(253, 253, 253);
+}
+.navbox-title {
+	background: rgb(204, 204, 255);
+}
+table.navbox th {
+	background: rgb(204, 204, 255);
+}
+.navbox-abovebelow {
+	background: rgb(221, 221, 255);
+}
+.navbox-group {
+	background: rgb(221, 221, 255);
+}
+.navbox-subgroup .navbox-title {
+	background: rgb(221, 221, 255);
+}
+.navbox-subgroup .navbox-group {
+	background: rgb(230, 230, 255);
+}
+.navbox-subgroup .navbox-abovebelow {
+	background: rgb(230, 230, 255);
+}
+.navbox-even {
+	background: rgb(247, 247, 247);
+}
+.navbox-odd {
+	background: none;
+}
+.collapseButton {
+	width: auto; text-align: right; font-weight: normal; float: right;
+}
+.navbox .collapseButton {
+	width: 6em;
+}
+div.NavFrame {
+	margin: 0px; padding: 4px; border: 1px solid rgb(170, 170, 170); border-image: none; text-align: center; font-size: 95%; border-collapse: collapse;
+}
+div.NavFrame + div.NavFrame {
+	border-top-style: hidden;
+}
+div.NavPic {
+	margin: 0px; padding: 2px; float: left; background-color: rgb(255, 255, 255);
+}
+div.NavFrame div.NavHead {
+	height: 1.6em; font-weight: bold; position: relative; background-color: rgb(204, 204, 255);
+}
+div.NavFrame p {
+	font-size: 100%;
+}
+div.NavFrame div.NavContent {
+	font-size: 100%;
+}
+div.NavFrame div.NavContent p {
+	font-size: 100%;
+}
+div.NavEnd {
+	margin: 0px; padding: 0px; line-height: 1px; clear: both;
+}
+a.NavToggle {
+	top: 0px; right: 3px; font-size: 90%; font-weight: normal; position: absolute;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.nowraplinks a {
+	white-space: nowrap;
+}
+.nowraplinks .selflink {
+	white-space: nowrap;
+}
+sup.reference a {
+	white-space: nowrap;
+}
+.toclimit-2 .toclevel-2 {
+	display: none;
+}
+.toclimit-3 .toclevel-3 {
+	display: none;
+}
+.toclimit-4 .toclevel-4 {
+	display: none;
+}
+.toclimit-5 .toclevel-5 {
+	display: none;
+}
+.toclimit-6 .toclevel-6 {
+	display: none;
+}
+.toclimit-7 .toclevel-7 {
+	display: none;
+}
+div.listenlist {
+	background: url("//upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Gnome-speakernotes.png/30px-Gnome-speakernotes.png"); padding-left: 40px;
+}
+div.videolist {
+	background: url("//upload.wikimedia.org/wikipedia/en/thumb/2/20/Tango-video-x-generic.png/40px-Tango-video-x-generic.png"); padding-left: 50px;
+}
+div.multivideolist {
+	background: url("//upload.wikimedia.org/wikipedia/en/thumb/2/20/Tango-video-x-generic.png/40px-Tango-video-x-generic.png"); padding-left: 50px;
+}
+div.medialist {
+	background-position: left top; margin: 1em; min-height: 50px; background-repeat: no-repeat;
+}
+div.medialist ul {
+	margin: 0px; list-style-type: none; list-style-image: none;
+}
+div.medialist ul li {
+	padding-bottom: 0.5em;
+}
+div.medialist ul li li {
+	padding-bottom: 0px; font-size: smaller;
+}
+.plainlinksneverexpand {
+	background: none !important; padding: 0px !important;
+}
+.plainlinksneverexpand .urlexpansion {
+	display: none !important;
+}
+a[href$='.pdf'].external.text {
+	background: url("//upload.wikimedia.org/wikipedia/commons/thumb/2/23/Icons-mini-file_acrobat.gif/15px-Icons-mini-file_acrobat.gif") no-repeat right; padding-right: 17px;
+}
+a[href*='.pdf?'].external.text {
+	background: url("//upload.wikimedia.org/wikipedia/commons/thumb/2/23/Icons-mini-file_acrobat.gif/15px-Icons-mini-file_acrobat.gif") no-repeat right; padding-right: 17px;
+}
+a[href*='.pdf#'].external.text {
+	background: url("//upload.wikimedia.org/wikipedia/commons/thumb/2/23/Icons-mini-file_acrobat.gif/15px-Icons-mini-file_acrobat.gif") no-repeat right; padding-right: 17px;
+}
+a[href$='.PDF'].external.text {
+	background: url("//upload.wikimedia.org/wikipedia/commons/thumb/2/23/Icons-mini-file_acrobat.gif/15px-Icons-mini-file_acrobat.gif") no-repeat right; padding-right: 17px;
+}
+a[href*='.PDF?'].external.text {
+	background: url("//upload.wikimedia.org/wikipedia/commons/thumb/2/23/Icons-mini-file_acrobat.gif/15px-Icons-mini-file_acrobat.gif") no-repeat right; padding-right: 17px;
+}
+a[href*='.PDF#'].external.text {
+	background: url("//upload.wikimedia.org/wikipedia/commons/thumb/2/23/Icons-mini-file_acrobat.gif/15px-Icons-mini-file_acrobat.gif") no-repeat right; padding-right: 17px;
+}
+.pathnavbox {
+	margin: 0px 0px 0.5em; padding: 0.3em 0.6em; border: 1px outset rgb(238, 238, 255); border-image: none; clear: both; font-size: smaller; background-color: rgb(238, 238, 255);
+}
+.pathnavbox ul {
+	list-style: none; margin-top: 0px; margin-bottom: 0px;
+}
+.pathnavbox > ul {
+	margin: 0px;
+}
+.pathnavbox ul li {
+	margin: 0px;
+}
+.page-Æ¯¼ö±â´É_ÃÖ±Ù¹Ù²ñ .mw-rollback-link {
+	font-size: smaller;
+}
+.page-Æ¯¼ö±â´É_ÁÖ½Ã¹®¼­¸ñ·Ï .mw-rollback-link {
+	font-size: smaller;
+}
+.minoredit {
+	color: rgb(128, 128, 128); font-size: smaller;
+}
+.newpage {
+	color: rgb(255, 0, 0); font-size: smaller;
+}
+.botedit {
+	color: rgb(60, 179, 113); font-size: smaller;
+}
+.unpatrolled {
+	font-size: smaller;
+}
+body.page-À§Å°¹é°ú_´ë¹® #t-cite {
+	display: none !important;
+}
+body.page-À§Å°¹é°ú_´ë¹® #lastmod {
+	display: none !important;
+}
+body.page-À§Å°¹é°ú_´ë¹® #siteSub {
+	display: none !important;
+}
+body.page-À§Å°¹é°ú_´ë¹® #contentSub {
+	display: none !important;
+}
+body.page-À§Å°¹é°ú_´ë¹® h1.firstHeading {
+	display: none !important;
+}
+.fix {
+	border-bottom-color: rgb(170, 170, 170); border-bottom-width: 1px; border-bottom-style: dashed;
+}
+#EnWpMpBook {
+	background-image: url("//upload.wikimedia.org/wikipedia/en/7/7e/MP-open-book.png");
+}
+#EnWpMpSearch {
+	background: url("//upload.wikimedia.org/wikipedia/en/a/ae/MP-magnifying-glass.png") no-repeat right top;
+}
+#EnWpMpSearchInner {
+	width: 20em; text-align: center; float: right;
+}
+#EnWpMpBook2 {
+	background-image: url("//upload.wikimedia.org/wikipedia/commons/8/8e/MP-open-book2.png");
+}
+.geo-default {
+	display: inline;
+}
+.geo-dms {
+	display: inline;
+}
+.geo-dec {
+	display: inline;
+}
+.geo-nondefault {
+	display: none;
+}
+.geo-multi-punct {
+	display: none;
+}
+.longitude {
+	white-space: nowrap;
+}
+.latitude {
+	white-space: nowrap;
+}
+table.mw_metadata {
+	font-size: smaller;
+}
+.comment {
+	font-size: 9pt; font-style: normal !important;
+}
+.mw-plusminus-pos {
+	color: green;
+}
+.mw-plusminus-neg {
+	color: red;
+}
+.toccolours {
+	padding: 5px; border: 1px solid rgb(170, 170, 170); border-image: none; font-size: 95%; background-color: rgb(249, 249, 249);
+}
+div.thumb div a img {
+	background-color: rgb(255, 255, 255);
+}
+.allpagesredirect a {
+	color: rgb(136, 136, 136);
+}
+.watchlistredir a {
+	color: rgb(136, 136, 136);
+}
+.redirect-in-category a:link {
+	color: rgb(136, 136, 136);
+}
+.redirect-in-category a:visited {
+	color: rgb(136, 136, 136);
+}
+.mw-textarea-sprotected {
+	background: rgb(255, 255, 219);
+}
+.gallerytext p {
+	font-size: 90%;
+}
+.mw-tag-markers {
+	color: red;
+}
+.skin-monobook .hlist dl {
+	line-height: 1.5em;
+}
+.skin-modern .hlist dl {
+	line-height: 1.5em;
+}
+.skin-vector .hlist dl {
+	line-height: 1.5em;
+}
+.hlist dl {
+	margin: 0px; padding: 0px;
+}
+.hlist ol {
+	margin: 0px; padding: 0px;
+}
+.hlist ul {
+	margin: 0px; padding: 0px;
+}
+.hlist dd {
+	margin: 0px; display: inline; white-space: nowrap;
+}
+.hlist dt {
+	margin: 0px; display: inline; white-space: nowrap;
+}
+.hlist li {
+	margin: 0px; display: inline; white-space: nowrap;
+}
+.hlist.hwrap dd {
+	white-space: normal;
+}
+.hlist.hwrap dt {
+	white-space: normal;
+}
+.hlist.hwrap li {
+	white-space: normal;
+}
+.hlist dl dl {
+	display: inline; white-space: normal;
+}
+.hlist dl ol {
+	display: inline; white-space: normal;
+}
+.hlist dl ul {
+	display: inline; white-space: normal;
+}
+.hlist ol dl {
+	display: inline; white-space: normal;
+}
+.hlist ol ol {
+	display: inline; white-space: normal;
+}
+.hlist ol ul {
+	display: inline; white-space: normal;
+}
+.hlist ul dl {
+	display: inline; white-space: normal;
+}
+.hlist ul ol {
+	display: inline; white-space: normal;
+}
+.hlist ul ul {
+	display: inline; white-space: normal;
+}
+.hlist dt::after {
+	content: ":";
+}
+.hlist dd::after {
+	font-weight: bold; content: " ¡¤";
+}
+.hlist li::after {
+	font-weight: bold; content: " ¡¤";
+}
+.hlist dd:last-child::after {
+	content: none;
+}
+.hlist dt:last-child::after {
+	content: none;
+}
+.hlist li:last-child::after {
+	content: none;
+}
+.hlist dd.hlist-last-child::after {
+	content: none;
+}
+.hlist dt.hlist-last-child::after {
+	content: none;
+}
+.hlist li.hlist-last-child::after {
+	content: none;
+}
+.hlist dd dd:first-child::before {
+	font-weight: normal; content: "(";
+}
+.hlist dd dt:first-child::before {
+	font-weight: normal; content: "(";
+}
+.hlist dd li:first-child::before {
+	font-weight: normal; content: "(";
+}
+.hlist dt dd:first-child::before {
+	font-weight: normal; content: "(";
+}
+.hlist dt dt:first-child::before {
+	font-weight: normal; content: "(";
+}
+.hlist dt li:first-child::before {
+	font-weight: normal; content: "(";
+}
+.hlist li dd:first-child::before {
+	font-weight: normal; content: "(";
+}
+.hlist li dt:first-child::before {
+	font-weight: normal; content: "(";
+}
+.hlist li li:first-child::before {
+	font-weight: normal; content: "(";
+}
+.hlist dd dd:last-child::after {
+	font-weight: normal; content: ")";
+}
+.hlist dd dt:last-child::after {
+	font-weight: normal; content: ")";
+}
+.hlist dd li:last-child::after {
+	font-weight: normal; content: ")";
+}
+.hlist dt dd:last-child::after {
+	font-weight: normal; content: ")";
+}
+.hlist dt dt:last-child::after {
+	font-weight: normal; content: ")";
+}
+.hlist dt li:last-child::after {
+	font-weight: normal; content: ")";
+}
+.hlist li dd:last-child::after {
+	font-weight: normal; content: ")";
+}
+.hlist li dt:last-child::after {
+	font-weight: normal; content: ")";
+}
+.hlist li li:last-child::after {
+	font-weight: normal; content: ")";
+}
+.hlist dd dd.hlist-last-child::after {
+	font-weight: normal; content: ")";
+}
+.hlist dd dt.hlist-last-child::after {
+	font-weight: normal; content: ")";
+}
+.hlist dd li.hlist-last-child::after {
+	font-weight: normal; content: ")";
+}
+.hlist dt dd.hlist-last-child::after {
+	font-weight: normal; content: ")";
+}
+.hlist dt dt.hlist-last-child::after {
+	font-weight: normal; content: ")";
+}
+.hlist dt li.hlist-last-child::after {
+	font-weight: normal; content: ")";
+}
+.hlist li dd.hlist-last-child::after {
+	font-weight: normal; content: ")";
+}
+.hlist li dt.hlist-last-child::after {
+	font-weight: normal; content: ")";
+}
+.hlist li li.hlist-last-child::after {
+	font-weight: normal; content: ")";
+}
+.hlist.hnum ol {
+	counter-reset: list-item;
+}
+.hlist.hnum ol > li {
+	counter-increment: list-item;
+}
+.hlist.hnum ol > li::before {
+	content: counter(list-item) " ";
+}
+.hlist.hnum dd ol > li:first-child::before {
+	content: "(" counter(list-item) " ";
+}
+.hlist.hnum dt ol > li:first-child::before {
+	content: "(" counter(list-item) " ";
+}
+.hlist.hnum li ol > li:first-child::before {
+	content: "(" counter(list-item) " ";
+}
+.plainlist ul {
+	list-style: none; margin: 0px; line-height: inherit;
+}
+.plainlist ul li {
+	margin-bottom: 0px;
+}
+.mw-babel-box-level-N {
+	display: none;
+}
+div.mw-babel-box table th {
+	width: 45px; height: 45px; text-align: center; font-family: sans-serif; font-size: 14pt;
+}
+div.mw-babel-box table td {
+	padding: 4pt; line-height: 1.25em; font-size: 8pt;
+}
+div.mw-babel-box-N {
+	margin: 1px; border: 1px solid rgb(110, 247, 167); border-image: none; float: left;
+}
+div.mw-babel-box-4 {
+	margin: 1px; border: 1px solid rgb(119, 224, 232); border-image: none; float: left;
+}
+div.mw-babel-box-3 {
+	margin: 1px; border: 1px solid rgb(153, 179, 255); border-image: none; float: left;
+}
+div.mw-babel-box-2 {
+	margin: 1px; border: 1px solid rgb(188, 185, 239); border-image: none; float: left;
+}
+div.mw-babel-box-1 {
+	margin: 1px; border: 1px solid rgb(224, 192, 224); border-image: none; float: left;
+}
+div.mw-babel-box-0 {
+	margin: 1px; border: 1px solid rgb(255, 179, 179); border-image: none; float: left;
+}
+div.mw-babel-box-N table {
+	background: rgb(197, 252, 220);
+}
+div.mw-babel-box-4 table {
+	background: rgb(208, 248, 255);
+}
+div.mw-babel-box-3 table {
+	background: rgb(224, 232, 255);
+}
+div.mw-babel-box-2 table {
+	background: rgb(233, 229, 249);
+}
+div.mw-babel-box-1 table {
+	background: rgb(243, 224, 243);
+}
+div.mw-babel-box-0 table {
+	background: rgb(255, 224, 232);
+}
+div.mw-babel-box-N table th {
+	background: rgb(110, 247, 167);
+}
+div.mw-babel-box-4 table th {
+	background: rgb(119, 224, 232);
+}
+div.mw-babel-box-3 table th {
+	background: rgb(153, 179, 255);
+}
+div.mw-babel-box-2 table th {
+	background: rgb(188, 185, 239);
+}
+div.mw-babel-box-1 table th {
+	background: rgb(224, 192, 224);
+}
+div.mw-babel-box-0 table th {
+	background: rgb(255, 179, 179);
+}
+.rellink {
+	padding-left: 1.6em; font-size: 90%; margin-bottom: 0.5em;
+}
+.dablink {
+	padding-left: 1.6em; font-size: 90%; margin-bottom: 0.5em;
+}
+.wikitable.plainrowheaders th[scope=row] {
+	text-align: left; font-weight: normal;
+}
+.wikitable td ul {
+	text-align: left;
+}
+.wikitable td ol {
+	text-align: left;
+}
+.wikitable td dl {
+	text-align: left;
+}
+.wikitable.hlist td ul {
+	text-align: inherit;
+}
+.wikitable.hlist td ol {
+	text-align: inherit;
+}
+.wikitable.hlist td dl {
+	text-align: inherit;
+}
+.archiveHeader2 {
+	margin: 0px 0px 1.4em 0.5em; padding: 0.5em; border-radius: 0.5em; border: 1px solid rgb(167, 215, 249); border-image: none; clear: right; font-size: small; float: right; border-spacing: 0; background-color: rgb(255, 255, 255); -moz-border-radius: 0.5em; -webkit-border-radius: 0.5em;
+}
+.archiveHeader2 .mw-ui-input-inline {
+	width: 12em; min-width: 0px;
+}
+td .sortkey {
+	display: none; speak: none;
+}
+th .sortkey {
+	display: none; speak: none;
+}
+s {
+	color: gray;
+}
+strike {
+	color: gray;
+}
+s a {
+	color: rgb(127, 127, 246); text-decoration: line-through;
+}
+s a:visited {
+	color: rgb(127, 127, 246); text-decoration: line-through;
+}
+.my-buttons {
+	padding: 0.5em;
+}
+.my-buttons a {
+	padding: 0px 0.1em 0.1em; color: rgb(0, 88, 150); font-size: 0.9em; font-weight: bold; text-decoration: none;
+}
+.my-buttons a:hover {
+	background-color: rgb(187, 204, 221) !important;
+}
+.my-buttons a:active {
+	background-color: rgb(187, 204, 221) !important;
+}
+#editpage-specialchars a {
+	text-decoration: none;
+}
+#editpage-specialchars a:hover {
+	text-decoration: underline;
+}
+span.searchmatch {
+	font-weight: bold; background-color: rgb(255, 204, 204);
+}
+* {
+	-ms-word-break: normal;
+}
+.tp_link a:active {
+	color: inherit !important;
+}
+.tp_link a:hover {
+	color: inherit !important;
+}
+.tp_link a:link {
+	color: inherit !important;
+}
+.tp_link a:visited {
+	color: inherit !important;
+}
+img.gall_img {
+	height: auto; max-height: 600px; max-width: 75%;
+}
+pre[class*=source] {
+	overflow: scroll;
+}
+@media all and (max-width:551px)
+{
+div.tleft {
+	margin: auto; text-align: center; clear: both; float: none !important;
+}
+div.tright {
+	margin: auto; text-align: center; clear: both; float: none !important;
+}
+*:not(.libre-notice) > div.floatleft {
+	margin: auto; text-align: center; clear: both; float: none !important;
+}
+*:not(.libre-notice) > div.floatright {
+	margin: auto; text-align: center; clear: both; float: none !important;
+}
+table.floatleft {
+	margin: auto; text-align: center; clear: both; float: none !important;
+}
+table.floatright {
+	margin: auto; text-align: center; clear: both; float: none !important;
+}
+table[align=left] {
+	margin: auto; text-align: center; clear: both; float: none !important;
+}
+table[align=right] {
+	margin: auto; text-align: center; clear: both; float: none !important;
+}
+table[style*=float] {
+	margin: auto; text-align: center; clear: both; float: none !important;
+}
+div.thumbinner {
+	margin: auto;
+}
+}
+input[type='number'] {
+	max-width: 100%;
+}
+.mw-ui-input-inline {
+	max-width: 100%;
+}
+table.floatright {
+	float: right;
+}
+table.floatleft {
+	float: left;
+}
+table.alignright {
+	margin: 0.5em 0.5em 0.5em auto;
+}
+table.aligncenter {
+	margin: auto;
+}
+table.alignmiddle {
+	margin: auto;
+}
+div.thumbinner {
+	max-width: 100%;
+}
+.mw-charinsert-buttons {
+	padding: 1px; border: 1px solid rgb(170, 170, 170); border-image: none; text-align: center; font-size: 110%; margin-top: 10px;
+}
+.mw-charinsert-buttons a {
+	padding: 0px 0.1em 0.1em; border: thin outset rgb(0, 102, 153); border-image: none; color: black; font-size: 0.9em; font-weight: bold; text-decoration: none; background-color: rgb(204, 221, 238) !important;
+}
+.mw-charinsert-buttons a:hover {
+	border-style: inset; background-color: rgb(187, 204, 221);
+}
+.mw-charinsert-buttons a:active {
+	border-style: inset; background-color: rgb(187, 204, 221);
+}
+.client-js .mw-edittools-section {
+	display: inline;
+}
+.client-js .mw-edittools-section input[type='button'] {
+	padding-right: 1px; padding-left: 1px; font-size: 0.9em; margin-left: 1px;
+}
+#mw-content-text {
+	clear: both;
+}
+@media print
+{
+a[href]::after {
+	content: normal;
+}
+}

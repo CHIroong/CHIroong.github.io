@@ -1,0 +1,1803 @@
+.auto-article {
+	transition:0.25s; text-align: left; letter-spacing: -0.05em; font-size: 0.9rem; vertical-align: baseline; -moz-transition: all 0.25s ease; -webkit-transition: all 0.25s ease; -o-transition: all 0.25s ease;
+}
+.auto-article::before {
+	display: table; content: "";
+}
+.auto-article::after {
+	display: table; content: "";
+}
+.auto-article::after {
+	clear: both;
+}
+.auto-article p {
+	list-style: none; margin: 0px; padding: 0px;
+}
+.auto-article ul {
+	list-style: none; margin: 0px; padding: 0px;
+}
+.auto-article ol {
+	list-style: none; margin: 0px; padding: 0px;
+}
+.auto-article small {
+	font-size: 0.8rem;
+}
+.auto-article.slick-dotted.slick-slider {
+	margin-bottom: 0px;
+}
+.row .auto-article .slick-slider [class*='line-height-'] {
+	display: block !important;
+}
+.auto-boll [class*='size-'] {
+	padding-left: 0.62rem; position: relative; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; -o-box-sizing: border-box;
+}
+.auto-boll [class*='size-']::before {
+	border-radius: 50%; left: 0px; top: 50%; width: 3px; height: 3px; position: absolute; content: ""; transform: translateY(-50%); background-color: rgba(0, 0, 0, 0.35);
+}
+.auto-reset [class*='size-'] {
+	padding-left: 0px; position: static; box-sizing: inherit; -moz-box-sizing: inherit; -webkit-box-sizing: inherit; -o-box-sizing: inherit;
+}
+.auto-reset [class*='size-']::before {
+	display: none;
+}
+.auto-images {
+	position: relative;
+}
+a.auto-images {
+	display: block;
+}
+.auto-images::before {
+	border: 1px solid rgba(0, 0, 0, 0.1); border-image: none; left: 0px; top: 0px; right: 0px; bottom: 0px; visibility: hidden; position: absolute; z-index: 2; content: "";
+}
+.auto-images img {
+	width: 100%; height: 100%; position: relative; z-index: 1;
+}
+.auto-images.line::before {
+	visibility: visible;
+}
+.auto-images.radius {
+	border-radius: 50%;
+}
+.auto-images.radius.line::before {
+	border-radius: 50%;
+}
+.auto-images.cover {
+	background-position: center; background-repeat: no-repeat; background-size: contain;
+}
+.auto-images.cover img {
+	display: none;
+}
+.auto-images.cover.top {
+	background-position: top;
+}
+.auto-images.cover.bottom {
+	background-position: bottom;
+}
+.auto-images.noimage {
+	background: url("/image/logo/csslogo.png") no-repeat center rgb(255, 255, 255);
+}
+.auto-images.noimage img {
+	display: none;
+}
+.auto-images.cover.noimage {
+	background-size: auto;
+}
+.auto-images.movie::after {
+	left: 50%; top: 50%; text-align: center; color: rgba(255, 255, 255, 0.75); line-height: 1; font-family: "ndsoft fonts"; font-size: 3.5rem; font-style: normal; font-weight: normal; position: absolute; z-index: 11; content: "\0026"; transform: translateX(-50%) translateY(-50%); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+}
+.auto-images.grayscale {
+	-webkit-filter: grayscale(100%);
+}
+.auto-images.for-text {
+	background: none; text-indent: 0px; margin-bottom: 0.5rem; display: block;
+}
+.auto-images.for-text img {
+	display: none;
+}
+.auto-images.for-text::after {
+	text-align: center; color: rgba(0, 0, 0, 0.3); line-height: 1; font-family: "ndsoft fonts"; font-size: 1.12rem; font-style: normal; font-weight: normal; display: block; content: "\005b"; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+}
+.auto-images.thumb {
+	background: none !important;
+}
+.auto-images.thumb.cover {
+	background: none !important;
+}
+.auto-images.thumb {
+	width: auto;
+}
+.auto-images.thumb img {
+	width: auto; display: block;
+}
+.auto-mov {
+	position: relative;
+}
+.auto-mov::after {
+	clear: both; display: table; content: "";
+}
+.auto-mov iframe {
+	margin: 0px !important; padding: 0px !important; width: 100% !important; height: 100% !important; position: relative; z-index: 1;
+}
+.auto-mov object {
+	margin: 0px !important; padding: 0px !important; width: 100% !important; height: 100% !important; position: relative; z-index: 1;
+}
+.auto-mov-title {
+	padding: 0.5rem 0.62rem; text-align: center; background-color: rgb(0, 0, 0);
+}
+.auto-sol {
+	border-top-color: rgba(0, 0, 0, 0.12); border-top-width: 1px; border-top-style: solid;
+}
+.auto-dot {
+	border-top-color: rgba(0, 0, 0, 0.15); border-top-width: 1px; border-top-style: dotted;
+}
+.auto-dash {
+	border-top-color: rgba(0, 0, 0, 0.12); border-top-width: 1px; border-top-style: dashed;
+}
+.auto-sol.bottom {
+	border-top-color: currentColor; border-top-width: medium; border-top-style: none;
+}
+.auto-dot.bottom {
+	border-top-color: currentColor; border-top-width: medium; border-top-style: none;
+}
+.auto-dash.bottom {
+	border-top-color: currentColor; border-top-width: medium; border-top-style: none;
+}
+.auto-sol.bottom {
+	border-bottom-color: rgba(0, 0, 0, 0.12); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.auto-dot.bottom {
+	border-bottom-color: rgba(0, 0, 0, 0.15); border-bottom-width: 1px; border-bottom-style: dotted;
+}
+.auto-dash.bottom {
+	border-bottom-color: rgba(0, 0, 0, 0.12); border-bottom-width: 1px; border-bottom-style: dashed;
+}
+.auto-relation {
+	padding-left: 1.25rem; position: relative;
+}
+.auto-relation::before {
+	left: 0.5rem; top: 50%; width: 6px; height: 6px; border-bottom-color: rgb(51, 51, 51); border-left-color: rgb(51, 51, 51); border-bottom-width: 1px; border-left-width: 1px; border-bottom-style: solid; border-left-style: solid; position: absolute; z-index: 1; content: ""; transform: translateY(-50%);
+}
+.auto-relation::after {
+	clear: both; display: table; content: "";
+}
+.auto-pager {
+	text-align: center; position: relative; z-index: 1;
+}
+.auto-pager::after {
+	clear: both; display: table; content: "";
+}
+.auto-pager li[id*='slick-'] {
+	margin: 0px auto; display: inline-block;
+}
+.auto-pager li[id*='slick-'] button[data-role] {
+	background: rgba(0, 0, 0, 0.25); border-radius: 50%; width: 8px; height: 8px; color: transparent; text-indent: -5000px; overflow: hidden; margin-right: 0.2rem; margin-left: 0.2rem; display: block; cursor: pointer;
+}
+.auto-pager.white li[id*='slick-'] button[data-role] {
+	background: rgba(255, 255, 255, 0.45);
+}
+.auto-pager li[id*='slick-'].slick-active button[data-role] {
+	background-color: rgb(231, 49, 110);
+}
+.photo-titbg {
+	padding: 0.5rem 0.62rem; left: 0px; width: 100%; bottom: 0px; line-height: 1em; position: absolute; z-index: 10; background-color: rgba(0, 0, 0, 0.75);
+}
+.photo-titbg::after {
+	clear: both; display: table; content: "";
+}
+.photo-titbg.right {
+	left: inherit; right: 0px;
+}
+.photo-titbg.cover {
+	top: 0px; right: 0px;
+}
+.photo-titbg.right.cover {
+	top: 0px; right: 0px;
+}
+.photo-titbg.gradient {
+	background: linear-gradient(transparent, rgba(0, 0, 0, 0.75)); padding-top: 0.93rem; text-shadow: 1px 1px rgba(0,0,0,0.75);
+}
+.photo-btn {
+	width: auto; overflow: hidden; display: inline-block; position: absolute; z-index: 11; cursor: pointer;
+}
+.photo-btn.type-image {
+	color: transparent; text-indent: -5000px;
+}
+.auto-article.tiles .auto-columns {
+	margin-top: 1rem; min-height: 1px;
+}
+.auto-article.tiles .auto-columns::after {
+	clear: both; display: table; content: "";
+}
+.auto-article.tiles :first-child.auto-columns {
+	margin-top: 0px;
+}
+.auto-article.tiles-2x .auto-columns {
+	width: 48%; margin-top: 1rem; float: left; min-height: 1px;
+}
+.auto-article.tiles-2x :nth-child(2n).auto-columns {
+	float: right;
+}
+.auto-article.tiles-2x :nth-child(2n+1).auto-columns {
+	clear: both;
+}
+.auto-article.tiles-2x :first-child.auto-columns {
+	margin-top: 0px;
+}
+.auto-article.tiles-2x :nth-child(2).auto-columns {
+	margin-top: 0px;
+}
+.auto-article.tiles-3x .auto-columns {
+	width: 32%; margin-top: 1rem; margin-right: 2%; float: left; min-height: 1px;
+}
+.auto-article.tiles-3x :nth-child(3n).auto-columns {
+	margin-right: 0px;
+}
+.auto-article.tiles-3x :nth-child(3n+1).auto-columns {
+	clear: both;
+}
+.auto-article.tiles-3x :first-child.auto-columns {
+	margin-top: 0px;
+}
+.auto-article.tiles-3x :nth-child(2).auto-columns {
+	margin-top: 0px;
+}
+.auto-article.tiles-3x :nth-child(3).auto-columns {
+	margin-top: 0px;
+}
+.auto-article.tiles-4x .auto-columns {
+	width: 23.5%; margin-top: 1rem; margin-right: 2%; float: left; min-height: 1px;
+}
+.auto-article.tiles-4x :nth-child(4n).auto-columns {
+	margin-right: 0px;
+}
+.auto-article.tiles-4x :nth-child(4n+1).auto-columns {
+	clear: both;
+}
+.auto-article.tiles-4x :first-child.auto-columns {
+	margin-top: 0px;
+}
+.auto-article.tiles-4x :nth-child(2).auto-columns {
+	margin-top: 0px;
+}
+.auto-article.tiles-4x :nth-child(3).auto-columns {
+	margin-top: 0px;
+}
+.auto-article.tiles-4x :nth-child(4).auto-columns {
+	margin-top: 0px;
+}
+.auto-article.tiles-5x .auto-columns {
+	width: 18%; margin-top: 1rem; margin-right: 2.5%; float: left; min-height: 1px;
+}
+.auto-article.tiles-5x :nth-child(5n).auto-columns {
+	margin-right: 0px;
+}
+.auto-article.tiles-5x :nth-child(5n+1).auto-columns {
+	clear: both;
+}
+.auto-article.tiles-5x :first-child.auto-columns {
+	margin-top: 0px;
+}
+.auto-article.tiles-5x :nth-child(2).auto-columns {
+	margin-top: 0px;
+}
+.auto-article.tiles-5x :nth-child(3).auto-columns {
+	margin-top: 0px;
+}
+.auto-article.tiles-5x :nth-child(4).auto-columns {
+	margin-top: 0px;
+}
+.auto-article.tiles-5x :nth-child(5).auto-columns {
+	margin-top: 0px;
+}
+.auto-fontA {
+	color: rgb(41, 39, 40) !important;
+}
+.auto-fontB {
+	color: rgba(0, 0, 0, 0.55) !important;
+}
+.auto-fontC {
+	color: rgba(0, 0, 0, 0.7) !important;
+}
+.auto-fontD {
+	color: rgb(0, 111, 151) !important;
+}
+.auto-fontE {
+	color: rgba(0, 0, 0, 0.75) !important;
+}
+.auto-fontF {
+	color: rgb(255, 255, 255) !important;
+}
+.auto-fontG {
+	color: rgb(52, 66, 137) !important;
+}
+.auto-fontH {
+	color: rgb(36, 41, 97) !important;
+}
+.auto-fontI {
+	color: rgb(73, 101, 121) !important;
+}
+.auto-fontJ {
+	color: rgba(0, 0, 0, 0.3) !important;
+}
+.auto-fontK {
+	color: rgba(0, 0, 0, 0.4) !important;
+}
+.auto-fontL {
+	color: rgb(41, 171, 165) !important;
+}
+.auto-article a:hover {
+	text-decoration: none;
+}
+.auto-article .onload:hover {
+	color: rgb(211, 35, 26) !important; text-decoration: underline;
+}
+.auto-article a:hover .onload {
+	color: rgb(211, 35, 26) !important; text-decoration: underline;
+}
+.auto-article .auto-fontF.onload:hover {
+	color: rgb(255, 255, 255) !important; text-decoration: underline;
+}
+.auto-article a:hover .auto-fontF.onload {
+	color: rgb(255, 255, 255) !important; text-decoration: underline;
+}
+.auto-d03 .auto-section {
+	padding: 0.25rem 0.5rem; text-align: center; color: rgb(254, 254, 254); line-height: 1.25em; letter-spacing: -0.05em; overflow: hidden; font-size: 0.75rem; margin-right: 0.5rem; float: left; display: inline-block; white-space: nowrap; -ms-text-overflow: ellipsis; max-width: 60px;
+}
+.auto-db01 .number {
+	width: 21px; height: 21px; text-align: center; color: rgb(255, 255, 255); line-height: 1.7em; overflow: hidden; font-size: 0.7rem; margin-top: 2px; margin-right: 0.62rem; float: left;
+}
+.auto-db01 .number.default-bg {
+	border: 1px solid rgba(0, 0, 0, 0.1); border-image: none; color: rgb(119, 119, 119); background-color: rgb(255, 255, 255);
+}
+.auto-db02 .number {
+	width: 18px; text-align: center; line-height: 1.4em; font-size: 1rem; font-weight: 700; margin-right: 0.62rem; float: left;
+}
+.auto-db02 .number.default-point {
+	color: rgba(0, 0, 0, 0.45);
+}
+.auto-db03 .auto-content {
+	padding: 0.62rem 0px; position: relative;
+}
+.auto-db03 .auto-content::before {
+	left: 0px; height: 3px; right: 0px; bottom: 0px; display: block; position: absolute; z-index: 1; content: ""; background-color: rgba(0, 0, 0, 0.15);
+}
+.auto-db03 .auto-content::after {
+	clear: both; display: table; content: "";
+}
+.auto-db03 .auto-content .number {
+	text-align: center; line-height: 1em; font-size: 2.3rem; font-weight: 400; margin-right: 1rem; float: left;
+}
+.auto-db03 .auto-content .number.default-point {
+	color: rgb(153, 153, 153);
+}
+.auto-db03 .auto-content .auto-icon-line {
+	left: 0px; height: 3px; bottom: 0px; text-indent: -1000pt; display: none; position: absolute; z-index: 2;
+}
+.auto-db03 :first-child.auto-content {
+	padding-top: 0px;
+}
+.auto-db03 :nth-of-type(1).auto-content .auto-icon-line {
+	width: 100%; display: block;
+}
+.auto-db03 :nth-of-type(2).auto-content .auto-icon-line {
+	width: 80%; display: block;
+}
+.auto-db03 :nth-of-type(3).auto-content .auto-icon-line {
+	width: 60%; display: block;
+}
+.auto-db03 :nth-of-type(4).auto-content .auto-icon-line {
+	width: 40%; display: block;
+}
+.auto-db03 :nth-of-type(5).auto-content .auto-icon-line {
+	width: 20%; display: block;
+}
+.auto-db04 .number {
+	text-align: center; line-height: 1.6em; font-size: 1rem; font-weight: 700; margin-right: 1rem; float: left;
+}
+.auto-db04 .number.default-point {
+	color: rgba(0, 0, 0, 0.45);
+}
+.auto-db04 .number.count1 {
+	min-height: 50px;
+}
+.auto-db04 .number.count2 {
+	min-height: 50px;
+}
+.auto-db04 .number.count3 {
+	min-height: 50px;
+}
+.auto-dbr01 {
+	padding: 0.62rem; border: 1px solid rgba(0, 0, 0, 0.12); border-image: none; position: relative; background-color: rgba(0, 0, 0, 0.05);
+}
+.auto-dbr01 .auto-btn {
+	border-width: 1px; border-style: solid; border-color: rgba(0, 0, 0, 0.12) rgba(0, 0, 0, 0.12) rgba(0, 0, 0, 0.25); border-image: none; width: 18px; height: 18px; font-size: 0.7rem; margin-top: 3px; margin-left: 5px; float: right; position: relative; z-index: 2; cursor: pointer; background-color: rgb(255, 255, 255);
+}
+.auto-dbr01 .number {
+	width: 21px; height: 21px; text-align: center; color: rgb(255, 255, 255); line-height: 1.8em; font-size: 0.7rem; margin-right: 7px; float: left;
+}
+.auto-dbr01 .number.default-bg {
+	background-color: rgba(0, 0, 0, 0.3);
+}
+.auto-dbr03 {
+	position: relative;
+}
+.auto-dbr03 .number {
+	text-align: center; line-height: 1.4em; font-size: 1rem; font-weight: 700; margin-right: 1rem; float: left; min-height: 65px;
+}
+.auto-dbr03 .number.default-point {
+	color: rgb(136, 136, 136);
+}
+.auto-dbr03 .auto-pager {
+	text-align: right; line-height: 1;
+}
+.auto-dbr03 .auto-pager li[id*='slick-']:last-child button[data-role] {
+	margin-right: 0px;
+}
+.auto-dbr03 .photo-btn {
+	border: 1px solid rgb(195, 195, 195); border-image: none; width: 15px; height: 15px; text-align: center; bottom: 2px; color: rgb(91, 93, 108); font-size: 0.6rem; background-color: rgb(255, 255, 255);
+}
+.auto-dbr03 .photo-btn.auto-prev {
+	border-radius: 2px 0px 0px 2px; left: 0px;
+}
+.auto-dbr03 .photo-btn.auto-next {
+	border-radius: 0px 2px 2px 0px; left: 14px;
+}
+.auto-dl04 .auto-column {
+	padding-left: 30px; position: relative;
+}
+.auto-dl04 .auto-column::before {
+	position: absolute; content: "";
+}
+.auto-dl04 .auto-column::after {
+	position: absolute; content: "";
+}
+.auto-dl04 .auto-column::before {
+	left: 10px; top: 0px; bottom: 0px; border-left-color: rgb(204, 204, 204); border-left-width: 1px; border-left-style: solid; z-index: 1;
+}
+.auto-dl04 .auto-column::after {
+	background: rgb(189, 195, 199); border-radius: 50%; border: 3px solid rgb(255, 255, 255); border-image: none; left: 5px; top: 30px; width: 5px; height: 5px; z-index: 2; box-sizing: content-box;
+}
+.auto-dl04 :first-child.auto-column::after {
+	top: 6px;
+}
+.auto-dp02 .auto-content {
+	width: 48%; margin-bottom: 1rem; float: left;
+}
+.auto-dp02 :nth-child(2n).auto-content {
+	float: right;
+}
+.auto-dp02 :nth-child(2n+1).auto-content {
+	clear: both;
+}
+.auto-dp02 .auto-content .size-16 {
+	font-weight: 700;
+}
+.auto-dr01 .accordion-title::before {
+	color: rgba(0, 0, 0, 0.4);
+}
+.auto-dr01 .accordion-title:hover {
+	background: rgb(248, 248, 249);
+}
+.auto-dr01 .accordion-content::after {
+	clear: both; display: table; content: "";
+}
+.auto-dr01 .accordion-content .more-btn {
+	margin-top: 0.75rem;
+}
+.auto-dr01 .accordion-content .more-btn::before {
+	clear: both; display: table; content: "";
+}
+.auto-dr01 .accordion-content .more-btn::after {
+	clear: both; display: table; content: "";
+}
+.auto-dr01 .accordion-content .more-btn a {
+	padding: 0.4rem 0.62rem; border-radius: 1.25rem; border: 1px solid rgba(0, 0, 0, 0.1); border-image: none; color: rgb(136, 136, 136); line-height: 1; letter-spacing: -0.05em; font-size: 0.7rem; float: right; display: block; background-color: rgb(248, 248, 249);
+}
+.auto-dr01 .accordion-content .more-btn a::after {
+	border-width: 3px; border-style: solid; border-color: transparent transparent transparent rgb(136, 136, 136); margin: 0.2rem -0.2rem 0px 0.4rem; float: right; content: "";
+}
+.auto-dr02 .number {
+	width: 21px; height: 21px; text-align: center; color: rgb(255, 255, 255); line-height: 1.7em; overflow: hidden; font-size: 0.7rem; margin-top: 2px; margin-right: 0.62rem; float: left;
+}
+.auto-dr02 .number.default-bg {
+	border: 1px solid rgba(0, 0, 0, 0.1); border-image: none; color: rgb(119, 119, 119); background-color: rgb(255, 255, 255);
+}
+.auto-dr02 .photo-btn {
+	border: 1px solid rgb(195, 195, 195); border-image: none; top: -30px; width: 15px; height: 15px; text-align: center; color: rgb(91, 93, 108); font-size: 0.6rem; background-color: rgb(255, 255, 255);
+}
+.auto-dr02 .photo-btn.auto-prev {
+	border-radius: 2px 0px 0px 2px; right: 14px;
+}
+.auto-dr02 .photo-btn.auto-next {
+	border-radius: 0px 2px 2px 0px; right: 0px;
+}
+.auto-m03 .auto-titles {
+	max-width: calc(100% - 95px);
+}
+.auto-m03 .auto-names {
+	overflow: hidden; font-size: 0.75rem; margin-top: 0.2rem; white-space: nowrap; -ms-text-overflow: ellipsis; max-width: 70px;
+}
+.auto-ma01-1 .auto-mores {
+	text-align: right; color: rgb(170, 170, 170); line-height: 1em; letter-spacing: -0.05em; padding-right: 0.6rem; font-size: 0.75rem; margin-top: 0.5rem; display: block; position: relative;
+}
+.auto-ma01-1 .auto-mores::before {
+	clear: both; display: table; content: "";
+}
+.auto-ma01-1 .auto-mores::after {
+	border-width: 3px; border-style: solid; border-color: transparent transparent transparent rgb(170, 170, 170); top: 50%; right: 0px; position: absolute; z-index: 1; content: ""; transform: translateY(-50%);
+}
+.auto-ma01-3 {
+	position: relative;
+}
+.auto-ma01-3 .label-group {
+	left: 195px; position: absolute;
+}
+.auto-ma02 .auto-content {
+	overflow: hidden; display: block; max-height: 95px;
+}
+.auto-ma04 :not(:first-child).auto-content {
+	width: calc(100% - 180px); float: right;
+}
+.auto-ma04 .auto-titles {
+	float: left; max-width: calc(100% - 95px);
+}
+.auto-ma04 .auto-names {
+	width: 80px; text-align: right; overflow: hidden; font-size: 0.75rem; margin-top: 0.2rem; float: right; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.auto-mp01-5 .auto-columns {
+	overflow: hidden; position: relative;
+}
+.auto-mp01-5 .auto-content {
+	padding: 20px; transition:transform 0.4s, opacity 0.1s 0.3s; left: 0px; top: 0px; width: 100%; height: 100%; text-align: center; position: absolute; z-index: 44; opacity: 0; text-shadow: 1px 1px rgba(0,0,0,0.8); transform: translateY(100%); -moz-transform: translateY(100%); -webkit-transform: translateY(100%); -o-transform: translateY(100%); -moz-transition: -moz-transform .4s, opacity .1s .3s; -webkit-transition: -webkit-transform .4s, opacity .1s .3s; -o-transition: -o-transform .4s, opacity .1s .3s;
+}
+.auto-mp01-5 a:hover .auto-content {
+	transition:transform 0.4s, opacity 0.1s; opacity: 1; transform: translateY(0px); -moz-transform: translateY(0); -webkit-transform: translateY(0); -o-transform: translateY(0); -moz-transition: -moz-transform .4s, opacity .1s; -webkit-transition: -webkit-transform .4s, opacity .1s; -o-transition: -o-transform .4s, opacity .1s;
+}
+.auto-mp01-5 .auto-content::after {
+	background: rgba(0, 0, 0, 0.75); left: 0px; top: 0px; width: 100%; height: 100%; position: absolute; z-index: 1; content: "";
+}
+.auto-mp01-5 .auto-content .auto-fontF {
+	position: relative; z-index: 2;
+}
+.auto-mp01-5 .auto-content .auto-fontJ {
+	position: relative; z-index: 2;
+}
+.auto-mp01-5 .auto-content .auto-fontF {
+	margin-bottom: 1rem;
+}
+.auto-mp01-5 .auto-content .auto-fontJ {
+	color: rgba(255, 255, 255, 0.7) !important;
+}
+.auto-mp01-5 .auto-content .auto-fontJ::before {
+	width: 100%; clear: both; margin-bottom: 1rem; border-top-color: rgba(255, 255, 255, 0.25); border-top-width: 1px; border-top-style: solid; display: block; position: relative; z-index: 2; content: "";
+}
+.auto-mp02 .auto-columns {
+	position: relative;
+}
+.auto-mp02 .auto-columns a {
+	display: block;
+}
+.auto-mp02 .auto-columns a::before {
+	border: 1px solid rgba(0, 0, 0, 0.12); border-image: none; left: 0px; top: 0px; right: 0px; bottom: 0px; position: absolute; z-index: 1; content: "";
+}
+.auto-mp02 .auto-section {
+	text-align: left; font-size: 0.8rem;
+}
+.auto-mp02 .auto-section.noimage {
+	text-align: center; padding-bottom: 0.5rem; font-size: 1.25rem; font-weight: 400; margin-bottom: 1rem; position: relative;
+}
+.auto-mp02 .auto-section.noimage::before {
+	left: 50%; top: 100%; width: 30%; border-bottom-color: rgba(0, 0, 0, 0.12); border-bottom-width: 1px; border-bottom-style: solid; position: absolute; z-index: 1; max-width: 3rem; content: ""; transform: translateX(-50%);
+}
+.auto-mp02 .auto-images {
+	position: relative;
+}
+.auto-mp02 .auto-images::before {
+	border-color: rgba(0, 0, 0, 0.1) transparent transparent; top: inherit; visibility: visible; position: absolute; z-index: 1; content: "";
+}
+.auto-mp02 .auto-content {
+	padding: 0.93rem; position: relative;
+}
+.auto-mp02 .auto-content::after {
+	clear: both;
+}
+.auto-mp03 .auto-section {
+	padding: 0.3rem 0.5rem; left: 0px; top: 0px; color: rgb(254, 254, 254); line-height: 1; font-size: 0.75rem; position: absolute; z-index: 10;
+}
+.auto-mr01 {
+	border: 1px solid rgba(0, 0, 0, 0.12); border-image: none; height: 50px; padding-right: 1rem; position: relative; background-color: rgb(255, 255, 255);
+}
+.auto-mr01::before {
+	margin: -1px 1rem -1px -1px; padding: 1.06rem 0.9rem 0px; height: 50px; color: rgb(255, 255, 255); line-height: 1; letter-spacing: -0.05em; font-size: 0.9rem; font-weight: 700; float: left; content: "최신뉴스"; background-color: rgb(204, 0, 0);
+}
+.auto-mr01 .auto-container {
+	margin-top: 0.9rem;
+}
+.auto-mr02 {
+	padding: 0.62rem; border: 1px solid rgba(0, 0, 0, 0.1); border-image: none; position: relative; background-color: rgb(248, 248, 249);
+}
+.auto-mr02 .auto-title {
+	padding: 0.5rem 0.62rem; border-radius: 0.2rem; color: rgb(255, 255, 255); line-height: 1; letter-spacing: -0.05em; font-size: 0.8rem; margin-right: 1rem; float: left; position: relative; background-color: rgb(50, 50, 50);
+}
+.auto-mr02 .auto-title::after {
+	border-width: 4px; border-style: solid; border-color: transparent transparent transparent rgb(50, 50, 50); left: 100%; top: 50%; position: absolute; z-index: 1; content: ""; transform: translateY(-50%);
+}
+.auto-mr02 .auto-title .point {
+	color: rgb(255, 233, 46);
+}
+.auto-mr02 .auto-roll {
+	padding-right: 40px; margin-top: 0.15rem;
+}
+.auto-mr02 .auto-roll .slick-slide {
+	padding-right: 0.5rem;
+}
+.auto-mr02 .photo-btn {
+	border: 1px solid rgb(195, 195, 195); border-image: none; top: 5px; width: 15px; height: 15px; text-align: center; color: rgb(91, 93, 108); font-size: 0.6rem; background-color: rgb(255, 255, 255);
+}
+.auto-mr02 .photo-btn.auto-prev {
+	border-radius: 2px 0px 0px 2px; right: 14px;
+}
+.auto-mr02 .photo-btn.auto-next {
+	border-radius: 0px 2px 2px 0px; right: 0px;
+}
+.auto-ha02 .auto-mores {
+	text-align: right; letter-spacing: -0.05em; font-size: 0.75rem; margin-top: 0.5rem;
+}
+.auto-ha04 .auto-column {
+	width: 345px; padding-top: 25px; padding-left: 25px; border-left-color: rgb(231, 231, 231); border-left-width: 1px; border-left-style: solid; float: left;
+}
+.auto-ha04 :first-child.auto-column {
+	padding: 0px 25px 0px 0px; border: currentColor; border-image: none; width: calc(100% - 345px);
+}
+.auto-ha04 :nth-child(2).auto-column {
+	padding-top: 0px;
+}
+.auto-ha04 :nth-child(2n+1).auto-column .auto-fontA {
+	font-weight: 700;
+}
+.auto-ha04-1 .auto-column {
+	width: 220px; padding-top: 25px; padding-left: 25px; border-left-color: rgb(231, 231, 231); border-left-width: 1px; border-left-style: solid; float: left;
+}
+.auto-ha04-1 :first-child.auto-column {
+	padding: 0px 25px 0px 0px; border: currentColor; border-image: none; width: calc(100% - 220px);
+}
+.auto-ha04-1 :nth-child(2).auto-column {
+	padding-top: 0px;
+}
+.auto-ha04-1 :nth-child(2n+1).auto-column .auto-fontA {
+	font-weight: 700;
+}
+.auto-ha04-2 .auto-column {
+	width: 33.33%; padding-top: 25px; padding-left: 25px; border-left-color: rgb(231, 231, 231); border-left-width: 1px; border-left-style: solid; float: left;
+}
+.auto-ha04-2 :first-child.auto-column {
+	padding: 0px 25px 0px 0px; border: currentColor; border-image: none;
+}
+.auto-ha04-2 :nth-child(2).auto-column {
+	padding-top: 0px;
+}
+.auto-ha04-2 :nth-child(3).auto-column {
+	padding-top: 0px;
+}
+.auto-ha04-2 :nth-child(2n+1).auto-column .auto-fontA {
+	font-weight: 700;
+}
+.auto-ha05 {
+	position: relative;
+}
+.auto-ha05 .auto-content {
+	left: 390px; right: 0px; bottom: 0px; position: absolute; z-index: 1;
+}
+.auto-ha05 .auto-content li {
+	width: 48%; float: left; position: relative;
+}
+.auto-ha05 .auto-content li:nth-child(2n) {
+	float: right;
+}
+.auto-ha05 .auto-content li:nth-child(2n+1) {
+	clear: both;
+}
+.auto-ha05 .auto-content .auto-fontF {
+	line-height: 1.4em; overflow: hidden; display: block; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.auto-ha05 .auto-content .auto-fontJ {
+	color: rgba(255, 255, 255, 0.7) !important; display: none;
+}
+.auto-ha05 .auto-content .photo-titbg {
+	transition:0.15s; -moz-transition: all .15s; -webkit-transition: all .15s; -o-transition: all .15s;
+}
+.auto-ha05 .auto-content a:hover .photo-titbg {
+	background: rgba(0, 0, 0, 0.75); top: 0px; padding-top: 0.62rem;
+}
+.auto-ha05 .auto-content a:hover .auto-fontF {
+	white-space: normal; -ms-word-wrap: break-word; -ms-text-overflow: ellipsis; max-height: 2.8em; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+}
+.auto-ha05 .auto-content a:hover .auto-fontJ {
+	display: block;
+}
+.auto-ha06 .auto-content {
+	width: 25%; height: 215px; float: left; position: relative;
+}
+.auto-ha06 :first-child.auto-content {
+	width: 50%; height: 430px; clear: both;
+}
+.auto-ha06 :nth-child(5n+1).auto-content {
+	width: 50%; height: 430px; clear: both;
+}
+.auto-ha06 .auto-content a {
+	padding: 0.93rem; height: 100%; display: block; position: relative;
+}
+.auto-ha06 .auto-content a:hover {
+	background-color: rgb(248, 248, 249);
+}
+.auto-ha06 .auto-content a::before {
+	border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentColor rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) currentColor; border-image: none; left: 0px; top: 0px; right: 0px; bottom: 0px; position: absolute; z-index: 1; content: "";
+}
+.auto-ha06 :first-child.auto-content a::before {
+	border-left-color: rgba(0, 0, 0, 0.1); border-left-width: 1px; border-left-style: solid;
+}
+.auto-ha06 :nth-child(5n+1).auto-content a::before {
+	border-left-color: rgba(0, 0, 0, 0.1); border-left-width: 1px; border-left-style: solid;
+}
+.auto-ha06 :first-child.auto-content a::before {
+	border-top-color: rgba(0, 0, 0, 0.1); border-top-width: 1px; border-top-style: solid;
+}
+.auto-ha06 :nth-child(2).auto-content a::before {
+	border-top-color: rgba(0, 0, 0, 0.1); border-top-width: 1px; border-top-style: solid;
+}
+.auto-ha06 :nth-child(3).auto-content a::before {
+	border-top-color: rgba(0, 0, 0, 0.1); border-top-width: 1px; border-top-style: solid;
+}
+.auto-ha06-1 .auto-content {
+	width: calc(25% - 15px); height: 215px; margin-bottom: 15px; margin-left: 15px; float: left; position: relative;
+}
+.auto-ha06-1 :first-child.auto-content {
+	width: 50%; height: 445px; clear: both; margin-left: 0px;
+}
+.auto-ha06-1 :nth-child(5n+1).auto-content {
+	width: 50%; height: 445px; clear: both; margin-left: 0px;
+}
+.auto-ha06-1 .auto-content a {
+	height: 100%; display: block; position: relative;
+}
+.auto-ha06-1 .auto-content a:hover {
+	background-color: rgb(248, 248, 249);
+}
+.auto-ha06-1 .auto-content a::before {
+	border: 1px solid rgba(0, 0, 0, 0.1); border-image: none; left: 0px; top: 0px; right: 0px; bottom: 0px; position: absolute; z-index: 1; content: "";
+}
+.auto-ha06-1 .auto-content .auto-text {
+	padding: 1rem;
+}
+.auto-ha06-2 .auto-content {
+	width: calc(20% - 15px); margin-top: 1.25rem; margin-left: 15px; float: left;
+}
+.auto-ha06-2 :first-child.auto-content {
+	width: 40%; clear: both; margin-left: 0px;
+}
+.auto-ha06-2 :nth-child(4n+1).auto-content {
+	width: 40%; clear: both; margin-left: 0px;
+}
+.auto-ha06-2 :first-child.auto-content {
+	margin-top: 0px;
+}
+.auto-ha06-2 :nth-child(2).auto-content {
+	margin-top: 0px;
+}
+.auto-ha06-2 :nth-child(3).auto-content {
+	margin-top: 0px;
+}
+.auto-ha06-2 :nth-child(4).auto-content {
+	margin-top: 0px;
+}
+.auto-ha06-3 .auto-content {
+	width: 33.33%; height: 320px; overflow: hidden; float: left; position: relative;
+}
+.auto-ha06-3 :nth-child(3n+1).auto-content {
+	clear: both;
+}
+.auto-ha06-3 .auto-content a {
+	padding: 0.93rem; height: 100%; display: block; position: relative;
+}
+.auto-ha06-3 .auto-content a:hover {
+	background-color: rgb(248, 248, 249);
+}
+.auto-ha06-3 .auto-content a::before {
+	border-width: medium 1px 1px medium; border-style: none solid solid none; border-color: currentColor rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) currentColor; border-image: none; left: 0px; top: 0px; right: 0px; bottom: 0px; position: absolute; z-index: 1; content: "";
+}
+.auto-ha06-3 :first-child.auto-content a::before {
+	border-top-color: rgba(0, 0, 0, 0.1); border-top-width: 1px; border-top-style: solid;
+}
+.auto-ha06-3 :nth-child(2).auto-content a::before {
+	border-top-color: rgba(0, 0, 0, 0.1); border-top-width: 1px; border-top-style: solid;
+}
+.auto-ha06-3 :nth-child(3).auto-content a::before {
+	border-top-color: rgba(0, 0, 0, 0.1); border-top-width: 1px; border-top-style: solid;
+}
+.auto-ha06-3 :nth-child(3n+1).auto-content a::before {
+	border-left-color: rgba(0, 0, 0, 0.1); border-left-width: 1px; border-left-style: solid;
+}
+.auto-ha06-3 .auto-content .auto-images.for-text::after {
+	color: rgba(0, 0, 0, 0.25); font-size: 2rem;
+}
+.auto-hp01 .size-50 {
+	font-size: 4.25rem; margin-top: 2.4rem;
+}
+.auto-hp01 .size-50 .auto-fontA {
+	text-decoration: underline;
+}
+.auto-hp01 .auto-images::after {
+	left: 0px; top: 0px; position: absolute; z-index: 1; content: url(/image/autobox/auto-hp01-bg.png);
+}
+.auto-hp01.black {
+	background: rgb(50, 50, 50);
+}
+.auto-hp01.black .size-50 .auto-fontF {
+	text-decoration: underline;
+}
+.auto-hp01.black .auto-images::after {
+	content: url(/image/autobox/auto-hp01-bg2.png);
+}
+.auto-hp02 .auto-content {
+	width: calc(25% - 1px); text-align: center; margin-bottom: 1px; margin-left: 1px; float: left; position: relative;
+}
+.auto-hp02 :first-child.auto-content {
+	width: 50%; clear: both; margin-left: 0px;
+}
+.auto-hp02 :nth-child(5n+1).auto-content {
+	width: 50%; clear: both; margin-left: 0px;
+}
+.auto-hp02 .photo-titbg {
+	transition:0.15s; -moz-transition: all .15s; -webkit-transition: all .15s; -o-transition: all .15s;
+}
+.auto-hp02 a:hover .photo-titbg {
+	background-color: rgb(230, 51, 109);
+}
+.auto-hp03 .auto-content {
+	width: calc(25% - 1px); text-align: center; margin-bottom: 1px; margin-left: 1px; float: left; position: relative;
+}
+.auto-hp03 :first-child.auto-content {
+	width: 75%; clear: both; margin-left: 0px;
+}
+.auto-hp03 :nth-child(7n+1).auto-content {
+	width: 75%; clear: both; margin-left: 0px;
+}
+.auto-hp03 :nth-child(4).auto-content {
+	width: 25%; clear: both; margin-left: 0px;
+}
+.auto-hp03 .photo-titbg {
+	padding: 0.93rem;
+}
+.auto-hr01 {
+	position: relative;
+}
+.auto-hr01 .auto-nav {
+	right: 0px; bottom: 0px; position: absolute; z-index: 5;
+}
+.auto-hr01 .auto-nav .slick-slide {
+	margin-left: 5px; cursor: pointer;
+}
+.auto-hr01 .auto-nav .slick-slide.slick-current .auto-images.line::before {
+	border-width: 2px; border-color: rgb(204, 0, 0);
+}
+.auto-hr02 {
+	position: relative;
+}
+.auto-hr02 .photo-btn {
+	border: 1px solid rgba(0, 0, 0, 0.15); border-image: none; width: 20px; height: 20px; text-align: center; bottom: 0px; color: rgba(0, 0, 0, 0.6); font-size: 0.8rem; background-color: rgb(255, 255, 255);
+}
+.auto-hr02 .photo-btn.auto-prev {
+	right: 20px; border-right-color: currentColor; border-right-width: medium; border-right-style: none;
+}
+.auto-hr02 .photo-btn.auto-next {
+	right: 0px;
+}
+.auto-hr03 {
+	position: relative;
+}
+.auto-hr03 .slick-dotted.slick-slider {
+	margin-bottom: 0px;
+}
+.auto-hr03 .photo-titbg {
+	min-height: 35px;
+}
+.auto-hr03 .photo-btn {
+	border: 1px solid transparent; top: 50%; width: 35px; height: 35px; transform: translateY(-50%) rotate(45deg); -moz-transform: translateY(-50%) rotate(45deg); -webkit-transform: translateY(-50%) rotate(45deg); -o-transform: translateY(-50%) rotate(45deg);
+}
+.auto-hr03 .photo-btn::before {
+	border: 1px solid transparent; left: 0px; top: 0px; right: 0px; bottom: 0px; position: absolute; z-index: -1; content: "";
+}
+.auto-hr03 .photo-btn.auto-prev {
+	left: 20px; border-bottom-color: rgba(255, 255, 255, 0.25); border-left-color: rgba(255, 255, 255, 0.25);
+}
+.auto-hr03 .photo-btn.auto-next {
+	left: 245px; border-top-color: rgba(255, 255, 255, 0.25); border-right-color: rgba(255, 255, 255, 0.25);
+}
+.auto-hr03 .photo-btn.auto-prev::before {
+	border-bottom-color: rgba(0, 0, 0, 0.7); border-left-color: rgba(0, 0, 0, 0.7);
+}
+.auto-hr03 .photo-btn.auto-next::before {
+	border-top-color: rgba(0, 0, 0, 0.7); border-right-color: rgba(0, 0, 0, 0.7);
+}
+.auto-hr03 .auto-pager {
+	top: 170px; right: calc(100% - 290px); position: absolute; z-index: 1;
+}
+.auto-hr03 .auto-pager li[id*='slick-'] button[data-role] {
+	width: 10px; height: 10px;
+}
+.auto-hr03 .auto-mores {
+	right: 0px; bottom: 0px; font-size: 0.75rem; font-weight: 700; position: absolute; z-index: 2;
+}
+.auto-hr03 .auto-mores .fa {
+	letter-spacing: 0px;
+}
+.auto-hr04 {
+	position: relative; background-color: rgb(51, 51, 51);
+}
+.auto-hr04 .photo-titbg {
+	background: linear-gradient(to right, rgb(0, 0, 0) 65%, transparent); padding: 1.5rem; left: 0px; top: 0px; width: 60%; max-width: 450px; text-shadow: 1px 1px rgba(0,0,0,0.65);
+}
+.auto-hr04 .auto-fontJ {
+	color: rgba(255, 255, 255, 0.75) !important;
+}
+.auto-hr04 .auto-roll {
+	width: calc(100% - 320px); float: left;
+}
+.auto-hr04 .auto-nav {
+	width: 320px; float: left;
+}
+.auto-hr04 .auto-nav::before {
+	padding: 1.5rem 1.25rem 0.93rem; color: rgba(255, 255, 255, 0.6); letter-spacing: -0.08em; font-size: 0.9rem; font-weight: 700; display: block; content: "주요이슈";
+}
+.auto-hr04 .auto-nav .auto-content {
+	padding: 0.93rem 1.25rem; border-top-color: rgba(255, 255, 255, 0.1); border-top-width: 1px; border-top-style: solid; cursor: pointer;
+}
+.auto-hr04 .auto-nav :first-child.auto-content {
+	border-top-color: currentColor; border-top-width: medium; border-top-style: none;
+}
+.auto-hr04 .auto-nav :last-child.auto-content {
+	border-bottom-color: rgba(255, 255, 255, 0.1); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.auto-hr04 .auto-nav .auto-content::after {
+	clear: both; display: table; content: "";
+}
+.auto-hr04 .auto-nav .slick-slide.slick-current {
+	background-color: rgb(230, 51, 109);
+}
+.auto-hr04 .auto-mores {
+	right: 1.25rem; bottom: 2.5rem; color: rgba(255, 255, 255, 0.5); font-size: 0.75rem; position: absolute; z-index: 11;
+}
+.auto-hr04 .auto-mores a {
+	color: rgba(255, 255, 255, 0.5);
+}
+.auto-hr04-1 {
+	position: relative; background-color: rgb(51, 51, 51);
+}
+.auto-hr04-1 .photo-titbg {
+	padding: 0.93rem;
+}
+.auto-hr04-1 .auto-roll {
+	width: calc(100% - 250px); float: left;
+}
+.auto-hr04-1 .auto-nav {
+	width: 250px; float: left;
+}
+.auto-hr04-1 .auto-nav .auto-content {
+	padding: 0.62rem; width: 100%; height: 70px; overflow: hidden; border-top-color: rgba(255, 255, 255, 0.1); border-top-width: 1px; border-top-style: solid; float: left;
+}
+.auto-hr04-1 .auto-nav :first-child.auto-content {
+	border-top-color: currentColor; border-top-width: medium; border-top-style: none;
+}
+.auto-hr04-1 .auto-nav .slick-track {
+	width: 100% !important;
+}
+.auto-hr04-1 .auto-nav .slick-slide {
+	width: 100% !important; cursor: pointer;
+}
+.auto-hr04-1 .auto-nav .slick-slide.slick-current {
+	background-color: rgb(230, 51, 109);
+}
+.auto-hr04-2 {
+	position: relative;
+}
+.auto-hr04-2 .photo-titbg {
+	padding: 0.93rem;
+}
+.auto-hr04-2 .auto-roll {
+	width: calc(100% - 250px); float: left;
+}
+.auto-hr04-2 .auto-nav {
+	width: 250px; float: left;
+}
+.auto-hr04-2 .auto-nav .auto-content {
+	padding: 0px 0px 0px 5px; height: 65px; overflow: hidden; margin-top: 5px; border-top-color: rgba(255, 255, 255, 0.1); border-top-width: 1px; border-top-style: solid;
+}
+.auto-hr04-2 .auto-nav .auto-content::after {
+	clear: both; display: table; content: "";
+}
+.auto-hr04-2 .auto-nav :first-child.auto-content {
+	margin-top: 0px;
+}
+.auto-hr04-2 .auto-nav .slick-track {
+	width: 100% !important;
+}
+.auto-hr04-2 .auto-nav .slick-slide {
+	width: 100% !important; cursor: pointer;
+}
+.auto-hr04-2 .auto-nav .slick-slide.slick-current .auto-fontA {
+	color: rgb(230, 51, 109) !important; font-weight: 700;
+}
+.auto-hr04-3 {
+	position: relative;
+}
+.auto-hr04-3 .photo-titbg {
+	padding: 0.93rem;
+}
+.auto-hr04-3 .auto-roll {
+	width: calc(100% - 103px); float: left;
+}
+.auto-hr04-3 .auto-nav {
+	width: 98px; float: right;
+}
+.auto-hr04-3 .auto-nav .auto-content {
+	margin-top: 5px; border-top-color: rgba(255, 255, 255, 0.1); border-top-width: 1px; border-top-style: solid;
+}
+.auto-hr04-3 .auto-nav .auto-content::after {
+	clear: both; display: table; content: "";
+}
+.auto-hr04-3 .auto-nav :first-child.auto-content {
+	margin-top: 0px;
+}
+.auto-hr04-3 .auto-nav .slick-track {
+	width: 100% !important;
+}
+.auto-hr04-3 .auto-nav .slick-slide {
+	width: 100% !important; cursor: pointer;
+}
+.auto-hr04-3 .auto-nav .slick-slide.slick-current .auto-images::before {
+	border-width: 2px; border-color: rgb(230, 51, 109);
+}
+.auto-hr05 {
+	position: relative;
+}
+.auto-hr05 .photo-titbg {
+	padding-right: 0.93rem; padding-bottom: 0.93rem; padding-left: 0.93rem;
+}
+.auto-hr05 .auto-nav .slick-list {
+	margin: 0px -10px;
+}
+.auto-hr05 .auto-nav .slick-slide {
+	margin: 0px 10px; cursor: pointer;
+}
+.auto-hr05 .auto-nav .slick-slide.slick-current .auto-images.line::before {
+	border-width: 2px; border-color: rgb(204, 0, 0);
+}
+.auto-hr05 .auto-nav .slick-slide.slick-current .auto-fontA {
+	color: rgb(204, 0, 0) !important; font-weight: 700;
+}
+.auto-hr05-1 .auto-content {
+	width: 33.33%; text-align: center; float: left; position: relative;
+}
+.auto-hr05-1 :first-child.auto-content {
+	width: auto; clear: both; float: none;
+}
+.auto-hr05-1 :nth-child(4n+1).auto-content {
+	width: auto; clear: both; float: none;
+}
+.auto-hr05-1 .auto-content .auto-images.line::before {
+	transition:0.15s; -moz-transition: all .15s; -webkit-transition: all .15s; -o-transition: all .15s;
+}
+.auto-hr05-1 .auto-content a:hover .auto-images.line::before {
+	border-width: 3px; border-color: rgb(230, 51, 109); z-index: 15;
+}
+.auto-hr05-1 .photo-titbg {
+	padding: 0.93rem;
+}
+.auto-hr06 {
+	position: relative;
+}
+.auto-hr06 .auto-section {
+	padding: 0.35rem 0.62rem; line-height: 1; font-size: 0.75rem; margin-bottom: 0.2rem; display: inline-block; text-shadow: none;
+}
+.auto-hr06 .photo-titbg {
+	padding: 0.93rem;
+}
+.auto-hr06 .photo-btn {
+	top: 0px; bottom: 0px;
+}
+.auto-hr06 .photo-btn .btn-inner {
+	background: rgb(255, 255, 255); border-radius: 50%; border: 1px solid rgba(0, 0, 0, 0.08); transition:0.35s; border-image: none; width: 64px; height: 64px; padding-top: 0.5rem; font-size: 2.2rem; opacity: 0; box-shadow: 1px 1px 1px rgba(0,0,0,0.08); transform: scale3d(0.7, 0.7, 1); -moz-transition: all .35s; -webkit-transition: all .35s; -o-transition: all .35s;
+}
+.auto-hr06:hover .photo-btn .btn-inner {
+	opacity: 1; transform: scale3d(1, 1, 1);
+}
+.auto-hr06 .photo-btn.auto-prev {
+	left: -32px;
+}
+.auto-hr06 .photo-btn.auto-next {
+	right: -32px;
+}
+.auto-hr06 .slick-slide {
+	cursor: pointer;
+}
+.auto-hr06 .slick-slide .auto-images::before {
+	background: rgba(0, 0, 0, 0.7); transition:0.25s; z-index: 15; -moz-transition: all .25s; -webkit-transition: all .25s; -o-transition: all .25s;
+}
+.auto-hr06 .slick-slide.slick-current .auto-images::before {
+	background: none;
+}
+.auto-hr06 .slick-list {
+	padding: 0px !important;
+}
+.auto-hr06-1 {
+	position: relative;
+}
+.auto-hr06-1::before {
+	padding: 0.5rem 0.93rem; left: 0px; top: 0px; color: rgb(255, 255, 255); position: absolute; z-index: 10; content: "포토갤러리"; background-color: rgba(0, 0, 0, 0.65);
+}
+.auto-hr06-1 .photo-titbg {
+	background: linear-gradient(transparent 70%, rgba(0, 0, 0, 0.75)); top: 0px;
+}
+.auto-hr06-1 .photo-titbg [class*='size-'] {
+	padding: 0.93rem; border: 1px solid rgba(255, 255, 255, 0.8); border-image: none; left: 50%; width: 90%; text-align: center; bottom: 1.25rem; margin-right: auto; margin-left: auto; display: inline-block; position: absolute; z-index: 1; max-width: 350px; transform: translateX(-50%);
+}
+.auto-hr06-1 .photo-btn {
+	top: 0px; bottom: 0px;
+}
+.auto-hr06-1 .photo-btn .btn-inner {
+	width: 40px; height: 60px; color: rgb(255, 255, 255); padding-top: 0.5rem; font-size: 2.2rem; background-color: rgba(0, 0, 0, 0.5);
+}
+.auto-hr06-1 .photo-btn.auto-prev {
+	left: 0px;
+}
+.auto-hr06-1 .photo-btn.auto-next {
+	right: 0px;
+}
+.auto-hr06-1 .slick-slide {
+	cursor: pointer;
+}
+.auto-hr06-1 .slick-slide .auto-images::before {
+	background: rgba(0, 0, 0, 0.7); transition:0.25s; z-index: 15; -moz-transition: all .25s; -webkit-transition: all .25s; -o-transition: all .25s;
+}
+.auto-hr06-1 .slick-slide.slick-current .auto-images::before {
+	background: none;
+}
+.auto-hr06-1 .slick-list {
+	padding: 0px !important;
+}
+.auto-pa01 .auto-container {
+	width: calc(100% - 51px); float: left;
+}
+.auto-pa01 .auto-nav {
+	float: right; max-width: 50px;
+}
+.auto-pa01 .auto-nav .auto-cursor {
+	width: 100% !important; margin-bottom: 1px; display: block !important; cursor: pointer;
+}
+.auto-pa01 .auto-nav .slick-current .auto-images::before {
+	border-width: 2px; border-color: rgb(204, 0, 0);
+}
+.auto-pr01 {
+	position: relative;
+}
+.auto-pr01 .photo-titbg {
+	padding-right: 60px; max-height: 35px;
+}
+.auto-pr01 .photo-btn {
+	width: 25px; height: 35px; text-align: center; bottom: 0px; color: rgba(255, 255, 255, 0.75); font-size: 1rem;
+}
+.auto-pr01 .photo-btn:hover {
+	color: rgb(255, 255, 255);
+}
+.auto-pr01 .photo-btn:focus {
+	color: rgb(255, 255, 255);
+}
+.auto-pr01 .photo-btn:active {
+	color: rgb(255, 255, 255);
+}
+.auto-pr01 .photo-btn.auto-prev {
+	right: 25px;
+}
+.auto-pr01 .photo-btn.auto-next {
+	right: 0px;
+}
+.auto-pr01-1 {
+	position: relative;
+}
+.auto-pr01-1 .photo-titbg {
+	padding-right: 42px; padding-left: 42px; min-height: 35px;
+}
+.auto-pr01-1 .photo-btn {
+	width: 30px; text-align: center; bottom: 2px; font-size: 2rem; min-height: 35px;
+}
+.auto-pr01-1 .photo-btn.auto-prev {
+	left: 0px;
+}
+.auto-pr01-1 .photo-btn.auto-next {
+	right: 0px;
+}
+.auto-pr01-2 {
+	position: relative;
+}
+.auto-pr01-2 .photo-titbg {
+	padding-right: 50px; min-height: 35px;
+}
+.auto-pr01-2 .photo-btn {
+	background: none; border: 1px solid rgba(255, 255, 255, 0.3); border-image: none; width: 15px; height: 16px; text-align: center; bottom: 10px; color: rgb(255, 255, 255); font-size: 0.6rem;
+}
+.auto-pr01-2 .photo-btn.auto-prev {
+	right: 25px; border-right-color: currentColor; border-right-width: medium; border-right-style: none;
+}
+.auto-pr01-2 .photo-btn.auto-next {
+	right: 10px;
+}
+.auto-pr01-3 {
+	position: relative;
+}
+.auto-pr01-3 .photo-titbg {
+	min-height: 35px;
+}
+.auto-pr01-3 .photo-btn {
+	border: 1px solid transparent; top: 50%; width: 35px; height: 35px; transform: translateY(-50%) rotate(45deg); -moz-transform: translateY(-50%) rotate(45deg); -webkit-transform: translateY(-50%) rotate(45deg); -o-transform: translateY(-50%) rotate(45deg);
+}
+.auto-pr01-3 .photo-btn::before {
+	border: 1px solid transparent; left: 0px; top: 0px; right: 0px; bottom: 0px; position: absolute; z-index: -1; content: "";
+}
+.auto-pr01-3 .photo-btn.auto-prev {
+	left: 20px; border-bottom-color: rgba(255, 255, 255, 0.25); border-left-color: rgba(255, 255, 255, 0.25);
+}
+.auto-pr01-3 .photo-btn.auto-next {
+	right: 20px; border-top-color: rgba(255, 255, 255, 0.25); border-right-color: rgba(255, 255, 255, 0.25);
+}
+.auto-pr01-3 .photo-btn.auto-prev::before {
+	border-bottom-color: rgba(0, 0, 0, 0.7); border-left-color: rgba(0, 0, 0, 0.7);
+}
+.auto-pr01-3 .photo-btn.auto-next::before {
+	border-top-color: rgba(0, 0, 0, 0.7); border-right-color: rgba(0, 0, 0, 0.7);
+}
+.auto-pr03 {
+	position: relative;
+}
+.auto-pr03 .photo-btn {
+	border: 1px solid rgb(195, 195, 195); border-image: none; top: -25px; width: 15px; height: 15px; text-align: center; color: rgb(91, 93, 108); font-size: 0.6rem; background-color: rgb(255, 255, 255);
+}
+.auto-pr03 .photo-btn.auto-prev {
+	border-radius: 2px 0px 0px 2px; right: 14px;
+}
+.auto-pr03 .photo-btn.auto-next {
+	border-radius: 0px 2px 2px 0px; right: 0px;
+}
+.auto-pr04 {
+	position: relative;
+}
+.auto-pr04 .auto-content {
+	background: rgb(248, 248, 249); border-width: medium 1px 1px; border-style: none solid solid; border-color: currentColor rgba(0, 0, 0, 0.12) rgba(0, 0, 0, 0.12); padding: 6px 40px 0px; border-image: none; height: 35px;
+}
+.auto-pr04 .photo-btn {
+	border-width: 0px 1px 1px; border-style: none solid solid; border-color: currentColor rgb(221, 221, 221) rgb(221, 221, 221); border-image: none; top: 200px; width: 30px; height: 35px; text-align: center; color: rgb(136, 136, 136); font-size: 1.25rem; background-color: transparent;
+}
+.auto-pr04 .photo-btn.auto-prev {
+	left: 0px;
+}
+.auto-pr04 .photo-btn.auto-next {
+	right: 0px;
+}
+.auto-pr04 .auto-pager {
+	line-height: 1; margin-top: 0.6rem;
+}
+.auto-pr05 {
+	height: 300px; position: relative;
+}
+.auto-pr05 .auto-container {
+	left: 0px; width: 66.66%; height: 66.66%; bottom: 0px; display: block; position: absolute; z-index: 2;
+}
+.auto-pr05 .auto-container .auto-bigsize {
+	height: 100%; position: relative;
+}
+.auto-pr05 .auto-images {
+	height: 100%; position: relative;
+}
+.auto-pr05 .auto-container .auto-bigsize {
+	display: none;
+}
+.auto-pr05 .auto-container .auto-bigsize.on {
+	display: block;
+}
+.auto-pr05 .auto-nav {
+	width: 100%; height: 100%; display: block; position: relative; z-index: 1;
+}
+.auto-pr05 .auto-nav .auto-cursor {
+	width: 33.33%; height: 33.33%; position: absolute; z-index: 1; cursor: pointer;
+}
+.auto-pr05 .auto-nav .auto-cursor.num0 {
+	left: 0px; top: 0px;
+}
+.auto-pr05 .auto-nav .auto-cursor.num1 {
+	left: 33.33%; top: 0px;
+}
+.auto-pr05 .auto-nav .auto-cursor.num2 {
+	top: 0px; right: 0px;
+}
+.auto-pr05 .auto-nav .auto-cursor.num3 {
+	top: 33.33%; right: 0px;
+}
+.auto-pr05 .auto-nav .auto-cursor.num4 {
+	right: 0px; bottom: 0px;
+}
+.auto-pr05 .auto-nav .auto-cursor.num5 {
+	left: 33.33%; bottom: 0px;
+}
+.auto-pr05 .auto-nav .auto-cursor.num6 {
+	left: 0px; bottom: 0px;
+}
+.auto-pr05 .auto-nav .auto-cursor.num7 {
+	left: 0px; top: 33.33%;
+}
+.auto-pr06 .auto-column {
+	padding: 0.3rem 0.93rem 0px;
+}
+.auto-pr06 .auto-column .auto-images {
+	transition:0.35s; -moz-transition: all .35s; -webkit-transition: all .35s; -o-transition: all .35s;
+}
+.auto-pr06 .auto-column:hover .auto-images {
+	box-shadow: 0px 8px 10px 0px rgba(0,19,60,0.12), 0px 4px 4px 0px rgba(0,20,61,0.08), 0px 16px 16px 0px rgba(0,20,61,0.08), 0px 32px 32px 0px rgba(0,20,61,0.08), 0px 0px 0px 1px rgba(0,20,61,0.08); transform: translateY(-5px);
+}
+.auto-pr06 .photo-btn {
+	top: 0px; bottom: 0px;
+}
+.auto-pr06 .photo-btn .btn-inner {
+	background: rgb(255, 255, 255); border-radius: 50%; border: 1px solid rgba(0, 0, 0, 0.08); transition:0.35s; border-image: none; width: 64px; height: 64px; padding-top: 0.5rem; font-size: 2.2rem; opacity: 0; box-shadow: 1px 1px 1px rgba(0,0,0,0.08); transform: scale3d(0.7, 0.7, 1); -moz-transition: all .35s; -webkit-transition: all .35s; -o-transition: all .35s;
+}
+.auto-pr06:hover .photo-btn .btn-inner {
+	opacity: 1; transform: scale3d(1, 1, 1);
+}
+.auto-pr06 .photo-btn.auto-prev {
+	left: -32px;
+}
+.auto-pr06 .photo-btn.auto-next {
+	right: -32px;
+}
+.auto-pr06-1 .auto-column {
+	margin: 0.3rem 0.93rem 0px;
+}
+.auto-pr06-1 .auto-column a .auto-line {
+	border: 1px solid rgb(255, 255, 255); border-image: none; left: 10px; top: 10px; right: 10px; bottom: 10px; text-indent: -5000px; overflow: hidden; display: block; position: absolute; z-index: 99; opacity: 0.5;
+}
+.auto-pr06-1 .auto-column a:hover .auto-line {
+	opacity: 1;
+}
+.auto-pr06-1 .photo-titbg {
+	padding: 0.3rem 0.93rem 0.93rem;
+}
+.auto-pr06-1 .auto-column .auto-images {
+	transition:0.35s; -moz-transition: all .35s; -webkit-transition: all .35s; -o-transition: all .35s;
+}
+.auto-pr06-1 .auto-column:hover .auto-images {
+	box-shadow: 0px 8px 10px 0px rgba(0,19,60,0.12), 0px 4px 4px 0px rgba(0,20,61,0.08), 0px 16px 16px 0px rgba(0,20,61,0.08), 0px 32px 32px 0px rgba(0,20,61,0.08), 0px 0px 0px 1px rgba(0,20,61,0.08); transform: translateY(-5px);
+}
+.auto-pr06-1 .photo-btn {
+	top: 0px; bottom: 0px;
+}
+.auto-pr06-1 .photo-btn .btn-inner {
+	background: rgb(255, 255, 255); border-radius: 50%; border: 1px solid rgba(0, 0, 0, 0.08); transition:0.35s; border-image: none; width: 64px; height: 64px; padding-top: 0.5rem; font-size: 2.2rem; opacity: 0; box-shadow: 1px 1px 1px rgba(0,0,0,0.08); transform: scale3d(0.7, 0.7, 1); -moz-transition: all .35s; -webkit-transition: all .35s; -o-transition: all .35s;
+}
+.auto-pr06-1:hover .photo-btn .btn-inner {
+	opacity: 1; transform: scale3d(1, 1, 1);
+}
+.auto-pr06-1 .photo-btn.auto-prev {
+	left: -32px;
+}
+.auto-pr06-1 .photo-btn.auto-next {
+	right: -32px;
+}
+.auto-pr07 {
+	position: relative;
+}
+.auto-pr07 .auto-column {
+	padding-right: 0.5rem; padding-left: 0.5rem;
+}
+.auto-pr07 .auto-section {
+	padding: 0.35rem 0.62rem; line-height: 1; font-size: 0.75rem; margin-bottom: 0.2rem; display: inline-block; text-shadow: none;
+}
+.auto-pr07 .photo-titbg {
+	padding: 0.93rem;
+}
+.auto-pr07 .photo-btn {
+	top: 0px; bottom: 0px;
+}
+.auto-pr07 .photo-btn .btn-inner {
+	background: rgb(255, 255, 255); border-radius: 50%; border: 1px solid rgba(0, 0, 0, 0.08); transition:0.35s; border-image: none; width: 64px; height: 64px; padding-top: 0.5rem; font-size: 2.2rem; opacity: 0; box-shadow: 1px 1px 1px rgba(0,0,0,0.08); transform: scale3d(0.7, 0.7, 1); -moz-transition: all .35s; -webkit-transition: all .35s; -o-transition: all .35s;
+}
+.auto-pr07:hover .photo-btn .btn-inner {
+	opacity: 1; transform: scale3d(1, 1, 1);
+}
+.auto-pr07 .photo-btn.auto-prev {
+	left: -32px;
+}
+.auto-pr07 .photo-btn.auto-next {
+	right: -32px;
+}
+.auto-pr07 .slick-slide {
+	cursor: pointer;
+}
+.auto-pr07 .slick-slide .auto-images::before {
+	background: rgba(0, 0, 0, 0.7); transition:0.25s; z-index: 15; -moz-transition: all .25s; -webkit-transition: all .25s; -o-transition: all .25s;
+}
+.auto-pr07 .slick-slide.slick-current .auto-images::before {
+	background: none;
+}
+.auto-pr07 .slick-list {
+	padding: 0px !important;
+}
+.auto-va02 .auto-columns {
+	padding: 1rem; width: 25%; border-right-color: rgba(0, 0, 0, 0.12); border-bottom-color: rgba(0, 0, 0, 0.12); border-right-width: 1px; border-bottom-width: 1px; border-right-style: solid; border-bottom-style: solid; float: left; background-color: rgb(255, 255, 255);
+}
+.auto-va02 :first-child.auto-columns {
+	clear: both; border-left-color: rgba(0, 0, 0, 0.12); border-left-width: 1px; border-left-style: solid;
+}
+.auto-va02 :nth-child(4n+1).auto-columns {
+	clear: both; border-left-color: rgba(0, 0, 0, 0.12); border-left-width: 1px; border-left-style: solid;
+}
+.auto-va02 :first-child.auto-columns {
+	border-top-color: rgba(0, 0, 0, 0.12); border-top-width: 1px; border-top-style: solid;
+}
+.auto-va02 :nth-child(2).auto-columns {
+	border-top-color: rgba(0, 0, 0, 0.12); border-top-width: 1px; border-top-style: solid;
+}
+.auto-va02 :nth-child(3).auto-columns {
+	border-top-color: rgba(0, 0, 0, 0.12); border-top-width: 1px; border-top-style: solid;
+}
+.auto-va02 :nth-child(4).auto-columns {
+	border-top-color: rgba(0, 0, 0, 0.12); border-top-width: 1px; border-top-style: solid;
+}
+.auto-va02 .auto-columns a {
+	text-decoration: none; display: block;
+}
+.auto-va02 .auto-columns .auto-images {
+	height: 0px; overflow: hidden; padding-bottom: 56.25%; position: relative;
+}
+.auto-va02 .auto-columns .auto-images img {
+	transition:transform 0.2s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.2s cubic-bezier(0.165, 0.84, 0.44, 1); left: 0px; top: 0px; width: 100%; height: 100%; position: absolute;
+}
+.auto-va02 .auto-columns a:hover .auto-images img {
+	transform: scale3d(1.025, 1.025, 1.025);
+}
+.auto-va02 .auto-columns .auto-icons {
+	left: 1rem; bottom: 0.65rem; color: rgb(254, 254, 254); font-size: 1.5rem; position: absolute; z-index: 2; text-shadow: 2px 3px 2px rgba(0,0,0,0.65);
+}
+.auto-va02 .auto-columns .auto-times {
+	padding: 0.25rem 0.5rem; right: 0px; bottom: 0px; color: rgb(254, 254, 254); line-height: 1; font-size: 0.7rem; font-weight: 300; position: absolute; z-index: 3; background-color: rgba(0, 0, 0, 0.45);
+}
+.auto-va02 .auto-columns .auto-content {
+	padding-right: 1rem; padding-left: 1rem; margin-top: 0.75rem;
+}
+.auto-va02 .auto-columns .auto-content [class*='size-'] {
+	font-weight: 500;
+}
+.auto-va02 .auto-columns .auto-content [class*='size-'].line-height-3-2x {
+	height: 2.8em;
+}
+.auto-va02 .auto-columns .auto-content .auto-date {
+	margin: 0.75rem 0px 0px; color: rgba(0, 0, 0, 0.5); font-size: 0.8rem; font-weight: 300;
+}
+@media screen and (max-width:63.93em)
+{
+.row .auto-va02 .auto-columns {
+	width: 33.33%;
+}
+.row .auto-va02 :nth-child(4n+1).auto-columns {
+	clear: none; border-left-color: currentColor; border-left-width: medium; border-left-style: none;
+}
+.row .auto-va02 :nth-child(3n+1).auto-columns {
+	clear: both; border-left-color: rgba(0, 0, 0, 0.12); border-left-width: 1px; border-left-style: solid;
+}
+.row .auto-va02 :nth-child(4).auto-columns {
+	border-top-color: currentColor; border-top-width: medium; border-top-style: none;
+}
+.row .auto-va02 .auto-columns .auto-content [class*='size-'] {
+	font-weight: 700;
+}
+}
+@media screen and (max-width:39.93em)
+{
+.row .auto-va02 {
+	width: auto; margin-right: -1.25rem; margin-left: -1.25rem; -ms-overflow-x: auto;
+}
+.row .auto-va02 .auto-va02-wrapper {
+	padding-right: 1.25rem; padding-left: 1.25rem;
+}
+.row .auto-va02 .auto-columns {
+	padding: 0px 1px 0px 0px; border: currentColor; border-image: none; width: 240px;
+}
+.row .auto-va02 :first-child.auto-columns {
+	border: currentColor; border-image: none; clear: none;
+}
+.row .auto-va02 :nth-child(n).auto-columns {
+	border: currentColor; border-image: none; clear: none;
+}
+.row .auto-va02 .auto-columns a:hover img {
+	transform: none;
+}
+.row .auto-va02 .auto-columns .auto-content [class*='size-'] {
+	font-size: 1.06rem;
+}
+}
+.auto-va03 .auto-columns {
+	padding: 1rem; width: 33.33%; border-right-color: rgba(0, 0, 0, 0.12); border-bottom-color: rgba(0, 0, 0, 0.12); border-right-width: 1px; border-bottom-width: 1px; border-right-style: solid; border-bottom-style: solid; float: left; min-height: 1px; background-color: rgb(255, 255, 255);
+}
+.auto-va03 :first-child.auto-columns {
+	clear: both; border-left-color: rgba(0, 0, 0, 0.12); border-left-width: 1px; border-left-style: solid;
+}
+.auto-va03 :nth-child(3n+1).auto-columns {
+	clear: both; border-left-color: rgba(0, 0, 0, 0.12); border-left-width: 1px; border-left-style: solid;
+}
+.auto-va03 :first-child.auto-columns {
+	border-top-color: rgba(0, 0, 0, 0.12); border-top-width: 1px; border-top-style: solid;
+}
+.auto-va03 :nth-child(2).auto-columns {
+	border-top-color: rgba(0, 0, 0, 0.12); border-top-width: 1px; border-top-style: solid;
+}
+.auto-va03 :nth-child(3).auto-columns {
+	border-top-color: rgba(0, 0, 0, 0.12); border-top-width: 1px; border-top-style: solid;
+}
+.auto-va03 .auto-columns a {
+	text-decoration: none; display: block;
+}
+.auto-va03 .auto-columns .auto-images {
+	height: 0px; overflow: hidden; padding-bottom: 56.25%; position: relative;
+}
+.auto-va03 .auto-columns .auto-images img {
+	transition:transform 0.2s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.2s cubic-bezier(0.165, 0.84, 0.44, 1); left: 0px; top: 0px; width: 100%; height: 100%; position: absolute;
+}
+.auto-va03 .auto-columns a:hover .auto-images img {
+	transform: scale3d(1.025, 1.025, 1.025);
+}
+.auto-va03 .auto-columns .auto-icons {
+	left: 1rem; bottom: 0.65rem; color: rgb(254, 254, 254); font-size: 1.5rem; position: absolute; z-index: 2; text-shadow: 2px 3px 2px rgba(0,0,0,0.65);
+}
+.auto-va03 .auto-columns .auto-times {
+	padding: 0.25rem 0.5rem; right: 0px; bottom: 0px; color: rgb(254, 254, 254); line-height: 1; font-size: 0.7rem; font-weight: 300; position: absolute; z-index: 3; background-color: rgba(0, 0, 0, 0.45);
+}
+.auto-va03 .auto-columns .auto-content {
+	padding-right: 1rem; padding-left: 1rem; margin-top: 0.75rem;
+}
+.auto-va03 .auto-columns .auto-content [class*='size-'] {
+	font-weight: 500;
+}
+.auto-va03 .auto-columns .auto-content [class*='size-'].line-height-3-2x {
+	height: 2.8em;
+}
+.auto-va03 .auto-columns .auto-content .auto-date {
+	margin: 0.75rem 0px 0px; color: rgba(0, 0, 0, 0.5); font-size: 0.8rem; font-weight: 300;
+}
+@media screen and (max-width:63.93em)
+{
+.row .auto-va03 .auto-columns .auto-content [class*='size-'] {
+	font-weight: 700;
+}
+}
+@media screen and (max-width:39.93em)
+{
+.row .auto-va03 .auto-columns {
+	padding: 0px; border: currentColor; border-image: none; width: 48%;
+}
+.row .auto-va03 :nth-child(2n).auto-columns {
+	float: right;
+}
+.row .auto-va03 :nth-child(2n+1).auto-columns {
+	clear: both;
+}
+.row .auto-va03 :nth-child(3n+1).auto-columns {
+	clear: none;
+}
+.row .auto-va03 .auto-columns a:hover img {
+	transform: none;
+}
+.row .auto-va03 .auto-columns .auto-content [class*='size-'] {
+	font-size: 1.06rem;
+}
+.row .auto-va03 .auto-columns .auto-content [class*='size-'].line-height-3-2x {
+	height: auto; max-height: 2.8em;
+}
+}
+.auto-vl01 .auto-columns {
+	width: 50%; padding-right: 1.25rem; margin-bottom: 1.25rem; float: left; min-height: 1px;
+}
+.auto-vl01 :nth-child(2n).auto-columns {
+	padding-left: 1.25rem;
+}
+.auto-vl01 :nth-child(2n+1).auto-columns {
+	clear: both;
+}
+.auto-vl01 .auto-columns .auto-icons {
+	left: 0.5rem; bottom: 0.25rem; color: rgb(254, 254, 254); font-size: 1rem; position: absolute; z-index: 2; text-shadow: 2px 3px 2px rgba(0,0,0,0.65);
+}
+.auto-vl01 .auto-columns [class*='size-'] {
+	font-weight: 500;
+}
+.auto-vl01 .auto-columns .auto-date {
+	color: rgba(0, 0, 0, 0.5); font-size: 0.8rem; font-weight: 300; margin-top: 0.75rem;
+}
+@media screen and (max-width:63.93em)
+{
+.row .auto-vl01 .auto-columns [class*='size-'] {
+	font-weight: 700;
+}
+}
+@media screen and (max-width:39.93em)
+{
+.row .auto-vl01 .auto-columns {
+	padding: 0px; width: auto; margin-right: auto; margin-left: auto; float: none;
+}
+.row .auto-vl01 .auto-columns::after {
+	clear: both; display: table; content: "";
+}
+.row .auto-vl01 :nth-child(2n).auto-columns {
+	padding-left: 0px;
+}
+.row .auto-vl01 :nth-child(2n+1).auto-columns {
+	clear: none;
+}
+}
+.auto-vr01 .auto-column {
+	padding: 0.3rem 0.93rem 0px;
+}
+.auto-vr01 .auto-column .auto-images {
+	transition:0.35s; -moz-transition: all .35s; -webkit-transition: all .35s; -o-transition: all .35s;
+}
+.auto-vr01 .auto-column:hover .auto-images {
+	box-shadow: 0px 8px 10px 0px rgba(0,19,60,0.12), 0px 4px 4px 0px rgba(0,20,61,0.08), 0px 16px 16px 0px rgba(0,20,61,0.08), 0px 32px 32px 0px rgba(0,20,61,0.08), 0px 0px 0px 1px rgba(0,20,61,0.08); transform: translateY(-5px);
+}
+.auto-vr01 .photo-btn {
+	top: 0px; bottom: 0px;
+}
+.auto-vr01 .photo-btn .btn-inner {
+	background: rgb(255, 255, 255); border-radius: 50%; border: 1px solid rgba(0, 0, 0, 0.08); transition:0.35s; border-image: none; width: 64px; height: 64px; padding-top: 0.5rem; font-size: 2.2rem; opacity: 0; box-shadow: 1px 1px 1px rgba(0,0,0,0.08); transform: scale3d(0.7, 0.7, 1); -moz-transition: all .35s; -webkit-transition: all .35s; -o-transition: all .35s;
+}
+.auto-vr01:hover .photo-btn .btn-inner {
+	opacity: 1; transform: scale3d(1, 1, 1);
+}
+.auto-vr01 .photo-btn.auto-prev {
+	left: -32px;
+}
+.auto-vr01 .photo-btn.auto-next {
+	right: -32px;
+}
+.auto-vr02 {
+	overflow: hidden; position: relative;
+}
+.auto-vr02 .auto-column {
+	overflow: hidden; position: relative;
+}
+.auto-vr02 .auto-column a {
+	display: block;
+}
+.auto-vr02 .auto-column a::before {
+	background: rgba(0, 0, 0, 0.55); left: 0px; top: 0px; right: 0px; bottom: 0px; position: absolute; z-index: 5; content: "";
+}
+.auto-vr02 .auto-column .auto-images {
+	width: 640px; height: 360px;
+}
+.auto-vr02 .auto-column .auto-images img {
+	transition:transform 0.2s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.auto-vr02 .auto-column a:hover .auto-images img {
+	transform: scale3d(1.025, 1.025, 1.025);
+}
+.auto-vr02 .auto-column.slick-current a::before {
+	visibility: hidden;
+}
+.auto-vr02 .auto-column .photo-titbg {
+	letter-spacing: -0.07em; font-weight: 500; display: none;
+}
+.auto-vr02 .auto-column.slick-current .photo-titbg {
+	display: block;
+}
+.auto-vr02 .photo-btn {
+	top: 50%; width: 80px; height: 140px; color: rgb(255, 255, 255); font-size: 5rem; margin-top: -30px; position: absolute; z-index: 10; cursor: pointer; transform: translateY(-50%); background-color: rgba(0, 0, 0, 0.2);
+}
+.auto-vr02 .photo-btn:hover {
+	background-color: rgba(0, 0, 0, 0.65);
+}
+.auto-vr02 .photo-btn.auto-prev {
+	border-radius: 0px 100px 100px 0px; left: -15px;
+}
+.auto-vr02 .photo-btn.auto-next {
+	border-radius: 100px 0px 0px 100px; right: -15px;
+}
+.auto-vr02 .vr-pager {
+	list-style: none; text-align: center; margin-top: 2rem;
+}
+.auto-vr02 .vr-pager li {
+	display: inline-block;
+}
+.auto-vr02 .vr-pager li button {
+	margin: 0px 0.5rem; padding: 0.5rem 0px; color: rgba(255, 255, 255, 0.4); line-height: 1; font-size: 0.8rem; font-weight: 300; position: relative; cursor: pointer;
+}
+.auto-vr02 .vr-pager li button::before {
+	content: "0";
+}
+.auto-vr02 .vr-pager li button::after {
+	left: 0px; top: 0px; right: 0px; border-top-color: rgba(255, 255, 255, 0.4); border-top-width: 1px; border-top-style: solid; position: absolute; z-index: 1; content: "";
+}
+.auto-vr02 .vr-pager li.slick-active button {
+	color: rgb(231, 76, 60); font-weight: 500;
+}
+.auto-vr02 .vr-pager li.slick-active button::after {
+	border-top-color: rgb(231, 76, 60); border-top-width: 2px;
+}
+@media screen and (max-width:63.93em)
+{
+.row .auto-vr02 .auto-column .photo-titbg {
+	font-weight: 700;
+}
+}
+@media screen and (max-width:39.93em)
+{
+.row .auto-vr02 .auto-column .auto-images {
+	width: auto; height: 0px; overflow: hidden; padding-bottom: 56.25%;
+}
+.row .auto-vr02 .auto-column .auto-images img {
+	left: 0px; top: 0px; width: 100%; height: 100%; position: absolute;
+}
+.row .auto-vr02 .photo-btn {
+	width: 65px; height: 100px; font-size: 3.5rem;
+}
+.row .auto-vr02 .auto-column .photo-titbg {
+	padding-right: 1.25rem; padding-left: 1.25rem;
+}
+.row .auto-vr02 .auto-column .photo-titbg [class*='size-'] {
+	font-size: 1.5rem;
+}
+}
+.m-auto-i06 .auto-add-more {
+	color: rgba(0, 0, 0, 0.45); letter-spacing: -0.05em; margin-top: 0.35rem; cursor: pointer;
+}
+.m-auto-i06 .auto-add-more .fa {
+	color: rgb(235, 53, 113);
+}
+.m-auto-n01 .auto-num {
+	width: 18px; text-align: center; color: rgb(255, 255, 255); line-height: 1.6em; letter-spacing: -0.05rem;
+}
+.m-auto-n01 .auto-num.default-bg {
+	background-color: rgba(0, 0, 0, 0.3);
+}
+.m-auto-n02 {
+	padding: 8px; background-color: rgb(236, 240, 241);
+}
+.m-auto-n02::after {
+	clear: both; display: table; content: "";
+}
+.m-auto-n02 .auto-btns {
+	padding: 5px 25px 5px 10px; border-radius: 0.25rem; color: rgb(255, 255, 255); line-height: 1.3em; letter-spacing: -0.05rem; position: relative; z-index: 5; cursor: pointer; background-color: rgb(231, 49, 110);
+}
+.m-auto-n02 .auto-btns::after {
+	border-width: 3px; border-style: solid; border-color: rgb(255, 255, 255) transparent transparent; top: 50%; right: 10px; position: absolute; z-index: 1; content: ""; transform: translateY(-50%);
+}
+.m-auto-p02 {
+	position: relative;
+}
+.m-auto-p02 .photo-titbg {
+	padding-bottom: 1.8rem;
+}
+.m-auto-p02 .auto-pager {
+	left: 0px; right: 0px; bottom: 0.25rem; position: absolute; z-index: 12;
+}
+.m-auto-p04 {
+	position: relative;
+}
+.m-auto-p04 .auto-pager {
+	padding-top: 0.5rem; padding-bottom: 0.5rem; max-height: 36px; background-color: rgb(238, 238, 238);
+}
+.m-auto-p04 .photo-btn {
+	width: 36px; height: 36px; bottom: 0px; font-size: 1.2rem;
+}
+.m-auto-p04 .photo-btn.auto-prev {
+	left: 0px; border-right-color: rgba(0, 0, 0, 0.1); border-right-width: 1px; border-right-style: solid;
+}
+.m-auto-p04 .photo-btn.auto-next {
+	right: 0px; border-left-color: rgba(0, 0, 0, 0.1); border-left-width: 1px; border-left-style: solid;
+}
+.m-auto-p06 .auto-pager {
+	margin-top: 10px;
+}

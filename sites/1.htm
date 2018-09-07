@@ -1,0 +1,765 @@
+﻿<!DOCTYPE HTML>
+<!-- saved from url=(0036)https://cpuu.postype.com/post/132269 -->
+<!DOCTYPE html PUBLIC "" ""><HTML class="windows-10 windows ie ie11 non-mobile" 
+lang="ko"><HEAD><META content="IE=11.0000" http-equiv="X-UA-Compatible">
+     
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">     
+<META name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"> 
+            <TITLE>알파고 개발자 Demis Hassabis의 KAIST 초청 특강 후기 #4</TITLE>
+<META content="article" property="og:type">
+<META content="알파고 개발자 Demis Hassabis의 KAIST 초청 특강 후기 #4" property="og:title">
+<META content="https://cpuu.postype.com/post/132269" property="og:url">
+<META content="CPUU의 Daydreamin'" property="og:site_name">
+<META content="https://d6g88wqnr7bn6.cloudfront.net/2016/04/08/14/27/1bdfb6a02c638cf3600c2ba75bb919cd.gif?w=600&amp;h=300&amp;q=0" 
+property="og:image">
+<META content="(드디어 본격적인 알파고 이야기가 나옵니다. 편의상 이 글은 데미스 하사비스의 1인칭 시점으로 작성하겠습니다.) 자 ! 이제 요즘 뉴스를 통해 많이 알려진 알파고에 대해 이야기를 해봐야 할 것 같네요.딥마인드가 알파고를 만들기 시작한 이유는, 장기적으로딥러닝과 강화학습을 합친 기술을 만드는 것을 목적으로 하기 때문이고, 이런 측면에서 바둑이야말로 최적의 검..." 
+property="og:description">
+<META name="twitter:card" content="summary_large_image">
+<META name="twitter:title" content="알파고 개발자 Demis Hassabis의 KAIST 초청 특강 후기 #4">
+<META name="twitter:description" content="(드디어 본격적인 알파고 이야기가 나옵니다. 편의상 이 글은 데미스 하사비스의 1인칭 시점으로 작성하겠습니다.) 자 ! 이제 요즘 뉴스를 통해 많이 알려진 알파고에 대해 이야기를 해봐야 할 것 같네요.딥마인드가 알파고를 만들기 시작한 이유는, 장기적으로딥러닝과 강화학습을 합친 기술을 만드는 것을 목적으로 하기 때문이고, 이런 측면에서 바둑이야말로 최적의 검...">
+<META content="https://d6g88wqnr7bn6.cloudfront.net/2016/04/08/14/27/1bdfb6a02c638cf3600c2ba75bb919cd.gif?w=600&amp;h=300&amp;q=0" 
+property="twitter:image">        <LINK href="https://d33pksfia2a94m.cloudfront.net/assets/img/avatar/blog_blank_c.png" 
+rel="icon" sizes="64x64">     <LINK href="https://d33pksfia2a94m.cloudfront.net/assets/img/avatar/blog_blank_c.png" 
+rel="apple-touch-icon" sizes="128x128">     <LINK href="1_files/common.11452.css" 
+rel="stylesheet" type="text/css">     <LINK href="1_files/style.11452.css" rel="stylesheet" 
+type="text/css">             
+<META name="GENERATOR" content="MSHTML 11.00.10570.1001"></HEAD> 
+<BODY class="blog blog-post" data-read-stats="0" data-version="11452" 
+data-user-id="" data-postype-url="https://www.postype.com" data-post-id="132269" 
+data-blog-id="11701" data-blog-url="https://cpuu.postype.com"><A class="sr-only" 
+id="top" href="https://cpuu.postype.com/post/132269#main">주요 내용으로 건너뛰기</A> 
+<DIV class="masthead slide-left"></DIV><HEADER class="header fixed-top slide-left" 
+id="header" role="banner">
+<DIV class="primary-nav">
+<DIV class="navbar container">
+<DIV class="header-title logo d-flex align-items-center">
+<H1 class="blog-title"><A href="https://cpuu.postype.com/">CPUU의 Daydreamin'</A> 
+                </H1><A title="카테고리" class="btn btn-icon categories-toggle order-first" 
+id="categories-toggle" aria-label="카테고리" href="https://cpuu.postype.com/post/132269#"><SPAN><I 
+class="ic-menu"></I></SPAN>                 </A>             </DIV>
+<DIV class="btn-toolbar">
+<DIV class="btn-toolbar"><BUTTON title="검색" class="btn btn-icon" id="search-toggle" 
+aria-label="검색창 보이기" type="button"><I class="fal fa-search fa-lg"></I>           
+          </BUTTON>                     
+<FORM class="search d-flex align-items-center d-lg-block" id="search" role="search" 
+aria-labelledby="search-toggler" action="/search">
+<DIV class="search-form-group d-flex align-items-center media-body"><INPUT name="keyword" class="form-control search-input" id="search-input" type="search" placeholder="검색" value="" data-action="grow"><BUTTON 
+class="btn btn-icon btn-search order-first" aria-label="검색"><I class="fal fa-search"></I> 
+                            </BUTTON>                         </DIV><BUTTON 
+title="닫기" class="btn btn-icon search-close" id="search-close" aria-label="검색창 감추기" 
+type="button"><I class="fal fa-times fa-lg"></I>                         
+</BUTTON>                     </FORM></DIV><A title="메뉴" class="user-menu-toggle btn btn-icon" 
+id="user-menu-toggle" aria-label="메뉴" href="https://cpuu.postype.com/post/132269#"><I 
+class="fal fa-user fa-lg"></I>                                                   
+      </A>             </DIV></DIV></DIV>
+<DIV class="secondary-nav">
+<DIV class="navbar container">
+<DIV class="header-title d-flex align-items-center">
+<H1 class="post-title"><SPAN>알파고 개발자 Demis Hassabis의 KAIST 초청 특강 후기 #4</SPAN>    
+                     <SMALL class="d-none d-md-inline">알파고의 거의 모든 것</SMALL>      
+              </H1><A title="목록으로 돌아가기" class="btn btn-icon btn-back order-first" 
+aria-label="목록으로 돌아가기" href="https://cpuu.postype.com/"><I class="far fa-chevron-left"></I> 
+                    </A>                 </DIV>
+<DIV class="btn-toolbar"><BUTTON title="공유" class="btn btn-icon btn-share" type="button"><I 
+class="fal fa-share-alt fa-lg"></I>                     </BUTTON>                
+                             <A title="읽기 목록에 추가" class="btn btn-icon btn-scrap" 
+aria-label="읽기 목록에 추가" href="https://cpuu.postype.com/post/132269#" 
+data-post-id="132269"><I class="fal fa-bookmark fa-lg default-text"></I><I 
+class="fas fa-bookmark fa-lg active-text"></I>                         </A>      
+                                   
+<DIV class="dropdown"><A title="더 보기" class="btn btn-icon" id="post-options" 
+aria-expanded="false" aria-label="더 보기" href="https://cpuu.postype.com/post/132269#" 
+data-toggle="dropdown"><I class="far fa-ellipsis-h"></I>                         
+</A>                         
+<DIV class="dropdown-menu dropdown-menu-right" aria-labelledby="post-options">
+<FORM class="font-size-setting dropdown-item bg-white"><LABEL class="sr-only" 
+for="font-size-setting">글자 크기</LABEL>                                 
+<DIV class="btn-toolbar justify-content-between w-100"><BUTTON class="btn btn-icon btn-sm btn-secondary btn-minify" 
+id="btn-smaller-font" type="button"><I class="fal fa-minus fa-lg"></I>           
+                          </BUTTON>                                     <SPAN 
+class="font-icon">가</SPAN>                                     <BUTTON class="btn btn-icon btn-sm btn-secondary btn-enlarge" 
+id="btn-bigger-font" type="button"><I class="fal fa-plus fa-lg"></I>             
+                        </BUTTON>                                 </DIV></FORM>
+<DIV class="dropdown-divider"></DIV>
+<FORM class="background-setting dropdown-item bg-white"><LABEL class="sr-only" 
+for="background-setting">배경</LABEL>                                 
+<DIV class="btn-toolbar justify-content-between w-100"><BUTTON class="btn btn-icon btn-sm btn-secondary btn-bg-white active" 
+id="background-white" type="button"><SPAN class="sr-only">흰색</SPAN>              
+                       </BUTTON>                                     <BUTTON 
+class="btn btn-icon btn-sm btn-secondary btn-bg-black" id="background-black" 
+type="button"><SPAN class="sr-only">검은색</SPAN>                                   
+  </BUTTON>                                 </DIV></FORM>
+<DIV class="dropdown-divider"></DIV><A class="dropdown-item" href="https://cpuu.postype.com/post/132269#" 
+data-post-id="132269" data-toggle="modal" data-target="#report-modal"><SPAN 
+class="order-2">신고하기</SPAN>                                     <I class="fal fa-flag"></I> 
+                                </A>                                             
+                                    </DIV></DIV></DIV></DIV></DIV></HEADER>
+<DIV class="slide-left"><NAV class="categories" role="navigation">
+<DIV class="navbar">
+<DIV class="d-flex align-items-center">
+<H3>카테고리</H3><A title="카테고리" class="btn btn-icon categories-close order-first" 
+id="categories-close" aria-label="카테고리" href="https://cpuu.postype.com/post/132269#"><I 
+class="fal fa-times"></I>                 </A>             </DIV></DIV>
+<UL>
+  <LI><A class="d-flex align-items-center justify-content-between" href="https://cpuu.postype.com/"><SPAN 
+  class="media-body text-truncate">전체글</SPAN>                     <SMALL class="count">175</SMALL> 
+                  </A>             </LI>
+  <LI><A class="d-flex align-items-center justify-content-between" href="https://cpuu.postype.com/category/it-보안-소식"><SPAN 
+  class="media-body text-truncate">IT/보안 소식</SPAN>                         
+  <SMALL class="count">17</SMALL>                     </A>                 </LI>
+  <LI><A class="d-flex align-items-center justify-content-between" href="https://cpuu.postype.com/category/보안기술토픽스터디"><SPAN 
+  class="media-body text-truncate">보안기술토픽스터디</SPAN>                         
+  <SMALL class="count">1</SMALL>                     </A>                 </LI>
+  <LI><A class="d-flex align-items-center justify-content-between" href="https://cpuu.postype.com/category/sw취약점분석"><SPAN 
+  class="media-body text-truncate">SW취약점분석</SPAN>                         <SMALL 
+  class="count">24</SMALL>                     </A>                 </LI>
+  <LI><A class="d-flex align-items-center justify-content-between" href="https://cpuu.postype.com/category/서버-db운영"><SPAN 
+  class="media-body text-truncate">서버/DB운영</SPAN>                         <SMALL 
+  class="count">18</SMALL>                     </A>                 </LI>
+  <LI><A class="d-flex align-items-center justify-content-between" href="https://cpuu.postype.com/category/네트워크-보안"><SPAN 
+  class="media-body text-truncate">네트워크/보안</SPAN>                         <SMALL 
+  class="count">20</SMALL>                     </A>                 </LI>
+  <LI><A class="d-flex align-items-center justify-content-between" href="https://cpuu.postype.com/category/디지털포렌식"><SPAN 
+  class="media-body text-truncate">디지털포렌식</SPAN>                         <SMALL 
+  class="count">54</SMALL>                     </A>                 </LI>
+  <LI><A class="d-flex align-items-center justify-content-between" href="https://cpuu.postype.com/category/암호학개론"><SPAN 
+  class="media-body text-truncate">암호학개론</SPAN>                         <SMALL 
+  class="count">8</SMALL>                     </A>                 </LI>
+  <LI><A class="d-flex align-items-center justify-content-between active" href="https://cpuu.postype.com/category/머신-러닝"><SPAN 
+  class="media-body text-truncate">머신 러닝</SPAN>                         <SMALL 
+  class="count">11</SMALL>                     </A>                 </LI>
+  <LI><A class="d-flex align-items-center justify-content-between" href="https://cpuu.postype.com/category/webos"><SPAN 
+  class="media-body text-truncate">webOS</SPAN>                         <SMALL 
+  class="count">7</SMALL>                     </A>                 </LI>
+  <LI><A class="d-flex align-items-center justify-content-between" href="https://cpuu.postype.com/category/파이썬"><SPAN 
+  class="media-body text-truncate">파이썬</SPAN>                         <SMALL 
+  class="count">13</SMALL>                     </A>                 
+</LI></UL></NAV></DIV>
+<DIV class="post-bottom-nav fixed-bottom slide-left">
+<DIV class="navbar container">
+<DIV class="btn-toolbar"><BUTTON title="좋아요" class="btn btn-icon-text btn-like " 
+aria-label="좋아요" type="button" data-post-id="132269"><I class="fal fa-heart default-text"></I><I 
+class="fas fa-heart active-text"></I>                 <SPAN 
+class="count">37</SPAN>             </BUTTON>                             <A 
+title="댓글" class="btn btn-icon-text btn-comment" aria-label="댓글" href="https://cpuu.postype.com/post/132269#responses"><I 
+class="fal fa-comment"></I>                     <SPAN class="count">0</SPAN>     
+            </A>                     </DIV>
+<UL class="btn-toolbar post-pager">
+  <LI><A title="이전글 - 알파고 개발자 Demis Hassabis의 KAIST 초청 특강 후기 #3" class="btn-prev-post btn btn-icon-text justify-content-md-start" 
+  aria-label="이전글" href="https://cpuu.postype.com/post/126045"><I class="fal fa-chevron-left fa-lg"></I> 
+                              
+  <DIV class="d-none">
+  <H6 class="text-truncate">알파고 개발자 Demis Hassabis의 KAIST 초청 특강 후기 #3</H6><SMALL 
+  class="text-truncate">DQN(Deep Q-Network) 을 이용한 Atari Game</SMALL>             
+                                                  </DIV></A>                     
+                  </LI>
+  <LI><A title="다음글 - Tensorflow로 선형 회귀 풀어보기" class="btn-next-post btn btn-icon-text justify-content-md-end" 
+  aria-label="다음글" href="https://cpuu.postype.com/post/161789">
+  <DIV class="d-none">
+  <H6 class="text-truncate">Tensorflow로 선형 회귀 풀어보기</H6><SMALL class="text-truncate">Linear 
+  regression with google tensorflow</SMALL>                                      
+                         </DIV><I class="fal fa-chevron-right fa-lg"></I>        
+                   </A>                                     </LI></UL></DIV>
+<DIV class="d-none d-lg-block"><A title="맨 위로" class="btn btn-icon" aria-label="맨 위로" 
+href="https://cpuu.postype.com/post/132269#top"><I class="fal fa-arrow-to-top fa-lg"></I></A> 
+    </DIV></DIV><main class="main-content slide-left" id="main-content" role="main"><ARTICLE 
+class="post" id="main"><HEADER class="post-header">
+<DIV class="container">
+<DIV class="post-category text-truncate"><A href="https://cpuu.postype.com/category/머신-러닝">머신 
+러닝</A>                     </DIV>
+<DIV class="post-badges"></DIV>
+<H1 class="post-title">                    알파고 개발자 Demis Hassabis의 KAIST 초청 특강 
+후기 #4                </H1>
+<DIV class="post-subtitle">알파고의 거의 모든 것</DIV>
+<DIV class="post-meta btn-toolbar">
+<DIV class="btn-toolbar media-body"><A href="https://cpuu.postype.com/post/132269#" 
+rel="author" data-user-blog-id="11701" data-content="정보보안에 관심이 많은 대학원생, 소프트웨어 엔지니어/서버관리자" 
+data-title="CPUU" data-image="https://d33pksfia2a94m.cloudfront.net/assets/img/avatar/avatar_pink.png" 
+data-user-profile-id="151251" data-user-modal="1"><IMG class="user-avatar" alt="CPUU" 
+src="1_files/avatar_pink.png">                         </A>                      
+   
+<DIV class="media-body">
+<H4><A href="https://cpuu.postype.com/post/132269#" rel="author" 
+data-user-blog-id="11701" data-content="정보보안에 관심이 많은 대학원생, 소프트웨어 엔지니어/서버관리자" 
+data-title="CPUU" data-image="https://d33pksfia2a94m.cloudfront.net/assets/img/avatar/avatar_pink.png" 
+data-user-profile-id="151251" data-user-modal="1">CPUU</A>                       
+      </H4>
+<DIV class="list-inline"><time class="list-inline-item">2016.04.08</time>        
+                         <SPAN class="list-inline-item">조회 <SPAN 
+class="number">12031</SPAN></SPAN>                             
+</DIV></DIV></DIV></DIV></DIV></HEADER>
+<DIV class="container">
+<DIV class="post-content no-margin   " id="post-content">
+<P>(드디어 본격적인 알파고 이야기가 나옵니다. 편의상 이 글은 데미스 하사비스의 1인칭 시점으로 작성하겠습니다.)</P>
+<P><BR></P>
+<P>자 ! 이제 요즘 뉴스를 통해 많이 알려진 알파고에 대해 이야기를 해봐야 할 것 같네요.&nbsp;딥마인드가 알파고를 만들기 시작한 
+이유는, 장기적으로&nbsp;딥러닝과 강화학습을 합친 기술을 만드는 것을 목적으로 하기 때문이고, 이런 측면에서 바둑이야말로 최적의 검증 
+환경이라고 판단했기 때문입니다.</P><FIGURE class="photoset normal">
+<DIV class="photoset-inner photo-1"><IMG class="photo" alt="판 후이 2단과 대국한 알파고" 
+src="1_files/f929c14ef8ea24c1f7b196e2828aca99.jpg" data-action="zoom" 
+data-height="439" data-width="780"></DIV><FIGCAPTION>판 후이 2단과 대국한 
+알파고</FIGCAPTION></FIGURE>
+<P>1. 왜 바둑인가?</P>
+<P>여기는 한국이니까 여기계신 많은 분들이 이미 바둑을 잘 아실 거라고 생각하기에 바둑에 관한 설명은 생략하겠습니다.(<STRIKE 
+style="line-height: inherit; letter-spacing: 0px; font-size: inherit;">흑..바알못이어서 
+죄송합니다</STRIKE>)&nbsp;여기에 바둑판이 있습니다.&nbsp;바둑은 엄청난 역사와 전통을 가지고 있고요, 4천만 정도의 사람들이 
+바둑을 두고, 그 중 2천명 정도만 프로기사 입니다.&nbsp;아마도 게임중에서는 유래없이 가장 많은 연구가 이루어졌을 것입니다. 
+멋지지요?&nbsp;바둑이 얼마나 복잡한 게임인지를 수치적으로 말씀드리자면, 바둑판에서 가능한 배치 방법이 10의 170제곱입니다. 이는 우주 
+속 원자보다 많은 수이지요. 제가 들은 바로는 바둑으로 둘 수 있는 총 경우의 수는 10의 700제곱입니다. 정말 엄청난 수치지요. 
+이처럼&nbsp;바둑은 인류가 만들어낸 게임 중 가장 복잡한 게임이기 때문입니다. 물론 전문적으로 둘 수 있다는 전제하에서요.&nbsp;또한, 
+바둑은 전체적인 계획을 세우는 것과 동시에 순간적인 직감(intuition) 또한 아주 중요한 게임이고, 경우에 따라 빠른 계산도 요구하기 
+때문입니다.&nbsp;그래서&nbsp;인공지능에게 바둑은 지난 몇 십년간 정말 커다란 도전이었습니다.&nbsp;특히 딥블루가 카스파로프를 이기고 
+나서부터, 많은 인공지능 연구자들은 바둑을 정복하는 것을 다음 목표로 설정하고 많은 노력을 기울였습니다.&nbsp;</P>
+<P><BR></P>
+<P>이 게임을 하기 위해서는 직감과 계산이 모두 필요하다는 점에서, 이것을 구현하기 위해서는 패턴 인식 기능과 전략 수립이 결합되어야 
+합니다.&nbsp;바로 이것이 딥마인드에게는 아타리 게임 이후의 다음 목표이기도 했지요.&nbsp;그래서 저희들은 이 문제에 바둑으로써 
+도전하기로 했습니다.&nbsp;</P>
+<P><BR></P>
+<P>2. 바둑은 왜 어려운가?</P>
+<P>1) Search space is really huge</P>
+<P>2) "Impossible" to write evaluation function to determine who is winning</P>
+<P>우선은 이 어마어마한 10에 170제곱이라는 복잡성 때문에, 직접적으로 모든 수를 계산하는 것(Brute Force)은 
+불가능합니다.&nbsp;인공지능 바둑 프로그램을 만다는데 가장 어려운 점 두 가지 중 하나는 이 검색할 대상을 실행 가능한 현실적인 규모로 
+줄여야 한다는 것이고,&nbsp;두번째는 어느 특정한 상황에서 어느 쪽이 이기고 있는지 형세판단을 하기가 힘들다는 것입니다.</P>
+<P><BR></P>
+<P>지난 이틀간의 알파고vs이세돌 9단의 경기를 관람하면서, 한국에서 9단 기사들이 해설하는 것을 유심히 경청하였습니다.&nbsp;특히 어제의 
+게임(제 2국, 2016년 3월 10일)에서는 게임이 진행되는 대부분의 시간동안 많은 9단 해설자들이 서로 상반되는 형세판단을 하는 것을 
+보았습니다. (주석 : 대국 중반에 바둑TV만이 알파고의 상당한 우세를 점쳤고, KBS 해설진은 미묘하게 엇갈린다는 평을 냈음. 그 외 다른 
+방송들은 이세돌이 이미 이겼다는 태도로 일관했으나, 막상 패배의 결과가 나오자 멘붕에 빠졌음.)&nbsp;저도 그때서야 알게 된 거지만, 심지어 
+프로9단 해설가의 수준에서도 형세가 비슷하거나 복잡하면 누가 유리한지 쉽게 판단하기 힘들다는 것입니다.&nbsp;아주 흥미로운 사실은, 딥마인드 
+팀원들은 아주 불안해하고 있었지만, 알파고는 게임 내내 꽤 자신만만해하고 있었고,&nbsp;중반에 접어들었을 때 더욱 형세가 좋아지고 있다고 
+판단했다는 것입니다. (<A href="http://www.zdnet.co.kr/news/news_view.asp?artice_id=20160310100107&amp;lo=z45" 
+target="_blank" rel="nofollow">관련기사</A>)&nbsp;또한 흥미롭게도 이세돌 씨가 게임 후 인터뷰에서 "내내 자신이 
+뒤처지고 있다고 느꼈고, 따라잡을 수가 없었다"고 하였는데,&nbsp;하지만 다른 9단 해설자들은 전혀 그렇게 생각하지를 않았습니다. 아주 
+흥미롭지요.&nbsp;오직 이세돌 9단의 형세판단만이 실제와 같았다는 점에서, 그의 실력을 느낄 수 있었습니다.</P>
+<P>(<A href="http://www.asiae.co.kr/news/view.htm?sec=ent99&amp;idxno=2016031018273837275" 
+target="_blank" rel="nofollow">관련기사</A> :&nbsp;"오늘은 알파고의 완승이었다. 초반부터 한순간도 앞선 적이 
+없었다. 내용상으로 보면 정말 완패였다." -이세돌 9단)</P>
+<P><BR></P>
+<P>아시다시피 저는 체스관련 경력이 있습니다. 체스와 바둑의 복잡성을 비교하여 설명해드리겠습니다. 체스에서는 평균적으로 20개 정도의 움직임이 
+가능합니다. 이를 분기계수(branching factor)라고 합니다. 하지만&nbsp;바둑에서는 상대적으로 각 상황에서 평균적으로 200개 
+정도의 움직임이 가능합니다. 그래서 분기계수가 열배나 더 큽니다.</P><FIGURE class="photoset normal">
+<DIV class="photoset-inner photo-1"><IMG class="photo" alt="체스와 바둑의 경우의 수 탐색크기 비교" 
+src="1_files/a032780105753834d5ceb3df78e622e7.gif" data-action="zoom" 
+data-height="540" data-width="960"></DIV><FIGCAPTION>체스와 바둑의 경우의 수 탐색크기 
+비교</FIGCAPTION></FIGURE><FIGURE class="photoset normal">
+<DIV class="photoset-inner photo-1"><IMG class="photo" alt="체스와 바둑의 경우의 수 탐색크기 비교" 
+src="1_files/1bdfb6a02c638cf3600c2ba75bb919cd.gif" data-action="zoom" 
+data-height="540" data-width="960"></DIV><FIGCAPTION>체스와 바둑의 경우의 수 탐색크기 
+비교</FIGCAPTION></FIGURE>
+<P>그래서 바둑은 소요시간이 아주 깁니다. 그렇기 때문에 탐색트리의 복잡성이 굉장히 크죠.&nbsp;</P>
+<P><BR></P>
+<P>뿐만 아니라, 바둑을 더 어렵게 만드는 또 하나의 이유는 계산 대 직감에 관한 문제입니다.(intuition versus 
+calculation)&nbsp;저도 바둑을 둡니다. 아주 잘하는 것은 아니지만, 바둑의 묘미를 이해할 정도는 됩니다.&nbsp;바둑은 주로 
+직감(Intuition)에 많이 좌우되는 게임입니다.&nbsp;만약 아주 잘하는 프로기사에게 "왜 그렇게 두었습니까?"라고 
+물어보면,&nbsp;그들의 대답은 아마도 "그냥 그것이 옳게 느껴졌다'일 것입니다.&nbsp;그들의 직감과 무의식이 그 수가 옳다고 판단한 
+것입니다. 그것은 그들 평생의 배움과 경험을 바탕으로 나온 것입니다. 당연히 바둑에서도 어느정도의 계산법이 필요합니다. 하지만 고수와 하수를 
+가르는 진정한 차이는 '직감'을 이용하는 능력입니다.&nbsp;고수들은 바둑경기를 할 때 머리속으로 모든 경우의 수에 대한 확률&nbsp;계산을 
+통해서 판단을 내리며 게임을 진행하지 않습니다.&nbsp;체스 선수도 마찬가지겠지만, 체스에서 왜 그런 수를 두었는지에 대한 이유와 계산법을 
+말해줄 수 있는 것과, 바둑에서의 이유는 차원이 다른 문제입니다.&nbsp;시합이 시작되기전, 이세돌씨와 저녁을 함께 먹으며 바둑과 바둑 실력에 
+대해서 이야기를 나눌 때&nbsp;이세돌씨의 직감에 관한 말씀에서 제 생각을 확신할 수 있었고, 그의 직관능력이 얼마나 대단한지를 알 수 
+있었습니다. 아마 세계에서 최고일 것입니다.&nbsp;그도 동의한 것이, 바둑에서는 너무나도 많은 경우의 수 때문에, 최고의 기사들도 직감에 
+의존을 해야 한다는 것입니다. 너무 많은 다른 가능성을 가지고 있기 때문입니다.</P>
+<P><BR></P>
+<P>형세판단 기능을 만드는 것이 힘든 또 다른 이유로, 바둑에는 명확한 점수체계 개념이 없다는 것입니다.&nbsp;체스에서는 퀸이 9점의 
+가치를 가지고 있고, 루크는 5점, 나이트는 3점 등의 점수체계가 있기 때문에&nbsp;자신의 말들의 점수를 합하면 어느정도 이기고 있는지, 
+혹은 불리한지의 형세가 판단이 됩니다. 하지만 바둑에서는 이것이 불가능합니다. 모든 돌이 동일한 중요성을 가지고 있고, 게임의 중반까지는 어느 
+구역이 누구의 땅이 될지를 알 수 없기 때문입니다.&nbsp;그럼 어떻게 해야 이 어려움 문제들을 극복할 수 있을까요?</P>
+<P><BR></P>
+<P>3.&nbsp;심층 신경망(Deep Neural Network)과 딥러닝(Deep Learning)</P><FIGURE class="photoset normal">
+<DIV class="photoset-inner photo-1"><IMG class="photo" alt="Neural network training pipeline and architecture" 
+src="1_files/70cccbb42cb6b2efb74c4a6becfcaf53.png" data-action="zoom" 
+data-height="498" data-width="922"></DIV><FIGCAPTION>Neural network training 
+pipeline and architecture</FIGCAPTION></FIGURE>
+<P>&nbsp;저희는 두가지의 심층신경망이라는 기술을 사용했습니다. 먼저 인터넷에서 다운로드 받은 10만개 정도의 상급 아마추어 수준의 기보를 
+넣었습니다. 그리고 이를 이용하여&nbsp;<STRONG style="line-height: inherit; letter-spacing: 0px; font-size: inherit;">정책 
+네트워크(Policy Network)</STRONG>라고 이름 지은 첫번째 신경망을 지도학습(Supervise Learning) 방법으로 
+훈련시켰습니다.&nbsp;우리가 학습시킨 것은 인간 바둑기사가 둔 기보의 자리를 바탕으로 정책 네트워크로 하여금 다음 수를 예상하도록 
+만들었습니다.&nbsp;이 예측 실력이 어느정도 좋아졌을 때, 이 정책 네트워크가 스스로 자신과 수천, 수백만번 게임을 하도록 
+만들었습니다.&nbsp;이렇게 인간 아마추어 바둑기사를 단순히 흉내내는 것에 그친 것이 아니라, 강화학습을 이용해서 아마추어 수준의 바둑인보다 
+더 잘하도록 만드는게 목표였습니다.&nbsp;그래서 우리는 정책 네트워크를 자신과 시합을 할 때 그냥 따라만 하는 것이 아니라, 승률을 
+최대한으로 더 끌어올리도록 최적화 시켰습니다.&nbsp;그리고 정책망 네트워크에 대한 강화학습을 통한 이런식의 개선이 80%의 승률을 가진 또 
+다른 정책 네트워크를 탄생시켰습니다.&nbsp;이 시점에서 우리는 정책 네트워크를 더 이상 학습시키지 않고, 3천만 번의 게임을 더 하도록 
+훈련시켰습니다.&nbsp;그리고 이것이 'Go Data set'이라고 부르는 최종적인 데이터 세트가 됩니다.&nbsp;한 게임에 한 수인 3천만 
+개의 수로 구성된 데이터 세트입니다. 당연히 지금의 데이터베이스에는 세계에서 바둑이 두어진 횟수보다 더 많은 게임 정보가 들어있고, 이것으로 
+형세판단 기능 구현을 시도할 수 있었습니다.&nbsp;이미 가지고 있는 3천만 개의 경우의 수에서, 각 수의 게임 결과를 이미 알고 
+있었습니다.&nbsp;우리는 이것을 위에 핑크색으로 표기된 새롭게 만들어진 신경망, 즉 <STRONG style="line-height: inherit; letter-spacing: 0px; font-size: inherit;">가치 
+네트워크(Value Network)</STRONG>의 훈련용으로 만들고 연습을 시켰습니다.&nbsp;어떤 자리에 놓았을 때 궁극적으로 누가 
+이기게 된다는 형세를 판단하기 위해서요.&nbsp;그렇게 많은 학습과정을 통해 드디어 두 개의 신경망이 만들어 졌습니다.</P><FIGURE 
+class="photoset normal">
+<DIV class="photoset-inner photo-1"><IMG class="photo" alt="" src="1_files/ed5cbd3184e5395e5de18e550a19caf9.png" 
+data-action="zoom" data-height="492" data-width="536"></DIV></FIGURE>
+<P><STRONG>Policy network(Probability Distribution over moves) : (나무를 보며) 지금 어디에 
+둘지 판단</STRONG></P>
+<P>정책 네트워크는 바둑판 위의 돌들의 위치정보를 입력하면, 그 상황에서 가장 가능성이 높은 착지점들을 예측하는 확률을 
+계산합니다.&nbsp;여기 화면 위쪽에 보이는 초록색 기둥들은 알파고가 가능성이 높은 착지점들을 표기해 놓은 것들입니다. 기둥들이 높을수록 
+개연성도 높은 것이죠.</P>
+<P><BR></P>
+<P><STRONG>Value Network(Real numbers: 0 White - 1 Black) : (숲을 보며) 전체적으로 이기고있는지 
+판단</STRONG></P>
+<P>두번째 네트워크인 가치 네트워크 역시 바둑판 위에 돌들의 위치를 입력으로 받아들이면, 0부터 1사이의 실수를 결과값으로 
+보여줍니니다.&nbsp;0은 백돌이 이기고 있음을 말하고, 1은 흑돌이 이기고 있고, 0.5는 동률이라는 뜻입니다.&nbsp;바로 이것이 
+알파고의 대단한 능력의 핵심입니다!</P>
+<P><BR></P>
+<P>4. MCTS와 Rollouts</P>
+<P>여기에 있는 이 두 개의 신경망을 몬테카를로 트리 탐색법과 롤아웃 기법으로 통합하고 최종 알파고 시스템을 만듭니다.</P><FIGURE 
+class="photoset normal">
+<DIV class="photoset-inner photo-1"><IMG class="photo" alt="Monte Carlo tree search in AlphaGo" 
+src="1_files/384ba52bd301783b5dba837f280540f9.png" data-action="zoom" 
+data-height="476" data-width="1436"></DIV><FIGCAPTION>Monte Carlo tree search in 
+AlphaGo</FIGCAPTION></FIGURE>
+<P>이 시스템의 원리를 아주 간단하게 설명할 수 있는 도표입니다.&nbsp;자! 알파고가 착수점을 찾고 있다고 가정해 봅시다.&nbsp;맨 위 
+가장 작은 그림이 현재 바둑판의 지역 상태라고 가정하고, 대략 절반정도 탐색을 끝냈다고 볼 때&nbsp;여기 보이시는 Q-값이 현 상황에서 
+추정된 승점입니다. 그리고 이길 확률이 가장 높은, 즉 Q-값이 가장 높은 방향으로 가겠지요.&nbsp;그리고 보시는 바와 같이 알파고는 이 
+상황에서 아직까지는 고려해보지 않는 방향으로 가는 것을 볼 수 있습니다.&nbsp;아래쪽에 나와 있듯이 왼쪽으로 향한 검은색의 화살표를 보실 수 
+있습니다.&nbsp;이제 새로운 방향의 트리를 만들어야 해요.&nbsp;그래서 정책 네트워크를 불러내서 트리를 더 크게 만들도록 하지요. 이전에 
+보여드린 초록색 네트워크 처럼요.&nbsp;하지만 그렇다고해서 저 상황에서 가능한 모든 경우의 수(착수점)을 고려하지는 않습니다.&nbsp;그냥 
+정책 네트워크가 지정하는 가장 확률이 높은 서너개의 착수점만 고려하지요.&nbsp;이렇게 하면 탐색 트리의 크기를 현저하게 줄일 수가 
+있지요.</P>
+<P><BR></P>
+<P>탐색 트리의 크기가 저 상황에서 더 커지고 그 후에 두 번째 신경망인 가치 네트워크를 불러내서 현재 트리에서 새롭게 형세를 
+판단합니다.&nbsp;여기에서 더 고전적인 방법의 두 번째 형세판단 방법인 롤아웃 기법을 접목해서 게임을 끝까지 두었을 때&nbsp;양측에 몇 
+번의 승과 패가 있었는지의 통계를 내고 우선도가 낮은 경우를 롤아웃 합니다. 그러니까 착수점을 평가하는 두 개의 다른 방법을 쓰는 
+것입니다.&nbsp;가치 네트워크는 착수점을 즉각적으로 평가하고, 롤아웃 기법은 통계를 이용하는 평가를 합니다.&nbsp;그리고 우리가 알아낸 
+바에 의하면 알파고는 그 두개의 평가법을 복합적으로 사용할 때 더 강합니다.&nbsp;그 두 개의 평가법이 병합되면서 최종적 평가를 내리는 
+것입니다.&nbsp;이런 과정이 끝나면 Q-값을 되짚어 돌아가 트리의 현 상태로 갑니다.&nbsp;만약에 알파고가 시간이 부족해서 착수를 두어야 
+할 때 알파고는 가장 가능성이 높은 Q값을 선정해 착수를 하게 됩니다.</P>
+<P><BR></P>
+<P>이번에는 도표를 통해서 바둑 조합의 어려움을 어떻게 해결하는지 보겠습니다.&nbsp;</P><FIGURE class="photoset normal">
+<DIV class="photoset-inner photo-2"><IMG class="photo" alt="" src="1_files/2369d60327ea3cce4303fa3e4f42463a.png" 
+data-action="zoom" data-height="464" data-width="1150"><IMG class="photo" alt="" 
+src="1_files/1610c20c2af3827a62c74f7d609ec39e.png" data-action="zoom" 
+data-height="804" data-width="1424"></DIV></FIGURE>
+<P>이 그림이 바둑에서 착수점에 대한 탐색트리라고 가정했을 때, 정말 방대한 양의 트리라는 것을 알 수 있습니다.&nbsp;여기에서 
+<STRONG 
+style="line-height: inherit; letter-spacing: 0px; font-size: inherit;">정책 네트워크가 
+하는 일은, 폭을 잘라내서 줄이는 역할</STRONG>입니다.&nbsp;그러니까 모든 200개 정도의 착수점을 보는 것이 아니라 가능성이 가장 
+높은 서너개의 착수점만 보게 되는 것입니다.&nbsp;그리고 <STRONG style="line-height: inherit; letter-spacing: 0px; font-size: inherit;">가치 
+네트워크의 일은 깊이를 줄이는 일</STRONG>이라고 보시면됩니다. 그러니까 게임의 맨 마지막까지 보면서 누가 이기고 지는가를 몇백만 번 하는 
+것이 아니라,&nbsp;어느 선에서 길이를 줄이고 가치 네트워크를 불러내서 알파고가 얼마나 잘하고 있는지 형세를 판단해 줄 수 있는 
+겁니다.&nbsp;이렇게 보시다시피 이 두개의 신경망을 결합해 탐색의 범위를 처리 가능한 범위까지 줄인 것입니다.</P>
+<P><BR></P>
+<P>5. 알파고의 기량</P>
+<P>자, 그럼 우리는 알파고를 만들어 낸 후 어떻게 평가를 했을까요?&nbsp;지난 여름, 아니 봄에 다른 최고의 기존 프로그램들과 비교를 
+하기 시작하였습니다. 가장 훌륭한 상업용 프로그램들은&nbsp;크레이지스톤과 젠이라는 것들인데, 이 두 프로그램은 모두 아마추어 5단에서 6단의 
+실력이었습니다.&nbsp;우리가 이 프로그램들을 상대로 알파고와 시합을 시켰을 때 알파고가 495판 중에서 494판을 이겼습니다.&nbsp;뿐만 
+아니라 크레이지 스톤과 젠에게 4점을 접어주고 바둑을 두어도 75%의 승률을 보였습니다. 꽤 높은 확률입니다.</P>
+<P>알파고는 분산 컴퓨팅 환경에서 동작할 때 훨씬 강해집니다.&nbsp;알파고와 그 다음으로 잘 두는 상업 바둑 프로그램과의 실력차이는 
+1,000 Elo 포인트를 상회합니다.&nbsp;사실 이것은 지난 10월 수치이니 현재는 더 큰 차이가 있겠지요.&nbsp;여러분들께서 이미 
+알고 계시듯이&nbsp;모든 상업 바둑프로그램에게 승리를 했으니 이젠 진짜 프로기사를 대상으로 시험해볼 차례였습니다.&nbsp;그래서 저희는 
+정말 훌륭한 상대이자, 시합 이후에 좋은 친구가 된 판후이(Fan Hui) 씨를 모셨습니다.</P><FIGURE class="photoset normal">
+<DIV class="photoset-inner photo-1"><IMG class="photo" alt="판 후이(Fan Hui)" src="1_files/cea5c01877772ba5f0a6f713af73e869.png" 
+data-action="zoom" data-height="1426" data-width="2540"></DIV><FIGCAPTION>판 
+후이(Fan Hui)</FIGCAPTION></FIGURE>
+<P>판후이 씨는 유럽 3년 연속 챔피언이시고 바둑 저서도 있으시며 프랑스 대표팀 코치로 활동하고 계십니다.&nbsp;그는 중국에서 자라셨고 
+그곳에서 프로기사 자격을 취득하셔서 현재 프로 2단이십니다.&nbsp;지난해 10월에 저희는 판후이 씨와 시합을 가졌고 놀랍게도 결과는 5대 
+0이었습니다.&nbsp;이로써 알파고는 처음으로 동등한 토너먼트 형식의 게임에서 인간 프로기사를 이긴 프로그램이 되었습니다.&nbsp;그리고 
+이것은 기계학습 분야, 인공지능 분야, 그리고 바둑분야에 있어서 아주 획기적인 사건이었습니다.&nbsp;많은 바둑 인공지능 전문가들이 예상한 
+것보다 적어도 10년 빨리 벌어진 일이었습니다.&nbsp;이 내용은 몇 달 전 네이처 저널의 표지 논문으로 수록되었으며 이것에 대해 더 많은 
+정보를 원하시는 분들은 이 저널에서 자세한 정보를 얻으실 수 있으십니다. 학술계에 적지 않은 파장을 일으킨 내용입니다.&nbsp;자 이제 저희가 
+이곳에 왔고요, 이제 최후의 도전입니다. 제 생각에 이세돌씨와 경합을 벌이는 이 다섯 번의 시합은&nbsp;현재 2판 앞서 있기는 하지만 한판 
+한판이 접전이고, 어떤 일이 벌어질지는 아무도 모릅니다.&nbsp;경합 전 우리의 예상은 알파고가 유리할 것이라고 
+생각했습니다.&nbsp;왜나하면 저희 자체 테스트를 진행할 때 모든 self-테스트를 했습니다.&nbsp;그러니까 알파고는 게임 전에 수백 수천 
+번의 게임을 다른 알파고와 해본 것입니다.&nbsp;그렇기 때문에 지난 10월의 알파고 실력을 아는 저희는, 새로운 알파고가 얼마나 강한지를 
+추정할 수 있었습니다.&nbsp;결론적으로는 판후이 씨의 실력에서 얼마나 더 올라갔는지를 추정할 수 있는 것입니다.&nbsp;우리는 이세돌 씨가 
+판후이 씨에 비해 얼마나 상위하는 실력을 가지고 계신지 알고,&nbsp;현재의 알파고가 지난 10월의 알파고보다 얼마나 상위하는 실력을 가지고 
+있는지 알기 때문입니다.&nbsp;</P><FIGURE class="photoset normal">
+<DIV class="photoset-inner photo-1"><IMG class="photo" alt="" src="1_files/cc0e63d2f9b6dcc00e3d645971dc2fad.jpg" 
+data-action="zoom" data-height="428" data-width="640"></DIV></FIGURE>
+<P>그렇기 때문에 그 기간 동안의 실력 변화에는 확신을 가지고 있지만 결과에 확신을 가질 수 없는 이유는&nbsp;이것은 오버피팅(특정한 
+측면에 과도하게 치중하여 학습되는 문제)의 결과를 가지고 올 수 있다는 것입니다.&nbsp;왜냐하면 알파고는 여러가지 버전이 있고, 그 다양성을 
+수용하려고 하고 있지만&nbsp;결국은 그 다양성이 모두 같은 기술에 기반을 두고 있다는 겁니다.&nbsp;물론 모두 다른 하이퍼파라미터 세팅을 
+가지고 있지만요.&nbsp;우리는 새 버전의 알파고에게 여러 가지 다른 도전을 제공하려고 노력하고 있습니다.&nbsp;그러니까 경기를 실제로 할 
+때까지는 어떻게 될지 확신할 수 없습니다.&nbsp;예를 들어 알파고가 자신과 게임을 할 때 어떤 위치에는 습관적으로 착점을 잘 하지 않을수도 
+있고요,&nbsp;그리고 새 버전이 구 버전을 이길수는 있겠지만, 그것이 꼭 어떠한 상황을 경험하는 것은 아니거든요.&nbsp;우리는 그런 
+방식으로 인한 문제점이 전혀 없을거라고 확신하지 않습니다.&nbsp;그렇기 때문에 이세돌 씨와 같이 창의적인 싸움기술을 가진 유명한 프로기사와 
+시합을 시키고 싶은 것입니다.&nbsp;만약 누군가가 알파고의 약점을 찾아낼 수 있다면 그게 바로 이세돌 씨라고 생각합니다.&nbsp;그리고 
+우리는 우리가 찾지 못한 큰 약점이 있다면 그것을 알고 싶습니다. 이제 더이상 우리의 능력으로는 알파고를 검증할 수 가 없습니다. 알파고가 
+우리보다 더 강한 기력을 가진지 벌써 일년도 넘었거든요.&nbsp;</P><FIGURE class="photoset normal">
+<DIV class="photoset-inner photo-1"><IMG class="photo" alt="" src="1_files/8af2522ba2ec9ad5b39894c5385671c0.png" 
+data-action="zoom" data-height="990" data-width="1284"></DIV></FIGURE>
+<P>(<A href="http://www.hankookilbo.com/v/59c3460a336e45b18658ab1be5e0f6d6" 
+target="_blank" rel="nofollow">관련기사</A> :&nbsp;누리꾼들은 무표정한 얼굴로 돌을 놓고 있는 아자 황의 사진을 
+두고 우스개 소리로 “인간 최초의 ‘친알파’”라고 지칭하는가 하면 “바둑 아마 6단에 박사인데 알파고 돌 셔틀하고 있다”라고 표현했다.)</P>
+<P><BR></P>
+<P>사실 저희 팀에도 실력있는 바둑기사가 한 명 있습니다. 아자 황이라고 아마추어 6단 정도의 실력입니다.&nbsp;하지만 알파고가 그를 
+이기기 시작한지 1년도 넘었습니다.&nbsp;그러니까 우리는 이제 알파고의 실제 실력을 검증할 수 있는 방법이 없습니다.&nbsp;저도 많은 
+밤을 지새우며 알파고가 자신과 한 게임을 보는데요, 정말 멋지고 훌륭한 경기입니다.&nbsp;하지만 저는 프로기사가 아니라서 뭐라고 단정지어 
+말씀드리지는 못하겠네요.&nbsp;이세돌 씨와 알게 되고 시합을 할 수 있다는 것이 제가 큰 특혜를 받은 것 같고 영광입니다.&nbsp;남은 세 
+게임에서 이세돌의 행운을 빕니다.</P>
+<P><BR></P>
+<P>(이미 2:0으로 이기고 있는 상황에서, 이세돌씨의 행운을 빈다던 하사비스의 말에 청중들은 웃음섞인 박수를 보냈다. 하사비스는 
+진심이에요!라고 대답했다.)</P>
+<P><BR></P>
+<P>(알파고는 그 다음경기에서도 승리하여 3:0으로 앞서갔지만, 제4국에서 이세돌이 승리함으로써 완승을 거두지는 못하였다. 최종적으로 경기는 
+4:1로 마무리되었다.)</P>
+<P><BR></P>
+<P>참고문헌 :&nbsp;</P>
+<P>Mastering the game of Go with deep&nbsp;neural networks and tree 
+search(Nature)</P><FIGURE class="file"><A class="inner" href="https://cpuu.postype.com/file/download/315888"><I 
+class="fal fa-paperclip"></I>
+<DIV class="file-name" 
+data-fr-verified="true">AlphaGonature16961.pdf</DIV></A></FIGURE>
+<P>인터넷신문중 가장 정확하게 알파고의 작동원리와 논문내용을 설명해준 기사입니다.<BR><A href="http://news.chosun.com/site/data/html_dir/2016/04/01/2016040101422.html" 
+target="_blank" 
+rel="nofollow">http://news.chosun.com/site/data/html_dir/2016/04/01/2016040101422.html</A></P><SECTION 
+class="pay pay-support">
+<DIV class="vcard"><A href="https://cpuu.postype.com/post/132269#" rel="author" 
+data-user-blog-id="11701" data-content="정보보안에 관심이 많은 대학원생, 소프트웨어 엔지니어/서버관리자" 
+data-title="CPUU" data-image="https://d33pksfia2a94m.cloudfront.net/assets/img/avatar/avatar_pink.png" 
+data-user-profile-id="151251" data-user-modal="1">
+<DIV class="vcard-img"><IMG class="user-avatar" alt="CPUU" src="1_files/avatar_pink.png"></DIV>
+<H4>CPUU</H4></A>
+<DIV class="vcard-text">
+<P>정보보안에 관심이 많은 대학원생, 소프트웨어 엔지니어/서버관리자</P></DIV></DIV>
+<DIV class="message">
+<P><B>CPUU</B> 님의 창작활동을 응원하고 싶으세요?</P><BUTTON class="btn btn-support" type="button" 
+data-post-user-id="12391">후원하기</BUTTON></DIV></SECTION></DIV><ASIDE 
+class="tags">
+<UL class="tag-list d-flex flex-wrap">
+  <LI><A href="https://cpuu.postype.com/tag/it" rel="tag">it</A></LI>
+  <LI><A href="https://cpuu.postype.com/tag/it" rel="tag">it</A></LI>
+  <LI><A href="https://cpuu.postype.com/tag/%EA%B3%BC%ED%95%99" 
+  rel="tag">과학</A></LI></UL></ASIDE><ASIDE class="response-toolbar btn-toolbar justify-content-between">
+<DIV class="btn-toolbar"><BUTTON title="좋아요" class="btn btn-icon-text btn-like" 
+aria-label="좋아요" type="button" data-post-id="132269"><I class="fal fa-heart fa-lg default-text"></I><I 
+class="fas fa-heart fa-lg active-text"></I>                         <SPAN class="count">37</SPAN> 
+                    </BUTTON>                     <BUTTON class="btn btn-icon ml-0" 
+id="btn-like-user" aria-expanded="false" type="button"><I class="far fa-ellipsis-h fa-sm"></I></BUTTON> 
+                                        <A title="댓글" class="btn btn-icon-text btn-comment d-none d-md-inline-flex" 
+aria-label="댓글" href="https://cpuu.postype.com/post/132269#responses"><I class="fal fa-comment fa-lg"></I> 
+                        <SPAN class="count">0</SPAN>                     </A>    
+                                 </DIV>
+<DIV class="btn-toolbar"><A title="페이스북에 공유" class="btn-social btn btn-icon btn-share-facebook" 
+aria-label="페이스북에 공유" href="http://posty.pe/8poeqb"><I class="fab fa-facebook-f fa-lg"></I> 
+                    </A>                     <A title="트위터에 공유" class="btn-social btn btn-icon btn-share-twitter" 
+aria-label="트위터에 공유" href="http://posty.pe/8poeqb"><I class="fab fa-twitter fa-lg"></I> 
+                    </A>                     <A title="URL 복사" class="btn-social btn btn-icon btn-clipboard" 
+href="https://cpuu.postype.com/post/132269#" data-clipboard-text="http://posty.pe/8poeqb"><I 
+class="fal fa-link fa-lg"></I>                     </A>                 
+</DIV></ASIDE>         </DIV></ARTICLE><ASIDE class="blog-vcard">
+<DIV class="container d-flex flex-wrap align-items-center">
+<DIV class="d-flex flex-wrap align-items-center media-body text-truncate"><A 
+href="https://cpuu.postype.com/"><IMG class="blog-avatar" alt="" src="1_files/blog_blank_c.png"> 
+                    </A>                                 
+<DIV class="blog-vcard-text media-body">
+<H4 class="text-truncate"><A class="blog-title" 
+href="https://cpuu.postype.com/">CPUU의 Daydreamin'</A>                     </H4>
+<P class="blog-description text-muted">소프트웨어의 버그를 찾기 위한 다양한 취약성 분석 평가 방법론을 연구하고 
+있습니다. Fuzz testing, Digital Forensics, Memory Analysis 등에 관심이 
+많습니다.</P></DIV></DIV><BUTTON class="btn btn-subscribe " aria-pressed="false" 
+type="button" data-blog-id="11701" data-toggle="button"><SPAN class="default-text"><I 
+class="fal fa-plus fa-sm"></I>구독</SPAN>                         <SPAN class="active-text">구독중</SPAN> 
+                    </BUTTON>                                     
+</DIV></ASIDE><ASIDE id="other-posts-wrapper"></ASIDE><INPUT class="d-none" id="other-posts-page" type="text" value="0"> 
+    <SECTION class="responses comments" id="responses">
+<DIV class="container">
+<H3 class="section-title">댓글                    </H3>
+<DIV class="comments" id="comments"><BUTTON class="btn btn-secondary btn-sm mb-3" 
+id="btn-more-comment" style="display: none;" type="button">이전 댓글 보기</BUTTON>     
+            
+<DIV class="comment-list" id="comment-list"></DIV>
+<FORM class="comment-form" id="comment-form" action="/post/comment" method="post" 
+data-disable-ajax=""><INPUT name="post_id" type="hidden" value="132269">         
+            <INPUT name="session_key" type="hidden">                     <LABEL 
+class="sr-only" for="mention">댓글을 입력하세요</LABEL>                                  
+           <A class="form-control disabled" href="https://cpuu.postype.com/post/132269#" 
+data-toggle="modal" data-target="#easy-login">SNS 계정으로 간편하게 로그인하고 댓글을 남겨주세요.</A>
+<DIV class="brand-icons d-flex align-items-center justify-content-between">
+<DIV><A class="btn btn-icon" href="https://cpuu.postype.com/post/132269#" 
+data-toggle="modal" data-target="#easy-login"><I class="brand-icon-google brand-icon-xs brand-icon-muted"></I> 
+                                </A>                                 <A class="btn btn-icon" 
+href="https://cpuu.postype.com/post/132269#" data-toggle="modal" data-target="#easy-login"><I 
+class="brand-icon-facebook brand-icon-xs brand-icon-muted"></I>                  
+               </A>                                 <A class="btn btn-icon" 
+href="https://cpuu.postype.com/post/132269#" data-toggle="modal" data-target="#easy-login"><I 
+class="brand-icon-twitter brand-icon-xs brand-icon-muted"></I>                   
+              </A>                                 <A class="btn btn-icon" href="https://cpuu.postype.com/post/132269#" 
+data-toggle="modal" data-target="#easy-login"><I class="brand-icon-naver brand-icon-xs brand-icon-muted"></I> 
+                                </A>                             </DIV><BUTTON 
+disabled="" class="btn btn-login btn-secondary btn-disabled px-4">확인</BUTTON>    
+                     </DIV></FORM></DIV></DIV></SECTION></main><FOOTER class="footer slide-left" 
+id="footer" role="contentinfo">
+<DIV class="container d-md-flex justify-content-md-between">
+<H6 class="sr-only">소셜</H6>
+<UL class="social-links d-flex justify-content-center flex-wrap"></UL>
+<DIV class="copyright">© 2018 CPUU의 Daydreamin'.         
+</DIV></DIV></FOOTER><NAV tabindex="-1" id="user-menu" role="navigation" 
+aria-labelledby="user-menu-toggle">
+<DIV class="inner">
+<DIV class="logo-wrapper"><A class="dropdown-item" href="https://www.postype.com/"><SPAN 
+class="pt-logo"><SPAN class="text-hide logo-img-dark">포스타입</SPAN></SPAN>         
+        </A>
+<DIV class="dropdown-text text-muted">                    창작자와 팬을 위한 
+커뮤니티,<BR>포스타입에 오신 것을 환영해요!                 </DIV></DIV>
+<DIV class="dropdown-divider"></DIV>
+<DIV><A class="dropdown-item" 
+href="https://www.postype.com/auth/googleLogin"><SPAN class="icon-wrapper icon-wrapper-sm"><I 
+class="brand-icon-google brand-icon-sm"></I>                     </SPAN>         
+            구글로 시작하기                </A>             </DIV>
+<DIV><A class="dropdown-item" 
+href="https://www.postype.com/auth/facebookLogin"><SPAN class="icon-wrapper icon-wrapper-sm"><I 
+class="brand-icon-facebook brand-icon-sm"></I>                     </SPAN>       
+             페이스북으로 시작하기                </A>             </DIV>
+<DIV><A class="dropdown-item" 
+href="https://www.postype.com/auth/twitterLogin"><SPAN class="icon-wrapper icon-wrapper-sm"><I 
+class="brand-icon-twitter brand-icon-sm"></I>                     </SPAN>        
+            트위터로 시작하기                </A>             </DIV>
+<DIV><A class="dropdown-item" 
+href="https://www.postype.com/auth/naverLogin"><SPAN class="icon-wrapper icon-wrapper-sm"><I 
+class="brand-icon-naver brand-icon-sm"></I>                     </SPAN>          
+          네이버로 시작하기                </A>             </DIV>
+<DIV class="dropdown-divider"></DIV>
+<DIV><A class="dropdown-item" href="https://www.postype.com/signup"><SPAN class="icon-wrapper icon-wrapper-sm"><I 
+class="fal fa-envelope"></I></SPAN>                    이메일로 회원가입                
+</A>             </DIV>
+<DIV><A class="dropdown-item" href="https://www.postype.com/login"><SPAN class="icon-wrapper icon-wrapper-sm"><I 
+class="fal fa-envelope"></I></SPAN>                    이메일로 로그인                
+</A>             </DIV>
+<DIV class="dropdown-divider"></DIV>
+<DIV><A class="dropdown-item" href="https://www.postype.com/" target="_blank" "="">홈</A></DIV>
+<DIV><A class="dropdown-item" href="https://help.postype.com/hc/ko" target="_blank">도움 
+센터</A></DIV></DIV></NAV><!-- Sign up --> 
+<DIV tabindex="-1" class="modal auth-modal" id="signup-modal" role="dialog">
+<DIV class="modal-dialog" role="document">
+<DIV class="modal-content">
+<DIV class="modal-body"></DIV></DIV></DIV></DIV><!-- Sign in --> 
+<DIV tabindex="-1" class="modal auth-modal" id="login-modal" role="dialog">
+<DIV class="modal-dialog" role="document">
+<DIV class="modal-content">
+<DIV class="modal-body"></DIV></DIV></DIV></DIV><!-- 신고하기 --> 
+<FORM tabindex="-1" class="modal fade" id="report-modal" action=""><INPUT name="post_id" type="hidden"> 
+    
+<DIV class="modal-dialog modal-lg">
+<DIV class="modal-content">
+<DIV class="modal-header pb-0">
+<H5 class="modal-title">신고하기</H5><BUTTON class="btn btn-icon btn-close" 
+aria-label="닫기" type="button" data-dismiss="modal"><I 
+class="fal fa-times"></I></BUTTON>             </DIV>
+<DIV class="modal-body">
+<P class="form-text">법적으로 문제의 소지가 있거나 타인에게 피해를 줄 수 있는 포스트를 신고합니다. 신고된 포스트는 관리자가 
+확인한 후 적절한 조치를 할 예정이며, 허위 신고의 경우 포스타입 이용에 제한을 받으실 수 있습니다.</P>
+<H6 class="mt-3">신고사유</H6>
+<DIV class="custom-controls-stacked">
+<DIV class="custom-control custom-radio"><INPUT name="report_reason_id" class="custom-control-input" 
+id="report-reason-1" type="radio" checked="" value="1">                         
+<LABEL class="custom-control-label" for="report-reason-1">음란물</LABEL>            
+             
+<P class="form-text">성기가 모자이크 되지 않은 화상이 포함된 성인물, 강간, 수간 또는 미성년자의 성행위를 묘사한 
+게시물</P></DIV>
+<DIV class="custom-control custom-radio"><INPUT name="report_reason_id" class="custom-control-input" 
+id="report-reason-2" type="radio" value="2">                         <LABEL 
+class="custom-control-label" for="report-reason-2">저작권침해</LABEL>                 
+        
+<P class="form-text">저작권ㆍ그밖에 저작권법에 따라 보호되는 권리를 침해받고 계신 경우</P></DIV>
+<DIV class="custom-control custom-radio"><INPUT name="report_reason_id" class="custom-control-input" 
+id="report-reason-3" type="radio" value="3">                         <LABEL 
+class="custom-control-label" for="report-reason-3">불법정보</LABEL>                  
+       
+<P class="form-text">무기나 마약 제조와 같은 불법 행위를 묘사한 게시물</P></DIV>
+<DIV class="custom-control custom-radio"><INPUT name="report_reason_id" class="custom-control-input" 
+id="report-reason-4" type="radio" value="4">                         <LABEL 
+class="custom-control-label" for="report-reason-4">명예훼손 및 권리침해</LABEL>           
+              
+<P class="form-text">명예훼손성, 사생활 침해, 초상권 침해 등 인격적 권리 침해 게시물</P></DIV>
+<DIV class="custom-control custom-radio"><INPUT name="report_reason_id" class="custom-control-input" 
+id="report-reason-5" type="radio" value="5">                         <LABEL 
+class="custom-control-label" for="report-reason-5">홍보/도배</LABEL>                 
+        
+<P class="form-text">독자에게 재미 또는 유익함을 제공하지 않는 단순 홍보성 게시물</P></DIV>
+<DIV class="custom-control custom-radio"><INPUT name="report_reason_id" class="custom-control-input" 
+id="report-reason-6" type="radio" value="6">                         <LABEL 
+class="custom-control-label" for="report-reason-6">성인물</LABEL>                   
+      
+<P class="form-text">성인물을 성인 인증 없이 발행한 게시물</P></DIV>
+<DIV class="custom-control custom-radio"><INPUT name="report_reason_id" class="custom-control-input" 
+id="report-reason-7" type="radio" value="7">                         <LABEL 
+class="custom-control-label" for="report-reason-7">잘못된 채널</LABEL>                
+         
+<P class="form-text">적절하지 않는 채널에 발행된 게시물</P></DIV></DIV>
+<H6 class="mt-3">신고 상세 내용</H6>
+<DIV class="ect"><LABEL class="sr-only" for="textarea-etc">신고 상세 내용</LABEL>      
+               <TEXTAREA name="content" class="form-control" placeholder="신고 이유를 적어주세요.(10자 이상)">신고 이유를 적어주세요.(10자 이상)</TEXTAREA>
+<P class="form-text">해당 게시물을 신고하게 된 이유에 대해 구체적으로 적어주세요.</P></DIV></DIV>
+<DIV class="modal-footer"><BUTTON class="btn btn-secondary" type="button" 
+data-dismiss="modal">취소</BUTTON>                 <BUTTON class="btn btn-primary" 
+id="btn-report-post">신고하기</BUTTON>             </DIV></DIV></DIV></FORM><!-- 사용자 정보 --> 
+<DIV tabindex="-1" class="modal" id="modal-user" role="dialog" aria-labelledby="support-modal-label">
+<DIV class="modal-dialog modal-sm" role="document">
+<DIV class="modal-content">
+<DIV class="modal-body text-center"><IMG class="user-avatar-lg my-2" id="modal-user-avatar" 
+src="">                 
+<H5 class="modal-title" id="modal-user-nickname"></H5>
+<DIV class="small" id="modal-user-bio"></DIV>
+<DIV class="actions mt-3"><BUTTON class="btn btn-secondary btn-send-message" 
+type="button" data-user-id=""><I class="fal fa-envelope"></I>&nbsp;<SPAN class="text">메시지 
+쓰기</SPAN></BUTTON>                 </DIV><BUTTON class="btn btn-icon btn-close" 
+aria-label="닫기" type="button" data-dismiss="modal"><I 
+class="fal fa-times"></I></BUTTON>             </DIV>
+<DIV class="modal-body" id="modal-user-blog-container">
+<H6 class="small">참여중인 블로그</H6>
+<DIV id="modal-user-blog-list"><A class="media modal-user-item modal-user-link" 
+href="https://cpuu.postype.com/post/"><IMG class="blog-avatar modal-user-blog-image" 
+alt="" src="">                         
+<DIV class="media-body">
+<DIV class="media-title text-truncate modal-user-blog-title"></DIV>
+<DIV 
+class="media-text text-truncate modal-user-blog-description"></DIV></DIV></A>    
+             </DIV>
+<DIV id="modal-user-blog-none"><SMALL class="text-muted">참여중인 블로그가 없습니다.</SMALL> 
+                </DIV></DIV></DIV></DIV></DIV><!-- 메시지 --> 
+<DIV tabindex="-1" class="modal" id="conversation">
+<DIV class="modal-dialog" role="document">
+<DIV 
+class="modal-content pt-popover d-flex flex-column justify-content-between">
+<DIV class="conversation-header d-flex align-items-center justify-content-center">
+<DIV class="user-link d-flex align-items-center"><IMG class="user-avatar-sm" id="conversation-thumbnail" 
+alt="" src="">                     
+<H2 class="user-name text-truncate" id="conversation-title"></H2></DIV><BUTTON 
+class="btn btn-icon btn-close" aria-label="닫기" type="button" data-dismiss="modal"><I 
+class="far fa-chevron-left fa-lg d-md-none"></I><I class="fal fa-times d-none d-md-inline"></I></BUTTON> 
+                
+<DIV class="dropdown"><BUTTON class="btn btn-icon" aria-expanded="false" 
+aria-label="더 보기" type="button" data-toggle="dropdown"><I class="far fa-ellipsis-h"></I></BUTTON> 
+                    
+<UL class="dropdown-menu dropdown-menu-right">
+  <LI><A class="dropdown-item" id="btn-leave-conversation" href="https://cpuu.postype.com/post/132269#"><SPAN 
+  class="order-2">대화방 삭제</SPAN>                                 <I class="fal fa-trash-alt"></I> 
+                              </A>                             <A class="dropdown-item" 
+  id="btn-message-block-user" href="https://cpuu.postype.com/post/132269#"><SPAN 
+  class="order-2">사용자 차단</SPAN>                                 <I class="fal fa-user-times"></I> 
+                              </A>                         </LI></UL></DIV></DIV>
+<DIV class="conversation-main" id="conversation-main"></DIV>
+<DIV class="conversation-footer d-flex justify-content-center" id="conversation-disabled">메시지를 
+허용하지 않는 사용자입니다.</DIV>
+<FORM class="conversation-footer d-flex" id="conversation-enabled" action="/message/send" 
+method="post" data-disable-ajax="true"><INPUT name="user_profile_id" type="hidden"> 
+                <INPUT name="message_user_id" type="hidden">                 
+<INPUT name="session_key" type="hidden">                 <INPUT name="message_id" type="hidden"> 
+                
+<TEXTAREA name="message" class="form-control autosize" placeholder="메시지를 입력하세요">메시지를 입력하세요</TEXTAREA><BUTTON 
+disabled="" class="btn btn-icon btn-primary" aria-label="보내기"><I class="far fa-arrow-up"></I></BUTTON> 
+            </FORM></DIV></DIV></DIV><!-- 공유하기 --> 
+<DIV class="modal share-modal" id="share">
+<DIV class="modal-dialog">
+<DIV class="modal-content">
+<DIV class="modal-header border-bottom-0">
+<H5 class="modal-title">공유하기</H5><BUTTON class="btn btn-icon btn-close" 
+aria-label="닫기" type="button" data-dismiss="modal"><I 
+class="fal fa-times"></I></BUTTON>             </DIV>
+<DIV class="modal-body">
+<DIV class="share-group"><A class="btn share-btn btn-share-facebook" href="https://cpuu.postype.com/post/"><I 
+class="fab fa-facebook text-facebook"></I>                         
+<SPAN>페이스북</SPAN></A>                     <A class="btn share-btn btn-share-twitter" 
+href="https://cpuu.postype.com/post/"><I 
+class="fab fa-twitter text-twitter"></I>                         
+<SPAN>트위터</SPAN></A>                 </DIV>
+<DIV class="form-group"><LABEL class="sr-only" for="link-url">내용</LABEL>         
+            
+<DIV class="input-group"><INPUT name="link_url" class="form-control" id="link-url" readonly="" value="http://posty.pe/8poeqb"><SPAN 
+class="input-group-append"><BUTTON class="btn btn-secondary btn-clipboard" type="button" 
+data-clipboard-target="#link-url">URL 복사</BUTTON>                         
+</SPAN>                     </DIV></DIV></DIV></DIV></DIV></DIV><!-- 확인 --> 
+<DIV tabindex="-1" class="modal fade" id="modal-confirm" role="dialog" 
+aria-labelledby="confirm-modal-label">
+<DIV class="modal-dialog modal-sm" role="document">
+<DIV class="modal-content">
+<DIV class="modal-header pb-0">
+<H5 class="modal-title" id="confirm-modal-label">확인</H5><BUTTON class="btn btn-icon btn-close" 
+aria-label="닫기" type="button" data-dismiss="modal"><I 
+class="fal fa-times"></I></BUTTON>             </DIV>
+<DIV class="modal-body">
+<DIV id="modal-confirm-message"></DIV></DIV>
+<DIV class="modal-footer"><BUTTON class="btn btn-secondary" id="modal-confirm-no" 
+type="button" data-dismiss="modal">아니오</BUTTON>                 <BUTTON class="btn btn-primary" 
+id="modal-confirm-yes" type="button" data-dismiss="modal">예</BUTTON>             
+</DIV></DIV></DIV></DIV><!-- 경고 --> 
+<DIV tabindex="-1" class="modal fade" id="modal-alert" role="dialog" 
+aria-labelledby="warning-modal-label">
+<DIV class="modal-dialog modal-sm" role="document">
+<DIV class="modal-content">
+<DIV class="modal-header pb-0">
+<H5 class="modal-title" id="warning-modal-label">알림</H5><BUTTON class="btn btn-icon btn-close" 
+aria-label="닫기" type="button" data-dismiss="modal"><I 
+class="fal fa-times"></I></BUTTON>             </DIV>
+<DIV class="modal-body">
+<DIV id="modal-alert-message"></DIV></DIV>
+<DIV class="modal-footer"><BUTTON class="btn btn-secondary focus" id="modal-alert-confirm" 
+type="button" data-dismiss="modal">확인</BUTTON>             
+</DIV></DIV></DIV></DIV><!-- 로딩 --> 
+<DIV class="loading">
+<DIV class="spinner">
+<DIV class="bounce1"></DIV>
+<DIV class="bounce2"></DIV>
+<DIV class="bounce3"></DIV></DIV></DIV>
+<DIV tabindex="-1" class="modal fade" id="easy-login" role="dialog" aria-hidden="true">
+<DIV class="modal-dialog modal-dialog-centered auth-dialog" role="document">
+<DIV class="modal-content dialog-content"><BUTTON class="btn btn-icon btn-close" 
+aria-label="닫기" type="button" data-dismiss="modal"><I 
+class="fal fa-times fa-lg"></I></BUTTON>             
+<H1>SNS 계정으로 간편하게 로그인하고 댓글을 남겨주세요.</H1>
+<DIV class="auth-options d-flex flex-column align-items-center"><A class="btn btn-secondary btn-block google" 
+href="https://www.postype.com/auth/googleLogin?return_url=http://cpuu.postype.com/post/132269"><SPAN 
+class="icon-wrapper"><I class="brand-icon-google"></I></SPAN>                    
+ <SPAN class="media-body">구글로 시작하기</SPAN>                 </A>                 
+<A class="btn btn-secondary btn-block facebook" href="https://www.postype.com/auth/facebookLogin?return_url=http://cpuu.postype.com/post/132269"><SPAN 
+class="icon-wrapper"><I class="brand-icon-facebook"></I></SPAN>                  
+   <SPAN class="media-body">페이스북으로 시작하기</SPAN>                 </A>              
+   <A class="btn btn-secondary btn-block twitter" href="https://www.postype.com/auth/twitterLogin?return_url=http://cpuu.postype.com/post/132269"><SPAN 
+class="icon-wrapper"><I class="brand-icon-twitter"></I></SPAN>                   
+  <SPAN class="media-body">트위터로 시작하기</SPAN>                 </A>                 
+<A class="btn btn-secondary btn-block naver" href="https://www.postype.com/auth/naverLogin?return_url=http://cpuu.postype.com/post/132269"><SPAN 
+class="icon-wrapper"><I class="brand-icon-naver"></I></SPAN>                     
+<SPAN class="media-body">네이버로 시작하기</SPAN>                 </A>                 
+<DIV class="hr-or py-1 my-2">또는</DIV><A class="btn btn-secondary btn-block" 
+href="https://www.postype.com/signup?return_url=http://cpuu.postype.com/post/132269#email"><SPAN 
+class="icon-wrapper"><I class="fal fa-envelope"></I></SPAN>                     
+<SPAN class="media-body">이메일로 회원가입</SPAN>                 </A>                 
+<A class="btn btn-secondary btn-block" href="https://www.postype.com/login?return_url=http://cpuu.postype.com/post/132269#email"><SPAN 
+class="icon-wrapper"><I class="fal fa-envelope"></I></SPAN>                     
+<SPAN class="media-body">이메일로 로그인</SPAN>                 </A>             
+</DIV><SMALL class="text-muted">SNS로 시작하기 시 포스타입의 <A href="https://www.postype.com/policy/terms-of-service" 
+target="_blank">이용약관</A>과 <A href="https://www.postype.com/policy/privacy" 
+target="_blank">개인정보처리방침</A>에 동의한 것으로 간주합니다.</SMALL>         </DIV></DIV></DIV><!-- 좋아요한 사람 --> 
+<DIV tabindex="-1" class="modal fade" id="like-user" role="dialog">
+<DIV class="modal-dialog modal-sm" role="document">
+<DIV class="modal-content">
+<DIV class="modal-header pb-0">
+<H5 class="modal-title modal-title-sm"><SPAN class="like-count">37</SPAN>명이 
+좋아합니다.                </H5><BUTTON class="btn btn-icon btn-close" aria-label="닫기" 
+type="button" data-dismiss="modal"><I class="fal fa-times fa-lg"></I></BUTTON>   
+          </DIV>
+<DIV class="modal-body">
+<UL class="list-unstyled mb-0" id="like-user-list"></UL><BUTTON class="btn btn-secondary btn-sm mt-3" 
+id="btn-more-like-user" type="button">더 보기</BUTTON></DIV></DIV></DIV></DIV>
+<SCRIPT src="1_files/common.11452.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="1_files/js.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="1_files/platform.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="1_files/common_blog.11452.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="1_files/script.11452.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-40396979-1', {
+            'cookieName': 'ptCookie',
+            'cookieDomain': '.postype.com',
+            'cookieExpires': 60 * 60 * 24 * 28
+        });
+                        ga('send', 'pageview', 'blog/11701/post/132269');
+            </SCRIPT>
+     
+<SCRIPT src="1_files/wcslog.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT type="text/javascript">
+        if(!wcs_add) var wcs_add = {};
+        wcs_add["wa"] = "b21f0bad87852c";
+        wcs_do();
+    </SCRIPT>
+ </BODY></HTML>

@@ -1,0 +1,99 @@
+body {
+	margin: 0px auto; padding: 0px; width: 100%; background-color: rgb(255, 255, 255);
+}
+body {
+	font: 12px/1.5 Dotum, "?èã??", Gulim, "Íµ¥Î¶º", AppleGothic, sans-serif; color: rgb(102, 102, 102); font-size-adjust: none; font-stretch: normal;
+}
+input {
+	font: 12px/1.5 Dotum, "?èã??", Gulim, "Íµ¥Î¶º", AppleGothic, sans-serif; color: rgb(102, 102, 102); font-size-adjust: none; font-stretch: normal;
+}
+select {
+	font: 12px/1.5 Dotum, "?èã??", Gulim, "Íµ¥Î¶º", AppleGothic, sans-serif; color: rgb(102, 102, 102); font-size-adjust: none; font-stretch: normal;
+}
+textarea {
+	font: 12px/1.5 Dotum, "?èã??", Gulim, "Íµ¥Î¶º", AppleGothic, sans-serif; color: rgb(102, 102, 102); font-size-adjust: none; font-stretch: normal;
+}
+input {
+	
+}
+textarea {
+	
+}
+ol {
+	list-style: none; margin: 0px; padding: 0px;
+}
+ul {
+	list-style: none; margin: 0px; padding: 0px;
+}
+li {
+	list-style: none; margin: 0px; padding: 0px;
+}
+p {
+	list-style: none; margin: 0px; padding: 0px;
+}
+h1 {
+	margin: 0px; padding: 0px;
+}
+h2 {
+	margin: 0px; padding: 0px;
+}
+h3 {
+	margin: 0px; padding: 0px;
+}
+h4 {
+	margin: 0px; padding: 0px;
+}
+h5 {
+	margin: 0px; padding: 0px;
+}
+h6 {
+	margin: 0px; padding: 0px;
+}
+a {
+	color: rgb(102, 102, 102); text-decoration: none;
+}
+a:hover {
+	color: rgb(102, 102, 102); text-decoration: none;
+}
+a:active {
+	color: rgb(102, 102, 102); text-decoration: none;
+}
+a:link {
+	color: rgb(102, 102, 102); text-decoration: none;
+}
+fieldset {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none;
+}
+a img {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none;
+}
+button {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none;
+}
+iframe.overflow {
+	overflow: hidden;
+}
+.image_cursor {
+	cursor: pointer;
+}
+button {
+	cursor: pointer; background-color: rgb(255, 255, 255);
+}
+#layerPage {
+	background: url("http://img.etnews.com/201109/images/gnb/bg_topbar.jpg") repeat-x left top;
+}
+#wrap {
+	margin: 0px auto; width: 990px; position: relative;
+}
+#header {
+	width: 100%; position: relative;
+}
+#container {
+	position: relative;
+}
+#container::after {
+	clear: both; display: block; content: "";
+}
+.right_ad_box {
+	margin-bottom: 12px;
+}

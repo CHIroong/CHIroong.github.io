@@ -1,0 +1,24 @@
+@font-face {
+	font-family: Nanum Barun Gothic;
+	src: url(./NanumBarunGothicUltraLight.eot?#iefix) format("embedded-opentype"), url(./NanumBarunGothicUltraLight.woff) format("woff"), url(./NanumBarunGothicUltraLight.ttf) format("truetype");
+	font-weight: 200;
+	font-style: normal;
+}
+@font-face {
+	font-family: Nanum Barun Gothic;
+	src: url(./NanumBarunGothicLight.eot?#iefix) format("embedded-opentype"), url(./NanumBarunGothicLight.woff) format("woff"), url(./NanumBarunGothicLight.ttf) format("truetype");
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: Nanum Barun Gothic;
+	src: url(./NanumBarunGothic.eot?#iefix) format("embedded-opentype"), url(./NanumBarunGothic.woff) format("woff"), url(./NanumBarunGothic.ttf) format("truetype");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: Nanum Barun Gothic;
+	src: url(./NanumBarunGothicBold.eot?#iefix) format("embedded-opentype"), url(./NanumBarunGothicBold.woff) format("woff"), url(./NanumBarunGothicBold.ttf) format("truetype");
+	font-weight: 700;
+	font-style: normal;
+}

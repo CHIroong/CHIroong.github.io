@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0066)http://sbscnbc.sbs.co.kr/vod/vod_flash.jsp -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><HTML><HEAD><META 
+content="IE=11.0000" http-equiv="X-UA-Compatible">
+	 
+<META http-equiv="Content-Type" content="text/html; charset=euc-kr">	 
+<META http-equiv="X-UA-Compatible" content="IE=Edge">	 
+<META name="content-language" content="kr">	 
+<META name="build" content="2010.01.04">	 
+<META name="Subject" content="SBS CNBC">	 
+<META name="Title" content="SBS CNBC">	 
+<META name="Publisher" content="SBS Contents Hub">	 
+<META name="Classification" content="">	 
+<META name="Copyright" content="SBS Contents Hub">	 
+<META name="Robots" content="ALL">	 
+<META name="Description" content="발 빠른 뉴스, 깊이 있는 방송 - SBSCNBC">	 
+<SCRIPT src="vod_flash_files/sbs_common.js" type="text/javascript"></SCRIPT>
+	 
+<SCRIPT src="vod_flash_files/1.6.4.min.js" type="text/javascript"></SCRIPT>
+	 
+<SCRIPT type="text/javascript">
+		jQuery.noConflict();
+		var j$ = jQuery;
+	</SCRIPT>
+	 
+<SCRIPT src="vod_flash_files/1.6.0.3.js" type="text/javascript"></SCRIPT>
+	 
+<SCRIPT>
+	
+
+		function gnbSubMenuTab(obj, txt  ){
+			j$(obj).parent().parent().find("img").each(function(){
+				j$(this).attr("src",j$(this).attr("src").replace("_on","_off"));
+			});
+			if(txt=='block')
+				j$(obj).children().attr("src",j$(obj).children().attr("src").replace("_off","_on"));
+		
+		}	
+		function gnbMenuTab(obj,idx){
+			/*
+			idx : 1 일반탭
+			idx : 2 하위 서브탭이 있는 경우
+			*/
+			j$(obj).parent().parent().children("dd").attr("class","");
+			j$(obj).parent().attr("class","on");
+			j$(obj).parent().parent().find("img").each(function(){
+				j$(this).attr("src",j$(this).attr("src").replace("_on","_off"));
+			});
+			j$(obj).children().attr("src",j$(obj).children().attr("src").replace("_off","_on"));
+			
+			//attr("src",j$(this).attr("src").replace("_off","_on"));
+			
+			if(idx=='1'){
+				j$("#popular_program").attr("class","on");
+			}
+
+		}
+		
+
+	</SCRIPT>
+	 <!--	<script type="text/javascript" src="http://sjmj8n.sbs.co.kr/jquery/1.6.4.min.js"></script>-->
+	 
+<SCRIPT src="vod_flash_files/common_js.js" type="text/javascript"></SCRIPT>
+	 <LINK href="vod_flash_files/header.css" rel="stylesheet" type="text/css">
+	 <LINK href="vod_flash_files/common.css" rel="stylesheet" type="text/css">
+	 <LINK href="vod_flash_files/cnbc.css" rel="stylesheet" type="text/css">
+	 <TITLE>SBSCNBC : 의견 있는 경제채널</TITLE> <LINK href="vod_flash_files/NeTVPlayer.css" 
+rel="stylesheet" type="text/css"> 
+<SCRIPT src="vod_flash_files/1.9.1.min.js"></SCRIPT>
+ 
+<SCRIPT src="vod_flash_files/flowplayer.min.js"></SCRIPT>
+ <!--<script src="http://sbsplayer.sbs.co.kr/NeTV/NeTVPlayer.js"></script>--> <!--<script src="http://sbsplayer.sbs.co.kr/NeTV/NeTVPlayerNews.js"></script>--> 
+<SCRIPT src="vod_flash_files/SBSPlayerCnbc.js"></SCRIPT>
+ 
+<STYLE>
+ html, body {
+  height: 100%;
+	overflow: hidden;
+	margin: 0px;
+	background:#000000;
+
+}
+.netv{
+	width:100%;
+	height:100%;
+}
+</STYLE>
+ 
+<META name="GENERATOR" content="MSHTML 11.00.10570.1001"></HEAD> 
+<BODY><!--<object class="netv" width="100%" height="100%">
+		<input type="hidden" id="env" value="news_cnbc"/>
+		<input type="hidden" id="contentid" value="10000912688"/>
+		<input type="hidden" id="wmode" value="flash mode"/>
+		<input type="hidden" id="home" value="http://sbscnbc.sbs.co.kr/read.jsp?pmArticleId=10000912688"/>
+	</object>-->
+	 
+<CENTER>
+<DIV class="SBSPlayer" id="SBSPlayerOrigin" 
+style="width: 640px; height: 360px;"><INPUT id="CONTENT_ID" type="hidden" value="10000912688">
+		 <INPUT id="CONTENT_TYPE" type="hidden" value="CNBC">		 <INPUT id="PLAYER_MODE" type="hidden" value="PAGE">
+		 <INPUT id="CUSTOM_PARAM" type="hidden">
+		 <INPUT id="AUTOLOAD" type="hidden" value="Y">		 <INPUT id="AUTOPLAY" type="hidden" value="N">
+		 <INPUT id="DEFAULT_IMAGE" type="hidden">
+		 <INPUT id="HOME_URL" type="hidden">		 <INPUT id="WMODE" type="hidden" value="transparent">
+	 </DIV></CENTER></BODY></HTML>

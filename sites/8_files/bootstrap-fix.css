@@ -1,0 +1,108 @@
+.senkawa h1 {
+	font-weight: bold;
+}
+.senkawa h2 {
+	font-weight: bold;
+}
+.senkawa h3 {
+	font-weight: bold;
+}
+.senkawa h4 {
+	font-weight: bold;
+}
+.senkawa h5 {
+	font-weight: bold;
+}
+.senkawa h6 {
+	font-weight: bold;
+}
+.senkawa .nav.nav-pills.nav-stacked .title {
+	margin: 1rem 0px 0.5rem 0.3rem; font-size: 1.3rem; font-weight: 600;
+}
+.senkawa .nav.nav-pills.nav-stacked :first-of-type.title {
+	margin-top: 0px;
+}
+.senkawa .breadcrumb.link-nav {
+	padding: 0.4rem 0.8rem; border-radius: 0px; display: inline-block;
+}
+.senkawa .breadcrumb.link-nav > li + li::before {
+	padding-right: 0.3rem; padding-left: 0.3rem; content: "| ";
+}
+.senkawa .nav-pills .nav-link.active {
+	background-color: rgb(54, 138, 130);
+}
+.senkawa input.form-control {
+	padding: 0.25rem 0.5rem; border-radius: 0px;
+}
+.senkawa textarea.form-control {
+	padding: 0.25rem 0.5rem; border-radius: 0px;
+}
+.senkawa select.form-control {
+	border-radius: 0px;
+}
+.senkawa small {
+	font-size: 70% !important;
+}
+.senkawa .wiki-article table caption {
+	text-align: center; color: black; padding-top: 0rem; padding-bottom: 0.2rem; caption-side: top;
+}
+@media screen and (max-width:42em)
+{
+.senkawa .table-wrap table {
+	white-space: nowrap;
+}
+}
+.senkawa fieldset {
+	padding: 0.5rem 1rem 1rem; border: 1px solid rgb(204, 204, 204); border-image: none;
+}
+.senkawa fieldset legend {
+	margin: 0px -0.3rem; padding: 0px 0.3rem; width: auto; font-size: 1rem; display: inline-block;
+}
+.senkawa .btn {
+	padding: 0.3rem 0.7rem; border-radius: 0px;
+}
+.senkawa .form-inline .btn {
+	padding: 0.2rem 0.7rem;
+}
+.senkawa .btn-sm {
+	padding: 0.2rem 0.45rem;
+}
+.senkawa .btn-lg {
+	padding: 0.75rem 1.25rem;
+}
+.senkawa .wiki-article .wiki-list {
+	padding-left: 0.5rem;
+}
+.senkawa .table th {
+	padding: 0.5rem 0.7rem;
+}
+.senkawa .table td {
+	padding: 0.5rem 0.7rem;
+}
+.senkawa .table tr:last-of-type td {
+	border-bottom-color: rgb(236, 238, 239); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.senkawa .nav {
+	list-style: none !important;
+}
+.senkawa .alert {
+	padding: 0.5rem 0.8rem;
+}
+.senkawa .alert .close {
+	top: 0px; right: 0px; font-size: 18px !important;
+}
+.senkawa .input-group .input-group-btn .btn {
+	padding: 0.25rem 0.5rem; border-radius: 0px;
+}
+.senkawa .alert .close {
+	color: black; font-size: 1.5rem !important; margin-left: 0.5rem;
+}
+.senkawa .hidden {
+	display: none !important;
+}
+.senkawa .popover .popover-title .close {
+	margin: -4px -4px 0px 0px; font-size: 1.3rem; float: right; display: inline-block;
+}
+.senkawa .modal .close {
+	font-size: 25px !important;
+}

@@ -1,0 +1,831 @@
+* {
+	margin: 0px; padding: 0px; outline: 0px;
+}
+html {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+body {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+div {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+span {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+object {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+iframe {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+h1 {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+h2 {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+h3 {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+h4 {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+h5 {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+h6 {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+p {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+blockquote {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+pre {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+abbr {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+address {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+cite {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+code {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+del {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+dfn {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+em {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+img {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+ins {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+kbd {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+q {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+samp {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+small {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+strong {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+sub {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+sup {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+var {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+b {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+i {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+dl {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+dt {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+dd {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+ol {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+ul {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+li {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+fieldset {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+form {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+label {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+legend {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+caption {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+tbody {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+tfoot {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+thead {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+article {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+aside {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+canvas {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+details {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+figcaption {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+figure {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+footer {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+header {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+hgroup {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+menu {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+nav {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+section {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+summary {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+time {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+mark {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+audio {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+video {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+select {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+option {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; vertical-align: baseline;
+}
+article {
+	display: block;
+}
+aside {
+	display: block;
+}
+details {
+	display: block;
+}
+figcaption {
+	display: block;
+}
+figure {
+	display: block;
+}
+footer {
+	display: block;
+}
+header {
+	display: block;
+}
+hgroup {
+	display: block;
+}
+menu {
+	display: block;
+}
+nav {
+	display: block;
+}
+section {
+	display: block;
+}
+main {
+	display: block;
+}
+nav ul {
+	list-style: none;
+}
+blockquote {
+	quotes: none;
+}
+q {
+	quotes: none;
+}
+blockquote::before {
+	content: none;
+}
+blockquote::after {
+	content: none;
+}
+q::before {
+	content: none;
+}
+q::after {
+	content: none;
+}
+a {
+	background: none; margin: 0px; padding: 0px; font-size: 100%; vertical-align: baseline;
+}
+dl {
+	list-style: none;
+}
+ul {
+	list-style: none;
+}
+ol {
+	list-style: none;
+}
+menu {
+	list-style: none;
+}
+li {
+	list-style: none;
+}
+body {
+	font-family: "Malgun Gothic","¸¼Àº °íµñ",µ¸¿ò,Dotum,"Apple SD Gothic Neo",sans-serif; font-size: 14px;
+}
+th {
+	font-family: "Malgun Gothic","¸¼Àº °íµñ",µ¸¿ò,Dotum,"Apple SD Gothic Neo",sans-serif; font-size: 14px;
+}
+td {
+	font-family: "Malgun Gothic","¸¼Àº °íµñ",µ¸¿ò,Dotum,"Apple SD Gothic Neo",sans-serif; font-size: 14px;
+}
+input {
+	font-family: "Malgun Gothic","¸¼Àº °íµñ",µ¸¿ò,Dotum,"Apple SD Gothic Neo",sans-serif; font-size: 14px;
+}
+select {
+	font-family: "Malgun Gothic","¸¼Àº °íµñ",µ¸¿ò,Dotum,"Apple SD Gothic Neo",sans-serif; font-size: 14px;
+}
+textarea {
+	font-family: "Malgun Gothic","¸¼Àº °íµñ",µ¸¿ò,Dotum,"Apple SD Gothic Neo",sans-serif; font-size: 14px;
+}
+button {
+	font-family: "Malgun Gothic","¸¼Àº °íµñ",µ¸¿ò,Dotum,"Apple SD Gothic Neo",sans-serif; font-size: 14px;
+}
+body {
+	
+}
+th {
+	
+}
+td {
+	
+}
+input {
+	
+}
+select {
+	
+}
+textarea {
+	
+}
+button {
+	
+}
+input {
+	vertical-align: middle;
+}
+button {
+	vertical-align: middle;
+}
+select {
+	vertical-align: middle;
+}
+label {
+	vertical-align: middle;
+}
+button {
+	background: none; border: 0px currentColor; border-image: none;
+}
+hr {
+	display: none;
+}
+del {
+	text-decoration: none;
+}
+ins {
+	text-decoration: none;
+}
+a {
+	color: inherit; text-decoration: none;
+}
+a:active {
+	text-decoration: underline;
+}
+a:hover {
+	text-decoration: underline;
+}
+address {
+	font-style: normal; font-weight: normal;
+}
+caption {
+	font-style: normal; font-weight: normal;
+}
+cite {
+	font-style: normal; font-weight: normal;
+}
+code {
+	font-style: normal; font-weight: normal;
+}
+dfn {
+	font-style: normal; font-weight: normal;
+}
+em {
+	font-style: normal; font-weight: normal;
+}
+var {
+	font-style: normal; font-weight: normal;
+}
+table {
+	border-collapse: collapse; border-spacing: 0;
+}
+button {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline; cursor: pointer;
+}
+input {
+	background: none; margin: 0px; padding: 0px; outline: 0px; border: 0px currentColor; border-image: none; font-size: 100%; vertical-align: baseline; cursor: pointer;
+}
+img {
+	vertical-align: middle;
+}
+.clearfix {
+	-ms-zoom: 1;
+}
+.clearfix::after {
+	clear: both; display: block; content: "";
+}
+.hide {
+	left: -100000em; top: -100000em; position: absolute;
+}
+.hidden {
+	left: -100000em; top: -100000em; position: absolute;
+}
+.et_wrap {
+	margin: 15px auto; padding: 0px 10px; width: 1100px; position: relative;
+}
+.et_wrap .header h1 {
+	margin: 20px 5px; width: 340px; display: inline-block;
+}
+.et_wrap .header h1 img {
+	width: 100%;
+}
+.et_wrap .header .gnb_wrap {
+	margin-top: 15px; position: relative; background-color: rgb(217, 27, 92);
+}
+.et_wrap .header .gnb_wrap .gnb li {
+	color: rgb(255, 255, 255); font-size: 17px; font-weight: bold; float: left;
+}
+.et_wrap .header .gnb_wrap .gnb a {
+	padding: 15px 40px; line-height: 1em; display: inline-block;
+}
+.et_wrap .header .gnb_wrap .gnb a:hover {
+	text-decoration: none; background-color: rgb(195, 24, 83);
+}
+.et_wrap .header .gnb_wrap .gnb a.on {
+	background-color: rgb(195, 24, 83);
+}
+.search_wrap {
+	top: 10px; width: 150px; right: 70px; position: absolute;
+}
+.searchbox {
+	transition:width 0.3s; width: 0%; height: 26px; overflow: hidden; float: right; position: relative; min-width: 26px; -webkit-transition: width 0.3s; -moz-transition: width 0.3s; -o-transition: width 0.3s;
+}
+.searchbox-input {
+	background: rgb(255, 255, 255); margin: 0px; padding: 0px 15px 0px 5px; outline: 0px; border: 0px currentColor; border-image: none; top: 0px; width: 130px; height: 26px; right: 0px; color: rgb(17, 17, 17); font-size: 13px;
+}
+:-ms-input-placeholder.searchbox-input {
+	color: rgb(34, 34, 34);
+}
+.searchbox-icon {
+	background: url("http://img.etnews.com/2016/etnews/images/common/btn_search.png") no-repeat right top rgb(217, 27, 92); margin: 0px; padding: 0px; outline: 0px; border: 1px solid rgb(217, 27, 92); border-image: none; top: 0px; width: 30px; height: 26px; text-align: center; right: 0px; line-height: 50px; font-size: 0px; display: block; position: absolute; cursor: pointer;
+}
+.searchbox-submit {
+	background: url("http://img.etnews.com/2016/etnews/images/common/btn_search.png") no-repeat right top rgb(217, 27, 92); margin: 0px; padding: 0px; outline: 0px; border: 1px solid rgb(217, 27, 92); border-image: none; top: 0px; width: 30px; height: 26px; text-align: center; right: 0px; line-height: 50px; font-size: 0px; display: block; position: absolute; cursor: pointer;
+}
+.searchbox-open {
+	width: 100%;
+}
+.search_wrap.search_page {
+	width: 220px; right: 20px;
+}
+.search_wrap.search_page .searchbox-input {
+	width: 200px;
+}
+.et_all_trig {
+	top: 13px; width: 26px; height: 21px; right: 20px; position: absolute;
+}
+.et_all_trig a {
+	background: url("http://img.etnews.com/2016/etnews/images/common/icon_main.png") no-repeat -10px -12px; width: 26px; height: 21px; line-height: 0; text-indent: -9999px; overflow: hidden; font-size: 0px; display: block;
+}
+.et_all_trig a.et_all_trig_on {
+	background-position: -47px -12px;
+}
+.full_menu {
+	background: url("http://img.etnews.com/2016/etnews/images/common/bg_184ddd.png") 0px 0px rgb(250, 250, 250); padding: 30px 0px; width: 100%; border-right-color: rgb(221, 221, 221); border-bottom-color: rgb(221, 221, 221); border-left-color: rgb(221, 221, 221); border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; position: absolute; z-index: 999; box-sizing: border-box; box-shadow: 0px 1px 2px rgba(0,0,0,0.1);
+}
+.full_menu dl {
+	padding: 0px 20px 0px 30px; width: 16.66%; height: 100%; float: left; box-sizing: border-box;
+}
+.full_menu dl dt:first-child {
+	padding: 0px 0px 5px;
+}
+.full_menu dt {
+	padding: 15px 0px 5px; color: rgb(217, 27, 92); font-weight: bold;
+}
+.full_menu dd {
+	padding: 5px 0px;
+}
+.full_menu dl:nth-child(3) dt {
+	color: rgb(250, 250, 250);
+}
+.full_menu_sns {
+	right: 30px; bottom: 20px; position: absolute;
+}
+.full_menu_sns li {
+	margin-left: 7px; float: left;
+}
+.full_menu_sns li.sns_twitter a {
+	background: url("http://img.etnews.com/2016/etnews/images/common/icon_main.png") no-repeat -10px -94px; width: 34px; height: 34px; display: inline-block;
+}
+.full_menu_sns li.sns_facebook a {
+	background: url("http://img.etnews.com/2016/etnews/images/common/icon_main.png") no-repeat -54px -94px; width: 34px; height: 34px; display: inline-block;
+}
+.full_menu_sns li.sns_youtube a {
+	background: url("http://img.etnews.com/2016/etnews/images/common/icon_main.png") no-repeat -98px -94px; width: 34px; height: 34px; display: inline-block;
+}
+.full_menu_sns li.sns_twitter a:hover {
+	background: url("http://img.etnews.com/2016/etnews/images/common/icon_main.png") no-repeat -10px -50px; width: 34px; height: 34px; display: inline-block;
+}
+.full_menu_sns li.sns_facebook a:hover {
+	background: url("http://img.etnews.com/2016/etnews/images/common/icon_main.png") no-repeat -54px -50px; width: 34px; height: 34px; display: inline-block;
+}
+.full_menu_sns li.sns_youtube a:hover {
+	background: url("http://img.etnews.com/2016/etnews/images/common/icon_main.png") no-repeat -98px -50px; width: 34px; height: 34px; display: inline-block;
+}
+.full_menu .member_service li {
+	padding: 4px 0px;
+}
+.full_menu .member_service li:first-child {
+	padding: 10px 0px 4px; color: rgb(217, 27, 92); font-weight: bold;
+}
+.footer {
+	padding: 20px 0px; margin-top: 1px; border-top-color: rgb(221, 221, 221); border-top-width: 1px; border-top-style: solid; position: relative;
+}
+.footer .logo {
+	width: 150px; float: left;
+}
+.footer .logo img {
+	width: 100%; height: auto;
+}
+.footer .company_info {
+	color: rgb(85, 85, 85); font-size: 13px; margin-top: 5px; margin-left: 25px; float: left;
+}
+.footer .company_info li {
+	background: url("http://img.etnews.com/2016/etnews/images/common/bg_corp_line.png") no-repeat left; padding: 2px 8px; float: left;
+}
+.footer .company_info li:first-child {
+	background: none; padding: 2px 16px 2px 0px; font-weight: bold;
+}
+.footer .address_copyright {
+	line-height: 1.5em; margin-top: 15px;
+}
+.footer .address_copyright address {
+	font-size: 12px;
+}
+.footer .address_copyright address b {
+	margin-left: 8px;
+}
+.footer .address_copyright address b:first-child {
+	margin-left: 0px;
+}
+.footer .address_copyright address > br + b {
+	margin-left: 0px;
+}
+.footer .btn_rss {
+	width: 37px; height: 15px; margin-left: 3px; display: inline-block;
+}
+.footer .familysite {
+	top: 20px; right: 0px; position: absolute;
+}
+.footer .familysite form {
+	padding: 5px; border: 1px solid rgb(221, 221, 221); border-image: none; background-color: rgb(246, 246, 246);
+}
+.btn_gotop {
+	right: 0px; bottom: 10px; position: absolute;
+}
+.ad_728x90 {
+	width: 728px; height: 90px; text-align: right; float: right; display: inline-block;
+}
+.ad_600x100 .fake_h3 {
+	width: 120px; height: 130px; text-align: right; border-right-color: rgb(221, 221, 221); border-right-width: 1px; border-right-style: solid; float: left; display: inline-block; box-sizing: border-box;
+}
+.ad_600x100 .fake_categorynews {
+	padding: 10px 0px 20px 20px; width: 600px; overflow: hidden; float: left; max-height: 100px;
+}
+.ad_340x120 {
+	width: 340px; height: 120px; text-align: center; overflow: hidden; position: relative; box-sizing: border-box;
+}
+.ad_340x120 .paging1 {
+	right: 10px; bottom: 10px; position: absolute;
+}
+.ad_340x120 img {
+	width: auto; height: 120px;
+}
+.ad_120x600_right {
+	left: 1120px; top: 172px; position: absolute;
+}
+.ad_355x220 {
+	left: 405px; top: 737px; position: absolute; z-index: 9;
+}
+.ad_355x220 .banner_wrap {
+	position: relative;
+}
+.ad_355x220 .banner_wrap .close {
+	right: 0px; bottom: 0px; position: absolute; cursor: pointer;
+}
+.ad_683x160 {
+	margin: 0px auto; text-align: center;
+}
+.ad_ic > span {
+	padding: 15px; width: 100%; text-align: center; display: inline-block; box-sizing: border-box;
+}
+.list_wrap .list_news .ad_680x80 {
+	text-align: center; padding-bottom: 0px;
+}
+.ad_300x250 {
+	padding: 15px; text-align: center; box-sizing: border-box;
+}
+.ad_300x250 embed {
+	z-index: 1;
+}
+.ad_300x250 #happycity {
+	margin: 0px auto; width: 300px; height: 100px; overflow: hidden;
+}
+.ad_300x250 #happycity .unslider-wrap .imgWrap {
+	padding: 0px; width: 300px; height: 100px;
+}
+.aside_wrap .ad_300x250 .unslider-arrow.prev {
+	background: url("http://img.etnews.com/2016/etnews/images/common/slide_arrow_prev.png") no-repeat 50% 50% rgba(0, 0, 0, 0); left: 2px; top: 50%;
+}
+.aside_wrap .ad_300x250 .unslider-arrow.next {
+	background: url("http://img.etnews.com/2016/etnews/images/common/slide_arrow.png") no-repeat 50% 50% rgba(0, 0, 0, 0); right: 2px;
+}
+.bnr_topbox01 {
+	z-index: 999;
+}
+.article_ad {
+	margin: 0px 0px 20px 30px; width: 250px; height: 250px; float: right;
+}
+.article_body p .ad_336x280 {
+	margin: 0px 0px 20px 20px; width: 336px; height: 280px; float: right; display: inline-block;
+}
+#winxplayer img {
+	display: none !important;
+}
+.ad_titlever {
+	padding: 0px;
+}
+.ad_titlever h3 {
+	text-align: left;
+}
+.ad_titlever > a {
+	margin: 15px; display: block;
+}
+.popup_layer {
+	left: 600px; top: 965px; width: 160px; height: 137px; overflow: hidden; position: absolute; z-index: 9999; box-sizing: border-box; box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+}
+.popup_layer .btn_close {
+	padding: 0px; border: currentColor; border-image: none; width: 28px; height: 28px; right: 0px; bottom: 0px; overflow: visible; position: absolute; cursor: pointer;
+}
+.ad_pang {
+	top: 106px; width: 120px; height: 46px; right: -120px; position: absolute;
+}
+.aside_wrap aside.ad_text {
+	background: rgb(254, 254, 254);
+}
+.aside_wrap aside.ad_text h3 {
+	background: url("http://img.etnews.com/2016/etnews/images/common/icon_ad.png") no-repeat 295px 12px; border: currentColor; border-image: none; color: rgb(34, 34, 34);
+}
+.aside_wrap aside.ad_text ul {
+	margin: 0px 0px 5px;
+}
+.aside_wrap aside.ad_text li {
+	color: rgb(51, 51, 51); letter-spacing: 0px;
+}
+#leftWingBanner {
+	position: absolute;
+}
+#RightWingBanner {
+	position: absolute;
+}
+.ad_300x250#divMenu_right {
+	padding: 15px; width: 340px;
+}
+#wingBanner {
+	position: relative; z-index: 1000;
+}
+#wingLeft {
+	width: 72px; height: 72px; right: 15px; position: absolute;
+}
+#wingRight {
+	left: 1008px; width: 72px; height: 72px; position: absolute;
+}
+#wingLeft2 {
+	background: url("http://img.etnews.com/2013/et/images/sns/wing_bn_bg.png") no-repeat right top; width: 59px; height: 182px; right: 15px; padding-top: 20px; position: absolute;
+}
+#wingLeft3 {
+	background: url("http://img.etnews.com/2013/et/images/sns/wing_bn_bg.png") no-repeat right top; width: 59px; height: 178px; right: 15px; overflow: hidden; padding-top: 0px; position: absolute;
+}
+#wingLeft3 a {
+	width: 59px; height: 59px; display: block;
+}
+#wingLeft3 a.wing_ico1 {
+	background: url("http://img.etnews.co.kr/2013/et/images/sns/wing_bn1.png") no-repeat left top;
+}
+#wingLeft3 a.wing_ico1:hover {
+	background: url("http://img.etnews.co.kr/2013/et/images/sns/wing_bn1_on.png") no-repeat left top; text-decoration: none;
+}
+#wingLeft3 a.wing_ico2 {
+	background: url("http://img.etnews.co.kr/2013/et/images/sns/wing_bn2.png") no-repeat left top;
+}
+#wingLeft3 a.wing_ico2:hover {
+	background: url("http://img.etnews.co.kr/2013/et/images/sns/wing_bn2_on.png") no-repeat left top; text-decoration: none;
+}
+#wingLeft3 a.wing_ico3 {
+	background: url("http://img.etnews.co.kr/2013/et/images/sns/wing_bn3.png") no-repeat left top;
+}
+#wingLeft3 a.wing_ico3:hover {
+	background: url("http://img.etnews.co.kr/2013/et/images/sns/wing_bn3_on.png") no-repeat left top; text-decoration: none;
+}
+#wingLeft3 a.wing_ico4 {
+	background: url("http://img.etnews.co.kr/2013/et/images/sns/wing_bn4.png") no-repeat left top; visibility: hidden;
+}
+#wingLeft3 a.wing_ico4:hover {
+	background: url("http://img.etnews.co.kr/2013/et/images/sns/wing_bn4_on.png") no-repeat left top; text-decoration: none;
+}
+#wingLeftSticky {
+	left: -110px; top: 0px; position: absolute; z-index: 100;
+}
+#wingLeftSticky1 {
+	top: 0px; width: 72px; height: 102px; right: 0px; position: absolute; z-index: 100;
+}
+#wingLeftSticky2 {
+	top: 20px; width: 72px; height: 400px; right: 0px; position: absolute; z-index: 100;
+}
+#wingRightSticky {
+	left: 1100px; top: 0px; width: 72px; position: absolute; z-index: 100;
+}
+#wingRightSticky1 {
+	left: 0px; top: 0px; width: 72px; height: 300px; position: absolute; z-index: 100;
+}
+#wingRightSticky2 {
+	left: 10px; top: 20px; width: 120px; height: 600px; position: absolute;
+}
+#wingRightSticky3 {
+	left: 20px; top: 220px; width: 100px; height: 400px; position: absolute;
+}
+#wingLeftInterworks {
+	top: 222px; width: 220px; height: 600px; right: 1008px; display: none; position: absolute; z-index: 10;
+}
+#wingRightInterworks {
+	left: 1008px; top: 222px; width: 220px; height: 600px; visibility: hidden; position: absolute; z-index: 10;
+}
+#wingLeftSticky3 {
+	top: 0px; width: 118px; height: 102px; right: 0px; position: absolute; z-index: 100;
+}
+.nospace {
+	height: 0px !important; overflow: hidden; visibility: hidden;
+}
+.left_ad_div {
+	margin: 0px 0px 40px 40px; display: inline-block;
+}
+.layer_notice {
+	position: absolute;
+}
+.ad_layer340x325 {
+	background: blue; top: 173px; width: 340px; height: 325px; right: 10px; position: absolute;
+}
+.ad_layer115x140 {
+	left: 5px; top: 305px; position: absolute;
+}
+.ad_layer120x150 {
+	left: -130px; top: 160px; position: absolute;
+}
+.ad_340 {
+	border: currentColor !important; border-image: none !important; overflow: hidden;
+}
+.layer_banner_ict {
+	left: 3px; bottom: 292px; position: absolute;
+}
+.mg0 {
+	margin: 0px !important;
+}
+.mgt0 {
+	margin-top: 0px;
+}
+.mgt10 {
+	margin-top: 10px;
+}
+.mgt20 {
+	margin-top: 20px;
+}
+.mgt30 {
+	margin-top: 30px;
+}
+.mgt40 {
+	margin-top: 40px;
+}
+.mgt50 {
+	margin-top: 50px;
+}
+.mgr0 {
+	margin-right: 0px;
+}
+.mgr10 {
+	margin-right: 10px;
+}
+.mgr20 {
+	margin-right: 20px;
+}
+.mgr30 {
+	margin-right: 30px;
+}
+.mgr40 {
+	margin-right: 40px;
+}
+.mgr50 {
+	margin-right: 50px;
+}
+.mgb0 {
+	margin-bottom: 0px;
+}
+.mgb10 {
+	margin-bottom: 10px;
+}
+.mgb20 {
+	margin-bottom: 20px;
+}
+.mgb30 {
+	margin-bottom: 30px;
+}
+.mgb40 {
+	margin-bottom: 40px;
+}
+.mgb50 {
+	margin-bottom: 50px;
+}
+.mgl0 {
+	margin-left: 0px;
+}
+.mgl10 {
+	margin-left: 10px;
+}
+.mgl20 {
+	margin-left: 20px;
+}
+.mgl30 {
+	margin-left: 30px;
+}
+.mgl40 {
+	margin-left: 40px;
+}
+.mgl50 {
+	margin-left: 50px;
+}

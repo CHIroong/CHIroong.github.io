@@ -1,0 +1,5022 @@
+.template_skin_100 {
+	margin: 10px 0px 5px;
+}
+.template_skin_100 .ts_out {
+	height: auto; text-align: left; overflow: hidden; float: left;
+}
+.template_skin_100 .ts_box {
+	height: auto; overflow: hidden;
+}
+.template_skin_100 .ts_li {
+	text-align: center; overflow: hidden;
+}
+.template_skin_100 .ts_photo {
+	margin-bottom: 5px;
+}
+.template_skin_100 .ts_title_a {
+	white-space: nowrap;
+}
+.template_skin_100 .ts_date_a {
+	white-space: nowrap;
+}
+.template_skin_100 .ts_title_a {
+	color: rgb(86, 85, 90); line-height: 1.2em; font-family: dotum; word-spacing: -5px;
+}
+.template_skin_100 .ts_date_a {
+	color: rgb(171, 171, 173); font-size: 11px;
+}
+.template_skin_91 {
+	margin: 10px 0px 5px;
+}
+.template_skin_91 .ts_out {
+	height: auto; text-align: left; overflow: hidden; float: left;
+}
+.template_skin_91 .ts_box {
+	height: auto; overflow: hidden;
+}
+.template_skin_91 .ts_li {
+	text-align: center; overflow: hidden;
+}
+.template_skin_91 .ts_photo {
+	margin-bottom: 5px;
+}
+.template_skin_91 .ts_title {
+	height: 35px;
+}
+.template_skin_91 .ts_title .ts_title_a {
+	color: rgb(67, 67, 67) !important; line-height: 1.2em; font-family: dotum; word-spacing: -5px;
+}
+.template_skin_103 {
+	overflow: hidden; position: relative;
+}
+.template_skin_103 .ts_box {
+	overflow: hidden; position: absolute;
+}
+.template_skin_103 .ts_list {
+	height: auto; overflow: hidden; background-color: rgb(255, 255, 255);
+}
+.template_skin_103 .ts_list .tsl_img {
+	max-width: 100%;
+}
+.template_skin_103 .ts_btns {
+	right: 10px; position: absolute;
+}
+.template_skin_103 .tsb {
+	background: url("https://im.sisain.co.kr/custom/template/103_icon.png") no-repeat 0px 0px; border: currentColor; border-image: none; width: 21px; height: 21px; text-indent: -10000px; overflow: hidden;
+}
+.template_skin_103 .tsb.tsb1 {
+	background-position: 0px -21px;
+}
+.template_skin_103 .tsb.tsb1.on {
+	background-position: 0px 0px;
+}
+.template_skin_103 .tsb.tsb1:hover {
+	background-position: 0px 0px;
+}
+.template_skin_103 .tsb.tsb2 {
+	background-position: -21px -21px;
+}
+.template_skin_103 .tsb.tsb2.on {
+	background-position: -21px 0px;
+}
+.template_skin_103 .tsb.tsb2:hover {
+	background-position: -21px 0px;
+}
+.template_skin_103 .tsb.tsb3 {
+	background-position: -42px -21px;
+}
+.template_skin_103 .tsb.tsb3.on {
+	background-position: -42px 0px;
+}
+.template_skin_103 .tsb.tsb3:hover {
+	background-position: -42px 0px;
+}
+.template_skin_103 .tsb.tsb4 {
+	background-position: -63px -21px;
+}
+.template_skin_103 .tsb.tsb4.on {
+	background-position: -63px 0px;
+}
+.template_skin_103 .tsb.tsb4:hover {
+	background-position: -63px 0px;
+}
+.template_skin_103 .tsb.tsb5 {
+	background-position: -84px -21px;
+}
+.template_skin_103 .tsb.tsb5.on {
+	background-position: -84px 0px;
+}
+.template_skin_103 .tsb.tsb5:hover {
+	background-position: -84px 0px;
+}
+.template_skin_90 {
+	
+}
+.template_skin_90 .ts_photo_box {
+	height: auto; margin-bottom: 0px !important; float: left;
+}
+.template_skin_90 .ts_box .ts_head {
+	margin: 0px; padding-bottom: 10px;
+}
+.template_skin_90 .ts_head .htitle {
+	margin: 0px 0px 10px; color: rgb(48, 48, 48); line-height: 24px; letter-spacing: -3px; font-family: malgun gothic; font-size: 24px; font-weight: bold; display: block;
+}
+.template_skin_90 .ts_head .subtitle {
+	color: rgb(3, 110, 152); line-height: 14px; letter-spacing: -1px; font-family: dotum; font-size: 14px; font-weight: bold; display: block;
+}
+.template_skin_90 .ts_head a:hover {
+	color: rgb(221, 56, 77); text-decoration: none;
+}
+.template_skin_90 .ts_desc {
+	margin: 0px 0px 10px; padding-top: 8px; font-family: Gulim; font-size: 12px; display: block;
+}
+.template_skin_90 .ts_desc .tsd_a {
+	color: rgb(119, 119, 119); text-decoration: none;
+}
+.template_skin_90 .ts_box .ts_line_a {
+	background: url("https://im.sisain.co.kr/custom/template/90_icon.png") no-repeat 0px 7px; margin: 0px 0px 5px; padding: 0px 0px 0px 15px; color: rgb(0, 1, 101) !important; font-family: dotum !important; font-weight: bold; display: block;
+}
+.template_skin_84 {
+	width: 100%; overflow: hidden;
+}
+.template_skin_84 .ts_box {
+	margin: 0px; width: 50%; overflow: hidden; float: left;
+}
+.template_skin_84 .ts_list {
+	padding: 0.3em 0px; width: 100%; overflow: hidden;
+}
+.template_skin_84 .ts_sec {
+	border: 1px solid rgb(153, 153, 155); border-image: none; width: 45px; text-align: center; color: rgb(255, 255, 255); overflow: hidden; padding-top: 3px; font-family: dotum; font-size: 11px; float: left; display: inline-block; background-color: rgb(158, 165, 183);
+}
+.template_skin_84 .ts_list_a {
+	color: rgb(48, 48, 48) !important; letter-spacing: -1px; overflow: hidden; font-family: Dotum; font-size: 14px; font-weight: bold; margin-left: 65px; display: block; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.template_skin_84 .ts_list_a:hover {
+	color: rgb(221, 56, 77) !important;
+}
+.template_skin_97 {
+	height: auto; overflow: hidden;
+}
+.template_skin_97 .ts_box {
+	height: 170px; overflow: hidden;
+}
+.template_skin_97 .ts_list {
+	height: auto; overflow: hidden; background-color: rgb(255, 255, 255);
+}
+.template_skin_97 .ts_list .tsl_img {
+	max-width: 100%;
+}
+.template_skin_97 .ts_list .ts_title_content {
+	margin: 3px 0px 0px; height: 52px; overflow: hidden;
+}
+.template_skin_97 .ts_list .ts_title_content .ts_title_a {
+	color: rgb(53, 65, 137); overflow: hidden; font-family: dotum; font-weight: bold; display: block; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.template_skin_97 .ts_list .ts_title_content .ts_summary_a {
+	margin: 1px 0px 0px; color: rgb(139, 139, 139); display: block;
+}
+.template_skin_97 .ts_btns {
+	text-align: right; margin-top: -20px; position: absolute;
+}
+.template_skin_97 .ts_btn {
+	background: url("https://im.sisain.co.kr/custom/template/97_icon.png") no-repeat 0px 0px; border: currentColor; border-image: none; width: 15px; height: 15px; text-indent: -10000px; overflow: hidden;
+}
+.template_skin_97 .ts_btn.ts_prev {
+	margin-right: -4px;
+}
+.template_skin_97 .ts_btn.ts_next {
+	background-position: -15px 0px; width: 14px;
+}
+.template_skin_98 {
+	
+}
+.template_skin_98 .ts_box {
+	margin: 0px 0px 5px; padding: 5px 0px; overflow: hidden;
+}
+.template_skin_98 .ts_box .ts_photo {
+	width: 80px; height: 53px; overflow: hidden;
+}
+.template_skin_98 .ts_box .ts_photo .tsp_img {
+	max-width: 100%;
+}
+.template_skin_98 .ts_box .ts_content {
+	margin-top: 5px;
+}
+.template_skin_98 .ts_box .ts_content .ts_title_a {
+	margin: 0px 0px 5px; color: rgb(59, 90, 144); font-weight: bold; display: block;
+}
+.template_skin_98 .ts_box .ts_content .ts_subtitle_a {
+	height: auto; color: rgb(108, 108, 108) !important; letter-spacing: -1px; overflow: hidden; font-size: 11px; display: block;
+}
+.template_skin_95 {
+	
+}
+.template_skin_95 .ts_box {
+	margin: 0px 0px 10px; padding: 10px 0px; overflow: hidden;
+}
+.template_skin_95 .ts_box.first {
+	border-bottom-color: rgb(208, 208, 208); border-bottom-width: 1px; border-bottom-style: dotted;
+}
+.template_skin_95 .ts_box .ts_title {
+	margin: 0px 0px 5px; color: rgb(75, 76, 80) !important; font-weight: bold; display: block;
+}
+.template_skin_95 .ts_box .ts_photo {
+	width: 80px; height: 53px; overflow: hidden; margin-right: 10px;
+}
+.template_skin_95 .ts_box .ts_photo .tsp_img {
+	max-width: 100%;
+}
+.template_skin_95 .ts_box .ts_content .ts_title_a {
+	margin: 0px 0px 10px; color: rgb(76, 76, 76); font-weight: bold; display: block;
+}
+.template_skin_95 .ts_box .ts_content .ts_summary_a {
+	height: auto; color: rgb(119, 119, 119) !important; letter-spacing: -1px; overflow: hidden; display: block;
+}
+.template_skin_95 .ts_box.ts_title {
+	background: url("https://im.sisain.co.kr/custom/template/86_icon.png") no-repeat 0px 6px; margin: 0px 0px 7px; padding: 0px 0px 0px 10px;
+}
+.template_skin_95 .ts_box.ts_title .tst_a {
+	color: rgb(56, 56, 56) !important;
+}
+.template_skin_89 {
+	height: auto; overflow: hidden;
+}
+.template_skin_89 .ts_box {
+	height: 170px; overflow: hidden;
+}
+.template_skin_89 .ts_list {
+	height: auto; overflow: hidden;
+}
+.template_skin_89 .ts_list .tsl_img {
+	max-width: 100%;
+}
+.template_skin_89 .ts_list .ts_title {
+	width: 100%; height: 52px; bottom: 0px; position: absolute;
+}
+.template_skin_89 .ts_list .ts_title_content {
+	width: 100%; height: 52px; bottom: 0px; position: absolute;
+}
+.template_skin_89 .ts_list .ts_title {
+	opacity: 0.6; background-color: rgb(0, 0, 0);
+}
+.template_skin_89 .ts_list .ts_title_content {
+	padding: 6px 0px 0px; text-align: center;
+}
+.template_skin_89 .ts_list .ts_title_content .ts_title_a {
+	margin: 0px 25px; letter-spacing: -1px; overflow: hidden; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.template_skin_89 .ts_list .ts_title_content .ts_summary_a {
+	margin: 0px 25px; letter-spacing: -1px; overflow: hidden; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.template_skin_89 .ts_list .ts_title_content .ts_title_a {
+	color: rgb(255, 255, 255); font-family: dotum; font-size: 14px; font-weight: bold; display: block;
+}
+.template_skin_89 .ts_list .ts_title_content .ts_summary_a {
+	color: rgb(206, 206, 206); font-family: dotum; font-size: 11px; display: block;
+}
+.template_skin_89 .ts_box .ts_btn {
+	background: url("https://im.sisain.co.kr/custom/template/89_icon.png") no-repeat 0px 0px; border: currentColor; border-image: none; width: 8px; height: 15px; bottom: 15px; text-indent: -10000px; overflow: hidden; position: absolute;
+}
+.template_skin_89 .ts_box .ts_btn.ts_prev {
+	left: 8px;
+}
+.template_skin_89 .ts_box .ts_btn.ts_next {
+	background-position: -9px 0px; right: 8px;
+}
+.template_skin_85 {
+	margin: 0px; border: 1px solid rgb(221, 221, 221); border-image: none; height: auto; overflow: hidden; background-color: rgb(248, 248, 248);
+}
+.template_skin_85 .ts_break_news {
+	margin: 6px 5px 4px; height: 27px; overflow: hidden;
+}
+.template_skin_85 .ts_icon {
+	background: url("https://im.sisain.co.kr/custom/template/85_icon.png") no-repeat 0px 0px;
+}
+.template_skin_85 .ts_label {
+	background-position: 0px -100px; width: 51px; height: 25px; text-indent: -10000px;
+}
+.template_skin_85 .ts_roll {
+	height: 20px; overflow: hidden; position: relative;
+}
+.template_skin_85 .ts_box {
+	margin: 5px 10px; top: 0px; width: 85%; overflow: hidden; position: absolute;
+}
+.template_skin_85 .ts_box .ts_li {
+	width: auto; height: 20px; overflow: hidden; display: list-item; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.template_skin_85 .ts_box .ts_title_a {
+	color: rgb(109, 109, 109) !important; font-family: dotum !important;
+}
+.template_skin_85 .ts_btns {
+	margin: -25px 0px 0px; width: 14px; height: 27px; float: right; position: relative;
+}
+.template_skin_85 .ts_btns .ts_btn {
+	border: currentColor; border-image: none; width: 14px; height: 14px; text-indent: -10000px; background-color: transparent;
+}
+.template_skin_85 .ts_btns .tsb_up {
+	background-position: 0px 0px;
+}
+.template_skin_85 .ts_btns .tsb_down {
+	background-position: -100px 0px; margin-top: -5px; display: block;
+}
+.template_skin_87 {
+	
+}
+.template_skin_87 .ts_box {
+	margin: 0.5em 0px;
+}
+.template_skin_87 .ts_list {
+	background: url("https://im.sisain.co.kr/custom/template/87_icon.png") no-repeat 0px 5px; padding: 0.3em 0px 0.5em 0.3em;
+}
+.template_skin_87 .ts_list .ts_list_a:hover {
+	color: rgb(221, 56, 77);
+}
+.template_skin_87 .ts_list_a {
+	width: 100%; color: rgb(63, 63, 63); letter-spacing: -1px; overflow: hidden; margin-left: 1.2em; display: block; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.template_skin_86 {
+	
+}
+.template_skin_86 .ts_box {
+	margin: 0px 0px 10px; padding: 10px 0px; overflow: hidden;
+}
+.template_skin_86 .ts_box.first {
+	border-bottom-color: rgb(208, 208, 208); border-bottom-width: 1px; border-bottom-style: dotted;
+}
+.template_skin_86 .ts_box .ts_title {
+	margin: 0px 0px 10px; color: rgb(56, 56, 56) !important; font-weight: bold; display: block;
+}
+.template_skin_86 .ts_box .ts_photo {
+	width: 80px; height: 53px; overflow: hidden; margin-right: 10px;
+}
+.template_skin_86 .ts_box .ts_photo .tsp_img {
+	max-width: 80px;
+}
+.template_skin_86 .ts_box .ts_summary {
+	height: 50px; overflow: hidden;
+}
+.template_skin_86 .ts_box .tss_a {
+	color: rgb(119, 119, 119) !important; letter-spacing: -1px;
+}
+.template_skin_86 .ts_box.ts_title {
+	background: url("https://im.sisain.co.kr/custom/template/86_icon.png") no-repeat 0px 6px; margin: 0px 0px 7px; padding: 0px 0px 0px 10px;
+}
+.template_skin_86 .ts_box.ts_title .tst_a {
+	color: rgb(56, 56, 56) !important;
+}
+.template_skin_81 {
+	
+}
+.template_skin_81 .ts_box {
+	margin: 0.5em 0px;
+}
+.template_skin_81 .ts_list {
+	background: url("https://im.sisain.co.kr/custom/template/81_icon.png") no-repeat 0px 5px; padding: 0.3em 0px 0.5em 0.3em;
+}
+.template_skin_81 .ts_list .ts_list_a:hover {
+	color: rgb(221, 56, 77);
+}
+.template_skin_81 .ts_list_a {
+	width: 100%; color: rgb(85, 85, 85); letter-spacing: -1px; overflow: hidden; font-family: dotum; margin-left: 1.2em; display: block; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.template_skin_93 {
+	width: 100%; overflow: hidden;
+}
+.template_skin_93 .auto_line1_list {
+	margin: 0px; width: 100%; overflow: hidden;
+}
+.template_skin_93 .al1_list {
+	padding: 0.3em 0px; width: 100%; overflow: hidden;
+}
+.template_skin_93 .al1_list_a_14b {
+	width: 100%; letter-spacing: -1px; overflow: hidden; font-family: Dotum; font-size: 14px; font-weight: bold; display: block; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.template_skin_93 ul li a {
+	color: rgb(38, 41, 94) !important;
+}
+.template_skin_93 ul li :hover {
+	color: rgb(84, 111, 140) !important;
+}
+.template_skin_99 {
+	
+}
+.template_skin_99 .ts_box {
+	margin: 0px 0px 5px; padding: 5px 0px; overflow: hidden;
+}
+.template_skin_99 .ts_box .ts_photo {
+	width: 80px; height: 53px; overflow: hidden; margin-right: 10px;
+}
+.template_skin_99 .ts_box .ts_photo .tsp_img {
+	max-width: 100%;
+}
+.template_skin_99 .ts_box .ts_content .ts_title_a {
+	margin: 0px 0px 5px; color: rgb(67, 67, 67); font-weight: bold; display: block;
+}
+.template_skin_99 .ts_box .ts_content .ts_write_a {
+	height: auto; color: rgb(181, 181, 181); letter-spacing: -1px; overflow: hidden; font-family: dotum; font-size: 11px; display: block;
+}
+.template_skin_94 {
+	margin: 5px 0px;
+}
+.template_skin_94 .auto_subhead1_list {
+	margin: 3px 0px 12px;
+}
+.template_skin_94 .as1_photo_box {
+	text-align: center; overflow: hidden; float: left;
+}
+.template_skin_94 .as1_photo {
+	max-height: 100%; max-width: 100%;
+}
+.template_skin_94 .as1_article_title {
+	margin: 0px; padding: 0px 0px 0.2em;
+}
+.template_skin_94 .as1_article_title a {
+	color: rgb(67, 67, 67); letter-spacing: -0.1em; font-family: Gulim; font-size: 12px; font-weight: normal;
+}
+.template_skin_94 .as1_article_title :hover {
+	color: rgb(221, 56, 77);
+}
+.template_skin_92 {
+	
+}
+.template_skin_92 .ts_box {
+	padding: 8px 0px;
+}
+.template_skin_92 .am1_photo_box {
+	text-align: center; overflow: hidden; float: left;
+}
+.template_skin_92 .am1_photo {
+	max-height: 100%; max-width: 100%;
+}
+.template_skin_92 .am1_article_title_a {
+	margin: 0px 0px 0.3em; padding: 0.2em 0px; color: rgb(75, 75, 75); letter-spacing: -0.1em; overflow: hidden; font-family: Dotum; font-size: 14px; font-weight: bold; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.template_skin_92 .am1_article_content {
+	line-height: 1.5em; overflow: hidden; margin-top: 0.5em;
+}
+.template_skin_92 .am1_article_content_a {
+	color: rgb(120, 120, 120);
+}
+.template_skin_92 .am1_article_content_a:hover {
+	color: rgb(109, 109, 109);
+}
+.template_skin_88 {
+	
+}
+.template_skin_88 .ts_box {
+	margin: 0px 0px 10px; padding: 10px 0px 20px; height: auto; overflow: hidden; border-bottom-color: rgb(208, 208, 208); border-bottom-width: 1px; border-bottom-style: dashed;
+}
+.template_skin_88 .ts_box .ts_title {
+	margin: 0px 0px 5px; color: rgb(62, 62, 62) !important; font-family: dotum; font-size: 16px; font-weight: bold; display: block;
+}
+.template_skin_88 .ts_box .ts_photo {
+	width: 130px; height: 85px; overflow: hidden; margin-right: 15px;
+}
+.template_skin_88 .ts_box .ts_photo .tsp_img {
+	max-width: 130px;
+}
+.template_skin_88 .ts_box .tss_a {
+	color: rgb(119, 119, 119) !important; letter-spacing: -1px;
+}
+.template_skin_88 .ts_box .ts_summary .more {
+	background: url("https://im.sisain.co.kr/custom/box/109_icon.png") no-repeat 34px 6px; color: rgb(194, 194, 194); padding-right: 6px; font-family: dotum; font-size: 11px; font-weight: normal; margin-top: 5px; display: block;
+}
+.template_skin_82 {
+	width: 100%; overflow: hidden;
+}
+.template_skin_82 .ts_box {
+	margin: 0.5em 0px; width: 100%; overflow: hidden;
+}
+.template_skin_82 .ts_list {
+	padding: 0.3em 0px 0.5em; width: 100%; overflow: hidden;
+}
+.template_skin_82 .ts_list_a {
+	width: 70%; letter-spacing: -1px; overflow: hidden; font-family: dotum; font-size: 14px; font-weight: bold; float: left; display: block; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.template_skin_82 .ts_list_date {
+	width: 100px; text-align: right; color: rgb(204, 204, 204); overflow: hidden; font-family: tahoma; font-size: 11px; float: right; -ms-text-overflow: ellipsis;
+}
+.template_skin_70 {
+	
+}
+.template_skin_70 .ts_box {
+	padding: 10px 0px; overflow: hidden;
+}
+.template_skin_70 .ts_box .ts_title {
+	margin: 0px 0px 5px;
+}
+.template_skin_70 .ts_box .tst_a {
+	color: rgb(56, 56, 56) !important;
+}
+.template_skin_70 .ts_box .ts_summary {
+	height: 35px; overflow: hidden;
+}
+.template_skin_70 .ts_box .tss_a {
+	color: rgb(119, 119, 119) !important; letter-spacing: -1px;
+}
+.bs_list3 {
+	background: url("https://im.sisain.co.kr/dot-black.gif") no-repeat 0px 7px; margin: 0px; padding: 0px 0px 0px 10px; display: block;
+}
+.medi_box {
+	overflow: hidden; position: relative;
+}
+.medi_thumb {
+	border: 1px solid rgb(221, 221, 221); border-image: none; overflow: hidden; z-index: -1;
+}
+.medi_thumb .medi_img {
+	display: block; max-width: 100%;
+}
+.medi_thumb a {
+	color: rgb(127, 127, 127); text-decoration: none;
+}
+.medi_thumb :hover {
+	color: rgb(221, 56, 77);
+}
+.medi_title {
+	background: url("https://im.sisain.co.kr/medi_bg.gif") no-repeat 50% 0px; margin: 0px; padding: 6px 40px; text-align: center; border-top-color: rgb(221, 221, 221); border-top-width: 1px; border-top-style: solid; display: block;
+}
+.template_skin_28 {
+	
+}
+.template_skin_28 .ts_box {
+	margin: 0px 0px 5px; padding: 5px 0px; overflow: hidden;
+}
+.template_skin_28 .ts_box .ts_photo {
+	width: 80px; height: 53px; overflow: hidden; margin-right: 10px;
+}
+.template_skin_28 .ts_box .ts_photo .tsp_img {
+	max-width: 100%;
+}
+.template_skin_28 .ts_box .ts_content .ts_title_a {
+	margin: 0px 0px 5px; color: rgb(76, 76, 76); font-weight: bold; display: block;
+}
+.template_skin_28 .ts_box .ts_content .ts_subtitle_a {
+	height: auto; color: rgb(119, 119, 119) !important; letter-spacing: -1px; overflow: hidden; display: block;
+}
+.template_skin_19 {
+	width: 100%; overflow: hidden;
+}
+.template_skin_19 .auto_line4_list {
+	margin: 0.5em 0px; width: 100%; overflow: hidden;
+}
+.template_skin_19 .al4_list {
+	padding: 0.3em 0px 0.5em; width: 100%; overflow: hidden;
+}
+.template_skin_19 .al4_list_a {
+	width: 70%; letter-spacing: -1px; overflow: hidden; font-family: dotum; font-size: 14px; font-weight: bold; float: left; display: block; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.template_skin_19 .al4_list_name {
+	width: 100px; text-align: right; color: rgb(175, 175, 175); overflow: hidden; font-size: 11px; margin-top: 0.2em; float: right; -ms-text-overflow: ellipsis;
+}
+.template_skin_18 {
+	
+}
+.template_skin_18 .auto_line3_list {
+	margin: 0.5em 0px;
+}
+.template_skin_18 .al3_list {
+	background-position: 0% 40%; padding: 0.3em 0px 0.5em; background-repeat: no-repeat;
+}
+.template_skin_18 .al3_list a {
+	color: rgb(85, 85, 85);
+}
+.template_skin_18 .al3_list :hover {
+	color: rgb(221, 56, 77);
+}
+.template_skin_18 .al3_list_a {
+	width: 100%; letter-spacing: -1px; overflow: hidden; font-family: dotum; margin-left: 1.2em; display: block; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.auto_line1_box {
+	width: 100%; overflow: hidden;
+}
+.auto_line1_list {
+	margin: 0.5em 0px; width: 100%; overflow: hidden;
+}
+.al1_list {
+	padding: 0.3em 0px 0.5em; width: 100%; overflow: hidden;
+}
+.al1_list_a {
+	width: 100%; letter-spacing: -1px; overflow: hidden; font-family: dotum; font-weight: bold; display: block; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.auto_line2_box {
+	
+}
+.auto_line2_list {
+	margin: 0.5em 0px;
+}
+.al2_list22 {
+	padding: 2px 0px;
+}
+.al2_list_a {
+	width: 100%; color: rgb(51, 51, 51); letter-spacing: -1px; overflow: hidden; font-family: dotum; display: block; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.al2_list22 a {
+	color: rgb(51, 51, 51);
+}
+.al2_list22 :hover {
+	color: rgb(221, 56, 77);
+}
+.template_skin_14 {
+	margin: 5px 0px;
+}
+.template_skin_14 .auto_subhead1_list {
+	margin: 3px 0px 12px;
+}
+.template_skin_14 .as1_photo_box {
+	text-align: center; overflow: hidden; float: left;
+}
+.template_skin_14 .as1_photo {
+	max-height: 100%; max-width: 100%;
+}
+.template_skin_14 .as1_article_title {
+	margin: 0px; padding: 0px 0px 0.2em; color: rgb(51, 51, 51); letter-spacing: -0.1em; font-family: Gulim; font-size: 12px; font-weight: bold;
+}
+.template_skin_14 .as1_article_title a {
+	color: rgb(39, 42, 97);
+}
+.template_skin_14 .as1_article_title :hover {
+	color: rgb(221, 56, 77);
+}
+.template_skin_14 .as1_article_content {
+	line-height: 1.5em; font-family: Gulim; font-size: 12px;
+}
+.template_skin_14 .as1_article_content .as1_article_a {
+	color: rgb(119, 119, 119);
+}
+.template_skin_14 .as1_article_content .as1_article_a:hover {
+	color: rgb(221, 56, 77);
+}
+.todayhot {
+	width: 980px; position: relative;
+}
+.todayhot .tolimg {
+	width: 610px; height: 400px; text-align: center; overflow: hidden; float: left;
+}
+.todayhot .tolimg .tolimg_src {
+	width: auto; height: auto; vertical-align: middle; max-width: 610px;
+}
+.todayhot .tolimg .hoticon {
+	background: url("https://im.sisain.co.kr/today-hot.png") no-repeat 0px 0px; left: 0px; top: 0px; width: 45px; height: 45px; position: absolute; z-index: 1;
+}
+.tothumb {
+	margin: 0px 0px 0px 610px; overflow: hidden;
+}
+.zero {
+	list-style: none; margin: 0px; padding: 0px; overflow: hidden;
+}
+.tothumb li {
+	margin: 0px; width: 184px; height: 99px; overflow: hidden; border-bottom-color: rgb(255, 255, 255); border-left-color: rgb(255, 255, 255); border-bottom-width: 1px; border-left-width: 1px; border-bottom-style: solid; border-left-style: solid; float: left;
+}
+.tothumb li .tothumb_src {
+	width: auto; height: auto; max-width: 184px; opacity: 0.5;
+}
+.tothumb .white_bg {
+	opacity: 1 !important;
+}
+.tothumb .tothumb_src:hover {
+	opacity: 1 !important;
+}
+.todayhot .zero .edit_article {
+	float: left;
+}
+.photonplay {
+	width: 310px;
+}
+.photonplay .mmimg {
+	margin: 0px 0px 5px; padding: 0px; height: 200px; position: relative;
+}
+.photonplay .mmimg img {
+	display: block;
+}
+.photonplay .mmimg .ptext {
+	left: 10px; bottom: 4px; color: rgb(255, 255, 255); overflow: hidden; font-family: Gulim; font-size: 12px; white-space: nowrap; position: absolute; z-index: 9; -ms-text-overflow: ellipsis;
+}
+.photonplay .mmimg .pmask {
+	background: rgb(0, 0, 0); left: 0px; width: 310px; height: 25px; bottom: 0px; position: absolute; opacity: 0.5;
+}
+.photonplay .mmthumb {
+	height: 50px; overflow: hidden; position: relative;
+}
+.photonplay .mmthumb .thumbB {
+	list-style: none; margin: 0px; padding: 0px; width: 310px; overflow: hidden;
+}
+.photonplay .mmthumb ul li {
+	float: left;
+}
+.mmpre {
+	background: url("https://im.sisain.co.kr/photonplay-button.png") no-repeat 0px 0px; left: 5px; top: 10px; width: 16px; height: 26px; display: inline-block; position: absolute; z-index: 7; cursor: pointer;
+}
+.mmnext {
+	background: url("https://im.sisain.co.kr/photonplay-button.png") no-repeat -16px 0px; top: 10px; width: 16px; height: 26px; right: 5px; display: inline-block; position: absolute; z-index: 7; cursor: pointer;
+}
+.ml5 {
+	margin: 0px 0px 0px 5px;
+}
+.photonplay .btns {
+	opacity: 0.6;
+}
+.photonplay .thumbB .edit_article {
+	float: left;
+}
+.template_skin_104 {
+	height: auto; overflow: hidden;
+}
+.template_skin_104 .ts_ul {
+	height: auto; overflow: hidden; margin-top: 10px; display: none;
+}
+.template_skin_104 .ts_ul.first {
+	display: block;
+}
+.template_skin_104 .ts_li {
+	background: url("https://im.sisain.co.kr/custom/template/104_icon.png") no-repeat 0px 7px; padding: 0px 0px 5px 7px; overflow: hidden; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.template_skin_104 .ts_li .tsl_a {
+	color: rgb(70, 70, 70); letter-spacing: -1px; font-size: 11px;
+}
+.template_skin_104 .ts_btns {
+	text-align: right; margin-top: -30px; position: absolute;
+}
+.template_skin_104 .ts_btns .ts_page {
+	color: rgb(0, 0, 0); font-weight: bold; margin-right: 10px;
+}
+.template_skin_104 .ts_btn {
+	background: url("https://im.sisain.co.kr/custom/template/104_icon.png") no-repeat 0px -50px; border: currentColor; border-image: none; width: 12px; height: 13px; text-indent: -10000px; overflow: hidden; vertical-align: middle;
+}
+.template_skin_104 .ts_btn.ts_prev {
+	margin-right: -4px;
+}
+.template_skin_104 .ts_btn.ts_next {
+	background-position: -12px -50px; width: 11px;
+}
+.m_auto_line_article_a_rank {
+	margin: 0px 0px 0px 40px; padding: 16px 12px 12px 0px; width: auto; height: auto; overflow: hidden; display: block; white-space: nowrap; -ms-text-overflow: ellipsis; max-width: 300px;
+}
+.template_skin_106 {
+	width: 100%; overflow: hidden;
+}
+.template_skin_106 .ts_box {
+	margin: 0px; width: 47%; overflow: hidden; float: left;
+}
+.template_skin_106 .ts_list {
+	padding: 0px 0px 15px; width: 100%; overflow: hidden;
+}
+.template_skin_106 .ts_list_a {
+	background: url("https://im.sisain.co.kr/custom/template/106_icon.png") no-repeat 5px 40%; color: rgb(37, 37, 37) !important; letter-spacing: -1px; overflow: hidden; padding-left: 20px; font-family: dotum; font-size: 14px; font-weight: bold; display: block; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.template_skin_106 .ts_list_a:hover {
+	color: rgb(221, 56, 77) !important;
+}
+.template_skin_107 {
+	width: 100%; overflow: hidden;
+}
+.template_skin_107 .ts_box {
+	margin: 0px; overflow: hidden; float: left;
+}
+.template_skin_107 .ts_box.one {
+	width: 265px; height: 140px; text-align: center;
+}
+.template_skin_107 .ts_box.one .ts_box_img {
+	max-width: 100%;
+}
+.template_skin_107 .ts_box.two {
+	width: 370px; margin-left: 25px;
+}
+.template_skin_107 .ts_list {
+	padding: 0px 0px 10px; width: 100%; overflow: hidden;
+}
+.template_skin_107 .ts_list_a {
+	background: url("https://im.sisain.co.kr/custom/template/107_icon.png") no-repeat 5px 40%; color: rgb(37, 37, 37) !important; letter-spacing: -1px; overflow: hidden; padding-left: 15px; font-family: dotum; font-size: 14px; font-weight: bold; display: block; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.template_skin_107 .ts_list_a:hover {
+	color: rgb(221, 56, 77) !important;
+}
+.template_skin_108 {
+	margin: 13px 10px 0px;
+}
+.template_skin_108 .ts_box {
+	margin: 0px 0px 8px; padding: 0px 0px 10px; overflow: hidden; border-bottom-color: rgb(229, 229, 229); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.template_skin_108 .ts_box .ts_photo {
+	border: 1px solid rgb(220, 220, 220); border-image: none; width: 59px; height: 59px; overflow: hidden; margin-right: 10px;
+}
+.template_skin_108 .ts_box .ts_photo .tsp_img {
+	max-width: 100%;
+}
+.template_skin_108 .ts_box .ts_content .ts_title_a {
+	margin: 0px 0px 5px; color: rgb(236, 70, 30); overflow: hidden; font-weight: bold; display: block; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.template_skin_108 .ts_box .ts_content .ts_subtitle_a {
+	height: auto; color: rgb(93, 93, 93) !important; letter-spacing: -1px; overflow: hidden; display: block;
+}
+.template_skin_109 {
+	margin: 13px 10px 0px;
+}
+.template_skin_109 .ts_box {
+	margin: 0px 0px 10px; padding: 0px 0px 10px; overflow: hidden;
+}
+.template_skin_109 .ts_box.first {
+	border-bottom-color: rgb(229, 229, 229); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.template_skin_109 .ts_box .ts_title {
+	margin: 0px 0px 5px; color: rgb(93, 93, 93) !important; font-weight: bold; display: block;
+}
+.template_skin_109 .ts_box .ts_photo {
+	border: 1px solid rgb(220, 220, 220); border-image: none; width: 60px; height: 60px; overflow: hidden; margin-right: 12px;
+}
+.template_skin_109 .ts_box .ts_photo .tsp_img {
+	width: 60px;
+}
+.template_skin_109 .ts_box .ts_content .ts_title_a {
+	margin: 0px 0px 3px; color: rgb(76, 76, 76); overflow: hidden; font-weight: bold; display: block; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.template_skin_109 .ts_box .ts_content .ts_summary_a {
+	height: 33px; color: rgb(93, 93, 93) !important; letter-spacing: -1px; overflow: hidden; display: block;
+}
+.template_skin_109 .ts_box.ts_title {
+	background: url("https://im.sisain.co.kr/custom/template/109_icon.png") no-repeat 0px 40%; margin: 0px 0px 6px; padding: 0px 0px 0px 10px; width: 235px; overflow: hidden; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.template_skin_109 .ts_box.ts_title .tst_a {
+	color: rgb(93, 93, 93) !important;
+}
+.template_skin_110 {
+	
+}
+.template_skin_110 .ts_box {
+	margin: 0px 0px 10px; overflow: hidden;
+}
+.template_skin_110 .ts_box.first {
+	
+}
+.template_skin_110 .ts_box .ts_title {
+	margin: 0px 0px 5px; color: rgb(93, 93, 93) !important; font-weight: bold; display: block;
+}
+.template_skin_110 .ts_box .ts_photo {
+	width: 130px; height: 80px; margin-right: 12px;
+}
+.template_skin_110 .ts_box .ts_photo .tsp_img {
+	width: 130px;
+}
+.template_skin_110 .ts_box .ts_content .ts_title_a {
+	margin: 0px 0px 3px; color: rgb(63, 63, 63); overflow: hidden; font-weight: bold; display: block; max-height: 80px;
+}
+.template_skin_110 .ts_box.ts_title {
+	background: url("https://im.sisain.co.kr/custom/template/110_icon.png") no-repeat 0px 40%; margin: 0px 0px 6px; padding: 0px 0px 0px 10px; width: 280px; overflow: hidden; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.template_skin_110 .ts_box.ts_title .tst_a {
+	color: rgb(52, 52, 52) !important;
+}
+.template_skin_111 {
+	margin: 0px 0px 10px;
+}
+.template_skin_111 .ts_photo {
+	width: 195px; height: auto; text-align: center; overflow: hidden; max-height: 200px;
+}
+.template_skin_111 .ts_img {
+	max-width: 100%;
+}
+.template_skin_111 .ts_title {
+	margin: 10px 0px 5px; width: 195px; overflow: hidden; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.template_skin_111 .ts_title_a {
+	color: rgb(58, 58, 58); font-family: dotum; font-size: 14px;
+}
+.template_skin_111 .ts_summary {
+	height: 33px; overflow: hidden;
+}
+.template_skin_111 .ts_summary_a {
+	color: rgb(93, 93, 93); line-height: 1.5em;
+}
+.template_skin_114 {
+	margin: 0px 0px 10px;
+}
+.template_skin_114 .ts_photo {
+	width: 285px; height: auto; text-align: center; overflow: hidden; max-height: 200px;
+}
+.template_skin_114 .ts_img {
+	max-width: 100%;
+}
+.template_skin_114 .ts_title {
+	margin: 10px 0px 5px; width: 285px; height: auto; overflow: hidden; max-height: 35px;
+}
+.template_skin_114 .ts_title_a {
+	color: rgb(58, 58, 58); line-height: 1.1em; letter-spacing: 0.75px; font-family: dotum; font-size: 14px;
+}
+.template_skin_114 .ts_sub {
+	background: url("https://im.sisain.co.kr/custom/template/114_icon.png") no-repeat 0px 40%; margin: 7px 0px 0px;
+}
+.template_skin_114 .ts_sub_a {
+	margin: 0px 0px 0px 10px; color: rgb(93, 93, 93); letter-spacing: -0.75px;
+}
+.template_skin_116 {
+	margin: 0px; height: auto; overflow: hidden; background-color: rgb(244, 244, 244);
+}
+.template_skin_116 .ts_break_news {
+	margin: 6px 0px 4px; height: 20px; overflow: hidden;
+}
+.template_skin_116 .ts_icon {
+	background: url("https://im.sisain.co.kr/custom/template/116_icon.png") no-repeat 0px 0px;
+}
+.template_skin_116 .ts_roll {
+	margin: -4px 0px 0px; padding: 0px 10px; height: 20px; overflow: hidden; position: relative;
+}
+.template_skin_116 .ts_box {
+	margin: 5px 0px; top: 0px; width: 210px; overflow: hidden; position: absolute;
+}
+.template_skin_116 .ts_box .ts_li {
+	width: auto; height: 20px; display: list-item;
+}
+.template_skin_116 .ts_box .ts_title_a {
+	color: rgb(51, 51, 51); letter-spacing: -1px;
+}
+.template_skin_116 .ts_btns {
+	margin: -14px 10px 0px; width: 29px; height: 15px; float: right; position: relative;
+}
+.template_skin_116 .ts_btns .ts_btn {
+	border: currentColor; border-image: none; width: 15px; height: 15px; text-indent: -10000px; background-color: transparent;
+}
+.template_skin_116 .ts_btns .tsb_prev {
+	background-position: 0px 0px;
+}
+.template_skin_116 .ts_btns .tsb_next {
+	background-position: -15px 0px; width: 14px; margin-left: -4px;
+}
+.template_skin_115 {
+	margin: 5px 0px;
+}
+.template_skin_115 .ts_box {
+	padding: 10px 0px; border-bottom-color: rgb(236, 236, 236); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.template_skin_115 .tsb_photo {
+	margin-right: 10px; float: left;
+}
+.template_skin_115 .tsb_list {
+	
+}
+.template_skin_115 .tsb_title {
+	margin: -5px 0px 5px;
+}
+.template_skin_115 .tsb_title_a {
+	color: rgb(30, 30, 30); letter-spacing: -1px; font-family: Malgun Gothic,dotum; font-size: 18px;
+}
+.template_skin_115 .tsb_summary {
+	height: 52px; letter-spacing: -1px; overflow: hidden;
+}
+.template_skin_115 .tsb_summary_a {
+	color: rgb(103, 103, 103); line-height: 1.3em;
+}
+.template_skin_119 {
+	
+}
+.template_skin_119 .ts_box {
+	margin: 0px; width: 174px; height: 100px; text-align: center; overflow: hidden; float: left;
+}
+.template_skin_119 .ts_img {
+	max-width: 144px;
+}
+.template_skin_119 .ts_title_box {
+	width: 144px; height: 100px; text-align: center; display: inline-block; position: relative;
+}
+.template_skin_119 .ts_bg {
+	width: 100%; height: 30px; bottom: 0px; position: absolute; opacity: 0.5; background-color: rgb(0, 0, 0);
+}
+.template_skin_119 .ts_title {
+	width: 100%; text-align: center; bottom: 5px; color: rgb(255, 255, 255); letter-spacing: -1px; font-family: dotum; display: block; position: absolute;
+}
+.template_skin_119 .edit_article {
+	float: left;
+}
+.template_skin_121 {
+	width: 100%; overflow: hidden;
+}
+.template_skin_121 .auto_line1_list {
+	margin: 0px; width: 100%; overflow: hidden;
+}
+.template_skin_121 .al1_list {
+	background: url("https://im.sisain.co.kr/custom/template/108_icon.png") no-repeat 0px 11px; padding: 0.3em 0px 0.3em 1em; width: 100%; overflow: hidden;
+}
+.template_skin_121 .al1_list_a_14b {
+	width: 100%; letter-spacing: -1px; font-size: 13px; display: block;
+}
+.template_skin_121 ul li a {
+	color: rgb(75, 75, 75) !important;
+}
+.template_skin_121 ul li :hover {
+	color: rgb(97, 97, 97) !important;
+}
+.template_skin_122 {
+	margin: 10px 0px 5px;
+}
+.template_skin_122 .ts_box {
+	margin: 0px 0px 20px 20px; padding: 9px; border: 1px solid rgb(236, 236, 236); border-image: none; width: 160px; height: 180px; text-align: center; float: left;
+}
+.template_skin_122 .ts_box .tsb_img {
+	height: 115px; max-width: 140px;
+}
+.template_skin_122 .tsb_title {
+	margin: 5px 0px 0px; height: 35px; overflow: hidden;
+}
+.template_skin_122 .tsb_title_a {
+	color: rgb(118, 118, 118);
+}
+.template_skin_123 {
+	margin: 5px 0px;
+}
+.template_skin_123 .ts_box {
+	padding: 10px 0px; border-bottom-color: rgb(236, 236, 236); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.template_skin_123 .tsb_photo {
+	margin-right: 10px; float: left;
+}
+.template_skin_123 .tsb_list {
+	
+}
+.template_skin_123 .tsb_title {
+	margin: 0px 0px 5px;
+}
+.template_skin_123 .tsb_title_a {
+	color: rgb(30, 30, 30); letter-spacing: -1px; font-family: Malgun Gothic,dotum; font-size: 16px;
+}
+.template_skin_123 .tsb_title_a.first {
+	font-size: 18px;
+}
+.template_skin_123 .tsb_summary {
+	letter-spacing: -1px; overflow: hidden; max-height: 70px;
+}
+.template_skin_123 .tsb_summary_a {
+	color: rgb(103, 103, 103); line-height: 1.3em;
+}
+.template_skin_124 {
+	width: 100%; overflow: hidden;
+}
+.template_skin_122 .ts_photo_box {
+	margin: 5px 0px 10px; width: 320px; overflow: hidden;
+}
+.template_skin_122 .tspb_li {
+	width: 100px; height: 97px; text-align: center; overflow: hidden; margin-right: 10px; float: left;
+}
+.template_skin_122 .tspb_li.none {
+	margin-right: 0px;
+}
+.template_skin_122 .tspb_img {
+	max-height: 70px; max-width: 100%;
+}
+.template_skin_122 .tspb_list_a {
+	font: 11px/1.2em dotum; letter-spacing: -1px; display: block; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_122 .ts_box {
+	margin: 0px; width: 320px; overflow: hidden; float: left;
+}
+.template_skin_122 .ts_box.margin {
+	margin-right: 20px;
+}
+.template_skin_122 .ts_list {
+	background: url("https://im.sisain.co.kr/custom/template/124_icon.png") no-repeat 0px 45%; padding: 0.3em 0px 0.3em 1em; width: 100%; overflow: hidden;
+}
+.template_skin_122 .ts_list_a {
+	color: rgb(48, 48, 48) !important; letter-spacing: -1px; font-family: Dotum; font-size: 14px; font-weight: bold;
+}
+.template_skin_122 .ts_list_a:hover {
+	color: rgb(221, 56, 77) !important;
+}
+.template_skin_110 .ts_box {
+	margin: 10px 0px 0px; width: 215px; height: auto; text-align: center; overflow: hidden;
+}
+.template_skin_110 .ts_img {
+	max-width: 100%;
+}
+.template_skin_110 .ts_title_box {
+	width: 100%; height: 110px; text-align: center; display: inline-block; position: relative;
+}
+.template_skin_110 .ts_bg {
+	width: 100%; height: 30px; bottom: 0px; position: absolute; opacity: 0.5; background-color: rgb(0, 0, 0);
+}
+.template_skin_110 .ts_title {
+	padding: 0px 5px; width: 95%; text-align: center; bottom: 5px; color: rgb(255, 255, 255); letter-spacing: -1px; font-family: dotum; display: block; position: absolute;
+}
+.template_skin_118 {
+	width: 235px; overflow: hidden;
+}
+.template_skin_118 .ts_box {
+	width: 100%; overflow: hidden;
+}
+.template_skin_118 .ts_list {
+	padding: 2px 0px; width: 100%; text-align: left; overflow: hidden;
+}
+.template_skin_118 .ts_label {
+	font: 11px/normal dotum; padding: 3px 7px; color: rgb(255, 255, 255); margin-right: 8px; display: inline-block; font-size-adjust: none; font-stretch: normal; background-color: rgb(141, 141, 141);
+}
+.template_skin_118 .ts_list_a {
+	letter-spacing: -1px; font-family: dotum;
+}
+.template_skin_128 {
+	padding: 0px 10px;
+}
+.template_skin_128.m_slide_horizon {
+	border: currentColor; border-image: none;
+}
+.template_skin_128 .box_slide_horizon_box {
+	height: auto; overflow: hidden; border-bottom-color: rgb(1, 146, 209); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.template_skin_128 .ts_ul {
+	width: 100%; height: auto;
+}
+.template_skin_128 .ts_li {
+	width: 50%; height: auto; text-align: left; float: left;
+}
+.template_skin_128 .ts_li.second {
+	text-align: right;
+}
+.template_skin_128 .ts_li.second .ts_img {
+	border-left-color: rgb(255, 255, 255); border-left-width: 2px; border-left-style: solid;
+}
+.template_skin_128 .ts_img {
+	max-width: 100%;
+}
+.template_skin_128 .ts_title_a {
+	margin: -4px 0px 0px; padding: 8px 0px 0px; height: 50px; text-align: center; color: rgb(34, 34, 34); overflow: hidden; font-size: 14px; display: block; background-color: rgb(229, 230, 232);
+}
+.template_skin_128 .edit_article .ts_title_a {
+	padding-top: 6px; margin-top: -6px;
+}
+.template_skin_128 .ts_title_a_txt {
+	padding: 0px 5px; float: left;
+}
+.template_skin_128 .ts_li.second .ts_title_a_txt {
+	float: right;
+}
+.template_skin_128 .ts_btns {
+	padding: 10px 0px; text-align: center;
+}
+.template_skin_128 .ts_btns .ts_btn {
+	background: url("https://im.sisain.co.kr/slide-page-icon.png") no-repeat 0px 0px; margin: 0px 3px; border: currentColor; border-image: none; width: 8px; height: 9px; text-indent: -10000px;
+}
+.template_skin_128 .ts_btns .ts_btn.on {
+	background-position: -100px 0px;
+}
+.template_skin_129 {
+	padding: 0px 10px;
+}
+.template_skin_129.m_slide_horizon {
+	border: currentColor; border-image: none;
+}
+.template_skin_129 .box_slide_horizon_box {
+	height: auto; overflow: hidden; border-bottom-color: rgb(1, 146, 209); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.template_skin_129 .ts_ul {
+	width: 100%; height: auto;
+}
+.template_skin_129 .ts_li {
+	width: 50%; height: auto; text-align: center; float: left;
+}
+.template_skin_129 .ts_li.second .ts_img {
+	border-left-color: rgb(255, 255, 255); border-left-width: 2px; border-left-style: solid;
+}
+.template_skin_129 .ts_img {
+	max-width: 100%;
+}
+.template_skin_129 .ts_title_a {
+	margin: -4px 0px 0px; padding: 8px 0px 0px; height: 50px; text-align: center; color: rgb(34, 34, 34); overflow: hidden; font-size: 14px; display: block; background-color: rgb(229, 230, 232);
+}
+.template_skin_129 .edit_article .ts_title_a {
+	padding-top: 6px; margin-top: -6px;
+}
+.template_skin_129 .ts_title_a_txt {
+	margin: 0px auto; padding: 0px 5px;
+}
+.template_skin_129 .ts_btns {
+	padding: 10px 0px; text-align: center;
+}
+.template_skin_129 .ts_btns .ts_btn {
+	background: url("https://im.sisain.co.kr/slide-page-icon.png") no-repeat 0px 0px; margin: 0px 3px; border: currentColor; border-image: none; width: 8px; height: 9px; text-indent: -10000px;
+}
+.template_skin_129 .ts_btns .ts_btn.on {
+	background-position: -100px 0px;
+}
+.template_skin_102 {
+	background: url("https://im.sisain.co.kr/custom/template/102_icon.png") no-repeat 0px -253px rgb(43, 50, 60); padding: 10px;
+}
+.template_skin_102 .ts_icon {
+	background: url("https://im.sisain.co.kr/custom/template/102_icon.png") no-repeat 0px 0px;
+}
+.template_skin_102 .ts_box {
+	padding: 0px 20px 20px; width: 250px; margin-top: 30px; float: left;
+}
+.template_skin_102 .tsb_title_a {
+	color: rgb(255, 255, 255); line-height: 1.3em; letter-spacing: -1px; font-family: dotum; font-size: 17px;
+}
+.template_skin_102 .tsb_title_img {
+	max-width: 250px;
+}
+.template_skin_102 .tsb_summary_a {
+	height: 40px; color: rgb(176, 178, 177); line-height: 1.2em; overflow: hidden; font-family: dotum; margin-top: 2px; display: block;
+}
+.template_skin_102 .ts_ul {
+	margin-top: 12px;
+}
+.template_skin_102 .ts_ul .ts_li {
+	background-position: 0px 9px; padding: 3px 0px 1px 10px;
+}
+.template_skin_102 .ts_ul .ts_li .tsl_a {
+	color: rgb(255, 255, 255); letter-spacing: -1px; font-family: dotum; font-size: 11px; white-space: nowrap;
+}
+.template_skin_102 .ts_photo_box {
+	overflow: hidden; margin-left: 260px;
+}
+.template_skin_102 .ts_photo_box .tsp_img {
+	max-height: 100%;
+}
+.template_skin_126 {
+	width: 340px;
+}
+.template_skin_126 .ts_box {
+	margin: 0px; padding: 5px 0px;
+}
+.template_skin_126 .ts_box.none {
+	margin: 0px; border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none;
+}
+.template_skin_126 .ts_title_a {
+	font: bold 16px/normal dotum; margin: 0px 0px 7px; width: 100%; color: rgb(51, 51, 51); display: block; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_126 .ts_photo {
+	margin: 0px 13px 0px 0px;
+}
+.template_skin_126 .tsp_img {
+	border: 1px solid rgb(238, 238, 238); border-image: none;
+}
+.template_skin_126 .ts_summary {
+	line-height: 1.4em;
+}
+.template_skin_126 .ts_summary_a {
+	text-align: justify; color: rgb(85, 85, 85); line-height: 1.4em;
+}
+.template_skin_126 .ts_relation {
+	margin: 11px 0px 0px;
+}
+.template_skin_126 .tsr_li {
+	background: url("https://im.sisain.co.kr/custom/template/126_icon.png") no-repeat 0px 30%; margin: 0px 0px 3px; padding: 0px 0px 0px 15px;
+}
+.template_skin_126 .tsr_title_a {
+	color: rgb(61, 61, 61); letter-spacing: -1px;
+}
+.template_skin_131 {
+	
+}
+.template_skin_131 .ts_box {
+	margin: 0px 20px 5px 0px; padding: 5px 0px 0px; width: 340px;
+}
+.template_skin_131 .ts_box.margin0 {
+	margin-right: 0px;
+}
+.template_skin_131 .ts_title_a {
+	font: bold 16px/normal dotum; margin: 0px 0px 7px; width: 100%; color: rgb(51, 51, 51); display: block; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_131 .ts_photo {
+	margin: 0px 13px 0px 0px;
+}
+.template_skin_131 .tsp_img {
+	border: 1px solid rgb(238, 238, 238); border-image: none;
+}
+.template_skin_131 .ts_summary {
+	line-height: 1.4em;
+}
+.template_skin_131 .ts_summary_a {
+	text-align: justify; color: rgb(85, 85, 85); line-height: 1.4em;
+}
+.template_skin_131 .ts_relation {
+	margin: 11px 0px 0px;
+}
+.template_skin_131 .tsr_li {
+	margin: 0px 0px 3px; padding: 0px 0px 0px 15px;
+}
+.template_skin_131 .tsr_title_a {
+	color: rgb(61, 61, 61); letter-spacing: -1px;
+}
+.template_skin_130 {
+	padding: 10px;
+}
+.template_skin_130.m_slide_horizon {
+	border: currentColor; border-image: none;
+}
+.template_skin_130 .box_slide_horizon_box {
+	height: 120px; overflow: hidden;
+}
+.template_skin_130 .ts_ul {
+	width: 100%; height: auto;
+}
+.template_skin_130 .ts_li {
+	width: 32.1%; height: auto; text-align: center; margin-right: 5px; float: left;
+}
+.template_skin_130 .ts_li.last {
+	margin-right: 0px;
+}
+.template_skin_130 .ts_img {
+	border: 1px solid rgb(211, 212, 216); border-image: none; max-width: 100%;
+}
+.template_skin_130 .ts_title_a {
+	margin: 0px; padding: 0px; height: 34px; text-align: center; color: rgb(34, 34, 34); line-height: 1.2em; overflow: hidden; font-size: 14px; display: block;
+}
+.template_skin_130 .ts_title_a_txt {
+	margin: 0px auto;
+}
+.template_skin_130 .ts_btns {
+	padding: 15px 0px 0px; text-align: center;
+}
+.template_skin_130 .ts_btns .ts_btn {
+	background: url("https://im.sisain.co.kr/slide-page-icon.png") no-repeat -100px 0px; margin: 0px 3px; border: currentColor; border-image: none; width: 8px; height: 9px; text-indent: -10000px;
+}
+.template_skin_130 .ts_btns .ts_btn.on {
+	background-position: 0px 0px;
+}
+.template_skin_140 .ts_li {
+	border-top-color: rgb(241, 241, 241); border-top-width: 1px; border-top-style: solid;
+}
+.template_skin_140 .ts_a {
+	padding: 1em 0.7em 0.7em; width: auto; height: auto; display: block; max-width: 300px;
+}
+.template_skin_9 .m_auto_photo_article_title_a {
+	line-height: 1.3em; font-size: 18px;
+}
+.template_skin_141 {
+	margin: 5px 0px;
+}
+.template_skin_141 .ts_box {
+	padding: 10px 0px; border-bottom-color: rgb(236, 236, 236); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.template_skin_141 .ts_box.last {
+	padding-bottom: 0px; border-bottom-width: 0px;
+}
+.template_skin_141 .tsb_photo {
+	margin: 0px 10px 0px 0px; float: left;
+}
+.template_skin_141 .tsb_list {
+	margin: 0px 8px;
+}
+.template_skin_141 .tsb_title {
+	margin: 0px 8px 5px;
+}
+.template_skin_141 .tsb_title .tsbt_img {
+	max-width: 100%;
+}
+.template_skin_141 .tsb_title_a {
+	color: rgb(30, 30, 30); letter-spacing: -2px; font-size: 18px;
+}
+.template_skin_141 .tsb_title_a.first {
+	font-size: 24px;
+}
+.template_skin_141 .tsb_summary {
+	letter-spacing: -1px; overflow: hidden;
+}
+.template_skin_141 .tsb_summary_a {
+	color: rgb(103, 103, 103); line-height: 1.5em;
+}
+.photonplay {
+	width: 260px;
+}
+.photonplay .mmimg {
+	margin: 0px 0px 5px; padding: 0px; height: 170px; position: relative;
+}
+.photonplay .mmimg img {
+	display: block;
+}
+.photonplay .mmimg .ptext {
+	left: 10px; width: 230px; bottom: 4px; color: rgb(255, 255, 255); overflow: hidden; font-family: Gulim; font-size: 12px; white-space: nowrap; position: absolute; z-index: 9; -ms-text-overflow: ellipsis;
+}
+.photonplay .mmimg .pmask {
+	background: rgb(0, 0, 0); left: 0px; width: 260px; height: 25px; bottom: 0px; position: absolute; opacity: 0.5;
+}
+.photonplay .mmthumb {
+	height: 40px; overflow: hidden; position: relative;
+}
+.photonplay .mmthumb .thumbB {
+	list-style: none; margin: 0px; padding: 0px; overflow: hidden;
+}
+.photonplay .mmthumb ul li {
+	float: left;
+}
+.mmpre {
+	background: url("https://im.sisain.co.kr/photonplay-button.png") no-repeat 0px 0px; left: 5px; top: 10px; width: 16px; height: 26px; display: inline-block; position: absolute; z-index: 7; cursor: pointer;
+}
+.mmnext {
+	background: url("https://im.sisain.co.kr/photonplay-button.png") no-repeat -16px 0px; top: 10px; width: 16px; height: 26px; right: 5px; display: inline-block; position: absolute; z-index: 7; cursor: pointer;
+}
+.ml5 {
+	margin: 0px 0px 0px 5px;
+}
+.photonplay .btns {
+	opacity: 0.6;
+}
+.photonplay .thumbB .edit_article {
+	float: left;
+}
+.template_skin_137 .video_main_playiconx2 {
+	background: url("https://im.sisain.co.kr/video_main_playiconx2.png") no-repeat 0px 0px; left: 100px; top: 50px; width: 80px; height: 80px; display: block; position: absolute;
+}
+.template_skin_137 .video_main_playicon {
+	background: url("https://im.sisain.co.kr/video_main_playicon.png") no-repeat 0px 0px; left: 30px; top: -38px; width: 25px; height: 25px; position: relative;
+}
+.template_skin_144 {
+	background-color: rgb(21, 74, 124);
+}
+.template_skin_144 .ts_box {
+	margin: 0px 10px 10px; border: 1px solid rgb(213, 222, 227); border-image: none; background-color: rgb(255, 255, 255);
+}
+.template_skin_144 .ts_box .ts_b_title {
+	padding: 5px; color: rgb(255, 255, 255); font-size: 15px; font-weight: bold; border-bottom-color: rgb(213, 222, 227); border-bottom-width: 1px; border-bottom-style: solid; background-color: rgb(95, 134, 201);
+}
+.template_skin_144 .ts_box .ts_img_box {
+	margin: 10px 5px; width: 80px; height: 60px; float: left; bacgkround-color: #fff;
+}
+.template_skin_144 .ts_box .ts_img_box .ts_img {
+	vertical-align: middle; max-width: 100%;
+}
+.template_skin_144 .ts_box .ts_title {
+	margin: 0px; padding: 0px; color: rgb(119, 119, 119); letter-spacing: -1px;
+}
+.template_skin_144 .ts_box .ts_list {
+	background-color: rgb(255, 255, 255);
+}
+.template_skin_144 .ts_box .ts_title.etc {
+	background-color: rgb(255, 255, 255);
+}
+.template_skin_144 .ts_box .ts_list {
+	margin: 0px 0px 15px; padding: 7px 5px 5px;
+}
+.template_skin_144 .ts_box .ts_list .ts_title.first {
+	font-size: 15px;
+}
+.template_skin_144 .ts_box .ts_list .ts_summary {
+	margin: 3px 0px 0px; padding: 0px; height: 33px; color: rgb(129, 129, 129); line-height: 1.4em; letter-spacing: -1px; overflow: hidden; font-size: 13px;
+}
+.template_skin_144 .ts_box .ts_title.etc {
+	padding: 10px 5px 7px; font-size: 16px; border-top-color: rgb(188, 188, 188); border-top-width: 1px; border-top-style: solid;
+}
+.template_skin_83 {
+	
+}
+.template_skin_83 a:hover {
+	color: rgb(221, 56, 77);
+}
+.template_skin_83 .ts_photo_box {
+	height: auto; margin-bottom: 0px !important; float: left;
+}
+.template_skin_83 .ts_box .ts_head {
+	margin: 0px; padding-bottom: 10px;
+}
+.template_skin_83 .ts_head a.htitle {
+	color: rgb(0, 0, 0); line-height: 1.3em; letter-spacing: -3px; font-family: malgun gothic; font-size: 26px; font-weight: bold;
+}
+.template_skin_83 .ts_head a:hover {
+	color: rgb(221, 56, 77); text-decoration: none;
+}
+.template_skin_83 .ts_desc {
+	margin: 0px 0px 10px; padding-top: 8px; font-family: Gulim; font-size: 12px; display: block;
+}
+.template_skin_83 .ts_desc a {
+	color: rgb(135, 135, 135);
+}
+.template_skin_83 .ts_desc a:hover {
+	color: rgb(221, 56, 77); text-decoration: none;
+}
+.template_skin_83 .ts_box .ts_line_a {
+	margin: 0px 0px 5px; color: rgb(0, 1, 101) !important; font-family: dotum !important; font-size: 14px !important; font-weight: bold; display: block;
+}
+.headbox_1 {
+	position: relative;
+}
+.headbox_1 :hover {
+	color: rgb(221, 56, 77);
+}
+.headbox_1 .hphoto {
+	height: auto; margin-bottom: 0px !important; float: left;
+}
+.headbox_1 .hbox .tit_head {
+	margin: 0px; padding-bottom: 10px;
+}
+.headbox_1 .tit_head a.htitle {
+	color: rgb(0, 0, 0); line-height: 1.3em; letter-spacing: -3px; font-family: malgun gothic; font-size: 26px; font-weight: bold;
+}
+.headbox_1 .tit_sub {
+	margin: 0px;
+}
+.headbox_1 .tit_sub a.stitle {
+	color: rgb(35, 35, 35); letter-spacing: -1px; font-family: Dotum; font-size: 14px; font-weight: bold;
+}
+.headbox_1 .tit_head a:hover {
+	color: rgb(221, 56, 77); text-decoration: none;
+}
+.headbox_1 .tit_sub a:hover {
+	color: rgb(221, 56, 77); text-decoration: none;
+}
+.headbox_1 .tit_desc {
+	margin: 0px; padding-top: 8px; font-family: Gulim; font-size: 12px; display: block;
+}
+.headbox_1 .tit_desc a {
+	color: rgb(135, 135, 135);
+}
+.headbox_1 .tit_desc a:hover {
+	color: rgb(221, 56, 77); text-decoration: none;
+}
+.headbox_1 ul {
+	margin: 10px 0px 0px; padding: 0px;
+}
+.headbox_1 ul .mrelate {
+	background: url("https://im.sisain.co.kr/main-relate-arrow.gif") no-repeat 0px 5px; list-style: none; line-height: 16px; padding-left: 15px; font-family: Gulim; font-size: 12px; font-weight: bold; margin-bottom: 5px;
+}
+.headbox_1 ul .mrelate a {
+	color: rgb(85, 85, 85);
+}
+.headbox_1 ul .mrelate :hover {
+	color: rgb(221, 56, 77);
+}
+.template_skin_134 .ts_box {
+	width: 300px; background-color: rgb(58, 58, 58);
+}
+.template_skin_134 .ts_photo {
+	margin-right: 10px; float: left; display: block; position: relative;
+}
+.template_skin_134 .ts_img {
+	vertical-align: middle;
+}
+.template_skin_134 .ts_icon_play {
+	background: url("https://im.sisain.co.kr/custom/template/136_icon.png") no-repeat 0px -100px; transition:background 150ms; left: 45px; top: 25px; width: 31px; height: 21px; display: inline-block; position: absolute; -moz-transition: background 150ms; -o-transition: background 150ms;
+}
+.template_skin_134 .ts_box.on .ts_icon_play {
+	background-position: 0px -150px;
+}
+.template_skin_134 .ts_title_a {
+	margin: 0px 0px 5px; padding: 0px; color: rgb(255, 255, 255); font-weight: bold; display: block;
+}
+.template_skin_134 .ts_date {
+	margin: 10px 0px 0px; color: rgb(132, 132, 132); font-size: 11px;
+}
+.template_skin_134 .bar {
+	border-width: 1px 0px; border-style: solid; border-color: rgb(48, 48, 48) transparent rgb(72, 72, 72); margin: 20px 0px; height: 0px;
+}
+.template_skin_135 {
+	
+}
+.template_skin_135 .ts_video_box {
+	width: 600px; height: 360px; overflow: hidden;
+}
+.template_skin_135 .ts_video_box object {
+	width: 600px; height: 360px;
+}
+.template_skin_135 .ts_video_box embed {
+	width: 600px; height: 360px;
+}
+.template_skin_135 .ts_video_box iframe {
+	width: 600px; height: 360px;
+}
+.template_skin_147 {
+	
+}
+.template_skin_147 .ts_box {
+	margin: 0px 0px 25px; width: 245px; height: auto; overflow: hidden; float: left;
+}
+.template_skin_147 .ts_box.mid {
+	text-align: center;
+}
+.template_skin_147 .ts_box.last {
+	text-align: right;
+}
+.template_skin_147 .ts_box .ts_title_box {
+	cursor: pointer;
+}
+.template_skin_147 .ts_box .ts_img {
+	padding: 10px; border: 1px solid rgb(204, 204, 204); border-image: none;
+}
+.template_skin_147 .ts_box .ts_title {
+	margin: 5px auto 0px; text-align: center; color: rgb(85, 85, 85); letter-spacing: -1px; font-weight: bold;
+}
+.template_skin_146 {
+	
+}
+.template_skin_146 .ts_box {
+	margin: 0px 8px; height: auto; text-align: center; overflow: hidden; float: left; position: relative;
+}
+.template_skin_146 .ts_img {
+	vertical-align: middle;
+}
+.template_skin_146 .ts_title_box {
+	cursor: pointer;
+}
+.template_skin_146 .ts_title {
+	margin: 10px auto 0px; text-align: center; color: rgb(51, 51, 51); letter-spacing: -1px; font-family: dotum;
+}
+.template_skin_146 .play_icon {
+	background: url("https://im.sisain.co.kr/custom/template/162_icon.png") no-repeat 0px 0px; left: 76px; top: 52px; width: 38px; height: 38px; text-indent: -10000px; overflow: hidden; display: inline-block; position: absolute;
+}
+.template_skin_146 .edit_article {
+	float: left;
+}
+.template_skin_146 {
+	margin: 5px 0px 20px;
+}
+.ts_hr_bottom_146 {
+	margin: 20px 0px;
+}
+.template_skin_149 {
+	width: 700px; height: 290px; overflow: hidden; background-color: rgb(38, 38, 38);
+}
+.template_skin_149 .ts_box {
+	margin: 0px; overflow: hidden; float: left;
+}
+.template_skin_149 .ts_box.one {
+	margin: 10px; width: 370px; text-align: center; position: relative;
+}
+.template_skin_149 .ts_box.one .ts_box_img {
+	max-width: 100%;
+}
+.template_skin_149 .ts_box.one .title_box {
+	left: 0px; width: 100%; height: 40px; bottom: -7px; position: absolute; opacity: 0.7; background-color: rgb(0, 0, 0);
+}
+.template_skin_149 .ts_box.one .title {
+	font: bold 16px/normal malgun gothic; left: 5px; width: 350px; bottom: -25px; color: rgb(255, 255, 255); position: absolute; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_149 .ts_box.two {
+	margin: 10px; width: 290px; background-color: rgb(15, 15, 15);
+}
+.template_skin_149 .ts_list {
+	padding: 0px 0px 10px; width: 100%; overflow: hidden;
+}
+.template_skin_149 .ts_list.last {
+	padding-bottom: 0px;
+}
+.template_skin_149 .ts_list .tsb_img_box {
+	width: 90px; height: 60px; overflow: hidden; margin-right: 10px; float: left;
+}
+.template_skin_149 .ts_list .tsb_img {
+	max-width: 100%;
+}
+.template_skin_149 .ts_list .tsb_ul .first {
+	font: bold 12px/1.5em gulim; color: rgb(255, 255, 255); font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_149 .ts_list .tsb_ul .second {
+	font: 11px/normal dotum; margin: 5px 0px 0px; color: rgb(71, 189, 233); font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_150 {
+	width: 340px;
+}
+.template_skin_150 .ts_box {
+	margin: 0px 0px 20px; width: 160px; height: auto; text-align: center; overflow: hidden; float: left;
+}
+.template_skin_150 .ts_box.even {
+	float: right;
+}
+.template_skin_150 .ts_img {
+	vertical-align: middle; max-width: 100%;
+}
+.template_skin_150 .ts_title {
+	font: 11px/1.4em dotum; padding: 5px; height: 30px; color: rgb(255, 255, 255); overflow: hidden; font-size-adjust: none; font-stretch: normal; background-color: rgb(47, 66, 113);
+}
+.ts_hr_bottom_150 {
+	margin: 10px 0px;
+}
+.template_skin_151 {
+	width: 260px;
+}
+.template_skin_151 .ts_box {
+	margin: 0px 0px 10px; width: 125px; height: auto; text-align: center; overflow: hidden; float: left;
+}
+.template_skin_151 .ts_box.even {
+	float: right;
+}
+.template_skin_151 .ts_img {
+	vertical-align: middle; max-width: 100%;
+}
+.template_skin_151 .ts_title {
+	padding: 5px; height: 30px; color: rgb(64, 64, 64); overflow: hidden;
+}
+.ts_hr_bottom_151 {
+	margin: 10px 0px;
+}
+.template_skin_125 {
+	margin: 10px;
+}
+.template_skin_125 .ts_box {
+	margin: 0px; width: 33.3%; height: auto; text-align: center; overflow: hidden; float: left;
+}
+.template_skin_125 .ts_img {
+	max-width: 100%;
+}
+.template_skin_125 .ts_title_box {
+	
+}
+.template_skin_125 .ts_title {
+	margin: 0px auto; padding: 5px 0px; line-height: 1.4em; font-size: 13px;
+}
+.template_skin_139 {
+	margin: 10px;
+}
+.template_skin_139 .ts_box {
+	margin: 0px; width: 50%; height: auto; text-align: center; overflow: hidden; float: left;
+}
+.template_skin_139 .ts_img {
+	
+}
+.template_skin_139 .ts_title_box {
+	
+}
+.template_skin_139 .ts_title {
+	margin: 0px auto; padding: 5px 0px; line-height: 1.4em; font-size: 13px;
+}
+.template_skin_139 .edit_article {
+	width: 50%; text-align: center; float: left;
+}
+.template_skin_139 .edit_article .ts_box {
+	width: 100%;
+}
+.template_skin_153.m_slide_horizon {
+	border: currentColor; border-image: none;
+}
+.template_skin_153 .m_slide_horizon_box {
+	height: 275px;
+}
+.template_skin_153 .picon {
+	background: url("https://im.sisain.co.kr/custom/template/play_green_icon.png") no-repeat 0px 0px; text-indent: -10000px; overflow: hidden; display: inline-block; position: absolute;
+}
+.template_skin_153 .ts_box {
+	margin: 5px 0px 15px; padding: 0px 10px 15px; border-bottom-color: rgb(222, 222, 222); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.template_skin_153 .ts_box.last {
+	margin-bottom: 0px; border-bottom-width: 0px;
+}
+.template_skin_153 .ts_img_box {
+	border: 1px solid rgb(222, 222, 222); border-image: none; margin-right: 10px; float: left; position: relative;
+}
+.template_skin_153 .ts_img_box .ts_img {
+	vertical-align: middle; max-width: 100%;
+}
+.template_skin_153 .ts_play {
+	top: 60%; width: 20px; height: 20px; right: 5%;
+}
+.template_skin_153 .ts_list .ts_title {
+	margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-size: 1.1em; font-weight: normal;
+}
+.template_skin_153 .ts_list .ts_summary {
+	margin: 5px 0px 0px; padding: 0px; height: 40px; color: rgb(102, 102, 102); line-height: 1.5em; overflow: hidden; font-size: 13px;
+}
+.template_skin_153 .ts_btn_box {
+	text-align: center;
+}
+.template_skin_153 .ts_btn_box .ts_number {
+	margin: 0px 3px; border-radius: 4px; width: 8px; height: 8px; text-indent: -10000px; vertical-align: middle; display: inline-block; background-color: rgb(170, 170, 170);
+}
+.template_skin_153 .ts_btn_box .ts_number.on {
+	background-color: rgb(18, 113, 180);
+}
+.template_skin_153 .ts_btn_box .ts_btn {
+	display: none;
+}
+.template_skin_157 {
+	padding: 10px;
+}
+.template_skin_157.m_slide_horizon {
+	border: currentColor; border-image: none;
+}
+.template_skin_157 .box_slide_horizon_box {
+	height: 120px; overflow: hidden;
+}
+.template_skin_157 .picon {
+	background: url("https://im.sisain.co.kr/custom/template/play_green_icon.png") no-repeat 0px 0px; text-indent: -10000px; overflow: hidden; display: inline-block; position: absolute;
+}
+.template_skin_157 .ts_ul {
+	width: 100%; height: auto;
+}
+.template_skin_157 .ts_li {
+	width: 48%; height: auto; text-align: center; float: left;
+}
+.template_skin_157 .ts_li.even {
+	float: right;
+}
+.template_skin_157 .ts_li.last {
+	margin-right: 0px;
+}
+.template_skin_157 .ts_img {
+	height: 100px; max-width: 100%;
+}
+.template_skin_157 .ts_play {
+	top: 70%; width: 20px; height: 20px; right: 5%;
+}
+.template_skin_157 .ts_title_a_txt {
+	margin: 0px auto; height: 37px; text-align: center; color: rgb(17, 17, 17); line-height: 1.4em; overflow: hidden; font-size: 14px;
+}
+.template_skin_157 .ts_btn_box {
+	margin: 1em 0px; text-align: center;
+}
+.template_skin_157 .ts_btn_box .ts_number {
+	margin: 0px 3px; border-radius: 4px; width: 8px; height: 8px; text-indent: -10000px; vertical-align: middle; display: inline-block; background-color: rgb(170, 170, 170);
+}
+.template_skin_157 .ts_btn_box .ts_number.on {
+	background-color: rgb(18, 113, 180);
+}
+.template_skin_157 .ts_btn_box .ts_btn {
+	display: none;
+}
+.template_skin_155 {
+	border-top-width: 0px !important;
+}
+.template_skin_155 .m_slide_horizon_box {
+	height: 340px;
+}
+.template_skin_155 .m_slide_horizon_list {
+	width: 100%;
+}
+.template_skin_155 .ts_li {
+	border-bottom-color: rgb(222, 222, 222); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.template_skin_155 .ts_li.last {
+	border-bottom-width: 0px;
+}
+.template_skin_155 .ts_a {
+	padding: 10px; width: auto; height: auto; color: rgb(0, 0, 0); font-size: 105%; text-decoration: none; display: block;
+}
+.template_skin_155 .ts_btn_box {
+	margin: 0px 0px 1em; text-align: center;
+}
+.template_skin_155 .ts_btn_box .ts_number {
+	margin: 0px 3px; border-radius: 4px; width: 8px; height: 8px; text-indent: -10000px; vertical-align: middle; display: inline-block; background-color: rgb(170, 170, 170);
+}
+.template_skin_155 .ts_btn_box .ts_number.on {
+	background-color: rgb(18, 113, 180);
+}
+.template_skin_155 .ts_btn_box .ts_btn {
+	display: none;
+}
+.template_skin_154 .ts_li {
+	border-bottom-color: rgb(222, 222, 222); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.template_skin_154 .ts_li.last {
+	border-bottom-width: 0px;
+}
+.template_skin_154 .ts_a {
+	padding: 10px; width: auto; height: auto; color: rgb(0, 0, 0); font-size: 105%; text-decoration: none; display: block;
+}
+.template_skin_154 .ts_a .ts_section {
+	color: rgb(0, 69, 166); font-size: 0.9em; font-weight: normal;
+}
+.template_skin_159 .ts_box .tsb {
+	float: left;
+}
+.template_skin_159 .ts_box .ts_title_box {
+	display: block;
+}
+.template_skin_159 .ts_box .ts_img {
+	vertical-align: middle; max-width: 100%;
+}
+.template_skin_159 .ts_box .tsb_1 {
+	width: 240px; text-align: left;
+}
+.template_skin_159 .ts_box .tsb_3 {
+	width: 240px; text-align: left;
+}
+.template_skin_159 .ts_box .tsb_1 .ts_title_box {
+	margin: 0px 0px 10px; width: 220px; height: 167px; overflow: hidden;
+}
+.template_skin_159 .ts_box .tsb_3 .ts_title_box {
+	margin: 0px 0px 10px; width: 220px; height: 167px; overflow: hidden;
+}
+.template_skin_159 .ts_box .tsb_1 .ts_title_box .ts_img {
+	width: 220px; height: 140px;
+}
+.template_skin_159 .ts_box .tsb_3 .ts_title_box .ts_img {
+	width: 220px; height: 140px;
+}
+.template_skin_159 .ts_box .tsb_3 .ts_title_box {
+	float: right;
+}
+.template_skin_159 .ts_box .tsb_1 .ts_title_box .ts_title {
+	font: bold 12px/normal dotum; margin: 10px 0px 0px; text-align: center; color: rgb(56, 56, 56); letter-spacing: -1px; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_159 .ts_box .tsb_3 .ts_title_box .ts_title {
+	font: bold 12px/normal dotum; margin: 10px 0px 0px; text-align: center; color: rgb(56, 56, 56); letter-spacing: -1px; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_159 .ts_box .tsb_2 {
+	width: 500px; text-align: center; overflow: hidden;
+}
+.template_skin_159 .ts_box .tsb_2 .ts_title_box {
+	margin: 0px; position: relative;
+}
+.template_skin_159 .ts_box .tsb_2 .ts_title_box .ts_title_bg {
+	margin: 0px; padding: 0px; left: 0px; width: 100%; height: 30px; bottom: 0px; position: absolute; opacity: 0.7; background-color: rgb(0, 0, 0);
+}
+.template_skin_159 .ts_box .tsb_2 .ts_title_box .ts_title {
+	font: bold 12px/normal dotum; margin: 0px; padding: 0px; left: 10px; width: 480px; bottom: 7px; color: rgb(255, 255, 255); position: absolute; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_160 {
+	
+}
+.template_skin_160 .ts_box {
+	margin: 0px 20px 20px 0px; width: 230px; height: auto; overflow: hidden; float: left;
+}
+.template_skin_160 .ts_box.line_end {
+	text-align: right; margin-right: 0px;
+}
+.template_skin_160 .ts_box .ts_title_box {
+	cursor: pointer;
+}
+.template_skin_160 .ts_box .ts_img {
+	vertical-align: middle;
+}
+.template_skin_160 .ts_box .ts_title {
+	font: bold 14px/normal dotum; text-align: center; letter-spacing: -1px; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_165 {
+	
+}
+.template_skin_165 .ts_box {
+	margin: 0px 0px 14px;
+}
+.template_skin_165 .ts_box.is_photo {
+	margin: 0px 0px 19px;
+}
+.template_skin_165 .ts_box.last {
+	margin-bottom: 0px;
+}
+.template_skin_165 .ts_box .ts_a {
+	cursor: pointer;
+}
+.template_skin_165 .ts_box .ts_title {
+	font: bold 14px/normal dotum; margin: 0px 0px 5px; padding: 0px; color: rgb(103, 103, 103); font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_165 .ts_box.is_photo .ts_title {
+	margin-bottom: 8px;
+}
+.template_skin_165 .ts_box .ts_photo {
+	margin-right: 10px;
+}
+.template_skin_165 .ts_box .ts_photo .tsp_img {
+	width: 100%; height: 100%; vertical-align: middle;
+}
+.template_skin_165 .ts_box .ts_summary {
+	color: rgb(102, 102, 102); line-height: 1.7em; letter-spacing: -0.5px; overflow: hidden;
+}
+.template_skin_165 .ts_box.is_photo .ts_summary {
+	height: 60px; margin-top: 17px;
+}
+.template_skin_165 .ts_box.is_photo.ts_photo_size2 .ts_summary {
+	height: 100px;
+}
+.template_skin_165 .ts_box .ts_summary .ts_section {
+	font-weight: bold;
+}
+.template_skin_166 {
+	
+}
+.template_skin_166 .ts_box {
+	margin: 0px 0px 15px;
+}
+.template_skin_166 .ts_box.last {
+	margin-bottom: 0px;
+}
+.template_skin_166 .ts_box .ts_a {
+	font: bold 14px/normal dotum; color: rgb(102, 102, 102); font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_167 {
+	
+}
+.template_skin_167 .ts_box {
+	background: url("https://im.sisain.co.kr/custom/template/167_icon.png") no-repeat 0px 40%; margin: 0px 0px 15px;
+}
+.template_skin_167 .ts_box.last {
+	margin-bottom: 0px;
+}
+.template_skin_167 .ts_box .ts_a {
+	font: bold 14px/normal dotum; margin: 0px 0px 0px 10px; color: rgb(102, 102, 102); font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_169 {
+	
+}
+.template_skin_169 .ts_box {
+	margin: 0px 0px 15px;
+}
+.template_skin_169 .ts_box.last {
+	margin-bottom: 0px;
+}
+.template_skin_169 .ts_box .ts_a {
+	color: rgb(102, 102, 102); cursor: pointer;
+}
+.template_skin_169 .ts_box .ts_a .ts_title {
+	font: bold 12px/normal dotum; margin: 0px; padding: 0px; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_169 .ts_box .ts_a .ts_title .ts_section {
+	
+}
+.template_skin_168 {
+	
+}
+.template_skin_168 .ts_box {
+	margin: 0px 0px 15px;
+}
+.template_skin_168 .ts_box.last {
+	margin-bottom: 0px;
+}
+.template_skin_168 .ts_box .ts_a {
+	color: rgb(102, 102, 102); cursor: pointer;
+}
+.template_skin_168 .ts_box .ts_a .ts_section {
+	margin: 0px 0px 5px;
+}
+.template_skin_168 .ts_box .ts_a .ts_title {
+	font: bold 12px/normal dotum; margin: 0px; padding: 0px; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_168 .ts_box .ts_a .ts_summary {
+	font-weight: normal;
+}
+.template_skin_170 {
+	
+}
+.template_skin_170 .ts_box {
+	margin: 0px 0px 25px;
+}
+.template_skin_170 .ts_box.last {
+	margin-bottom: 0px;
+}
+.template_skin_170 .ts_box .ts_mid {
+	float: left;
+}
+.template_skin_170 .ts_box .ts_a {
+	color: rgb(102, 102, 102); margin-left: 10px; display: block; cursor: pointer;
+}
+.template_skin_170 .ts_box .ts_a .ts_section {
+	margin: 0px 0px 10px; font-family: dotum; font-size: 14px;
+}
+.template_skin_170 .ts_box .ts_a .ts_title {
+	font: 12px/1.7em dotum; margin: 0px; padding: 0px; text-align: justify; font-size-adjust: none; font-stretch: normal;
+}
+.photonplay.template_skin_171 {
+	width: 300px;
+}
+.photonplay.template_skin_171 .mmimg {
+	margin: 0px 20px; width: 260px; height: 360px;
+}
+.photonplay.template_skin_171 .mmimg .img {
+	width: 100%; height: 100%; vertical-align: middle;
+}
+.photonplay.template_skin_171 .box_slide_horizon {
+	margin-top: 20px;
+}
+.photonplay.template_skin_171 .mmthumb {
+	width: 260px; height: 78px; overflow: hidden; vertical-align: middle; float: left; position: relative;
+}
+.photonplay.template_skin_171 .mmthumb .thumbB {
+	list-style: none; margin: 0px; padding: 0px; overflow: hidden;
+}
+.photonplay.template_skin_171 .mmthumb ul li {
+	margin: 0px 5px 0px 0px; width: 61.25px; height: 78px; overflow: hidden; float: left;
+}
+.photonplay.template_skin_171 .mmthumb ul li .t_img {
+	width: 100%; height: 100%; vertical-align: middle;
+}
+.photonplay.template_skin_171 .m_btns {
+	background: url("https://im.sisain.co.kr/custom/template/171_icon.png") no-repeat 0px 0px; width: 20px; height: 78px; text-indent: -10000px; vertical-align: middle; float: left; display: block; position: static;
+}
+.photonplay.template_skin_171 .mmpre {
+	background-position: 7px 36px;
+}
+.photonplay.template_skin_171 .mmnext {
+	background-position: -93px 36px;
+}
+.photonplay.template_skin_171 .end {
+	margin-right: 0px;
+}
+.template_skin_172 .ts_box {
+	margin: 0px 0px 15px; width: 300px; height: 180px; text-align: center; overflow: hidden;
+}
+.template_skin_172 .ts_box.last {
+	margin-bottom: 0px;
+}
+.template_skin_172 .ts_img {
+	max-width: 100%;
+}
+.template_skin_172 .ts_title_box {
+	width: 100%; height: 100%; text-align: center; display: inline-block; position: relative;
+}
+.template_skin_172 .ts_bg {
+	width: 100%; height: 30px; bottom: 0px; position: absolute; opacity: 0.5; background-color: rgb(0, 0, 0);
+}
+.template_skin_172 .ts_title {
+	padding: 0px 5px; width: 95%; text-align: center; bottom: 5px; color: rgb(255, 255, 255); letter-spacing: -1px; font-family: dotum; display: block; position: absolute;
+}
+.template_skin_173 {
+	
+}
+.template_skin_173 .t_icon {
+	background: url("https://im.sisain.co.kr/custom/template/173_icon.png") no-repeat 0px 0px;
+}
+.template_skin_173 .ts_box {
+	overflow: hidden;
+}
+.template_skin_173 .ts_list {
+	height: auto; overflow: hidden;
+}
+.template_skin_173 .ts_list .ts_a {
+	cursor: pointer;
+}
+.template_skin_173 .ts_list .tsl_img {
+	max-width: 100%;
+}
+.template_skin_173 .ts_list .ts_bg {
+	left: 0px; width: 100%; height: 30px; bottom: 5px; position: absolute; opacity: 0.6; background-color: rgb(0, 0, 0);
+}
+.template_skin_173 .ts_list .ts_title {
+	font: bold 12px/normal dotum; left: 5%; width: 90%; text-align: center; bottom: 12px; color: rgb(255, 255, 255); letter-spacing: -1px; position: absolute; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_173 .ts_btns {
+	border-width: 0px 1px 1px; border-style: solid; border-color: rgb(221, 221, 221); height: 34px; text-align: center; overflow: hidden;
+}
+.template_skin_173 .ts_btns .ts_btn {
+	border: currentColor; border-image: none; width: 33px; height: 33px; text-indent: -10000px; overflow: hidden; cursor: pointer;
+}
+.template_skin_173 .ts_btns .ts_btn.ts_prev {
+	background-position: 12px 11px; border-right-color: rgb(221, 221, 221); border-right-width: 1px; border-right-style: solid; float: left;
+}
+.template_skin_173 .ts_btns .ts_btn.ts_next {
+	background-position: 12px -39px; border-left-color: rgb(221, 221, 221); border-left-width: 1px; border-left-style: solid; float: right;
+}
+.template_skin_173 .ts_btns .ts_numbers {
+	height: 100%; text-align: center; display: inline-block;
+}
+.template_skin_173 .ts_btns .ts_numbers .ts_num {
+	background-position: 0px -100px; margin: 0px 3px; width: 6px; height: 6px; text-indent: -10000px; vertical-align: bottom; display: inline-block;
+}
+.template_skin_173 .ts_btns .ts_numbers .ts_num.on {
+	background-position: 0px -150px;
+}
+.template_skin_176 {
+	width: 950px;
+}
+.template_skin_176 .ts_box {
+	margin: 0px 5px 0px 0px; width: 234px; text-align: center; float: left;
+}
+.template_skin_176 .ts_box.first {
+	margin-right: 4px;
+}
+.template_skin_176 .ts_box.last {
+	margin-right: 0px;
+}
+.template_skin_176 .ts_img {
+	vertical-align: middle; max-width: 100%;
+}
+.template_skin_176 .ts_title {
+	font: bold 14px/1.5em dotum; margin: 10px 5px 0px; height: 45px; text-align: center; color: rgb(102, 102, 102); overflow: hidden; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_177 {
+	width: 950px;
+}
+.template_skin_177 .ts_box {
+	margin: 0px 12.5px 0px 0px; width: 180px; text-align: center; float: left;
+}
+.template_skin_177 .ts_box.last {
+	margin-right: 0px;
+}
+.template_skin_177 .ts_img {
+	vertical-align: middle; max-width: 100%;
+}
+.template_skin_177 .ts_title {
+	font: bold 14px/1.5em dotum; margin: 10px 5px 0px; height: 45px; text-align: center; color: rgb(102, 102, 102); overflow: hidden; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_163 {
+	margin: 0px; height: auto;
+}
+.template_skin_163 .ts_btn {
+	background: url("https://im.sisain.co.kr/custom/template/163_icon.png") no-repeat 0px 0px; margin: 38px 0px 0px; border: currentColor; border-image: none; width: 20px; height: 25px; text-indent: -10000px; vertical-align: middle;
+}
+.template_skin_163 .ts_btn.prev {
+	float: left;
+}
+.template_skin_163 .ts_btn.next {
+	background-position: 0px -25px; float: left;
+}
+.template_skin_163 .ts_box {
+	width: 940px; height: 140px; overflow: hidden; float: left;
+}
+.template_skin_163 .ts_ul {
+	width: 940px; height: 100%;
+}
+.template_skin_163 .ts_li {
+	width: 180px; height: 100%; text-align: center; overflow: hidden; margin-right: 10px; float: left;
+}
+.template_skin_163 .ts_li.none {
+	margin-right: 0px;
+}
+.template_skin_163 .ts_img {
+	vertical-align: middle; max-width: 180px;
+}
+.template_skin_163 .ts_title_a {
+	font: bold 12px/1.4em dotum; margin: 5px auto 0px; width: 90%; height: 35px; text-align: center; color: rgb(0, 0, 0); letter-spacing: -1px; overflow: hidden; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_164 {
+	
+}
+.template_skin_164 .ts_box {
+	margin: 0px 0px 20px;
+}
+.template_skin_164 .ts_box .ts_title_box {
+	cursor: pointer;
+}
+.template_skin_164 .ts_box .ts_img_box {
+	height: 140px; margin-right: 10px; float: left; max-width: 230px;
+}
+.template_skin_164 .ts_box .ts_img {
+	width: 100%; height: 100%; vertical-align: middle;
+}
+.template_skin_164 .ts_box .ts_content {
+	margin: 0px auto; padding: 0px;
+}
+.template_skin_164 .ts_box .ts_content .ts_title {
+	font: bold 16px/1.2em dotum; margin: 0px; padding: 0px; color: rgb(0, 0, 0); letter-spacing: -1px; vertical-align: middle; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_164 .ts_box .ts_content .ts_user_name {
+	font: 12px/normal dotum; margin: 15px 0px 0px; padding: 0px; color: rgb(153, 153, 153); letter-spacing: -0.5px; vertical-align: middle; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_164 .ts_box .ts_content .ts_summary {
+	margin: 15px 0px 0px; height: 55px; text-align: justify; color: rgb(102, 102, 102); letter-spacing: -0.5px; overflow: hidden; font-family: dotum;
+}
+.template_skin_164 .ts_box.no_photo {
+	margin-bottom: 25px;
+}
+.template_skin_164 .ts_box.no_photo .ts_content {
+	margin-top: 0px;
+}
+.template_skin_164 .ts_box.no_photo .ts_content .tsc_box .ts_title {
+	width: 80%; float: left; display: inline-block;
+}
+.template_skin_164 .ts_box.no_photo .ts_content .tsc_box .ts_user_name {
+	margin: 12px 0px 0px; text-align: right; padding-left: 30px; display: inline-block; max-width: 20%;
+}
+.template_skin_164 .ts_box.no_photo .ts_content .ts_summary {
+	height: 37px; margin-top: 10px;
+}
+.template_skin_164 .ts_box.last {
+	margin-bottom: 0px;
+}
+.line_solid_normal.ts_hr_bottom_165 {
+	margin: 30px 0px;
+}
+.template_skin_178 {
+	
+}
+.template_skin_178 .t_icon {
+	background: url("https://im.sisain.co.kr/custom/template/178_icon.png") no-repeat 0px 0px;
+}
+.template_skin_178 .ts_box {
+	overflow: hidden;
+}
+.template_skin_178 .ts_list {
+	height: auto; overflow: hidden;
+}
+.template_skin_178 .ts_list .ts_a {
+	cursor: pointer;
+}
+.template_skin_178 .ts_list .tsl_img {
+	max-width: 100%;
+}
+.template_skin_178 .ts_list .ts_bg {
+	left: 0px; width: 100%; height: 100px; bottom: 5px; position: absolute;
+}
+.template_skin_178 .ts_list .ts_title {
+	font: bold 14px/normal malgun gothic; left: 5%; width: 90%; text-align: center; bottom: 10px; color: rgb(255, 255, 255); letter-spacing: -1px; position: absolute; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_178 .ts_numbers {
+	margin: 0px; padding: 0px 0px 4px; text-align: right;
+}
+.template_skin_178 .ts_numbers .ts_num {
+	background-position: 0px -400px; margin: 0px 3px; width: 6px; height: 7px; line-height: 10em; text-indent: -10000px; overflow: hidden; vertical-align: middle; display: inline-block;
+}
+.template_skin_178 .ts_numbers .ts_num.on {
+	background-position: -150px -400px;
+}
+.template_skin_178 .ts_btn {
+	border: currentColor; transition:left 0.5s, right 0.5s; border-image: none; top: 35%; width: 32px; height: 49px; text-indent: -10000px; overflow: hidden; position: absolute; cursor: pointer;
+}
+.template_skin_178 .ts_btn.ts_prev {
+	background-position: 0px -300px; left: 0px;
+}
+.template_skin_178 .ts_btn.ts_prev.out {
+	left: -32px;
+}
+.template_skin_178 .ts_btn.ts_next {
+	background-position: -150px -300px; right: 0px;
+}
+.template_skin_178 .ts_btn.ts_next.out {
+	right: -32px;
+}
+.template_skin_179 {
+	
+}
+.template_skin_179 .t_icon {
+	background: url("https://im.sisain.co.kr/custom/template/178_icon.png") no-repeat 0px 0px;
+}
+.template_skin_179 .ts_box {
+	overflow: hidden;
+}
+.template_skin_179 .ts_list {
+	height: auto; overflow: hidden;
+}
+.template_skin_179 .ts_list .ts_a {
+	cursor: pointer;
+}
+.template_skin_179 .ts_list .tsl_img {
+	max-width: 100%;
+}
+.template_skin_179 .ts_list .ts_bg {
+	left: 0px; width: 100%; height: 100px; bottom: 5px; position: absolute;
+}
+.template_skin_179 .ts_list .ts_title {
+	font: bold 14px/normal malgun gothic; left: 5%; width: 90%; text-align: center; bottom: 10px; color: rgb(255, 255, 255); letter-spacing: -1px; position: absolute; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_179 .ts_numbers {
+	margin: 0px; padding: 0px 0px 4px; text-align: right;
+}
+.template_skin_179 .ts_numbers .ts_num {
+	background-position: 0px -400px; margin: 0px 3px; width: 6px; height: 7px; line-height: 10em; text-indent: -10000px; overflow: hidden; vertical-align: middle; display: inline-block;
+}
+.template_skin_179 .ts_numbers .ts_num.on {
+	background-position: -150px -400px;
+}
+.template_skin_179 .ts_btn {
+	border: currentColor; transition:left 0.5s, right 0.5s; border-image: none; top: 35%; width: 32px; height: 49px; text-indent: -10000px; overflow: hidden; position: absolute; cursor: pointer;
+}
+.template_skin_179 .ts_btn.ts_prev {
+	background-position: 0px -300px; left: 0px;
+}
+.template_skin_179 .ts_btn.ts_prev.out {
+	left: -32px;
+}
+.template_skin_179 .ts_btn.ts_next {
+	background-position: -150px -300px; right: 0px;
+}
+.template_skin_179 .ts_btn.ts_next.out {
+	right: -32px;
+}
+.template_skin_181 .ts_box {
+	margin: 5px 0px 15px; padding: 0px 10px 15px; border-bottom-color: rgb(222, 222, 222); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.template_skin_181 .icon {
+	background: url("https://im.sisain.co.kr/custom/template/play_green_icon.png") no-repeat 0px 0px; text-indent: -10000px; overflow: hidden; display: inline-block; position: absolute;
+}
+.template_skin_181 .ts_box.last {
+	margin-bottom: 0px; border-bottom-width: 0px;
+}
+.template_skin_181 .ts_img_box {
+	border: 1px solid rgb(222, 222, 222); border-image: none; margin-right: 10px; float: left; position: relative;
+}
+.template_skin_181 .ts_img_box .ts_img {
+	vertical-align: middle; max-width: 100%;
+}
+.template_skin_181 .ts_play {
+	top: 60%; width: 20px; height: 20px; right: 5%;
+}
+.template_skin_181 .ts_list .ts_title {
+	margin: 0px; padding: 0px; color: rgb(0, 0, 0); overflow: hidden; font-size: 1.1em; font-weight: normal; max-height: 44px;
+}
+.template_skin_181 .ts_list .ts_summary {
+	margin: 5px 0px 0px; padding: 0px; height: auto; color: rgb(102, 102, 102); line-height: 1.5em; overflow: hidden; font-size: 13px;
+}
+.template_skin_184 .ts_li {
+	border-bottom-color: rgb(222, 222, 222); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.template_skin_184 .ts_li.last {
+	border-bottom-width: 0px;
+}
+.template_skin_184 .ts_img {
+	margin: 10px; border: 1px solid rgb(222, 222, 222); border-image: none; width: 98px; height: 66px; vertical-align: middle; float: left; display: block;
+}
+.template_skin_184 .ts_title_h {
+	margin: 0px; padding: 10px; width: auto; height: auto; color: rgb(0, 0, 0); font-size: 105%; font-weight: normal; text-decoration: none;
+}
+.template_skin_184 .ts_title_p {
+	color: rgb(66, 51, 84);
+}
+.template_skin_180 {
+	margin: 10px; background-color: rgb(255, 255, 255);
+}
+.template_skin_180 .icon {
+	background: url("https://im.sisain.co.kr/custom/template/play_green_icon.png") no-repeat 0px 0px; text-indent: -10000px; overflow: hidden; display: inline-block; position: absolute;
+}
+.template_skin_180 .ts_box {
+	margin: 0px auto; width: 49%; height: auto; text-align: center; overflow: hidden; float: left; position: relative;
+}
+.template_skin_180 .ts_box.even {
+	float: right;
+}
+.template_skin_180 .ts_title_box {
+	display: inline-block; position: relative;
+}
+.template_skin_180 .ts_img {
+	width: 100%; vertical-align: middle;
+}
+.template_skin_180 .ts_play {
+	top: 55%; width: 20px; height: 20px; right: 5%;
+}
+.template_skin_180 .ts_title {
+	margin: 0px auto; padding: 5px 0px; line-height: 1.4em; font-size: 13px;
+}
+.template_skin_180 .edit_article {
+	width: 50%; text-align: center; float: left;
+}
+.template_skin_180 .edit_article .ts_box {
+	width: 90%;
+}
+.template_skin_127 .ts_box {
+	margin: 10px 0px 0px; width: 165px; height: auto; text-align: center; overflow: hidden;
+}
+.template_skin_127 .ts_img {
+	max-width: 100%;
+}
+.template_skin_127 .ts_title_box {
+	width: 100%; height: 110px; text-align: center; display: inline-block; position: relative;
+}
+.template_skin_127 .ts_bg {
+	width: 100%; height: 30px; bottom: 0px; position: absolute; opacity: 0.5; background-color: rgb(0, 0, 0);
+}
+.template_skin_127 .ts_title {
+	padding: 0px 5px; width: 95%; text-align: center; bottom: 5px; color: rgb(255, 255, 255); letter-spacing: -1px; font-family: dotum; display: block; position: absolute;
+}
+.template_skin_127 .ts_list {
+	background: url("https://im.sisain.co.kr/dot_black.gif") no-repeat 0px 45%; margin: 3px 0px 0px; width: 155px; padding-left: 8px;
+}
+.template_skin_127 .ts_list_a {
+	color: rgb(156, 156, 156);
+}
+.template_skin_185 {
+	
+}
+.template_skin_185 .ts_a {
+	cursor: pointer;
+}
+.template_skin_185 .ts_box {
+	margin: 0px 3px 0px 0px; width: 128px; height: 132px; float: left;
+}
+.template_skin_185 .ts_box .ts_img {
+	width: 128px; height: 90px; vertical-align: middle;
+}
+.template_skin_185 .ts_box .ts_title {
+	border-width: 0px 1px 1px; border-style: solid; border-color: rgb(236, 236, 236); font: bold 12px/1.4em dotum; margin: 0px; padding: 5px 9px; height: 42px; color: rgb(64, 64, 64); letter-spacing: -0.5px; font-size-adjust: none; font-stretch: normal; background-color: rgb(252, 252, 252);
+}
+.template_skin_185 .ts_box .ts_bg {
+	display: none;
+}
+.template_skin_185 .ts_box.tb_1 {
+	margin-bottom: 3px;
+}
+.template_skin_185 .ts_box.tb_2 {
+	margin-bottom: 3px;
+}
+.template_skin_185 .ts_box.tb_2 {
+	margin-right: 0px;
+}
+.template_skin_185 .ts_box.tb_5 {
+	margin-right: 0px;
+}
+.template_skin_185 .ts_box.tb_1 {
+	width: 259px; height: 132px; position: relative;
+}
+.template_skin_185 .ts_box.tb_1 .ts_img {
+	width: 100%; height: 100%;
+}
+.template_skin_185 .ts_box.tb_1 .ts_bg {
+	margin: 0px; padding: 0px; left: 0px; width: 100%; height: 42px; bottom: 0px; display: block; position: absolute; opacity: 0.6; background-color: rgb(0, 0, 0);
+}
+.template_skin_185 .ts_box.tb_1 .ts_title {
+	font: bold 13px/1.4em dotum; margin: auto; border: currentColor; border-image: none; left: 0px; width: 80%; height: auto; right: 0px; bottom: -3px; color: rgb(255, 255, 255); position: absolute; font-size-adjust: none; font-stretch: normal; background-color: transparent;
+}
+.template_skin_187 {
+	
+}
+.template_skin_187 .icon {
+	background: url("https://im.sisain.co.kr/custom/template/187_icon.png") no-repeat 0px 0px;
+}
+.template_skin_187 .ts_h {
+	margin: 0px; padding: 0px 0px 0.2em; height: 34px;
+}
+.template_skin_187 .ts_h .ts_btns {
+	margin: 11px 15px; vertical-align: middle; float: right;
+}
+.template_skin_187 .ts_h .ts_btns .ts_btn {
+	border: currentColor; border-image: none; width: 7px; height: 11px; text-indent: -10000px; display: inline-block;
+}
+.template_skin_187 .ts_h .ts_btns .ts_btn.tb_prev {
+	background-position: 0px -50px; margin-right: 5px;
+}
+.template_skin_187 .ts_h .ts_btns .ts_btn.tb_next {
+	background-position: -100px -50px;
+}
+.template_skin_187 .ts_box {
+	border-width: 0px 1px 1px; border-style: solid; border-color: rgb(218, 218, 218); margin: -2px 0px 0px; height: 235px;
+}
+.template_skin_187 .ts_box .ts_list {
+	padding: 15px 14px;
+}
+.template_skin_187 .ts_box .ts_list .ts_a {
+	cursor: pointer;
+}
+.template_skin_187 .ts_box .ts_list .ts_title_a {
+	cursor: pointer;
+}
+.template_skin_187 .ts_box .ts_list .ts_a {
+	margin: 0px 0px 20px; display: block;
+}
+.template_skin_187 .ts_box .ts_list .ts_img {
+	margin-right: 10px; float: left; display: block;
+}
+.template_skin_187 .ts_box .ts_list .ts_cont {
+	margin: 0px;
+}
+.template_skin_187 .ts_box .ts_list .ts_cont .ts_title {
+	margin: 0px 0px 10px; padding: 0px 0px 0.2em; width: 285px; color: rgb(26, 26, 26); letter-spacing: -0.1em; font-size: 17px;
+}
+.template_skin_187 .ts_box .ts_list .ts_cont .ts_summary {
+	margin: 0px; padding: 0px; height: 38px; color: rgb(136, 136, 136); overflow: hidden; font-size: 13px;
+}
+.template_skin_187 .ts_box .ts_list .ts_title_a {
+	margin: 0px 0px 8px; color: rgb(26, 26, 26); font-size: 14px; display: block;
+}
+.template_skin_187 .ts_box .ts_list .ts_title_a.last {
+	margin-bottom: 0px;
+}
+.template_skin_188 .ts_box {
+	margin: 0px 0px 22px; text-align: center;
+}
+.template_skin_188 .ts_box.last {
+	margin-bottom: 0px;
+}
+.template_skin_188 .ts_box .ts_title_box {
+	cursor: pointer;
+}
+.template_skin_188 .ts_box .ts_title_box .ts_img {
+	margin: 0px 0px 10px; vertical-align: middle; max-width: 100%;
+}
+.template_skin_188 .ts_box .ts_title_box .ts_section {
+	margin: 0px 0px 2px; padding: 0px; color: rgb(119, 119, 119); letter-spacing: -0.5px; font-size: 14px;
+}
+.template_skin_188 .ts_box .ts_title_box .ts_title {
+	margin: 0px; padding: 0px; color: rgb(51, 51, 51); line-height: 1.2em; letter-spacing: -1px; overflow: hidden; font-size: 17px; max-height: 40px;
+}
+.template_skin_189 {
+	
+}
+.template_skin_189 .ts_box {
+	margin: 0px 0px 7px; max-height: 35px;
+}
+.template_skin_189 .ts_box.last {
+	margin-bottom: 0px;
+}
+.template_skin_189 .ts_box .ts_title {
+	color: rgb(51, 51, 51); line-height: 1.2em; overflow: hidden; font-size: 14px;
+}
+.template_skin_189 .ts_box .ts_title .ts_section {
+	
+}
+.dummy {
+	
+}
+.template_skin_190 .ts_box {
+	margin: 0px 0px 10px; text-align: center; position: relative;
+}
+.template_skin_190 .ts_box.last {
+	margin-bottom: 0px;
+}
+.template_skin_190 .ts_img {
+	vertical-align: middle; max-width: 100%;
+}
+.template_skin_190 .ts_title_box {
+	cursor: pointer;
+}
+.template_skin_190 .ts_bg {
+	background: url("https://im.sisain.co.kr/custom/template/190_icon.png") no-repeat 0px 0px; left: 0px; top: 0px; width: 100%; height: 100%; position: absolute;
+}
+.template_skin_190 .ts_title {
+	margin: 0px auto; left: 0px; width: 95%; text-align: center; right: 0px; bottom: 10px; color: rgb(255, 255, 255); font-size: 15px; position: absolute;
+}
+.template_skin_191 {
+	
+}
+.template_skin_191 .ts_box {
+	margin: 0px 0px 13px;
+}
+.template_skin_191 .ts_box.last {
+	margin-bottom: 0px;
+}
+.template_skin_191 .ts_box .ts_photo {
+	margin-right: 10px; float: left;
+}
+.template_skin_191 .ts_box .ts_photo .tsp_img {
+	border: 1px solid rgb(238, 238, 238); border-image: none; vertical-align: middle;
+}
+.template_skin_191 .ts_box .ts_title {
+	margin: 7px 0px 0px; padding: 0px 0px 0.2em; height: 36px; color: rgb(51, 51, 51); line-height: 1.3em; overflow: hidden; font-size: 14px;
+}
+.ts_hr_bottom_191 {
+	margin: 20px 0px 0px;
+}
+.template_skin_195 .ts_box {
+	margin: 0px; text-align: center; float: left; position: relative;
+}
+.template_skin_195 .ts_box .ts_title_box {
+	cursor: pointer;
+}
+.template_skin_195 .ts_box .ts_title_box .ts_img {
+	margin: 0px; vertical-align: middle; max-height: 100%;
+}
+.template_skin_195 .ts_box .ts_title_box .ts_bg {
+	margin: 0px auto; padding: 0px; left: 0px; width: 100%; bottom: 0px; position: absolute; opacity: 0.6; background-color: rgb(0, 0, 0);
+}
+.template_skin_195 .ts_box .ts_title_box .ts_title {
+	margin: 0px auto; padding: 0px; left: 0px; width: 90%; right: 0px; bottom: 0px; color: rgb(255, 255, 255); position: absolute;
+}
+.template_skin_195 .ts_box .ts_title_box .ts_summary {
+	margin: 0px auto; padding: 0px; left: 0px; width: 90%; right: 0px; bottom: 0px; color: rgb(255, 255, 255); position: absolute;
+}
+.template_skin_195 .ts_box.tsb_1 {
+	width: 680px; height: 350px;
+}
+.template_skin_195 .ts_box.tsb_1 .ts_title_box .ts_bg {
+	height: 120px;
+}
+.template_skin_195 .ts_box.tsb_1 .ts_title_box .ts_title {
+	margin: 0px auto; bottom: 70px; line-height: 1em; letter-spacing: -4px; font-size: 30px; font-weight: bold;
+}
+.template_skin_195 .ts_box.tsb_1 .ts_title_box .ts_summary {
+	height: 40px; text-align: left; bottom: 15px; line-height: 1.4em; overflow: hidden; font-size: 14px;
+}
+.template_skin_195 .ts_box.tsb_2 {
+	width: 300px; height: 175px;
+}
+.template_skin_195 .ts_box.tsb_3 {
+	width: 300px; height: 175px;
+}
+.template_skin_195 .ts_box.tsb_2 .ts_img {
+	max-height: 175px;
+}
+.template_skin_195 .ts_box.tsb_3 .ts_img {
+	max-height: 175px;
+}
+.template_skin_195 .ts_box.tsb_2 .ts_bg {
+	height: 40px;
+}
+.template_skin_195 .ts_box.tsb_3 .ts_bg {
+	height: 40px;
+}
+.template_skin_195 .ts_box.tsb_2 .ts_title {
+	bottom: 10px; letter-spacing: -2px; overflow: hidden; font-size: 17px; font-weight: bold;
+}
+.template_skin_195 .ts_box.tsb_3 .ts_title {
+	bottom: 10px; letter-spacing: -2px; overflow: hidden; font-size: 17px; font-weight: bold;
+}
+.template_skin_196 {
+	overflow: hidden; position: relative; background-color: rgb(25, 27, 29);
+}
+.template_skin_196 .icon {
+	background: url("https://im.sisain.co.kr/custom/template/196_icon.png") no-repeat 0px 0px;
+}
+.template_skin_196 .ts_box {
+	margin: 0px auto; height: 290px;
+}
+.template_skin_196 .ts_list {
+	width: 100%; text-align: center;
+}
+.template_skin_196 .ts_title {
+	font: bold 18px/normal dotum; margin: 15px 10px; text-align: center; color: rgb(255, 255, 255); letter-spacing: -2px; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_196 .ts_img {
+	vertical-align: middle; max-width: 100%;
+}
+.template_skin_196 .ts_btn {
+	top: 30%; width: 47px; height: 102px; text-indent: -10000px; overflow: hidden; vertical-align: middle; display: inline-block; position: absolute;
+}
+.template_skin_196 .ts_prev {
+	background-position: 0px 0px; left: 10px;
+}
+.template_skin_196 .ts_next {
+	background-position: -100px 0px; right: 10px;
+}
+.template_skin_182 {
+	margin: 10px;
+}
+.template_skin_182 .icon {
+	background: url("https://im.sisain.co.kr/custom/template/play_green_icon.png") no-repeat 0px 0px; text-indent: -10000px; overflow: hidden; display: inline-block; position: absolute;
+}
+.template_skin_182 .ts_box {
+	margin: 0px; width: 33.3%; height: auto; text-align: center; overflow: hidden; float: left;
+}
+.template_skin_182 .ts_title_box {
+	margin: 0px 10px; display: block; position: relative;
+}
+.template_skin_182 .ts_img {
+	max-width: 100%;
+}
+.template_skin_182 .ts_play {
+	top: 35%; width: 20px; height: 20px; right: 5%;
+}
+.template_skin_182 .ts_title {
+	margin: 0px auto; padding: 5px 0px; line-height: 1.4em; font-size: 15px;
+}
+.template_skin_198 {
+	
+}
+.template_skin_198 .ts_a {
+	cursor: pointer;
+}
+.template_skin_198 .ts_box {
+	margin: 0px 10px 30px 0px; width: 188px; height: 120px; float: left; position: relative;
+}
+.template_skin_198 .ts_box .ts_img {
+	transition:height 300ms; height: 120px; vertical-align: middle;
+}
+.template_skin_198 .ts_box .ts_bg {
+	margin: auto; transition:height 300ms; left: 0px; width: 100%; height: 30px; bottom: 0px; position: absolute; opacity: 0.6; background-color: rgb(0, 0, 0);
+}
+.template_skin_198 .ts_box .ts_cont {
+	margin: auto; transition:bottom 200ms 100ms; left: 0px; width: 90%; right: 0px; bottom: 5px; position: absolute;
+}
+.template_skin_198 .ts_box .ts_cont .ts_title {
+	margin: 0px; padding: 0px 0px 0.2em; color: rgb(255, 255, 255); line-height: 1em; letter-spacing: -1px; font-size: 13px;
+}
+.template_skin_198 .ts_box .ts_cont .ts_summary {
+	padding: 0px; transition:height 200ms 100ms, margin 200ms 100ms; height: 0px; color: rgb(255, 255, 255); line-height: 1.5em; letter-spacing: -0.5px; overflow: hidden; display: block;
+}
+.template_skin_198 .ts_box.tb_1 {
+	margin: 0px 10px 30px 0px;
+}
+.template_skin_198 .ts_box.tb_0 {
+	margin-right: 0px;
+}
+.template_skin_198 .ts_box:hover .ts_img {
+	height: 150px;
+}
+.template_skin_198 .ts_box:hover .ts_bg {
+	height: 100%;
+}
+.template_skin_198 .ts_box:hover .ts_cont {
+	
+}
+.template_skin_198 .ts_box:hover .ts_summary {
+	margin: 10px 0px 0px; height: 37px;
+}
+.template_skin_194 {
+	
+}
+.template_skin_194 .ts_a {
+	cursor: pointer;
+}
+.template_skin_194 .ts_box {
+	margin: 0px 13px 30px 0px; width: 235px; height: 150px; float: left; position: relative;
+}
+.template_skin_194 .ts_box .ts_img {
+	transition:height 300ms; height: 150px; vertical-align: middle;
+}
+.template_skin_194 .ts_box .ts_bg {
+	margin: auto; transition:height 300ms; left: 0px; width: 100%; height: 50px; bottom: 0px; position: absolute; opacity: 0.6; background-color: rgb(0, 0, 0);
+}
+.template_skin_194 .ts_box .ts_cont {
+	margin: auto; transition:bottom 200ms 100ms; left: 0px; width: 90%; right: 0px; bottom: 15px; position: absolute;
+}
+.template_skin_194 .ts_box .ts_cont .ts_title {
+	margin: 0px; padding: 0px 0px 0.2em; color: rgb(255, 255, 255); line-height: 1em; letter-spacing: -1px; font-size: 15px;
+}
+.template_skin_194 .ts_box .ts_cont .ts_summary {
+	padding: 0px; transition:height 200ms 100ms, margin 200ms 100ms; height: 0px; color: rgb(255, 255, 255); line-height: 1.5em; letter-spacing: -0.5px; overflow: hidden; display: block;
+}
+.template_skin_194 .ts_box.tb_1 {
+	margin: 0px 14px 30px 0px;
+}
+.template_skin_194 .ts_box.tb_0 {
+	margin-right: 0px;
+}
+.template_skin_194 .ts_box:hover .ts_img {
+	height: 200px;
+}
+.template_skin_194 .ts_box:hover .ts_bg {
+	height: 100%;
+}
+.template_skin_194 .ts_box:hover .ts_cont {
+	
+}
+.template_skin_194 .ts_box:hover .ts_summary {
+	margin: 10px 0px 0px; height: 37px;
+}
+.template_skin_193 {
+	
+}
+.template_skin_193 .ts_a {
+	cursor: pointer;
+}
+.template_skin_193 .ts_box {
+	float: left; position: relative;
+}
+.template_skin_193 .ts_box .ts_img {
+	transition:height 300ms; height: 100%; vertical-align: middle; max-height: 100%;
+}
+.template_skin_193 .ts_box .ts_bg {
+	margin: auto; transition:height 300ms; left: 0px; width: 100%; height: 70px; bottom: 0px; position: absolute; opacity: 0.6; background-color: rgb(0, 0, 0);
+}
+.template_skin_193 .ts_box .ts_cont {
+	margin: auto; transition:bottom 200ms 100ms; left: 0px; width: 90%; right: 0px; position: absolute;
+}
+.template_skin_193 .ts_box .ts_cont .ts_title {
+	margin: 0px; padding: 0px 0px 0.2em; color: rgb(255, 255, 255); line-height: 1em;
+}
+.template_skin_193 .ts_box .ts_cont .ts_summary {
+	padding: 0px; transition:height 200ms 100ms, margin 200ms 100ms; height: 0px; color: rgb(255, 255, 255); overflow: hidden; display: block;
+}
+.template_skin_193 .ts_box.tb_1 {
+	margin: 0px 10px 10px 0px; width: 485px; height: 370px;
+}
+.template_skin_193 .ts_box.tb_2 {
+	margin: 0px 10px 10px 0px; width: 485px; height: 370px;
+}
+.template_skin_193 .ts_box.tb_2 {
+	margin: 0px 0px 10px;
+}
+.template_skin_193 .ts_box.tb_3 {
+	margin: 0px 10px 0px 0px; width: 320px; height: 240px;
+}
+.template_skin_193 .ts_box.tb_4 {
+	margin: 0px 10px 0px 0px; width: 320px; height: 240px;
+}
+.template_skin_193 .ts_box.tb_5 {
+	margin: 0px 10px 0px 0px; width: 320px; height: 240px;
+}
+.template_skin_193 .ts_box.tb_5 {
+	margin-right: 0px;
+}
+.template_skin_193 .ts_box.tb_1 .ts_img {
+	height: 370px;
+}
+.template_skin_193 .ts_box.tb_2 .ts_img {
+	height: 370px;
+}
+.template_skin_193 .ts_box.tb_3 .ts_img {
+	width: 100%; height: 100%;
+}
+.template_skin_193 .ts_box.tb_4 .ts_img {
+	width: 100%; height: 100%;
+}
+.template_skin_193 .ts_box.tb_5 .ts_img {
+	width: 100%; height: 100%;
+}
+.template_skin_193 .ts_box.tb_1 .ts_cont {
+	bottom: 20px;
+}
+.template_skin_193 .ts_box.tb_2 .ts_cont {
+	bottom: 20px;
+}
+.template_skin_193 .ts_box.tb_1 .ts_cont .ts_title {
+	letter-spacing: -1px; overflow: hidden; font-size: 20px; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.template_skin_193 .ts_box.tb_2 .ts_cont .ts_title {
+	letter-spacing: -1px; overflow: hidden; font-size: 20px; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.template_skin_193 .ts_box.tb_3 .ts_cont {
+	bottom: 10px;
+}
+.template_skin_193 .ts_box.tb_4 .ts_cont {
+	bottom: 10px;
+}
+.template_skin_193 .ts_box.tb_5 .ts_cont {
+	bottom: 10px;
+}
+.template_skin_193 .ts_box.tb_3 .ts_cont .ts_title {
+	height: 38px; line-height: 1.3em; letter-spacing: -0.5px; overflow: hidden; font-size: 16px;
+}
+.template_skin_193 .ts_box.tb_4 .ts_cont .ts_title {
+	height: 38px; line-height: 1.3em; letter-spacing: -0.5px; overflow: hidden; font-size: 16px;
+}
+.template_skin_193 .ts_box.tb_5 .ts_cont .ts_title {
+	height: 38px; line-height: 1.3em; letter-spacing: -0.5px; overflow: hidden; font-size: 16px;
+}
+.template_skin_193 .ts_box.tb_1:hover .ts_bg {
+	height: 170px;
+}
+.template_skin_193 .ts_box.tb_2:hover .ts_bg {
+	height: 170px;
+}
+.template_skin_193 .ts_box.tb_1:hover .ts_cont {
+	bottom: 40px;
+}
+.template_skin_193 .ts_box.tb_2:hover .ts_cont {
+	bottom: 40px;
+}
+.template_skin_193 .ts_box.tb_1:hover .ts_cont .ts_summary {
+	margin: 10px 0px 0px; height: 55px; overflow: hidden; font-size: 14px;
+}
+.template_skin_193 .ts_box.tb_2:hover .ts_cont .ts_summary {
+	margin: 10px 0px 0px; height: 55px; overflow: hidden; font-size: 14px;
+}
+.template_skin_193 .ts_box.tb_3:hover .ts_bg {
+	height: 100%;
+}
+.template_skin_193 .ts_box.tb_4:hover .ts_bg {
+	height: 100%;
+}
+.template_skin_193 .ts_box.tb_5:hover .ts_bg {
+	height: 100%;
+}
+.template_skin_193 .ts_box.tb_3:hover .ts_cont {
+	bottom: 20px;
+}
+.template_skin_193 .ts_box.tb_4:hover .ts_cont {
+	bottom: 20px;
+}
+.template_skin_193 .ts_box.tb_5:hover .ts_cont {
+	bottom: 20px;
+}
+.template_skin_193 .ts_box.tb_3:hover .ts_cont .ts_summary {
+	margin: 10px 0px 0px; height: 55px; overflow: hidden; font-size: 14px;
+}
+.template_skin_193 .ts_box.tb_4:hover .ts_cont .ts_summary {
+	margin: 10px 0px 0px; height: 55px; overflow: hidden; font-size: 14px;
+}
+.template_skin_193 .ts_box.tb_5:hover .ts_cont .ts_summary {
+	margin: 10px 0px 0px; height: 55px; overflow: hidden; font-size: 14px;
+}
+.template_skin_199 {
+	
+}
+.template_skin_199 .ts_a {
+	cursor: pointer;
+}
+.template_skin_199 .ts_box {
+	float: left; position: relative;
+}
+.template_skin_199 .ts_box .ts_img {
+	transition:height 300ms; height: 100%; vertical-align: middle; max-height: 100%;
+}
+.template_skin_199 .ts_box .ts_bg {
+	margin: auto; transition:height 300ms; left: 0px; width: 100%; height: 70px; bottom: 0px; display: none; position: absolute; opacity: 0.6; background-color: rgb(0, 0, 0);
+}
+.template_skin_199 .ts_box .ts_cont {
+	margin: auto; transition:bottom 200ms 100ms; left: 0px; width: 90%; right: 0px; display: none; position: absolute;
+}
+.template_skin_199 .ts_box .ts_cont .ts_title {
+	margin: 0px; padding: 0px 0px 0.2em; color: rgb(255, 255, 255); line-height: 1em;
+}
+.template_skin_199 .ts_box .ts_cont .ts_summary {
+	padding: 0px; transition:height 200ms 100ms, margin 200ms 100ms; height: 0px; color: rgb(255, 255, 255); overflow: hidden; display: block;
+}
+.template_skin_199 .ts_box.tb_1 {
+	margin: 0px 10px 10px 0px; width: 650px; height: 370px;
+}
+.template_skin_199 .ts_box.tb_2 {
+	margin: 0px 0px 10px; width: 320px; height: 180px;
+}
+.template_skin_199 .ts_box.tb_3 {
+	margin: 0px 0px 10px; width: 320px; height: 180px;
+}
+.template_skin_199 .ts_box.tb_4 {
+	margin: 0px 10px 0px 0px; width: 320px; height: 180px;
+}
+.template_skin_199 .ts_box.tb_5 {
+	margin: 0px 10px 0px 0px; width: 320px; height: 180px;
+}
+.template_skin_199 .ts_box.tb_6 {
+	margin: 0px 10px 0px 0px; width: 320px; height: 180px;
+}
+.template_skin_199 .ts_box.tb_6 {
+	margin-right: 0px;
+}
+.template_skin_199 .ts_box.tb_1 .ts_img {
+	height: 370px;
+}
+.template_skin_199 .ts_box.tb_2 .ts_img {
+	width: 320px;
+}
+.template_skin_199 .ts_box.tb_3 .ts_img {
+	width: 320px;
+}
+.template_skin_199 .ts_box.tb_4 .ts_img {
+	width: 100%; height: 100%;
+}
+.template_skin_199 .ts_box.tb_5 .ts_img {
+	width: 100%; height: 100%;
+}
+.template_skin_199 .ts_box.tb_6 .ts_img {
+	width: 100%; height: 100%;
+}
+.template_skin_199 .ts_box.tb_1 .ts_cont {
+	bottom: 20px;
+}
+.template_skin_199 .ts_box.tb_2 .ts_cont {
+	bottom: 20px;
+}
+.template_skin_199 .ts_box.tb_1 .ts_cont .ts_title {
+	letter-spacing: -1px; overflow: hidden; font-size: 20px; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.template_skin_199 .ts_box.tb_2 .ts_cont .ts_title {
+	letter-spacing: -1px; overflow: hidden; font-size: 20px; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.template_skin_199 .ts_box.tb_3 .ts_cont {
+	bottom: 10px;
+}
+.template_skin_199 .ts_box.tb_4 .ts_cont {
+	bottom: 10px;
+}
+.template_skin_199 .ts_box.tb_5 .ts_cont {
+	bottom: 10px;
+}
+.template_skin_199 .ts_box.tb_3 .ts_cont .ts_title {
+	height: 38px; line-height: 1.3em; letter-spacing: -0.5px; overflow: hidden; font-size: 16px;
+}
+.template_skin_199 .ts_box.tb_4 .ts_cont .ts_title {
+	height: 38px; line-height: 1.3em; letter-spacing: -0.5px; overflow: hidden; font-size: 16px;
+}
+.template_skin_199 .ts_box.tb_5 .ts_cont .ts_title {
+	height: 38px; line-height: 1.3em; letter-spacing: -0.5px; overflow: hidden; font-size: 16px;
+}
+.template_skin_199 .ts_box.tb_1:hover .ts_bg {
+	height: 170px;
+}
+.template_skin_199 .ts_box.tb_2:hover .ts_bg {
+	height: 170px;
+}
+.template_skin_199 .ts_box.tb_1:hover .ts_cont {
+	bottom: 40px;
+}
+.template_skin_199 .ts_box.tb_2:hover .ts_cont {
+	bottom: 40px;
+}
+.template_skin_199 .ts_box.tb_1:hover .ts_cont .ts_summary {
+	margin: 10px 0px 0px; height: 55px; overflow: hidden; font-size: 14px;
+}
+.template_skin_199 .ts_box.tb_2:hover .ts_cont .ts_summary {
+	margin: 10px 0px 0px; height: 55px; overflow: hidden; font-size: 14px;
+}
+.template_skin_199 .ts_box.tb_3:hover .ts_bg {
+	height: 100%;
+}
+.template_skin_199 .ts_box.tb_4:hover .ts_bg {
+	height: 100%;
+}
+.template_skin_199 .ts_box.tb_5:hover .ts_bg {
+	height: 100%;
+}
+.template_skin_199 .ts_box.tb_3:hover .ts_cont {
+	bottom: 20px;
+}
+.template_skin_199 .ts_box.tb_4:hover .ts_cont {
+	bottom: 20px;
+}
+.template_skin_199 .ts_box.tb_5:hover .ts_cont {
+	bottom: 20px;
+}
+.template_skin_199 .ts_box.tb_3:hover .ts_cont .ts_summary {
+	margin: 10px 0px 0px; height: 55px; overflow: hidden; font-size: 14px;
+}
+.template_skin_199 .ts_box.tb_4:hover .ts_cont .ts_summary {
+	margin: 10px 0px 0px; height: 55px; overflow: hidden; font-size: 14px;
+}
+.template_skin_199 .ts_box.tb_5:hover .ts_cont .ts_summary {
+	margin: 10px 0px 0px; height: 55px; overflow: hidden; font-size: 14px;
+}
+.template_skin_186 .ts_box {
+	margin: 0px; height: auto; text-align: center; overflow: hidden;
+}
+.template_skin_186 .ts_img {
+	max-width: 100%;
+}
+.template_skin_186 .ts_title_box {
+	text-align: center;
+}
+.template_skin_186 .ts_title {
+	padding: 2px 5px 10px; text-align: center; color: rgb(26, 26, 26); letter-spacing: -1px; font-size: 14px; display: block;
+}
+.template_skin_186 .ts_list {
+	background: url("https://im.sisain.co.kr/dot_black.gif") no-repeat 0px 45%; margin: 3px 0px 0px; padding-left: 8px;
+}
+.template_skin_186 .ts_list_a {
+	color: rgb(136, 136, 136); font-size: 13px;
+}
+.template_skin_132 {
+	width: 340px;
+}
+.template_skin_132 .ts_box {
+	margin: 0px; padding: 5px 0px;
+}
+.template_skin_132 .ts_box.none {
+	margin: 0px; border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none;
+}
+.template_skin_132 .ts_title_a {
+	font: bold 16px/normal dotum; margin: 0px 0px 7px; width: 100%; color: rgb(51, 51, 51); display: block; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_132 .ts_photo {
+	margin: 0px 13px 0px 0px;
+}
+.template_skin_132 .tsp_img {
+	border: 1px solid rgb(238, 238, 238); border-image: none;
+}
+.template_skin_132 .ts_summary {
+	line-height: 1.4em;
+}
+.template_skin_132 .ts_summary_a {
+	text-align: justify; color: rgb(85, 85, 85); line-height: 1.4em;
+}
+.template_skin_132 .ts_relation {
+	margin: 11px 0px 0px;
+}
+.template_skin_132 .tsr_li {
+	background: url("https://im.sisain.co.kr/custom/template/119_icon.png") no-repeat 0px 30%; margin: 0px 0px 3px; padding: 0px 0px 0px 15px;
+}
+.template_skin_132 .tsr_title_a {
+	color: rgb(61, 61, 61); letter-spacing: -1px;
+}
+.template_skin_148 {
+	width: 340px;
+}
+.template_skin_148 .ts_box {
+	padding: 0px 0px 15px;
+}
+.template_skin_148 .ts_box.second {
+	padding-bottom: 5px; margin-bottom: 7px; border-bottom-color: rgb(221, 221, 221); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.template_skin_148 .ts_photo_box {
+	margin: 0px 10px 0px 0px; text-align: center; overflow: hidden; float: left;
+}
+.template_skin_148 .ts_photo {
+	max-height: 100%; max-width: 100%;
+}
+.template_skin_148 .ts_title {
+	width: 100%; color: rgb(26, 26, 26); font-weight: bold;
+}
+.template_skin_148 .ts_summary {
+	margin: 6px 0px 0px; height: 36px; color: rgb(136, 136, 136); overflow: hidden;
+}
+.template_skin_148 .ts_box.dot {
+	background: url("https://im.sisain.co.kr/dot-black.gif") no-repeat 0px 7px; padding: 0px 0px 5px 10px;
+}
+.template_skin_148 .ts_title_a {
+	color: rgb(85, 85, 85);
+}
+.template_skin_201 {
+	margin: 0px auto; padding: 5px; background-color: rgb(0, 20, 44);
+}
+.template_skin_201 .ts_subject {
+	font: bold 12px/normal doutm; margin: 2px 0px 5px; padding: 0px 0px 0.2em; color: rgb(255, 255, 255); font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_201 .ts_first {
+	width: 250px; height: 180px; overflow: hidden; position: relative;
+}
+.template_skin_201 .ts_first .ts_img {
+	vertical-align: middle; max-width: 100%;
+}
+.template_skin_201 .ts_first .ts_bg {
+	left: 0px; width: 100%; height: 23px; bottom: 0px; position: absolute; opacity: 0.6; background-color: rgb(0, 0, 0);
+}
+.template_skin_201 .ts_first .ts_title {
+	font: bold 12px/normal dotum; margin: auto; left: 0px; text-align: center; right: 0px; bottom: 3px; color: rgb(255, 255, 255); position: absolute; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_201 .ts_box {
+	margin: 5px 0px 0px; height: 50px; overflow: hidden;
+}
+.template_skin_201 .ts_box .ts_bx_img {
+	margin: 0px 5px 0px 0px; width: 80px; height: 50px; overflow: hidden; float: left; display: block; opacity: 0.7;
+}
+.template_skin_201 .ts_box .ts_bx_img.on {
+	border: 2px solid rgb(199, 17, 42); border-image: none; opacity: 1;
+}
+.template_skin_201 .ts_box .ts_bx_img.last {
+	margin-right: 0px;
+}
+.template_skin_201 .ts_box .ts_bx_img .ts_img {
+	vertical-align: middle; max-width: 100%;
+}
+.template_skin_202 {
+	background-color: rgb(255, 255, 255);
+}
+.template_skin_202 .icon {
+	background: url("https://im.sisain.co.kr/custom/template/play_green_icon.png") no-repeat 0px 0px; text-indent: -10000px; overflow: hidden; display: inline-block; position: absolute;
+}
+.template_skin_202 .ts_box {
+	margin: 0px auto; width: 100%; height: auto; text-align: left; overflow: hidden; float: left; position: relative;
+}
+.template_skin_202 .ts_box.even {
+	
+}
+.template_skin_202 .ts_box.last {
+	
+}
+.template_skin_202 .ts_title_box {
+	display: inline-block; position: relative;
+}
+.template_skin_202 .ts_img {
+	width: 100%; vertical-align: middle;
+}
+.template_skin_202 .ts_play {
+	top: 60%; width: 20px; height: 20px; right: 5%;
+}
+.template_skin_202 .ts_title {
+	margin: 5px 10px; height: 56px; line-height: 1.4em; letter-spacing: -2px; overflow: hidden; font-size: 20px; font-weight: bold;
+}
+@media only screen and (min-width:640px)
+{
+.template_skin_202 .ts_box {
+	padding-right: 10px; max-width: 50%;
+}
+.template_skin_202 .ts_box.even {
+	padding-right: 0px; padding-left: 10px;
+}
+}
+.template_skin_136 {
+	
+}
+.template_skin_136 .ts_box {
+	border-width: 0px 1px 1px 0px; border-style: solid; border-color: rgb(226, 226, 226); padding: 15px; width: 244.5px; height: 195px; overflow: hidden; float: left;
+}
+.template_skin_136 .ts_box.t_border {
+	border-top-width: 1px;
+}
+.template_skin_136 .ts_box.l_border {
+	border-left-width: 1px;
+}
+.template_skin_136 .ts_box .tsb_icon_play {
+	background: url("https://im.sisain.co.kr/custom/template/136_icon.png") no-repeat -80px -100px; transition:background 150ms; left: 82px; top: 41px; width: 56px; height: 39px; display: inline-block; position: absolute; -moz-transition: background 150ms; -o-transition: background 150ms;
+}
+.template_skin_136 .ts_box.on .tsb_icon_play {
+	background-position: -80px -150px;
+}
+.template_skin_136 .tsb_li.photo {
+	height: 115px; text-align: center; overflow: hidden;
+}
+.template_skin_136 .tsb_li.photo .tsb_img_box {
+	width: 100%; height: 142px; overflow: hidden; display: inline-block; position: relative;
+}
+.template_skin_136 .tsb_li.photo .tsb_img {
+	border: 1px solid rgb(237, 237, 237); border-image: none; width: 100%;
+}
+.template_skin_136 .tsb_li.title {
+	height: 17px; overflow: hidden; margin-top: 10px; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.template_skin_136 .tsb_li.title .tsb_title_a {
+	color: rgb(28, 28, 28); font-family: Nanum Gothic,³ª´®°íµñ; font-weight: bold;
+}
+.template_skin_136 .tsb_li.date {
+	font: 11px/normal Nanum Gothic, ³ª´®°íµñ; color: rgb(131, 131, 131); margin-top: 5px; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_203 {
+	margin: 0px auto;
+}
+.template_skin_203 .ts_top .li {
+	transition:opacity 300ms; width: 114.25px; height: 114.25px; overflow: hidden; position: relative; opacity: 0.7;
+}
+.template_skin_203 .ts_bottom .li {
+	transition:opacity 300ms; width: 114.25px; height: 114.25px; overflow: hidden; position: relative; opacity: 0.7;
+}
+.template_skin_203 .ts_top .li.on {
+	opacity: 1;
+}
+.template_skin_203 .ts_top .li:hover {
+	opacity: 1;
+}
+.template_skin_203 .ts_bottom .li.on {
+	opacity: 1;
+}
+.template_skin_203 .ts_bottom .li:hover {
+	opacity: 1;
+}
+.template_skin_203 .ts_top .li.on .ts_bg {
+	margin: 0px; padding: 0px; left: 0px; width: 100%; height: 100%; bottom: 0px; position: absolute; opacity: 0.7; background-color: rgb(0, 0, 0);
+}
+.template_skin_203 .ts_bottom .li.on .ts_bg {
+	margin: 0px; padding: 0px; left: 0px; width: 100%; height: 100%; bottom: 0px; position: absolute; opacity: 0.7; background-color: rgb(0, 0, 0);
+}
+.template_skin_203 .ts_top .li:hover .ts_bg {
+	margin: 0px; padding: 0px; left: 0px; width: 100%; height: 100%; bottom: 0px; position: absolute; opacity: 0.7; background-color: rgb(0, 0, 0);
+}
+.template_skin_203 .ts_bottom .li:hover .ts_bg {
+	margin: 0px; padding: 0px; left: 0px; width: 100%; height: 100%; bottom: 0px; position: absolute; opacity: 0.7; background-color: rgb(0, 0, 0);
+}
+.template_skin_203 .ts_top .li.on .ts_title {
+	font: 12px/1.3em dotum; margin: auto 0px; padding: 0px; left: 10px; top: 0px; width: 94px; text-align: justify; bottom: 0px; color: rgb(255, 255, 255); letter-spacing: -1px; overflow: hidden; position: absolute; max-height: 45px; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_203 .ts_bottom .li.on .ts_title {
+	font: 12px/1.3em dotum; margin: auto 0px; padding: 0px; left: 10px; top: 0px; width: 94px; text-align: justify; bottom: 0px; color: rgb(255, 255, 255); letter-spacing: -1px; overflow: hidden; position: absolute; max-height: 45px; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_203 .ts_top .li:hover .ts_title {
+	font: 12px/1.3em dotum; margin: auto 0px; padding: 0px; left: 10px; top: 0px; width: 94px; text-align: justify; bottom: 0px; color: rgb(255, 255, 255); letter-spacing: -1px; overflow: hidden; position: absolute; max-height: 45px; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_203 .ts_bottom .li:hover .ts_title {
+	font: 12px/1.3em dotum; margin: auto 0px; padding: 0px; left: 10px; top: 0px; width: 94px; text-align: justify; bottom: 0px; color: rgb(255, 255, 255); letter-spacing: -1px; overflow: hidden; position: absolute; max-height: 45px; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_203 .ts_top .li .ts_img {
+	vertical-align: middle; max-width: 100%;
+}
+.template_skin_203 .ts_bottom .li .ts_img {
+	vertical-align: middle; max-width: 100%;
+}
+.template_skin_203 .ts_cnv .tsc_img {
+	vertical-align: middle; max-width: 100%;
+}
+.template_skin_203 .ts_top {
+	
+}
+.template_skin_203 .ts_top .li {
+	margin: 0px 0px 0px 1px; float: right;
+}
+.template_skin_203 .ts_top .li.last {
+	margin-left: 0px;
+}
+.template_skin_203 .ts_box {
+	margin: 1px 0px 0px;
+}
+.template_skin_203 .ts_box .ts_bottom {
+	margin: 0px 1px 0px 0px; width: 114.25px; float: left;
+}
+.template_skin_203 .ts_box .ts_bottom .li {
+	margin: 0px 0px 1px;
+}
+.template_skin_203 .ts_box .ts_bottom .li.last {
+	margin-bottom: 0px;
+}
+.template_skin_203 .ts_box .ts_cnv {
+	margin: 0px; width: 344.75px; height: 344.75px; position: relative;
+}
+.template_skin_203 .ts_box .ts_cnv .ts_bg {
+	margin: 0px; padding: 0px; left: 0px; width: 100%; height: 50px; bottom: 0px; position: absolute; opacity: 0.7; background-color: rgb(0, 0, 0);
+}
+.template_skin_203 .ts_box .ts_cnv .ts_title {
+	font: bold 14px dotum; margin: 0px; padding: 0px; left: 10px; width: 324px; bottom: 16px; color: rgb(255, 255, 255); letter-spacing: -1.5px; overflow: hidden; position: absolute; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_204 {
+	width: auto; height: 270px; position: relative;
+}
+.template_skin_204 .box {
+	width: 100%; overflow: hidden; position: absolute;
+}
+.template_skin_204 .ts_title {
+	margin: 0px 0px 10px;
+}
+.template_skin_204 .ts_title.border {
+	padding: 0px 0px 10px; border-bottom-color: rgb(230, 229, 229); border-bottom-width: 1px; border-bottom-style: dashed;
+}
+.template_skin_204 .ts_title.last {
+	margin-bottom: 0px;
+}
+.template_skin_204 .ts_title_a {
+	font: bold 14px/normal dotum; color: rgb(37, 37, 37); font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_205 {
+	
+}
+.template_skin_205 .ts_btns {
+	margin: -28px 0px 0px; width: 260px; text-align: right; position: absolute;
+}
+.template_skin_205 .ts_btns .ts_btn {
+	background: url("https://im.sisain.co.kr/custom/template/205_icon.png") no-repeat 0px 0px rgb(255, 255, 255); border: currentColor; border-image: none; width: 15px; height: 15px; text-indent: -10000px; vertical-align: middle;
+}
+.template_skin_205 .ts_btns .tsb_prev {
+	
+}
+.template_skin_205 .ts_btns .tsb_next {
+	background-position: -16px 0px; margin-left: 1px;
+}
+.template_skin_205 .ts_box {
+	height: 380px;
+}
+.template_skin_205 .ts_box .ts_list {
+	width: 100%;
+}
+.template_skin_205 .ts_title {
+	margin: 0px 0px 20px; padding: 0px; display: block; max-height: 60px;
+}
+.template_skin_205 .ts_title.last {
+	margin-bottom: 0px;
+}
+.template_skin_205 .ts_title .tst_c {
+	
+}
+.template_skin_205 .ts_title .tst_c.p {
+	width: 170px; margin-right: 30px; float: left;
+}
+.template_skin_205 .ts_title .tst_c .tst_t {
+	font: bold 12px/1.7 gulim; margin: 0px 0px 2px; padding: 0px 0px 0.2em; color: rgb(51, 51, 51); letter-spacing: -0.5px; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_205 .ts_title .tst_c .tst_s {
+	font: 12px/1.5 dotum; margin: 0px; padding: 0px; text-align: justify; color: rgb(136, 136, 136); letter-spacing: -0.5px; overflow: hidden; max-height: 36px; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_205 .ts_title .ts_img {
+	border-radius: 30px; display: block; max-height: 60px; max-width: 60px; box-shadow: 1px 0px 0px #000;
+}
+.template_skin_206 {
+	
+}
+.template_skin_206 .ts_box {
+	margin: 0px 15px 0px 0px; width: 150px; float: left;
+}
+.template_skin_206 .ts_box.first {
+	width: 480px; margin-right: 20px;
+}
+.template_skin_206 .ts_box.last {
+	margin-right: 0px;
+}
+.template_skin_206 .ts_box .ts_title_box {
+	cursor: pointer;
+}
+.template_skin_206 .ts_box .ts_img {
+	height: 150px; vertical-align: middle;
+}
+.template_skin_206 .ts_box.first .ts_img {
+	width: 480px; height: 250px; vertical-align: middle;
+}
+.template_skin_206 .ts_box .ts_content {
+	margin: 10px auto 0px; padding: 0px;
+}
+.template_skin_206 .ts_box .ts_content .ts_section {
+	font: bold 12px gulim; margin: 0px 0px 8px; padding: 0px 0px 0.2em; color: rgb(170, 170, 170); letter-spacing: -0.5px; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_206 .ts_box .ts_content .ts_title {
+	font: bold 12px/1.4 dotum; margin: 0px 0px 7px; padding: 0px 0px 0.2em; height: 31px; color: rgb(26, 26, 26); letter-spacing: -1px; overflow: hidden; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_206 .ts_box .ts_content .ts_summary {
+	font: 12px/1.3 gulim; margin: 0px; height: 61px; text-align: justify; color: rgb(119, 119, 119); letter-spacing: -0.5px; overflow: hidden; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_206 .ts_box .ts_content .ts_name {
+	font: 11px dotum; margin: 20px 0px 0px; color: rgb(170, 170, 170); font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_206 .ts_box.first .ts_content .ts_title {
+	height: auto; line-height: 1; font-size: 16px; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.template_skin_206 .ts_box.first .ts_content .ts_summary {
+	height: 31px; line-height: 1.4em;
+}
+.template_skin_206 .ts_box.first .ts_content .ts_section {
+	display: none;
+}
+.template_skin_206 .ts_box.first .ts_content .ts_name {
+	display: none;
+}
+.template_skin_207 {
+	width: 680px;
+}
+.template_skin_207 .ts_a {
+	cursor: pointer;
+}
+.template_skin_207 .ts_box {
+	margin: 0px 13px 10px 0px; width: 160px; height: 110px; float: left;
+}
+.template_skin_207 .ts_box .ts_img_bx {
+	margin: 0px; padding: 0px; width: 100%; height: 90px; overflow: hidden;
+}
+.template_skin_207 .ts_box .ts_img_bx .ts_img {
+	vertical-align: middle; max-width: 100%;
+}
+.template_skin_207 .ts_box .ts_bg {
+	display: none;
+}
+.template_skin_207 .ts_box .ts_title {
+	font: 12px gulim; margin: 7px 0px 0px; padding: 0px; text-align: left; color: rgb(255, 255, 255); letter-spacing: -1px; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_207 .ts_box.tb_1 {
+	width: 333px; height: 230px; position: relative;
+}
+.template_skin_207 .ts_box.tb_1 .ts_img_bx {
+	height: 100%; overflow: hidden;
+}
+.template_skin_207 .ts_box.tb_1 .ts_bg {
+	margin: 0px; padding: 0px; left: 0px; width: 100%; height: 45px; bottom: 0px; display: block; position: absolute; opacity: 0.7; background-color: rgb(0, 0, 0);
+}
+.template_skin_207 .ts_box.tb_1 .ts_title {
+	font: bold 12px gulim; left: 10px; width: 313px; text-align: center; bottom: 14px; position: absolute; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_207 .ts_box.tb_2 {
+	margin-right: 14px;
+}
+.template_skin_207 .ts_box.tb_4 {
+	margin-right: 14px;
+}
+.template_skin_207 .ts_box.tb_6 {
+	margin-right: 14px;
+}
+.template_skin_207 .ts_box.tb_3 {
+	margin-right: 0px;
+}
+.template_skin_207 .ts_box.tb_5 {
+	margin-right: 0px;
+}
+.template_skin_207 .ts_box.tb_9 {
+	margin-right: 0px;
+}
+.template_skin_207 .ts_box.tb_6 {
+	margin-bottom: 0px;
+}
+.template_skin_207 .ts_box.tb_7 {
+	margin-bottom: 0px;
+}
+.template_skin_207 .ts_box.tb_8 {
+	margin-bottom: 0px;
+}
+.template_skin_207 .ts_box.tb_9 {
+	margin-bottom: 0px;
+}
+.template_skin_96 {
+	width: 100%; overflow: hidden;
+}
+.template_skin_96 .auto_line1_list {
+	margin: 0px; width: 100%; overflow: hidden;
+}
+.template_skin_96 .al1_list {
+	background: url("https://im.sisain.co.kr/custom/template/86_icon.png") no-repeat 0px 11px; padding: 0.3em 0px 0.3em 1em; width: 100%; overflow: hidden;
+}
+.template_skin_96 .al1_list_a_14b {
+	width: 100%; letter-spacing: -1px; overflow: hidden; font-family: Dotum; font-size: 14px; font-weight: bold; display: block; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.template_skin_96 ul li a {
+	color: rgb(75, 75, 75) !important;
+}
+.template_skin_96 ul li :hover {
+	color: rgb(97, 97, 97) !important;
+}
+.template_skin_158 {
+	margin: 0px; height: auto; overflow: hidden; background-color: rgb(242, 242, 242);
+}
+.template_skin_158 .ts_outbox {
+	margin: 14px 12px 9px; height: 27px; overflow: hidden;
+}
+.template_skin_158 .ts_label {
+	padding: 5px 7px 3px; border-radius: 5px; width: 50px; text-align: center; color: rgb(255, 255, 255); letter-spacing: -1px; font-size: 0.7em; font-weight: bold; float: left; cursor: pointer; background-color: rgb(0, 69, 166);
+}
+.template_skin_158 .ts_label .arrow {
+	border-width: 5px; border-style: solid; border-color: rgb(255, 255, 255) rgb(0, 69, 166) rgb(0, 69, 166); margin: 4px 0px 0px 3px; vertical-align: middle; display: inline-block;
+}
+.template_skin_158 .ts_roll_box {
+	height: 25px; overflow: hidden;
+}
+.template_skin_158 .ts_box {
+	margin: 2px 10px 5px; width: 95%; overflow: hidden;
+}
+.template_skin_158 .ts_box .ts_li {
+	margin: 0px 0px 10px; width: auto; height: auto; overflow: hidden; display: list-item; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.template_skin_158 .ts_box .ts_title_a {
+	color: rgb(0, 0, 0) !important; font-size: 105%;
+}
+.template_skin_158.on .ts_outbox {
+	height: auto;
+}
+.template_skin_158.on .ts_label .arrow {
+	border-color: rgb(0, 69, 166) rgb(0, 69, 166) rgb(255, 255, 255); margin-top: -5px;
+}
+.ios.safari .template_skin_158.on .ts_label .arrow {
+	margin-top: -10px;
+}
+.template_skin_158.on .ts_roll_box {
+	margin: 0px; height: auto; overflow: hidden; clear: both;
+}
+.template_skin_158.on .ts_box .ts_li {
+	padding: 10px; margin-bottom: 0px; border-bottom-color: rgb(222, 222, 222); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.template_skin_158.on .ts_box .ts_li.last {
+	padding-bottom: 0px; border-bottom-width: 0px;
+}
+@media only screen and (max-width:640px)
+{
+.template_skin_158 {
+	border-width: 1px 0px; border-style: solid; border-color: rgb(222, 222, 222);
+}
+}
+.template_skin_208 {
+	padding: 10px; position: relative;
+}
+.template_skin_208.m_slide_horizon {
+	border: currentColor; border-image: none;
+}
+.template_skin_208 .box_slide_horizon_box {
+	height: 120px; overflow: hidden;
+}
+.template_skin_208 .ts_ul {
+	margin: 0px; width: 100%; height: auto;
+}
+.template_skin_208 .ts_li {
+	margin: 0px; width: 50%; height: auto; text-align: center; border-right-color: rgb(255, 255, 255); border-right-width: 5px; border-right-style: solid; float: left;
+}
+.template_skin_208 .ts_li.even {
+	border-left-color: rgb(255, 255, 255); border-left-width: 5px; border-left-style: solid; float: right;
+}
+.template_skin_208 .ts_li.last {
+	border-right-color: currentColor; border-right-width: medium; border-right-style: none;
+}
+.template_skin_208 .ts_img {
+	width: 100%; display: block;
+}
+.template_skin_208 .ts_title_a_txt {
+	margin: 10px auto 0px; text-align: left; color: rgb(17, 17, 17); line-height: 1.4em; letter-spacing: -1px; overflow: hidden; font-size: 14px; max-height: 37px;
+}
+.template_skin_208 .ts_btn_box {
+	margin: 1em 0px; text-align: center;
+}
+.template_skin_208 .ts_btn_box .ts_number {
+	margin: 0px 3px; border-radius: 4px; width: 8px; height: 8px; text-indent: -10000px; vertical-align: middle; display: inline-block; background-color: rgb(170, 170, 170);
+}
+.template_skin_208 .ts_btn_box .ts_number.on {
+	background-color: rgb(18, 113, 180);
+}
+.template_skin_208 .ts_btn_box .ts_btn {
+	background: url("https://im.sisain.co.kr/arrow-bullet.png") no-repeat -97px -267px rgb(0, 0, 0); border: currentColor; border-image: none; top: 26%; width: 23px; height: 40px; text-indent: -10000px; display: inline-block; position: absolute; z-index: 2; opacity: 0.6;
+}
+.template_skin_208 .ts_btn_box .ts_btn.ts_prev {
+	left: 10px;
+}
+.template_skin_208 .ts_btn_box .ts_btn.ts_next {
+	background-position: -7px -267px; right: 10px;
+}
+.template_skin_210 .ts_li {
+	border-bottom-color: rgb(222, 222, 222); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.template_skin_210 .ts_li.last {
+	border-bottom-width: 0px;
+}
+.template_skin_210 .ts_a {
+	padding: 10px 15px; width: auto; height: auto; color: rgb(0, 0, 0); line-height: 3.5; font-size: 105%; text-decoration: none; display: block;
+}
+.template_skin_210 .ts_a .ts_section {
+	color: rgb(0, 69, 166); font-size: 0.9em; font-weight: normal;
+}
+.template_skin_210 .ts_a .ts_title {
+	width: 80%; float: left;
+}
+.template_skin_210 .ts_a .ts_img {
+	margin: 0px; width: 58px; vertical-align: middle; float: right; display: block;
+}
+.template_skin_211 {
+	
+}
+.template_skin_211 .icon {
+	background: url("https://im.sisain.co.kr/custom/template/211_icon.png") no-repeat 0px 0px; text-indent: -10000px; overflow: hidden; display: inline-block; position: absolute;
+}
+.template_skin_211 .ts_box {
+	margin: 0px auto 10px; padding: 0px 0px 0px 15px; width: 50%; height: auto; text-align: center; overflow: hidden; border-right-color: rgb(255, 255, 255); border-right-width: 2px; border-right-style: solid; float: left; position: relative;
+}
+.template_skin_211 .ts_box.even {
+	padding: 0px 15px 0px 0px; border-right-color: currentColor; border-right-width: medium; border-right-style: none;
+}
+.template_skin_211 .ts_title {
+	padding: 0px 10px; height: 40px; line-height: 1.4; overflow: hidden; position: relative;
+}
+.template_skin_211 .ts_img {
+	width: 100%; vertical-align: middle;
+}
+.template_skin_211 .ts_play {
+	background-position: -100px -100px; top: 55%; width: 23px; height: 23px; right: 5%;
+}
+.template_skin_211 .ts_box.even .ts_play {
+	right: 12%;
+}
+.template_skin_213 {
+	margin: 0px; height: auto;
+}
+.template_skin_213 .ts_break_news {
+	margin: 2px 0px 0px; padding: 0px; height: 24px; overflow: hidden;
+}
+.template_skin_213 .ts_icon {
+	background: url("https://im.sisain.co.kr/custom/template/213_icon.png") no-repeat 0px 0px;
+}
+.template_skin_213 .ts_label {
+	background-position: 0px 40%; width: 10px; text-indent: -10000px;
+}
+.template_skin_213 .ts_roll {
+	margin: 0px; height: 20px; overflow: hidden; position: relative;
+}
+.template_skin_213 .ts_box {
+	top: 0px; height: auto; position: absolute;
+}
+.template_skin_213 .ts_box .ts_li {
+	width: 380px;
+}
+.template_skin_213 .ts_box .ts_title_a {
+	font: bold 14px/1.2 dotum; color: rgb(51, 51, 51); letter-spacing: -0.5px; display: block; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_213 .ts_box .ts_li .ts_title_a.last {
+	border: currentColor; border-image: none; margin-bottom: 0px;
+}
+.template_skin_213 .ts_btns {
+	display: none;
+}
+.line_solid_normal.ts_hr_bottom_213 {
+	height: 0px !important; border-top-color: rgb(221, 221, 221); border-top-width: 1px; border-top-style: solid;
+}
+.template_skin_215 {
+	padding: 15px 0px 8px; background-color: rgb(32, 33, 38);
+}
+.template_skin_215 .t_icon {
+	background: url("https://im.sisain.co.kr/custom/template/215_icon.png") no-repeat 0px 0px;
+}
+.template_skin_215 .ts_box {
+	width: 936px; height: 230px; overflow: hidden; float: left;
+}
+.template_skin_215 .ts_list {
+	height: auto; overflow: hidden;
+}
+.template_skin_215 .ts_list .ts_a {
+	margin: 0px 18px 0px 0px; width: 300px; overflow: hidden; float: left; display: block; cursor: pointer;
+}
+.template_skin_215 .ts_list .ts_a.third {
+	margin-right: 0px;
+}
+.template_skin_215 .ts_list .tsl_img {
+	vertical-align: middle; display: block; max-width: 100%;
+}
+.template_skin_215 .ts_list .ts_title {
+	font: bold 14px/normal malgun gothic; margin: 7px 0px 0px; text-align: center; color: rgb(189, 189, 191); letter-spacing: -1px; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_215 .ts_btn {
+	border: currentColor; border-image: none; width: 22px; height: 200px; text-indent: -10000px; overflow: hidden; float: left; cursor: pointer;
+}
+.template_skin_215 .ts_btn.ts_prev {
+	background-position: 0px 0px;
+}
+.template_skin_215 .ts_btn.ts_next {
+	background-position: -50px 0px;
+}
+.template_skin_216 .ts_box {
+	margin: 0px 0px 10px; text-align: center; position: relative;
+}
+.template_skin_216 .ts_box.last {
+	margin-bottom: 0px;
+}
+.template_skin_216 .ts_img {
+	vertical-align: middle; max-width: 100%;
+}
+.template_skin_216 .ts_title_box {
+	cursor: pointer;
+}
+.template_skin_216 .ts_bg {
+	background: url("https://im.sisain.co.kr/custom/template/216_bg.png") repeat-x 0px 100%; left: 0px; top: 0px; width: 100%; height: 100%; position: absolute;
+}
+.template_skin_216 .ts_title {
+	font: bold 36px/1.2 Nanum Gothic, nanumgothic; margin: 0px auto; left: 0px; width: 95%; text-align: center; right: 0px; bottom: 16px; color: rgb(255, 255, 255); position: absolute; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_217 .ts_box {
+	margin: 0px 0px 10px; text-align: center; position: relative;
+}
+.template_skin_217 .ts_box.last {
+	margin-bottom: 0px;
+}
+.template_skin_217 .ts_img {
+	vertical-align: middle; max-width: 100%;
+}
+.template_skin_217 .ts_title_box {
+	cursor: pointer;
+}
+.template_skin_217 .ts_bg {
+	background: url("https://im.sisain.co.kr/custom/template/216_bg.png") repeat-x 0px 100%; left: 0px; top: 0px; width: 100%; height: 100%; position: absolute;
+}
+.template_skin_217 .ts_title {
+	font: bold 17px/1.2 Nanum Gothic, nanumgothic; margin: 0px auto; left: 0px; width: 95%; text-align: center; right: 0px; bottom: 10px; color: rgb(255, 255, 255); position: absolute; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_218 .ts_li {
+	margin: 0px 0px 7px; padding: 0px 0px 7px; border-bottom-color: rgb(221, 221, 221); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.template_skin_218 .ts_li.last {
+	padding-bottom: 0px; margin-bottom: 0px; border-bottom-width: 0px;
+}
+.template_skin_218 .ts_a {
+	color: rgb(51, 51, 51); font-size: 17px;
+}
+.template_skin_218 .ts_a .ts_section {
+	color: rgb(0, 69, 166);
+}
+.template_skin_219 .ts_box {
+	margin: 0px 0px 10px; border: 1px solid rgb(222, 222, 222); border-image: none; text-align: center; position: relative;
+}
+.template_skin_219 .ts_box.last {
+	margin-bottom: 0px;
+}
+.template_skin_219 .ts_img {
+	transition:transform 1s; vertical-align: middle; display: block; max-width: 100%;
+}
+.template_skin_219 .ts_img:hover {
+	transform: scale(1.1);
+}
+.template_skin_219 .ts_title_box {
+	cursor: pointer;
+}
+.template_skin_219 .ts_bg {
+	margin: auto; left: 0px; right: 0px; position: absolute;
+}
+.template_skin_219 .ts_title {
+	margin: auto; left: 0px; right: 0px; position: absolute;
+}
+.template_skin_219 .ts_bg {
+	border: 1px solid rgb(255, 255, 255); border-image: none; width: 90%; height: 55px; bottom: 20px; opacity: 0.5; background-color: rgb(0, 0, 0);
+}
+.template_skin_219 .ts_title {
+	font: 15px/1.2 Nanum Gothic, nanumgothic; width: 85%; text-align: center; bottom: 30px; color: rgb(255, 255, 255); letter-spacing: -1px; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_219 .ts_title .ts_t {
+	margin: 5px 0px 0px; padding: 0px; text-align: center; color: rgb(244, 244, 244); font-size: 13px;
+}
+.template_skin_223 {
+	
+}
+.template_skin_223 .vm_list {
+	margin-right: 13px;
+}
+.template_skin_223 .vm_list.last {
+	maring-right: 0;
+}
+.template_skin_223 .ts_box {
+	height: 135px; overflow: hidden;
+}
+.template_skin_223 .ts_li {
+	
+}
+.template_skin_223 .ts_photo {
+	width: 104px; height: 134px; margin-right: 10px; float: left; position: relative;
+}
+.template_skin_223 .ts_photo .ts_img {
+	border: 1px solid rgb(221, 221, 221); border-image: none; left: 0px; top: 0px; width: 98px; height: 128px; vertical-align: middle; position: absolute; z-index: 3;
+}
+.template_skin_223 .ts_photo .tsi_dm_1 {
+	border: 1px solid rgb(221, 221, 221); border-image: none; left: 2px; top: 2px; width: 98px; height: 128px; position: absolute; z-index: 2; background-color: rgb(255, 255, 255);
+}
+.template_skin_223 .ts_photo .tsi_dm_2 {
+	border: 1px solid rgb(221, 221, 221); border-image: none; left: 2px; top: 2px; width: 98px; height: 128px; position: absolute; z-index: 2; background-color: rgb(255, 255, 255);
+}
+.template_skin_223 .ts_photo .tsi_dm_2 {
+	left: 4px; top: 4px; z-index: 1;
+}
+.template_skin_223 .ts_title {
+	color: rgb(51, 51, 51); letter-spacing: -1px; overflow: hidden; font-size: 15px; max-height: 37px;
+}
+.template_skin_223 .ts_summary {
+	padding: 15px 0px 0px; color: rgb(119, 119, 119); line-height: 1.4em; letter-spacing: -1px; overflow: hidden; font-size: 13px; max-height: 74px;
+}
+.template_skin_227 {
+	margin: 10px;
+}
+.template_skin_227 .ts_photo {
+	margin: 0px 15px 0px 0px; overflow: hidden; float: left; max-height: 90px; max-width: 150px;
+}
+.template_skin_227 .ts_photo .ts_img {
+	width: 100%; vertical-align: middle;
+}
+.template_skin_227 .ts_ul {
+	
+}
+.template_skin_227 .ts_ul .ts_li {
+	margin: 0px 0px 1px; line-height: 1.5;
+}
+.template_skin_227 .ts_ul .ts_li.last {
+	margin-bottom: 0px;
+}
+.template_skin_227 .ts_ul .ts_li .ts_title {
+	color: rgb(0, 0, 0); font-size: 14px; font-weight: bold;
+}
+.template_skin_226 {
+	padding: 10px;
+}
+.template_skin_226.m_slide_horizon {
+	border: currentColor; border-image: none;
+}
+.template_skin_226 .box_slide_horizon_box {
+	height: 120px; overflow: hidden;
+}
+.template_skin_226 .ts_ul {
+	width: 100%; height: auto;
+}
+.template_skin_226 .ts_li {
+	width: 32.1%; height: auto; text-align: center; margin-right: 5px; float: left;
+}
+.template_skin_226 .ts_li.last {
+	margin-right: 0px;
+}
+.template_skin_226 .ts_img {
+	border: 1px solid rgb(211, 212, 216); border-image: none; max-width: 100%;
+}
+.template_skin_226 .ts_title_a {
+	margin: 0px; padding: 0px; height: 34px; text-align: center; color: rgb(34, 34, 34); line-height: 1.2em; overflow: hidden; font-size: 14px; display: block;
+}
+.template_skin_226 .ts_title_a_txt {
+	margin: 0px auto;
+}
+.template_skin_226 .ts_btns {
+	margin: auto 10px; padding: 0px; text-align: center;
+}
+.template_skin_226 .ts_btns .ts_btn {
+	background: url("https://im.sisain.co.kr/slide-page-icon.png") no-repeat -100px 0px; margin: 0px 3px; border: currentColor; border-image: none; width: 8px; height: 9px; text-indent: -10000px; overflow: hidden; vertical-align: middle; display: inline-block;
+}
+.template_skin_226 .ts_btns .ts_btn.on {
+	background-position: 0px 0px;
+}
+.template_skin_226 .ts_btns_box {
+	margin: 15px auto 0px; text-align: center;
+}
+.template_skin_226 .ts_btns_box .tsb_b {
+	background: url("https://im.sisain.co.kr/custom/template/226_icon.png") no-repeat 0px 0px / 8px 50px; padding: 0px; border-radius: 2px; border: 1px solid rgb(208, 208, 208); border-image: none; width: 46px; height: 28px; text-indent: -10000px; display: inline-block;
+}
+.template_skin_226 .ts_btns_box .tsb_b.prev {
+	background-position: 50% 6px;
+}
+.template_skin_226 .ts_btns_box .tsb_b.next {
+	background-position: 50% -19px;
+}
+.template_skin_224 .ts_box {
+	height: 280px; background-color: rgb(32, 81, 135);
+}
+.template_skin_224 .ts_list {
+	width: 100%; text-align: center;
+}
+.template_skin_224 .ts_title_box {
+	cursor: pointer;
+}
+.template_skin_224 .ts_bg {
+	margin: auto; border-radius: 70px; width: 140px; height: 140px; overflow: hidden;
+}
+.template_skin_224 .ts_bg .ts_img {
+	vertical-align: middle; max-width: 100%;
+}
+.template_skin_224 .ts_title {
+	text-align: center; margin-top: 80px;
+}
+.template_skin_224 .ts_title .ts_t {
+	font: 15px/1.2 Nanum Gothic, nanumgothic; margin: 0px; padding: 0px; color: rgb(244, 244, 244); letter-spacing: -1px; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_224 .ts_title .ts_st {
+	font: 14px/1.2 Nanum Gothic, nanumgothic; margin: 7px 0px 0px; padding: 0px; color: rgb(0, 222, 255); letter-spacing: -1px; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_224 .ts_btns_box {
+	display: none;
+}
+.template_skin_224 .ts_num_box {
+	width: 100%; text-align: center; bottom: 90px; position: absolute;
+}
+.template_skin_224 .ts_num_box .ts_num {
+	background: url("https://im.sisain.co.kr/custom/template/224_icon.png") no-repeat 0px -50px; margin: 0px 3px; width: 12px; height: 12px; text-indent: -10000px; overflow: hidden; display: inline-block;
+}
+.template_skin_224 .ts_num_box .ts_num.on {
+	background-position: 0px 0px;
+}
+.template_skin_225 {
+	width: 310px; background-color: rgb(32, 81, 135);
+}
+.template_skin_225 .ts_list {
+	text-align: center;
+}
+.template_skin_225 .ts_title_box {
+	cursor: pointer;
+}
+.template_skin_225 .ts_bg {
+	margin: auto; border-radius: 70px; width: 140px; height: 140px; overflow: hidden;
+}
+.template_skin_225 .ts_bg .ts_img {
+	vertical-align: middle; max-width: 100%;
+}
+.template_skin_225 .ts_title {
+	text-align: center; margin-top: 20px;
+}
+.template_skin_225 .ts_title .ts_t {
+	font: 15px/1.2 Nanum Gothic, nanumgothic; margin: 0px; padding: 0px; color: rgb(244, 244, 244); letter-spacing: -1px; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_225 .ts_title .ts_st {
+	font: 14px/1.2 Nanum Gothic, nanumgothic; margin: 7px 0px 0px; padding: 0px; color: rgb(0, 222, 255); letter-spacing: -1px; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_231 {
+	overflow: hidden; position: relative; background-color: rgb(25, 27, 29);
+}
+.template_skin_231 .icon {
+	background: url("https://im.sisain.co.kr/custom/template/231_icon.png") no-repeat 0px 0px;
+}
+.template_skin_231 .ts_box {
+	margin: 0px auto; height: 490px;
+}
+.template_skin_231 .ts_list {
+	width: 100%; text-align: center;
+}
+.template_skin_231 .ts_img {
+	vertical-align: middle; max-width: 100%;
+}
+.template_skin_231 .ts_bg {
+	background: url("https://im.sisain.co.kr/custom/template/228_bg.png") repeat-x 0px 100%; left: 0px; top: 0px; width: 100%; height: 100%; position: absolute;
+}
+.template_skin_231 .ts_title {
+	font: bold 48px/1.2 nanum gothic, nanumgothic; margin: 0px auto; left: 30px; text-align: center; right: 30px; bottom: 30px; color: rgb(255, 255, 255); letter-spacing: -0.05em; position: absolute; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_231 .ts_btn {
+	margin: auto 0px; top: 0px; width: 40px; height: 70px; bottom: 0px; text-indent: -10000px; overflow: hidden; display: inline-block; position: absolute; z-index: 2;
+}
+.template_skin_231 .ts_prev {
+	background-position: 0px 0px; left: 20px;
+}
+.template_skin_231 .ts_next {
+	background-position: -100px 0px; right: 20px;
+}
+.template_skin_232 .ts_box {
+	margin: 0px 0px 15px; text-align: center;
+}
+.template_skin_232 .ts_box.last {
+	margin-bottom: 0px;
+}
+.template_skin_232 .ts_a {
+	cursor: pointer;
+}
+.template_skin_232 .ts_img {
+	vertical-align: middle; display: block; max-width: 100%;
+}
+.template_skin_232 .ts_a .ts_t {
+	margin: 0px; padding: 15px 10px 13px; text-align: center; color: rgb(0, 0, 0); line-height: 1.1; letter-spacing: -0.05em; font-size: 19px;
+}
+.template_skin_228 .ts_box {
+	margin: 0px 0px 10px; text-align: center; position: relative;
+}
+.template_skin_228 .ts_box.last {
+	margin-bottom: 0px;
+}
+.template_skin_228 .ts_img {
+	vertical-align: middle; max-width: 100%;
+}
+.template_skin_228 .ts_title_box {
+	cursor: pointer;
+}
+.template_skin_228 .ts_bg {
+	background: url("https://im.sisain.co.kr/custom/template/228_bg.png") repeat-x 0px 100%; left: 0px; top: 0px; width: 100%; height: 100%; position: absolute;
+}
+.template_skin_228 .ts_title {
+	font: bold 48px/1.2 Nanum Gothic, nanumgothic; margin: 0px auto; left: 0px; width: 95%; text-align: center; right: 0px; bottom: 30px; color: rgb(255, 255, 255); letter-spacing: -0.05em; position: absolute; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_222 .ts_box {
+	height: 280px;
+}
+.template_skin_222 .ts_list {
+	text-align: center;
+}
+.template_skin_222 .ts_box.last {
+	margin-bottom: 0px;
+}
+.template_skin_222 .ts_img {
+	vertical-align: middle; display: block; max-width: 100%;
+}
+.template_skin_222 .ts_title_box {
+	cursor: pointer;
+}
+.template_skin_222 .ts_bg {
+	margin: 0px auto; left: 0px; top: 10px; height: 68px; right: 0px; bottom: 0px; position: absolute;
+}
+.template_skin_222 .ts_title {
+	margin: 0px auto; left: 0px; top: 10px; height: 68px; right: 0px; bottom: 0px; position: absolute;
+}
+.template_skin_222 .ts_bg {
+	border: 1px solid rgb(255, 255, 255); border-image: none; width: 90%; opacity: 0.5; background-color: rgb(0, 0, 0);
+}
+.template_skin_222 .ts_title {
+	font: 15px/1.2 Nanum Gothic, nanumgothic; width: 85%; text-align: center; color: rgb(255, 255, 255); letter-spacing: -1px; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_222 .ts_title .ts_t {
+	margin: 10px 0px 7px; padding: 0px; text-align: center; color: rgb(244, 244, 244); font-size: 19px; font-weight: normal;
+}
+.template_skin_222 .ts_btns_box {
+	display: none;
+}
+.template_skin_222 .ts_num_box {
+	width: 100%; text-align: center; bottom: 20px; position: absolute;
+}
+.template_skin_222 .ts_num_box .ts_num {
+	background: url("https://im.sisain.co.kr/custom/template/221_icon.png") no-repeat 0px -50px; margin: 0px 3px; width: 12px; height: 12px; text-indent: -10000px; overflow: hidden; display: inline-block;
+}
+.template_skin_222 .ts_num_box .ts_num.on {
+	background-position: 0px 0px;
+}
+.template_skin_229 .ts_box {
+	margin: 0px 0px 10px; text-align: center; position: relative;
+}
+.template_skin_229 .ts_box.last {
+	margin-bottom: 0px;
+}
+.template_skin_229 .ts_a {
+	cursor: pointer;
+}
+.template_skin_229 .ts_img {
+	vertical-align: middle; display: block; max-width: 100%;
+}
+.template_skin_229 .ts_a .ts_t {
+	margin: 5px 20px 0px; padding: 0px; text-align: center; color: rgb(51, 51, 51); line-height: 1.1; letter-spacing: -0.03em; overflow: hidden; font-size: 17px; max-height: 37px;
+}
+.template_skin_234 .ts_box {
+	margin: 0px 20px 0px 0px; text-align: center; float: left; position: relative;
+}
+.template_skin_234 .ts_box.last {
+	margin-right: 0px;
+}
+.template_skin_234 .ts_a {
+	cursor: pointer;
+}
+.template_skin_234 .ts_img {
+	vertical-align: middle; display: block; max-width: 100%;
+}
+.template_skin_234 .ts_a .ts_t {
+	margin: 5px 20px 0px; padding: 0px; text-align: center; color: rgb(51, 51, 51); line-height: 1.1; letter-spacing: -0.03em; overflow: hidden; font-size: 17px; max-height: 37px;
+}
+.template_skin_233 {
+	margin: 0px; background-color: rgb(255, 255, 255);
+}
+.template_skin_233 .ts_a {
+	padding: 10px; border-bottom-color: rgb(241, 241, 241); border-bottom-width: 1px; border-bottom-style: solid; display: block; cursor: pointer;
+}
+.template_skin_233 .ts_a.last {
+	border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none;
+}
+.template_skin_233 .ts_a .ts_ib {
+	margin: 0px 10px 0px 0px; padding: 0px; width: 130px; height: 90px; overflow: hidden; float: left;
+}
+.template_skin_233 .ts_a .ts_img {
+	vertical-align: middle; max-height: 100%;
+}
+.template_skin_233 .ts_a .ts_title {
+	margin: 20px auto 0px; padding: 0px; color: rgb(51, 51, 51); line-height: 1.2em; letter-spacing: -0.05em; font-size: 15px;
+}
+.line_solid_normal.ts_hr_bottom_233 {
+	border: currentColor; border-image: none; background-color: rgb(236, 236, 236);
+}
+.template_skin_235 {
+	margin: 0px 10px;
+}
+.template_skin_235 .ts_box {
+	margin: 0px 0px 10px; width: 49%; text-align: center; float: left; position: relative;
+}
+.template_skin_235 .ts_box.even {
+	float: right;
+}
+.template_skin_235 .ts_box.last {
+	
+}
+.template_skin_235 .ts_a {
+	cursor: pointer;
+}
+.template_skin_235 .ts_img {
+	width: 100%; vertical-align: middle; display: block;
+}
+.template_skin_235 .ts_a .ts_t {
+	margin: 5px 10px 0px; padding: 0px; text-align: center; color: rgb(51, 51, 51); line-height: 1.2; letter-spacing: -0.05em; overflow: hidden; font-size: 16px; max-height: 37px;
+}
+.line_solid_normal.ts_hr_bottom_235 {
+	border: currentColor; border-image: none; background-color: rgb(236, 236, 236);
+}
+.template_skin_220 .ts_li {
+	
+}
+.template_skin_220 .ts_li.last {
+	
+}
+.template_skin_220 .ts_li .ts_img {
+	border: 1px solid rgb(0, 0, 0); border-image: none; vertical-align: middle; display: block; max-width: 100%; box-sizing: border-box;
+}
+.template_skin_220 .ts_li .ts_title {
+	border-width: 0px 1px 1px; border-style: solid; border-color: rgb(221, 221, 221); font: 13px/1.2 Nanum Gothic, nanumgothic; margin: 0px; padding: 12px 10px 13px; color: rgb(119, 119, 119); font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_220 .ts_li.first .ts_title {
+	font: bold 15px/1.2 Nanum Gothic, nanumgothic; text-align: center; color: rgb(51, 51, 51); font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_220 .ts_a {
+	color: rgb(51, 51, 51); font-size: 17px;
+}
+.template_skin_220 .ts_a .ts_section {
+	color: rgb(0, 69, 166);
+}
+.template_skin_105 {
+	width: 980px; height: 320px;
+}
+.template_skin_105 .main_photo {
+	width: 480px; height: 320px; overflow: hidden; float: left; position: relative;
+}
+.template_skin_105 .other_photo {
+	width: 500px; height: 320px; overflow: hidden; float: left;
+}
+.template_skin_105 .mp_a {
+	text-decoration: none;
+}
+.template_skin_105 .ap_a {
+	text-decoration: none;
+}
+.template_skin_105 .ap_a {
+	width: 250px; height: 160px; overflow: hidden; float: left; display: block; position: relative;
+}
+.template_skin_105 .mp_img {
+	width: 480px; height: 320px;
+}
+.template_skin_105 .ap_img {
+	width: 250px; height: 160px;
+}
+.template_skin_105 .mp_back {
+	left: 0px; top: 0px; width: 100%; height: 100%; display: none; position: absolute; opacity: 0.6; background-color: rgb(0, 0, 0);
+}
+.template_skin_105 .ap_back {
+	left: 0px; top: 0px; width: 100%; height: 100%; display: none; position: absolute; opacity: 0.6; background-color: rgb(0, 0, 0);
+}
+.template_skin_105 .mp_float {
+	padding: 25px; transition:height 0.3s; width: 100%; position: absolute; -webkit-transition: height .3s;
+}
+.template_skin_105 .ap_float {
+	padding: 25px; transition:height 0.3s; width: 100%; position: absolute; -webkit-transition: height .3s;
+}
+.template_skin_105 .ap_float {
+	padding: 15px;
+}
+.template_skin_105 .mp_float {
+	bottom: 0px; overflow: hidden;
+}
+.template_skin_105 .ap_float {
+	bottom: 0px; overflow: hidden;
+}
+.template_skin_105 .mp_float {
+	height: 100px;
+}
+.template_skin_105 .ap_float {
+	height: 40px;
+}
+.template_skin_105 .mp_li {
+	color: rgb(255, 255, 255); overflow: hidden; margin-bottom: 3px; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.template_skin_105 .ap_li {
+	color: rgb(255, 255, 255); overflow: hidden; margin-bottom: 3px; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.template_skin_105 .mp_li.section {
+	color: rgb(255, 232, 130); font-weight: bold;
+}
+.template_skin_105 .mp_li.title {
+	height: 20px; font-family: nanum gothic,Malgun Gothic,NanumGothic; font-size: 18px; font-weight: bold;
+}
+.template_skin_105 .mp_li.date {
+	font-size: 11px;
+}
+.template_skin_105 .mp_li.summary {
+	height: 28px; color: rgb(211, 211, 211); font-size: 11px; display: none; white-space: normal;
+}
+.template_skin_105 .ap_li.summary {
+	height: 28px; color: rgb(211, 211, 211); font-size: 11px; display: none; white-space: normal;
+}
+.template_skin_105 .ap_li.section {
+	color: rgb(255, 232, 130); font-size: 11px; display: none;
+}
+.template_skin_105 .ap_li.title {
+	font-weight: bold;
+}
+.template_skin_105 .mp_a:hover .mp_back {
+	display: block;
+}
+.template_skin_105 .mp_a.on .mp_back {
+	display: block;
+}
+.template_skin_105 .ap_a:hover .ap_back {
+	display: block;
+}
+.template_skin_105 .ap_a.on .ap_back {
+	display: block;
+}
+.template_skin_105 .mp_a:hover .mp_float {
+	height: 110px;
+}
+.template_skin_105 .ap_a:hover .ap_float {
+	height: 90px;
+}
+.template_skin_105 .mp_a:hover .date {
+	display: none;
+}
+.template_skin_105 .mp_a.on .date {
+	display: none;
+}
+.template_skin_105 .mp_a:hover .section {
+	line-height: 1.3em; display: list-item;
+}
+.template_skin_105 .mp_a.on .section {
+	line-height: 1.3em; display: list-item;
+}
+.template_skin_105 .mp_a:hover .summary {
+	line-height: 1.3em; display: list-item;
+}
+.template_skin_105 .mp_a.on .summary {
+	line-height: 1.3em; display: list-item;
+}
+.template_skin_105 .ap_a:hover .section {
+	line-height: 1.3em; display: list-item;
+}
+.template_skin_105 .ap_a.on .section {
+	line-height: 1.3em; display: list-item;
+}
+.template_skin_105 .ap_a:hover .summary {
+	line-height: 1.3em; display: list-item;
+}
+.template_skin_105 .ap_a.on .summary {
+	line-height: 1.3em; display: list-item;
+}
+.template_skin_105 .edit_article {
+	float: left;
+}
+.template_skin_112 {
+	padding: 13px; background-color: rgb(25, 27, 29);
+}
+.template_skin_112 .ts_header {
+	
+}
+.template_skin_112 .ts_header .tsh_title {
+	color: rgb(255, 255, 255); font-family: nanum gothic,malgun gothic, nanumgothic; font-size: 17px; font-weight: bold; margin-left: 10px;
+}
+.template_skin_112 .ts_header .tsh_more {
+	color: rgb(255, 255, 255); letter-spacing: -1px; font-family: dotum; font-weight: bold;
+}
+.template_skin_112 .ts_photo {
+	margin: 20px 0px 15px; height: 175px; overflow: hidden;
+}
+.template_skin_112 .ts_icon {
+	background: url("https://im.sisain.co.kr/custom/template/112_icon.png") no-repeat; border: currentColor; border-image: none; text-indent: -1000px; overflow: hidden;
+}
+.template_skin_112 .tsp_prev {
+	background-position: 0px 0px; width: 47px; height: 102px;
+}
+.template_skin_112 .tsp_next {
+	background-position: -100px 0px; width: 47px; height: 102px;
+}
+.template_skin_112 .tsp_prev {
+	margin-top: 15px;
+}
+.template_skin_112 .tsp_next {
+	margin-top: 15px;
+}
+.template_skin_112 .ts_box {
+	margin: 0px 15px; width: 828px; height: 175px; overflow: hidden; float: left;
+}
+.template_skin_112 .ts_list {
+	width: 100%; height: 100%; overflow: hidden;
+}
+.template_skin_112 .ts_li {
+	width: 195px; height: 180px; margin-right: 16px; float: left;
+}
+.template_skin_112 .ts_li.last {
+	margin-right: 0px;
+}
+.template_skin_112 .tsp_img {
+	max-width: 100%;
+}
+.template_skin_112 .tsp_title {
+	margin: 4px 10px 0px; height: 35px; overflow: hidden;
+}
+.template_skin_112 .tsp_title_a {
+	color: rgb(255, 255, 255); font-size: 12px;
+}
+.template_skin_112 .ts_footer {
+	
+}
+.template_skin_112 .tsf_btn {
+	background-position: -200px 0px; width: 14px; height: 14px; margin-right: 7px;
+}
+.template_skin_112 .tsf_btn.on {
+	background-position: -300px 0px;
+}
+.template_skin_112 .edit_article {
+	float: left;
+}
+.template_skin_113 {
+	padding: 13px; background-color: rgb(25, 27, 29);
+}
+.template_skin_113 .ts_header {
+	
+}
+.template_skin_113 .ts_header .tsh_title {
+	color: rgb(255, 255, 255); font-family: nanum gothic,malgun gothic, nanumgothic; font-size: 17px; font-weight: bold; margin-left: 10px;
+}
+.template_skin_113 .ts_header .tsh_more {
+	color: rgb(255, 255, 255); letter-spacing: -1px; font-family: dotum; font-weight: bold;
+}
+.template_skin_113 .ts_photo {
+	margin: 20px 0px 15px; height: 175px; overflow: hidden;
+}
+.template_skin_113 .ts_icon {
+	background: url("https://im.sisain.co.kr/custom/template/113_icon.png") no-repeat; border: currentColor; border-image: none; text-indent: -1000px; overflow: hidden;
+}
+.template_skin_113 .tsp_prev {
+	background-position: 0px 0px; width: 47px; height: 102px;
+}
+.template_skin_113 .tsp_next {
+	background-position: -100px 0px; width: 47px; height: 102px;
+}
+.template_skin_113 .tsp_prev {
+	margin-top: 15px;
+}
+.template_skin_113 .tsp_next {
+	margin-top: 15px;
+}
+.template_skin_113 .tsp_icon_play {
+	background-position: -200px -200px; left: 63px; top: -100px; width: 68px; height: 68px; position: relative; cursor: pointer; opacity: 0.85;
+}
+.template_skin_113 .ts_box {
+	margin: 0px 15px; width: 828px; height: 175px; overflow: hidden; float: left;
+}
+.template_skin_113 .ts_list {
+	width: 100%; height: 100%; overflow: hidden;
+}
+.template_skin_113 .ts_li {
+	width: 195px; height: 180px; margin-right: 16px; float: left;
+}
+.template_skin_113 .ts_li.last {
+	margin-right: 0px;
+}
+.template_skin_113 .tsp_img_a {
+	width: 195px; height: 130px; overflow: hidden; display: block;
+}
+.template_skin_113 .tsp_img {
+	max-width: 100%;
+}
+.template_skin_113 .tsp_title {
+	margin: 4px 10px 0px; height: 35px; overflow: hidden;
+}
+.template_skin_113 .tsp_title_a {
+	color: rgb(255, 255, 255); font-size: 12px;
+}
+.template_skin_113 .ts_footer {
+	
+}
+.template_skin_113 .tsf_btn {
+	background-position: -200px 0px; width: 14px; height: 14px; margin-right: 7px;
+}
+.template_skin_113 .tsf_btn.on {
+	background-position: -300px 0px;
+}
+.template_skin_113 .edit_article {
+	float: left;
+}
+.template_skin_133 {
+	margin: 0px 0px 10px; padding: 5px 10px 10px; border: 1px solid rgb(236, 236, 236); border-image: none; height: 210px; background-color: rgb(249, 249, 249);
+}
+.template_skin_133 .title {
+	font: bold 18px/normal nanum gothic, malgun gothic, nanumgothic; margin: 0px 0px 10px; padding: 0px; color: rgb(0, 81, 153); font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_133 .ts_btn {
+	background: url("https://im.sisain.co.kr/custom/template/133_icon.png") no-repeat 0px 0px; border: currentColor; border-image: none; width: 24px; height: 43px; text-indent: -10000px;
+}
+.template_skin_133 .ts_btn.prev {
+	margin: 58px 15px 0px 0px; float: left;
+}
+.template_skin_133 .ts_btn.next {
+	background-position: -50px 0px; margin: 58px 0px 0px 15px; float: left;
+}
+.template_skin_133 .ts_box {
+	width: 600px; height: 100%; overflow: hidden; float: left;
+}
+.template_skin_133 .ts_ul {
+	width: 600px; height: 100%;
+}
+.template_skin_133 .ts_li {
+	padding: 5px; border: 1px solid rgb(236, 236, 236); border-image: none; width: 142px; height: 156px; text-align: center; overflow: hidden; margin-right: 10px; float: left; background-color: rgb(255, 255, 255);
+}
+.template_skin_133 .ts_li.none {
+	margin-right: 0px;
+}
+.template_skin_133 .ts_img {
+	max-width: 130px;
+}
+.template_skin_133 .ts_title_a {
+	margin: 5px 0px 0px; height: 34px; text-align: left; color: rgb(117, 117, 117); overflow: hidden; display: block;
+}
+.template_skin_133 .edit_article {
+	float: left;
+}
+.template_skin_117 .ts_box {
+	width: 389px;
+}
+.template_skin_117 .ts_li {
+	margin: 0px 0px 3px;
+}
+.template_skin_117 .ts_photo {
+	text-align: center;
+}
+.template_skin_117 .ts_img {
+	max-width: 100%;
+}
+.template_skin_117 .ts_title_a {
+	font: bold 25px/1em nanum gothic, malgun gothic, nanumgothic, dotum; color: rgb(29, 29, 29); letter-spacing: -1px; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_117 .ts_sub_title_a {
+	font: bold 14px/normal dotum; color: rgb(143, 143, 143); letter-spacing: -1px; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_117 .ts_summary {
+	margin: 5px 0px 0px;
+}
+.template_skin_117 .ts_summary_a {
+	color: rgb(104, 104, 104); letter-spacing: -1px;
+}
+.template_skin_117 .ts_relation {
+	margin: 5px 0px 0px;
+}
+.template_skin_117 .tsr_li {
+	background: url("https://im.sisain.co.kr/custom/template/117_icon.png") no-repeat 0px 30%; margin: 0px 0px 3px; padding: 0px 0px 0px 15px;
+}
+.template_skin_117 .tsr_title_a {
+	color: rgb(61, 61, 61); letter-spacing: -1px;
+}
+.template_skin_142 {
+	border: 1px solid rgb(236, 236, 236); border-image: none; background-color: rgb(248, 248, 248);
+}
+.template_skin_142 .vm_list {
+	margin-right: 0px; border-right-color: rgb(236, 236, 236); border-right-width: 1px; border-right-style: solid;
+}
+.template_skin_142 .vm_list.last {
+	border-right-width: 0px;
+}
+.template_skin_142 .ts_box {
+	padding: 10px 8px; height: 309px; overflow: hidden;
+}
+.template_skin_142 .ts_li {
+	margin: 0px 0px 3px;
+}
+.template_skin_142 .ts_photo {
+	text-align: center;
+}
+.template_skin_142 .ts_img {
+	border: 1px solid rgb(14, 14, 14); border-image: none; width: 580px;
+}
+.template_skin_142 .ts_title_a {
+	font: bold 25px/1em nanum gothic, malgun gothic, nanumgothic, dotum; color: rgb(29, 29, 29); letter-spacing: -1px; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_142 .ts_sub_title_a {
+	font: bold 14px/normal dotum; color: rgb(143, 143, 143); letter-spacing: -1px; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_142 .ts_summary {
+	margin: 5px 0px 0px;
+}
+.template_skin_142 .ts_summary_a {
+	color: rgb(104, 104, 104); letter-spacing: -1px;
+}
+.template_skin_142 .ts_relation {
+	margin: 5px 0px 0px;
+}
+.template_skin_142 .tsr_li {
+	margin: 0px 0px 3px; padding: 0px 0px 0px 15px;
+}
+.template_skin_142 .tsr_title_a {
+	color: rgb(61, 61, 61); letter-spacing: -1px;
+}
+.template_skin_143 {
+	background-color: rgb(21, 74, 124);
+}
+.template_skin_143 .ts_box {
+	margin: 10px;
+}
+.template_skin_143 .ts_li {
+	text-align: center;
+}
+.template_skin_143 .ts_title {
+	font: bold 22px/1.3em nanum gothic, nanumgothic; margin: 0px; padding: 0px 0px 10px; color: rgb(255, 255, 255); letter-spacing: -2px; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_143 .ts_img {
+	vertical-align: middle; max-width: 100%;
+}
+.template_skin_145 {
+	overflow: hidden; background-color: rgb(0, 0, 0);
+}
+.template_skin_145 .icon {
+	background: url("https://im.sisain.co.kr/custom/template/145_icon.png") no-repeat 0px 0px / 50px 20px;
+}
+.template_skin_145 .ts_box {
+	height: 380px; position: relative;
+}
+.template_skin_145 .ts_list {
+	width: 100%; text-align: center;
+}
+.template_skin_145 .ts_title {
+	font: bold 14px/normal nanum gothic, nanumgothic; margin: 15px 10px; text-align: left; color: rgb(255, 255, 255); letter-spacing: -1px; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_145 .ts_img {
+	vertical-align: middle; max-width: 100%;
+}
+.template_skin_145 .ts_btn_box {
+	margin: 10px; text-align: center;
+}
+.template_skin_145 .ts_btn_box .ts_number {
+	color: rgb(255, 255, 255); font-size: 16px; font-weight: bold; vertical-align: middle;
+}
+.template_skin_145 .ts_btn_box .ts_btn {
+	border: currentColor; border-image: none; width: 12px; height: 20px; text-indent: -10000px; vertical-align: middle; background-color: transparent;
+}
+.template_skin_145 .ts_btn_box .ts_prev {
+	background-position: 0px 0px; float: left;
+}
+.template_skin_145 .ts_btn_box .ts_next {
+	background-position: -25px 0px; float: right;
+}
+.template_skin_156 .ts_li {
+	border-bottom-color: rgb(222, 222, 222); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.template_skin_156 .ts_li.last {
+	border-bottom-width: 0px;
+}
+.template_skin_156 .ts_a {
+	padding: 10px; width: auto; height: auto; color: rgb(0, 0, 0); font-size: 105%; text-decoration: none; display: block;
+}
+.template_skin_156 .ts_a .num {
+	font: italic bold 100%/normal nanum gothic, nanumgothic; color: rgb(153, 153, 153); margin-right: 10px; display: inline-block; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_156 .ts_a .num.under {
+	color: rgb(0, 69, 166);
+}
+.template_skin_152 {
+	overflow: hidden; border-top-width: 0px !important; background-color: rgb(0, 0, 0);
+}
+.template_skin_152 .ts_box {
+	height: 240px; position: relative;
+}
+.template_skin_152 .ts_list {
+	width: 100%; height: 100%; text-align: center; overflow: hidden;
+}
+.template_skin_152 .ts_bg {
+	left: 0px; width: 100%; height: 60px; bottom: -15px; position: absolute; opacity: 0.8; background-color: rgb(0, 0, 0);
+}
+.template_skin_152 .ts_title {
+	font: bold 18px/normal nanum gothic, nanumgothic; margin: 0px; padding: 0px; left: 0px; width: 100%; text-align: center; bottom: 33px; color: rgb(255, 255, 255); letter-spacing: -1px; position: absolute; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_152 .ts_img {
+	width: 100%; vertical-align: middle;
+}
+.template_skin_152 .ts_btn_box {
+	margin: -25px auto 10px; text-align: center; position: relative;
+}
+.template_skin_152 .ts_btn_box .ts_number {
+	margin: 0px 3px; border-radius: 4px; width: 8px; height: 8px; text-indent: -10000px; vertical-align: middle; display: inline-block; background-color: rgb(255, 255, 255);
+}
+.template_skin_152 .ts_btn_box .ts_number.on {
+	background-color: rgb(18, 113, 180);
+}
+.template_skin_152 .ts_btn_box .ts_btn {
+	display: none;
+}
+.template_skin_161 {
+	
+}
+.template_skin_161 .ts_box {
+	margin: 0px 9px 0px 0px; width: 194px; height: auto; overflow: hidden; float: left;
+}
+.template_skin_161 .ts_box.line_first {
+	width: 370px; margin-right: 10px;
+}
+.template_skin_161 .ts_box.line_last {
+	text-align: right; margin-right: 0px;
+}
+.template_skin_161 .ts_box .ts_title_box {
+	text-decoration: none; cursor: pointer;
+}
+.template_skin_161 .ts_box .ts_img {
+	width: 194px; height: 208px; vertical-align: middle;
+}
+.template_skin_161 .ts_box.line_first .ts_img {
+	width: 370px; vertical-align: middle;
+}
+.template_skin_161 .ts_box .ts_content {
+	margin: 10px auto 0px; padding: 0px;
+}
+.template_skin_161 .ts_box .ts_content .ts_title {
+	font: 24px/1.2em nanum gothic, malgun gothic, nanumgothic; margin: 0px; padding: 0px; height: 55px; text-align: justify; color: rgb(0, 0, 0); letter-spacing: -2px; overflow: hidden; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_161 .ts_box .ts_content .ts_sub_title {
+	font: bold 12px/normal dotum; margin: 10px 0px 0px; padding: 0px; height: 13px; color: rgb(154, 154, 154); letter-spacing: -0.5px; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_161 .ts_box .ts_content .ts_summary {
+	margin: 10px 0px 0px; height: 55px; text-align: justify; color: rgb(102, 102, 102); letter-spacing: -0.5px; overflow: hidden; font-family: dotum;
+}
+.template_skin_175 {
+	
+}
+.template_skin_175 .ts_box {
+	margin: 0px 0px 10px; position: relative;
+}
+.template_skin_175 .ts_box.last {
+	margin-bottom: 0px;
+}
+.template_skin_175 .ts_box .ts_title_box {
+	text-decoration: none; cursor: pointer;
+}
+.template_skin_175 .ts_box .ts_img {
+	vertical-align: middle;
+}
+.template_skin_175 .ts_box .ts_title {
+	font: bold 22px/1.2em nanum gothic, malgun gothic, nanumgothic; margin: 0px 10px; padding: 0px; left: 0px; width: 95%; height: 30px; text-align: left; bottom: 10px; color: rgb(255, 255, 255); letter-spacing: -2px; position: absolute; font-size-adjust: none; font-stretch: normal; text-shadow: 1px 1px 0px #000;
+}
+.template_skin_175 .ts_bg {
+	background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%); left: 0px; width: 100%; height: 50%; bottom: 0px; position: absolute;
+}
+.body_ie8 .template_skin_175 .ts_bg {
+	background: url("https://im.sisain.co.kr/custom/template/175_bg_icon.png") repeat-x 0px 100%;
+}
+.body_ie9 .template_skin_175 .ts_bg {
+	background: url("https://im.sisain.co.kr/custom/template/175_bg_icon.png") repeat-x 0px 100%;
+}
+.template_skin_174 {
+	
+}
+.template_skin_174 .ts_box {
+	margin: 0px 9px 0px 0px; width: 194px; height: auto; overflow: hidden; float: left; position: relative;
+}
+.template_skin_174 .ts_box.line_first {
+	width: 370px; margin-right: 10px;
+}
+.template_skin_174 .ts_box.line_last {
+	margin-right: 0px;
+}
+.template_skin_174 .ts_box .ts_title_box {
+	text-decoration: none; cursor: pointer;
+}
+.template_skin_174 .ts_box .ts_img {
+	width: 194px; height: 208px; vertical-align: middle;
+}
+.template_skin_174 .ts_box.line_first .ts_img {
+	width: 370px; vertical-align: middle;
+}
+.template_skin_174 .ts_box .ts_title {
+	font: bold 22px/1.2em nanum gothic, malgun gothic, nanumgothic; margin: 0px 10px; padding: 0px; left: 0px; width: 90%; height: auto; text-align: center; bottom: 10px; color: rgb(255, 255, 255); letter-spacing: -2px; overflow: hidden; position: absolute; max-height: 50px; font-size-adjust: none; font-stretch: normal; text-shadow: 1px 1px 0px #000;
+}
+.template_skin_174 .ts_box.line_first .ts_title {
+	width: 95%;
+}
+.line_solid_normal.ts_hr_bottom_174 {
+	border-color: rgb(204, 204, 204); margin: 20px 0px;
+}
+.template_skin_174 .ts_box .ts_bg {
+	background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%); left: 0px; width: 100%; height: 50%; bottom: 0px; position: absolute;
+}
+.template_skin_183 {
+	overflow: hidden; border-top-width: 0px !important; background-color: rgb(0, 0, 0);
+}
+.template_skin_183 .ts_box {
+	height: 240px; position: relative;
+}
+.template_skin_183 .ts_list {
+	width: 100%; height: 100%; text-align: center; overflow: hidden;
+}
+.template_skin_183 .ts_bg {
+	left: 0px; width: 100%; height: 40px; bottom: -15px; position: absolute; opacity: 0.8; background-color: rgb(0, 0, 0);
+}
+.template_skin_183 .ts_title {
+	font: bold 18px/normal nanum gothic, nanumgothic; margin: 0px auto; padding: 0px; left: 0px; width: 90%; text-align: center; right: 0px; bottom: 10px; color: rgb(255, 255, 255); letter-spacing: -1px; position: absolute; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_183 .ts_img {
+	width: 100%; vertical-align: middle;
+}
+.template_skin_162 {
+	
+}
+.template_skin_162 .ts_box {
+	margin: 0px;
+}
+.template_skin_162 .ts_box .ts_title {
+	font: bold 30px/normal nanum gothic, malgun gothic, nanumgothic; margin: 0px 0px 15px; color: rgb(1, 1, 1) !important; display: block; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_162 .ts_box .ts_photo {
+	overflow: hidden; margin-right: 15px; max-height: 150px; max-width: 230px;
+}
+.template_skin_162 .ts_box .ts_photo .tsp_img {
+	vertical-align: middle; max-height: 100%; max-width: 100%;
+}
+.template_skin_162 .ts_box .ts_summary {
+	
+}
+.template_skin_162 .ts_box .ts_summary .tss_a {
+	color: rgb(102, 102, 102) !important; letter-spacing: -1px; display: block;
+}
+.template_skin_162 .ts_box .ts_summary .ts_relation {
+	margin-top: 20px;
+}
+.template_skin_162 .ts_box .ts_summary .ts_relation .tsr_li {
+	background: url("https://im.sisain.co.kr/custom/template/162_icon.png") no-repeat 0px 3px; margin: 0px 0px 5px;
+}
+.template_skin_162 .ts_box .ts_summary .ts_relation .tsr_li .tsr_li_a {
+	font: bold 14px/normal dotum; color: rgb(52, 52, 52); margin-left: 10px; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_192 .ts_box {
+	width: 260px; height: 190px; text-align: center; overflow: hidden;
+}
+.template_skin_192 .ts_img {
+	max-width: 100%;
+}
+.template_skin_192 .ts_title_box {
+	width: 100%; height: 190px; text-align: center; display: inline-block; position: relative;
+}
+.template_skin_192 .ts_bg {
+	width: 100%; height: 30px; bottom: 0px; position: absolute; opacity: 0.5; background-color: rgb(0, 0, 0);
+}
+.template_skin_192 .ts_title {
+	font: bold 12px/normal nanum gothic, nanumgothic; padding: 0px 5px; width: 95%; text-align: center; bottom: 7px; color: rgb(255, 255, 255); letter-spacing: -0.5px; display: block; position: absolute; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_192 .ts_list {
+	margin: 1px 0px 0px;
+}
+.template_skin_192 .ts_list .tsl_title {
+	margin: 0px 1px 1px 0px; width: 86px; height: 63px; overflow: hidden; float: left; display: inline-block;
+}
+.template_skin_192 .ts_list .tsl_img {
+	max-width: 100%;
+}
+.template_skin_192 .ts_list .tsl_title.on {
+	border: 3px solid rgb(0, 81, 153); border-image: none;
+}
+.template_skin_192 .ts_list .tsl_title:hover {
+	border: 3px solid rgb(0, 81, 153); border-image: none;
+}
+.template_skin_192 .ts_list .tsl_title.none {
+	margin-right: 0px;
+}
+.template_skin_200 {
+	
+}
+.template_skin_200 .title {
+	font: bold 16px/normal nanum gothic, malgun gothic, nanumgothic; margin: 0px 0px 10px; padding: 0px; color: rgb(0, 0, 0); font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_200 .ts_btns {
+	float: right;
+}
+.template_skin_200 .ts_btn {
+	background: url("https://im.sisain.co.kr/slide-button.gif") no-repeat 0px 0px; border: currentColor; border-image: none; width: 18px; height: 14px; text-indent: -10000px;
+}
+.template_skin_200 .ts_btn.prev {
+	background-position: 0px 0px;
+}
+.template_skin_200 .ts_btn.next {
+	background-position: -18px 0px; width: 17px;
+}
+.template_skin_200 .ts_box {
+	width: 660px; height: 110px; overflow: hidden; float: left;
+}
+.template_skin_200 .ts_ul {
+	width: 660px; height: 100%;
+}
+.template_skin_200 .ts_li {
+	width: 145px; height: 100%; overflow: hidden; margin-right: 27px; float: left; background-color: rgb(255, 255, 255);
+}
+.template_skin_200 .ts_li.third {
+	margin-right: 26px;
+}
+.template_skin_200 .ts_li.none {
+	margin-right: 0px;
+}
+.template_skin_200 .ts_img_box {
+	overflow: hidden; display: block; max-height: 80px; max-width: 100%;
+}
+.template_skin_200 .ts_img_box .ts_img {
+	vertical-align: middle; max-width: 100%;
+}
+.template_skin_200 .ts_title_a {
+	margin: 7px 0px 0px; text-align: left; color: rgb(51, 51, 51); letter-spacing: -0.5px; overflow: hidden; font-weight: bold; display: block;
+}
+.template_skin_197 {
+	overflow: hidden; border-top-width: 0px !important; background-color: rgb(0, 0, 0);
+}
+.template_skin_197 .ts_box {
+	height: auto; position: relative;
+}
+.template_skin_197 .ts_list {
+	width: 100%; height: 100%; text-align: left; overflow: hidden; min-height: 200px; max-height: 300px;
+}
+.template_skin_197 .ts_bg {
+	background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%); left: 0px; width: 100%; height: 30%; bottom: -15px; position: absolute; min-height: 75px;
+}
+.template_skin_197 .ts_title {
+	margin: auto; padding: 0px 0px 0.2em; left: 0px; width: 90%; height: 85px; text-align: left; right: 0px; bottom: 0px; color: rgb(255, 255, 255); line-height: 1.3em; letter-spacing: -4px; overflow: hidden; font-size: 2em; word-spacing: 0.1em; position: absolute; text-shadow: 2px 2px 0px #000;
+}
+.template_skin_197 .ts_img {
+	width: 100%; vertical-align: middle;
+}
+.template_skin_197 .ts_title .ts_summary {
+	font: bold 0.7em/1.5em nanum gothic, nanum gothic, nanumgothic; display: none; max-height: 50px; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_197 .ts_list.photo_exists .ts_title {
+	height: auto;
+}
+.template_skin_197 .ts_list.photo_exists .ts_title .ts_summary {
+	display: block;
+}
+.ts_hr_bottom_197 {
+	margin-top: 15px !important; margin-bottom: 10px !important;
+}
+.template_skin_209 {
+	
+}
+.template_skin_209 .ts_box {
+	width: 100%; height: 100%;
+}
+.template_skin_209 .ts_box .ts_a {
+	cursor: pointer;
+}
+.template_skin_209 .ts_box .ts_img {
+	width: 100%; vertical-align: middle; display: block;
+}
+.template_skin_209 .ts_box .ts_title {
+	font: 15px/1.2 nanum gothic, nanumgothic; margin: 10px 0px; padding: 0px; text-align: center; color: rgb(0, 0, 0); letter-spacing: -1px; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_212 {
+	overflow: hidden; border-top-width: 0px !important; position: relative;
+}
+.template_skin_212 .ts_box {
+	height: 242px; position: relative;
+}
+.template_skin_212 .ts_list {
+	width: 100%; height: 100%; text-align: center; overflow: hidden;
+}
+.template_skin_212 .ts_title {
+	font: 18px/1.2 nanum gothic, nanumgothic; margin: 0px; padding: 10px 15px; letter-spacing: -1px; border-top-color: rgb(222, 222, 222); border-top-width: 1px; border-top-style: solid; font-size-adjust: none; font-stretch: normal; background-color: rgb(247, 247, 247);
+}
+.template_skin_212 .ts_img_box {
+	margin: 0px; padding: 0px; width: 100%; height: 200px; overflow: hidden;
+}
+.template_skin_212 .ts_img_box .ts_img {
+	width: 100%; vertical-align: middle;
+}
+.template_skin_212 .ts_btn {
+	background: url("https://im.sisain.co.kr/custom/template/212_icon.png") no-repeat 0px -4px; border: currentColor; border-image: none; top: 33%; width: 24px; height: 48px; text-indent: -10000px; overflow: hidden; position: absolute; z-index: 3;
+}
+.template_skin_212 .ts_btn.ts_prev {
+	left: 10px;
+}
+.template_skin_212 .ts_btn.ts_next {
+	background-position: -50px -4px; right: 10px;
+}
+.line_solid_normal.ts_hr_bottom_212 {
+	border-top-color: rgb(222, 222, 222);
+}
+.template_skin_214 .ts_li {
+	border-bottom-color: rgb(222, 222, 222); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.template_skin_214 .ts_li.last {
+	border-bottom-width: 0px;
+}
+.template_skin_214 .ts_li.hide {
+	display: none;
+}
+.template_skin_214 .ts_a {
+	padding: 10px 15px; width: auto; height: auto; color: rgb(0, 0, 0); font-size: 105%; text-decoration: none; display: block;
+}
+.template_skin_214 .ts_a .ts_section {
+	color: rgb(0, 69, 166); font-size: 0.9em; font-weight: normal;
+}
+.template_skin_214 .ts_more {
+	font: 105%/1.2 nanum gothic, nanumgothic; margin: 0px; padding: 10px 0px; border: currentColor; border-image: none; width: 100%; text-align: center; letter-spacing: -1px; display: block; font-size-adjust: none; font-stretch: normal; background-color: rgb(219, 219, 219);
+}
+.line_solid_normal.ts_hr_bottom_214 {
+	border-width: 1px medium medium; border-style: solid none none; border-color: rgb(222, 222, 222) currentColor currentColor; border-image: none; height: 0px !important;
+}
+.template_skin_237 {
+	overflow: hidden; position: relative; background-color: rgb(25, 27, 29);
+}
+.template_skin_237 .icon {
+	background: url("https://im.sisain.co.kr/custom/template/231_icon.png") no-repeat 0px 0px;
+}
+.template_skin_237 .ts_box {
+	margin: 0px auto; height: 490px;
+}
+.template_skin_237 .ts_list {
+	width: 100%; text-align: center;
+}
+.template_skin_237 .ts_img {
+	vertical-align: middle; max-width: 100%;
+}
+.template_skin_237 .ts_bg {
+	background: url("https://im.sisain.co.kr/custom/template/228_bg.png") repeat-x 0px 100%; left: 0px; top: 0px; width: 100%; height: 100%; position: absolute;
+}
+.template_skin_237 .ts_title {
+	font: bold 160%/1.2 nanum gothic, nanumgothic; margin: 0px auto; left: 30px; text-align: center; right: 30px; bottom: 30px; color: rgb(255, 255, 255); letter-spacing: -0.05em; position: absolute; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_237 .ts_btn {
+	margin: auto 0px; top: 0px; width: 40px; height: 70px; bottom: 0px; text-indent: -10000px; overflow: hidden; display: inline-block; position: absolute; z-index: 2;
+}
+.template_skin_237 .ts_prev {
+	background-position: 0px 0px; left: 20px;
+}
+.template_skin_237 .ts_next {
+	background-position: -100px 0px; right: 20px;
+}
+.template_skin_221 .ts_box {
+	height: 280px;
+}
+.template_skin_221 .ts_list {
+	text-align: center;
+}
+.template_skin_221 .ts_box.last {
+	margin-bottom: 0px;
+}
+.template_skin_221 .ts_img {
+	vertical-align: middle; display: block; max-width: 100%;
+}
+.template_skin_221 .ts_title_box {
+	cursor: pointer;
+}
+.template_skin_221 .ts_bg {
+	margin: 0px auto; left: 0px; top: 10px; height: 68px; right: 0px; bottom: 0px; position: absolute;
+}
+.template_skin_221 .ts_title {
+	margin: 0px auto; left: 0px; top: 10px; height: 68px; right: 0px; bottom: 0px; position: absolute;
+}
+.template_skin_221 .ts_bg {
+	border: 1px solid rgb(255, 255, 255); border-image: none; width: 90%; opacity: 0.5; background-color: rgb(0, 0, 0);
+}
+.template_skin_221 .ts_title {
+	font: 15px/1.2 Nanum Gothic, nanumgothic; width: 85%; text-align: center; color: rgb(255, 255, 255); letter-spacing: -1px; font-size-adjust: none; font-stretch: normal;
+}
+.template_skin_221 .ts_title .ts_t {
+	margin: 10px 0px 7px; padding: 0px; text-align: center; color: rgb(244, 244, 244); font-size: 19px; font-weight: normal;
+}
+.template_skin_221 .ts_btns_box {
+	display: none;
+}
+.template_skin_221 .ts_num_box {
+	width: 100%; text-align: center; bottom: 20px; position: absolute;
+}
+.template_skin_221 .ts_num_box .ts_num {
+	background: url("https://im.sisain.co.kr/custom/template/221_icon.png") no-repeat 0px -50px; margin: 0px 3px; width: 12px; height: 12px; text-indent: -10000px; overflow: hidden; display: inline-block;
+}
+.template_skin_221 .ts_num_box .ts_num.on {
+	background-position: 0px 0px;
+}
