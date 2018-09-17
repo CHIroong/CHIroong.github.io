@@ -57,6 +57,10 @@ function bindEvent(element, eventName, eventHandler) {
   }
 };
 
+function startSession(session_no){
+  play('script_session_intro_' + session_no + '.mp3')
+}
+
 bindEvent(document, 'keydown', function(e){
   e.stopPropagation();
   let obj = window.event? event : e;
@@ -70,39 +74,33 @@ bindEvent(document, 'keydown', function(e){
     else if(obj.keyCode == SPACE) play('script_1.mp3');
   }
   else if(stringEqual(state, "script_2")){
-    if(obj.keyCode == ENTER) playAndState('script_3_0.mp3', 'script_3');
+    if(obj.keyCode == ENTER) playAndState('script_3.mp3', 'script_3');
     else if(obj.keyCode == SPACE) play('script_2.mp3');
   }
   else if(stringEqual(state, "script_3")){
-    if(obj.keyCode == ENTER) playAndState('script_4_0.mp3', 'script_4');
-    else if(obj.keyCode == SPACE) play('script_3_0.mp3');
+    if(obj.keyCode == ENTER) playAndState('script_4.mp3', 'script_4');
+    else if(obj.keyCode == SPACE) play('script_3.mp3');
   }
   else if(stringEqual(state, "script_4")){
-    if(obj.keyCode == ENTER) playAndState('script_5_0.mp3', 'script_5');
-    else if(obj.keyCode == SPACE) play('script_4_0.mp3');
+    if(obj.keyCode == ENTER) playAndState('script_5.mp3', 'script_5');
+    else if(obj.keyCode == SPACE) play('script_4.mp3');
   }
   else if(stringEqual(state, "script_5")){
-    if(obj.keyCode == ENTER) playAndState('script_6_0.mp3', 'script_6');
-    else if(obj.keyCode == SPACE) play('script_5_0.mp3');
+    if(obj.keyCode == ENTER) playAndState('script_6.mp3', 'script_6');
+    else if(obj.keyCode == SPACE) play('script_5.mp3');
   }
   else if(stringEqual(state, "script_6")){
-    if(obj.keyCode == ENTER) playAndState('script_7_0.mp3', 'script_7');
-    else if(obj.keyCode == SPACE) play('script_6_0.mp3');
+    if(obj.keyCode == ENTER) playAndState('script_7.mp3', 'script_7');
+    else if(obj.keyCode == SPACE) play('script_6.mp3');
   }
   else if(stringEqual(state, "script_7")){
     if(obj.keyCode == ENTER) playAndState('script_8.mp3', 'script_8');
-    else if(obj.keyCode == SPACE) play('script_7_0.mp3');
+    else if(obj.keyCode == SPACE) play('script_7.mp3');
   }
   else if(stringEqual(state, "script_8")){
-    if(obj.keyCode == ENTER) playAndState('script_9.mp3', 'script_9');
+    if(obj.keyCode == ENTER) startSession(1)
     else if(obj.keyCode == SPACE) play('script_8.mp3');
   }
-  else if(stringEqual(state, "script_9")){
-    if(obj.keyCode == ENTER){
-    }
-    else if(obj.keyCode == SPACE) play('script_9.mp3');
-  }
-
 })
 
 
