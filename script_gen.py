@@ -1,3 +1,5 @@
+import os
+
 from gtts import gTTS
 from pydub import AudioSegment
 
@@ -27,7 +29,8 @@ scripts = {
     "8": "지금부터 연습 세션이 진행됩니다. 연습 세션에서는 총 2개의 사이트가 제공됩니다. 다시 들으시려면 스페이스를, 진행하시려면 엔터를 눌러주세요.",
     "9": "이상으로 연습이 종료되었습니다. 이제, 방금과 같은 방식으로 실제 실험을 시작하도록 하겠습니다. 다시 들으시려면 스페이스를, 진행하시려면 엔터를 눌러주세요. 원하신다면 잠시 휴식하셔도 좋습니다.",
 
-    "session_practice": "세션을 시작합니다. 다음의 검색 상황 및 키워드를 주의 깊게 들어주세요. " + "당신은 맥주 한 잔이 밥 한 공기만큼의 열량을 가진다는 말을 듣고, 소주에도 열량이 있는지 알아보고자 합니다. 다음은 소주 칼로리라는 키워드로 검색했을 때 나온 페이지입니다.",
+    "session_start": "엔터키를 누르면 다음 세션을 시작합니다.",
+    "session_intro_0": "세션을 시작합니다. 다음의 검색 상황 및 키워드를 주의 깊게 들어주세요. " + "당신은 맥주 한 잔이 밥 한 공기만큼의 열량을 가진다는 말을 듣고, 소주에도 열량이 있는지 알아보고자 합니다. 다음은 소주 칼로리라는 키워드로 검색했을 때 나온 페이지입니다.",
     "session_intro_1": "세션을 시작합니다. 다음의 검색 상황 및 키워드를 주의 깊게 들어주세요. " + "당신은 기상예보에서 태풍이 온다는 소식을 듣고, 개인 차원에서 태풍 피해를 예방하려면 어떻게 해야 하는지 조사하기로 하였습니다. 다음은 태풍 대비책이라는 키워드로 검색해서 나온 사이트들입니다",
     "session_intro_2": "세션을 시작합니다. 다음의 검색 상황 및 키워드를 주의 깊게 들어주세요. " + "당신은 친구로부터 곤약이 다이어트에 좋다는 말을 듣고, 곤약이 인체에 어떤 효과를 주는지 조사하기로 하였습니다. 다음은 곤약 효과라는 키워드로 검색해서 나온 사이트들입니다.",
     "session_intro_3": "세션을 시작합니다. 다음의 검색 상황 및 키워드를 주의 깊게 들어주세요. " + "당신은 컴퓨터에 대해 배경지식이 없는 사람입니다. TV에서 이세돌과 알파고의 바둑 대국을 본 뒤, 당신은 컴퓨터가 어떻게 바둑을 두는지를 조사하여 중학생 아들에게 설명해주고자 합니다. 다음은 알파고 원리라는 키워드로 검색해서 나온 사이트들입니다.",
@@ -50,7 +53,7 @@ scripts = {
     #save_tts_mp3(script, f"audio/script_{name}.mp3", speed=1.5)
 
 s_4_0 = AudioSegment.from_mp3('audio/script_4_0.mp3')
-s_4_1 = AudioSegment.from_mp3('audio/prac_SS_1.mp3')
+s_4_1 = AudioSegment.from_mp3('audio/SS_0_1.mp3')
 s_4_2 = AudioSegment.from_mp3('audio/script_re.mp3')
 (s_4_0 + s_4_1 + s_4_2).export("audio/script_4.mp3", format="mp3")
 
@@ -60,3 +63,11 @@ s_6_2 = AudioSegment.from_mp3('audio/glance_example_1.mp3')
 s_6_3 = AudioSegment.from_mp3('audio/glance_example_2.mp3')
 s_6_4 = AudioSegment.from_mp3('audio/script_re.mp3')
 (s_6_0 + s_6_1 + s_6_2 + s_6_3 + s_6_4).export('audio/script_6.mp3', format='mp3')
+
+for filename in os.listdir('audio'):
+    if (filename.startswith("SG") or filename.startswith("SS")) and "ask" not in filename:
+        stimulus = AudioSegment.from_mp3('audio/' + filename)
+        silent = AudioSegment.silent(duration=1000)
+        ask = AudioSegment.from_mp3('audio/script_ask_value.mp3')
+        (stimulus + silent + ask).export('audio/' + filename.split('.')[0] + '_ask.mp3', format="mp3")
+
