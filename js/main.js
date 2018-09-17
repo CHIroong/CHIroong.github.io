@@ -43,8 +43,7 @@ function playAndState(soundName, stateName){
 
 function stringEqual(a, b){return a.localeCompare(b) === 0;}
 
-let ENTER = 13;
-let SPACE = 32;
+let ENTER = 13, SPACE = 32, KEY1 = 49, KEY2 = 50, KEY3 = 51, KEY4 = 52, KEY5 = 53;
 
 let ID = makeid()
 sendMessage("Experiment has start: " + ID)
@@ -57,8 +56,82 @@ function bindEvent(element, eventName, eventHandler) {
   }
 };
 
-function startSession(session_no){
-  play('script_session_intro_' + session_no + '.mp3')
+function shuffle(a) {
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        let temp = a[j];
+        a[j] = a[i];
+        a[i] = temp;
+    }
+    return a;
+}
+
+let sessionState = "";
+let sessionInd = 0;
+let sessionNumbers = [1, 2, 3, 4, 5, 6];
+let sessionStimuli = [0, 1, 2, 3, 4, 5, 6, 7];
+let sessionStimuliInd = 0;
+let sessionOrder = ['SS', 'SG'];
+
+let result = [ID]
+
+shuffle(sessionNumbers); shuffle(sessionOrder);
+sessionNumbers = [0].concat(sessionNumbers)
+
+function sessionHandler(keyCode){
+    let sessionNumber = sessionNumbers[sessionInd];
+    let sessionType = sessionInd != 0 ? sessionOrder[Math.floor((sessionInd - 1) / 3)] : sessionOrder[0];
+    let sessionStimuliNumber = sessionInd != 0 ? sessionStimuli[sessionStimuliInd] : sessionStimuliInd;
+    if(stringEqual(sessionState, "")){
+        shuffle(sessionStimuli);
+        play('script_session_intro_' + sessionNumber + '.mp3');
+        sessionState = "intro";
+        sessionStimuliInd = 0;
+    }
+    else if(stringEqual(sessionState, "intro")){
+        if(keyCode == ENTER){
+            play(sessionType + '_' + sessionNumber + '_' + sessionStimuliNumber + '_ask.mp3');
+            sessionState = "ask";
+        }
+        else if(keyCode == SPACE) play('script_session_intro_' + sessionNumber + '.mp3');
+    }
+    else if(stringEqual(sessionState, "ask")){
+        if(keyCode == KEY1){ play("script_confirm_1.mp3"); sessionState = "confirm"; input = 1;}
+        else if(keyCode == KEY2){ play("script_confirm_2.mp3"); sessionState = "confirm"; input = 2;}
+        else if(keyCode == KEY3){ play("script_confirm_3.mp3"); sessionState = "confirm"; input = 3;}
+        else if(keyCode == KEY4){ play("script_confirm_4.mp3"); sessionState = "confirm"; input = 4;}
+        else if(keyCode == KEY5){ play("script_confirm_5.mp3"); sessionState = "confirm"; input = 5;}
+        else if(keyCode == SPACE) play('script_ask_value.mp3');
+    }
+    else if(stringEqual(sessionState, "confirm")){
+        if(keyCode == KEY1){ play("script_confirm_1.mp3"); sessionState = "confirm"; input = 1;}
+        else if(keyCode == KEY2){ play("script_confirm_2.mp3"); sessionState = "confirm"; input = 2;}
+        else if(keyCode == KEY3){ play("script_confirm_3.mp3"); sessionState = "confirm"; input = 3;}
+        else if(keyCode == KEY4){ play("script_confirm_4.mp3"); sessionState = "confirm"; input = 4;}
+        else if(keyCode == KEY5){ play("script_confirm_5.mp3"); sessionState = "confirm"; input = 5;}
+        else if(keyCode == ENTER){
+            result.push([sessionNumber, sessionStimuliNumber, sessionType, input]);
+            sendMessage([ID, sessionNumber, sessionStimuliNumber, sessionType, input].toString());
+            sessionStimuliInd += 1;
+            if(sessionInd == 0) sessionType = sessionOrder[1];
+            if((sessionNumber == 0 && sessionStimuliInd > 1) || sessionStimuliInd > 7){
+                sessionState = "";
+                sessionInd += 1
+                if(sessionInd > 6){
+                    state = "end";
+                    sendMessage(JSON.stringify(result));
+                    playAndState("script_end.mp3", "end");
+                    return;
+                }
+                if(sessionNumber == 0){ playAndState("script_9.mp3", "script_9") }
+                else{ play("script_session_start.mp3"); }
+                return;
+            }
+            sessionState = "ask";
+            sessionStimuliNumber = sessionInd != 0 ? sessionStimuli[sessionStimuliInd] : sessionStimuliInd;
+            play(sessionType + '_' + sessionNumber + '_' + sessionStimuliNumber + '_ask.mp3');
+        }
+    }
 }
 
 bindEvent(document, 'keydown', function(e){
@@ -98,8 +171,15 @@ bindEvent(document, 'keydown', function(e){
     else if(obj.keyCode == SPACE) play('script_7.mp3');
   }
   else if(stringEqual(state, "script_8")){
-    if(obj.keyCode == ENTER) startSession(1)
+    if(obj.keyCode == ENTER){ sessionHandler(obj.keyCode); state ="session"; }
     else if(obj.keyCode == SPACE) play('script_8.mp3');
+  }
+  else if(stringEqual(state, "script_9")){
+    if(obj.keyCode == ENTER){ sessionHandler(obj.keyCode); state ="session"; }
+    else if(obj.keyCode == SPACE) play('script_8.mp3');
+  }
+  else if(stringEqual(state, "session")){
+      sessionHandler(obj.keyCode);
   }
 })
 
