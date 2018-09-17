@@ -1,1 +1,0 @@
-document.write("<scr"+"ipt type=\"text/javascr"+"ipt\" src=\"//static.criteo.net/js/ld/publishertag.js\"></scr"+"ipt><scr"+"ipt type=\"text/javascr"+"ipt\">Criteo.DisplayAd({    \"zoneid\": 1143795,    \"async\": false});</scr"+"ipt>")

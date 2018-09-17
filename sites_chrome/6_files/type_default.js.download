@@ -1,5 +1,0 @@
-//var dom = "https://api.nateon.nate.com";
-var dom = "https://api.nateon.nate.com";
-
-document.writeln("<" + "script type=\"text/javascript\" src=\""+dom+"/js/note/note_common.js\"></" + "script>");
-document.writeln("<a title=\"쪽지보내기\" href=\"javascript:send_note()\"><img src=\""+dom+"/img/plugin/ico_nateon_note_b.gif\" alt=\"쪽지보내기\" border=\"0\" /></a>");

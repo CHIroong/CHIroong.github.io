@@ -1,1 +1,0 @@
-document.write ('<a href="http://adv.etnews.com/RealMedia/ads/click_lx.ads/etnews.co.kr/detail/2130496855/x05/OasDefault/korcare_buzztext_120109_1/korcare_buzztext_120109_1_x05.html/39333265663163373562393231666230" target="_blank" style="font-family:돋움, sans-serif; text-decoration:none; font-size:14px; font-weight:bold; color:#333333">추운날씨 탓에 약해진 수압 쎄게 하는 요령</a>');

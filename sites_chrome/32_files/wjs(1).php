@@ -1,2 +1,0 @@
-
-document.write(decodeURIComponent('%3Ciframe%20src%3D%22http%3A%2F%2Fad.hani.co.kr%2FRealMedia%2Fads%2Fadstream_sx.ads%2Fwww.hani.co.kr%2Fnews%40Right3%3FRM_Exclude%3Dwider_r3_170530%22%20width%3D%22300%22%20height%3D%22250%22%20border%3D%220%22%20frameborder%3D%220%22%20marginwidth%3D%220%22%20marginheight%3D%220%22%20scrolling%3D%22no%22%20allowtransparency%3D%22%22%20leftmargin%3D%220%22%20topmargin%3D%220%22%3E%3C%2Fiframe%3E'));

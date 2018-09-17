@@ -25,7 +25,7 @@ function httpGetAsync(theUrl, callback)
 
 function sendMessage(text){
   console.log(text)
-  url = "http://52.79.189.93:8015/?data=" + text
+  url = "/record?data=" + text
   httpGetAsync(url, function(){})
 }
 
@@ -47,6 +47,7 @@ let ENTER = 13;
 let SPACE = 32;
 
 let ID = makeid()
+sendMessage("Experiment has start: " + ID)
 
 function bindEvent(element, eventName, eventHandler) {
   if (element.addEventListener) {
@@ -63,17 +64,14 @@ bindEvent(document, 'keydown', function(e){
 
   if(stringEqual(state, "start")){
     if(obj.keyCode == ENTER) playAndState('script_1.mp3', 'script_1');
-    sendMessage(ID + "script_00.mp3")
   }
   else if(stringEqual(state, "script_1")){
     if(obj.keyCode == ENTER) playAndState('script_2.mp3', 'script_2');
     else if(obj.keyCode == SPACE) play('script_1.mp3');
-    sendMessage(ID + "script_01.mp3")
   }
   else if(stringEqual(state, "script_2")){
     if(obj.keyCode == ENTER) playAndState('script_3_0.mp3', 'script_3');
     else if(obj.keyCode == SPACE) play('script_2.mp3');
-    sendMessage(ID + "script_2.mp3")
   }
   else if(stringEqual(state, "script_3")){
     if(obj.keyCode == ENTER) playAndState('script_4_0.mp3', 'script_4');

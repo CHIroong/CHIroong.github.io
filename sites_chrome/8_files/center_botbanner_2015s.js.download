@@ -1,7 +1,0 @@
-/*
-document.write("       					<!-- 뉴스 하단 배너 영역 --> ");
-document.write("       					<div id=\"new_center_600_ad_2015f\"> ");
-document.write("							<IFRAME  WIDTH=530 height=106 NORESIZE SCROLLING=No FRAMEBORDER=0 MARGINHEIGHT=0 MARGINWIDTH=0  SRC=http://cad.chosun.com/RealMedia/ads/adstream_sx.ads/www.chosun.com/health_news@Bottom></IFRAME>	  ");
-//document.write("       						<img src=\"http://health.chosun.com/images/2015/contentsl_tmg_01.png\" /> ");
-document.write("       					</div> ");
-*/

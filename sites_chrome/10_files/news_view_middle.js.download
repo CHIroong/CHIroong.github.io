@@ -1,2 +1,0 @@
-//document.write ( "<script src='http://ar.donga.com/RealMedia/ads/adstream_jx.ads/2012.donga.com/news@Position1'></script>" ) ;
-document.write ( "<script src='http://ar.donga.com/RealMedia/ads/adstream_jx.ads/2016.donga.com/news@Position1'></script>" ) ;

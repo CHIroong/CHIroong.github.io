@@ -1,1 +1,0 @@
-try{window.localStorage.setItem('google_pub_config','{"sraConfigs":{"2":{"sraEnabled":true,"sraTimeout":60000,"whitelist":{"wcr0lq,2":1,"69h5uk,2":1,"c5iuve,2":1,"1m6bou0,2":1,"1uzj544,2":1,"1t29pkl,2":1}},"4":{"sraEnabled":true,"sraTimeout":60000,"whitelist":{"69h5uk,2":1,"c5iuve,2":1,"1m6bou0,2":1,"1uzj544,2":1,"1vfrv7x,2":1,"1t29pkl,2":1,"wcr0lq,2":1}}}}');}catch(e){}

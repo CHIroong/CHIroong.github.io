@@ -1,8 +1,0 @@
-@charset "euc-kr";
-
-.board_area {margin-top:20px;}
-	.module_board_w .abt_num {width:60px;}
-	.abt_recom, .abt_view, .module_board_w .abt_date {width:60px;}
-	.module_board_w [class^=aws_board_] {width:650px;min-width:650px;}
-	#smart_editor2 {width:650!important;}
-	.se2_input_area {width:650!important;}

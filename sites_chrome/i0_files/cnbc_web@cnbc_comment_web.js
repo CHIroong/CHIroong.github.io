@@ -1,1 +1,0 @@
-document.write('<iframe width="650" height="90" src="https://ad.reople.co.kr/cgi-bin/PelicanC.dll?impr?pageid=02Qm&out=iframe" allowtransparency="true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe>');

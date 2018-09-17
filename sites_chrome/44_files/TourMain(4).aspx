@@ -1,1 +1,0 @@
-SetFooterBannerData({"BandBanner":[{"Keyword":"","KeywordA":"백그라운드 이미지","KeywordB":"","LinkURL":"","ImageURL":"636715631541919738.jpg","IsNewWindow":"N"},{"Keyword":"추석","KeywordA":"","KeywordB":"","LinkURL":"http://tour.interpark.com/event/event_view.aspx?seq=11628","ImageURL":"636715631592464386.jpg","IsNewWindow":"N"}]});
